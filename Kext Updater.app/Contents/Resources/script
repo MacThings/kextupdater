@@ -3,7 +3,7 @@
 echo "============================================================"
 echo "               Kext-Update Script by Sascha_77              "
 echo "               Written for hackintosh-forum.de              "
-echo "                   (c) 2017 Version 1.2.2                   "
+echo "                   (c) 2017 Version 1.2.3                   "
 echo "============================================================"
 echo " "    
 echo "               Looking for latest Releases now              "
@@ -710,6 +710,33 @@ fi
 fi
 rm /tmp/i2c 2> /dev/null
 ### VoodooI2C End ###
+
+### NVWebDriverLibValFix Start ###
+
+local_nvdlvf=`kextstat |grep LibValFix | sed -e "s/.*(//g" -e "s/).*//g" -e "s/\.//g"`
+if ! [[ $local_nvdlvf = "" ]]; then
+echo "Checking NVWebDriverLibValFix"
+curl --silent -o /tmp/nvdlvf https://github.com/mologie/NVWebDriverLibValFix/releases
+server_nvdlvf=`cat /tmp/nvdlvf | grep "Fix.kext." |head -n 1 | sed -e "s/.*\///g" -e "s/\/.*//g" -e "s/\.//g" -e "s/.*kext//g" -e "s/tar.*//g"`
+
+if [[ $local_nvdlvf < $server_nvdlvf ]]; then
+mkdir -p ~/Desktop/Kext-Updates
+nvdlvf_url=`cat /tmp/nvdlvf | grep "/mologie" | grep tar.gz\" |head -n1 | sed -e "s/.*href=\"//g" -e "s/\".*//g"`
+echo "Update available!"
+echo "Your Version = $local_nvdlvf"
+echo "Server Version = $server_nvdlvf"
+./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/nvwebdriverlibvalfix.tar.gz https://github.com$nvdlvf_url
+echo "Downloaded to your Desktop into the Folder Kext-Updates"
+echo "-----------------------------------------------------------"
+#else
+echo "No Update available"
+echo "-----------------------------------------------------------"
+fi
+
+fi
+rm /tmp/nvdlvf 2> /dev/null
+
+### NVWebDriverLibValFix End ###
 
 ### Clover Start ###
 
