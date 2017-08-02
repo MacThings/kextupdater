@@ -728,7 +728,7 @@ echo "Server Version = $server_nvdlvf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/nvwebdriverlibvalfix.tar.gz https://github.com$nvdlvf_url
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-#else
+else
 echo "No Update available"
 echo "-----------------------------------------------------------"
 fi
