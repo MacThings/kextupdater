@@ -3,14 +3,13 @@
 echo "============================================================"
 echo "               Kext-Update Script by Sascha_77              "
 echo "               Written for hackintosh-forum.de              "
-echo "                   (c) 2017 Version 1.2.3                   "
+echo "                   (c) 2017 Version 1.2.4                   "
 echo "============================================================"
 echo " "    
 echo "               Looking for latest Releases now              "
 echo " "
 
 echo " "
-
 
 ### Selfupdate Start ###
 
@@ -26,13 +25,15 @@ self_url=`cat /tmp/kxtupd | grep Updater. | grep download |head -n 1 |sed -e "s/
 echo "Update available!"
 echo "Your Version = $local_self"
 echo "Server Version = $server_self"
-./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/kextupdater.zip https://github.com$self_url
-echo "Downloaded to your Desktop into the Folder Kext-Updates"
+./wget --no-check-certificate --quiet -O /tmp/kextupdater.zip https://github.com$self_url
+unzip -o /tmp/kextupdater.zip -d /tmp > /dev/null
 echo " "
-echo "The Process stops here. Please unpack the new Release and use it instead of this old Version!"
-echo "-----------------------------------------------------------"
+echo "The Application will update itself now and start again in a few Seconds."
+echo " "
 sleep 5
-killall "Kext Updater"
+cp replace /tmp/replace.sh && killall "Kext Updater" && bash /tmp/replace.sh && open -a "Kext Updater" > /dev/null
+rm /tmp/kextupdater.zip /tmp/replace.sh > /dev/null
+exit
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
