@@ -3,7 +3,7 @@
 echo "============================================================"
 echo "               Kext-Update Script by Sascha_77              "
 echo "               Written for hackintosh-forum.de              "
-echo "                   (c) 2017 Version 1.2.4                   "
+echo "                   (c) 2017 Version 1.2.5                   "
 echo "============================================================"
 echo " "    
 echo "               Looking for latest Releases now              "
@@ -408,6 +408,33 @@ fi
 rm /tmp/shiki 2> /dev/null
 
 ### Shiki End ###
+
+### CPUFriend Start ###
+
+local_cpuf=`kextstat |grep CPUFriend | sed -e "s/.*(//g" -e "s/).*//g" -e "s/\.//g"`
+#if ! [[ $local_cpuf = "" ]]; then
+echo "Checking CPUFriend"
+curl --silent -o /tmp/cpuf https://github.com/PMheart/CPUFriend/releases
+server_cpuf=`cat /tmp/cpuf | grep RELEASE.zip |head -n 1 | sed -e "s/.*download\///g" -e "s/\/.*//g" -e "s/\.//g"`
+
+#if [[ $local_cpuf < $server_cpuf ]]; then
+mkdir -p ~/Desktop/Kext-Updates
+cpuf_url=`cat /tmp/cpuf | grep RELEASE.zip |head -n 1 |sed -e "s/.*href=\"//g" -e "s/\ rel.*\"//g" -e "s/\".*//g"`
+echo "Update available!"
+echo "Your Version = $local_cpuf"
+echo "Server Version = $server_cpuf"
+./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/cpufriend.zip https://github.com$cpuf_url
+echo "Downloaded to your Desktop into the Folder Kext-Updates"
+echo "-----------------------------------------------------------"
+#else
+echo "No Update available"
+echo "-----------------------------------------------------------"
+#fi
+
+#fi
+rm /tmp/cpuf 2> /dev/null
+
+### CPUFriend End ###
 
 ### IntelGraphicsFixup Start ###
 
