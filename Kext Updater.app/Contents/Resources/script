@@ -1,16 +1,5 @@
 #!/bin/bash
 
-echo "============================================================"
-echo "               Kext-Update Script by Sascha_77              "
-echo "               Written for hackintosh-forum.de              "
-echo "                   (c) 2017 Version 1.2.5                   "
-echo "============================================================"
-echo " "    
-echo "               Looking for latest Releases now              "
-echo " "
-
-echo " "
-
 ### Selfupdate Start ###
 
 local_self=`cat script |grep Version | head -n1 | sed -e "s/.*Version\ //g" -e "s/\ \ .*//g" -e "s/\.//g"`
@@ -48,8 +37,9 @@ rm /tmp/kxtupd 2> /dev/null
 ./BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
 echo "Attention! You are using Ozmosis as Bootloader. Please make sure you don´t have any Kexts twice in your System. One in Ozmosis-BIOS and one in EFI or /S/L/E."
-fi
 echo " "
+fi
+
 
 ### FakeSMC Start ###
 
