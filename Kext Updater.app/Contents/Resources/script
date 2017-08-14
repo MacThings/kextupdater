@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "============================================================"
+echo "                       Version 1.2.6                        "
+echo "============================================================"
+echo " "
+
 ### Selfupdate Start ###
 
 local_self=`cat script |grep Version | head -n1 | sed -e "s/.*Version\ //g" -e "s/\ \ .*//g" -e "s/\.//g"`
