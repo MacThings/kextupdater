@@ -368,12 +368,12 @@ Gw
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="TextWindow" animationBehavior="default" id="216" userLabel="TextOutputWindow">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="297" y="408" width="517" height="623"/>
+            <rect key="contentRect" x="297" y="408" width="517" height="696"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="minSize" type="size" width="511" height="623"/>
             <value key="maxSize" type="size" width="511" height="623"/>
             <view key="contentView" misplaced="YES" id="217">
-                <rect key="frame" x="0.0" y="0.0" width="517" height="623"/>
+                <rect key="frame" x="0.0" y="0.0" width="517" height="696"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" id="220">
@@ -391,18 +391,18 @@ Gw
                         </connections>
                     </button>
                     <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="226">
-                        <rect key="frame" x="9" y="45" width="496" height="372"/>
+                        <rect key="frame" x="9" y="114" width="496" height="376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="Hk1-72-Owa">
-                            <rect key="frame" x="1" y="1" width="494" height="370"/>
+                            <rect key="frame" x="1" y="1" width="494" height="374"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" linkDetection="YES" id="225">
-                                    <rect key="frame" x="0.0" y="0.0" width="494" height="370"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="494" height="374"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <size key="minSize" width="370" height="370"/>
+                                    <size key="minSize" width="494" height="374"/>
                                     <size key="maxSize" width="500" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
@@ -433,13 +433,8 @@ Gw
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="cb7-88-hMt">
-                        <rect key="frame" x="16" y="435" width="179" height="179"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="appIcon" id="Y1n-NY-UbM"/>
-                    </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="9mR-cx-IJH">
-                        <rect key="frame" x="245" y="564" width="200" height="39"/>
+                        <rect key="frame" x="245" y="637" width="200" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Kext Updater" id="IIz-ds-Ays">
                             <font key="font" metaFont="system" size="32"/>
@@ -448,7 +443,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="WtJ-yl-8NF">
-                        <rect key="frame" x="205" y="539" width="268" height="17"/>
+                        <rect key="frame" x="205" y="612" width="268" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Always the latest Kexts on your Hackintosh." id="elH-Yp-AX8">
                             <font key="font" metaFont="system"/>
@@ -457,7 +452,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="spE-c4-hMi">
-                        <rect key="frame" x="235" y="514" width="208" height="17"/>
+                        <rect key="frame" x="235" y="587" width="208" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This Tool is exclusively written for" id="tjy-Dg-aQS">
                             <font key="font" metaFont="system"/>
@@ -466,7 +461,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="y5M-2K-Cf8">
-                        <rect key="frame" x="263" y="489" width="164" height="17"/>
+                        <rect key="frame" x="263" y="562" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="www.hackintosh-forum.de" id="thE-gW-Zxa">
                             <font key="font" metaFont="system"/>
@@ -475,29 +470,39 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="UCj-Hf-xBh">
-                        <rect key="frame" x="285" y="464" width="122" height="17"/>
+                        <rect key="frame" x="285" y="518" width="122" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(c) 2017 Sascha_77" id="zWf-r8-4zS">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="system" size="11"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="tpa-hO-zOh">
-                        <rect key="frame" x="281" y="439" width="128" height="17"/>
+                        <rect key="frame" x="285" y="504" width="128" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="App-Logo by sv0911" id="WBn-F7-cBI">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="App-Icon by sv0911" id="WBn-F7-cBI">
+                            <font key="font" metaFont="system" size="11"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="3dD-Mo-j4T">
+                        <rect key="frame" x="34" y="17" width="434" height="92"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <imageCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" alignment="left" imageAlignment="top" imageScaling="proportionallyDown" image="logo" id="VNm-7Q-1Ud"/>
+                    </imageView>
+                    <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="cb7-88-hMt">
+                        <rect key="frame" x="10" y="500" width="191" height="191"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="appIcon" id="Y1n-NY-UbM"/>
+                    </imageView>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="207" id="376"/>
             </connections>
-            <point key="canvasLocation" x="-473.5" y="485.5"/>
+            <point key="canvasLocation" x="-473.5" y="522"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="WebViewWindow" animationBehavior="default" id="247" userLabel="WebOutputWindow">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
@@ -627,5 +632,6 @@ Gw
     </objects>
     <resources>
         <image name="appIcon" width="512" height="512"/>
+        <image name="logo" width="860" height="170"/>
     </resources>
 </document>
