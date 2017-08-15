@@ -9,7 +9,7 @@ echo " "
 
 local_self=`cat script |grep Version | head -n1 | sed -e "s/.*Version\ //g" -e "s/\ \ .*//g" -e "s/\.//g"`
 
-echo "Checking Kextupdater"
+echo "Checking Kext Updater"
 curl --silent -o /tmp/kxtupd https://github.com/ProfDrLuigi/kextupdater/releases
 server_self=`cat /tmp/kxtupd | grep .Updater. | grep download |head -n 1 | sed -e "s/.*href=\"//g" -e "s/\"\ .*//g" -e "s/.*Updater\.//g" -e "s/\.zip//g" -e "s/\.//g"`
 
