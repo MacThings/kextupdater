@@ -437,11 +437,11 @@ local_igf=`kextstat |grep IntelGraphicsFixup | sed -e "s/.*(//g" -e "s/).*//g" -
 if ! [[ $local_igf = "" ]]; then
 echo "Checking IntelGraphicsFixup"
 curl --silent -o /tmp/igf https://sourceforge.net/projects/intelgraphicsfixup/files/Release/
-server_igf=`cat /tmp/igf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g"`
+server_igf=`cat /tmp/igf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g" | cut -c 1-3`
 
 if [[ $local_igf < $server_igf ]]; then
 mkdir -p ~/Desktop/Kext-Updates
-igf_url=`cat /tmp/igf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
+igf_url=`cat /tmp/igf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 echo "Update available!"
 echo "Your Version = $local_igf"
 echo "Server Version = $server_igf"
@@ -464,11 +464,11 @@ local_ngf=`kextstat |grep NvidiaGraphicsFixup | sed -e "s/.*(//g" -e "s/).*//g" 
 if ! [[ $local_ngf = "" ]]; then
 echo "Checking NVidiaGraphicsFixup"
 curl --silent -o /tmp/ngf https://sourceforge.net/projects/nvidiagraphicsfixup/files/Release/
-server_ngf=`cat /tmp/ngf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g" -e "s/\".*//g"`
+server_ngf=`cat /tmp/ngf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.//g" -e "s/\".*//g" | cut -c 1-3`
 
 if [[ $local_ngf < $server_ngf ]]; then
 mkdir -p ~/Desktop/Kext-Updates
-ngf_url=`cat /tmp/ngf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
+ngf_url=`cat /tmp/ngf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 echo "Update available!"
 echo "Your Version = $local_ngf"
 echo "Server Version = $server_ngf"
@@ -541,10 +541,10 @@ local_hbf=`kextstat |grep HibernationFixup | sed -e "s/.*(//g" -e "s/).*//g" -e 
 if ! [[ $local_hbf = "" ]]; then
 echo "Checking HibernationFixup"
 curl --silent -o /tmp/hbf https://sourceforge.net/projects/hibernationfixup/files/Release/
-server_hbf=`cat /tmp/hbf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g"`
+server_hbf=`cat /tmp/hbf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g" | cut -c 1-3`
 if [[ $local_hbf < $server_hbf ]]; then
 mkdir -p ~/Desktop/Kext-Updates
-hbf_url=`cat /tmp/hbf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
+hbf_url=`cat /tmp/hbf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 echo "Update available!"
 echo "Your Version = $local_hbf"
 echo "Server Version = $server_hbf"
@@ -592,11 +592,11 @@ local_azp=`kextstat |grep AzulPatcher4600 | sed -e "s/.*(//g" -e "s/).*//g" -e "
 if ! [[ $local_azp = "" ]]; then
 echo "Checking AzulPatcher4600"
 curl --silent -o /tmp/azp https://github.com/coderobe/AzulPatcher4600/releases
-server_azp=`cat /tmp/azp | grep kext.zip |head -n 1 | sed -e "s/.*download\///g" -e "s/\/.*//g" -e "s/\.//g"`
+server_azp=`cat /tmp/azp | grep zip |head -n 1 | sed -e "s/.*download\///g" -e "s/\/.*//g" -e "s/\.//g" | cut -c 1-3`
 
 if [[ $local_azp < $server_azp ]]; then
 mkdir -p ~/Desktop/Kext-Updates
-azp_url=`cat /tmp/azp | grep kext.zip |head -n 1 |sed -e "s/.*href=\"//g" -e "s/\ rel.*\"//g" -e "s/\".*//g"`
+azp_url=`cat /tmp/azp | grep zip |head -n 1 |sed -e "s/.*href=\"//g" -e "s/\ rel.*\"//g" -e "s/\".*//g"`
 echo "Update available!"
 echo "Your Version = $local_azp"
 echo "Server Version = $server_azp"
@@ -647,9 +647,9 @@ if ! [[ $local_brcwlf = "" ]]; then
 echo "Checking BrcmWLFixup"
 echo "The Project is end of life. Please use AirportBrcmFixup instead and replace your old Kext."
 curl --silent -o /tmp/brcwlf https://sourceforge.net/projects/airportbrcmfixup/files/Release/
-server_brcwlf=`cat /tmp/brcwlf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g"`
+server_brcwlf=`cat /tmp/brcwlf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g" | cut -c 1-3`
 mkdir -p ~/Desktop/Kext-Updates
-brcwlf_url=`cat /tmp/brcwlf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
+brcwlf_url=`cat /tmp/brcwlf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/airportbrcmfixup.zip https://sourceforge.net/projects/airportbrcmfixup/files/$brcwlf_url
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -665,10 +665,10 @@ local_airbf=`kextstat |grep AirportBrcmFixup | sed -e "s/.*(//g" -e "s/).*//g" -
 if ! [[ $local_airbf = "" ]]; then
 echo "Checking AirportBrcmFixup"
 curl --silent -o /tmp/airbf https://sourceforge.net/projects/airportbrcmfixup/files/Release/
-server_airbf=`cat /tmp/airbf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g"`
+server_airbf=`cat /tmp/airbf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g" -e "s/.*_//g" -e "s/\.kext\.zip//g" -e "s/\.//g" | cut -c 1-3`
 if [[ $local_airbf < $server_airbf ]]; then
 mkdir -p ~/Desktop/Kext-Updates
-airbf_url=`cat /tmp/airbf | grep kext.zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
+airbf_url=`cat /tmp/airbf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 echo "Update available!"
 echo "Your Version = $local_airbf"
 echo "Server Version = $server_airbf"
