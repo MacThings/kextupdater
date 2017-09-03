@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "==========================================================="
-echo "                       Version 1.2.6                       "
+echo "                       Version 1.2.7                       "
 echo "==========================================================="
 echo " "
 
@@ -41,7 +41,7 @@ rm /tmp/kxtupd 2> /dev/null
 
 ./BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
-echo "Attention! You are using Ozmosis as Bootloader. Please make sure you don´t have any Kexts twice in your System. One in Ozmosis-BIOS and one in EFI or /S/L/E."
+echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time."
 echo " "
 fi
 
