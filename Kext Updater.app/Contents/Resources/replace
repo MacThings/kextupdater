@@ -1,3 +1,5 @@
-rm -r /Applications/Kext\ Updater.app > /dev/null
-cp -r /tmp/Kext\ Updater.app /Applications/ > /dev/null
+loc=`pwd | sed -e "s/Kext\ Updater\.app.*//g"`
+
+rm -r $locKext\ Updater.app > /dev/null
+cp -r /tmp/Kext\ Updater.app $loc > /dev/null
 rm -r /tmp/Kext\ Updater.app
