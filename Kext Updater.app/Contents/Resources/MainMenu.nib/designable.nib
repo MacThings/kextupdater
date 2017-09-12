@@ -390,19 +390,19 @@ Gw
                             <action selector="cancel:" target="207" id="223"/>
                         </connections>
                     </button>
-                    <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="226">
+                    <scrollView misplaced="YES" borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="226">
                         <rect key="frame" x="9" y="114" width="496" height="376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="Hk1-72-Owa">
-                            <rect key="frame" x="1" y="1" width="494" height="374"/>
+                            <rect key="frame" x="2" y="2" width="492" height="372"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" linkDetection="YES" id="225">
-                                    <rect key="frame" x="0.0" y="0.0" width="494" height="374"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="492" height="372"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <size key="minSize" width="494" height="374"/>
+                                    <size key="minSize" width="492" height="372"/>
                                     <size key="maxSize" width="500" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
@@ -410,6 +410,7 @@ Gw
                                     </connections>
                                 </textView>
                             </subviews>
+                            <color key="backgroundColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="483">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
