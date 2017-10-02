@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "==========================================================="
-echo "                       Version 1.3.1                       "
+echo "                       Version 1.3.2                       "
 echo "==========================================================="
 echo " "
 
@@ -20,12 +20,12 @@ echo "Update available!"
 echo "Your Version = $local_self"
 echo "Server Version = $server_self"
 ./wget --no-check-certificate --quiet -O /tmp/kextupdater.zip https://github.com$self_url
-unzip -q -o /tmp/kextupdater.zip -d /tmp > /dev/null
+unzip -o /tmp/kextupdater.zip -d /tmp > /dev/null
 echo " "
 echo "The Application will update itself now and start again in a few Seconds."
 echo " "
 sleep 5
-cp replace /tmp/replace.sh && killall "Kext Updater" && sudo bash /tmp/replace.sh && open -a "Kext Updater" > /dev/null
+cp replace /tmp/replace.sh && killall "Kext Updater" && bash /tmp/replace.sh && open -a "Kext Updater" > /dev/null
 rm /tmp/kextupdater.zip /tmp/replace.sh > /dev/null
 exit
 else
@@ -41,7 +41,7 @@ rm /tmp/kxtupd 2> /dev/null
 
 ./BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
-echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM or the EFI Partition and S/L/E at the same time."
+echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time."
 echo " "
 fi
 
@@ -51,7 +51,7 @@ echo "Checking FakeSMC"
 local_fakesmc=`kextstat |grep FakeSMC | sed -e "s/.*(//g" -e "s/).*//g" -e "s/\.//g"`
 fakesmc_url=`curl --silent https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/fakesmc.zip https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/$fakesmc_url
-unzip -q /tmp/fakesmc.zip -d /tmp/ > /dev/null
+unzip /tmp/fakesmc.zip -d /tmp/ > /dev/null
 server_fakesmc=`cat /tmp/FakeSMC.kext/Contents/Info.plist | grep "FakeSMC " | sed -e "s/.*SMC\ //g" -e "s/\<.*//g"`
 
 if [[ $local_fakesmc < $server_fakesmc ]]; then
@@ -61,7 +61,7 @@ echo "Your Version = $local_fakesmc"
 echo "Server Version = $server_fakesmc"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/fakesmc.zip -d ~/Desktop/Kext-Updates/fakesmc
+unzip /tmp/fakesmc.zip -d ~/Desktop/Kext-Updates/fakesmc
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -88,7 +88,7 @@ echo "Update available!"
 echo "Your Version = $local_alc"
 echo "Server Version = $server_alc"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/applealc.zip https://github.com$alc_url
-unzip -q ~/Desktop/Kext-Updates/applealc.zip -d ~/Desktop/Kext-Updates/applealc
+unzip ~/Desktop/Kext-Updates/applealc.zip -d ~/Desktop/Kext-Updates/applealc
 rm ~/Desktop/Kext-Updates/applealc.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -118,7 +118,7 @@ echo "Update available!"
 echo "Your Version = $local_lilu"
 echo "Server Version = $server_lilu"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/lilu.zip https://github.com$lilu_url
-unzip -q ~/Desktop/Kext-Updates/lilu.zip -d ~/Desktop/Kext-Updates/lilu
+unzip ~/Desktop/Kext-Updates/lilu.zip -d ~/Desktop/Kext-Updates/lilu
 rm ~/Desktop/Kext-Updates/lilu.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -147,7 +147,7 @@ echo "Update available!"
 echo "Your Version = $local_ime"
 echo "Server Version = $server_ime"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/intelethernetmausi.zip https://github.com$ime_url
-unzip -q ~/Desktop/Kext-Updates/intelethernetmausi.zip -d ~/Desktop/Kext-Updates/intelethernetmausi
+unzip ~/Desktop/Kext-Updates/intelethernetmausi.zip -d ~/Desktop/Kext-Updates/intelethernetmausi
 rm ~/Desktop/Kext-Updates/intelethernetmausi.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -173,7 +173,7 @@ server_ime=`cat /tmp/ime | grep RELEASE.zip |head -n 1 | sed -e "s/.*download\//
 
 ime_url=`cat /tmp/ime | grep RELEASE.zip |head -n 1 |sed -e "s/.*href=\"//g" -e "s/\ rel.*\"//g" -e "s/\".*//g"`
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/intelethernetmausi.zip https://github.com$ime_url
-unzip -q ~/Desktop/Kext-Updates/intelethernetmausi.zip -d ~/Desktop/Kext-Updates/intelethernetmausi
+unzip ~/Desktop/Kext-Updates/intelethernetmausi.zip -d ~/Desktop/Kext-Updates/intelethernetmausi
 rm ~/Desktop/Kext-Updates/intelethernetmausi.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -198,7 +198,7 @@ echo "Update available!"
 echo "Your Version = $local_ath"
 echo "Server Version = $server_ath"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/atherose2200.zip https://github.com$ath_url
-unzip -q ~/Desktop/Kext-Updates/atherose2200.zip -d ~/Desktop/Kext-Updates/atherose2200
+unzip ~/Desktop/Kext-Updates/atherose2200.zip -d ~/Desktop/Kext-Updates/atherose2200
 rm ~/Desktop/Kext-Updates/atherose2200.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -219,7 +219,7 @@ if ! [[ $local_fakepciid = "" ]]; then
 echo "Checking FakePCIID"
 fakepciid_url=`curl --silent https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/fakepciid.zip https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/$fakepciid_url
-unzip -q /tmp/fakepciid.zip -d /tmp/ > /dev/null
+unzip /tmp/fakepciid.zip -d /tmp/ > /dev/null
 server_fakepciid=`cat /tmp/Release/FakePCIID.kext/Contents/Info.plist | grep "<string>" | head -n8 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_fakepciid < $server_fakepciid ]]; then
@@ -229,7 +229,7 @@ echo "Your Version = $local_fakepciid"
 echo "Server Version = $server_fakepciid"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q ~/tmp/fakepciid.zip -d ~/Desktop/Kext-Updates/fakepciid
+unzip ~/tmp/fakepciid.zip -d ~/Desktop/Kext-Updates/fakepciid
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -248,7 +248,7 @@ if ! [[ $local_vps2 = "" ]]; then
 echo "Checking VoodooPS2"
 vps2_url=`curl --silent https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/voodoops2.zip https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/$vps2_url
-unzip -q /tmp/voodoops2.zip -d /tmp/ > /dev/null
+unzip /tmp/voodoops2.zip -d /tmp/ > /dev/null
 server_vps2=`cat /tmp/Release/VoodooPS2Controller.kext/Contents/Info.plist | grep "<string>" | head -n8 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_vps2 < $server_vps2 ]]; then
@@ -258,7 +258,7 @@ echo "Your Version = $local_vps2"
 echo "Server Version = $server_vps2"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/voodoops2.zip -d ~/Desktop/Kext-Updates/voodoops2
+unzip /tmp/voodoops2.zip -d ~/Desktop/Kext-Updates/voodoops2
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -277,7 +277,7 @@ if ! [[ $local_batt = "" ]]; then
 echo "Checking ACPI BatteryManager"
 batt_url=`curl --silent https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/acpibattery.zip https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/$batt_url
-unzip -q /tmp/acpibattery.zip -d /tmp/ > /dev/null
+unzip /tmp/acpibattery.zip -d /tmp/ > /dev/null
 server_batt=`cat /tmp/Release/ACPIBatteryManager.kext/Contents/Info.plist | grep "<string>" | head -n9 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_batt < $server_batt ]]; then
@@ -287,7 +287,7 @@ echo "Your Version = $local_batt"
 echo "Server Version = $server_batt"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/acpibattery.zip -d ~/Desktop/Kext-Updates/acpibattery
+unzip /tmp/acpibattery.zip -d ~/Desktop/Kext-Updates/acpibattery
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -306,7 +306,7 @@ if ! [[ $local_usbia = "" ]]; then
 echo "Checking USBInjectAll"
 usbia_url=`curl --silent https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/usbinjectall.zip https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/$usbia_url
-unzip -q /tmp/usbinjectall.zip -d /tmp/ > /dev/null
+unzip /tmp/usbinjectall.zip -d /tmp/ > /dev/null
 server_usbia=`cat /tmp/Release/USBInjectAll.kext/Contents/Info.plist | grep "<string>" | head -n9 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_usbia < $server_usbia ]]; then
@@ -316,7 +316,7 @@ echo "Your Version = $local_usbia"
 echo "Server Version = $server_usbia"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/usbinjectall.zip -d ~/Desktop/Kext-Updates/usbinjectall
+unzip /tmp/usbinjectall.zip -d ~/Desktop/Kext-Updates/usbinjectall
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -335,7 +335,7 @@ if ! [[ $local_rtl8111 = "" ]]; then
 echo "Checking RealtekRTL8111"
 rtl8111_url=`curl --silent https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/rtl8111.zip https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/$rtl8111_url
-unzip -q /tmp/rtl8111.zip -d /tmp/ > /dev/null
+unzip /tmp/rtl8111.zip -d /tmp/ > /dev/null
 server_rtl8111=`cat /tmp/Release/RealtekRTL8111.kext/Contents/Info.plist | grep "<string>" | head -n8 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_rtl8111 < $server_rtl8111 ]]; then
@@ -345,7 +345,7 @@ echo "Your Version = $local_rtl8111"
 echo "Server Version = $server_rtl8111"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/rtl8111.zip -d ~/Desktop/Kext-Updates/rtl8111
+unzip /tmp/rtl8111.zip -d ~/Desktop/Kext-Updates/rtl8111
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -364,7 +364,7 @@ if ! [[ $local_codeccom = "" ]]; then
 echo "Checking CodecCommander"
 codeccom_url=`curl --silent https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/ |grep ".zip<" |head -n1 |sed -e "s/.*\"\>//g" -e "s/\<.*//g"`
 ./wget --no-check-certificate --quiet -O /tmp/codeccommander.zip https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/$codeccom_url
-unzip -q /tmp/codeccommander.zip -d /tmp/ > /dev/null
+unzip /tmp/codeccommander.zip -d /tmp/ > /dev/null
 server_codeccom=`cat /tmp/Release/CodecCommander.kext/Contents/Info.plist | grep "<string>" | head -n9 | tail -n9 | tail -n1 | sed -e "s/\<string\>//g" -e "s/\<.*//g" -e "s/\.//g" | xargs`
 
 if [[ $local_codeccom < $server_codeccom ]]; then
@@ -374,7 +374,7 @@ echo "Your Version = $local_codeccom"
 echo "Server Version = $server_codeccom"
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
-unzip -q /tmp/codeccommander.zip -d ~/Desktop/Kext-Updates/codeccommander
+unzip /tmp/codeccommander.zip -d ~/Desktop/Kext-Updates/codeccommander
 else
 echo "No Update available"
 echo "-----------------------------------------------------------"
@@ -401,7 +401,7 @@ echo "Update available!"
 echo "Your Version = $local_shiki"
 echo "Server Version = $server_shiki"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/shiki.zip https://github.com$shiki_url
-unzip -q ~/Desktop/Kext-Updates/shiki.zip -d ~/Desktop/Kext-Updates/shiki
+unzip ~/Desktop/Kext-Updates/shiki.zip -d ~/Desktop/Kext-Updates/shiki
 rm ~/Desktop/Kext-Updates/shiki.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -430,7 +430,7 @@ echo "Update available!"
 echo "Your Version = $local_cpuf"
 echo "Server Version = $server_cpuf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/cpufriend.zip https://github.com$cpuf_url
-unzip -q ~/Desktop/Kext-Updates/cpufriend.zip -d ~/Desktop/Kext-Updates/cpufriend
+unzip ~/Desktop/Kext-Updates/cpufriend.zip -d ~/Desktop/Kext-Updates/cpufriend
 rm ~/Desktop/Kext-Updates/cpufriend.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -459,7 +459,7 @@ echo "Update available!"
 echo "Your Version = $local_igf"
 echo "Server Version = $server_igf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/intelgraphicsfixup.zip https://sourceforge.net/projects/intelgraphicsfixup/files/Release/$igf_url
-unzip -q ~/Desktop/Kext-Updates/intelgraphicsfixup.zip -d ~/Desktop/Kext-Updates/intelgraphicsfixup
+unzip ~/Desktop/Kext-Updates/intelgraphicsfixup.zip -d ~/Desktop/Kext-Updates/intelgraphicsfixup
 rm ~/Desktop/Kext-Updates/intelgraphicsfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -488,7 +488,7 @@ echo "Update available!"
 echo "Your Version = $local_ngf"
 echo "Server Version = $server_ngf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/nvidiagraphicsfixup.zip https://sourceforge.net/projects/nvidiagraphicsfixup/files/Release/$ngf_url
-unzip -q ~/Desktop/Kext-Updates/nvidiagraphicsfixup.zip -d ~/Desktop/Kext-Updates/nvidiagraphicsfixup
+unzip ~/Desktop/Kext-Updates/nvidiagraphicsfixup.zip -d ~/Desktop/Kext-Updates/nvidiagraphicsfixup
 rm ~/Desktop/Kext-Updates/nvidiagraphicsfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -517,7 +517,7 @@ echo "Update available!"
 echo "Your Version = $local_vhda"
 echo "Server Version = $server_vhda"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/voodoohda.zip https://sourceforge.net/projects/voodoohda/files$vhda_url
-unzip -q ~/Desktop/Kext-Updates/voodoohda.zip -d ~/Desktop/Kext-Updates/voodoohda
+unzip ~/Desktop/Kext-Updates/voodoohda.zip -d ~/Desktop/Kext-Updates/voodoohda
 rm ~/Desktop/Kext-Updates/voodoohda.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -545,7 +545,7 @@ echo "Update available!"
 echo "Your Version = $local_igdvmtf"
 echo "Server Version = $server_igdvmtf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup.zip https://github.com$igdvmtf_url
-unzip -q ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup.zip -d ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup
+unzip ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup.zip -d ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup
 rm ~/Desktop/Kext-Updates/intelgraphicsdvmtfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-------------------------------------------------------------"
@@ -570,7 +570,7 @@ echo "Update available!"
 echo "Your Version = $local_hbf"
 echo "Server Version = $server_hbf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/hibernationfixup.zip https://sourceforge.net/projects/hibernationfixup/files/Release/$hbf_url
-unzip -q ~/Desktop/Kext-Updates/hibernationfixup.zip -d ~/Desktop/Kext-Updates/hibernationfixup
+unzip ~/Desktop/Kext-Updates/hibernationfixup.zip -d ~/Desktop/Kext-Updates/hibernationfixup
 rm ~/Desktop/Kext-Updates/hibernationfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -624,7 +624,7 @@ echo "Update available!"
 echo "Your Version = $local_azp"
 echo "Server Version = $server_azp"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/azulpatcher4600.zip https://github.com$azp_url
-unzip -q ~/Desktop/Kext-Updates/azulpatcher4600.zip -d ~/Desktop/Kext-Updates/azulpatcher4600
+unzip ~/Desktop/Kext-Updates/azulpatcher4600.zip -d ~/Desktop/Kext-Updates/azulpatcher4600
 rm ~/Desktop/Kext-Updates/azulpatcher4600.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -653,7 +653,7 @@ echo "Update available!"
 echo "Your Version = $local_nsu"
 echo "Server Version = $server_nsu"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/nightshiftunlocker.zip https://github.com$nsu_url
-unzip -q ~/Desktop/Kext-Updates/nightshiftunlocker.zip -d ~/Desktop/Kext-Updates/nightshiftunlocker
+unzip ~/Desktop/Kext-Updates/nightshiftunlocker.zip -d ~/Desktop/Kext-Updates/nightshiftunlocker
 rm ~/Desktop/Kext-Updates/nightshiftunlocker.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -678,7 +678,7 @@ server_brcwlf=`cat /tmp/brcwlf | grep zip |head -n1 |sed -e "s/.*Release\///g" -
 mkdir -p ~/Desktop/Kext-Updates
 brcwlf_url=`cat /tmp/brcwlf | grep zip |head -n1 |sed -e "s/.*Release\///g" -e "s/:\ .*//g"`
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/airportbrcmfixup.zip https://sourceforge.net/projects/airportbrcmfixup/files/$brcwlf_url
-unzip -q ~/Desktop/Kext-Updates/airportbrcmfixup.zip -d ~/Desktop/Kext-Updates/airportbrcmfixup
+unzip ~/Desktop/Kext-Updates/airportbrcmfixup.zip -d ~/Desktop/Kext-Updates/airportbrcmfixup
 rm ~/Desktop/Kext-Updates/airportbrcmfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -702,7 +702,7 @@ echo "Update available!"
 echo "Your Version = $local_airbf"
 echo "Server Version = $server_airbf"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/airportbrcmfixup.zip https://sourceforge.net/projects/airportbrcmfixup/files/Release/$airbf_url
-unzip -q ~/Desktop/Kext-Updates/airportbrcmfixup.zip -d ~/Desktop/Kext-Updates/airportbrcmfixup
+unzip ~/Desktop/Kext-Updates/airportbrcmfixup.zip -d ~/Desktop/Kext-Updates/airportbrcmfixup
 rm ~/Desktop/Kext-Updates/airportbrcmfixup.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -730,7 +730,7 @@ echo "Update available!"
 echo "Your Version = $local_whatevergreen"
 echo "Server Version = $server_whatevergreen"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/whatevergreen.zip https://github.com$whatevergreen_url
-unzip -q ~/Desktop/Kext-Updates/whatevergreen.zip -d ~/Desktop/Kext-Updates/whatevergreen
+unzip ~/Desktop/Kext-Updates/whatevergreen.zip -d ~/Desktop/Kext-Updates/whatevergreen
 rm ~/Desktop/Kext-Updates/whatevergreen.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -757,7 +757,7 @@ echo "Update available!"
 echo "Your Version = $local_i2c"
 echo "Server Version = $server_i2c"
 ./wget --no-check-certificate --quiet -O ~/Desktop/Kext-Updates/voodooi2c.zip https://github.com$i2c_url
-unzip -q ~/Desktop/Kext-Updates/voodooi2c.zip -d ~/Desktop/Kext-Updates/voodooi2c
+unzip ~/Desktop/Kext-Updates/voodooi2c.zip -d ~/Desktop/Kext-Updates/voodooi2c
 rm ~/Desktop/Kext-Updates/voodooi2c.zip
 echo "Downloaded to your Desktop into the Folder Kext-Updates"
 echo "-----------------------------------------------------------"
@@ -776,6 +776,12 @@ if ! [[ $local_nvdlvf = "" ]]; then
 echo "Checking NVWebDriverLibValFix"
 curl --silent -o /tmp/nvdlvf https://github.com/mologie/NVWebDriverLibValFix/releases
 server_nvdlvf=`cat /tmp/nvdlvf | grep "Fix.kext." |head -n 1 | sed -e "s/.*\///g" -e "s/\/.*//g" -e "s/\.//g" -e "s/.*kext//g" -e "s/tar.*//g"`
+
+### Dirty patch because of mistake of the Kext-Developer ###
+if [ $local_nvdlvf -eq "1" ]; then
+local_nvdlvf="100"
+fi
+### End ###
 
 if [[ $local_nvdlvf < $server_nvdlvf ]]; then
 mkdir -p ~/Desktop/Kext-Updates
