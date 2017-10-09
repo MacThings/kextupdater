@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "==========================================================="
-echo "                       Version 1.3.1                       "
+echo "                       Version 1.3.3                       "
 echo "==========================================================="
 echo " "
 
@@ -10,7 +10,7 @@ echo " "
 local_self=`cat script |grep Version | head -n1 | sed -e "s/.*Version\ //g" -e "s/\ \ .*//g" -e "s/\.//g"`
 
 echo "Checking Kext Updater"
-curl --silent -o /tmp/kxtupd https://github.com/ProfDrLuigi/kextupdater/releases
+curl --silent -o /tmp/kxtupd https://github.com/ProfDrLuigi/kextupdaterbeta/releases
 server_self=`cat /tmp/kxtupd | grep .Updater. | grep download |head -n 1 | sed -e "s/.*href=\"//g" -e "s/\"\ .*//g" -e "s/.*Updater\.//g" -e "s/\.zip//g" -e "s/\.//g"`
 
 if [[ $local_self < $server_self ]]; then
@@ -20,13 +20,19 @@ echo "Update available!"
 echo "Your Version = $local_self"
 echo "Server Version = $server_self"
 ./wget --no-check-certificate --quiet -O /tmp/kextupdater.zip https://github.com$self_url
-unzip -q -o /tmp/kextupdater.zip -d /tmp > /dev/null
+unzip -o /tmp/kextupdater.zip -d ~/Desktop/Latest\ Kext\ Updater > /dev/null
+ln -s /Applications ~/Desktop/Latest\ Kext\ Updater/Applications
 echo " "
-echo "The Application will update itself now and start again in a few Seconds."
-echo " "
+echo "Latest Version was donwloaded to your Desktop into the Folder \"Latest Kext Updater\". Please replace your older Version with it! The Updater quits now."
 sleep 5
-cp replace /tmp/replace.sh && killall "Kext Updater" && sudo bash /tmp/replace.sh && open -a "Kext Updater" > /dev/null
-rm /tmp/kextupdater.zip /tmp/replace.sh > /dev/null
+open ~/Desktop/Latest\ Kext\ Updater/
+killall "Kext Updater"
+exit
+#echo "The Application will update itself now and start again in a few Seconds."
+echo " "
+#sleep 5
+#cp replace /tmp/replace.sh && bash /tmp/replace.sh
+#rm /tmp/kextupdater.zip /tmp/replace.sh > /dev/null
 exit
 else
 echo "No Update available"
@@ -41,7 +47,7 @@ rm /tmp/kxtupd 2> /dev/null
 
 ./BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
-echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM or the EFI Partition and S/L/E at the same time."
+echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time."
 echo " "
 fi
 
@@ -776,6 +782,12 @@ if ! [[ $local_nvdlvf = "" ]]; then
 echo "Checking NVWebDriverLibValFix"
 curl --silent -o /tmp/nvdlvf https://github.com/mologie/NVWebDriverLibValFix/releases
 server_nvdlvf=`cat /tmp/nvdlvf | grep "Fix.kext." |head -n 1 | sed -e "s/.*\///g" -e "s/\/.*//g" -e "s/\.//g" -e "s/.*kext//g" -e "s/tar.*//g"`
+
+### Dirty patch because of mistake of the Kext-Developer ###
+if [ $local_nvdlvf -eq "1" ]; then
+local_nvdlvf="100"
+fi
+### End ###
 
 if [[ $local_nvdlvf < $server_nvdlvf ]]; then
 mkdir -p ~/Desktop/Kext-Updates

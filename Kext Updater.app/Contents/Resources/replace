@@ -1,5 +1,10 @@
+killall "Kext Updater"
+
 loc=`pwd | sed -e "s/Kext\ Updater\.app.*//g"`
 
-sudo rm -r $locKext\ Updater.app > /dev/null
-sudo cp -r /tmp/Kext\ Updater.app $loc > /dev/null
-sudo rm -r /tmp/Kext\ Updater.app
+rm -r $locKext\ Updater.app > /dev/null
+cp -r /tmp/Kext\ Updater.app $loc > /dev/null
+rm -r /tmp/Kext\ Updater.app
+rm /tmp/kextupdater.zip /tmp/replace.sh > /dev/null
+
+open -a "Kext Updater" > /dev/null
