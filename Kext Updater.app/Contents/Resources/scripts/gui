@@ -1,0 +1,46 @@
+if [[ $lan2 != "de_DE" ]]; then
+label="What do you want to do?"
+tooltip="Loads the following Kexts by\n\nBasic Kexts: FakeSMC, VoodooPS2, USBInjectAll\n\nAudio: Lilu, AppleALC\n\nIntel: Lilu, IntelGraphicsFixup\n\nnVidia: Lilu, nVidiaGraphicsFixup\n\nAMD: Lilu, WhatEverGreen"
+option1="Check for Kext Updates"
+option2="Load Basic Kexts"
+option3="Load Audio"
+option4="Load Intel"
+option5="Load nVidia"
+option6="Load AMD"
+cblabel="Exit Application"
+else
+label="Was möchtest Du tun?"
+tooltip="Lädt folgende Kexte bei\n\nGrundkexte: FakeSMC, VoodooPS2, USBInjectAll\n\nAudio: Lilu, AppleALC\n\nIntel: Lilu, IntelGraphicsFixup\n\nnVidia: Lilu, nVidiaGraphicsFixup\n\nAMD: Lilu, WhatEverGreen"
+option1="Installierte Kexte auf Updates prüfen"
+option2="Grundkexte laden"
+option3="Audio laden"
+option4="Intel laden"
+option5="nVidia laden"
+option6="AMD laden"
+cblabel="Programm beenden"
+fi
+
+conf="
+# Set transparency: 0 is transparent, 1 is opaque
+*.transparency=1
+
+# Set window title
+*.title = Kext Updater
+
+kexte.type = radiobutton
+kexte.tooltip = $tooltip
+kexte.label = $label
+kexte.default = $option1
+kexte.option = $option1
+kexte.option = $option2
+kexte.option = $option3
+kexte.option = $option4
+kexte.option = $option5
+kexte.option = $option6
+kexte.y = 40
+kexte.x = 10
+
+cb.type = cancelbutton
+cb.label = $cblabel
+db.type = defaultbutton
+"

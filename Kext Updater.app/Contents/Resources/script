@@ -1,16 +1,40 @@
 #!/bin/bash
 
+lan2=`defaults read -g AppleLocale`
+
+source scripts/pashua
+source scripts/gui
+pashua_run "$conf"
+
+if [ $cb = "1" ]; then
+pkill "Kext Updater" & exit
+fi
+
 # --- Script Version Info --- #
-ScriptVersion=1.3.9
+ScriptVersion=1.4.4
 ScriptDEBUG=0
 
 # --- Script Pfade --- #
 ScriptHome=$(echo $HOME)
 ScriptDownloadPath="${ScriptHome}/Desktop/Kext-Updates"
 ScriptTmpPath="/tmp"
+
+if ping -c 1 kextupdater.slsoft.de >> /dev/null 2>&1; then
 curl -sS -o ${ScriptTmpPath}/overview.htm https://kextupdater.slsoft.de/overview.htm
-sed -ib "s/intelmausiethernet-230/intelmausiethernet-230d0/g" ${ScriptTmpPath}/overview.htm
+else
+echo " "
+if [[ $lan2 != "de_DE" ]]; then
+echo "Check your Internet Connection! The Program will close in 5 seconds."
+else
+echo "Bitte prüfe Deine Internetverbindung. Das Programm schließt sich in 5 Sekunden automatisch."
+fi
+sleep 5
+killall Kext\ Updater
+fi
+
 kextstat > ${ScriptTmpPath}/kextstats
+
+sed -ib "s/IntelMausiEthernet\ (2.3.0d0)/IntelMausiEthernet\ (2.3.0)/g" ${ScriptTmpPath}/kextstats
 ./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" >> ${ScriptTmpPath}/kextstats
 
 #========== Kext Array ==========#
@@ -34,7 +58,8 @@ kextArray=(
   "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup",""
   "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup",""
   "intelmausiethernet","IntelMausi","IntelMausiEthernet",""
-  "lilu","Lilu","Lilu",""
+  "lilu","Lilu ","Lilu",""
+  "lilufriend","LiluFriend","LiluFriend",""
   "nightshiftunlocker","NightShiftUnlocker","NightShiftUnlocker",""
   "nvidiagraphicsfixup","NvidiaGraphicsFixup","NvidiaGraphicsFixup",""
   "realtekrtl8111","RealtekRTL8111","RealtekRTL8111",""
@@ -52,11 +77,13 @@ kextArray=(
 function _printHeader()
 {
   echo "==========================================================="
-  echo "                  K E X T - U P D A T E R                  "
+  echo "                   K E X T   U P D A T E R                 "
   echo "==========================================================="
   echo " "
 
-  source special1
+  if [[ $kexte == "Installierte Kexte auf Updates prüfen" ]] || [[ $kexte == "Check for Kext Updates" ]]; then
+  source scripts/special1
+  fi
 
 }
 #==== Ausgabe Fusszeile ==============
@@ -64,7 +91,11 @@ function _printFooter()
 {
   echo " "
   echo "==========================================================="
+  if [[ $lan2 != "de_DE" ]]; then
   echo "                          D O N E                          "
+  else
+  echo "                        F E R T I G                        "
+  fi
   echo "==========================================================="
   echo " "
   afplay done.mp3
@@ -72,25 +103,63 @@ function _printFooter()
 #==== Hilfsfunktion Update ==============
 function _toUpdate()
 {
+
+  if [[ $lan2 != "de_DE" ]]; then
   _PRINT_MSG "Update available!\n
-Your Version = $lecho\n
-Server Version = $recho\n
-Downloading Version $recho to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
+  Your Version = $lecho\n
+  Server Version = $recho\n
+  Downloading Version $recho to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
+  else
+  _PRINT_MSG "Update verfügbar!\n
+  Installierte Version = $lecho\n
+  Server Version = $recho\n
+  Lade $recho auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
+  fi
 }
+
+function _toUpdateLoad()
+{
+
+if [[ $lan2 != "de_DE" ]]; then
+_PRINT_MSG "Kext available!\n
+Downloading Version $recho to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
+else
+_PRINT_MSG "Kext verfügbar!\n
+Lade $recho auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
+fi
+}
+
+
+
 #==== Hilfsfunktion kein Doppelt ==============
 function _dupeKext()
 {
+
+  if [[ $lan2 != "de_DE" ]]; then
   _PRINT_MSG "The latest Version is already downloaded to your Desktop. If its already installed please remove the Folder from your Desktop.\n-----------------------------------------------------------\n\n"
+  else
+  _PRINT_MSG "Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.\n-----------------------------------------------------------\n\n"
+  fi
+
+
 }
 #==== Hilfsfunktion kein Kext ==============
 function _noUpdate()
 {
+  if [[ $lan2 != "de_DE" ]]; then
   _PRINT_MSG "√ You are up to date ($lecho)\n-----------------------------------------------------------\n\n"
+  else
+  _PRINT_MSG "√ Du bist auf dem neusten Stand ($lecho)\n-----------------------------------------------------------\n\n"
+  fi
 }
 #==== Hilfsfunktion veralteter Kext ==============
 function _obsoleteKext()
 {
+  if [[ $lan2 != "de_DE" ]]; then
   _PRINT_MSG "Attention !!!\nPlease make sure to delete your old ${data[2]} and use ${data[3]} instead\n"
+  else
+  _PRINT_MSG "Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen\n"
+  fi
 }
 #==== Hilfsfunktion Message ==============
 function _PRINT_MSG()
@@ -119,11 +188,15 @@ function _kextUpdate()
       local=`echo $lecho | sed -e "s/\.//g"`
 
       if ! [[ $local = "" ]]; then
-        echo "Checking ${data[2]} ..."
+          if [[ $lan2 != "de_DE" ]]; then
+          echo "Checking ${data[2]} ..."
+          else
+          echo "Überprüfe ${data[2]} ..."
+          fi
         if ! [[ -z ${data[3]} ]] ; then # veralteter Kext
           _obsoleteKext
         fi
-        recho=`cat ${ScriptTmpPath}/overview.htm |grep $name |sed -e "s/.*-//g"`
+        recho=`cat ${ScriptTmpPath}/overview.htm |grep -w $name |sed -e "s/.*-//g"`
         remote=`echo $recho | sed -e "s/\.//g"`
         if [ -f ${ScriptDownloadPath}/${name}/.version.htm ]; then
           dupe=`cat ${ScriptDownloadPath}/${name}/.version.htm`
@@ -131,7 +204,8 @@ function _kextUpdate()
             _dupeKext
           fi
         else
-        if [[ $local != $remote ]]; then
+          returnVALUE=$(expr $local '<' $remote)
+			if [[ $returnVALUE == "1" ]]; then
           mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
           _toUpdate
           curl -sS -o ${ScriptTmpPath}/${name}.zip https://kextupdater.slsoft.de/${name}/${name}.zip
@@ -144,8 +218,23 @@ function _kextUpdate()
     fi
 done
 }
+#============================== KextLoad ==============================
+function _kextLoader()
+{
+for kextLoadList in "${kextLoadArray[@]}"
+  do
+    IFS=","
+    data=($kextLoadList)
+    name=${data[0]}
+mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
+_toUpdateLoad
+curl -sS -o ${ScriptTmpPath}/${name}.zip https://kextupdater.slsoft.de/${name}/${name}.zip
+curl -sS -o ${ScriptDownloadPath}/$name/.version.htm https://kextupdater.slsoft.de/${name}/version.htm
+unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+done
+}
 #============================== Hauptfunktion ==============================
-function main()
+function _main()
 {
   _printHeader
   _DEBUG_PRINT "Anfang Debug Ausgabe\n"
@@ -153,7 +242,59 @@ function main()
   _DEBUG_PRINT "Ende Debug Ausgabe\n"
   _printFooter
 }
+
+function _main1()
+{
+_printHeader
+_DEBUG_PRINT "Anfang Debug Ausgabe\n"
+_kextLoader
+_DEBUG_PRINT "Ende Debug Ausgabe\n"
+_printFooter
+}
+#============================== Hauptfunktion ==============================
+
+
+if [[ $kexte == "Installierte Kexte auf Updates prüfen" ]] || [[ $kexte == "Check for Kext Updates" ]]; then
+  _main
+	bash script && exit
+  exit 0
+fi
+  if [[ $kexte == "Grundkexte laden" ]] || [[ $kexte == "Load Basic Kexts" ]]; then
+    kextLoadArray=("fakesmc" "usbinjectall" "voodoops2")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == "Audio laden" ]] || [[ $kexte == "Load Audio" ]]; then
+    kextLoadArray=("applealc" "lilu")
+    recho="Kexte"
+   _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == "Intel laden" ]] || [[ $kexte == "Load Intel" ]]; then
+    kextLoadArray=("intelgraphicsfixup" "lilu")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == "nVidia laden" ]] || [[ $kexte == "Load nVidia" ]]; then
+    kextLoadArray=("lilu" "nvidiagraphicsfixup")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == "AMD laden" ]] || [[ $kexte == "Load AMD" ]]; then
+    kextLoadArray=("lilu" "whatevergreen")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
 #============================== START ==============================
-main
+_main
 exit 0
 #=============================================================
