@@ -58,7 +58,7 @@ else
 fi
 
 # ==== Ozmosis Warning ============== #
-./BDMESG | grep "Ozmosis" > /dev/null
+bin/BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
   if [[ $lan2 != "de_DE" ]]; then
   echo "Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time."

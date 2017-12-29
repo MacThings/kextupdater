@@ -1,23 +1,30 @@
 if [[ $lan2 != "de_DE" ]]; then
 label="What do you want to do?"
-tooltip="Loads the following Kexts by\n\nBasic Kexts: FakeSMC, VoodooPS2, USBInjectAll\n\nAudio: Lilu, AppleALC\n\nIntel: Lilu, IntelGraphicsFixup\n\nnVidia: Lilu, nVidiaGraphicsFixup\n\nAMD: Lilu, WhatEverGreen"
-option1="Check for Kext Updates"
+option1="Check for Updates"
 option2="Load Basic Kexts"
-option3="Load Audio"
-option4="Load Intel"
-option5="Load nVidia"
-option6="Load AMD"
-cblabel="Exit Application"
+option3="Load Audio Kexts"
+option4="Load Intel Kexts"
+option5="Load nVidia Kexts"
+option6="Load AMD Kexts"
+cblabel="Close Application"
+myblabel="Informations"
+dblabel="Go!"
+db2label="Understand"
+motdtext="Always the latest Kexts for your Hackintosh"
+motdx="60"
 else
 label="Was möchtest Du tun?"
-tooltip="Lädt folgende Kexte bei\n\nGrundkexte: FakeSMC, VoodooPS2, USBInjectAll\n\nAudio: Lilu, AppleALC\n\nIntel: Lilu, IntelGraphicsFixup\n\nnVidia: Lilu, nVidiaGraphicsFixup\n\nAMD: Lilu, WhatEverGreen"
-option1="Installierte Kexte auf Updates prüfen"
+option1="Auf Updates prüfen"
 option2="Grundkexte laden"
-option3="Audio laden"
-option4="Intel laden"
-option5="nVidia laden"
-option6="AMD laden"
+option3="Audiokexte laden"
+option4="Intelkexte laden"
+option5="nVidiakexte laden"
+option6="AMDkexte laden"
 cblabel="Programm beenden"
+myblabel="Informationen"
+dblabel="Los!"
+motdtext="Immer die aktuellsten Kexte für Deinen Hackintosh"
+motdx="40"
 fi
 
 conf="
@@ -27,8 +34,19 @@ conf="
 # Set window title
 *.title = Kext Updater
 
+banner.type = image
+banner.path = pics/banner.png
+banner.maxwidth = 250
+banner.y = 275
+banner.x = 60
+
+motd.type = text
+motd.default = $motdtext
+motd.y = 260
+motd.x = $motdx
+motd.width = 320
+
 kexte.type = radiobutton
-kexte.tooltip = $tooltip
 kexte.label = $label
 kexte.default = $option1
 kexte.option = $option1
@@ -37,10 +55,28 @@ kexte.option = $option3
 kexte.option = $option4
 kexte.option = $option5
 kexte.option = $option6
-kexte.y = 40
+kexte.y = 105
 kexte.x = 10
 
+img.type = image
+img.path = appIcon.icns
+img.maxwidth = 170
+img.border = 0
+img.y = 80
+img.x = 170
+
+logo.type = image
+logo.path = pics/logo.png
+logo.maxwidth = 350
+logo.border = 0
+logo.y = 30
+logo.x = 10
+
+db.label = $dblabel
+db.type = defaultbutton
 cb.type = cancelbutton
 cb.label = $cblabel
-db.type = defaultbutton
+
+myb.type = button
+myb.label = $myblabel
 "

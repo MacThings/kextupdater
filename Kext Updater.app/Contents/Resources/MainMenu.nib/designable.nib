@@ -27,7 +27,6 @@
                 <outlet property="dropletProgressIndicator" destination="496" id="504"/>
                 <outlet property="dropletShaderView" destination="519" id="w2q-dA-smc"/>
                 <outlet property="dropletWindow" destination="490" id="512"/>
-                <outlet property="hideMenuItem" destination="134" id="239"/>
                 <outlet property="progressBarCancelButton" destination="206" id="299"/>
                 <outlet property="progressBarDetailsLabel" destination="290" id="300"/>
                 <outlet property="progressBarDetailsTriangle" destination="288" id="301"/>
@@ -37,7 +36,6 @@
                 <outlet property="progressBarWindow" destination="21" id="296"/>
                 <outlet property="textWindow" destination="216" id="dD5-aT-ujC"/>
                 <outlet property="textWindowMessageTextField" destination="366" id="bT3-oV-9zc"/>
-                <outlet property="textWindowProgressIndicator" destination="230" id="AXd-F1-wQr"/>
                 <outlet property="textWindowTextView" destination="225" id="FZy-wJ-th1"/>
                 <outlet property="webView" destination="258" id="GEt-Hd-OFL"/>
                 <outlet property="webViewCancelButton" destination="251" id="i5n-LY-nJs"/>
@@ -152,31 +150,6 @@ Gw
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="237"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="233">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
-                            <menuItem title="Services" id="235">
-                                <menu key="submenu" title="Services" systemMenu="services" id="234"/>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="236">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
-                            <menuItem title="Hide" keyEquivalent="h" id="134">
-                                <connections>
-                                    <action selector="hide:" target="-2" id="152"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                <connections>
-                                    <action selector="hideOtherApplications:" target="-2" id="146"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Show All" id="150">
-                                <connections>
-                                    <action selector="unhideAllApplications:" target="-2" id="153"/>
-                                </connections>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -189,35 +162,33 @@ Gw
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="TextWindow" animationBehavior="default" id="216" userLabel="TextOutputWindow">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="297" y="408" width="517" height="696"/>
+            <rect key="contentRect" x="297" y="408" width="508" height="392"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
-            <value key="minSize" type="size" width="511" height="623"/>
-            <value key="maxSize" type="size" width="511" height="623"/>
-            <view key="contentView" misplaced="YES" id="217">
-                <rect key="frame" x="0.0" y="0.0" width="517" height="696"/>
+            <value key="minSize" type="size" width="400" height="200"/>
+            <view key="contentView" id="217">
+                <rect key="frame" x="0.0" y="0.0" width="508" height="392"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView misplaced="YES" borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="226">
-                        <rect key="frame" x="9" y="114" width="496" height="376"/>
+                    <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="226">
+                        <rect key="frame" x="9" y="9" width="489" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" copiesOnScroll="NO" id="Hk1-72-Owa">
-                            <rect key="frame" x="2" y="2" width="492" height="372"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Hk1-72-Owa">
+                            <rect key="frame" x="1" y="1" width="487" height="373"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <textView editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" linkDetection="YES" id="225">
-                                    <rect key="frame" x="0.0" y="0.0" width="492" height="372"/>
+                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" linkDetection="YES" id="225">
+                                    <rect key="frame" x="0.0" y="0.0" width="487" height="373"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <size key="minSize" width="492" height="372"/>
-                                    <size key="maxSize" width="500" height="10000000"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="487" height="373"/>
+                                    <size key="maxSize" width="489" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <outlet property="delegate" destination="207" id="488"/>
                                     </connections>
                                 </textView>
                             </subviews>
-                            <color key="backgroundColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="483">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
@@ -228,80 +199,12 @@ Gw
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="230">
-                        <rect key="frame" x="15" y="18" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </progressIndicator>
                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="366">
-                        <rect key="frame" x="43" y="17" width="366" height="17"/>
+                        <rect key="frame" x="43" y="17" width="357" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="477">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="9mR-cx-IJH">
-                        <rect key="frame" x="245" y="637" width="200" height="39"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Kext Updater" id="IIz-ds-Ays">
-                            <font key="font" metaFont="system" size="32"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="WtJ-yl-8NF">
-                        <rect key="frame" x="205" y="612" width="268" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Always the latest Kexts on your Hackintosh." id="elH-Yp-AX8">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="spE-c4-hMi">
-                        <rect key="frame" x="269" y="587" width="139" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This Tool is written for" id="tjy-Dg-aQS">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="UCj-Hf-xBh">
-                        <rect key="frame" x="285" y="518" width="122" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(c) 2017 Sascha_77" id="zWf-r8-4zS">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="tpa-hO-zOh">
-                        <rect key="frame" x="285" y="504" width="128" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="App-Icon by sv0911" id="WBn-F7-cBI">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="3dD-Mo-j4T">
-                        <rect key="frame" x="34" y="17" width="434" height="92"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <imageCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" alignment="left" imageAlignment="top" imageScaling="proportionallyDown" image="logo" id="VNm-7Q-1Ud"/>
-                    </imageView>
-                    <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="cb7-88-hMt">
-                        <rect key="frame" x="10" y="500" width="191" height="191"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="appIcon" id="Y1n-NY-UbM"/>
-                    </imageView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="y5M-2K-Cf8">
-                        <rect key="frame" x="229" y="554" width="220" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="www.hackintosh-forum.de" id="thE-gW-Zxa">
-                            <font key="font" metaFont="systemBold" size="16"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -310,7 +213,7 @@ Gw
             <connections>
                 <outlet property="delegate" destination="207" id="376"/>
             </connections>
-            <point key="canvasLocation" x="-473.5" y="522"/>
+            <point key="canvasLocation" x="-478" y="370"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="WebViewWindow" animationBehavior="default" id="247" userLabel="WebOutputWindow">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
@@ -438,8 +341,4 @@ Gw
             <point key="canvasLocation" x="610" y="363"/>
         </window>
     </objects>
-    <resources>
-        <image name="appIcon" width="512" height="512"/>
-        <image name="logo" width="860" height="170"/>
-    </resources>
 </document>

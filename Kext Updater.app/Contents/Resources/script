@@ -11,7 +11,7 @@ pkill "Kext Updater" & exit
 fi
 
 # --- Script Version Info --- #
-ScriptVersion=1.4.4
+ScriptVersion=1.5.0
 ScriptDEBUG=0
 
 # --- Script Pfade --- #
@@ -35,7 +35,7 @@ fi
 kextstat > ${ScriptTmpPath}/kextstats
 
 sed -ib "s/IntelMausiEthernet\ (2.3.0d0)/IntelMausiEthernet\ (2.3.0)/g" ${ScriptTmpPath}/kextstats
-./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" >> ${ScriptTmpPath}/kextstats
+bin/BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" >> ${ScriptTmpPath}/kextstats
 
 #========== Kext Array ==========#
 ## Script Name,kextstat Name, echo Name, Ersatz Name
@@ -66,7 +66,7 @@ kextArray=(
   "shiki","Shiki","Shiki",""
   "usbinjectall","USBInjectAll","USBInjectAll",""
   "voodoohda","VoodooHDA","VoodooHDA",""
-  "voodooI2C","VoodooI2C","VoodooI2C",""
+  "voodooi2c","VoodooI2C","VoodooI2C",""
   "whatevergreen","WhateverGreen","WhateverGreen",""
   "intelmausiethernet","AppleIntelE1000","AppleIntelE1000","IntelMausiEthernet"
   "nvidiagraphicsfixup","LibValFix","NVWebDriverLibValFix","NvidiaGraphicsFixup"
@@ -81,7 +81,7 @@ function _printHeader()
   echo "==========================================================="
   echo " "
 
-  if [[ $kexte == "Installierte Kexte auf Updates prüfen" ]] || [[ $kexte == "Check for Kext Updates" ]]; then
+  if [[ $kexte == *Updates* ]]; then
   source scripts/special1
   fi
 
@@ -98,7 +98,7 @@ function _printFooter()
   fi
   echo "==========================================================="
   echo " "
-  afplay done.mp3
+  afplay sound/done.mp3
 }
 #==== Hilfsfunktion Update ==============
 function _toUpdate()
@@ -211,6 +211,7 @@ function _kextUpdate()
           curl -sS -o ${ScriptTmpPath}/${name}.zip https://kextupdater.slsoft.de/${name}/${name}.zip
           curl -sS -o ${ScriptDownloadPath}/$name/.version.htm https://kextupdater.slsoft.de/${name}/version.htm
           unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+          rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
         else
           _noUpdate
         fi
@@ -231,6 +232,7 @@ _toUpdateLoad
 curl -sS -o ${ScriptTmpPath}/${name}.zip https://kextupdater.slsoft.de/${name}/${name}.zip
 curl -sS -o ${ScriptDownloadPath}/$name/.version.htm https://kextupdater.slsoft.de/${name}/version.htm
 unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
 done
 }
 #============================== Hauptfunktion ==============================
@@ -253,41 +255,46 @@ _printFooter
 }
 #============================== Hauptfunktion ==============================
 
+if [ $myb = "1" ]; then
+source scripts/gui_info
+pashua_run "$conf"
+bash script && exit
+fi
 
-if [[ $kexte == "Installierte Kexte auf Updates prüfen" ]] || [[ $kexte == "Check for Kext Updates" ]]; then
+if [[ $kexte == *Updates* ]]; then
   _main
 	bash script && exit
   exit 0
 fi
-  if [[ $kexte == "Grundkexte laden" ]] || [[ $kexte == "Load Basic Kexts" ]]; then
+  if [[ $kexte == *Grund* ]] || [[ $kexte == *Basic* ]]; then
     kextLoadArray=("fakesmc" "usbinjectall" "voodoops2")
     recho="Kexte"
     _main1
 	bash script && exit
   exit 0
   fi
-  if [[ $kexte == "Audio laden" ]] || [[ $kexte == "Load Audio" ]]; then
+  if [[ $kexte == *Audio* ]]; then
     kextLoadArray=("applealc" "lilu")
     recho="Kexte"
    _main1
 	bash script && exit
   exit 0
   fi
-  if [[ $kexte == "Intel laden" ]] || [[ $kexte == "Load Intel" ]]; then
+  if [[ $kexte == *Intel* ]]; then
     kextLoadArray=("intelgraphicsfixup" "lilu")
     recho="Kexte"
     _main1
 	bash script && exit
   exit 0
   fi
-  if [[ $kexte == "nVidia laden" ]] || [[ $kexte == "Load nVidia" ]]; then
+  if [[ $kexte == *nVidia* ]]; then
     kextLoadArray=("lilu" "nvidiagraphicsfixup")
     recho="Kexte"
     _main1
 	bash script && exit
   exit 0
   fi
-  if [[ $kexte == "AMD laden" ]] || [[ $kexte == "Load AMD" ]]; then
+  if [[ $kexte == *AMD* ]]; then
     kextLoadArray=("lilu" "whatevergreen")
     recho="Kexte"
     _main1
