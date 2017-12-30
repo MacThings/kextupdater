@@ -11,7 +11,7 @@ pkill "Kext Updater" & exit
 fi
 
 # --- Script Version Info --- #
-ScriptVersion=1.5.0
+ScriptVersion=1.5.1
 ScriptDEBUG=0
 
 # --- Script Pfade --- #
@@ -274,7 +274,7 @@ fi
   exit 0
   fi
   if [[ $kexte == *Audio* ]]; then
-    kextLoadArray=("applealc" "lilu")
+    kextLoadArray=("applealc" "lilu" "codeccommander")
     recho="Kexte"
    _main1
 	bash script && exit
@@ -296,6 +296,20 @@ fi
   fi
   if [[ $kexte == *AMD* ]]; then
     kextLoadArray=("lilu" "whatevergreen")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == *Ethernet* ]]; then
+    kextLoadArray=("atherose2200ethernet" "intelmausiethernet" "realtekrtl8111")
+    recho="Kexte"
+    _main1
+	bash script && exit
+  exit 0
+  fi
+  if [[ $kexte == *Clover* ]]; then
+    kextLoadArray=("clover")
     recho="Kexte"
     _main1
 	bash script && exit
