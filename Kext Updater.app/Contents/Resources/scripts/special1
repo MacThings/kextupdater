@@ -7,7 +7,8 @@ local=`echo $lecho | sed -e "s/\.//g"`
   else
   echo "Überprüfe Kext Updater ..."
   fi
-remote=`cat /tmp/overview.htm |grep kextupdater |sed "s/.*-//g"`
+remote=`cat /tmp/overview.html |grep kextupdater |sed -e "s/.*-//g" -e "s/+.*//g"`
+recho=`cat /tmp/overview.html |grep kextupdater |sed "s/.*+//g"`
 
 if [ -f ~/Desktop/Kext-Updates/$name/.version.htm ]; then
 dupe=`cat ~/Desktop/Kext-Updates/$name/.version.htm`
@@ -24,22 +25,22 @@ else
     mkdir -p ~/Desktop/Kext-Updates ~/Desktop/Kext-Updates/
       if [[ $lan2 != "de_DE" ]]; then
       echo "Update available!"
-      echo "Your Version = $lecho"
-      echo "Server Version = $remote"
+      echo "Your Version..... = $lecho"
+      echo "Server Version... = $recho"
       curl -sS -o /tmp/$name.zip https://kextupdater.slsoft.de/$name/$name.zip
       unzip -o /tmp/$name.zip -d ~/Desktop/Latest\ Kext\ Updater > /dev/null
-      ln -s /Applications ~/Desktop/Latest\ Kext\ Updater/Applications
+      ln -sf /Applications ~/Desktop/Latest\ Kext\ Updater/Applications
       echo " "
       echo "Latest Version was downloaded to your Desktop into the Folder \"Latest Kext Updater\". Please replace your older Version with it! The Updater quits now."
       sleep 5
       open ~/Desktop/Latest\ Kext\ Updater/
       else
       echo "Update verfügbar!"
-      echo "Installierte Version = $lecho"
-      echo "Server Version = $remote"
+      echo "Installierte Version... = $lecho"
+      echo "Server Version......... = $recho"
       curl -sS -o /tmp/$name.zip https://kextupdater.slsoft.de/$name/$name.zip
       unzip -o /tmp/$name.zip -d ~/Desktop/Aktueller\ Kext\ Updater > /dev/null
-      ln -s /Applications ~/Desktop/Aktueller\ Kext\ Updater/Applications
+      ln -sf /Applications ~/Desktop/Aktueller\ Kext\ Updater/Applications
       echo " "
       echo "Die aktuelle Version wurde auf dem Schreibtisch im Ordner \"Aktueller Kext Updater\" abgelegt. Bitte ersetze deine derzeitige Version mit dieser. Der Kext Updater beendet sich jetzt."
       sleep 5

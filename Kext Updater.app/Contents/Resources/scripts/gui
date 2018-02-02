@@ -8,12 +8,17 @@ option5="Load nVidia Kexts"
 option6="Load AMD Kexts"
 option7="Load Ethernet Kexts"
 option8="Load Clover Bootloader"
-cblabel="Close Application"
-myblabel="Informations"
+option9="Load APFS/check for Updates"
+cblabel="Exit"
+myblabel="Information"
+efi="Mount EFI"
 dblabel="Go!"
 db2label="Understand"
 motdtext="Always the latest Kexts for your Hackintosh"
-motdx="60"
+motdx="90"
+apfstext0="√ You are usign the latest apfs.efi Version."
+apfstext1="Downloaded a newer apfs.efi Version to your Desktop (Folder Kext-Updates)."
+apfsinit="Latest apfs.efi downloaded to your Desktop (Folder Kext-Updates)."
 else
 label="Was möchtest Du tun?"
 option1="Auf Updates prüfen"
@@ -24,11 +29,16 @@ option5="nVidiakexte laden"
 option6="AMDkexte laden"
 option7="Ethernetkexte laden"
 option8="Clover Bootloader laden"
-cblabel="Programm beenden"
+option9="APFS laden/auf Update prüfen"
+cblabel="Beenden"
 myblabel="Informationen"
+efi="EFI mounten"
 dblabel="Los!"
 motdtext="Immer die aktuellsten Kexte für Deinen Hackintosh"
-motdx="40"
+motdx="70"
+apfstext0="√ Du hast bereits die neueste apfs.efi Version installiert."
+apfstext1="Eine neue Version von apfs.efi ist verfügbar und wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen."
+apfsinit="Das aktuelle apfs.efi wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen."
 fi
 
 conf="
@@ -41,12 +51,12 @@ conf="
 banner.type = image
 banner.path = pics/banner.png
 banner.maxwidth = 250
-banner.y = 305
-banner.x = 60
+banner.y = 315
+banner.x = 90
 
 motd.type = text
 motd.default = $motdtext
-motd.y = 295
+motd.y = 305
 motd.x = $motdx
 motd.width = 320
 
@@ -61,6 +71,7 @@ kexte.option = $option5
 kexte.option = $option6
 kexte.option = $option7
 kexte.option = $option8
+kexte.option = $option9
 kexte.y = 105
 kexte.x = 10
 
@@ -69,14 +80,14 @@ img.path = appIcon.icns
 img.maxwidth = 190
 img.border = 0
 img.y = 95
-img.x = 170
+img.x = 185
 
 logo.type = image
 logo.path = pics/logo.png
-logo.maxwidth = 350
+logo.maxwidth = 370
 logo.border = 0
 logo.y = 30
-logo.x = 10
+logo.x = 30
 
 db.label = $dblabel
 db.type = defaultbutton
@@ -85,4 +96,7 @@ cb.label = $cblabel
 
 myb.type = button
 myb.label = $myblabel
+
+mountefi.type = button
+mountefi.label = $efi
 "

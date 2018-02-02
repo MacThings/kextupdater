@@ -2,6 +2,11 @@
 
 lan2=`defaults read -g AppleLocale`
 
+efiroot=`bin/BDMESG |grep SelfDevicePath | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g"`
+if [[ $efiroot = "" ]];then
+efiroot=`bin/BDMESG |grep "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g"`
+fi
+
 source scripts/pashua
 source scripts/gui
 pashua_run "$conf"
@@ -11,7 +16,7 @@ pkill "Kext Updater" & exit
 fi
 
 # --- Script Version Info --- #
-ScriptVersion=1.5.1
+ScriptVersion=1.5.8
 ScriptDEBUG=0
 
 # --- Script Pfade --- #
@@ -20,13 +25,13 @@ ScriptDownloadPath="${ScriptHome}/Desktop/Kext-Updates"
 ScriptTmpPath="/tmp"
 
 if ping -c 1 kextupdater.slsoft.de >> /dev/null 2>&1; then
-curl -sS -o ${ScriptTmpPath}/overview.htm https://kextupdater.slsoft.de/overview.htm
+curl -sS -o ${ScriptTmpPath}/overview.html https://kextupdater.slsoft.de/overview.html
 else
 echo " "
 if [[ $lan2 != "de_DE" ]]; then
-echo "Check your Internet Connection! The Program will close in 5 seconds."
+echo "Check your Internet Connection or perhaps the Updateserver is down! The Program will close in 5 seconds."
 else
-echo "Bitte prüfe Deine Internetverbindung. Das Programm schließt sich in 5 Sekunden automatisch."
+echo "Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch."
 fi
 sleep 5
 killall Kext\ Updater
@@ -34,8 +39,15 @@ fi
 
 kextstat > ${ScriptTmpPath}/kextstats
 
-sed -ib "s/IntelMausiEthernet\ (2.3.0d0)/IntelMausiEthernet\ (2.3.0)/g" ${ScriptTmpPath}/kextstats
+checkweb=`cat /tmp/kextstats |grep web.GeForceWeb`
+if [[ $checkweb != "" ]]; then
+locweb=`cat /Library/Extensions/NVDAStartupWeb.kext/Contents/Info.plist |grep NVDAStartupWeb\ | sed -e "s/.*Web\ //g" -e "s/<\/.*//g" |cut -c 10-99`
+echo NVDAStartupWeb "($locweb)" >> ${ScriptTmpPath}/kextstats
+fi
+
 bin/BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" >> ${ScriptTmpPath}/kextstats
+sed -ib "s/IntelMausiEthernet\ (2.3.0d0)/IntelMausiEthernet\ (2.3.0)/g" ${ScriptTmpPath}/kextstats
+rm ${ScriptTmpPath}/kextstatsb
 
 #========== Kext Array ==========#
 ## Script Name,kextstat Name, echo Name, Ersatz Name
@@ -45,6 +57,7 @@ kextArray=(
   "airportbrcmfixup","BrcmWLFixup","BrcmWLFixup","AirportBrcmFixup"
   "airportbrcmfixup","AirportBrcmFixup","AirportBrcmFixup",""
   "applealc","ALC","AppleALC",""
+  "ath9kfixup","ATH9KFixup","ATH9KFixup",""
   "atherose2200ethernet","AtherosE2200","AtherosE2200Ethernet",""
   "azulpatcher4600","AzulPatcher4600","AzulPatcher4600",""
   "bt4lecontiunityfixup","BT4LEContiunityFixup","BT4LEContiunityFixup",""
@@ -52,6 +65,7 @@ kextArray=(
   "codeccommander","CodecCommander","CodecCommander",""
   "coredisplayfixup","CoreDisplayFixup","CoreDisplayFixup",""
   "cpufriend","CPUFriend","CPUFriend",""
+  "enablelidwake","EnableLidWake","EnableLidWake",""
   "fakepciid","FakePCIID","FakePCIID",""
   "fakesmc","FakeSMC","FakeSMC",""
   "hibernationfixup","HibernationFixup","HibernationFixup",""
@@ -66,7 +80,7 @@ kextArray=(
   "shiki","Shiki","Shiki",""
   "usbinjectall","USBInjectAll","USBInjectAll",""
   "voodoohda","VoodooHDA","VoodooHDA",""
-  "voodooi2c","VoodooI2C","VoodooI2C",""
+  "voodooi2c","VoodooI2C (","VoodooI2C",""
   "whatevergreen","WhateverGreen","WhateverGreen",""
   "intelmausiethernet","AppleIntelE1000","AppleIntelE1000","IntelMausiEthernet"
   "nvidiagraphicsfixup","LibValFix","NVWebDriverLibValFix","NvidiaGraphicsFixup"
@@ -106,14 +120,14 @@ function _toUpdate()
 
   if [[ $lan2 != "de_DE" ]]; then
   _PRINT_MSG "Update available!\n
-  Your Version = $lecho\n
-  Server Version = $recho\n
-  Downloading Version $recho to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
+  Your Version..... = $lecho\n
+  Server Version... = $recho\n
+  Downloading File to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
   else
   _PRINT_MSG "Update verfügbar!\n
-  Installierte Version = $lecho\n
-  Server Version = $recho\n
-  Lade $recho auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
+  Installierte Version... = $lecho\n
+  Server Version......... = $recho\n
+  Lade Datei auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
   fi
 }
 
@@ -122,10 +136,10 @@ function _toUpdateLoad()
 
 if [[ $lan2 != "de_DE" ]]; then
 _PRINT_MSG "Kext available!\n
-Downloading Version $recho to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
+Downloading $name to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------------\n\n"
 else
 _PRINT_MSG "Kext verfügbar!\n
-Lade $recho auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
+Lade $name auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------------\n\n"
 fi
 }
 
@@ -196,8 +210,8 @@ function _kextUpdate()
         if ! [[ -z ${data[3]} ]] ; then # veralteter Kext
           _obsoleteKext
         fi
-        recho=`cat ${ScriptTmpPath}/overview.htm |grep -w $name |sed -e "s/.*-//g"`
-        remote=`echo $recho | sed -e "s/\.//g"`
+        remote=`cat ${ScriptTmpPath}/overview.html |grep -w $name |sed -e "s/.*-//g" -e "s/+.*//g"`
+        recho=`cat ${ScriptTmpPath}/overview.html |grep -w $name |sed "s/.*+//g"`
         if [ -f ${ScriptDownloadPath}/${name}/.version.htm ]; then
           dupe=`cat ${ScriptDownloadPath}/${name}/.version.htm`
           if [[ $dupe = $remote ]]; then
@@ -260,6 +274,16 @@ source scripts/gui_info
 pashua_run "$conf"
 bash script && exit
 fi
+
+if [ $mountefi = "1" ]; then
+diskutil mount $efiroot
+#open /Volumes/EFI
+bash script && exit
+fi
+
+### APFS Start ###
+source scripts/apfs
+### APFS End ###
 
 if [[ $kexte == *Updates* ]]; then
   _main
