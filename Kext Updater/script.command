@@ -7,7 +7,7 @@ if [ ! -f /tmp/choice.tmp ]; then
 echo "Updates" > /tmp/choice.tmp
 fi
 
-#=================test======== Script Version Info =========================#
+#========================= Script Version Info =========================#
 ScriptVersion=2.0.0
 
 #========================= Script Pathes =========================#
