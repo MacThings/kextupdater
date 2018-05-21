@@ -1,5 +1,0 @@
-checkweb=`cat /tmp/kextstats |grep web.GeForceWeb`
-
-if [[ $checkweb != "" ]]; then
-locweb=`cat /Library/Extensions/NVDAStartupWeb.kext/Contents/Info.plist |grep NVDAStartupWeb\ | sed -e "s/.*Web\ //g" -e "s/<\/.*//g" -e "s/\.//g" |cut -c 8-99`
-fi
