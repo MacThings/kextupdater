@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A006B8D20B2E5A6001C6A78 /* rcaf5Tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */; };
+		2A3E609120B34DEB00E355B8 /* kuversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E609020B34DEB00E355B8 /* kuversion.command */; };
+		2A6760B420B236A500A38F52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B320B236A500A38F52 /* logo.png */; };
+		2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B720B2382F00A38F52 /* pm52.mp3 */; };
+		2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B920B238D100A38F52 /* mq.mp3 */; };
+		2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BB20B2394A00A38F52 /* ta.mp3 */; };
+		2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BD20B23D2D00A38F52 /* lastcheck.command */; };
+		2A6EC68620B09D0400A1F6F7 /* gui.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68520B09D0300A1F6F7 /* gui.cfg */; };
+		2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68720B0B57300A1F6F7 /* mountefi.command */; };
+		2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68920B0B99E00A1F6F7 /* osversion.command */; };
+		2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */; };
+		2AA7731620B0507D00FC2A91 /* BDMESG in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731520B0507D00FC2A91 /* BDMESG */; };
+		2AA7731820B060E800FC2A91 /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731720B060E700FC2A91 /* done.mp3 */; };
+		2AB5E91820B2CECA00637003 /* choice.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5E91720B2CECA00637003 /* choice.command */; };
+		2AD4DAE220AF03F500D2D335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */; };
+		2AD4DAE420AF03F600D2D335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE320AF03F600D2D335 /* Assets.xcassets */; };
+		2AD4DAE720AF03F600D2D335 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE520AF03F600D2D335 /* MainMenu.xib */; };
+		2AF8F35020AF4102008D88E8 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F34E20AF4102008D88E8 /* head.png */; };
+		2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F34F20AF4102008D88E8 /* hflogo.png */; };
+		2AF8F36520AF4D52008D88E8 /* script.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F36420AF4D52008D88E8 /* script.command */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
+		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = kuversion.command; sourceTree = "<group>"; };
+		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		2A6760B720B2382F00A38F52 /* pm52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pm52.mp3; sourceTree = "<group>"; };
+		2A6760B920B238D100A38F52 /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
+		2A6760BB20B2394A00A38F52 /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
+		2A6760BD20B23D2D00A38F52 /* lastcheck.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = lastcheck.command; sourceTree = "<group>"; };
+		2A6EC68520B09D0300A1F6F7 /* gui.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gui.cfg; sourceTree = "<group>"; };
+		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = mountefi.command; sourceTree = "<group>"; };
+		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
+		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
+		2AA7731520B0507D00FC2A91 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
+		2AA7731720B060E700FC2A91 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
+		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = choice.command; sourceTree = "<group>"; };
+		2AD4DADE20AF03F500D2D335 /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AD4DAE320AF03F600D2D335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AD4DAE620AF03F600D2D335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2AD4DAE820AF03F600D2D335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD4DAE920AF03F600D2D335 /* Kext_Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kext_Updater.entitlements; sourceTree = "<group>"; };
+		2AF7585320B073150037D83D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2AF8F34E20AF4102008D88E8 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		2AF8F34F20AF4102008D88E8 /* hflogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hflogo.png; sourceTree = "<group>"; };
+		2AF8F35920AF466D008D88E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2AF8F36420AF4D52008D88E8 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = script.command; path = "Kext Updater/script.command"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AD4DADB20AF03F500D2D335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A6760B520B2371D00A38F52 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2A6760BB20B2394A00A38F52 /* ta.mp3 */,
+				2A6760B920B238D100A38F52 /* mq.mp3 */,
+				2A6760B720B2382F00A38F52 /* pm52.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		2AA7731420B0506E00FC2A91 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				2AA7731520B0507D00FC2A91 /* BDMESG */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		2AD4DAD520AF03F500D2D335 = {
+			isa = PBXGroup;
+			children = (
+				2AD4DAE020AF03F500D2D335 /* Kext Updater */,
+				2AD4DADF20AF03F500D2D335 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AD4DADF20AF03F500D2D335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AD4DADE20AF03F500D2D335 /* Kext Updater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AD4DAE020AF03F500D2D335 /* Kext Updater */ = {
+			isa = PBXGroup;
+			children = (
+				2A6760B520B2371D00A38F52 /* sounds */,
+				2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */,
+				2A6EC68520B09D0300A1F6F7 /* gui.cfg */,
+				2AA7731720B060E700FC2A91 /* done.mp3 */,
+				2AA7731420B0506E00FC2A91 /* bin */,
+				2AF8F36420AF4D52008D88E8 /* script.command */,
+				2AF8F34D20AF40E7008D88E8 /* pics */,
+				2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */,
+				2AD4DAE320AF03F600D2D335 /* Assets.xcassets */,
+				2AD4DAE520AF03F600D2D335 /* MainMenu.xib */,
+				2AD4DAE820AF03F600D2D335 /* Info.plist */,
+				2AD4DAE920AF03F600D2D335 /* Kext_Updater.entitlements */,
+				2A6EC68720B0B57300A1F6F7 /* mountefi.command */,
+				2A6EC68920B0B99E00A1F6F7 /* osversion.command */,
+				2A6760BD20B23D2D00A38F52 /* lastcheck.command */,
+				2AB5E91720B2CECA00637003 /* choice.command */,
+				2A3E609020B34DEB00E355B8 /* kuversion.command */,
+			);
+			path = "Kext Updater";
+			sourceTree = "<group>";
+		};
+		2AF8F34D20AF40E7008D88E8 /* pics */ = {
+			isa = PBXGroup;
+			children = (
+				2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */,
+				2A6760B320B236A500A38F52 /* logo.png */,
+				2AF8F34E20AF4102008D88E8 /* head.png */,
+				2AF8F34F20AF4102008D88E8 /* hflogo.png */,
+			);
+			path = pics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AD4DADD20AF03F500D2D335 /* Kext Updater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AD4DAEC20AF03F600D2D335 /* Build configuration list for PBXNativeTarget "Kext Updater" */;
+			buildPhases = (
+				2AD4DADA20AF03F500D2D335 /* Sources */,
+				2AD4DADB20AF03F500D2D335 /* Frameworks */,
+				2AD4DADC20AF03F500D2D335 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kext Updater";
+			productName = "Kext Updater";
+			productReference = 2AD4DADE20AF03F500D2D335 /* Kext Updater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AD4DAD620AF03F500D2D335 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					1,
+					test,
+				);
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Sascha_77;
+				TargetAttributes = {
+					2AD4DADD20AF03F500D2D335 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2AD4DAD920AF03F500D2D335 /* Build configuration list for PBXProject "Kext Updater" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AD4DAD520AF03F500D2D335;
+			productRefGroup = 2AD4DADF20AF03F500D2D335 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AD4DADD20AF03F500D2D335 /* Kext Updater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AD4DADC20AF03F500D2D335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */,
+				2A6EC68620B09D0400A1F6F7 /* gui.cfg in Resources */,
+				2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */,
+				2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */,
+				2AA7731620B0507D00FC2A91 /* BDMESG in Resources */,
+				2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */,
+				2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */,
+				2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */,
+				2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */,
+				2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */,
+				2AD4DAE420AF03F600D2D335 /* Assets.xcassets in Resources */,
+				2AF8F36520AF4D52008D88E8 /* script.command in Resources */,
+				2A6760B420B236A500A38F52 /* logo.png in Resources */,
+				2AB5E91820B2CECA00637003 /* choice.command in Resources */,
+				2A3E609120B34DEB00E355B8 /* kuversion.command in Resources */,
+				2AD4DAE720AF03F600D2D335 /* MainMenu.xib in Resources */,
+				2A006B8D20B2E5A6001C6A78 /* rcaf5Tj.png in Resources */,
+				2AF8F35020AF4102008D88E8 /* head.png in Resources */,
+				2AA7731820B060E800FC2A91 /* done.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AD4DADA20AF03F500D2D335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD4DAE220AF03F500D2D335 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2AD4DAE520AF03F600D2D335 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AD4DAE620AF03F600D2D335 /* Base */,
+				2AF8F35920AF466D008D88E8 /* en */,
+				2AF7585320B073150037D83D /* de */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AD4DAEA20AF03F600D2D335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2AD4DAEB20AF03F600D2D335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2AD4DAED20AF03F600D2D335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		2AD4DAEE20AF03F600D2D335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AD4DAD920AF03F500D2D335 /* Build configuration list for PBXProject "Kext Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AD4DAEA20AF03F600D2D335 /* Debug */,
+				2AD4DAEB20AF03F600D2D335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AD4DAEC20AF03F600D2D335 /* Build configuration list for PBXNativeTarget "Kext Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AD4DAED20AF03F600D2D335 /* Debug */,
+				2AD4DAEE20AF03F600D2D335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AD4DAD620AF03F500D2D335 /* Project object */;
+}
