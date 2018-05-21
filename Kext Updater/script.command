@@ -7,7 +7,7 @@ if [ ! -f /tmp/choice.tmp ]; then
 echo "Updates" > /tmp/choice.tmp
 fi
 
-#========================= Script Version Info =========================#
+#=================test======== Script Version Info =========================#
 ScriptVersion=2.0.0
 
 #========================= Script Pathes =========================#
@@ -15,7 +15,7 @@ ScriptHome=$(echo $HOME)
 ScriptDownloadPath="${ScriptHome}/Desktop/Kext-Updates"
 ScriptTmpPath="/tmp"
 
-#========================= Set Variables =========================#
+#========================== Set Variables =========================#
 url="kextupdater.slsoft.de"
 myyear=`date +'%Y'`
 lan2=`defaults read -g AppleLocale`
