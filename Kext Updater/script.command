@@ -8,7 +8,7 @@ echo "Updates" > /tmp/choice.tmp
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.0
+ScriptVersion=2.0.1
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -21,7 +21,7 @@ myyear=`date +'%Y'`
 lan2=`defaults read -g AppleLocale`
 username="$(stat -f%Su /dev/console)"
 realname="$(dscl . -read /Users/$username RealName | cut -d: -f2 | sed -e 's/^[ \t]*//' | grep -v "^$")"
-osuser=` echo $realname`
+osuser=`echo $realname`
 hour=`date "+%H"`
 efiroot=`./BDMESG |grep SelfDevicePath | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g"`
 if [[ $efiroot = "" ]];then
@@ -181,7 +181,7 @@ else
     rm -rf ~/Desktop/Latest\ Kext\ Updater/__MACOSX
     fi
     echo " "
-    sleep 1
+    sleep 0.5
     echo $latest2
     _tmpcleanup
     sleep 6
@@ -370,6 +370,9 @@ rm -f $ScriptTmpPath/webdriver.system
 fi
 if [ -f $ScriptTmpPath/webdriver.tmp ]; then
 rm -f $ScriptTmpPath/webdriver.tmp
+fi
+if [ -f $ScriptTmpPath/kuversion.tmp ]; then
+rm -f $ScriptTmpPath/kuversion.tmp
 fi
 find $ScriptDownloadPath/ -name *.dSYM -exec rm -r {} \; >/dev/null 2>&1
 }

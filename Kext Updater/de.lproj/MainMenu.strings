@@ -50,7 +50,7 @@
 "d9l-S8-AU5.title" = "Kext Updater Version:";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Lädt die folgenden Kexte bei:
+"axN-fO-K1a.title" = "Lädt die folgenden Kexte:
 
 Basic Kexts
 FakeSMC, VoodooPS2, USBInjectAll

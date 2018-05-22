@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var player: AVAudioPlayer?
     
-    @IBOutlet var      logger:       NSTextView!
+    @IBOutlet weak var      logger:       NSTextView!
     @IBOutlet weak var loggerScroll: NSScrollView!
     @IBOutlet weak var osversion:    NSTextField!
     @IBOutlet weak var kuversion: NSTextField!
@@ -58,18 +58,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    @IBAction func webpulldown(_ sender: AnyObject) {
-        print("dropdown",sender.selectedCell()!.title);
-    }
+    //@IBAction func webpulldown(_ sender: AnyObject) {
+    //    print("dropdown",sender.selectedCell()!.title);
+    //}
     
     @IBAction func update(_ sender: NSButton) { // Checks by Tag which Radio-Button is pressed
         switch sender.tag {
         case 10:
             webDrivers.setValue(true, forKey: "enabled")
-            print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.title);
             break
         default:
-            print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.title);
             webDrivers.setValue(false, forKey: "enabled")
         }
         
