@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" id="SYo-Qi-m3I">
                             <rect key="frame" x="1" y="1" width="488" height="516"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
                                     <rect key="frame" x="0.0" y="0.0" width="488" height="516"/>
@@ -168,7 +168,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7Cf-Yb-fcl">
-                            <rect key="frame" x="1" y="1" width="15" height="0.0"/>
+                            <rect key="frame" x="489" y="1" width="15" height="516"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -479,10 +479,10 @@
                             <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-CO-Sbj">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-CO-Sbj">
                         <rect key="frame" x="672" y="371" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="1lb-0L-DYQ">
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="1lb-0L-DYQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -547,120 +547,77 @@
             <point key="canvasLocation" x="171.5" y="293"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="n0Q-NP-HmE"/>
-        <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titleVisibility="hidden" id="vj0-o9-9Hg">
+        <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="vj0-o9-9Hg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="752" y="691" width="480" height="374"/>
+            <rect key="contentRect" x="752" y="691" width="418" height="349"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="307-gu-qsQ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="374"/>
+                <rect key="frame" x="0.0" y="0.0" width="418" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HI5-fI-EDK">
-                        <rect key="frame" x="18" y="351" width="287" height="17"/>
+                        <rect key="frame" x="18" y="0.0" width="415" height="344"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Loads the following Kexts" id="axN-fO-K1a">
+                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="axN-fO-K1a">
                             <font key="font" metaFont="system"/>
+                            <mutableString key="title">Loads the following Kexts:  Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111</mutableString>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bfq-hM-Cc6">
-                        <rect key="frame" x="18" y="326" width="98" height="17"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="504-HT-gih">
+                        <rect key="frame" x="259" y="205" width="139" height="139"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Basic Kexts" id="81r-23-IVq">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TX-53-Kj7">
-                        <rect key="frame" x="18" y="301" width="98" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Audio" id="4nw-aF-3nJ">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M56-ha-DH5">
-                        <rect key="frame" x="18" y="276" width="98" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Intel" id="ib1-9l-KmL">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YwQ-Tf-e2q">
-                        <rect key="frame" x="18" y="251" width="98" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="nVidia" id="Tci-hH-cRE">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2M-7T-j8A">
-                        <rect key="frame" x="18" y="226" width="98" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="AMD" id="7kF-lt-QyD">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-ex-zqT">
-                        <rect key="frame" x="18" y="201" width="98" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Ethernet" id="vIN-60-8sx">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info" id="fjo-w2-c6i"/>
+                    </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-249" y="-270"/>
+            <point key="canvasLocation" x="-282" y="-347.5"/>
         </window>
-        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="8GG-Ob-CPn">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="121" y="123" width="469" height="261"/>
+        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="8GG-Ob-CPn">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="121" y="123" width="403" height="218"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="56C-XP-nFl">
-                <rect key="frame" x="0.0" y="0.0" width="469" height="261"/>
+                <rect key="frame" x="0.0" y="0.0" width="403" height="218"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQW-uN-p1H">
-                        <rect key="frame" x="49" y="183" width="371" height="67"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="head" id="skV-vg-pmi"/>
-                    </imageView>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-cd-NEb">
-                        <rect key="frame" x="72" y="146" width="324" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="from Sascha Lamprecht (Sascha_77) for" id="Cn5-6J-Ras">
-                            <font key="font" metaFont="system" size="16"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-5g-ZCA">
-                        <rect key="frame" x="97" y="11" width="265" height="18"/>
+                        <rect key="frame" x="69" y="7" width="265" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="© 2018 Sascha Lamprecht" id="6Ez-cv-Yob">
-                            <font key="font" metaFont="cellTitle"/>
+                            <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-h4-k4O">
-                        <rect key="frame" x="9" y="38" width="440" height="91"/>
+                        <rect key="frame" x="6" y="28" width="391" height="77"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hflogo" id="scw-Lp-Wro"/>
                     </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-fq-2Yx">
+                        <rect key="frame" x="15" y="98" width="134" height="124"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="zP9-Ih-qJC"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-le-Zil">
+                        <rect key="frame" x="157" y="98" width="211" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Developed By: Sascha Lamprecht Scripting Support: NoirOSX Program Icon: Nio82" allowsEditingTextAttributes="YES" id="qmh-1i-ylA">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQW-uN-p1H">
+                        <rect key="frame" x="153" y="171" width="214" height="37"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="head" id="skV-vg-pmi"/>
+                    </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="411.5" y="755.5"/>
+            <point key="canvasLocation" x="378.5" y="734"/>
         </window>
         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EhC-Hs-GZm">
             <rect key="frame" x="0.0" y="0.0" width="492" height="367"/>
@@ -672,6 +629,7 @@
     <resources>
         <image name="head" width="446" height="80"/>
         <image name="hflogo" width="860" height="170"/>
+        <image name="info" width="268" height="268"/>
         <image name="logo" width="512" height="512"/>
         <image name="rcaf5Tj" width="1280" height="960"/>
         <sound name="done"/>

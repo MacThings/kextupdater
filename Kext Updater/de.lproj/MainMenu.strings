@@ -1,8 +1,8 @@
 /* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
 "vlM-oF-beS.title" = "Immer die aktuellsten Kexte für Deinen Hackintosh";
 
-/* Class = "NSTextField"; title = "From Sascha Lamprecht (Sascha_77) for"; ObjectID = "Cn5-6J-Ras"; */
-"Cn5-6J-Ras.title" = "Von Sascha Lamprecht (Sascha_77) für";
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Developed By: Sascha Lamprecht Scripting Support: NoirOSX Program Icon: Nio82";
 
 /* Class = "NSTextField"; title = "© 2018 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
 "6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
@@ -50,7 +50,25 @@
 "d9l-S8-AU5.title" = "Kext Updater Version:";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Folgende Kexte werden geladen bei";
+"axN-fO-K1a.title" = "Lädt die folgenden Kexte bei:
+
+Basic Kexts
+FakeSMC, VoodooPS2, USBInjectAll
+
+Audio
+Lilu, AppleALC, CodecCommander
+
+Intel
+Lilu, IntelGraphicsFixup
+
+nVidia
+Lilu, nVidiaGraphicsFixup
+
+AMD
+Lilu, WhatEverGreen
+
+Ethernet
+AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
 "1UK-8n-QPP.title" = "Customize Toolbar…";
