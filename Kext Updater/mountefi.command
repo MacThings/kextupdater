@@ -8,5 +8,9 @@ if [[ $efiroot = "" ]];then
 efiroot=`./BDMESG |grep "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g"`
 fi
 
+if [ -d /Volumes/EFI ]; then
+diskutil unmount $efiroot
+else
 diskutil mount $efiroot
+fi
 exit 0

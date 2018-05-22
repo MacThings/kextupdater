@@ -37,8 +37,8 @@
 /* Class = "NSButton"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
 "6xu-6D-qrC.title" = "APFS laden";
 
-/* Class = "NSButtonCell"; title = "Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
-"lZg-Lq-oMC.title" = "EFI mounten";
+/* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "EFI (un)mounten";
 
 /* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
 "CRj-Q4-2Q3.title" = "Beenden";
@@ -100,9 +100,6 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Alle einblenden";
 
-/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
-"LE2-aR-0XJ.title" = "Bring All to Front";
-
 /* Class = "NSButtonCell"; title = "Los!"; ObjectID = "LNO-67-sPs"; */
 "LNO-67-sPs.title" = "Los!";
 
@@ -135,3 +132,31 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Hilfe";
+
+/* BASH Part - Do not remove this Line! */
+checkinet="Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch.";
+ozmosis="Achtung! Solange du Ozmosis nutzt stelle bitte sicher, dass sich keine doppelten Kexte Im System befinden. Ein und der selbe Kext sollten nicht im ROM, der EFI Partition oder in S/L/E gleichzeitig installiert sein.";
+greet1="Guten Morgen $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
+greet2="Guten Tag $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
+greet3="Guten Abend $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
+latest="Die aktuellste Version befindet sich bereits auf dem Schreibtisch. Wenn sie bereits installiert ist, kannst Du den Ordner löschen.";
+latest2="Die aktuelle Version wurde auf dem Schreibtisch im Ordner \"Aktueller Kext Updater\" abgelegt. Bitte ersetze deine derzeitige Version mit dieser. Der Kext Updater beendet sich jetzt.";
+upd="Überprüfe Kext Updater ...";
+upd1="Update verfügbar!";
+upd2="Installierte Version... = ";
+upd3="Server Version......... = ";
+upd4="√ Du bist auf dem neuesten Stand";
+checkver="Überprüfe ";
+lastcheck="Zeitpunkt der letzten Überprüfung";
+apfstext0="√ Du bist auf dem neuesten Stan";
+apfstext1="Eine neue Version von apfs.efi ist verfügbar und wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
+apfsinit="Die aktuelle apfs.efi wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
+webdrload=" wird auf den Desktop (Ordner Kext-Updates) heruntergeladen";
+fertig="√ Fertig";
+
+loading="Lade Datei auf den Desktop in den Ordner Kext-Updates herunter";
+dloading="wird auf den Desktop in den Ordner Kext-Updates heruntergeladen.";
+dupekext="Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.";
+obsolete="Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen.";
+
+

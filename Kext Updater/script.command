@@ -8,7 +8,7 @@ echo "Updates" > /tmp/choice.tmp
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.1
+ScriptVersion=2.0.3
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -28,7 +28,12 @@ if [[ $efiroot = "" ]];then
 efiroot=`./BDMESG |grep "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g"`
 fi
 kexte=`cat /tmp/choice.tmp`
-source gui.cfg
+
+if [[ $lan2 = "de_DE" ]]; then
+source de.lproj/MainMenu.strings
+else
+source en.lproj/MainMenu.strings
+fi
 
 #========================= Check Internet Connection =========================#
 ping -c 1 $url >> /dev/null 2>&1
@@ -270,56 +275,33 @@ done
 #========================= Helpfunction Update =========================
 function _toUpdate()
 {
-  if [[ $lan2 != "de_DE" ]]; then
-  _PRINT_MSG "Update available!\n
-  Your Version..... = $lecho\n
-  Server Version... = $recho\n
-  Downloading File to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------\n"
-  else
-  _PRINT_MSG "Update verfügbar!\n
-  Installierte Version... = $lecho\n
-  Server Version......... = $recho\n
-  Lade Datei auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------\n"
-  fi
+  _PRINT_MSG "$upd1\n
+  $upd2 = $lecho\n
+  $upd3 = $recho\n
+  $loading\n-----------------------------------------------------\n"
 }
 
 function _toUpdateLoad()
 {
-if [[ $lan2 != "de_DE" ]]; then
-_PRINT_MSG "Downloading $name to your Desktop into the Folder Kext-Updates\n-----------------------------------------------------\n"
-else
-_PRINT_MSG "Lade $name auf den Desktop in den Ordner Kext-Updates herunter\n-----------------------------------------------------\n"
-fi
+_PRINT_MSG "$name $dloading -----------------------------------------------------"
 }
 
 #========================= Helpfunction no Duplicates =========================#
 function _dupeKext()
 {
-  if [[ $lan2 != "de_DE" ]]; then
-  _PRINT_MSG "The latest Version is already downloaded to your Desktop. If its already installed please remove the Folder from your Desktop.\n-----------------------------------------------------"
-  else
-  _PRINT_MSG "Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.\n-----------------------------------------------------"
-  fi
+  _PRINT_MSG "$dupekext\n-----------------------------------------------------"
 }
 
 #========================= Helpfunction no Kext =========================#
 function _noUpdate()
 {
-  if [[ $lan2 != "de_DE" ]]; then
-  _PRINT_MSG "√ You are up to date (Version $lecho)\n-----------------------------------------------------"
-  else
-  _PRINT_MSG "√ Du bist auf dem neuesten Stand (Version $lecho)\n-----------------------------------------------------"
-  fi
+  _PRINT_MSG "$upd4 (Version $lecho)\n-----------------------------------------------------"
 }
 
 #========================= Helpfunction obsolete Kext =========================#
 function _obsoleteKext()
 {
-  if [[ $lan2 != "de_DE" ]]; then
-  _PRINT_MSG "Attention !!!\nPlease make sure to delete your old ${data[2]} and use ${data[3]} instead\n"
-  else
-  _PRINT_MSG "Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen\n"
-  fi
+  _PRINT_MSG "$obsolete\n"
 }
 #========================= Helpfunction Message =========================#
 function _PRINT_MSG()
@@ -334,7 +316,7 @@ function _nvwebdriver()
 build=`sw_vers | grep Build |sed "s/.*\://g" |xargs`
 mkdir -p "$ScriptDownloadPath/nVidia Webdriver"
 webdr2=`cat /tmp/webdriver.tmp |sed "s/.*-\ //g"`
-echo Build $webdr2 $webdrload
+echo Build $webdr2 $fertig
 echo " "
 curl -sS -o "${ScriptHome}/Desktop/Kext-Updates/nVidia Webdriver/$webdr2.pkg" https://$url/nvwebdriver/$webdr2.pkg
 sleep 1
@@ -393,21 +375,21 @@ echo " "
 #============================== Main Function ==============================#
 function _main()
 {
-    if [[ $1 == kextUpdate ]]; then
-        _printHeader
-        _lastcheck
-    fi
+if [[ $1 == kextUpdate ]]; then
+    _printHeader
+    _lastcheck
+fi
+sleep 0.5
+_kucheck
+if [[ $1 == kextUpdate ]]; then
     sleep 0.5
-    _kucheck
-    if [[ $1 == kextUpdate ]]; then
-        sleep 0.5
-        _kextUpdate
-    elif [[ $1 == kextLoader ]]; then
-        _sleep 0.5
-        _kextLoader
-    fi
-    _ozmosis
-    _tmpcleanup
+    _kextUpdate
+elif [[ $1 == kextLoader ]]; then
+    sleep 0.5
+    _kextLoader
+fi
+_ozmosis
+_tmpcleanup
 #_printFooter
 }
 
@@ -419,48 +401,56 @@ if [[ $kexte == *Grund* ]] || [[ $kexte == *Basic* ]]; then
   kextLoadArray=("fakesmc" "usbinjectall" "voodoops2")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *Audio* ]]; then
   kextLoadArray=("applealc" "lilu" "codeccommander")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *APFS* ]]; then
   kextLoadArray=("apfs")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *Intel* ]]; then
   kextLoadArray=("intelgraphicsfixup" "lilu")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
   fi
 if [[ $kexte == *nVidia* ]]; then
   kextLoadArray=("lilu" "nvidiagraphicsfixup")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
   fi
 if [[ $kexte == *AMD* ]]; then
   kextLoadArray=("lilu" "whatevergreen")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *Ethernet* ]]; then
   kextLoadArray=("atherose2200ethernet" "intelmausiethernet" "realtekrtl8111")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *Clover* ]]; then
   kextLoadArray=("clover")
   recho="Kexte"
   _main "kextLoader"
+  echo $fertig
   exit 0
 fi
 if [[ $kexte == *Webdriver* ]]; then

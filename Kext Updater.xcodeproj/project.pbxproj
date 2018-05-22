@@ -15,7 +15,6 @@
 		2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B920B238D100A38F52 /* mq.mp3 */; };
 		2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BB20B2394A00A38F52 /* ta.mp3 */; };
 		2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BD20B23D2D00A38F52 /* lastcheck.command */; };
-		2A6EC68620B09D0400A1F6F7 /* gui.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68520B09D0300A1F6F7 /* gui.cfg */; };
 		2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68720B0B57300A1F6F7 /* mountefi.command */; };
 		2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68920B0B99E00A1F6F7 /* osversion.command */; };
 		2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */; };
@@ -39,7 +38,6 @@
 		2A6760B920B238D100A38F52 /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
 		2A6760BB20B2394A00A38F52 /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
 		2A6760BD20B23D2D00A38F52 /* lastcheck.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = lastcheck.command; sourceTree = "<group>"; };
-		2A6EC68520B09D0300A1F6F7 /* gui.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gui.cfg; sourceTree = "<group>"; };
 		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			children = (
 				2A6760B520B2371D00A38F52 /* sounds */,
 				2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */,
-				2A6EC68520B09D0300A1F6F7 /* gui.cfg */,
 				2AA7731720B060E700FC2A91 /* done.mp3 */,
 				2AA7731420B0506E00FC2A91 /* bin */,
 				2AF8F36420AF4D52008D88E8 /* script.command */,
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */,
-				2A6EC68620B09D0400A1F6F7 /* gui.cfg in Resources */,
 				2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */,
 				2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */,
 				2AA7731620B0507D00FC2A91 /* BDMESG in Resources */,
@@ -285,7 +281,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -304,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -346,7 +342,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -359,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -370,10 +366,10 @@
 		2AD4DAED20AF03F600D2D335 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,10 +386,10 @@
 		2AD4DAEE20AF03F600D2D335 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
