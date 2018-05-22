@@ -114,7 +114,7 @@
             <point key="canvasLocation" x="260" y="-503"/>
         </menu>
         <window title="Kext Updater" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="993" height="550"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -153,10 +153,10 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
-                                    <rect key="frame" x="0.0" y="0.0" width="488" height="516"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="503" height="516"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="0.95276227678571423" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="488" height="516"/>
+                                    <size key="minSize" width="503" height="516"/>
                                     <size key="maxSize" width="505" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </textView>
