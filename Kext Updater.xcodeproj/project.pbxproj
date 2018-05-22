@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A006B8D20B2E5A6001C6A78 /* rcaf5Tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */; };
+		2A1DEF4B20B4775D00C3CDCE /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1DEF4A20B4775C00C3CDCE /* info.png */; };
 		2A3E609120B34DEB00E355B8 /* kuversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E609020B34DEB00E355B8 /* kuversion.command */; };
 		2A6760B420B236A500A38F52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B320B236A500A38F52 /* logo.png */; };
 		2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B720B2382F00A38F52 /* pm52.mp3 */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
+		2A1DEF4A20B4775C00C3CDCE /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = kuversion.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2A6760B720B2382F00A38F52 /* pm52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pm52.mp3; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		2AF8F34D20AF40E7008D88E8 /* pics */ = {
 			isa = PBXGroup;
 			children = (
+				2A1DEF4A20B4775C00C3CDCE /* info.png */,
 				2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */,
 				2A6760B320B236A500A38F52 /* logo.png */,
 				2AF8F34E20AF4102008D88E8 /* head.png */,
@@ -210,6 +213,7 @@
 				2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */,
 				2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */,
 				2AD4DAE420AF03F600D2D335 /* Assets.xcassets in Resources */,
+				2A1DEF4B20B4775D00C3CDCE /* info.png in Resources */,
 				2AF8F36520AF4D52008D88E8 /* script.command in Resources */,
 				2A6760B420B236A500A38F52 /* logo.png in Resources */,
 				2AB5E91820B2CECA00637003 /* choice.command in Resources */,
