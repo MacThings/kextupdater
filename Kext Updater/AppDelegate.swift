@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var player: AVAudioPlayer?
     
-    @IBOutlet weak var logger:       NSTextView!
+    @IBOutlet var logger:       NSTextView!
     @IBOutlet weak var loggerScroll: NSScrollView!
     @IBOutlet weak var osversion:    NSTextField!
     @IBOutlet weak var kuversion: NSTextField!
