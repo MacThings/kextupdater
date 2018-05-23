@@ -148,7 +148,7 @@ upd3="Server Version......... = ";
 upd4="√ Du bist auf dem neuesten Stand";
 checkver="Überprüfe ";
 lastcheck="Zeitpunkt der letzten Überprüfung";
-apfstext0="√ Du bist auf dem neuesten Stan";
+apfstext0="√ Du bist auf dem neuesten Stand";
 apfstext1="Eine neue Version von apfs.efi ist verfügbar und wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
 apfsinit="Die aktuelle apfs.efi wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
 webdrload=" wird auf den Desktop (Ordner Kext-Updates) heruntergeladen";
