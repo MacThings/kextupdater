@@ -37,17 +37,17 @@
 		2A20DFCF20B5EE1C008BB03A /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		2A20DFD020B5EEF3008BB03A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A20DFD120B5EFAF008BB03A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = kuversion.command; sourceTree = "<group>"; };
+		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = kuversion.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2A6760B720B2382F00A38F52 /* pm52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pm52.mp3; sourceTree = "<group>"; };
 		2A6760B920B238D100A38F52 /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
 		2A6760BB20B2394A00A38F52 /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
-		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = mountefi.command; sourceTree = "<group>"; };
+		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
 		2AA7731520B0507D00FC2A91 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AA7731720B060E700FC2A91 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
-		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = choice.command; sourceTree = "<group>"; };
+		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = choice.command; sourceTree = "<group>"; };
 		2AD4DADE20AF03F500D2D335 /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD4DAE320AF03F600D2D335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		2AF8F34E20AF4102008D88E8 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		2AF8F34F20AF4102008D88E8 /* hflogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hflogo.png; sourceTree = "<group>"; };
 		2AF8F35920AF466D008D88E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2AF8F36420AF4D52008D88E8 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = script.command; path = "Kext Updater/script.command"; sourceTree = SOURCE_ROOT; };
+		2AF8F36420AF4D52008D88E8 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = script.command; path = "Kext Updater/scripts/script.command"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 		2A6760B520B2371D00A38F52 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				2AA7731720B060E700FC2A91 /* done.mp3 */,
 				2A6760BB20B2394A00A38F52 /* ta.mp3 */,
 				2A6760B920B238D100A38F52 /* mq.mp3 */,
 				2A6760B720B2382F00A38F52 /* pm52.mp3 */,
@@ -88,6 +89,18 @@
 				2AA7731520B0507D00FC2A91 /* BDMESG */,
 			);
 			path = bin;
+			sourceTree = "<group>";
+		};
+		2AB1B6C520B60EFD00DE7188 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2AF8F36420AF4D52008D88E8 /* script.command */,
+				2A6EC68720B0B57300A1F6F7 /* mountefi.command */,
+				2A6EC68920B0B99E00A1F6F7 /* osversion.command */,
+				2AB5E91720B2CECA00637003 /* choice.command */,
+				2A3E609020B34DEB00E355B8 /* kuversion.command */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 		2AD4DAD520AF03F500D2D335 = {
@@ -109,21 +122,16 @@
 		2AD4DAE020AF03F500D2D335 /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2AB1B6C520B60EFD00DE7188 /* scripts */,
 				2A6760B520B2371D00A38F52 /* sounds */,
 				2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */,
-				2AA7731720B060E700FC2A91 /* done.mp3 */,
 				2AA7731420B0506E00FC2A91 /* bin */,
-				2AF8F36420AF4D52008D88E8 /* script.command */,
 				2AF8F34D20AF40E7008D88E8 /* pics */,
 				2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */,
 				2AD4DAE320AF03F600D2D335 /* Assets.xcassets */,
 				2AD4DAE520AF03F600D2D335 /* MainMenu.xib */,
 				2AD4DAE820AF03F600D2D335 /* Info.plist */,
 				2AD4DAE920AF03F600D2D335 /* Kext_Updater.entitlements */,
-				2A6EC68720B0B57300A1F6F7 /* mountefi.command */,
-				2A6EC68920B0B99E00A1F6F7 /* osversion.command */,
-				2AB5E91720B2CECA00637003 /* choice.command */,
-				2A3E609020B34DEB00E355B8 /* kuversion.command */,
 			);
 			path = "Kext Updater";
 			sourceTree = "<group>";
