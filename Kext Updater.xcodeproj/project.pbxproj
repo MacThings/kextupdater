@@ -14,7 +14,6 @@
 		2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B720B2382F00A38F52 /* pm52.mp3 */; };
 		2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B920B238D100A38F52 /* mq.mp3 */; };
 		2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BB20B2394A00A38F52 /* ta.mp3 */; };
-		2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760BD20B23D2D00A38F52 /* lastcheck.command */; };
 		2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68720B0B57300A1F6F7 /* mountefi.command */; };
 		2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68920B0B99E00A1F6F7 /* osversion.command */; };
 		2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */; };
@@ -32,12 +31,17 @@
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
 		2A1DEF4A20B4775C00C3CDCE /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		2A20DFCC20B5EDB8008BB03A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2A20DFCD20B5EDC0008BB03A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2A20DFCE20B5EDD4008BB03A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2A20DFCF20B5EE1C008BB03A /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		2A20DFD020B5EEF3008BB03A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2A20DFD120B5EFAF008BB03A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = kuversion.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2A6760B720B2382F00A38F52 /* pm52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pm52.mp3; sourceTree = "<group>"; };
 		2A6760B920B238D100A38F52 /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
 		2A6760BB20B2394A00A38F52 /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
-		2A6760BD20B23D2D00A38F52 /* lastcheck.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = lastcheck.command; sourceTree = "<group>"; };
 		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 				2AD4DAE920AF03F600D2D335 /* Kext_Updater.entitlements */,
 				2A6EC68720B0B57300A1F6F7 /* mountefi.command */,
 				2A6EC68920B0B99E00A1F6F7 /* osversion.command */,
-				2A6760BD20B23D2D00A38F52 /* lastcheck.command */,
 				2AB5E91720B2CECA00637003 /* choice.command */,
 				2A3E609020B34DEB00E355B8 /* kuversion.command */,
 			);
@@ -183,6 +186,12 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				es,
+				ru,
+				"pt-PT",
+				nl,
+				fr,
 			);
 			mainGroup = 2AD4DAD520AF03F500D2D335;
 			productRefGroup = 2AD4DADF20AF03F500D2D335 /* Products */;
@@ -199,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6760BE20B23D2D00A38F52 /* lastcheck.command in Resources */,
 				2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */,
 				2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */,
 				2AA7731620B0507D00FC2A91 /* BDMESG in Resources */,
@@ -241,6 +249,12 @@
 				2AD4DAE620AF03F600D2D335 /* Base */,
 				2AF8F35920AF466D008D88E8 /* en */,
 				2AF7585320B073150037D83D /* de */,
+				2A20DFCC20B5EDB8008BB03A /* tr */,
+				2A20DFCD20B5EDC0008BB03A /* es */,
+				2A20DFCE20B5EDD4008BB03A /* ru */,
+				2A20DFCF20B5EE1C008BB03A /* pt-PT */,
+				2A20DFD020B5EEF3008BB03A /* nl */,
+				2A20DFD120B5EFAF008BB03A /* fr */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
