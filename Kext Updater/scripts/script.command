@@ -8,7 +8,7 @@ echo "Updates" > /tmp/choice.tmp
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.3
+ScriptVersion=2.0.4
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -32,11 +32,12 @@ kexte=`cat /tmp/choice.tmp`
 if [[ $lan2 = "de_DE" ]]; then
 cat de.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
 source /tmp/locales.tmp
-#source de.lproj/MainMenu.strings
 elif [[ $lan2 = "tr_TR" ]]; then
-source tr.lproj/MainMenu.strings
+cat tr.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
+source /tmp/locales.tmp
 else
-source en.lproj/MainMenu.strings
+cat en.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
+source /tmp/locales.tmp
 fi
 
 #========================= Check Internet Connection =========================#

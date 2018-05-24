@@ -130,6 +130,15 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Hilfe";
 
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Kopieren";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Alles markieren";
+
 /* BASH Part - Do not remove this Line! */
 checkinet="Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch.";
 ozmosis="Achtung! Solange du Ozmosis nutzt stelle bitte sicher, dass sich keine doppelten Kexte Im System befinden. Ein und der selbe Kext sollten nicht im ROM, der EFI Partition oder in S/L/E gleichzeitig installiert sein.";
