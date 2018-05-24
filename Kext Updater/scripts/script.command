@@ -30,7 +30,9 @@ fi
 kexte=`cat /tmp/choice.tmp`
 
 if [[ $lan2 = "de_DE" ]]; then
-source de.lproj/MainMenu.strings
+cat de.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
+source /tmp/locales.tmp
+#source de.lproj/MainMenu.strings
 elif [[ $lan2 = "tr_TR" ]]; then
 source tr.lproj/MainMenu.strings
 else
@@ -278,8 +280,8 @@ done
 function _toUpdate()
 {
   _PRINT_MSG "$upd1\n
-  $upd2 = $lecho\n
-  $upd3 = $recho\n
+  $upd2 = $lecho
+  $upd3 = $recho\n\n
   $loading\n-----------------------------------------------------\n"
 }
 
@@ -357,6 +359,9 @@ rm -f $ScriptTmpPath/webdriver.tmp
 fi
 if [ -f $ScriptTmpPath/kuversion.tmp ]; then
 rm -f $ScriptTmpPath/kuversion.tmp
+fi
+if [ -f $ScriptTmpPath/locales.tmp ]; then
+rm -f $ScriptTmpPath/locales.tmp
 fi
 find $ScriptDownloadPath/ -name *.dSYM -exec rm -r {} \; >/dev/null 2>&1
 }
