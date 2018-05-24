@@ -1,56 +1,56 @@
 /* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
-"vlM-oF-beS.title" = "Immer die aktuellsten Kexte für Deinen Hackintosh";
+"vlM-oF-beS.title" = "Hackintosh için herzaman en son güncel Kextler";
 
 /* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
-"qmh-1i-ylA.title" = "Developed By: Sascha Lamprecht Scripting Support: NoirOSX Program Icon: Nio82";
+"qmh-1i-ylA.title" = "Geliştirici: Sascha Lamprecht     Komut Desteği: NoirOSX      Program Simgesi: Nio82";
 
 /* Class = "NSTextField"; title = "© 2018 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
 "6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
 
 /* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
-"AuD-6W-583.title" = "Auf Updates prüfen";
+"AuD-6W-583.title" = "Güncellemeleri Denetle";
 
 /* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
-"tgP-dd-FH8.title" = "Grundkexte laden";
+"tgP-dd-FH8.title" = "Temel kextleri yükle";
 
 /* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
-"fqJ-G4-Tp5.title" = "Audiokexte laden";
+"fqJ-G4-Tp5.title" = "Audio kexteleri yükle";
 
 /* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
-"N94-zg-VcZ.title" = "Intelkexte laden";
+"N94-zg-VcZ.title" = "İntel kexteleri yükle";
 
 /* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
-"Rvp-7w-kv4.title" = "nVidiakexte laden";
+"Rvp-7w-kv4.title" = "nVidia kexteleri yükle";
 
 /* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
-"Ua2-LB-zIU.title" = "AMDkexte laden";
+"Ua2-LB-zIU.title" = "AMD kexteleri yükle";
 
 /* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
-"ij0-6U-Ki4.title" = "Ethernetkexte laden";
+"ij0-6U-Ki4.title" = "Ethernet kexteleri yükle";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
-"Uux-7h-pPV.title" = "Clover Bootloader laden";
+"Uux-7h-pPV.title" = "Clover Bootloader yükle";
 
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
-"BvR-0L-x9I.title" = "Webdriver laden";
+"BvR-0L-x9I.title" = "Webdriver yükle";
 
 /* Class = "NSButton"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
-"6xu-6D-qrC.title" = "APFS laden";
+"6xu-6D-qrC.title" = "APFS Sürücünü yükle";
 
 /* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
 "lZg-Lq-oMC.title" = "EFI (un)mounten";
 
 /* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
-"CRj-Q4-2Q3.title" = "Beenden";
+"CRj-Q4-2Q3.title" = "Çıkış";
 
 /* Class = "NSTextField"; title = "Your System Version:"; ObjectID = "Dlp-ZC-S8w"; */
-"Dlp-ZC-S8w.title" = "Deine System Version:";
+"Dlp-ZC-S8w.title" = "Sistem Sürümünüz:";
 
 /* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
-"d9l-S8-AU5.title" = "Kext Updater Version:";
+"d9l-S8-AU5.title" = "Kext Updater Sürümü:";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Lädt die folgenden Kexte:
+"axN-fO-K1a.title" = "Aşağıdaki Kextleri yükle:
 
 Basic Kexts
 FakeSMC, VoodooPS2, USBInjectAll
@@ -71,89 +71,89 @@ Ethernet
 AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Kext Updater";
+"1Xt-HY-uBw.title" = "Kext Güncelleyici";
 
 /* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Beende Kext Updater";
+"4sb-4s-VLi.title" = "Kext Updaterden Çıkış";
 
 /* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "Über Kext Updater";
+"5kV-Vb-QxS.title" = "Kext Updater Hakkında";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
-"AYu-sK-qS6.title" = "Main Menu";
+"AYu-sK-qS6.title" = "Ana Menü";
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
-"BOF-NM-1cW.title" = "Preferences…";
+"BOF-NM-1cW.title" = "Tercihler…";
 
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
-"F2S-fz-NVQ.title" = "Hilfe";
+"F2S-fz-NVQ.title" = "Yardım";
 
 /* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "Kext Updater Hilfe";
+"FKE-Sm-Kum.title" = "Kext Updater Yardım";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
-"Fal-I4-PZk.title" = "Text";
+"Fal-I4-PZk.title" = "Metin";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Alle einblenden";
+"Kd2-mp-pUS.title" = "Tümünü göster";
 
 /* Class = "NSButtonCell"; title = "Los!"; ObjectID = "LNO-67-sPs"; */
-"LNO-67-sPs.title" = "Los!";
+"LNO-67-sPs.title" = "Çalıştır!";
 
 /* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
-"NMo-om-nkz.title" = "Dienste";
+"NMo-om-nkz.title" = "Hizmetler";
 
 /* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Kext Updater ausblenden";
+"Olw-nP-bQN.title" = "Kext Updateri karart";
 
 /* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
 "QvC-M9-y7g.title" = "Kext Updater";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Andere ausblenden";
+"Vdr-fp-XzO.title" = "Diğerlerini karart";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
-"aTl-1u-JFS.title" = "Drucken...";
+"aTl-1u-JFS.title" = "Yazdır...";
 
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
-"bib-Uj-vzu.title" = "Datei";
+"bib-Uj-vzu.title" = "Dosya";
 
 /* Class = "NSMenu"; title = "Text"; ObjectID = "d9c-me-L2H"; */
-"d9c-me-L2H.title" = "Text";
+"d9c-me-L2H.title" = "Metin";
 
 /* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
-"qIS-W8-SiK.title" = "Seiten einrichten…";
+"qIS-W8-SiK.title" = "Sayfaları ayarla…";
 
 /* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Kext Updater";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
-"wpr-3q-Mcd.title" = "Hilfe";
+"wpr-3q-Mcd.title" = "Yardım";
 
 /* BASH Part - Do not remove this Line! */
-checkinet="Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch.";
-ozmosis="Achtung! Solange du Ozmosis nutzt stelle bitte sicher, dass sich keine doppelten Kexte Im System befinden. Ein und der selbe Kext sollten nicht im ROM, der EFI Partition oder in S/L/E gleichzeitig installiert sein.";
-greet1="Guten Morgen $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-greet2="Guten Tag $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-greet3="Guten Abend $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-latest="Die aktuellste Version befindet sich bereits auf dem Schreibtisch. Wenn sie bereits installiert ist, kannst Du den Ordner löschen.";
-latest2="Die aktuelle Version wurde auf dem Schreibtisch im Ordner \"Aktueller Kext Updater\" abgelegt. Bitte ersetze deine derzeitige Version mit dieser. Der Kext Updater beendet sich jetzt.";
-upd="Überprüfe Kext Updater ...";
-upd1="Update verfügbar!";
-upd2="Installierte Version... = ";
-upd3="Server Version......... = ";
-upd4="√ Du bist auf dem neuesten Stand";
-checkver="Überprüfe ";
-lastcheck="Zeitpunkt der letzten Überprüfung";
-apfstext0="√ Du bist auf dem neuesten Stand";
-apfstext1="Eine neue Version von apfs.efi ist verfügbar und wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
-apfsinit="Die aktuelle apfs.efi wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
-webdrload=" wird auf den Desktop (Ordner Kext-Updates) heruntergeladen";
-fertig="√ Fertig";
+checkinet="İnternet bağlantınızı kontrol ediniz veya güncelleme Sunucusu müsait değil. Program otomatik olarak 5 saniye içinde kapanır.";
+ozmosis="Dikkat! Ozmosis'i kullandığınız sürece, sistemde çift Kext olmadığından emin olun. Aynı Kext ROM, EFI bölümü veya S/L/E'de aynı anda kurulmamalıdır.";
+greet1="Günaydın $osuser. Yeni bir şey olup olmadığını bakalım...";
+greet2="Merhaba $osuser. Yeni bir şey olup olmadığını bakalım...";
+greet3="İyi akşamlar $osuser. Yeni bir şey olup olmadığını bakalım...";
+latest="En son sürüm zaten Masaüstünde. Önceden yüklenmişse, klasörü silebilirsiniz.";
+latest2="Güncel sürüm Masaüstündeki \"Aktueller Kext Updater\" Klasöre dosyalanmıştır. Mevcut sürümünüzü bununla değiştirin. Kext Updater şimdi sona eriyor.";
+upd="Kext Updateri Denetliyorum ...";
+upd1="Güncelleme var!";
+upd2="Yüklü Sürüm... = ";
+upd3="Sunucu Sürümü......... = ";
+upd4="√ Güncel Durumdasın";
+checkver="Denetliyorum ";
+lastcheck="Son denetleme zamanı";
+apfstext0="√ Güncel Durumdasın";
+apfstext1="apfs.efi'nin yeni bir sürümü var ve Masaüstündeki (Kext Updates) klasörüne indirildi.";
+apfsinit="Güncel apfs.efi Masaüstündeki (Kext Updates) klasörüne indirildi.";
+webdrload=" Masaüstündeki (Kext Updates) klasörüne indiriliyor";
+fertig="√ Bitti";
 
-loading="Lade Datei auf den Desktop in den Ordner Kext-Updates herunter";
-dloading="wird auf den Desktop in den Ordner Kext-Updates heruntergeladen.";
-dupekext="Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.";
-obsolete="Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen.";
+loading="Dosyayı Masaüstündeki Kext Updates klasörüne indiriyorum";
+dloading="Masaüstündeki (Kext Updates) klasörüne indiriliyor.";
+dupekext="En son sürüm zaten Masaüstünde. Önceden yüklenmişse, klasörü silebilirsiniz.";
+obsolete="Dikkat !!!\nEski olan ${data[2]} siliniz ve onun yerine ${data[3]} kullanınız.";
 
 
