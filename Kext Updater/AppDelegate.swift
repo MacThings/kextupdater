@@ -23,8 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var webDrivers:   NSPopUpButton!
     @IBOutlet weak var help:         NSWindow!
     @IBOutlet weak var aboutwindow: NSWindow!
-    
-    
+       
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
 
@@ -99,7 +98,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func quit(_ sender: NSButton) {
         exit(0)
     }
-    
+
+   
     @IBAction func mountefi(_ sender: NSButton) {
         logger.textStorage?.mutableString.setString("")
         sender.isEnabled    = false

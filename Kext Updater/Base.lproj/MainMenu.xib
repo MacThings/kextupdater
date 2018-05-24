@@ -26,6 +26,7 @@
                 <outlet property="osversion" destination="zBx-vT-yDB" id="Gie-bg-7EG"/>
                 <outlet property="progress" destination="LYO-y3-fzw" id="xyg-Yd-1Qf"/>
                 <outlet property="quit" destination="jIe-QL-NSX" id="uHs-dj-XnI"/>
+                <outlet property="redclose" destination="QvC-M9-y7g" id="inh-CJ-oj8"/>
                 <outlet property="spinner" destination="LYO-y3-fzw" id="wVt-bz-dwp"/>
                 <outlet property="webDrivers" destination="zxn-Zf-ylW" id="GQK-HD-4QU"/>
                 <outlet property="webdriver2" destination="zxn-Zf-ylW" id="BAs-1k-4lk"/>
@@ -544,7 +545,7 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="171.5" y="293"/>
+            <point key="canvasLocation" x="177" y="217"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="n0Q-NP-HmE"/>
         <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="vj0-o9-9Hg">

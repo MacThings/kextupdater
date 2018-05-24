@@ -31,6 +31,8 @@ kexte=`cat /tmp/choice.tmp`
 
 if [[ $lan2 = "de_DE" ]]; then
 source de.lproj/MainMenu.strings
+elif [[ $lan2 = "tr_TR" ]]; then
+source tr.lproj/MainMenu.strings
 else
 source en.lproj/MainMenu.strings
 fi
