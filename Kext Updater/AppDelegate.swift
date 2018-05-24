@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var webDrivers:   NSPopUpButton!
     @IBOutlet weak var help:         NSWindow!
     @IBOutlet weak var aboutwindow: NSWindow!
-       
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
 
@@ -55,6 +55,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+
+    @IBAction func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) {
+        exit(0)
     }
     
     //@IBAction func webpulldown(_ sender: AnyObject) {

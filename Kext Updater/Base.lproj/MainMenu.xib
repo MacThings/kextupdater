@@ -123,11 +123,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="993" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c47-cY-f2e">
-                        <rect key="frame" x="370" y="482" width="48" height="48"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="haR-w4-0C4"/>
-                    </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PU-RK-obF">
                         <rect key="frame" x="565" y="462" width="397" height="73"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -481,7 +476,7 @@
                         </textFieldCell>
                     </textField>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-CO-Sbj">
-                        <rect key="frame" x="675" y="371" width="25" height="25"/>
+                        <rect key="frame" x="683" y="371" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="1lb-0L-DYQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -620,19 +615,12 @@
             </view>
             <point key="canvasLocation" x="393.5" y="749"/>
         </window>
-        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EhC-Hs-GZm">
-            <rect key="frame" x="0.0" y="0.0" width="492" height="367"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="rcaf5Tj" id="LhT-mQ-qTw"/>
-            <point key="canvasLocation" x="-42" y="393"/>
-        </imageView>
     </objects>
     <resources>
         <image name="head" width="446" height="80"/>
         <image name="hflogo" width="860" height="170"/>
         <image name="info" width="268" height="268"/>
         <image name="logo" width="512" height="512"/>
-        <image name="rcaf5Tj" width="1280" height="960"/>
         <sound name="done"/>
         <sound name="mq"/>
         <sound name="pm52"/>
