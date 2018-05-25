@@ -34,15 +34,15 @@ fi
 kexte=`cat /tmp/choice.tmp`
 
 if [[ $lan2 = "de_DE" ]]; then
-cat de.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
-source /tmp/locales.tmp
+language="de"
 elif [[ $lan2 = "tr_TR" ]]; then
-cat tr.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
-source /tmp/locales.tmp
+language="tr"
 else
-cat en.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" > /tmp/locales.tmp
-source /tmp/locales.tmp
+language="en"
 fi
+
+cat $language.lproj/MainMenu.strings | sed -e '/BASH/,$!d' -e "s/\;//g" | tail -n +$((x+2)) > /tmp/locales.tmp
+source /tmp/locales.tmp
 
 #========================= Check Internet Connection =========================#
 ping -c 1 $url >> /dev/null 2>&1
