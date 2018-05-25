@@ -7,6 +7,10 @@ if [ ! -f /tmp/choice.tmp ]; then
 echo "Updates" > /tmp/choice.tmp
 fi
 
+if [ -f /tmp/kextstats ]; then
+rm /tmp/kextstats
+fi
+
 #========================= Script Version Info =========================#
 ScriptVersion=2.0.4
 
@@ -133,11 +137,7 @@ function _ozmosis()
 {
 ./BDMESG | grep "Ozmosis" > /dev/null
 if [[ $? = "0" ]]; then
-  if [[ $lan2 != "de_DE" ]]; then
   echo $ozmosis
-  else
-  echo $ozmosis
-  fi
 echo " "
 fi
 }
@@ -268,6 +268,9 @@ for kextLoadList in "${kextLoadArray[@]}"
     IFS=","
     data=($kextLoadList)
     name=${data[0]}
+if [ ${name} = "*Clover*" ] | [ -f /tmp/nightly.tmp ]; then
+name="clovernightly"
+fi
 mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
 _toUpdateLoad
 curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
@@ -332,38 +335,8 @@ exit 0
 }
 
 #============================== Cleanup Files ==============================#
-function _tmpcleanup()
+function _cleanup()
 {
-if [ -f $ScriptTmpPath/nvoptions ]; then
-rm -f $ScriptTmpPath/nvoptions
-fi
-if [ -f $ScriptTmpPath/kextstats ]; then
-rm -f $ScriptTmpPath/kextstats
-fi
-if [ -f $ScriptTmpPath/overview.html ]; then
-rm -f $ScriptTmpPath/overview.html
-fi
-if [ -f $ScriptTmpPath/kextupdater.zip ]; then
-rm -f $ScriptTmpPath/kextupdater.zip
-fi
-if [ -f $ScriptTmpPath/choice.tmp ]; then
-rm -f $ScriptTmpPath/choice.tmp
-fi
-if [ -f $ScriptTmpPath/osversion.tmp ]; then
-rm -f $ScriptTmpPath/osversion.tmp
-fi
-if [ -f $ScriptTmpPath/webdriver.system ]; then
-rm -f $ScriptTmpPath/webdriver.system
-fi
-if [ -f $ScriptTmpPath/webdriver.tmp ]; then
-rm -f $ScriptTmpPath/webdriver.tmp
-fi
-if [ -f $ScriptTmpPath/kuversion.tmp ]; then
-rm -f $ScriptTmpPath/kuversion.tmp
-fi
-if [ -f $ScriptTmpPath/locales.tmp ]; then
-rm -f $ScriptTmpPath/locales.tmp
-fi
 find $ScriptDownloadPath/ -name *.dSYM -exec rm -r {} \; >/dev/null 2>&1
 }
 
@@ -397,7 +370,7 @@ elif [[ $1 == kextLoader ]]; then
     _kextLoader
 fi
 _ozmosis
-_tmpcleanup
+_cleanup
 #_printFooter
 }
 

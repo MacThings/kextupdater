@@ -29,7 +29,10 @@
 "ij0-6U-Ki4.title" = "Load Ethernet Kexts";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
-"Uux-7h-pPV.title" = "Load Clover Bootloader";
+"Uux-7h-pPV.title" = "Load Clover";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Nightly Build";
 
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
 "BvR-0L-x9I.title" = "Load Webdriver";

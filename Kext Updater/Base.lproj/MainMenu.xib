@@ -23,6 +23,7 @@
                 <outlet property="kuversion" destination="o6W-Kx-H36" id="S5h-sv-A0F"/>
                 <outlet property="logger" destination="dJR-3m-BoN" id="Xp9-60-rUh"/>
                 <outlet property="loggerScroll" destination="8su-6A-MGi" id="NQU-NT-Pdf"/>
+                <outlet property="nightly" destination="ceQ-Nf-cYH" id="P1Y-hB-iA0"/>
                 <outlet property="osversion" destination="zBx-vT-yDB" id="Gie-bg-7EG"/>
                 <outlet property="progress" destination="LYO-y3-fzw" id="xyg-Yd-1Qf"/>
                 <outlet property="quit" destination="jIe-QL-NSX" id="uHs-dj-XnI"/>
@@ -161,14 +162,14 @@
                         <rect key="frame" x="15" y="17" width="501" height="518"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" id="SYo-Qi-m3I">
-                            <rect key="frame" x="1" y="1" width="499" height="516"/>
+                            <rect key="frame" x="1" y="1" width="484" height="516"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
-                                    <rect key="frame" x="0.0" y="0.0" width="514" height="516"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="516"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="0.95276227678571423" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="499" height="516"/>
+                                    <size key="minSize" width="484" height="516"/>
                                     <size key="maxSize" width="531" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </textView>
@@ -180,7 +181,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7Cf-Yb-fcl">
-                            <rect key="frame" x="484" y="1" width="16" height="516"/>
+                            <rect key="frame" x="485" y="1" width="15" height="516"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -278,12 +279,12 @@ DQ
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="SmL-7f-e1O">
                         <rect key="frame" x="544" y="214" width="171" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="Load Clover Bootloader" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Uux-7h-pPV">
+                        <buttonCell key="cell" type="radio" title="Load Clover" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Uux-7h-pPV">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="update:" target="Voe-Tx-rLC" id="Bod-m6-efI"/>
+                            <action selector="update:" target="Voe-Tx-rLC" id="jqk-En-Gwx"/>
                         </connections>
                     </button>
                     <button identifier="webradio" verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-b4-e4L">
@@ -320,7 +321,7 @@ DQ
                         </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zxn-Zf-ylW">
-                        <rect key="frame" x="543" y="133" width="152" height="26"/>
+                        <rect key="frame" x="563" y="135" width="152" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title=" " bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" inset="2" selectedItem="3nM-7c-WFk" id="jlM-mW-nYo">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -521,7 +522,7 @@ DQ
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clX-MW-DNP">
-                        <rect key="frame" x="718" y="151" width="255" height="267"/>
+                        <rect key="frame" x="720" y="151" width="255" height="267"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="lP3-4n-oez"/>
                     </imageView>
@@ -557,9 +558,20 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceQ-Nf-cYH">
+                        <rect key="frame" x="640" y="211" width="103" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Nightly Build" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="Ter-3R-x9H">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="nightchecked:" target="Voe-Tx-rLC" id="1uC-ED-1WE"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="177" y="217"/>
+            <point key="canvasLocation" x="176.5" y="217"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="n0Q-NP-HmE"/>
         <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="vj0-o9-9Hg">

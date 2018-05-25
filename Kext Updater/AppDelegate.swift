@@ -23,12 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var webDrivers:   NSPopUpButton!
     @IBOutlet weak var help:         NSWindow!
     @IBOutlet weak var aboutwindow: NSWindow!
+    @IBOutlet weak var nightly: NSButton!
+    
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
 
         logger.font = NSFont(name: "Monaco", size: 15)
-        
+
         self.asyncShellExec(path: Bundle.main.path(forResource: "osversion", ofType: "command"))
         self.asyncShellExec(path: Bundle.main.path(forResource: "kuversion", ofType: "command"))
         self.asyncShellExec(path: Bundle.main.path(forResource: "choice", ofType: "command"))
@@ -58,6 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) {
+        self.asyncShellExec(path: Bundle.main.path(forResource: "cleanup", ofType: "command"))
         exit(0)
     }
     
@@ -75,6 +78,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //print(sender.selectedCell()!.title);
             webDrivers.setValue(false, forKey: "enabled")
         }
+        switch sender.tag {
+        case 8:
+            nightly.setValue(true, forKey: "enabled")
+            print(sender.selectedCell()!.title);
+            break
+        default:
+            print(sender.selectedCell()!.title);
+            nightly.setValue(false, forKey: "enabled")
+        }
         
         let filePath           = "/tmp/choice.tmp"
         let fileContentToWrite = sender.selectedCell()!.title
@@ -85,6 +97,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         catch let error as NSError {
             print("An error took place: \(error)")
         }
+ 
+            self.asyncShellExec(path: Bundle.main.path(forResource: "nightly", ofType: "command"))
     }
     
     @IBAction func webdriver(_ sender: AnyObject) {
@@ -98,11 +112,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("An error took place: \(error)")
         }
     }
+ 
     
-    @IBAction func quit(_ sender: NSButton) {
-        exit(0)
+    @IBAction func nightchecked(_ sender: AnyObject) {
+        print(sender.selectedCell()!.title);
+        let filePath = "/tmp/nightly.tmp"
+        let fileContentToWrite = (sender as AnyObject).selectedCell()!.title
+        do {
+            // Write contents to file
+            try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError {
+            print("An error took place: \(error)")
+        }
     }
 
+    @IBAction func quit(_ sender: NSButton) {
+        self.asyncShellExec(path: Bundle.main.path(forResource: "cleanup", ofType: "command"))
+        exit(0)
+    }
    
     @IBAction func mountefi(_ sender: NSButton) {
         logger.textStorage?.mutableString.setString("")
