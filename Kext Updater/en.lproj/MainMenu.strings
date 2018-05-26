@@ -144,8 +144,6 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
 "vV1-V8-mlg.title" = "Select All";
 
-
-
 /* BASH Part - Do not remove this Line! */
 checkinet="Check your Internet Connection or perhaps the Updateserver is down! The Program will close in 5 seconds.";
 ozmosis="Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time.";

@@ -1,56 +1,59 @@
 /* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
-"vlM-oF-beS.title" = "Immer die aktuellsten Kexte für Deinen Hackintosh";
+"vlM-oF-beS.title" = "Всегда самые новые кексти для вашего Хакинтош";
 
 /* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
-"qmh-1i-ylA.title" = "Developed By: Sascha Lamprecht Scripting Support: NoirOSX Program Icon: Nio82";
+"qmh-1i-ylA.title" = "Разработано: Sascha Lamprecht Поддержка скриптов: NoirOSX Иконка программы: Nio82";
 
 /* Class = "NSTextField"; title = "© 2018 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
 "6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
 
 /* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
-"AuD-6W-583.title" = "Auf Updates prüfen";
+"AuD-6W-583.title" = "Обновить";
 
 /* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
-"tgP-dd-FH8.title" = "Grundkexte laden";
+"tgP-dd-FH8.title" = "Скачать Основные Кексти";
 
 /* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
-"fqJ-G4-Tp5.title" = "Audiokexte laden";
+"fqJ-G4-Tp5.title" = "Скачать Aудио Кексти";
 
 /* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
-"N94-zg-VcZ.title" = "Intelkexte laden";
+"N94-zg-VcZ.title" = "Скачать Intel Кексти";
 
 /* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
-"Rvp-7w-kv4.title" = "nVidiakexte laden";
+"Rvp-7w-kv4.title" = "Скачать nVidia Кексти";
 
 /* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
-"Ua2-LB-zIU.title" = "AMDkexte laden";
+"Ua2-LB-zIU.title" = "Скачать AMD Кексти";
 
 /* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
-"ij0-6U-Ki4.title" = "Ethernetkexte laden";
+"ij0-6U-Ki4.title" = "Скачать Кексти для локальный сети";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
-"Uux-7h-pPV.title" = "Clover Bootloader laden";
+"Uux-7h-pPV.title" = "Скачать Clover";
+
+/* Class = "NSButton"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Не официально";
 
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
-"BvR-0L-x9I.title" = "Webdriver laden";
+"BvR-0L-x9I.title" = "Скачать Webdriver";
 
 /* Class = "NSButton"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
-"6xu-6D-qrC.title" = "APFS laden";
+"6xu-6D-qrC.title" = "Скачать APFS";
 
 /* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
-"lZg-Lq-oMC.title" = "EFI (un)mounten";
+"lZg-Lq-oMC.title" = "Загрузить/Разгрузить EFI";
 
 /* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
-"CRj-Q4-2Q3.title" = "Beenden";
+"CRj-Q4-2Q3.title" = "Выход";
 
 /* Class = "NSTextField"; title = "Your System Version:"; ObjectID = "Dlp-ZC-S8w"; */
-"Dlp-ZC-S8w.title" = "Deine System Version:";
+"Dlp-ZC-S8w.title" = "Версия вашей системы:";
 
 /* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
-"d9l-S8-AU5.title" = "Kext Updater Version:";
+"d9l-S8-AU5.title" = "Версия программы Кекст Упдатер :";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Lädt die folgenden Kexte:
+"axN-fO-K1a.title" = "Загружает следующие Кексти:
 
 Basic Kexts
 FakeSMC, VoodooPS2, USBInjectAll
@@ -71,89 +74,98 @@ Ethernet
 AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Kext Updater";
+"1Xt-HY-uBw.title" = "Кекст Упдатер";
 
 /* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Beende Kext Updater";
+"4sb-4s-VLi.title" = "Покинут Кекст Упдатер";
 
 /* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "Über Kext Updater";
+"5kV-Vb-QxS.title" = "О Кекст Упдатер";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
-"AYu-sK-qS6.title" = "Main Menu";
+"AYu-sK-qS6.title" = "Главное меню";
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
-"BOF-NM-1cW.title" = "Preferences…";
+"BOF-NM-1cW.title" = "Настройки…";
 
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
-"F2S-fz-NVQ.title" = "Hilfe";
+"F2S-fz-NVQ.title" = "Помощь";
 
 /* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "Kext Updater Hilfe";
+"FKE-Sm-Kum.title" = "Помощь Кекст Упдатер";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
-"Fal-I4-PZk.title" = "Text";
+"Fal-I4-PZk.title" = "Текст";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Alle einblenden";
+"Kd2-mp-pUS.title" = "Показать все";
 
 /* Class = "NSButtonCell"; title = "Los!"; ObjectID = "LNO-67-sPs"; */
-"LNO-67-sPs.title" = "Los!";
+"LNO-67-sPs.title" = "Поехали!";
 
 /* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
-"NMo-om-nkz.title" = "Dienste";
+"NMo-om-nkz.title" = "Услуги";
 
 /* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Kext Updater ausblenden";
+"Olw-nP-bQN.title" = "Скрит Кекст Упдатер";
 
 /* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
-"QvC-M9-y7g.title" = "Kext Updater";
+"QvC-M9-y7g.title" = "Кекст Упдатер";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Andere ausblenden";
+"Vdr-fp-XzO.title" = "Скрыть другие";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
-"aTl-1u-JFS.title" = "Drucken...";
+"aTl-1u-JFS.title" = "Распечатать...";
 
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
-"bib-Uj-vzu.title" = "Datei";
+"bib-Uj-vzu.title" = "Файл";
 
 /* Class = "NSMenu"; title = "Text"; ObjectID = "d9c-me-L2H"; */
-"d9c-me-L2H.title" = "Text";
+"d9c-me-L2H.title" = "Текст";
 
 /* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
-"qIS-W8-SiK.title" = "Seiten einrichten…";
+"qIS-W8-SiK.title" = "Настройка страницы…";
 
 /* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Kext Updater";
+"uQy-DD-JDr.title" = "Кекст Упдатер";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
-"wpr-3q-Mcd.title" = "Hilfe";
+"wpr-3q-Mcd.title" = "Помощь";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Pедактировать";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "копия";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Отметить все";
 
 /* BASH Part - Do not remove this Line! */
-checkinet="Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch.";
-ozmosis="Achtung! Solange du Ozmosis nutzt stelle bitte sicher, dass sich keine doppelten Kexte Im System befinden. Ein und der selbe Kext sollten nicht im ROM, der EFI Partition oder in S/L/E gleichzeitig installiert sein.";
-greet1="Guten Morgen $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-greet2="Guten Tag $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-greet3="Guten Abend $osuser. Dann wollen wir mal schauen ob es etwas Neues gibt. Los gehts ...";
-latest="Die aktuellste Version befindet sich bereits auf dem Schreibtisch. Wenn sie bereits installiert ist, kannst Du den Ordner löschen.";
-latest2="Die aktuelle Version wurde auf dem Schreibtisch im Ordner \"Aktueller Kext Updater\" abgelegt. Bitte ersetze deine derzeitige Version mit dieser. Der Kext Updater beendet sich jetzt.";
-upd="Überprüfe Kext Updater ...";
-upd1="Update verfügbar!";
-upd2="Installierte Version... = ";
-upd3="Server Version......... = ";
-upd4="√ Du bist auf dem neuesten Stand";
-checkver="Überprüfe ";
-lastcheck="Zeitpunkt der letzten Überprüfung";
-apfstext0="√ Du bist auf dem neuesten Stand";
-apfstext1="Eine neue Version von apfs.efi ist verfügbar und wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
-apfsinit="Die aktuelle apfs.efi wurde auf den Desktop (Ordner Kext-Updates) heruntergeladen.";
-webdrload=" wird auf den Desktop (Ordner Kext-Updates) heruntergeladen";
-fertig="√ Fertig";
+checkinet="Проверьте подключение к Интернету. На данный момент сервер обновлений может быть недоступен. Программа автоматически закрывается через 5 секунд.";
+ozmosis="Внимание! Если вы используете Ozmosis, убедитесь, что в системе нет дубликатов Кекстав. Один и тот же Кекст не должен устанавливаться в ROM, разделе EFI или в S / L / E одновременно.";
+greet1="Доброе утро $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+greet2="Добрый день $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+greet3="Добрый вечер $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+latest="Последняя версия уже находится на рабочем столе. Если Кексти уже установлены, вы можете удалить папку.";
+latest2="Текущая версия хранится на рабочем столе в папке «Current Kext Updater». Пожалуйста, замените вашу текущую версию версией из папки.";
+upd="Проверка программы для обновление Кекстав ...";
+upd1="Доступно обновление!";
+upd2="Установленная версия... = ";
+upd3="Версия сервера......... = ";
+upd4="√ Вы используете самую актуальную Версию";
+checkver="Проверка ";
+lastcheck="Время последнего обзора";
+apfstext0="√ Вы используете самую актуальную Версию";
+apfstext1="Доступна новая версия apfs.efi и была загружена на рабочий стол (папка Kext Updates).";
+apfsinit="Текущий apfs.efi был загружен на рабочий стол (папка Kext-Updates).";
+webdrload=" загружается на рабочий стол (папка Kext Updates)";
+fertig="√ Готово";
 
-loading="Lade Datei auf den Desktop in den Ordner Kext-Updates herunter";
-dloading="wird auf den Desktop in den Ordner Kext-Updates heruntergeladen.";
-dupekext="Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.";
-obsolete="Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen.";
+loading="Я загружаю файл на рабочий стол в папку Kext Updates";
+dloading="загружается на рабочий стол в папку «Kext Updates».";
+dupekext="Последняя версия уже на вашем столе. Если kext уже установлен, удалите соответствующую папку.";
+obsolete="Внимание !!! \ nПожалуйста, удалите старые $ {data [2]} и вместо этого используйте $ {data [3]}.";
 
 

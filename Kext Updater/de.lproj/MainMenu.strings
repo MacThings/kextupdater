@@ -167,5 +167,3 @@ loading="Lade Datei auf den Desktop in den Ordner Kext-Updates herunter";
 dloading="wird auf den Desktop in den Ordner Kext-Updates heruntergeladen.";
 dupekext="Die aktuellste Version befindet sich bereits auf Deinem Schreibtisch. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.";
 obsolete="Achtung !!!\nBitte lösche Deinen alten ${data[2]} und verwende ${data[3]} stattdessen.";
-
-
