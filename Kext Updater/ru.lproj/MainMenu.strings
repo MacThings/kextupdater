@@ -137,7 +137,7 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 "nO2-13-T2e.title" = "Pедактировать";
 
 /* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
-"YC0-NU-hrf.title" = "копия";
+"YC0-NU-hrf.title" = "Копировать";
 
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
 "vV1-V8-mlg.title" = "Отметить все";
