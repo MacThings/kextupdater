@@ -130,6 +130,18 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Yardım";
 
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Düzenlemek";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Kopya";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Her şeyi işaretle";
+
+/* Class = "NSButton"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Resmi olarak değil";
+
 /* BASH Part - Do not remove this Line! */
 checkinet="İnternet bağlantınızı kontrol ediniz veya güncelleme Sunucusu müsait değil. Program otomatik olarak 5 saniye içinde kapanır.";
 ozmosis="Dikkat! Ozmosis'i kullandığınız sürece, sistemde çift Kext olmadığından emin olun. Aynı Kext ROM, EFI bölümü veya S/L/E'de aynı anda kurulmamalıdır.";

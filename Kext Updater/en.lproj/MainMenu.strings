@@ -31,9 +31,6 @@
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
 "Uux-7h-pPV.title" = "Load Clover";
 
-/* Class = "NSButton"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
-"Ter-3R-x9H.title" = "Unofficial;
-
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
 "BvR-0L-x9I.title" = "Load Webdriver";
 
@@ -143,6 +140,9 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
 "vV1-V8-mlg.title" = "Select All";
+
+/* Class = "NSButton"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Unofficial;
 
 /* BASH Part - Do not remove this Line! */
 checkinet="Check your Internet Connection or perhaps the Updateserver is down! The Program will close in 5 seconds.";
