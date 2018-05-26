@@ -11,7 +11,7 @@
 "AuD-6W-583.title" = "Обновить";
 
 /* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
-"tgP-dd-FH8.title" = "Скачать Основные Кексти";
+"tgP-dd-FH8.title" = "Скачать Основные";
 
 /* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
 "fqJ-G4-Tp5.title" = "Скачать Aудио Кексти";
@@ -26,7 +26,7 @@
 "Ua2-LB-zIU.title" = "Скачать AMD Кексти";
 
 /* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
-"ij0-6U-Ki4.title" = "Скачать Кексти для локальный сети";
+"ij0-6U-Ki4.title" = "Скачать Кексти сети";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
 "Uux-7h-pPV.title" = "Скачать Clover";
@@ -41,16 +41,16 @@
 "6xu-6D-qrC.title" = "Скачать APFS";
 
 /* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
-"lZg-Lq-oMC.title" = "Загрузить/Разгрузить EFI";
+"lZg-Lq-oMC.title" = "Загрузить EFI";
 
 /* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
 "CRj-Q4-2Q3.title" = "Выход";
 
 /* Class = "NSTextField"; title = "Your System Version:"; ObjectID = "Dlp-ZC-S8w"; */
-"Dlp-ZC-S8w.title" = "Версия вашей системы:";
+"Dlp-ZC-S8w.title" = "Версия системы:";
 
 /* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
-"d9l-S8-AU5.title" = "Версия программы Кекст Упдатер :";
+"d9l-S8-AU5.title" = "Версия программы:";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
 "axN-fO-K1a.title" = "Загружает следующие Кексти:
@@ -167,5 +167,3 @@ loading="Я загружаю файл на рабочий стол в папку
 dloading="загружается на рабочий стол в папку «Kext Updates».";
 dupekext="Последняя версия уже на вашем столе. Если kext уже установлен, удалите соответствующую папку.";
 obsolete="Внимание !!! \ nПожалуйста, удалите старые $ {data [2]} и вместо этого используйте $ {data [3]}.";
-
-
