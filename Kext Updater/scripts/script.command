@@ -324,12 +324,11 @@ function _nvwebdriver()
 build=`sw_vers | grep Build |sed "s/.*\://g" |xargs`
 mkdir -p "$ScriptDownloadPath/nVidia Webdriver"
 webdr2=`cat /tmp/webdriver.tmp |sed "s/.*-\ //g"`
-echo Build $webdr2 $fertig
-echo " "
+echo Build $webdr2 $webdrload
 curl -sS -o "${ScriptHome}/Desktop/Kext-Updates/nVidia Webdriver/$webdr2.pkg" https://$url/nvwebdriver/$webdr2.pkg
 sleep 1
-echo "$webdrloaded"
 echo " "
+echo $fertig
 _tmpcleanup
 exit 0
 }
