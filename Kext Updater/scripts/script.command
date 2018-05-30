@@ -37,6 +37,8 @@ if [[ $lan2 = "de_DE" ]]; then
 language="de"
 elif [[ $lan2 = "tr_TR" ]]; then
 language="tr"
+elif [[ $lan2 = "uk_UK" ]]; then
+language="uk"
 else
 language="en"
 fi

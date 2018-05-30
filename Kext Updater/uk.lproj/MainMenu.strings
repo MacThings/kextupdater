@@ -1,0 +1,139 @@
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Вийти з Kext Updater";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Про Kext Updater";
+
+/* Class = "NSTextFieldCell"; title = "© 2018 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
+
+/* Class = "NSButtonCell"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Завантажити APFS.efi";
+
+/* Class = "NSWindow"; title = "About"; ObjectID = "8GG-Ob-CPn"; */
+"8GG-Ob-CPn.title" = "About";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Головне меню";
+
+/* Class = "NSButtonCell"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Перевірити оновлення";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Налаштування…";
+
+/* Class = "NSButtonCell"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Завантажити nVidia Web Driver";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Вихід";
+
+/* Class = "NSTextFieldCell"; title = "Your System Version:"; ObjectID = "Dlp-ZC-S8w"; */
+"Dlp-ZC-S8w.title" = "Версія системи:";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Допомога";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Допомога Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Показати всі";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Старт!";
+
+/* Class = "NSButtonCell"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "Завантажити Intel кексти";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Послуги";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Згорнути Kext Updater";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "RRQ-ax-CJQ"; */
+"RRQ-ax-CJQ.title" = "Редагувати";
+
+/* Class = "NSButtonCell"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "Завантажити nVidia кексти";
+
+/* Class = "NSButtonCell"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Девел. Clover";
+
+/* Class = "NSButtonCell"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "Завантажити AMD кексти";
+
+/* Class = "NSButtonCell"; title = "Load Clover"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Офф. Clover";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Сховати інше";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Копіювати";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Друк…";
+
+/* Class = "NSTextFieldCell"; title = "Loads the following Kexts:  Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Завантажити наступні кексти:  Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Файл";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Loads the latest Nightly Build"; ObjectID = "ceQ-Nf-cYH"; */
+"ceQ-Nf-cYH.ibShadowedToolTip" = "Loads the latest Nightly Build";
+
+/* Class = "NSTextFieldCell"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
+"d9l-S8-AU5.title" = "Версія Kext Updater:";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSButtonCell"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Завантажити Aудио кексти";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSButtonCell"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Завантажити кексти для мережі";
+
+/* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "Змонтувати EFI";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Pедагувати";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Налаштування сторінки…";
+
+/* Class = "NSTextFieldCell"; title = "Developed By: Sascha Lamprecht Scripting Support: NoirOSX Program Icon: Nio82"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Розробник: Sascha Lamprecht Підтримка скриптів: NoirOSX Іконка програми: Nio82";
+
+/* Class = "NSButtonCell"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Основні кексти";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Виділити всі";
+
+/* Class = "NSWindow"; title = "Basic Kexts Help"; ObjectID = "vj0-o9-9Hg"; */
+"vj0-o9-9Hg.title" = "Basic Kexts Help";
+
+/* Class = "NSTextFieldCell"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Завжди найновіші кексти для вашого Hackintosh";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Допомога";
+

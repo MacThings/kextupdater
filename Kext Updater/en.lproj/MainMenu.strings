@@ -31,6 +31,9 @@
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
 "Uux-7h-pPV.title" = "Load Clover";
 
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Nightly Build";
+
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
 "BvR-0L-x9I.title" = "Load Webdriver";
 
@@ -141,14 +144,11 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
 "vV1-V8-mlg.title" = "Select All";
 
-/* Class = "NSButton"; title = "Unofficial"; ObjectID = "Ter-3R-x9H"; */
-"Ter-3R-x9H.title" = "Unofficial;
-
 /* BASH Part - Do not remove this Line! */
 checkinet="Check your Internet Connection or perhaps the Updateserver is down! The Program will close in 5 seconds.";
 ozmosis="Attention! Since you are using Ozmosis, please make sure that you don´t have any KEXTs twice in your System. One KEXT should not be stored in the ROM, the EFI Partition and S/L/E at the same time.";
 greet1="Good morning $osuser. Let's see if there's something new for you. Here we go...";
-greet2="Hello $osuser. Let's see if there's something new for you. Here we go...";
+greet2="Have a nice day $osuser. Let's see if there's something new for you. Here we go...";
 greet3="Good evening $osuser. Let's see if there's something new for you. Here we go...";
 latest="The latest Version is already downloaded to your Desktop. If its already installed please remove the Folder from your Desktop.";
 latest2="Latest Version was downloaded to your Desktop into the Folder \"Latest Kext Updater\". Please replace your older Version with it! The Updater quits now.";

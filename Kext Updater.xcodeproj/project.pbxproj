@@ -40,6 +40,7 @@
 		2A20DFD020B5EEF3008BB03A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A20DFD120B5EFAF008BB03A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = kuversion.command; sourceTree = "<group>"; };
+		2A52010620BF3D4F00A164D3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A5F9F8120B84D6B0063B981 /* nightly.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = nightly.command; sourceTree = "<group>"; };
 		2A5F9F8320B8542F0063B981 /* cleanup.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = cleanup.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 				"pt-PT",
 				nl,
 				fr,
+				uk,
 			);
 			mainGroup = 2AD4DAD520AF03F500D2D335;
 			productRefGroup = 2AD4DADF20AF03F500D2D335 /* Products */;
@@ -271,6 +273,7 @@
 				2A20DFCF20B5EE1C008BB03A /* pt-PT */,
 				2A20DFD020B5EEF3008BB03A /* nl */,
 				2A20DFD120B5EFAF008BB03A /* fr */,
+				2A52010620BF3D4F00A164D3 /* uk */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
