@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
+		2A026ECA20BDBC4E00A3A539 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A1DEF4A20B4775C00C3CDCE /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		2A20DFCC20B5EDB8008BB03A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A20DFCD20B5EDC0008BB03A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		2AF7585320B073150037D83D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2AF8F34E20AF4102008D88E8 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		2AF8F34F20AF4102008D88E8 /* hflogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hflogo.png; sourceTree = "<group>"; };
-		2AF8F35920AF466D008D88E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2AF8F36420AF4D52008D88E8 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = script.command; path = "Kext Updater/scripts/script.command"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -199,7 +199,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 				tr,
 				es,
@@ -265,7 +264,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				2AD4DAE620AF03F600D2D335 /* Base */,
-				2AF8F35920AF466D008D88E8 /* en */,
 				2AF7585320B073150037D83D /* de */,
 				2A20DFCC20B5EDB8008BB03A /* tr */,
 				2A20DFCD20B5EDC0008BB03A /* es */,
