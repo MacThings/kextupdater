@@ -34,7 +34,7 @@ fi
 kexte=`cat /tmp/choice.tmp`
 
 if [[ $lan2 = "de_DE" ]]; then
-language="uk"
+language="de"
 elif [[ $lan2 = "tr_TR" ]]; then
 language="tr"
 elif [[ $lan2 = "uk_UK" ]]; then
