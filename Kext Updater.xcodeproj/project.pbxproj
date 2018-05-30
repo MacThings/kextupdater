@@ -197,11 +197,7 @@
 			knownRegions = (
 				Base,
 				tr,
-				es,
 				ru,
-				"pt-PT",
-				nl,
-				fr,
 				uk,
 				en,
 			);
