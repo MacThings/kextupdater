@@ -96,7 +96,7 @@
 "d9l-S8-AU5.title" = "Версія Kext Updater:";
 
 /* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
-"dMs-cI-mzQ.title" = "File";
+"dMs-cI-mzQ.title" = "Файл";
 
 /* Class = "NSButtonCell"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
 "fqJ-G4-Tp5.title" = "Завантажити Aудио кексти";
@@ -129,7 +129,7 @@
 "vV1-V8-mlg.title" = "Виділити всі";
 
 /* Class = "NSWindow"; title = "Basic Kexts Help"; ObjectID = "vj0-o9-9Hg"; */
-"vj0-o9-9Hg.title" = "Basic Kexts Help";
+"vj0-o9-9Hg.title" = "Основний Kexts Допомога";
 
 /* Class = "NSTextFieldCell"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
 "vlM-oF-beS.title" = "Завжди найновіші кексти для вашого Hackintosh";
