@@ -134,7 +134,7 @@
         <window title="Kext Updater" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="335" y="390" width="1027" height="550"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1027" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -543,14 +543,19 @@ DQ
                         <rect key="frame" x="20" y="16" width="513" height="519"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" id="SYo-Qi-m3I">
+<<<<<<< HEAD
                             <rect key="frame" x="1" y="1" width="511" height="517"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+=======
+                            <rect key="frame" x="1" y="1" width="496" height="517"/>
+                            <autoresizingMask key="autoresizingMask"/>
+>>>>>>> 2234c30457685b86eb8e3e3059a5d5d108b54f6a
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
-                                    <rect key="frame" x="0.0" y="0.0" width="526" height="517"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="511" height="517"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="0.95276227678571423" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="511" height="517"/>
+                                    <size key="minSize" width="496" height="517"/>
                                     <size key="maxSize" width="551" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </textView>
@@ -562,7 +567,11 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7Cf-Yb-fcl">
+<<<<<<< HEAD
                             <rect key="frame" x="496" y="1" width="16" height="517"/>
+=======
+                            <rect key="frame" x="1" y="1" width="15" height="0.0"/>
+>>>>>>> 2234c30457685b86eb8e3e3059a5d5d108b54f6a
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -585,7 +594,7 @@ DQ
         <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="vj0-o9-9Hg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="752" y="691" width="418" height="349"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="307-gu-qsQ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -612,7 +621,7 @@ DQ
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="8GG-Ob-CPn">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="121" y="123" width="433" height="248"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="56C-XP-nFl">
                 <rect key="frame" x="0.0" y="0.0" width="433" height="248"/>
                 <autoresizingMask key="autoresizingMask"/>
