@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-
+       
         logger.font = NSFont(name: "Monaco", size: 15)
 
         self.asyncShellExec(path: Bundle.main.path(forResource: "osversion", ofType: "command"))

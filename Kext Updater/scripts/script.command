@@ -12,7 +12,7 @@ rm /tmp/kextstats
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.7
+ScriptVersion=2.0.6
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
