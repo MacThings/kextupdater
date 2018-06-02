@@ -10,6 +10,7 @@
 		2A006B8D20B2E5A6001C6A78 /* rcaf5Tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */; };
 		2A1DEF4B20B4775D00C3CDCE /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1DEF4A20B4775C00C3CDCE /* info.png */; };
 		2A3E609120B34DEB00E355B8 /* kuversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E609020B34DEB00E355B8 /* kuversion.command */; };
+		2A558AD020C2E81C00C8CA28 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */; };
 		2A5F9F8220B84D6B0063B981 /* nightly.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F9F8120B84D6B0063B981 /* nightly.command */; };
 		2A5F9F8420B8542F0063B981 /* cleanup.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F9F8320B8542F0063B981 /* cleanup.command */; };
 		2A6760B420B236A500A38F52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B320B236A500A38F52 /* logo.png */; };
@@ -19,6 +20,7 @@
 		2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68720B0B57300A1F6F7 /* mountefi.command */; };
 		2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68920B0B99E00A1F6F7 /* osversion.command */; };
 		2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */; };
+		2AA4770420C303EE00AF11A5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2AA4770320C303EE00AF11A5 /* dsa_pub.pem */; };
 		2AA7731620B0507D00FC2A91 /* BDMESG in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731520B0507D00FC2A91 /* BDMESG */; };
 		2AA7731820B060E800FC2A91 /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731720B060E700FC2A91 /* done.mp3 */; };
 		2AB5E91820B2CECA00637003 /* choice.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5E91720B2CECA00637003 /* choice.command */; };
@@ -39,6 +41,7 @@
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = kuversion.command; sourceTree = "<group>"; };
 		2A52010620BF3D4F00A164D3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A52010720BF40D200A164D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2A5F9F8120B84D6B0063B981 /* nightly.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = nightly.command; sourceTree = "<group>"; };
 		2A5F9F8320B8542F0063B981 /* cleanup.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = cleanup.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
+		2AA4770320C303EE00AF11A5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		2AA7731520B0507D00FC2A91 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AA7731720B060E700FC2A91 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = choice.command; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A558AD020C2E81C00C8CA28 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +115,7 @@
 		2AD4DAD520AF03F500D2D335 = {
 			isa = PBXGroup;
 			children = (
+				2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */,
 				2AD4DAE020AF03F500D2D335 /* Kext Updater */,
 				2AD4DADF20AF03F500D2D335 /* Products */,
 			);
@@ -126,6 +132,7 @@
 		2AD4DAE020AF03F500D2D335 /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2AA4770320C303EE00AF11A5 /* dsa_pub.pem */,
 				2AB1B6C520B60EFD00DE7188 /* scripts */,
 				2A6760B520B2371D00A38F52 /* sounds */,
 				2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */,
@@ -225,6 +232,7 @@
 				2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */,
 				2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */,
 				2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */,
+				2AA4770420C303EE00AF11A5 /* dsa_pub.pem in Resources */,
 				2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */,
 				2A5F9F8220B84D6B0063B981 /* nightly.command in Resources */,
 				2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */,
@@ -394,11 +402,13 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Kext Updater/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/Kext\\ Updater",
+					"$(PROJECT_DIR)",
 				);
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,11 +424,13 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Kext Updater/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/Kext\\ Updater",
+					"$(PROJECT_DIR)",
 				);
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";

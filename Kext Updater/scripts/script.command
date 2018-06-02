@@ -12,7 +12,7 @@ rm /tmp/kextstats
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.6
+ScriptVersion=2.0.7
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -37,6 +37,8 @@ if [[ $lan2 = "de_DE" ]]; then
 language="de"
 elif [[ $lan2 = "tr_TR" ]]; then
 language="tr"
+elif [[ $lan2 = "ru_RU" ]]; then
+language="ru"
 elif [[ $lan2 = "uk_UK" ]]; then
 language="uk"
 elif [[ $lan2 = "es_ES" ]]; then
