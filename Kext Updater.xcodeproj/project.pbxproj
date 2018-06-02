@@ -24,6 +24,7 @@
 		2AA7731620B0507D00FC2A91 /* BDMESG in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731520B0507D00FC2A91 /* BDMESG */; };
 		2AA7731820B060E800FC2A91 /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731720B060E700FC2A91 /* done.mp3 */; };
 		2AB5E91820B2CECA00637003 /* choice.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5E91720B2CECA00637003 /* choice.command */; };
+		2AB6E6C620C30F1F000D6B2E /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AD4DAE220AF03F500D2D335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */; };
 		2AD4DAE420AF03F600D2D335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE320AF03F600D2D335 /* Assets.xcassets */; };
 		2AD4DAE720AF03F600D2D335 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE520AF03F600D2D335 /* MainMenu.xib */; };
@@ -31,6 +32,19 @@
 		2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F34F20AF4102008D88E8 /* hflogo.png */; };
 		2AF8F36520AF4D52008D88E8 /* script.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F36420AF4D52008D88E8 /* script.command */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AB6E6C520C30F09000D6B2E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2AB6E6C620C30F1F000D6B2E /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
@@ -41,7 +55,7 @@
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = kuversion.command; sourceTree = "<group>"; };
 		2A52010620BF3D4F00A164D3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A52010720BF40D200A164D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Kext Updater/Frameworks/Sparkle.framework"; sourceTree = "<group>"; };
 		2A5F9F8120B84D6B0063B981 /* nightly.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = nightly.command; sourceTree = "<group>"; };
 		2A5F9F8320B8542F0063B981 /* cleanup.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = cleanup.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -51,7 +65,7 @@
 		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
-		2AA4770320C303EE00AF11A5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		2AA4770320C303EE00AF11A5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = "Kext Updater/dsa_pub.pem"; sourceTree = SOURCE_ROOT; };
 		2AA7731520B0507D00FC2A91 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AA7731720B060E700FC2A91 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = choice.command; sourceTree = "<group>"; };
@@ -169,6 +183,7 @@
 				2AD4DADA20AF03F500D2D335 /* Sources */,
 				2AD4DADB20AF03F500D2D335 /* Frameworks */,
 				2AD4DADC20AF03F500D2D335 /* Resources */,
+				2AB6E6C520C30F09000D6B2E /* CopyFiles */,
 			);
 			buildRules = (
 			);
