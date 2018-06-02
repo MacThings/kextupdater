@@ -34,5 +34,9 @@
 	<string>https://kextupdater.slsoft.de/kextupdater/appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 </dict>
 </plist>

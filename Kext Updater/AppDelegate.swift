@@ -61,7 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) {
         self.asyncShellExec(path: Bundle.main.path(forResource: "cleanup", ofType: "command"))
-        exit(0)
+        NSApplication.shared.terminate(self)
     }
     
     //@IBAction func webpulldown(_ sender: AnyObject) {
