@@ -29,7 +29,7 @@
 "ij0-6U-Ki4.title" = "Ethernet kexteleri indir";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
-"Uux-7h-pPV.title" = "Clover Bootloader indir";
+"Uux-7h-pPV.title" = "Clover indir";
 
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
 "BvR-0L-x9I.title" = "Webdriver indir";

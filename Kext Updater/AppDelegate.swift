@@ -28,9 +28,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-       
+        
         logger.font = NSFont(name: "Monaco", size: 15)
-
+        
         self.asyncShellExec(path: Bundle.main.path(forResource: "osversion", ofType: "command"))
         self.asyncShellExec(path: Bundle.main.path(forResource: "kuversion", ofType: "command"))
         self.asyncShellExec(path: Bundle.main.path(forResource: "choice", ofType: "command"))
@@ -58,10 +58,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
     @IBAction func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) {
         self.asyncShellExec(path: Bundle.main.path(forResource: "cleanup", ofType: "command"))
-        NSApplication.shared.terminate(self)
+        exit(0)
     }
     
     //@IBAction func webpulldown(_ sender: AnyObject) {
@@ -81,10 +81,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         switch sender.tag {
         case 8:
             nightly.setValue(true, forKey: "enabled")
-            print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.title);
             break
         default:
-            print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.title);
             nightly.setValue(false, forKey: "enabled")
         }
         
@@ -97,8 +97,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         catch let error as NSError {
             print("An error took place: \(error)")
         }
- 
-            self.asyncShellExec(path: Bundle.main.path(forResource: "nightly", ofType: "command"))
+        
+        self.asyncShellExec(path: Bundle.main.path(forResource: "nightly", ofType: "command"))
     }
     
     @IBAction func webdriver(_ sender: AnyObject) {
@@ -112,7 +112,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("An error took place: \(error)")
         }
     }
- 
+    
     
     @IBAction func nightchecked(_ sender: AnyObject) {
         print(sender.selectedCell()!.title);
@@ -126,12 +126,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("An error took place: \(error)")
         }
     }
-
+    
     @IBAction func quit(_ sender: NSButton) {
         self.asyncShellExec(path: Bundle.main.path(forResource: "cleanup", ofType: "command"))
         exit(0)
     }
-   
+    
     @IBAction func mountefi(_ sender: NSButton) {
         logger.textStorage?.mutableString.setString("")
         sender.isEnabled    = false

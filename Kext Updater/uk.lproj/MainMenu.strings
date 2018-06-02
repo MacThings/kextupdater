@@ -27,7 +27,7 @@
 "BOF-NM-1cW.title" = "Налаштування…";
 
 /* Class = "NSButtonCell"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
-"BvR-0L-x9I.title" = "Завантажити nVidia Web Driver";
+"BvR-0L-x9I.title" = "Завантажити Web Driver";
 
 /* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
 "CRj-Q4-2Q3.title" = "Вихід";

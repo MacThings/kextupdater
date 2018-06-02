@@ -12,7 +12,7 @@ rm /tmp/kextstats
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.6
+ScriptVersion=2.0.7
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -379,18 +379,18 @@ _cleanup
 #_printFooter
 }
 
-if [[ $kexte == *Updates* ]]; then
+if [[ $kexte == *Updates* ]] || [[ $kexte == *Обновить* ]] || [[ $kexte == *оновлення* ]] || [[ $kexte == *Buscar* ]]; then
   _main "kextUpdate"
   exit 0
 fi
-if [[ $kexte == *Grund* ]] || [[ $kexte == *Basic* ]]; then
+if [[ $kexte == *Grund* ]] || [[ $kexte == *Basic* ]] || [[ $kexte == *Основные* ]] || [[ $kexte == *Temel* ]] || [[ $kexte == *Основні* ]] || [[ $kexte == *Básicos* ]]; then
   kextLoadArray=("fakesmc" "usbinjectall" "voodoops2")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Audio* ]]; then
+if [[ $kexte == *Audio* ]] || [[ $kexte == *Aудио* ]]; then
   kextLoadArray=("applealc" "lilu" "codeccommander")
   recho="Kexte"
   _main "kextLoader"
@@ -404,7 +404,7 @@ if [[ $kexte == *APFS* ]]; then
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Intel* ]]; then
+if [[ $kexte == *Intel* ]] || [[ $kexte == *İntel* ]]; then
   kextLoadArray=("intelgraphicsfixup" "lilu")
   recho="Kexte"
   _main "kextLoader"
@@ -425,7 +425,7 @@ if [[ $kexte == *AMD* ]]; then
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Ethernet* ]]; then
+if [[ $kexte == *Ethernet* ]] || [[ $kexte == *сети* ]] || [[ $kexte == *мережі* ]]; then
   kextLoadArray=("atherose2200ethernet" "intelmausiethernet" "realtekrtl8111")
   recho="Kexte"
   _main "kextLoader"
@@ -439,7 +439,7 @@ if [[ $kexte == *Clover* ]]; then
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Webdriver* ]]; then
+if [[ $kexte == *Webdriver* ]] || [[ $kexte == *Driver* ]]; then
   _nvwebdriver
   exit 0
 fi
