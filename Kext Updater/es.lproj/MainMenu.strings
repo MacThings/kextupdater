@@ -52,13 +52,11 @@
 /* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
 "d9l-S8-AU5.title" = "Versión Kext Updater:";
 
-/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "n7X-uz-Ywe"; */
-"n7X-uz-Ywe.title" = "Buscar Actualizaciones...";
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Buscar Actualizaciones...";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
 "axN-fO-K1a.title" = "Carga los siguientes Kexts:
-
-RRQ-ax-CJQ
 
 Kexts Básicos
 FakeSMC, VoodooPS2, USBInjectAll

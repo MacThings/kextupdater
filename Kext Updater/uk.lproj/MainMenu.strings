@@ -80,14 +80,14 @@
 /* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
 "YC0-NU-hrf.title" = "Копіювати";
 
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Перевірити оновлення...";
+
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Друк…";
 
-/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "n7X-uz-Ywe"; */
-"n7X-uz-Ywe.title" = "Перевірити оновлення...";
-
-/* Class = "NSTextFieldCell"; title = "Loads the following Kexts:  Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Завантажити наступні кексти:  Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+/* Class = "NSTextFieldCell"; title = "Loads the following Kexts */
+"axN-fO-K1a.title" = "Завантажити наступні кексти: Basic Kexts FakeSMC, VoodooPS2, USBInjectAll  Audio Lilu, AppleALC, CodecCommander  Intel Lilu, IntelGraphicsFixup  nVidia Lilu, nVidiaGraphicsFixup  AMD Lilu, WhatEverGreen  Ethernet AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
 "bib-Uj-vzu.title" = "Файл";

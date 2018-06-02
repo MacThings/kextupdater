@@ -10,9 +10,6 @@
 		2A006B8D20B2E5A6001C6A78 /* rcaf5Tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */; };
 		2A1DEF4B20B4775D00C3CDCE /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1DEF4A20B4775C00C3CDCE /* info.png */; };
 		2A3E609120B34DEB00E355B8 /* kuversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E609020B34DEB00E355B8 /* kuversion.command */; };
-		2A4D4E1820C313A6005BCFA2 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A4D4E1C20C3144B005BCFA2 /* BDMESG in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D4E1B20C3144B005BCFA2 /* BDMESG */; };
-		2A558AD020C2E81C00C8CA28 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */; };
 		2A5F9F8220B84D6B0063B981 /* nightly.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F9F8120B84D6B0063B981 /* nightly.command */; };
 		2A5F9F8420B8542F0063B981 /* cleanup.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F9F8320B8542F0063B981 /* cleanup.command */; };
 		2A6760B420B236A500A38F52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6760B320B236A500A38F52 /* logo.png */; };
@@ -22,7 +19,8 @@
 		2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68720B0B57300A1F6F7 /* mountefi.command */; };
 		2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68920B0B99E00A1F6F7 /* osversion.command */; };
 		2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */; };
-		2AA4770420C303EE00AF11A5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2AA4770320C303EE00AF11A5 /* dsa_pub.pem */; };
+		2A9F4DF120C32E4100F7BE0A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2A9F4DF020C32E4100F7BE0A /* dsa_pub.pem */; };
+		2AA7731620B0507D00FC2A91 /* BDMESG in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731520B0507D00FC2A91 /* BDMESG */; };
 		2AA7731820B060E800FC2A91 /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA7731720B060E700FC2A91 /* done.mp3 */; };
 		2AB5E91820B2CECA00637003 /* choice.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5E91720B2CECA00637003 /* choice.command */; };
 		2AD4DAE220AF03F500D2D335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */; };
@@ -31,20 +29,8 @@
 		2AF8F35020AF4102008D88E8 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F34E20AF4102008D88E8 /* head.png */; };
 		2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F34F20AF4102008D88E8 /* hflogo.png */; };
 		2AF8F36520AF4D52008D88E8 /* script.command in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8F36420AF4D52008D88E8 /* script.command */; };
+		C487AF83FE6F729B1FA43D8D /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF23C807B018214DC2C6773 /* Pods_Kext_Updater.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2AB6E6C520C30F09000D6B2E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2A4D4E1820C313A6005BCFA2 /* Sparkle.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
@@ -53,10 +39,8 @@
 		2A20DFCC20B5EDB8008BB03A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A20DFCE20B5EDD4008BB03A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A3E609020B34DEB00E355B8 /* kuversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = kuversion.command; sourceTree = "<group>"; };
-		2A4D4E1B20C3144B005BCFA2 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2A52010620BF3D4F00A164D3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A52010720BF40D200A164D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Kext Updater/Frameworks/Sparkle.framework"; sourceTree = "<group>"; };
 		2A5F9F8120B84D6B0063B981 /* nightly.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = nightly.command; sourceTree = "<group>"; };
 		2A5F9F8320B8542F0063B981 /* cleanup.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = cleanup.command; sourceTree = "<group>"; };
 		2A6760B320B236A500A38F52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -66,7 +50,8 @@
 		2A6EC68720B0B57300A1F6F7 /* mountefi.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mountefi.command; sourceTree = "<group>"; };
 		2A6EC68920B0B99E00A1F6F7 /* osversion.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = osversion.command; sourceTree = "<group>"; };
 		2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
-		2AA4770320C303EE00AF11A5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = "Kext Updater/dsa_pub.pem"; sourceTree = SOURCE_ROOT; };
+		2A9F4DF020C32E4100F7BE0A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		2AA7731520B0507D00FC2A91 /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AA7731720B060E700FC2A91 /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		2AB5E91720B2CECA00637003 /* choice.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = choice.command; sourceTree = "<group>"; };
 		2AD4DADE20AF03F500D2D335 /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +64,9 @@
 		2AF8F34E20AF4102008D88E8 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		2AF8F34F20AF4102008D88E8 /* hflogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hflogo.png; sourceTree = "<group>"; };
 		2AF8F36420AF4D52008D88E8 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = script.command; path = "Kext Updater/scripts/script.command"; sourceTree = SOURCE_ROOT; };
+		5EF23C807B018214DC2C6773 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6119291C2A9D21F719310486 /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
+		F1DD1C95C413A7F066569813 /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,20 +74,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A558AD020C2E81C00C8CA28 /* Sparkle.framework in Frameworks */,
+				C487AF83FE6F729B1FA43D8D /* Pods_Kext_Updater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A4D4E1D20C31465005BCFA2 /* bin */ = {
+		08BD4176FF24D28587872750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A4D4E1B20C3144B005BCFA2 /* BDMESG */,
+				5EF23C807B018214DC2C6773 /* Pods_Kext_Updater.framework */,
 			);
-			name = bin;
-			path = "New Group";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2A6760B520B2371D00A38F52 /* sounds */ = {
@@ -111,6 +98,14 @@
 				2A6760B720B2382F00A38F52 /* pm52.mp3 */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		2AA7731420B0506E00FC2A91 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				2AA7731520B0507D00FC2A91 /* BDMESG */,
+			);
+			path = bin;
 			sourceTree = "<group>";
 		};
 		2AB1B6C520B60EFD00DE7188 /* scripts */ = {
@@ -130,9 +125,10 @@
 		2AD4DAD520AF03F500D2D335 = {
 			isa = PBXGroup;
 			children = (
-				2A558ACF20C2E81C00C8CA28 /* Sparkle.framework */,
 				2AD4DAE020AF03F500D2D335 /* Kext Updater */,
 				2AD4DADF20AF03F500D2D335 /* Products */,
+				DE958DBC24ADC4A672BB232A /* Pods */,
+				08BD4176FF24D28587872750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,11 +143,11 @@
 		2AD4DAE020AF03F500D2D335 /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
-				2A4D4E1D20C31465005BCFA2 /* bin */,
-				2AA4770320C303EE00AF11A5 /* dsa_pub.pem */,
+				2A9F4DF020C32E4100F7BE0A /* dsa_pub.pem */,
 				2AB1B6C520B60EFD00DE7188 /* scripts */,
 				2A6760B520B2371D00A38F52 /* sounds */,
 				2A6EC68B20B0C2FB00A1F6F7 /* appIcon.icns */,
+				2AA7731420B0506E00FC2A91 /* bin */,
 				2AF8F34D20AF40E7008D88E8 /* pics */,
 				2AD4DAE120AF03F500D2D335 /* AppDelegate.swift */,
 				2AD4DAE320AF03F600D2D335 /* Assets.xcassets */,
@@ -174,6 +170,15 @@
 			path = pics;
 			sourceTree = "<group>";
 		};
+		DE958DBC24ADC4A672BB232A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6119291C2A9D21F719310486 /* Pods-Kext Updater.debug.xcconfig */,
+				F1DD1C95C413A7F066569813 /* Pods-Kext Updater.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,10 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AD4DAEC20AF03F600D2D335 /* Build configuration list for PBXNativeTarget "Kext Updater" */;
 			buildPhases = (
+				5C16514525A167802DB22CBC /* [CP] Check Pods Manifest.lock */,
 				2AD4DADA20AF03F500D2D335 /* Sources */,
 				2AD4DADB20AF03F500D2D335 /* Frameworks */,
 				2AD4DADC20AF03F500D2D335 /* Resources */,
-				2AB6E6C520C30F09000D6B2E /* CopyFiles */,
+				4BF9A7912F3ACA3E5D0B9D1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,11 +250,11 @@
 				2A5F9F8420B8542F0063B981 /* cleanup.command in Resources */,
 				2A6EC68C20B0C2FB00A1F6F7 /* appIcon.icns in Resources */,
 				2A6760BA20B238D100A38F52 /* mq.mp3 in Resources */,
-				2A4D4E1C20C3144B005BCFA2 /* BDMESG in Resources */,
+				2AA7731620B0507D00FC2A91 /* BDMESG in Resources */,
 				2AF8F35120AF4102008D88E8 /* hflogo.png in Resources */,
 				2A6760BC20B2394A00A38F52 /* ta.mp3 in Resources */,
 				2A6EC68820B0B57300A1F6F7 /* mountefi.command in Resources */,
-				2AA4770420C303EE00AF11A5 /* dsa_pub.pem in Resources */,
+				2A9F4DF120C32E4100F7BE0A /* dsa_pub.pem in Resources */,
 				2A6760B820B2382F00A38F52 /* pm52.mp3 in Resources */,
 				2A5F9F8220B84D6B0063B981 /* nightly.command in Resources */,
 				2A6EC68A20B0B99E00A1F6F7 /* osversion.command in Resources */,
@@ -266,6 +272,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BF9A7912F3ACA3E5D0B9D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh",
+				"${PODS_ROOT}/Sparkle/Sparkle.framework",
+				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C16514525A167802DB22CBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kext Updater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AD4DADA20AF03F500D2D335 /* Sources */ = {
@@ -413,18 +460,17 @@
 		};
 		2AD4DAED20AF03F600D2D335 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6119291C2A9D21F719310486 /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Kext\\ Updater",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,18 +481,17 @@
 		};
 		2AD4DAEE20AF03F600D2D335 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DD1C95C413A7F066569813 /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Kext\\ Updater",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slsoft.kextupdater;
 				PRODUCT_NAME = "$(TARGET_NAME)";

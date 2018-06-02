@@ -35,7 +35,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="3Z3-f3-bwJ" customClass="SUUpdater"/>
+        <customObject id="IBV-ff-lff" customClass="SUUpdater"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Kext Updater" id="1Xt-HY-uBw">
@@ -48,14 +48,14 @@
                                     <action selector="aboutwin:" target="Voe-Tx-rLC" id="5q6-bY-Rll"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Check for Updates..." id="n7X-uz-Ywe">
+                            <menuItem isSeparatorItem="YES" id="Rv7-MJ-3tL"/>
+                            <menuItem title="Check for Updates..." id="PH8-bq-aSa">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="checkForUpdates:" target="3Z3-f3-bwJ" id="fL4-je-9fa"/>
+                                    <action selector="checkForUpdates:" target="IBV-ff-lff" id="bQt-cT-oDH"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="DTx-Bf-Kml"/>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" hidden="YES" enabled="NO" keyEquivalent="," id="BOF-NM-1cW"/>
                             <menuItem isSeparatorItem="YES" hidden="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">

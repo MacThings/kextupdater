@@ -52,8 +52,8 @@
 /* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
 "d9l-S8-AU5.title" = "Версия программы:";
 
-/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "n7X-uz-Ywe"; */
-"n7X-uz-Ywe.title" = "Обновить...";
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Обновить...";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
 "axN-fO-K1a.title" = "Загружает следующие Кексти:
