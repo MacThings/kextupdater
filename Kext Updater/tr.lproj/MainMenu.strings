@@ -1,5 +1,5 @@
 /* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
-"vlM-oF-beS.title" = "Hackintosh için herzaman en son güncel Kextler";
+"vlM-oF-beS.title" = "Hackintosh´un için herzaman en son güncel Kextler";
 
 /* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
 "qmh-1i-ylA.title" = "Geliştirici: Sascha Lamprecht     Komut Desteği: NoirOSX      Program Simgesi: Nio82";
@@ -11,31 +11,31 @@
 "AuD-6W-583.title" = "Güncellemeleri Denetle";
 
 /* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
-"tgP-dd-FH8.title" = "Temel kextleri yükle";
+"tgP-dd-FH8.title" = "Temel kextleri indir";
 
 /* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
-"fqJ-G4-Tp5.title" = "Audio kexteleri yükle";
+"fqJ-G4-Tp5.title" = "Audio kexteleri indir";
 
 /* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
-"N94-zg-VcZ.title" = "İntel kexteleri yükle";
+"N94-zg-VcZ.title" = "İntel kexteleri indir";
 
 /* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
-"Rvp-7w-kv4.title" = "nVidia kexteleri yükle";
+"Rvp-7w-kv4.title" = "nVidia kexteleri indir";
 
 /* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
-"Ua2-LB-zIU.title" = "AMD kexteleri yükle";
+"Ua2-LB-zIU.title" = "AMD kexteleri indir";
 
 /* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
-"ij0-6U-Ki4.title" = "Ethernet kexteleri yükle";
+"ij0-6U-Ki4.title" = "Ethernet kexteleri indir";
 
 /* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
-"Uux-7h-pPV.title" = "Clover Bootloader yükle";
+"Uux-7h-pPV.title" = "Clover Bootloader indir";
 
 /* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
-"BvR-0L-x9I.title" = "Webdriver yükle";
+"BvR-0L-x9I.title" = "Webdriver indir";
 
 /* Class = "NSButton"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
-"6xu-6D-qrC.title" = "APFS Sürücünü yükle";
+"6xu-6D-qrC.title" = "APFS indir";
 
 /* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
 "lZg-Lq-oMC.title" = "EFI (un)mounten";
@@ -53,7 +53,7 @@
 "PH8-bq-aSa.title" = "Güncellemeleri Denetle...";
 
 /* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
-"axN-fO-K1a.title" = "Aşağıdaki Kextleri yükle:
+"axN-fO-K1a.title" = "Aşağıdaki Kextleri indiriyor:
 
 Basic Kexts
 FakeSMC, VoodooPS2, USBInjectAll
@@ -77,7 +77,7 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 "1Xt-HY-uBw.title" = "Kext Güncelleyici";
 
 /* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Kext Updaterden Çıkış";
+"4sb-4s-VLi.title" = "Kext Updaterden Çık";
 
 /* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Kext Updater Hakkında";
@@ -101,19 +101,19 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 "Kd2-mp-pUS.title" = "Tümünü göster";
 
 /* Class = "NSButtonCell"; title = "Los!"; ObjectID = "LNO-67-sPs"; */
-"LNO-67-sPs.title" = "Çalıştır!";
+"LNO-67-sPs.title" = "Başlat!";
 
 /* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
 "NMo-om-nkz.title" = "Hizmetler";
 
 /* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Kext Updateri karart";
+"Olw-nP-bQN.title" = "Kext Updateri gizle";
 
 /* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
 "QvC-M9-y7g.title" = "Kext Updater";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Diğerlerini karart";
+"Vdr-fp-XzO.title" = "Diğerlerini gizle";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Yazdır...";
@@ -146,29 +146,27 @@ AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
 "Ter-3R-x9H.title" = "Gayri Resmi";
 
 /* BASH Part - Do not remove this Line! */
-checkinet="İnternet bağlantınızı kontrol ediniz veya güncelleme Sunucusu müsait değil. Program otomatik olarak 5 saniye içinde kapanır.";
-ozmosis="Dikkat! Ozmosis'i kullandığınız sürece, sistemde çift Kext olmadığından emin olun. Aynı Kext ROM, EFI bölümü veya S/L/E'de aynı anda kurulmamalıdır.";
-greet1="Günaydın $osuser. Yeni bir şey olup olmadığını bakalım...";
-greet2="Merhaba $osuser. Yeni bir şey olup olmadığını bakalım...";
-greet3="İyi akşamlar $osuser. Yeni bir şey olup olmadığını bakalım...";
+checkinet="İnternet bağlantını kontrol ed veya güncelleme Sunucusuna ulaşılamıyor. Program otomatik olarak 5 saniye sonra kapanacak.";
+ozmosis="Dikkat! Ozmosis'i kullandığın sürece, sistemde çift Kext olmadığından emin ol. Aynı Kext ROM, EFI bölümü veya S/L/E'de aynı anda kurulmamalıdır.";
+greet1="Günaydın $osuser. Yenilik olup olmadığını bakalım...";
+greet2="Merhaba $osuser. Yenilik olup olmadığını bakalım...";
+greet3="İyi akşamlar $osuser. Yenilik olup olmadığını bakalım...";
 latest="En son sürüm zaten Masaüstünde. Önceden yüklenmişse, klasörü silebilirsiniz.";
-latest2="Güncel sürüm Masaüstündeki \"Aktueller Kext Updater\" Klasöre dosyalanmıştır. Mevcut sürümünüzü bununla değiştirin. Kext Updater şimdi sona eriyor.";
+latest2="Güncel sürüm Masaüstündeki \"Aktueller Kext Updater\" Klasöre dosyalanmıştır. Mevcut sürümünüzü bununla değiçtirin. Kext Updater şimdi kapaniyor.";
 upd="Kext Updateri Denetliyorum ...";
 upd1="Güncelleme var!";
 upd2="Yüklü Sürüm... = ";
-upd3="Sunucu Sürümü......... = ";
+upd3="Son Sürümü......... = ";
 upd4="√ Güncel Durumdasın";
 checkver="Denetliyorum ";
 lastcheck="Son denetleme zamanı";
 apfstext0="√ Güncel Durumdasın";
-apfstext1="apfs.efi'nin yeni bir sürümü var ve Masaüstündeki (Kext Updates) klasörüne indirildi.";
+apfstext1="apfs.efi'nin güncel bir sürümü var ve Masaüstündeki (Kext Updates) klasörüne indirildi.";
 apfsinit="Güncel apfs.efi Masaüstündeki (Kext Updates) klasörüne indirildi.";
 webdrload=" Masaüstündeki (Kext Updates) klasörüne indiriliyor";
 fertig="√ Bitti";
 
 loading="Dosyayı Masaüstündeki Kext Updates klasörüne indiriyorum";
 dloading="Masaüstündeki (Kext Updates) klasörüne indiriliyor.";
-dupekext="En son sürüm zaten Masaüstünde. Önceden yüklenmişse, klasörü silebilirsiniz.";
+dupekext="En son sürüm zaten Masaüstünde mevcud. Yüklediyseniz, klasörü silebilirsiniz.";
 obsolete="Dikkat !!!\nEski olan ${data[2]} siliniz ve onun yerine ${data[3]} kullanınız.";
-
-
