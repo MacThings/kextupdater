@@ -12,7 +12,7 @@ rm /tmp/kextstats
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.4
+ScriptVersion=2.0.6
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -34,11 +34,13 @@ fi
 kexte=`cat /tmp/choice.tmp`
 
 if [[ $lan2 = "de_DE" ]]; then
-language="de"
+language="es"
 elif [[ $lan2 = "tr_TR" ]]; then
 language="tr"
 elif [[ $lan2 = "uk_UK" ]]; then
 language="uk"
+elif [[ $lan2 = "es_ES" ]]; then
+language="es"
 else
 language="en"
 fi

@@ -301,7 +301,16 @@ DQ
                             <menu key="menu" id="LRO-e9-I5M">
                                 <items>
                                     <menuItem title=" " state="on" id="3nM-7c-WFk"/>
-                                    <menuItem title="10.13.3 - 17D102" id="dfo-sA-MqP">
+                                    <menuItem title="10.13.5 - 17F77" id="dfo-sA-MqP">
+                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                    </menuItem>
+                                    <menuItem title="10.13.4 - 17E202" id="RSt-pw-AgS">
+                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                    </menuItem>
+                                    <menuItem title="10.13.4 - 17E199" id="07L-yK-WHL">
+                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                    </menuItem>
+                                    <menuItem title="10.13.3 - 17D102" id="CPG-Vk-EuI">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                     </menuItem>
                                     <menuItem title="10.13.3 - 17D2047" id="Axz-KE-Dpf">
@@ -535,7 +544,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" id="SYo-Qi-m3I">
                             <rect key="frame" x="1" y="1" width="496" height="517"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
                                     <rect key="frame" x="0.0" y="0.0" width="511" height="517"/>
@@ -553,7 +562,7 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7Cf-Yb-fcl">
-                            <rect key="frame" x="1" y="1" width="15" height="0.0"/>
+                            <rect key="frame" x="497" y="1" width="15" height="517"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -645,6 +654,9 @@ DQ
             </view>
             <point key="canvasLocation" x="393.5" y="749"/>
         </window>
+        <menuItem title="10.13.3 - 17D102" id="PZj-3V-eMK">
+            <modifierMask key="keyEquivalentModifierMask"/>
+        </menuItem>
     </objects>
     <resources>
         <image name="head" width="446" height="80"/>

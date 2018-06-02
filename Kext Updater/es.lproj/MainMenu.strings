@@ -1,0 +1,171 @@
+/* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Siempre los últimos kexts para su Hackintosh";
+
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Desarrollador: Sascha Lamprecht\nScripts: NoirOSX\nIcono: Nio82";
+
+/* Class = "NSTextField"; title = "© 2018 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
+
+/* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Buscar Actualizaciones";
+
+/* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Cargar Kexts Básicos";
+
+/* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Cargar Kexts de Audio";
+
+/* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "Cargar Kexts Intel";
+
+/* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "Cargar Kexts nVidia";
+
+/* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "Cargar Kexts AMD";
+
+/* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Cargar Kexts Ethernet";
+
+/* Class = "NSButton"; title = "Load Clover Bootloader"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Cargar Clover";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "No Oficial";
+
+/* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Cargar Webdriver";
+
+/* Class = "NSButton"; title = "Load APFS"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Cargar APFS";
+
+/* Class = "NSButtonCell"; title = "(Un)Mount EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "(des)Montar EFI";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Salir";
+
+/* Class = "NSTextField"; title = "Your System Version:"; ObjectID = "Dlp-ZC-S8w"; */
+"Dlp-ZC-S8w.title" = "Versión de macOS:";
+
+/* Class = "NSTextField"; title = "Kext Updater Version:"; ObjectID = "d9l-S8-AU5"; */
+"d9l-S8-AU5.title" = "Versión Kext Updater:";
+
+/* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Carga los siguientes Kexts:
+
+RRQ-ax-CJQ
+
+Kexts Básicos
+FakeSMC, VoodooPS2, USBInjectAll
+
+Audio
+Lilu, AppleALC, CodecCommander
+
+Intel
+Lilu, IntelGraphicsFixup
+
+nVidia
+Lilu, nVidiaGraphicsFixup
+
+AMD
+Lilu, WhatEverGreen
+
+Ethernet
+AtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Salir de Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Editar";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Copiar estilo";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Acerca de Kext Updater";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Ayuda";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Ayuda de Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Texto";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Mostrar todo";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Traer todo al frente";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Iniciar";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Servicios";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Ocultar Kext Updater";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Ocultar otros";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Imprimir…";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Archivo";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Configurar página…";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Ayuda";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Editar";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Copiar";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Seleccionar todo";
+
+/* BASH Part - Do not remove this Line! */
+checkinet="¡Compruebe su Conexión a Internet, o quizás el servidor de actualizaciones está caído! El programa se cerrará en 5 segundos.";
+ozmosis="¡Atención! Como usa Ozmosis, por favor Compruebe que no tiene KEXTs duplicados en su sistema. Un mismo KEXT no debe ser almacenado en ROM,  partición EFI y S/L/E simultáneamente.";
+greet1="Buenos días $osuser. Veamos si hay algo nuevo para usted. Aquí vamos...";
+greet2="Que tengas un buen día $osuser. Veamos si hay algo nuevo para tí...";
+greet3="Buenas tardes $osuser. Veamos si hay algo nuevo para usted. Aquí vamos...";
+latest="La última versión ya se encuentra descargada en su Escritorio. Si ya ha sido instalada por favor elimine la carpeta de su Escritorio.";
+latest2="La última versión ha sido descargada en su Escritorio en la carpeta \"Latest Kext Updater\". ¡Por favor reemplace sus versiones anteriores con estas! Ahora el actualizador se cerrará.";
+upd="Comprobando Kext Updater ...";
+upd1="¡Actualización disponible!";
+upd2="Versión instalada..... = ";
+upd3="Versión en el servidor... = ";
+upd4="√ Actualizado";
+checkver="Comprobando ";
+lastcheck="Última comprobación";
+apfstext0="√ Está actualizado";
+apfstext1="Se ha descargado una nueva versión de apfs.efi en su Escritorio (Carpeta Kext-Updates).";
+apfsinit="Última versión de apfs.efi descargada en su Escritorio (Carpeta Kext-Updates).";
+webdrload=" se está descargando.";
+webdrloaded="√ Listo";
+
+loading="Descargado a su Escritorio (Carpeta Kext-Updates).";
+dloading="$name descargado en la carpeta Kext-Updates de su Escritorio";
+dupekext="La última versión ya se encuentra descargada en su Escritorio. Si ya ha sido instalada por favor elimine la carpeta de su Escritorio.";
+obsolete="¡¡¡Atención!!!\nPor favor recuerde eliminar ${data[2]} y reemplazarlo con ${data[3]}.";

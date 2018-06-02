@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2A006B8C20B2E5A6001C6A78 /* rcaf5Tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rcaf5Tj.png; sourceTree = "<group>"; };
+		2A16B48A20C28AEB005C0CDA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A1DEF4A20B4775C00C3CDCE /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		2A20DFCC20B5EDB8008BB03A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2A20DFCE20B5EDD4008BB03A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 				ru,
 				uk,
 				en,
+				es,
 			);
 			mainGroup = 2AD4DAD520AF03F500D2D335;
 			productRefGroup = 2AD4DADF20AF03F500D2D335 /* Products */;
@@ -262,6 +264,7 @@
 				2A20DFCE20B5EDD4008BB03A /* ru */,
 				2A52010620BF3D4F00A164D3 /* uk */,
 				2A52010720BF40D200A164D3 /* en */,
+				2A16B48A20C28AEB005C0CDA /* es */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
