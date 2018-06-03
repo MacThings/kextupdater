@@ -366,7 +366,7 @@ if [[ $1 == kextUpdate ]]; then
     _lastcheck
 fi
 sleep 0.5
-_kucheck
+#_kucheck
 if [[ $1 == kextUpdate ]]; then
     sleep 0.5
     _kextUpdate
