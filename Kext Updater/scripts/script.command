@@ -12,7 +12,7 @@ rm /tmp/kextstats
 fi
 
 #========================= Script Version Info =========================#
-ScriptVersion=2.0.7
+ScriptVersion=2.0.8
 
 #========================= Script Pathes =========================#
 ScriptHome=$(echo $HOME)
@@ -33,15 +33,15 @@ efiroot=`./BDMESG |grep "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" 
 fi
 kexte=`cat /tmp/choice.tmp`
 
-if [[ $lan2 = "de_DE" ]]; then
+if [[ $lan2 = de_* ]]; then
 language="de"
-elif [[ $lan2 = "tr_TR" ]]; then
+elif [[ $lan2 = tr_* ]]; then
 language="tr"
-elif [[ $lan2 = "ru_RU" ]]; then
+elif [[ $lan2 = ru_* ]]; then
 language="ru"
-elif [[ $lan2 = "uk_UK" ]]; then
+elif [[ $lan2 = uk_* ]]; then
 language="uk"
-elif [[ $lan2 = "es_ES" ]]; then
+elif [[ $lan2 = es_* ]]; then
 language="es"
 else
 language="en"
@@ -67,12 +67,17 @@ if [[ $apfscheck != "" ]]; then
   if [ ! -d /Volumes/EFI ]; then
   efi="off"
   diskutil mount $efiroot >/dev/null 2>&1
-    if [ -f /Volumes/EFI/.Trashes/501/apfs.efi ]; then # Deletes apfs.efi from Trashcan if its there
-    rm /Volumes/EFI/.Trashes/501/apfs.efi
+    apfstrash=`find /Volumes/EFI/.Trashes -name "apfs.efi"`
+    if [ -f $apfstrash ]; then # Deletes apfs.efi from Trashcan if its there
+    rm $apfstrash >/dev/null 2>&1
     fi
   fi
   if [ -d /Volumes/EFI ]; then
-  apfspath=`find /Volumes/EFI/ -name "apfs.efi"`
+    apfstrash=`find /Volumes/EFI/.Trashes -name "apfs.efi"`
+    if [ -f $apfstrash ]; then # Deletes apfs.efi from Trashcan if its there
+    rm $apfstrash >/dev/null 2>&1
+    fi
+    apfspath=`find /Volumes/EFI -name "apfs.efi" |head -n 1`
     if [[ $apfspath = *apfs.efi* ]]; then # Check if apfs.efi is in place
     apfs=`cat "$apfspath" |xxd | grep -A 2 APFS | head -n 2 | tail -n 1 | sed -e "s/.*\ \ //g" -e "s/\.\.\..*//g" -e "s/\///g"`
     fi  
@@ -229,7 +234,7 @@ function _kextUpdate()
 {
 for kextList in "${kextArray[@]}"
   do
-    sleep = 0.5
+    sleep 0.1
     IFS=","
     data=($kextList)
     name=${data[0]}
@@ -274,7 +279,7 @@ for kextLoadList in "${kextLoadArray[@]}"
     IFS=","
     data=($kextLoadList)
     name=${data[0]}
-if [ ${name} = "*Clover*" ] | [ -f /tmp/nightly.tmp ]; then
+if [ -f /tmp/nightly.tmp ]; then
 name="clovernightly"
 fi
 mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
@@ -335,7 +340,7 @@ curl -sS -o "${ScriptHome}/Desktop/Kext-Updates/nVidia Webdriver/$webdr2.pkg" ht
 sleep 1
 echo " "
 echo $fertig
-_tmpcleanup
+#_tmpcleanup
 exit 0
 }
 
@@ -379,67 +384,67 @@ _cleanup
 #_printFooter
 }
 
-if [[ $kexte == *Updates* ]] || [[ $kexte == *Обновить* ]] || [[ $kexte == *оновлення* ]] || [[ $kexte == *Buscar* ]]; then
+if [ $kexte = "1" ]; then
   _main "kextUpdate"
   exit 0
 fi
-if [[ $kexte == *Grund* ]] || [[ $kexte == *Basic* ]] || [[ $kexte == *Основные* ]] || [[ $kexte == *Temel* ]] || [[ $kexte == *Основні* ]] || [[ $kexte == *Básicos* ]]; then
+if [ $kexte = "2" ]; then
   kextLoadArray=("fakesmc" "usbinjectall" "voodoops2")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Audio* ]] || [[ $kexte == *Aудио* ]]; then
+if [ $kexte = "3" ]; then
   kextLoadArray=("applealc" "lilu" "codeccommander")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *APFS* ]]; then
+if [ $kexte = "a" ]; then
   kextLoadArray=("apfs")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Intel* ]] || [[ $kexte == *İntel* ]]; then
+if [ $kexte = "4" ]; then
   kextLoadArray=("intelgraphicsfixup" "lilu")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
   fi
-if [[ $kexte == *nVidia* ]]; then
+if [ $kexte = "5" ]; then
   kextLoadArray=("lilu" "nvidiagraphicsfixup")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
   fi
-if [[ $kexte == *AMD* ]]; then
+if [ $kexte = "6" ]; then
   kextLoadArray=("lilu" "whatevergreen")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Ethernet* ]] || [[ $kexte == *сети* ]] || [[ $kexte == *мережі* ]]; then
+if [ $kexte = "7" ]; then
   kextLoadArray=("atherose2200ethernet" "intelmausiethernet" "realtekrtl8111")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Clover* ]]; then
+if [ $kexte = "8" ]; then
   kextLoadArray=("clover")
   recho="Kexte"
   _main "kextLoader"
   echo $fertig
   exit 0
 fi
-if [[ $kexte == *Webdriver* ]] || [[ $kexte == *Driver* ]]; then
+if [ $kexte = "b" ]; then
   _nvwebdriver
   exit 0
 fi

@@ -142,7 +142,7 @@
         <window title="Kext Updater" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="335" y="390" width="1027" height="550"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1027" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -185,6 +185,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Check for Updates" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="AuD-6W-583">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">1</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="ePp-8N-lVe"/>
@@ -207,6 +208,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Basic Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="tgP-dd-FH8">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">2</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="O5W-wv-CwA"/>
@@ -218,6 +220,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Audio Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="fqJ-G4-Tp5">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">3</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="0oO-yF-XQ5"/>
@@ -229,6 +232,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Intel Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="N94-zg-VcZ">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">4</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="Wgn-eu-bL0"/>
@@ -240,6 +244,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load nVidia Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Rvp-7w-kv4">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">5</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="sHO-GM-ueL"/>
@@ -251,6 +256,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Ethernet Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ij0-6U-Ki4">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">7</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="WqZ-ZU-PwK"/>
@@ -262,6 +268,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Clover" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Uux-7h-pPV">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">8</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="jqk-En-Gwx"/>
@@ -273,6 +280,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load Webdriver" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="BvR-0L-x9I">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">b</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="eTn-mO-fjg"/>
@@ -284,6 +292,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load APFS" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6xu-6D-qrC">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">a</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="1fp-4I-Ekh"/>
@@ -295,6 +304,7 @@ DQ
                         <buttonCell key="cell" type="radio" title="Load AMD Kexts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Ua2-LB-zIU">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">6</string>
                         </buttonCell>
                         <connections>
                             <action selector="update:" target="Voe-Tx-rLC" id="kcX-oj-Rdv"/>
@@ -542,6 +552,7 @@ DQ
                         <buttonCell key="cell" type="check" title="Unofficial" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="Ter-3R-x9H">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">9</string>
                         </buttonCell>
                         <connections>
                             <action selector="nightchecked:" target="Voe-Tx-rLC" id="1uC-ED-1WE"/>
@@ -551,14 +562,14 @@ DQ
                         <rect key="frame" x="20" y="16" width="513" height="519"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" id="SYo-Qi-m3I">
-                            <rect key="frame" x="1" y="1" width="511" height="517"/>
+                            <rect key="frame" x="1" y="1" width="496" height="517"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="dJR-3m-BoN">
-                                    <rect key="frame" x="0.0" y="0.0" width="526" height="517"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="511" height="517"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="0.95276227678571423" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="511" height="517"/>
+                                    <size key="minSize" width="496" height="517"/>
                                     <size key="maxSize" width="551" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </textView>
@@ -570,7 +581,7 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7Cf-Yb-fcl">
-                            <rect key="frame" x="496" y="1" width="16" height="517"/>
+                            <rect key="frame" x="497" y="1" width="15" height="517"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -593,7 +604,7 @@ DQ
         <window title="Basic Kexts Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="vj0-o9-9Hg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="752" y="691" width="418" height="349"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="307-gu-qsQ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -620,7 +631,7 @@ DQ
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="8GG-Ob-CPn">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="121" y="123" width="433" height="248"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="56C-XP-nFl">
                 <rect key="frame" x="0.0" y="0.0" width="433" height="248"/>
                 <autoresizingMask key="autoresizingMask"/>

@@ -72,24 +72,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         switch sender.tag {
         case 10:
             webDrivers.setValue(true, forKey: "enabled")
-            //print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.keyEquivalent);
             break
         default:
-            //print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.keyEquivalent);
             webDrivers.setValue(false, forKey: "enabled")
         }
         switch sender.tag {
         case 8:
             nightly.setValue(true, forKey: "enabled")
-            //print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.keyEquivalent);
             break
         default:
-            //print(sender.selectedCell()!.title);
+            //print(sender.selectedCell()!.keyEquivalent);
             nightly.setValue(false, forKey: "enabled")
         }
         
         let filePath           = "/tmp/choice.tmp"
-        let fileContentToWrite = sender.selectedCell()!.title
+        let fileContentToWrite = sender.selectedCell()!.keyEquivalent
         do {
             // Write contents to file
             try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
