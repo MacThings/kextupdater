@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */; };
 		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; };
-		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A30A833230BF92700F572ED /* 10.13DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A822230BF84500F572ED /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A30A834230BF92800F572ED /* 10.14DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A823230BF84500F572ED /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A30A835230BF92800F572ED /* 10.10DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A824230BF84500F572ED /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A30A833230BF92700F572ED /* 10.13DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A822230BF84500F572ED /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A30A834230BF92800F572ED /* 10.14DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A823230BF84500F572ED /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A30A835230BF92800F572ED /* 10.10DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A824230BF84500F572ED /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A30A837230BF94A00F572ED /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81B230BF83800F572ED /* locked.png */; };
 		2A30A838230BF94A00F572ED /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81C230BF83800F572ED /* admin.png */; };
 		2A30A83A230BF96400F572ED /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80A230BF81F00F572ED /* passok.aif */; };
@@ -32,9 +32,9 @@
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
 		2AC197AD230A9C920071932C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AC230A9C920071932C /* SingleKexts.swift */; };
 		2AC197B2230A9E0F0071932C /* script.command in Script Copy */ = {isa = PBXBuildFile; fileRef = 2AC197AF230A9DBB0071932C /* script.command */; };
-		2AC197C2230AC34D0071932C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B7230AC30C0071932C /* alerter */; };
-		2AC197C3230AC34D0071932C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B8230AC30C0071932C /* PlistBuddy */; };
-		2AC197C4230AC34D0071932C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B9230AC30C0071932C /* BDMESG */; };
+		2AC197C2230AC34D0071932C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B7230AC30C0071932C /* alerter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2AC197C3230AC34D0071932C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B8230AC30C0071932C /* PlistBuddy */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2AC197C4230AC34D0071932C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B9230AC30C0071932C /* BDMESG */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AC197C7230AC3790071932C /* lspci in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B5230AC30C0071932C /* lspci */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AC197C8230AC3790071932C /* pci.ids in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B6230AC30C0071932C /* pci.ids */; };
 		2AC197CC230AE1820071932C /* DiskInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197CB230AE1820071932C /* DiskInformation.swift */; };
@@ -378,7 +378,7 @@
 				2A30A830230BF90600F572ED /* Kextx Copy */,
 				2A30A836230BF93300F572ED /* Pics Copy */,
 				2A30A839230BF95200F572ED /* Sounds Copy */,
-				2AF4AAE6230DC4C200648E48 /* Script Copy to Apps */,
+				2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare */,
 			);
 			buildRules = (
 			);
@@ -396,7 +396,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					2AD86C4F2306B95200D2334A = {
@@ -458,7 +458,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AF4AAE6230DC4C200648E48 /* Script Copy to Apps */ = {
+		2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,14 +467,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Script Copy to Apps";
+			name = "Zip App and send to Homeshare";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    rm /Volumes/Homeshare/kextupdater/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    zip -r /Volumes/Homeshare/kextupdater/kextupdaterng.zip Kext\\ Updater.app\nfi\n";
 		};
 		FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

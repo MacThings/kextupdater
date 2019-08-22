@@ -68,22 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let filelHandler       = outputPipe.fileHandleForReading
         process.standardOutput = outputPipe
         process.launch()
-        //self.app_logo_animation.isHidden = false
-        //self.animstart()
-        
-        filelHandler.readabilityHandler = { pipe in
-            let data = pipe.availableData
-            if let line = String(data: data, encoding: .utf8) {
-                DispatchQueue.main.sync {
-                    
-                }
-            } else {
-                print("Error decoding data: \(data.base64EncodedString())")
-            }
-        }
         process.waitUntilExit()
-        //self.animstop()
-        //self.app_logo_animation.isHidden = true
         filelHandler.readabilityHandler = nil
     }
     
@@ -92,7 +77,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         process.launchPath     = "/bin/bash"
         process.arguments      = [path] + args
         let outputPipe         = Pipe()
-        let filelHandler       = outputPipe.fileHandleForReading
         process.standardOutput = outputPipe
         process.launch()
         //self.app_logo_animation.isHidden = false

@@ -117,12 +117,12 @@ class KextUpdater: NSViewController {
                 let keychain = KeychainSwift()
                 let chaincheck = keychain.get("Kext Updater")
                 if chaincheck == nil{
-                    let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
+                    //let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
                 }
                 
                 let passcheck = UserDefaults.standard.string(forKey: "Passwordok")
                 if passcheck == "No"{
-                    let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
+                    //let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
                 }
             } else {
                 keychainyes.isHidden = true
@@ -554,7 +554,7 @@ class KextUpdater: NSViewController {
             let keychain = KeychainSwift()
             let chaincheck = keychain.get("Kext Updater")
             if chaincheck == nil{
-                let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
+                //let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
                 //pwdusername.stringValue = (rootuserfull ?? "")
                 //pwdwindow.setIsVisible(true)
             }
@@ -563,7 +563,7 @@ class KextUpdater: NSViewController {
             
             let passcheck = UserDefaults.standard.string(forKey: "Passwordok")
             if passcheck == "No"{
-                let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
+                //let rootuserfull = UserDefaults.standard.string(forKey: "RootuserFull")
                 //pwdusername.stringValue = (rootuserfull ?? "")
                 //pwdwindow.setIsVisible(true)
             }
