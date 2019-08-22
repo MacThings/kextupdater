@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2EFF3B230EF32600785700 /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EFF3A230EF32600785700 /* Website.swift */; };
 		2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */; };
 		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; };
 		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -26,7 +27,6 @@
 		2A30A847230C02C100F572ED /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A30A845230C02B000F572ED /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A849230C064400F572ED /* Bootloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A848230C064400F572ED /* Bootloader.swift */; };
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
-		2A30A851230D437600F572ED /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A850230D437500F572ED /* Website.swift */; };
 		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
 		2AC197AD230A9C920071932C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AC230A9C920071932C /* SingleKexts.swift */; };
@@ -155,6 +155,7 @@
 
 /* Begin PBXFileReference section */
 		0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2EFF3A230EF32600785700 /* Website.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
 		2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nVidiaWebdriver.swift; sourceTree = "<group>"; };
 		2A30A80A230BF81F00F572ED /* passok.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = passok.aif; sourceTree = "<group>"; };
 		2A30A80B230BF81F00F572ED /* quadra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quadra.mp3; sourceTree = "<group>"; };
@@ -175,7 +176,6 @@
 		2A30A845230C02B000F572ED /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
 		2A30A848230C064400F572ED /* Bootloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
 		2A30A84A230C1D9E00F572ED /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		2A30A850230D437500F572ED /* Website.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Website.swift; path = "/Users/luigi/Documents/kextupdater_ng/Kext Updater/Website.swift"; sourceTree = "<absolute>"; };
 		2AC197AA230A8D720071932C /* KextUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KextUpdater.swift; sourceTree = "<group>"; };
 		2AC197AC230A9C920071932C /* SingleKexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleKexts.swift; sourceTree = "<group>"; };
 		2AC197AF230A9DBB0071932C /* script.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = script.command; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 				2AC197AC230A9C920071932C /* SingleKexts.swift */,
 				2AF4AADE230C4DF300648E48 /* Tools.swift */,
 				2AD86C552306B95200D2334A /* ViewController.swift */,
-				2A30A850230D437500F572ED /* Website.swift */,
+				2A2EFF3A230EF32600785700 /* Website.swift */,
 				2AD86C572306B95400D2334A /* Assets.xcassets */,
 				2AD86C592306B95400D2334A /* Main.storyboard */,
 				2AD86C5C2306B95400D2334A /* Info.plist */,
@@ -511,7 +511,7 @@
 				2AC197CC230AE1820071932C /* DiskInformation.swift in Sources */,
 				2AD86C542306B95200D2334A /* AppDelegate.swift in Sources */,
 				2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */,
-				2A30A851230D437600F572ED /* Website.swift in Sources */,
+				2A2EFF3B230EF32600785700 /* Website.swift in Sources */,
 				2AF4AADD230B025000648E48 /* PasswordWindow.swift in Sources */,
 				2A30A849230C064400F572ED /* Bootloader.swift in Sources */,
 				2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */,
