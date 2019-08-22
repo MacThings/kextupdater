@@ -1,0 +1,32 @@
+PODS:
+  - APNGKit (1.1.0)
+  - KeychainSwift (16.0.1)
+  - LetsMove (1.24)
+  - macOSThemeKit (1.3.0)
+  - Sparkle (1.21.3)
+
+DEPENDENCIES:
+  - APNGKit
+  - KeychainSwift
+  - LetsMove
+  - macOSThemeKit
+  - Sparkle
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - APNGKit
+    - KeychainSwift
+    - LetsMove
+    - macOSThemeKit
+    - Sparkle
+
+SPEC CHECKSUMS:
+  APNGKit: 8fcf50c4004d6d01473707412d162e90d1fa599a
+  KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
+  macOSThemeKit: 48c5f4f069a4990cca2fbca980f878fda4e29dd7
+  Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
+
+PODFILE CHECKSUM: 7ebc3bb3fe84843f42a86405f20827118e4eb42e
+
+COCOAPODS: 1.8.0.beta.1

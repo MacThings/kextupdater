@@ -1,0 +1,494 @@
+/* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Hackintosh´un için herzaman en son güncel Kextler";
+
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Geliştirici: Sascha Lamprecht     Komut Desteği: NoirOSX      Program Simgesi: Nio82";
+
+/* Class = "NSTextField"; title = "© 2019 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2019 Sascha Lamprecht";
+
+/* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Güncellemeleri denetle";
+
+/* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Temel kextleri indir";
+
+/* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Audio kexteleri indir";
+
+/* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "İntel kexteleri indir";
+
+/* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "nVidia kexteleri indir";
+
+/* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "AMD kexteleri indir";
+
+/* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Ethernet kexteleri indir";
+
+/* Class = "NSButton"; title = "Load Bootloader"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Bootloader'ı indir";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Gayri Resmi";
+
+/* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Webdriver indir";
+
+/* Class = "NSButtonCell"; title = "EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "EFI";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Çıkış";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "rOv-rg-tsb"; */
+"rOv-rg-tsb.title" = "Sistem sürümü";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "QZY-3X-hyf"; */
+"QZY-3X-hyf.title" = "Sistem sürümü";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "SpT-Pt-9ha"; */
+"SpT-Pt-9ha.title" = "Updater sürümü";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "Ss6-Nq-6d5"; */
+"Ss6-Nq-6d5.title" = "Updater sürümü";
+
+
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Güncellemeleri denetle...";
+
+/* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Aşağıdaki kextleri indiriyor:\n\nBasic Kexts\nFakeSMC, VoodooPS2, USBInjectAll\n\nAudio\nLilu, AppleALC, CodecCommander\n\nGraphics\nLilu, WhateverGreen\n\nEthernet\nAtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Kext Güncelleyici";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Kext Updaterden Çık";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Düzenle";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Stili Kopyala";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Kext Updater Hakkında";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Yardım";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Kext Updater Yardım";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Metin";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Tümünü göster";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Tümünü Öne Getir";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Başlat!";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "4fB-0B-1NV"; */
+"4fB-0B-1NV.title" = "Başlat!";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Hizmetler";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Kext Updateri gizle";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Kext Güncelleyici";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Diğerlerini gizle";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Yazdır...";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Dosya";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Sayfaları ayarla…";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Kext Güncelleyici";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Yardım";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Düzenle";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Kopyala";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Hepsini seç";
+
+/* Class = "NSButton"; title = "Preferences"; ObjectID = "FkV-cR-cUg"; */
+"FkV-cR-cUg.title" = "Tercihler";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "MFz-zY-NZW"; */
+"MFz-zY-NZW.title" = "Tercihler";
+
+/* Class = "NSBox"; title = "Download Path"; ObjectID = "vNE-KL-cuU"; */
+"vNE-KL-cuU.title" = "İndirme Yolu";
+
+/* Class = "NSBox"; title = "Temporary Path"; ObjectID = "bFl-t0-n15"; */
+"bFl-t0-n15.title" = "Geçici Yol";
+
+/* Class = "NSBox"; title = "Kext Report Path"; ObjectID = "6mi-vd-B9P"; */
+"6mi-vd-B9P.title" = "Kext Rapor Yolu";
+
+/* Class = "NSBox"; title = "Misc Settings"; ObjectID = "1eE-XO-qNR"; */
+"1eE-XO-qNR.title" = "Misc Ayarları";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "QrU-2W-mgV"; */
+"QrU-2W-mgV.title" = "Seç";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "N1K-oT-yi7"; */
+"N1K-oT-yi7.title" = "Seç";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "sOU-Tu-UkE"; */
+"sOU-Tu-UkE.title" = "Seç";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "FUn-NR-Kx0"; */
+"FUn-NR-Kx0.title" = "Hepsini sıfırla";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "Awz-dr-2YX"; */
+"Awz-dr-2YX.title" = "Kapat";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "yO3-zI-Syn"; */
+"yO3-zI-Syn.title" = "Yolu Sıfırla";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "IoX-yP-64a"; */
+"IoX-yP-64a.title" = "Yolu Sıfırla";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "es6-Rz-8tb"; */
+"es6-Rz-8tb.title" = "Yolu Sıfırla";
+
+/* Class = "NSCheckbox"; title = "Sound (Chime)"; ObjectID = "8f4-37-4N5"; */
+"8f4-37-4N5.title" = "Ses (Chime)";
+
+/* Class = "NSButton"; title = "Font Size"; ObjectID = "hLI-5S-9Cb"; */
+"hLI-5S-9Cb.title" = "Yazı Tipi Boyutu";
+
+/* Class = "NSButton"; title = "Font Family"; ObjectID = "8eF-QD-xgT"; */
+"8eF-QD-xgT.title" = "Yazı Tipi Ailesi";
+
+/* Class = "NSButton"; title = "Font Color"; ObjectID = "3t4-V2-vaD"; */
+"3t4-V2-vaD.title" = "Yazı rengi";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "P7k-ox-BlE"; */
+"P7k-ox-BlE.title" = "Tema";
+
+/* Class = "NSButton"; title = "Green"; ObjectID = "9ZI-aM-rRX"; */
+"9ZI-aM-rRX.title" = "Yeşil";
+
+/* Class = "NSButton"; title = "Red"; ObjectID = "zFG-GM-4Fd"; */
+"zFG-GM-4Fd.title" = "Kırmızı";
+
+/* Class = "NSButton"; title = "Orange"; ObjectID = "R8o-tb-VsY"; */
+"R8o-tb-VsY.title" = "Portakal";
+
+/* Class = "NSButton"; title = "Yellow"; ObjectID = "sfH-wb-Swd"; */
+"sfH-wb-Swd.title" = "Sarı";
+
+/* Class = "NSButton"; title = "Light"; ObjectID = "5vh-ut-hL7"; */
+"5vh-ut-hL7.title" = "ışık";
+
+/* Class = "NSButton"; title = "Dark"; ObjectID = "yf8-lJ-jrq"; */
+"yf8-lJ-jrq.title" = "Karanlık";
+
+/* Class = "NSButton"; title = "System"; ObjectID = "jkg-bB-qq2"; */
+"jkg-bB-qq2.title" = "Sistem";
+
+/* Class = "NSTextField"; title = "Network Error"; ObjectID = "8x1-7s-VXB"; */
+"8x1-7s-VXB.title" = "Ahh! İnternete bağlı değilsiniz. Lütfen önce kontrol edin!";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "ZRd-dS-ETe"; */
+"ZRd-dS-ETe.title" = "Tema";
+
+/* Class = "NSButton"; title = "Load Single Kext"; ObjectID = "wWK-ri-ocf"; */
+"wWK-ri-ocf.title" = "Tek Kext Yükle";
+
+/* Class = "NSButton"; title = ""reate Support Report"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Destek Raporu Oluştur";
+
+/* Class = "NSButton"; title = "Disk Informations"; ObjectID = "UVh-Ot-4Hi"; */
+"UVh-Ot-4Hi.title" = "Harddisk Bilgileri";
+
+/* Class = "NSTextField"; title = "Translators"; ObjectID = "UVh-Ot-4Hi"; */
+"rqb-Me-eBU.title" = "Çevirmenler";
+
+/* Class = "NSTextField"; title = "Names"; ObjectID = "hD5-qY-7Qa"; */
+"hD5-qY-7Qa.title" = "Flemenkçe:\nPortekizce:\nİspanyol:\nRusça:\nTürk:\nDiğerleri:";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "9Fd-ys-zds"; */
+"9Fd-ys-zds.title" = "Başlat!";
+
+/* Class = "String"; title = "- Multiple Selection -"; ObjectID = "iia-01-Luc"; */
+"iia-01-Luc.title" = "- Çoklu seçim -";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "e2n-Jf-shk"; */
+"e2n-Jf-shk.title" = "Kapat";
+
+/* Class = "NSWindow"; title = "Multiple Kext Loader"; ObjectID = "iN2-OV-lKP"; */
+"iN2-OV-lKP.title" = "Çoklu Kext Yükleyici";
+
+/* Class = "NSButton"; title = "Notifications"; ObjectID = "dqt-Fw-kBR"; */
+"dqt-Fw-kBR.title" = "Bildirimler";
+
+/* Class = "NSButton"; title = "Show in seconds"; ObjectID = "2vt-Ai-2Vn"; */
+"2vt-Ai-2Vn.title" = "Saniye içinde göster";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "xfR-P2-zyb"; */
+"xfR-P2-zyb.title" = "Kapat";
+
+/* Class = "NSWindow"; title = "Exclude Kexts from Update"; ObjectID = "PFy-fC-8hd"; */
+"PFy-fC-8hd.title" = "Güncellemelerden Kexts'u hariç tut";
+
+/* Class = "NSButton"; title = "Exclude Kexts"; ObjectID = "8jb-6K-m8R"; */
+"8jb-6K-m8R.title" = "Kexts'ı hariç tut";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "0l1-yK-05L"; */
+"0l1-yK-05L.title" = "Hepsini sıfırla";
+
+/* Class = "NSButton"; title = "Login Item"; ObjectID = "1i0-5X-jBm"; */
+"1i0-5X-jBm.title" = "Giriş Öğesi";
+
+/* Class = "String"; title = "Check once for updates in background after every reboot."; ObjectID = "1p5-L5-bWy"; */
+"1p5-L5-bWy.title" = "Her yeniden başlatmadan sonra arka planda güncellemeler için bir kez kontrol edin.";
+
+/* Class = "NSWindow"; title = "Tools"; ObjectID = "MtW-qj-vfc"; */
+"MtW-qj-vfc.title" = "Araçlar";
+
+/* Class = "String"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)"; ObjectID = "xEk-Tu-eem"; */
+"xEk-Tu-eem.title" = "Atheros AR92xx/93xx WLan Kartları için Kext'i kurun (sadece 10.14 +)";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "oA6-85-eKR"; */
+"oA6-85-eKR.title" = "Başlat!";
+
+/* Class = "String"; title = "In case your System doesn't work with 'WhateverGreen' (WEG) you can use these obsolete Kexts instead."; ObjectID = "bGb-fz-fbsT"; */
+"bGb-fz-fbT.title" = "Sisteminizin 'WhateverGreen' (WhateverGreen) ile çalışmadığı durumda, bunun yerine bu eski Kexts kullanabilirsiniz.";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "sIg-Ow-9o7"; */
+"2rg-bv-Sk1.title" = "Kapat";
+
+/* Class = "NSButton"; title = "Download"; ObjectID = "sIg-Ow-9o7"; */
+"sIg-Ow-9o7.title" = "İndir";
+
+/* Class = "NSButton"; title = "Select all"; ObjectID = "AFd-uM-sOD"; */
+"AFd-uM-sOD.title" = "Hepsini seç";
+
+/* Class = "NSButton"; title = "Deselect all"; ObjectID = "t2W-WB-76C"; */
+"t2W-WB-76C.title" = "Hiçbirini seçme";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "fuH-Rt-xfp"; */
+"fuH-Rt-xfp.title" = "Başlat!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "JFY-Je-icz"; */
+"JFY-Je-icz.title" = "Başlat!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "gpW-JE-l20; */
+"gpW-JE-l20.title" = "Başlat!";
+
+/* Class = "String"; title = "If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file."; ObjectID = "3A1-zG-sst"; */
+"3A1-zG-sst.title" = "Bilgisayarınızın uyku ile ilgili bir sorunu varsa, bu yardımcı olabilir. Hibernatemode 0'a ayarlanacak ve Sleepimage bir yazma korumalı 0 bayt dosyası ile değiştirilecektir.";
+
+/* Class = "String"; title = "Rebuild Kextcache and repair Permissions in /S/L/E."; ObjectID = "Sfj-ZG-9YL"; */
+"Sfj-ZG-9YL.title" = "Kextcache'yi yeniden oluşturun ve /S/L/E  & /L/E 'deki izinleri onarın.";
+
+/* Class = "NSButton"; title = "Tools"; ObjectID = "jS5-iy-k0j"; */
+"jS5-iy-k0j.title" = "Araçlar";
+
+/* Class = "String"; title = "Show all loaded non Apple Kexts."; ObjectID = "jdK-uO-WmI"; */
+"jdK-uO-WmI.title" = "Yüklenen tüm Apple Kexts ürünlerini göster.";
+
+/* Class = "String"; title = "Create a Systemreport for further analyze. No private Data (Serial Number for example) will be included."; ObjectID = "EyH-wn-td0"; */
+"EyH-wn-td0.title" = "Daha fazla analiz için bir Sistem raporu oluşturun. Hiçbir özel Veri (örneğin Seri Numarası) dahil edilmeyecektir.";
+
+/* Class = "String"; title = "If you don´t want to install lspci Package (needed for more detailed Systemreport) click this."; ObjectID = "4JZ-eI-kyQ"; */
+"4JZ-eI-kyQ.title" = "Paket istemiyorsan lspci yüklemek için tıklayın (daha detaylı için gereken Systemreport) bu.";
+
+/* Class = "NSCheckbox"; title = "No 'lspci'"; ObjectID = "eGv-hR-SJQ"; */
+"eGv-hR-SJQ.title" = "Lspci kaldırma\n";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "PfJ-hU-reY"; */
+"PfJ-hU-reY.title" = "Lspci kaldırma\n";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "dZv-5k-XqK"; */
+"dZv-5k-XqK.title" = "Lspci kaldırma\n";
+
+/* Class = "NSButton"; title = "Mount"; ObjectID = "EcV-Tl-P8I"; */
+"EcV-Tl-P8I.title" = "Dağ";
+
+/* Class = "NSButton"; title = "Unmount"; ObjectID = "KIr-FF-qmP"; */
+"KIr-FF-qmP.title" = "Unmount";
+
+/* Class = "NSButton"; title = "Unmount all"; ObjectID = "y8J-CB-rsj"; */
+"y8J-CB-rsj.title" = "Tümünü kaldır";
+
+/* Class = "NSString"; title = "Mount EFI from another Harddisk."; ObjectID = "v0C-aR-2p7"; */
+"v0C-aR-2p7.title" = "EFI'yı başka bir sabit diskten takın.";
+
+/* Class = "String"; title = "Reset Adminuser"; ObjectID = "5YU-ol-hbz"; */
+"5YU-ol-hbz.title" = "Yönetici'yi Sıfırla";
+
+/* Class = "String"; title = "Ask again for keychain"; ObjectID = "4RL-8F-a2T"; */
+"4RL-8F-a2T.title" = "Anahtarlık için tekrar sor";
+
+/* Class = "String"; title = "Username"; ObjectID = "RFj-8t-JGA"; */
+"RFj-8t-JGA.title" = "Kullanıcı adı";
+
+/* Class = "String"; title = "Admin Status"; ObjectID = "5e5-Z6-hQ5"; */
+"5e5-Z6-hQ5.title" = "Yönetici Durumu";
+
+/* Class = "String"; title = "Wrong Password. Please try again."; ObjectID = "aoE-2N-iTU"; */
+"aoE-2N-iTU.title" = "Yanlış şifre. Lütfen tekrar deneyin.";
+
+/* Class = "String"; title = "Password accepted."; ObjectID = "7Id-v8-TlT"; */
+"7Id-v8-TlT.title" = "Şifre kabul edildi.";
+
+/* Class = "String"; title = "Kext Updater wants to make changes."; ObjectID = "E1c-X4-wcR"; */
+"E1c-X4-wcR.title" = "Kextupdater değişiklik yapmak istiyor.";
+
+/* Class = "String"; title = "Enter your password to allow this."; ObjectID = "XdL-oe-UzV"; */
+"XdL-oe-UzV.title" = "Buna izin vermek için parolanızı girin.";
+
+/* Class = "String"; title = "Username:"; ObjectID = "UHx-x5-tIW"; */
+"UHx-x5-tIW.title" = "Kullanıcı adı:";
+
+/* Class = "String"; title = "Password:"; ObjectID = "oYT-cS-tXK"; */
+"oYT-cS-tXK.title" = "Parola:";
+
+/* Class = "String"; title = "Cancel"; ObjectID = "5pc-Bh-aSH"; */
+"5pc-Bh-aSH.title" = "İptal etmek";
+
+/* Class = "String"; title = "Do you want ..."; ObjectID = "kJb-7j-om1"; */
+"kJb-7j-om1.title" = "Şifreni kalıcı ve güvenli bir şekilde yatırmak için gelecekte anahtarlığı kullanmak ister misiniz? Bu, şifreyi sadece bir kez girmeniz ve daha sonra tekrar sorulmaması avantajına sahip olacaktır. Şifreni değiştirmediğin sürece. Sonra Kext Updater tekrar soracaktır.";
+
+/* Class = "NSButton"; title = "Yes"; ObjectID = "A6O-NO-2vE"; */
+"A6O-NO-2vE.title" = "Evet";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "WpE-Au-SJa"; */
+"WpE-Au-SJa.title" = "Hayır";
+
+/* Class = "NSLabel"; title = "Yes"; ObjectID = "dkQ-lL-d8X"; */
+"dkQ-lL-d8X.title" = "Evet";
+
+/* Class = "NSLabel"; title = "No"; ObjectID = "GHu-A0-sIa"; */
+"GHu-A0-sIa.title" = "Hayır";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "RIh-nc-TGj"; */
+"RIh-nc-TGj.title" = "Başlat!";
+
+/* Class = "NSButton"; title = "Uninstall"; ObjectID = "TIs-Fo-edp"; */
+"TIs-Fo-edp.title" = "Kaldır";
+
+/* Class = "NSTextField"; title = "Install Kext to enable SATA HotPlug on Mojave again."; ObjectID = "Lcw-db-4Jj"; */
+"Lcw-db-4Jj.title" = "SATA HotPlug'u Mojave'de tekrar etkinleştirmek için Kext'i yükleyin.";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "lMm-S6-9PF"; */
+"lMm-S6-9PF.title" = "Bootloader";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "WE1-tY-5tf"; */
+"WE1-tY-5tf.title" = "Bootloader";
+
+/* Class = "String"; title = "Gathering System Informations"; ObjectID = "O1Y-s2-JQj"; */
+"O1Y-s2-JQj.title" = "Sistem Bilgilerini Toplama";
+
+/* Class = "NSWindow"; title = "Security Notification"; ObjectID = "Gov-ov-mxs"; */
+"Gov-ov-mxs.title" = "Güvenlik Bildirimi";
+
+/* Class = "String"; title = "Attention Text"; ObjectID = "EI8-3O-URb"; */
+"EI8-3O-URb.title" = "Dikkat!\nMojave olarak daha yeni bir macOS kullanıyorsunuz. Güvenlik nedeniyle, Apple sistem bölümünü salt okunur olarak ayarlamıştır.\n\nSeçilen eylemin gerçekleştirilmesi için, sistem bölümünün okuma / yazma olarak ayarlanması gerekir. Yeniden başlatma gerçekleştirilinceye kadar bölüm bu durumda kalır.\n\nKatılıyor musun?";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "aPL-lz-pF2"; */
+"aPL-lz-pF2.title" = "Hayır";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "xlF-kn-k1N"; */
+"xlF-kn-k1N.title" = "Evet";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "QIJ-Ri-920"; */
+"QIJ-Ri-920.title" = "Evet";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "wGX-ev-H3u"; */
+"wGX-ev-H3u.title" = "Evet";
+
+/* BASH Part - Do not remove this Line! */
+alarm= "Ama farkında ol, çünkü en son Lilu Kext'e ihtiyacı var! Eğer zaten buna sahip değilseniz, sonraki açılışta siyah bir ekran alacaksınız! Lütfen Tek Kext Seçeneği ile Lilu indirin ve bir sonraki yeniden başlatmadan önce yükleyin! Ama güncellemek istemezseniz sorun olmaz. Sadece bu mesajı dikkate almayın.";
+checkinet= "İnternet bağlantınızı kontrol edin veya güncelleme Sunucusuna ulaşılamıyor. Program otomatik olarak 5 saniye sonra kapatılacak.";
+ozmosis= "Dikkat! Ozmosis'i kullandığın sürece, sistemde çift Kext olmadığından emin ol. Aynı Kext ROM, EFI bölümü veya S/L/E'de aynı anda kurulmamalıdır.";
+greet1= "Günaydın $osuser. Yenilik olup olmadığını bakalım...";
+greet2= "Merhaba $osuser. Yenilik olup olmadığını bakalım...";
+greet3= "İyi akşamlar $osuser. Yenilik olup olmadığını bakalım...";
+latest= "Son güncel sürüm indirilmiş. Yükleme işlemi tamamlandıysa bu dosyayı silebilirsiniz..";
+upd= "Kext Updateri Denetliyorum ...";
+upd1= "Güncelleme var!";
+upd2= "Yüklü sürüm... = ";
+upd3= "Son sürümü.... = ";
+upd4= "Güncel durumdasınız";
+checkver= "Denetliyorum ";
+lastcheck= "Son denetleme zamanı";
+apfstext0= "√ Güncel durumdasınız";
+apfstext1= "Apfs.efi’nin yeni bir sürümü mevcut ve indirildi.";
+apfsinit= "Güncel apfs.efi indirildi.";
+webdrload= " indiriliyor.";
+webdrloaded= "👍🏼 Bitti.";
+loading= "Dosya indiriliyor.";
+dloading= "indiriliyor.";
+dupekext= "Son güncel sürüm bilgisayarınızda yüklü, yükleme işlemi tamamlandıysa bu dosyayı silebilirsiniz.";
+obsolete1= "\nDikkat !!!\nEski olan";
+obsolete2= "siliniz ve onun yerine";
+obsolete3= "Bunun yerine. O şimdi dahil edildi.\n";
+nowebselected= "Hata. Webdriver seçilmedi!";
+efimounted= "EFI bağlantısını kesin";
+efinotmounted= "EFI Dağı";
+nokextselected= "Kext Seçilmedi!";
+rebuildcache= "Kextcache'nin yeniden inşası. Bu biraz zaman alabilir. Lütfen sabırlı olun ve İşlemi durdurmayın.";
+error= "Bir hata oluştu. Lütfen tekrar deneyin.";
+kextloaded= "Yüklü üçüncü taraf Kexts";
+hdaloaded= "yüklendi.";
+hdanotloaded= "yüklenmedi.";
+reportpath= "Dosyada kaydedildi";
+massdlready= "Gitmeye hazır. Başlata basınız.";
+notify1= "Yeni Kext Güncellemeleri:";
+notify2= "Kextdownload tamamlandı.";
+notify3= "Rapor oluşturuldu.";
+daemonnotify= "Yeni Güncelleme (ler) mevcut. Lütfen Kext Updater'ı açın.";
+daemonnotifyclose= "Kapat";
+openkextupdater= "Kext Updater'ı aç";
+atherosinstall= "Atheros AR92xx/93xx Kartlarını 10.14 veya üzeri ile kullanmak için Atheros40.kext'i kurmak. Bu biraz zaman alabilir. Lütfen sabırlı olun ve İşlemi durdurmayın.";
+fixsleepimage= "Sleepimage Fix şimdi uygulanacaktır.";
+thirdparty= "Yüklü olmayan Apple Kexts:";
+sysreport= "Profil oluşturuluyor. Bu biraz zaman alabilir.";
+lspciinstalling= "lspci şimdi kurulacak. Bu biraz zaman alabilir.\n";
+nolspciinstalled= "Kaldırma için bir şey yok. lspci sisteminizde değil.";
+uninstalllspci= "Şimdi lspci kaldırılan olacak. Lütfen sabırlı olun.";
+collectingdata= "Bilgi sistemi getiriliyor. Lütfen sabırlı olun.";
+createreport= "HTML Sistem Raporu şimdi oluşturulacak.";
+updatepcidb= "PCI Aygıt Veritabanını Güncelleme.";
+efineedsmounted= "EFI raporu yaratmak için monte edilmiş olması gerekiyor.";
+sipwarn= "Senin yudum Kexts 3üncü parti statüsü yüklemek için izin vermiyor. Lütfen etkisizleştir PCI cihaz almak için yudum listesi. PCI cihaz raporu için bilgi olmadan inşa olacak şimdi. Lütfen set CsrActiveConfig etkisiz kılmak istiyorsan 0x67 yudum için.\n";
+reportdone= "\nBitti. Masaüstünüzde bir zip Arşivi (System-Report.zip) bulacaksınız. Zip'in içeriği aşağıdaki gibidir:\n\nSabit ve İşletim Sistemi Bilgileri, yüklenen Kexts, Kext Yolları, PCI Aygıtları, CLOVER/OC/OZ Klasörünün Temelleri (Config.plist içinde SerialNumber, BoardSerialNumber, SmUUID, MLB ve CustomUUID, anonim hale getirmek için Zeros ile değiştirilir). Lütfen Sorununuzu daha iyi analiz etmek için bu Arşivi Hackintosh Forumunuza yükleyin.";
+reportmsg= "Rapor oluşturuldu.";
+wrongpass= "Yanlış şifre. Lütfen tekrar deneyin.";
+warnnouser= "Dikkat! Hiçbir Kullanıcı belirtilmedi. Mevcut Kullanıcınız şimdi kullanılacaktır.";
+noadmin= "Yatırılan kullanıcının hiçbir yönetici hakkı yoktur. Kext Updater sadece sınırlı çalışacaktır. Lütfen Menupoint 'Reset Adminuser' bölümüne gidiniz ve bir tane daha tanımlayınız.";
+textadmin= "Mevcut hesabınızın yönetim izinleri yoksa, lütfen aşağıdaki satırda yönetim hesabınızın kullanıcı adını girin. Yanlış girdiyseniz (veya 'Cancle' tuşuna basarsanız) asıl kullanıcınız kullanılacaktır (ancak bu Kullanıcıda Yönetici Hakları yoksa Kext Updater sadece sınırlı çalışacaktır). Herhangi bir zamanda 'Yönetici Yöneticisini Sıfırla' öğesindeki Menü Sırasına sıfırlayabilirsiniz.";
+answeradmin= "Kullanıcı adınızı giriniz";
+textpassword= "Lütfen Yönetici Şifresi giriniz";
+usernoexist= "Böyle bir kullanıcı yoktur. Lütfen tekrar deneyin.";
+ahciportinstall= "Mojave için SATA Hotplug Desteğini Takma. Bu biraz zaman alabilir. Lütfen sabırlı olun ve Süreci bölmeyin.";
+ahciportuninstall= "Mojave için SATA Hotplug Desteğini Çıkarma. Bu biraz zaman alabilir. Lütfen sabırlı olun ve Süreci bölmeyin.";
+ocerror= "OpenCore config.plist'inizde 'ExposeSensitiveData' (Misc/Security) değeri '3' olarak ayarlanmalıdır. Bu değer olmadan, Kext Updater yalnızca sınırlı ölçüde çalışır.";

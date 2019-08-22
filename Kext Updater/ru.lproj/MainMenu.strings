@@ -1,0 +1,494 @@
+/* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Всегда самые новые кексти для вашего Хакинтош";
+
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Разработано: Sascha Lamprecht Поддержка скриптов: NoirOSX Иконка программы: Nio82";
+
+/* Class = "NSTextField"; title = "© 2019 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2019 Sascha Lamprecht";
+
+/* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Обновить";
+
+/* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Скачать Основные";
+
+/* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Скачать Aудио Кексти";
+
+/* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "Скачать Intel Кексти";
+
+/* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "Скачать nVidia Кексти";
+
+/* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "Скачать AMD Кексти";
+
+/* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Скачать Кексти сети";
+
+/* Class = "NSButton"; title = "Load Bootloader"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Скачать Загрузчик";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Не официально";
+
+/* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Скачать Webdriver";
+
+/* Class = "NSButtonCell"; title = "EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "EFI";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Выход";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "rOv-rg-tsb"; */
+"rOv-rg-tsb.title" = "Версия системы";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "QZY-3X-hyf"; */
+"QZY-3X-hyf.title" = "Версия системы";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "SpT-Pt-9ha"; */
+"SpT-Pt-9ha.title" = "Версия программы";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "Ss6-Nq-6d5"; */
+"Ss6-Nq-6d5.title" = "Версия программы";
+
+
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Обновить...";
+
+/* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Загружает следующие Кексти:\n\nBasic Kexts\nFakeSMC, VoodooPS2, USBInjectAll\n\nAudio\nLilu, AppleALC, CodecCommander\n\nGraphics\nLilu, WhateverGreen\n\nEthernet\nAtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Кекст Упдатер";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Покинут Кекст Упдатер";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Pедактировать";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Стиль копирования";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "О Кекст Упдатер";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Помощь";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Помощь Кекст Упдатер";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Текст";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Показать все";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Принесите все к фронту";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Поехали!";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "4fB-0B-1NV"; */
+"4fB-0B-1NV.title" = "Поехали!";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Услуги";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Скрит Кекст Упдатер";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Кекст Упдатер";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Скрыть другие";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Распечатать...";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Файл";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Настройка страницы…";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Кекст Упдатер";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Помощь";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Pедактировать";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Копировать";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Отметить все";
+
+/* Class = "NSButton"; title = "Preferences"; ObjectID = "FkV-cR-cUg"; */
+"FkV-cR-cUg.title" = "предпочтения";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "MFz-zY-NZW"; */
+"MFz-zY-NZW.title" = "предпочтения";
+
+/* Class = "NSBox"; title = "Download Path"; ObjectID = "vNE-KL-cuU"; */
+"vNE-KL-cuU.title" = "Путь загрузки";
+
+/* Class = "NSBox"; title = "Temporary Path"; ObjectID = "bFl-t0-n15"; */
+"bFl-t0-n15.title" = "Временный путь";
+
+/* Class = "NSBox"; title = "Kext Report Path"; ObjectID = "6mi-vd-B9P"; */
+"6mi-vd-B9P.title" = "Путь отчета Kext";
+
+/* Class = "NSBox"; title = "Misc Settings"; ObjectID = "1eE-XO-qNR"; */
+"1eE-XO-qNR.title" = "Различные настройки";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "QrU-2W-mgV"; */
+"QrU-2W-mgV.title" = "Выбрать";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "N1K-oT-yi7"; */
+"N1K-oT-yi7.title" = "Выбрать";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "sOU-Tu-UkE"; */
+"sOU-Tu-UkE.title" = "Выбрать";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "FUn-NR-Kx0"; */
+"FUn-NR-Kx0.title" = "Сбросить все";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "Awz-dr-2YX"; */
+"Awz-dr-2YX.title" = "Закрыть";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "yO3-zI-Syn"; */
+"yO3-zI-Syn.title" = "Сброс пути";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "IoX-yP-64a"; */
+"IoX-yP-64a.title" = "Сброс пути";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "es6-Rz-8tb"; */
+"es6-Rz-8tb.title" = "Сброс пути";
+
+/* Class = "NSCheckbox"; title = "Sound (Chime)"; ObjectID = "8f4-37-4N5"; */
+"8f4-37-4N5.title" = "Звук (Chime)";
+
+/* Class = "NSButton"; title = "Font Size"; ObjectID = "hLI-5S-9Cb"; */
+"hLI-5S-9Cb.title" = "Размер шрифта";
+
+/* Class = "NSButton"; title = "Font Family"; ObjectID = "8eF-QD-xgT"; */
+"8eF-QD-xgT.title" = "Семейство шрифтов";
+
+/* Class = "NSButton"; title = "Font Color"; ObjectID = "3t4-V2-vaD"; */
+"3t4-V2-vaD.title" = "Цвет шрифта";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "P7k-ox-BlE"; */
+"P7k-ox-BlE.title" = "тема";
+
+/* Class = "NSButton"; title = "Green"; ObjectID = "9ZI-aM-rRX"; */
+"9ZI-aM-rRX.title" = "зеленый";
+
+/* Class = "NSButton"; title = "Red"; ObjectID = "zFG-GM-4Fd"; */
+"zFG-GM-4Fd.title" = "красный";
+
+/* Class = "NSButton"; title = "Orange"; ObjectID = "R8o-tb-VsY"; */
+"R8o-tb-VsY.title" = "оранжевый";
+
+/* Class = "NSButton"; title = "Yellow"; ObjectID = "sfH-wb-Swd"; */
+"sfH-wb-Swd.title" = "желтый";
+
+/* Class = "NSButton"; title = "Light"; ObjectID = "5vh-ut-hL7"; */
+"5vh-ut-hL7.title" = "Свет";
+
+/* Class = "NSButton"; title = "Dark"; ObjectID = "yf8-lJ-jrq"; */
+"yf8-lJ-jrq.title" = "Темно";
+
+/* Class = "NSButton"; title = "System"; ObjectID = "jkg-bB-qq2"; */
+"jkg-bB-qq2.title" = "система";
+
+/* Class = "NSTextField"; title = "Network Error"; ObjectID = "8x1-7s-VXB"; */
+"8x1-7s-VXB.title" = "Ох! Вы не подключены к Интернету. Сначала проверьте!";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "ZRd-dS-ETe"; */
+"ZRd-dS-ETe.title" = "тема";
+
+/* Class = "NSButton"; title = "Load Single Kext"; ObjectID = "wWK-ri-ocf"; */
+"wWK-ri-ocf.title" = "Загрузить Single Kext";
+
+/* Class = "NSButton"; title = ""reate Support Report"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Создать отчет о поддержке";
+
+/* Class = "NSButton"; title = "Disk Informations"; ObjectID = "UVh-Ot-4Hi"; */
+"UVh-Ot-4Hi.title" = "Информация о жестком диске";
+
+/* Class = "NSTextField"; title = "Translators"; ObjectID = "UVh-Ot-4Hi"; */
+"rqb-Me-eBU.title" = "Переводчики";
+
+/* Class = "NSTextField"; title = "Names"; ObjectID = "hD5-qY-7Qa"; */
+"hD5-qY-7Qa.title" = "Голландский:\nпортугальский язык:\nИспанский:\nРусский:\nТурецкий:\nДругие:";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "9Fd-ys-zds"; */
+"9Fd-ys-zds.title" = "Поехали!";
+
+/* Class = "String"; title = "- Multiple Selection -"; ObjectID = "iia-01-Luc"; */
+"iia-01-Luc.title" = "- Множественный выбор -";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "e2n-Jf-shk"; */
+"e2n-Jf-shk.title" = "Закрыть";
+
+/* Class = "NSWindow"; title = "Multiple Kext Loader"; ObjectID = "iN2-OV-lKP"; */
+"iN2-OV-lKP.title" = "Несколько загрузчиков Kext";
+
+/* Class = "NSButton"; title = "Notifications"; ObjectID = "dqt-Fw-kBR"; */
+"dqt-Fw-kBR.title" = "Уведомления";
+
+/* Class = "NSButton"; title = "Show in seconds"; ObjectID = "2vt-Ai-2Vn"; */
+"2vt-Ai-2Vn.title" = "Показать в секундах";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "xfR-P2-zyb"; */
+"xfR-P2-zyb.title" = "Закрыть";
+
+/* Class = "NSWindow"; title = "Exclude Kexts from Update"; ObjectID = "PFy-fC-8hd"; */
+"PFy-fC-8hd.title" = "Исключить Kexts из обновления";
+
+/* Class = "NSButton"; title = "Exclude Kexts"; ObjectID = "8jb-6K-m8R"; */
+"8jb-6K-m8R.title" = "Исключить Kexts";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "0l1-yK-05L"; */
+"0l1-yK-05L.title" = "Сбросить все";
+
+/* Class = "NSButton"; title = "Login Item"; ObjectID = "1i0-5X-jBm"; */
+"1i0-5X-jBm.title" = "Вход в систему";
+
+/* Class = "String"; title = "Check once for updates in background after every reboot."; ObjectID = "1p5-L5-bWy"; */
+"1p5-L5-bWy.title" = "После каждой перезагрузки проверьте один раз на наличие обновлений в фоновом режиме.";
+
+/* Class = "NSWindow"; title = "Tools"; ObjectID = "MtW-qj-vfc"; */
+"MtW-qj-vfc.title" = "инструменты";
+
+/* Class = "String"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)"; ObjectID = "xEk-Tu-eem"; */
+"xEk-Tu-eem.title" = "Установите Kext для карт Atheros AR92xx/93xx WLan (только 10.14 +)";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "oA6-85-eKR"; */
+"oA6-85-eKR.title" = "Поехали!";
+
+/* Class = "String"; title = "In case your System doesn't work with 'WhateverGreen' (WEG) you can use these obsolete Kexts instead."; ObjectID = "bGb-fz-fbsT"; */
+"bGb-fz-fbT.title" = "Если ваша система не работает с «WhateverGreen» (WEG), вы можете использовать эти устаревшие Kexts.";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "sIg-Ow-9o7"; */
+"2rg-bv-Sk1.title" = "Закрыть";
+
+/* Class = "NSButton"; title = "Download"; ObjectID = "sIg-Ow-9o7"; */
+"sIg-Ow-9o7.title" = "Скачать";
+
+/* Class = "NSButton"; title = "Select all"; ObjectID = "AFd-uM-sOD"; */
+"AFd-uM-sOD.title" = "Отметить все";
+
+/* Class = "NSButton"; title = "Deselect all"; ObjectID = "t2W-WB-76C"; */
+"t2W-WB-76C.title" = "Убрать выделение со всего";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "fuH-Rt-xfp"; */
+"fuH-Rt-xfp.title" = "Поехали!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "JFY-Je-icz"; */
+"JFY-Je-icz.title" = "Поехали!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "gpW-JE-l20; */
+"gpW-JE-l20.title" = "Поехали!";
+
+/* Class = "String"; title = "If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file."; ObjectID = "3A1-zG-sst"; */
+"3A1-zG-sst.title" = "Если ваш компьютер имеет проблемы со сном, это может помочь. Hibernatemode будет установлен в 0, а Sleepimage будет заменен на 0-байтовый файл с защитой от записи.";
+
+/* Class = "String"; title = "Rebuild Kextcache and repair Permissions in /S/L/E."; ObjectID = "Sfj-ZG-9YL"; */
+"Sfj-ZG-9YL.title" = "Восстановить Kextcache и восстановить разрешения в /S/L/E & /L/E.";
+
+/* Class = "NSButton"; title = "Tools"; ObjectID = "jS5-iy-k0j"; */
+"jS5-iy-k0j.title" = "инструменты";
+
+/* Class = "String"; title = "Show all loaded non Apple Kexts."; ObjectID = "jdK-uO-WmI"; */
+"jdK-uO-WmI.title" = "Показать все загруженные без Apple Kexts.";
+
+/* Class = "String"; title = "Create a Systemreport for further analyze. No private Data (Serial Number for example) will be included."; ObjectID = "EyH-wn-td0"; */
+"EyH-wn-td0.title" = "Создайте Systemreport для дальнейшего анализа. Никакие частные данные (например, серийный номер) не будут включены.";
+
+/* Class = "String"; title = "If you don´t want to install lspci Package (needed for more detailed Systemreport) click this."; ObjectID = "4JZ-eI-kyQ"; */
+"4JZ-eI-kyQ.title" = "Если Вы не хотите устанавливать lspci Пакет (необходимый для более подробного Systemreport), щелкают по этому.";
+
+/* Class = "NSCheckbox"; title = "No 'lspci'"; ObjectID = "eGv-hR-SJQ"; */
+"eGv-hR-SJQ.title" = "Нет lspci";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "PfJ-hU-reY"; */
+"PfJ-hU-reY.title" = "Удалить lspci";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "dZv-5k-XqK"; */
+"dZv-5k-XqK.title" = "Удалить lspci";
+
+/* Class = "NSButton"; title = "Mount"; ObjectID = "EcV-Tl-P8I"; */
+"EcV-Tl-P8I.title" = "Установите";
+
+/* Class = "NSButton"; title = "Unmount"; ObjectID = "KIr-FF-qmP"; */
+"KIr-FF-qmP.title" = "Размонтируйте";
+
+/* Class = "NSButton"; title = "Unmount all"; ObjectID = "y8J-CB-rsj"; */
+"y8J-CB-rsj.title" = "Отключить все";
+
+/* Class = "NSString"; title = "Mount EFI from another Harddisk."; ObjectID = "v0C-aR-2p7"; */
+"v0C-aR-2p7.title" = "Подключите EFI к другому жесткому диску.";
+
+/* Class = "String"; title = "Reset Adminuser"; ObjectID = "5YU-ol-hbz"; */
+"5YU-ol-hbz.title" = "Сбросить администратора";
+
+/* Class = "String"; title = "Ask again for keychain"; ObjectID = "4RL-8F-a2T"; */
+"4RL-8F-a2T.title" = "Спросите снова о брелках";
+
+/* Class = "String"; title = "Username"; ObjectID = "RFj-8t-JGA"; */
+"RFj-8t-JGA.title" = "имя пользователя";
+
+/* Class = "String"; title = "Admin Status"; ObjectID = "5e5-Z6-hQ5"; */
+"5e5-Z6-hQ5.title" = "Статус администратора";
+
+/* Class = "String"; title = "Wrong Password. Please try again."; ObjectID = "aoE-2N-iTU"; */
+"aoE-2N-iTU.title" = "Неправильный пароль. Пожалуйста, попробуйте еще раз.";
+
+/* Class = "String"; title = "Password accepted."; ObjectID = "7Id-v8-TlT"; */
+"7Id-v8-TlT.title" = "Пароль принят.";
+
+/* Class = "String"; title = "Kext Updater wants to make changes."; ObjectID = "E1c-X4-wcR"; */
+"E1c-X4-wcR.title" = "Kextupdater хочет внести изменения.";
+
+/* Class = "String"; title = "Enter your password to allow this."; ObjectID = "XdL-oe-UzV"; */
+"XdL-oe-UzV.title" = "Чтобы разрешить это действие, введите пароль.";
+
+/* Class = "String"; title = "Username:"; ObjectID = "UHx-x5-tIW"; */
+"UHx-x5-tIW.title" = "Имя пользователя:";
+
+/* Class = "String"; title = "Password:"; ObjectID = "oYT-cS-tXK"; */
+"oYT-cS-tXK.title" = "Пароль:";
+
+/* Class = "String"; title = "Cancel"; ObjectID = "5pc-Bh-aSH"; */
+"5pc-Bh-aSH.title" = "отменить";
+
+/* Class = "String"; title = "Do you want ..."; ObjectID = "kJb-7j-om1"; */
+"kJb-7j-om1.title" = "Вы хотите использовать брелок в будущем для долговременного и надежного внесения вашего пароля? Это будет иметь то преимущество, что вам нужно было вводить пароль только один раз, а потом больше не спрашивать. Если вы не измените свой пароль. Затем Kext Updater запросит еще раз.";
+
+/* Class = "NSButton"; title = "Yes"; ObjectID = "A6O-NO-2vE"; */
+"A6O-NO-2vE.title" = "да";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "WpE-Au-SJa"; */
+"WpE-Au-SJa.title" = "нет";
+
+/* Class = "NSLabel"; title = "Yes"; ObjectID = "dkQ-lL-d8X"; */
+"dkQ-lL-d8X.title" = "да";
+
+/* Class = "NSLabel"; title = "No"; ObjectID = "GHu-A0-sIa"; */
+"GHu-A0-sIa.title" = "нет";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "RIh-nc-TGj"; */
+"RIh-nc-TGj.title" = "Поехали!";
+
+/* Class = "NSButton"; title = "Uninstall"; ObjectID = "TIs-Fo-edp"; */
+"TIs-Fo-edp.title" = "Удалить";
+
+/* Class = "NSTextField"; title = "Install Kext to enable SATA HotPlug on Mojave again."; ObjectID = "Lcw-db-4Jj"; */
+"Lcw-db-4Jj.title" = "Установите Kext, чтобы снова включить SATA HotPlug в Mojave.";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "lMm-S6-9PF"; */
+"lMm-S6-9PF.title" = "Загрузчик";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "WE1-tY-5tf"; */
+"WE1-tY-5tf.title" = "Загрузчик";
+
+/* Class = "String"; title = "Gathering System Informations"; ObjectID = "O1Y-s2-JQj"; */
+"O1Y-s2-JQj.title" = "Сбор информации о системе";
+
+/* Class = "NSWindow"; title = "Security Notification"; ObjectID = "Gov-ov-mxs"; */
+"Gov-ov-mxs.title" = "Уведомление о безопасности";
+
+/* Class = "String"; title = "Attention Text"; ObjectID = "EI8-3O-URb"; */
+"EI8-3O-URb.title" = "Внимание!\nВы используете более новую macOS как Mojave. Из соображений безопасности Apple установила системный раздел только для чтения.\n\nДля выполнения выбранного действия системный раздел должен быть настроен на чтение / запись. Раздел остается в этом состоянии до перезагрузки.\n\nТы согласен?";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "aPL-lz-pF2"; */
+"aPL-lz-pF2.title" = "нет";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "xlF-kn-k1N"; */
+"xlF-kn-k1N.title" = "да";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "QIJ-Ri-920"; */
+"QIJ-Ri-920.title" = "да";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "wGX-ev-H3u"; */
+"wGX-ev-H3u.title" = "да";
+
+/* BASH Part - Do not remove this Line! */
+alarm= "Но имейте в виду, потому что ему нужен последний Lilu Kext! Если у вас уже нет этого, вы получите черный экран при следующей загрузке! Загрузите Lilu через опцию Single Kext и установите его перед следующей перезагрузкой! Но если вы не хотите обновлять, это не проблема. Просто игнорируйте это сообщение.";
+checkinet= "Проверьте подключение к Интернету. На данный момент сервер обновлений может быть недоступен. Программа автоматически закрывается через 5 секунд.";
+ozmosis= "Внимание! Если вы используете Ozmosis, убедитесь, что в системе нет дубликатов Кекстав. Один и тот же Кекст не должен устанавливаться в ROM, разделе EFI или в S / L / E одновременно.";
+greet1= "Доброе утро $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+greet2= "Добрый день $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+greet3= "Добрый вечер $osuser. Посмотрим, есть ли что-то новое. Поехали! ...";
+latest= "Последняя версия уже загружена. Если он уже установлен, удалите папку со своего компьютера.";
+upd= "Проверка программы для обновление Кекстав ...";
+upd1= "Доступно обновление!";
+upd2= "Установленная версия... = ";
+upd3= "Версия сервера......... = ";
+upd4= "Вы используете самую актуальную Версию";
+checkver= "Проверка ";
+lastcheck= "Время последнего обзора";
+apfstext0= "√ Вы используете самую актуальную Версию";
+apfstext1= "Загружена новая версия apfs.efi.";
+apfsinit= "Был загружен последний apfs.efi.";
+webdrload= " загружается.";
+webdrloaded= "👍🏼 Готово.";
+loading= "Загрузка файла.";
+dloading= "Загрузка.";
+dupekext= "Последняя версия уже загружена на ваш компьютер. Если он уже установлен, удалите его.";
+obsolete1= "\nВнимание !!!\nПожалуйста, удалите старые";
+obsolete2= "и вместо этого используйте";
+obsolete3= "вместо этого. Он включен в это сейчас.\n";
+nowebselected= "Ошибка. Не выбран Webdriver!";
+efimounted= "Отключить EFI";
+efinotmounted= "Mount EFI";
+nokextselected= "Нет Kext Selected!";
+rebuildcache= "Восстановление Kextcache. Это может занять некоторое время. Будьте терпеливы и не прерывайте процесс.";
+error= "Произошла ошибка. Пожалуйста, попробуйте еще раз.";
+kextloaded= "Загруженный сторонний Kexts";
+hdaloaded= "загружен.";
+hdanotloaded= "не загружен.";
+reportpath= "Файл сохранен в";
+massdlready= "Готов идти. Нажмите старт.";
+notify1= "Новые обновления Kext:";
+notify2= "Выполнен Kextdownload.";
+notify3= "Создан отчет.";
+daemonnotify= "Доступны новые обновления. Откройте Kext Updater.";
+daemonnotifyclose= "Закрыть";
+openkextupdater= "Открыть Kext Updater";
+atherosinstall= "Установка Atheros40.kext для использования карт Atheros AR92xx/93xx с 10.14 или выше. Это может занять некоторое время. Будьте терпеливы и не прерывайте процесс.";
+fixsleepimage= "Исправление снаизображения будет применено сейчас.";
+thirdparty= "Загружено без Apple Kexts:";
+sysreport= "Создание профиля. Это может занять некоторое время.";
+lspciinstalling= "lspci будет установлен теперь. Это могло занять время.";
+nolspciinstalled= "Ничто, чтобы деинсталлировать. lspci не находится на Вашей Системе.";
+uninstalllspci= "lspci будет деинсталлирован теперь. Пожалуйста, будьте терпеливы.\n";
+collectingdata= "Установка информации о Системе. Пожалуйста, будьте терпеливы.";
+createreport= "Системный Отчет о HTML будет, строят теперь.";
+updatepcidb= "Обновление базы данных устройства PCI.";
+efineedsmounted= "EFI должен быть установлен, чтобы создать Отчет.\n";
+sipwarn= "Ваш статус ГЛОТКА не позволяет устанавливать третье лицо Кекстса. Пожалуйста, дезактивируйте ГЛОТОК, чтобы получить Список Устройства PCI. Отчет будет, строят без информации об Устройстве PCI на данный момент. Если Вы хотите отключить ГЛОТОК, пожалуйста, установите CsrActiveConfig в 0x67.";
+reportdone= "\nГотово. Теперь вы обнаружите zip-архив (System-Report.zip) на своем рабочем столе. Содержимое zip следующее:\n\nИнформация о жестких и ОС, загруженные Kexts, Kext Paths, PCI Devices, Essentials папки CLOVER/OC/OZ (SerialNumber, BoardSerialNumber, SmUUID, MLB и CustomUUID в config.plist заменяются нулями, чтобы сделать его анонимным). Загрузите этот архив на свой форум Hackintosh для лучшего анализа вашей проблемы.";
+reportmsg= "Создан отчет.";
+wrongpass= "Неправильный пароль. Пожалуйста, попробуйте еще раз.";
+warnnouser= "Внимание! Пользователь не указан. Текущий пользователь будет использоваться сейчас.";
+noadmin= "Депонированный пользователь не имеет административных прав. Kext Updater будет работать только ограниченно. Перейдите в «Администратор сброса» «Menupoint» и определите еще один.";
+textadmin= "Если у вашей учетной записи нет административных разрешений, введите имя учетной записи администратора в следующей строке. Если вы ввели его неправильно (или вы нажмете «Отменить»), ваш фактический пользователь будет использоваться (но если у этого пользователя нет прав администратора, Kext Updater будет работать только ограниченно). Вы можете сбросить его в любое время в пункте меню «Сбросить администратор».";
+answeradmin= "Введите имя пользователя";
+textpassword= "Введите пароль администратора";
+usernoexist= "Этот пользователь не существует. Пожалуйста, попробуйте еще раз.";
+ahciportinstall= "Установка поддержки SATA Hotplug для Mojave. Это может занять некоторое время. Пожалуйста, будьте терпеливы и не прерывайте процесс.";
+ahciportuninstall= "Удаление поддержки SATA Hotplug для Mojave. Это может занять некоторое время. Пожалуйста, будьте терпеливы и не прерывайте процесс.";
+ocerror= "Значение 'ExposeSensitiveData' (Misc/Security) в вашем config.plist OpenCore должно быть установлено на «3». Без этого значения Kext Updater работает только в ограниченной. ";

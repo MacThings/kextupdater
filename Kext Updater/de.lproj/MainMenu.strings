@@ -1,0 +1,494 @@
+/* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Immer die aktuellsten Kexte für Deinen Hackintosh";
+
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Entwickelt von: Sascha Lamprecht Scripting Unterstützung: NoirOSX Programm Icon: Nio82";
+
+/* Class = "NSTextField"; title = "© 2019 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2019 Sascha Lamprecht";
+
+/* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Auf Updates prüfen";
+
+/* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Grundkexte laden";
+
+/* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Audiokexte laden";
+
+/* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "Intelkexte laden";
+
+/* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "nVidiakexte laden";
+
+/* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "AMDkexte laden";
+
+/* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Ethernetkexte laden";
+
+/* Class = "NSButton"; title = "Load Bootloader"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Bootloader laden";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Nicht offiziell";
+
+/* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Webdriver laden";
+
+/* Class = "NSButtonCell"; title = "EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "EFI";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Beenden";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "rOv-rg-tsb"; */
+"rOv-rg-tsb.title" = "System Version";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "QZY-3X-hyf"; */
+"QZY-3X-hyf.title" = "System Version";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "SpT-Pt-9ha"; */
+"SpT-Pt-9ha.title" = "Updater Version";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "Ss6-Nq-6d5"; */
+"Ss6-Nq-6d5.title" = "Updater Version";
+
+
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Nach Aktualisierungen suchen...";
+
+/* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Lädt die folgenden Kexte:\n\nBasic Kexts\nFakeSMC, VoodooPS2, USBInjectAll\n\nAudio\nLilu, AppleALC, CodecCommander\n\nGrafik\nLilu, WhateverGreen\n\nEthernet\nAtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111";
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Beende Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Stil kopieren";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Über Kext Updater";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Hilfe";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Kext Updater Hilfe";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Alle einblenden";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Alle nach vorne holen";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Los!";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "4fB-0B-1NV"; */
+"4fB-0B-1NV.title" = "Los!";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Dienste";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Kext Updater ausblenden";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Andere ausblenden";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Drucken...";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Datei";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Seiten einrichten…";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Hilfe";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Kopieren";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Alles auswählen";
+
+/* Class = "NSButton"; title = "Preferences"; ObjectID = "FkV-cR-cUg"; */
+"FkV-cR-cUg.title" = "Einstellungen";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "MFz-zY-NZW"; */
+"MFz-zY-NZW.title" = "Einstellungen";
+
+/* Class = "NSBox"; title = "Download Path"; ObjectID = "vNE-KL-cuU"; */
+"vNE-KL-cuU.title" = "Speicherpfad";
+
+/* Class = "NSBox"; title = "Temporary Path"; ObjectID = "bFl-t0-n15"; */
+"bFl-t0-n15.title" = "Temporärer Pfad";
+
+/* Class = "NSBox"; title = "Kext Report Path"; ObjectID = "6mi-vd-B9P"; */
+"6mi-vd-B9P.title" = "Kext-Report Pfad";
+
+/* Class = "NSBox"; title = "Misc Settings"; ObjectID = "1eE-XO-qNR"; */
+"1eE-XO-qNR.title" = "Verschiedene Einstellungen";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "QrU-2W-mgV"; */
+"QrU-2W-mgV.title" = "Auswählen";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "N1K-oT-yi7"; */
+"N1K-oT-yi7.title" = "Auswählen";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "sOU-Tu-UkE"; */
+"sOU-Tu-UkE.title" = "Auswählen";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "FUn-NR-Kx0"; */
+"FUn-NR-Kx0.title" = "Alles zurücksetzen";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "Awz-dr-2YX"; */
+"Awz-dr-2YX.title" = "Schließen";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "yO3-zI-Syn"; */
+"yO3-zI-Syn.title" = "Zurücksetzen";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "IoX-yP-64a"; */
+"IoX-yP-64a.title" = "Zurücksetzen";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "es6-Rz-8tb"; */
+"es6-Rz-8tb.title" = "Zurücksetzen";
+
+/* Class = "NSCheckbox"; title = "Sound (Chime)"; ObjectID = "8f4-37-4N5"; */
+"8f4-37-4N5.title" = "Ton (Chime)";
+
+/* Class = "NSButton"; title = "Font Size"; ObjectID = "hLI-5S-9Cb"; */
+"hLI-5S-9Cb.title" = "Schriftgröße";
+
+/* Class = "NSButton"; title = "Font Family"; ObjectID = "8eF-QD-xgT"; */
+"8eF-QD-xgT.title" = "Schriftart";
+
+/* Class = "NSButton"; title = "Font Color"; ObjectID = "3t4-V2-vaD"; */
+"3t4-V2-vaD.title" = "Schriftfarbe";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "P7k-ox-BlE"; */
+"P7k-ox-BlE.title" = "Thema";
+
+/* Class = "NSButton"; title = "Green"; ObjectID = "9ZI-aM-rRX"; */
+"9ZI-aM-rRX.title" = "Grün";
+
+/* Class = "NSButton"; title = "Red"; ObjectID = "zFG-GM-4Fd"; */
+"zFG-GM-4Fd.title" = "Rot";
+
+/* Class = "NSButton"; title = "Orange"; ObjectID = "R8o-tb-VsY"; */
+"R8o-tb-VsY.title" = "Orange";
+
+/* Class = "NSButton"; title = "Yellow"; ObjectID = "sfH-wb-Swd"; */
+"sfH-wb-Swd.title" = "Gelb";
+
+/* Class = "NSButton"; title = "Light"; ObjectID = "5vh-ut-hL7"; */
+"5vh-ut-hL7.title" = "Hell";
+
+/* Class = "NSButton"; title = "Dark"; ObjectID = "yf8-lJ-jrq"; */
+"yf8-lJ-jrq.title" = "Dunkel";
+
+/* Class = "NSButton"; title = "System"; ObjectID = "jkg-bB-qq2"; */
+"jkg-bB-qq2.title" = "System";
+
+/* Class = "NSTextField"; title = "Network Error"; ObjectID = "8x1-7s-VXB"; */
+"8x1-7s-VXB.title" = "Oh nein! Du bist nicht mit dem Internet verbunden. Bitte prüfen.";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "ZRd-dS-ETe"; */
+"ZRd-dS-ETe.title" = "Thema";
+
+/* Class = "NSButton"; title = "Load Single Kext"; ObjectID = "wWK-ri-ocf"; */
+"wWK-ri-ocf.title" = "Einzelkext laden";
+
+/* Class = "NSButton"; title = ""reate Support Report"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Support-Report erstellen";
+
+/* Class = "NSButton"; title = "Disk Informations"; ObjectID = "UVh-Ot-4Hi"; */
+"UVh-Ot-4Hi.title" = "Disk Informationen";
+
+/* Class = "NSTextField"; title = "Translators"; ObjectID = "UVh-Ot-4Hi"; */
+"rqb-Me-eBU.title" = "Übersetzer";
+
+/* Class = "NSTextField"; title = "Names"; ObjectID = "hD5-qY-7Qa"; */
+"hD5-qY-7Qa.title" = "Niederländisch:\nPortugiesisch:\nSpanisch:\nRussisch:\nTürkisch:\nAndere:";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "9Fd-ys-zds"; */
+"9Fd-ys-zds.title" = "Los!";
+
+/* Class = "String"; title = "- Multiple Selection -"; ObjectID = "iia-01-Luc"; */
+"iia-01-Luc.title" = "- Mehrfachselektion -";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "e2n-Jf-shk"; */
+"e2n-Jf-shk.title" = "Schließen";
+
+/* Class = "NSWindow"; title = "Multiple Kext Loader"; ObjectID = "iN2-OV-lKP"; */
+"iN2-OV-lKP.title" = "Multi Kextdownloader";
+
+/* Class = "NSButton"; title = "Notifications"; ObjectID = "dqt-Fw-kBR"; */
+"dqt-Fw-kBR.title" = "Benachrichtigungen";
+
+/* Class = "NSButton"; title = "Show in seconds"; ObjectID = "2vt-Ai-2Vn"; */
+"2vt-Ai-2Vn.title" = "Zeige in Sekunden";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "xfR-P2-zyb"; */
+"xfR-P2-zyb.title" = "Schließen";
+
+/* Class = "NSWindow"; title = "Exclude Kexts from Update"; ObjectID = "PFy-fC-8hd"; */
+"PFy-fC-8hd.title" = "Kexte vom Update ausschließen";
+
+/* Class = "NSButton"; title = "Exclude Kexts"; ObjectID = "8jb-6K-m8R"; */
+"8jb-6K-m8R.title" = "Kexte ausschließen";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "0l1-yK-05L"; */
+"0l1-yK-05L.title" = "Alles zurücksetzen";
+
+/* Class = "NSButton"; title = "Login Item"; ObjectID = "1i0-5X-jBm"; */
+"1i0-5X-jBm.title" = "Anmeldeobjekte";
+
+/* Class = "String"; title = "Check once for updates in background after every reboot."; ObjectID = "1p5-L5-bWy"; */
+"1p5-L5-bWy.title" = "Prüfe nach jedem Bootvorgang einmal ob Updates verfügbar sind.";
+
+/* Class = "NSWindow"; title = "Tools"; ObjectID = "MtW-qj-vfc"; */
+"MtW-qj-vfc.title" = "Werkzeuge";
+
+/* Class = "String"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)"; ObjectID = "xEk-Tu-eem"; */
+"xEk-Tu-eem.title" = "Installiert Kext für Atheros AR92xx/93xx Wlan Karten. (nur 10.14 +)";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "oA6-85-eKR"; */
+"oA6-85-eKR.title" = "Los!";
+
+/* Class = "String"; title = "In case your System doesn't work with 'WhateverGreen' (WEG) you can use these obsolete Kexts instead."; ObjectID = "bGb-fz-fbsT"; */
+"bGb-fz-fbT.title" = "Falls Dein System nicht mit 'WhateverGreen' (WEG) funktioniert kannst Du diese Kexte hier weiterverwenden.";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "sIg-Ow-9o7"; */
+"2rg-bv-Sk1.title" = "Schließen";
+
+/* Class = "NSButton"; title = "Download"; ObjectID = "sIg-Ow-9o7"; */
+"sIg-Ow-9o7.title" = "Herunterladen";
+
+/* Class = "NSButton"; title = "Select all"; ObjectID = "AFd-uM-sOD"; */
+"AFd-uM-sOD.title" = "Alles auswählen";
+
+/* Class = "NSButton"; title = "Deselect all"; ObjectID = "t2W-WB-76C"; */
+"t2W-WB-76C.title" = "Alles abwählen";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "fuH-Rt-xfp"; */
+"fuH-Rt-xfp.title" = "Los!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "JFY-Je-icz"; */
+"JFY-Je-icz.title" = "Los!";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "gpW-JE-l20; */
+"gpW-JE-l20.title" = "Los!";
+
+/* Class = "String"; title = "If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file."; ObjectID = "3A1-zG-sst"; */
+"3A1-zG-sst.title" = "Wenn der Computer ein Problem mit dem Sleep hat, könnte dies helfen. Hibernate-Modus wird auf 0 gesetzt und das Sleepimage wird durch eine schreibgeschützte 0-Byte-Datei ersetzt.";
+
+/* Class = "String"; title = "Rebuild Kextcache and repair Permissions in /S/L/E."; ObjectID = "Sfj-ZG-9YL"; */
+"Sfj-ZG-9YL.title" = "Baut Kextcache neu auf und repariert die Dateirechte in /S/L/E & /L/E.";
+
+/* Class = "NSButton"; title = "Tools"; ObjectID = "jS5-iy-k0j"; */
+"jS5-iy-k0j.title" = "Werkzeuge";
+
+/* Class = "String"; title = "Show all loaded non Apple Kexts."; ObjectID = "jdK-uO-WmI"; */
+"jdK-uO-WmI.title" = "Zeige alle geladenen Nicht-Apple Kexte.";
+
+/* Class = "String"; title = "Create a Systemreport for further analyze. No private Data (Serial Number for example) will be included."; ObjectID = "EyH-wn-td0"; */
+"EyH-wn-td0.title" = "Erstelle einen Systemreport zur weiteren Analyse. Es werden keine privaten Daten (wie z.B. Seriennummer) inkludiert.";
+
+/* Class = "String"; title = "If you don´t want to install lspci Package (needed for more detailed Systemreport) click this."; ObjectID = "4JZ-eI-kyQ"; */
+"4JZ-eI-kyQ.title" = "Wenn Du das lspci Paket nicht installieren möchtest wähle den Haken an. Ohne lspci wird Dein Bericht dann allerdings keine Auflistung der PCI Devices enthalten.";
+
+/* Class = "NSCheckbox"; title = "No 'lspci'"; ObjectID = "eGv-hR-SJQ"; */
+"eGv-hR-SJQ.title" = "Kein lspci";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "PfJ-hU-reY"; */
+"PfJ-hU-reY.title" = "lspci deinstallieren";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "dZv-5k-XqK"; */
+"dZv-5k-XqK.title" = "lspci deinstallieren";
+
+/* Class = "NSButton"; title = "Mount"; ObjectID = "EcV-Tl-P8I"; */
+"EcV-Tl-P8I.title" = "Mounten";
+
+/* Class = "NSButton"; title = "Unmount"; ObjectID = "KIr-FF-qmP"; */
+"KIr-FF-qmP.title" = "Auswerfen";
+
+/* Class = "NSButton"; title = "Unmount all"; ObjectID = "y8J-CB-rsj"; */
+"y8J-CB-rsj.title" = "Alle auswerfen";
+
+/* Class = "NSString"; title = "Mount EFI from another Harddisk."; ObjectID = "v0C-aR-2p7"; */
+"v0C-aR-2p7.title" = "Mounte EFI von andere(n) Festplatten.";
+
+/* Class = "String"; title = "Reset Adminuser"; ObjectID = "5YU-ol-hbz"; */
+"5YU-ol-hbz.title" = "Adminuser zurücksetzen";
+
+/* Class = "String"; title = "Ask again for keychain"; ObjectID = "4RL-8F-a2T"; */
+"4RL-8F-a2T.title" = "Frage nochmals nach dem Schlüsselbund";
+
+/* Class = "String"; title = "Username"; ObjectID = "RFj-8t-JGA"; */
+"RFj-8t-JGA.title" = "Benutzername";
+
+/* Class = "String"; title = "Admin Status"; ObjectID = "5e5-Z6-hQ5"; */
+"5e5-Z6-hQ5.title" = "Admin Status";
+
+/* Class = "String"; title = "Wrong Password. Please try again."; ObjectID = "aoE-2N-iTU"; */
+"aoE-2N-iTU.title" = "Falsches Passwort. Bitte erneut versuchen.";
+
+/* Class = "String"; title = "Password accepted."; ObjectID = "7Id-v8-TlT"; */
+"7Id-v8-TlT.title" = "Passwort akzeptiert.";
+
+/* Class = "String"; title = "Kext Updater wants to make changes."; ObjectID = "E1c-X4-wcR"; */
+"E1c-X4-wcR.title" = "Kextupdater möchte Änderungen vornehmen.";
+
+/* Class = "String"; title = "Enter your password to allow this."; ObjectID = "XdL-oe-UzV"; */
+"XdL-oe-UzV.title" = "Gib dein Passwort ein, um dies zu erlauben.";
+
+/* Class = "String"; title = "Username:"; ObjectID = "UHx-x5-tIW"; */
+"UHx-x5-tIW.title" = "Benutzername:";
+
+/* Class = "String"; title = "Password:"; ObjectID = "oYT-cS-tXK"; */
+"oYT-cS-tXK.title" = "Passwort:";
+
+/* Class = "String"; title = "Cancel"; ObjectID = "5pc-Bh-aSH"; */
+"5pc-Bh-aSH.title" = "Abbrechen";
+
+/* Class = "String"; title = "Do you want ..."; ObjectID = "kJb-7j-om1"; */
+"kJb-7j-om1.title" = "Möchstest Du zukünftig den Schlüsselbund verwenden um Dein Passwort dauerhaft und sicher zu hinterlegen? Das hätte den Vorteil, dass Du das Passwort nur einmal eingeben musst und nicht wieder danach gefragt wirst. Außer Du änderst Dein Passwort. Dann wird der Kext Updater erneut danach fragen.";
+
+/* Class = "NSButton"; title = "Yes"; ObjectID = "A6O-NO-2vE"; */
+"A6O-NO-2vE.title" = "Ja";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "WpE-Au-SJa"; */
+"WpE-Au-SJa.title" = "Nein";
+
+/* Class = "NSLabel"; title = "Yes"; ObjectID = "dkQ-lL-d8X"; */
+"dkQ-lL-d8X.title" = "Ja";
+
+/* Class = "NSLabel"; title = "No"; ObjectID = "GHu-A0-sIa"; */
+"GHu-A0-sIa.title" = "Nein";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "RIh-nc-TGj"; */
+"RIh-nc-TGj.title" = "Los!";
+
+/* Class = "NSButton"; title = "Uninstall"; ObjectID = "TIs-Fo-edp"; */
+"TIs-Fo-edp.title" = "Entfernen";
+
+/* Class = "NSTextField"; title = "Install Kext to enable SATA HotPlug on Mojave again."; ObjectID = "Lcw-db-4Jj"; */
+"Lcw-db-4Jj.title" = "Kext installieren um SATA Hotplug unter Mojave zu aktivieren.";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "lMm-S6-9PF"; */
+"lMm-S6-9PF.title" = "Bootloader";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "WE1-tY-5tf"; */
+"WE1-tY-5tf.title" = "Bootloader";
+
+/* Class = "String"; title = "Gathering System Informations"; ObjectID = "O1Y-s2-JQj"; */
+"O1Y-s2-JQj.title" = "Sammeln von Systeminformationen";
+
+/* Class = "NSWindow"; title = "Security Notification"; ObjectID = "Gov-ov-mxs"; */
+"Gov-ov-mxs.title" = "Sicherheitshinweis";
+
+/* Class = "String"; title = "Attention Text"; ObjectID = "EI8-3O-URb"; */
+"EI8-3O-URb.title" = "Achtung!\nSie verwenden ein neueres MacOS als Mojave. Aus Sicherheitsgründen hat Apple die Systempartition auf schreibgeschützt gesetzt.\n\nDamit die ausgewählte Aktion ausgeführt werden kann, muss die Systempartition auf Lesen / Schreiben eingestellt sein. Die Partition bleibt in diesem Zustand, bis ein Neustart durchgeführt wird.\n\nSind Sie einverstanden?";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "aPL-lz-pF2"; */
+"aPL-lz-pF2.title" = "Nein";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "xlF-kn-k1N"; */
+"xlF-kn-k1N.title" = "Ja";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "QIJ-Ri-920"; */
+"QIJ-Ri-920.title" = "Ja";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "wGX-ev-H3u"; */
+"wGX-ev-H3u.title" = "Ja";
+
+/* BASH Part - Do not remove this Line! */
+alarm= "Aber sei vorsichtig, denn es braucht den neuesten Lilu Kext! Wenn Du ihn noch nicht hast, bekommst Du beim nächsten Start einen schwarzen Bildschirm! Bitte lade Lilu über die Einzelkext Option herunter und installiere es vor dem nächsten Neustart! Wenn Du aber nicht updaten möchtest, dann ignoriere diese Meldung einfach.";
+checkinet= "Bitte prüfe Deine Internetverbindung bzw. der Updateserver ist u. U. gerade nicht erreichbar. Das Programm schließt sich in 5 Sekunden automatisch.";
+ozmosis= "Achtung! Solange du Ozmosis nutzt stelle bitte sicher, dass sich keine doppelten Kexte Im System befinden. Ein und der selbe Kext sollten nicht im ROM, der EFI Partition oder in S/L/E gleichzeitig installiert sein.";
+greet1= "Guten Morgen $osuser. Dann wollen wir mal schauen, ob es etwas Neues gibt. Los gehts ...";
+greet2= "Guten Tag $osuser. Dann wollen wir mal schauen, ob es etwas Neues gibt. Los gehts ...";
+greet3= "Guten Abend $osuser. Dann wollen wir mal schauen, ob es etwas Neues gibt. Los gehts ...";
+latest= "Die aktuellste Version wurde schon heruntergeladen. Wenn sie bereits installiert ist, kannst Du den Ordner löschen.";
+upd= "Überprüfe Kext Updater ...";
+upd1= "Update verfügbar!";
+upd2= "Installierte Version... = ";
+upd3= "Server Version......... = ";
+upd4= "Du bist auf dem neuesten Stand.";
+checkver= "Überprüfe ";
+lastcheck= "Zeitpunkt der letzten Überprüfung";
+apfstext0= "√ Du bist auf dem neuesten Stand";
+apfstext1= "Eine neue Version von apfs.efi ist verfügbar und wurde heruntergeladen.";
+apfsinit= "Die aktuelle apfs.efi wurde heruntergeladen.";
+webdrload= " wird heruntergeladen.";
+webdrloaded= "👍🏼 Fertig.";
+loading= "Lade Datei herunter.";
+dloading= "wird heruntergeladen.";
+dupekext= "Die aktuellste Version befindet sich bereits auf Deinem Rechner. Wenn der Kext bereits installiert sein sollte, so lösche bitte den entsprechenden Ordner.";
+obsolete1= "\nAchtung!!!\nBitte lösche Deinen alten";
+obsolete2= "und verwende";
+obsolete3= "stattdessen. Er ist in ihm ab sofort enthalten.\n";
+nowebselected= "Fehler. Es wurde kein Webdriver ausgewählt!";
+efimounted= "EFI auswerfen";
+efinotmounted= "EFI mounten";
+nokextselected= "Es wurde kein Kext ausgewählt!";
+rebuildcache= "Kextcache wird neu erstellt. Das könnte eine Weile dauern. Bitte habe etwas Geduld und unterbreche den Prozess nicht.";
+error= "Ein Fehler ist aufgetreten. Bitte versuche es erneut.";
+kextloaded= "Geladene Drittanbieter-Kexte";
+hdaloaded= "Ist geladen.";
+hdanotloaded= "Ist nicht geladen.";
+reportpath= "Datei gespeichert unter";
+massdlready= "Alles klar. Drücke auf Los!";
+notify1= "Neue Kext Updates:";
+notify2= "Kextdownload abgschlossen.";
+notify3= "Report erstellt.";
+daemonnotify= "Neue Updates sind verfügbar. Bitte öffne den Kext Updater.";
+daemonnotifyclose= "Schließen";
+openkextupdater= "Öffne Kext Updater";
+atherosinstall= "Installiere Atheros40.kext um eine Atheros AR92xx/93xx Wlan Karte mit 10.14 oder höher benutzen zu können. Das kann eine Weile dauern. Bitte den Vorgang nicht abbrechen.";
+fixsleepimage= "Der Sleepimage Fix wird jetzt ausgeführt.";
+thirdparty= "Geladene Nicht-Apple Kexte:";
+sysreport= "Erstelle Profil. Das kann eine Weile dauern.";
+lspciinstalling= "lspci wird jetzt installiert. Das kann einen Moment dauern.";
+nolspciinstalled= "Es gibt nichts zum deinstallieren. lspci befindet sich nicht im System.";
+uninstalllspci= "lspci wird jetzt deinstalliert ... bitte etwas Geduld.";
+collectingdata= "Sammle System-Informationen ... bitte etwas Geduld.";
+createreport= "HTML System Report wird nun erstellt ...";
+updatepcidb= "Aktualisiere die PCI Device Datenbank.";
+efineedsmounted= "Die EFI muss noch eingehangen werden um den Bericht erstellen zu können.";
+sipwarn= "Du hast SIP aktiviert. Damit ist es nicht möglich Drittanbieter-Kexte im System zu installieren. Dein Report wird nun keine Auflistung der PCI Devices enthalten. Wenn Du SIP deaktivieren möchtest so setze CsrActiveConfig auf 0x67.";
+reportdone= "\nFertig. Du findest nun ein Archiv mit dem Namen System-Report.zip auf Deinem Desktop. Dieses Archiv enthält folgendes:\n\n- Hardware- und Systeminformationen\n- Geladene Kexte\n- Kextpfade\n- PCI Devices\n- Den Kern des CLOVER/OC/OZ Ordners (SerialNumber, BoardSerialNumber, SmUUID, MLB und CustomUUID in der config.plist werden durch Nullen ersetzt, um sie zu anonymisieren).\n\nBitte lade das Archiv ggf. in Dein Hackintosh Forum hoch, damit Dir besser bei einem Problem geholfen werden kann.";
+reportmsg= "Report erstellt.";
+wrongpass= "Falsches Passwort. Bitte erneut versuchen.";
+warnnouser= "Achtung! Es wurde kein Benutzer angegeben. Es wird jetzt Dein aktueller verwendet.";
+noadmin= "Der hinterlegte Benutzer hat keine administrativen Rechte. Der Kext Updater wird jetzt nur eingeschränkt funktionieren. Du kannst den Benutzer aber über den Menupunkt 'Adminuser zurücksetzen' erneut festlegen.";
+textadmin= "Wenn der aktuell angemeldete Benutzer keine administrativen Rechte hat, bitte den Namen des Benutzers eingeben der diese Rechte besitzt. Wenn Du ihn falsch eingegeben hast wird der aktuelle Benutzer verwendet (hat dieser keine enstprechenden Rechte wird der Kext Updater nur eingeschränkt funktionieren). Du kannst den Benutzer jederzeit über den Menupunkt 'Adminuser zurücksetzen' erneut festlegen.";
+answeradmin= "Bitte Benutzername eingeben";
+textpassword= "Bitte das Administrator Passwort eingeben";
+usernoexist= "Diesen User gibt es nicht. Bitte versuche es noch einmal.";
+ahciportinstall= "Installiere SATA Hotplug Support für Mojave. Das kann eine Weile dauern. Bitte den Vorgang nicht abbrechen.";
+ahciportuninstall= "Entferne SATA Hotplug Support for Mojave. Das kann eine Weile dauern. Bitte den Vorgang nicht abbrechen.";
+ocerror= "Der Wert für 'ExposeSensitiveData' (Misc/Security) in Deiner OpenCore config.plist muss auf '3' gesetzt sein. Ohne diesen Wert funktioniert der Kext Updater nur eingeschränkt.";

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                
+                body {
+                    background: #f4f4f5;
+                }
+            
+            .collapsible {
+                background-color: #596f84;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: center;
+                outline: none;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: arial;
+                box-shadow: 2px 7px 8px 0px #bbbbbb;
+            }
+            
+            .active, .collapsible:hover {
+                background-color: #354553;
+            }
+            
+            .header {
+                padding: 0 18px;
+                background-color: #f1f1f1;
+                font-family: arial;
+                font-size: 28px;
+                text-align: center;
+            }
+            
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+                font-family: arial;
+            }
+            
+            .tg  {border-collapse:collapse;border-spacing:0;margin:auto}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+            .tg .tg-xdtx{font-size:15px;font-family:Arial, sans-serif !important;;border-color:inherit;text-align:right;vertical-align:center;font-weight:bold}
+            .tg .tg-3jpi{font-size:15px;font-family:Arial, sans-serif !important;;border-color:inherit;text-align:left;vertical-align:center}
+            .tg .tg-4rto{font-size:15px;font-family:Courier !important;;border-color:inherit;text-align:left;vertical-align:center}
+            
+            .tg .tg-xdtxpci{font-size:15px;font-family:Courier !important;;border-color:inherit;text-align:left;vertical-align:top;font-weight:normal}
+
+            table.minimalistBlack {
+                border: 3px solid #000000;
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+            }
+            table.minimalistBlack td, table.minimalistBlack th {
+                border: 1px solid #000000;
+                padding: 5px 4px;
+            }
+            table.minimalistBlack tbody td {
+                font-size: 13px;
+            }
+            table.minimalistBlack tr:nth-child(even) {
+                background: #D0E4F5;
+            }
+            table.minimalistBlack thead {
+                background: #CFCFCF;
+                background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                border-bottom: 3px solid #000000;
+            }
+            table.minimalistBlack thead th {
+                font-size: 15px;
+                font-weight: bold;
+                color: #000000;
+                text-align: left;
+            }
+            table.minimalistBlack tfoot td {
+                font-size: 14px;
+            }
+            
+            </style>
+    </head>
+    <body>
+        
+        <div style="margin: auto;width: 455px;left: 0;right: 0">
+            <img src="https://kextupdater.slsoft.de/kextupdater/images/hflogo.png"></img>
+        </div>
+        
+        <div style="text-align: center; font-size: 28px; font-family: arial">
+            <p>System Report</p>
+        </div>
+        
+        <button class="collapsible">General</button>
+        <div class="content">
+            
+            <p>
+            <table class="minimalistBlack" style="width:50%;margin-left: auto;margin-right: auto;">
+                <tr>
+                    <th>Date</th>
+                    <th>!DATE!</th>
+                </tr>
+                <tr>
+                    <th>OS Version</th>
+                    <th>!SWVERSION!</th>
+                </tr>
+                <tr>
+                    <th>OS Build</th>
+                    <th>!SWBUILD!</th>
+                </tr>
+                <tr>
+                    <th>Model Name</th>
+                    <th>!MODELNAME!</th>
+                </tr>
+                <tr>
+                    <th>Model Identifier</th>
+                    <th>!MODELID!</th>
+                </tr>
+                <tr>
+                    <th>Processor</th>
+                    <th>!CPUNAME!</th>
+                </tr>
+                <tr>
+                    <th>Total Number of Cores</th>
+                    <th>!CORES!</th>
+                </tr>
+                <tr>
+                    <th>Memory</th>
+                    <th>!MEMORY!</th>
+                </tr>
+                <tr>
+                    <th>Graphics Card(s)</th>
+                    <th>!GFX!</th>
+                </tr>
+                <tr>
+                    <tr>
+                        <th>Bootloader</th>
+                        <th>!BOOTLOADER!</th>
+                    </tr>
+                    <th>AppleHDA</th>
+                    <th>!APPLEHDA!</th>
+                </tr>
+            </table>
+            </p>
+        </div>
+        
+        <button class="collapsible">Hackintosh Kexts</button>
+        <div class="content">
+            <p>
+            <table class="minimalistBlack" style="width:35%;margin-left: auto;margin-right: auto;">
+                !HACKKEXTS!
+            </table>
+            </p>
+        </div>
+        
+        <button class="collapsible">All loaded Non-Apple Kexts</button>
+        <div class="content">
+            <p>
+            <table class="minimalistBlack" style="width:60%;margin-left: auto;margin-right: auto;">
+                !NONAPPLEKEXTS!
+            </table>
+            </p>
+        </div>
+
+        <button class="collapsible">System-wide Power Settings</button>
+        <div class="content">
+            <p>
+            <table class="minimalistBlack" style="width:45%;margin-left: auto;margin-right: auto;">
+                !POWER!
+            </table>
+            </p>
+        </div>
+        
+        <button class="collapsible">PCI Devices</button>
+        <div class="content">
+            <p>
+            <table class="minimalistBlack" style="width:70%;margin-left: auto;margin-right: auto;">
+                <tr><th>Vendor</th><th>Device</th><th>Sub Ven</th><th>Sub Dev</th><th>Vendor Name</th><th>Device Name</th></tr>
+                !LSPCI!
+            </table>
+            </p>
+        </div>
+        
+        <div style=font-size:10px;text-align:center>!DIS!</div>
+        
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                                         this.classList.toggle("active");
+                                         var content = this.nextElementSibling;
+                                         if (content.style.display === "block") {
+                                         content.style.display = "none";
+                                         } else {
+                                         content.style.display = "block";
+                                         }
+                                         });
+            }
+        </script>
+        
+    </body>
+</html>
+

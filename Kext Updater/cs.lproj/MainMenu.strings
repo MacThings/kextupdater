@@ -1,0 +1,494 @@
+/* Class = "NSTextField"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "vlM-oF-beS"; */
+"vlM-oF-beS.title" = "Vždy nejnovější Kexts pro váš Hackintosh";
+
+/* Class = "NSTextField"; title = "Credits"; ObjectID = "qmh-1i-ylA"; */
+"qmh-1i-ylA.title" = "Vypracoval: Sascha Lamprecht Podpora skriptování: Ikona programu NoirOSX: Nio82";
+
+/* Class = "NSTextField"; title = "© 2019 Sascha Lamprecht"; ObjectID = "6Ez-cv-Yob"; */
+"6Ez-cv-Yob.title" = "© 2018 Sascha Lamprecht";
+
+/* Class = "NSButton"; title = "Check for Updates"; ObjectID = "AuD-6W-583"; */
+"AuD-6W-583.title" = "Kontrola aktualizací";
+
+/* Class = "NSButton"; title = "Load Basic Kexts"; ObjectID = "tgP-dd-FH8"; */
+"tgP-dd-FH8.title" = "Načtení základních kextů";
+
+/* Class = "NSButton"; title = "Load Audio Kexts"; ObjectID = "fqJ-G4-Tp5"; */
+"fqJ-G4-Tp5.title" = "Nahrávání zvukových kextů";
+
+/* Class = "NSButton"; title = "Load Intel Kexts"; ObjectID = "N94-zg-VcZ"; */
+"N94-zg-VcZ.title" = "Načíst Intel Kexts";
+
+/* Class = "NSButton"; title = "Load nVidia Kexts"; ObjectID = "Rvp-7w-kv4"; */
+"Rvp-7w-kv4.title" = "Načíst nVidia Kexts";
+
+/* Class = "NSButton"; title = "Load AMD Kexts"; ObjectID = "Ua2-LB-zIU"; */
+"Ua2-LB-zIU.title" = "Načíst AMD Kexts";
+
+/* Class = "NSButton"; title = "Load Ethernet Kexts"; ObjectID = "ij0-6U-Ki4"; */
+"ij0-6U-Ki4.title" = "Načíst Ethernet Kexts";
+
+/* Class = "NSButton"; title = "Load Bootloader"; ObjectID = "Uux-7h-pPV"; */
+"Uux-7h-pPV.title" = "Načíst zavaděč";
+
+/* Class = "NSButton"; title = "Nightly Build"; ObjectID = "Ter-3R-x9H"; */
+"Ter-3R-x9H.title" = "Nightly Build";
+
+/* Class = "NSButton"; title = "Load Webdriver"; ObjectID = "BvR-0L-x9I"; */
+"BvR-0L-x9I.title" = "Načíst Webdriver";
+
+/* Class = "NSButtonCell"; title = "EFI"; ObjectID = "lZg-Lq-oMC"; */
+"lZg-Lq-oMC.title" = "EFI";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "CRj-Q4-2Q3"; */
+"CRj-Q4-2Q3.title" = "Ukončit";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "rOv-rg-tsb"; */
+"rOv-rg-tsb.title" = "Verze systému";
+
+/* Class = "NSTextField"; title = "Your System Version"; ObjectID = "QZY-3X-hyf"; */
+"QZY-3X-hyf.title" = "Verze systému";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "SpT-Pt-9ha"; */
+"SpT-Pt-9ha.title" = "Verze aktualizace";
+
+/* Class = "NSTextField"; title = "Kext Updater Version"; ObjectID = "Ss6-Nq-6d5"; */
+"Ss6-Nq-6d5.title" = "Verze aktualizace";
+
+
+/* Class = "NSTextField"; title = "Check for Updates..."; ObjectID = "PH8-bq-aSa"; */
+"PH8-bq-aSa.title" = "Zkontrolovat aktualizace ...";
+
+/* Class = "NSTextField"; title = "Loads the following Kexts"; ObjectID = "axN-fO-K1a"; */
+"axN-fO-K1a.title" = "Načte následující Kexts:\n\nZákladní Kexts\nFakeSMC, VoodooPS2, USBInjectAll\n\nZvuk\nLilu, AppleALC, CodecCommander\n\nGrafický\nLilu, WhateverGreen\n\nEthernet\nAtherosE2200Ethernet, IntelMausiEthernet, Realtek RTL8111 ";
+
+/* Class = "NSMenuItem"; title = "Kext Updater"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Ukončete aplikaci Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Upravit";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Kopírovat styl";
+
+/* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "O aplikaci Kext Updater";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Nápověda";
+
+/* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Nápověda Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Zobrazit vše";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Přivést všechny do frontu";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "LNO-67-sPs"; */
+"LNO-67-sPs.title" = "Start";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "4fB-0B-1NV"; */
+"4fB-0B-1NV.title" = "Start";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Služby";
+
+/* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Skrýt aplikaci Kext Updater";
+
+/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Skrýt ostatní";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Tisk ...";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Soubor";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Nastavení stránky ...";
+
+/* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Kext Updater";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Nápověda";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "nO2-13-T2e"; */
+"nO2-13-T2e.title" = "Upravit";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "YC0-NU-hrf"; */
+"YC0-NU-hrf.title" = "Kopírovat";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "vV1-V8-mlg"; */
+"vV1-V8-mlg.title" = "Vybrat vše";
+
+/* Class = "NSButton"; title = "Preferences"; ObjectID = "FkV-cR-cUg"; */
+"FkV-cR-cUg.title" = "Předvolby";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "MFz-zY-NZW"; */
+"MFz-zY-NZW.title" = "Předvolby";
+
+/* Class = "NSBox"; title = "Download Path"; ObjectID = "vNE-KL-cuU"; */
+"vNE-KL-cuU.title" = "Cesta ke stažení";
+
+/* Class = "NSBox"; title = "Temporary Path"; ObjectID = "bFl-t0-n15"; */
+"bFl-t0-n15.title" = "Dočasná cesta";
+
+/* Class = "NSBox"; title = "Kext Report Path"; ObjectID = "6mi-vd-B9P"; */
+"6mi-vd-B9P.title" = "Cesta ke zprávě Kext";
+
+/* Class = "NSBox"; title = "Misc Settings"; ObjectID = "1eE-XO-qNR"; */
+"1eE-XO-qNR.title" = "Různá nastavení";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "QrU-2W-mgV"; */
+"QrU-2W-mgV.title" = "Vybrat";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "N1K-oT-yi7"; */
+"N1K-oT-yi7.title" = "Vybrat";
+
+/* Class = "NSButton"; title = "Select"; ObjectID = "sOU-Tu-UkE"; */
+"sOU-Tu-UkE.title" = "Vybrat";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "FUn-NR-Kx0"; */
+"FUn-NR-Kx0.title" = "Obnovit vše";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "Awz-dr-2YX"; */
+"Awz-dr-2YX.title" = "Zavřít";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "yO3-zI-Syn"; */
+"yO3-zI-Syn.title" = "Obnovit cestu";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "IoX-yP-64a"; */
+"IoX-yP-64a.title" = "Obnovit cestu";
+
+/* Class = "NSButton"; title = "Reset Path"; ObjectID = "es6-Rz-8tb"; */
+"es6-Rz-8tb.title" = "Obnovit cestu";
+
+/* Class = "NSCheckbox"; title = "Sound (Chime)"; ObjectID = "8f4-37-4N5"; */
+"8f4-37-4N5.title" = "Zvuk (zvuk)";
+
+/* Class = "NSButton"; title = "Font Size"; ObjectID = "hLI-5S-9Cb"; */
+"hLI-5S-9Cb.title" = "Velikost písma";
+
+/* Class = "NSButton"; title = "Font Family"; ObjectID = "8eF-QD-xgT"; */
+"8eF-QD-xgT.title" = "Rodina písma";
+
+/* Class = "NSButton"; title = "Font Color"; ObjectID = "3t4-V2-vaD"; */
+"3t4-V2-vaD.title" = "Barva fontu";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "P7k-ox-BlE"; */
+"P7k-ox-BlE.title" = "Téma";
+
+/* Class = "NSButton"; title = "Green"; ObjectID = "9ZI-aM-rRX"; */
+"9ZI-aM-rRX.title" = "Zelená";
+
+/* Class = "NSButton"; title = "Red"; ObjectID = "zFG-GM-4Fd"; */
+"zFG-GM-4Fd.title" = "Červené";
+
+/* Class = "NSButton"; title = "Orange"; ObjectID = "R8o-tb-VsY"; */
+"R8o-tb-VsY.title" = "Oranžový";
+
+/* Class = "NSButton"; title = "Yellow"; ObjectID = "sfH-wb-Swd"; */
+"sfH-wb-Swd.title" = "Žlutá";
+
+/* Class = "NSButton"; title = "Light"; ObjectID = "5vh-ut-hL7"; */
+"5vh-ut-hL7.title" = "Světlo";
+
+/* Class = "NSButton"; title = "Dark"; ObjectID = "yf8-lJ-jrq"; */
+"yf8-lJ-jrq.title" = "Temný";
+
+/* Class = "NSButton"; title = "System"; ObjectID = "jkg-bB-qq2"; */
+"jkg-bB-qq2.title" = "Systém";
+
+/* Class = "NSTextField"; title = "Network Error"; ObjectID = "8x1-7s-VXB"; */
+"8x1-7s-VXB.title" = "Uh Oh! Nejste připojeni k internetu. Zkontrolujte prosím nejprve!";
+
+/* Class = "NSButton"; title = "Theme"; ObjectID = "ZRd-dS-ETe"; */
+"ZRd-dS-ETe.title" = "Téma";
+
+/* Class = "NSButton"; title = "Load Single Kext"; ObjectID = "wWK-ri-ocf"; */
+"wWK-ri-ocf.title" = "Vložte jeden Kext";
+
+/* Class = "NSButton"; title = ""reate Support Report"; ObjectID = "6xu-6D-qrC"; */
+"6xu-6D-qrC.title" = "Vytvoření zprávy o podpoře";
+
+/* Class = "NSButton"; title = "Disk Informations"; ObjectID = "UVh-Ot-4Hi"; */
+"UVh-Ot-4Hi.title" = "Informace o harddisku";
+
+/* Class = "NSTextField"; title = "Translators"; ObjectID = "UVh-Ot-4Hi"; */
+"rqb-Me-eBU.title" = "Překladatelé";
+
+/* Class = "NSTextField"; title = "Names"; ObjectID = "hD5-qY-7Qa"; */
+"hD5-qY-7Qa.title" = "Holandský:\nPortugalština:\nŠpanělština:\nRuština:\nTurečtina:\nOstatní:";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "9Fd-ys-zds"; */
+"9Fd-ys-zds.title" = "Start";
+
+/* Class = "String"; title = "- Multiple Selection -"; ObjectID = "iia-01-Luc"; */
+"iia-01-Luc.title" = "- Více výběru -";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "e2n-Jf-shk"; */
+"e2n-Jf-shk.title" = "Zavřít";
+
+/* Class = "NSWindow"; title = "Multiple Kext Loader"; ObjectID = "iN2-OV-lKP"; */
+"iN2-OV-lKP.title" = "Více Kext Loader";
+
+/* Class = "NSButton"; title = "Notifications"; ObjectID = "dqt-Fw-kBR"; */
+"dqt-Fw-kBR.title" = "Oznámení";
+
+/* Class = "NSButton"; title = "Show in seconds"; ObjectID = "2vt-Ai-2Vn"; */
+"2vt-Ai-2Vn.title" = "Zobrazit v sekundách";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "xfR-P2-zyb"; */
+"xfR-P2-zyb.title" = "Zavřít";
+
+/* Class = "NSWindow"; title = "Exclude Kexts from Update"; ObjectID = "PFy-fC-8hd"; */
+"PFy-fC-8hd.title" = "Vyloučení Kexts z Aktualizace";
+
+/* Class = "NSButton"; title = "Exclude Kexts"; ObjectID = "8jb-6K-m8R"; */
+"8jb-6K-m8R.title" = "Vyloučit Kexts";
+
+/* Class = "NSButton"; title = "Reset all"; ObjectID = "0l1-yK-05L"; */
+"0l1-yK-05L.title" = "Obnovit vše";
+
+/* Class = "NSButton"; title = "Login Item"; ObjectID = "1i0-5X-jBm"; */
+"1i0-5X-jBm.title" = "Položka přihlášení";
+
+/* Class = "String"; title = "Check once for updates in background after every reboot."; ObjectID = "1p5-L5-bWy"; */
+"1p5-L5-bWy.title" = "Po každém restartu jednou zkontrolovat aktualizace v pozadí.";
+
+/* Class = "NSWindow"; title = "Tools"; ObjectID = "MtW-qj-vfc"; */
+"MtW-qj-vfc.title" = "Nástroje";
+
+/* Class = "String"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)"; ObjectID = "xEk-Tu-eem"; */
+"xEk-Tu-eem.title" = "Nainstalujte Kext pro karty Atheros AR92xx/93xx WLan (10.14 +)";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "oA6-85-eKR"; */
+"oA6-85-eKR.title" = "Start";
+
+/* Class = "String"; title = "In case your System doesn't work with 'WhateverGreen' (WEG) you can use these obsolete Kexts instead."; ObjectID = "bGb-fz-fbsT"; */
+"bGb-fz-fbT.title" = "V případě, že váš systém nepracuje s funkcí WhateverGreen (WEG), můžete tyto zastaralé Kexts použít.";
+
+/* Class = "NSButton"; title = "Close"; ObjectID = "sIg-Ow-9o7"; */
+"2rg-bv-Sk1.title" = "Zavřít";
+
+/* Class = "NSButton"; title = "Download"; ObjectID = "sIg-Ow-9o7"; */
+"sIg-Ow-9o7.title" = "Stažení";
+
+/* Class = "NSButton"; title = "Select all"; ObjectID = "AFd-uM-sOD"; */
+"AFd-uM-sOD.title" = "Vybrat vše";
+
+/* Class = "NSButton"; title = "Deselect all"; ObjectID = "t2W-WB-76C"; */
+"t2W-WB-76C.title" = "Odznačit vše";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "fuH-Rt-xfp"; */
+"fuH-Rt-xfp.title" = "Start";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "JFY-Je-icz"; */
+"JFY-Je-icz.title" = "Start";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "gpW-JE-l20; */
+"gpW-JE-l20.title" = "Start";
+
+/* Class = "String"; title = "If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file."; ObjectID = "3A1-zG-sst"; */
+"3A1-zG-sst.title" = "Pokud má počítač problém se spánkem, může to pomoci. Režim Hibernatemode bude nastaven na hodnotu 0 a snímek Sleepimage bude nahrazen souborem 0 bajtů chráněným proti zápisu.";
+
+/* Class = "String"; title = "Rebuild Kextcache and repair Permissions in /S/L/E."; ObjectID = "Sfj-ZG-9YL"; */
+"Sfj-ZG-9YL.title" = "Přebudovat Kextcache a opravit oprávnění v /S/L/E & /L/E.";
+
+/* Class = "NSButton"; title = "Tools"; ObjectID = "jS5-iy-k0j"; */
+"jS5-iy-k0j.title" = "Nástroje";
+
+/* Class = "String"; title = "Show all loaded non Apple Kexts."; ObjectID = "jdK-uO-WmI"; */
+"jdK-uO-WmI.title" = "Zobrazit všechny načtené Apple Kexts.";
+
+/* Class = "String"; title = "Create a Systemreport for further analyze. No private Data (Serial Number for example) will be included."; ObjectID = "EyH-wn-td0"; */
+"EyH-wn-td0.title" = "Vytvořte systémový report pro další analýzu. Žádné soukromé údaje (například sériové číslo) nebudou zahrnuty.";
+
+/* Class = "String"; title = "If you don´t want to install lspci Package (needed for more detailed Systemreport) click this."; ObjectID = "4JZ-eI-kyQ"; */
+"4JZ-eI-kyQ.title" = "Pokud nechcete nainstalovat balíček lspci (potřebujete pro podrobnější informace o systému), klikněte na něj.";
+
+/* Class = "NSCheckbox"; title = "No 'lspci'"; ObjectID = "eGv-hR-SJQ"; */
+"eGv-hR-SJQ.title" = "Žádné lspci";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "PfJ-hU-reY"; */
+"PfJ-hU-reY.title" = "Odinstalujte lspci";
+
+/* Class = "NSButton"; title = "Uninstall lspci"; ObjectID = "dZv-5k-XqK"; */
+"dZv-5k-XqK.title" = "Odinstalujte lspci";
+
+/* Class = "NSButton"; title = "Mount"; ObjectID = "EcV-Tl-P8I"; */
+"EcV-Tl-P8I.title" = "Mount";
+
+/* Class = "NSButton"; title = "Unmount"; ObjectID = "KIr-FF-qmP"; */
+"KIr-FF-qmP.title" = "Sesednout";
+
+/* Class = "NSButton"; title = "Unmount all"; ObjectID = "y8J-CB-rsj"; */
+"y8J-CB-rsj.title" = "Odpojte všechny";
+
+/* Class = "NSString"; title = "Mount EFI from another Harddisk."; ObjectID = "v0C-aR-2p7"; */
+"v0C-aR-2p7.title" = "Namontujte EFI z jiného pevného disku.";
+
+/* Class = "String"; title = "Reset Adminuser"; ObjectID = "5YU-ol-hbz"; */
+"5YU-ol-hbz.title" = "Obnovit správce";
+
+/* Class = "String"; title = "Ask again for keychain"; ObjectID = "4RL-8F-a2T"; */
+"4RL-8F-a2T.title" = "Zeptejte se znovu na klíčenku";
+
+/* Class = "String"; title = "Username"; ObjectID = "RFj-8t-JGA"; */
+"RFj-8t-JGA.title" = "Uživatelské jméno";
+
+/* Class = "String"; title = "Admin Status"; ObjectID = "5e5-Z6-hQ5"; */
+"5e5-Z6-hQ5.title" = "Stav správce";
+
+/* Class = "String"; title = "Wrong Password. Please try again."; ObjectID = "aoE-2N-iTU"; */
+"aoE-2N-iTU.title" = "Špatné heslo. Prosím zkuste to znovu.";
+
+/* Class = "String"; title = "Password accepted."; ObjectID = "7Id-v8-TlT"; */
+"7Id-v8-TlT.title" = "Heslo bylo přijato.";
+
+/* Class = "String"; title = "Kext Updater wants to make changes."; ObjectID = "E1c-X4-wcR"; */
+"E1c-X4-wcR.title" = "Kextupdater chce provést změny.";
+
+/* Class = "String"; title = "Enter your password to allow this."; ObjectID = "XdL-oe-UzV"; */
+"XdL-oe-UzV.title" = "Chcete‑li tuto akci povolit, zadejte své heslo.";
+
+/* Class = "String"; title = "Username:"; ObjectID = "UHx-x5-tIW"; */
+"UHx-x5-tIW.title" = "Uživatelské jméno:";
+
+/* Class = "String"; title = "Password:"; ObjectID = "oYT-cS-tXK"; */
+"oYT-cS-tXK.title" = "Heslo:";
+
+/* Class = "String"; title = "Cancel"; ObjectID = "5pc-Bh-aSH"; */
+"5pc-Bh-aSH.title" = "Zrušení";
+
+/* Class = "String"; title = "Do you want ..."; ObjectID = "kJb-7j-om1"; */
+"kJb-7j-om1.title" = "Chcete v budoucnu používat klíčové řetězce k uložení vašeho hesla trvale a bezpečně? To by mělo tu výhodu, že jste museli zadat heslo pouze jednou a poté nebudete znovu požádáni. Pokud nezměníte své heslo. Potom se Kext Updater znovu zeptá.";
+
+/* Class = "NSButton"; title = "Yes"; ObjectID = "A6O-NO-2vE"; */
+"A6O-NO-2vE.title" = "Ano";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "WpE-Au-SJa"; */
+"WpE-Au-SJa.title" = "Ne";
+
+/* Class = "NSLabel"; title = "Yes"; ObjectID = "dkQ-lL-d8X"; */
+"dkQ-lL-d8X.title" = "Ano";
+
+/* Class = "NSLabel"; title = "No"; ObjectID = "GHu-A0-sIa"; */
+"GHu-A0-sIa.title" = "Ne";
+
+/* Class = "NSButton"; title = "Start"; ObjectID = "RIh-nc-TGj"; */
+"RIh-nc-TGj.title" = "Start";
+
+/* Class = "NSButton"; title = "Uninstall"; ObjectID = "TIs-Fo-edp"; */
+"TIs-Fo-edp.title" = "Odstranit";
+
+/* Class = "NSTextField"; title = "Install Kext to enable SATA HotPlug on Mojave again."; ObjectID = "Lcw-db-4Jj"; */
+"Lcw-db-4Jj.title" = "Nainstalujte Kext, abyste znovu aktivovali SATA HotPlug na Mojave.";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "lMm-S6-9PF"; */
+"lMm-S6-9PF.title" = "Zavaděč";
+
+/* Class = "String"; title = "Bootloader"; ObjectID = "WE1-tY-5tf"; */
+"WE1-tY-5tf.title" = "Zavaděč";
+
+/* Class = "String"; title = "Gathering System Informations"; ObjectID = "O1Y-s2-JQj"; */
+"O1Y-s2-JQj.title" = "Shromažďování informací o systému";
+
+/* Class = "NSWindow"; title = "Security Notification"; ObjectID = "Gov-ov-mxs"; */
+"Gov-ov-mxs.title" = "Oznámení o zabezpečení";
+
+/* Class = "String"; title = "Attention Text"; ObjectID = "EI8-3O-URb"; */
+"EI8-3O-URb.title" = "Pozor!\nPoužíváte novější macOS jako Mojave. Z bezpečnostních důvodů Apple nastavil systémový oddíl pouze pro čtení.\n\nPro vybranou akci, která má být provedena, musí být systémový oddíl nastaven na čtení / zápis. Oddíl zůstane v tomto stavu, dokud nebude proveden restart.\n\nSouhlasíš?";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "aPL-lz-pF2"; */
+"aPL-lz-pF2.title" = "Ne";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "xlF-kn-k1N"; */
+"xlF-kn-k1N.title" = "Ano";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "QIJ-Ri-920"; */
+"QIJ-Ri-920.title" = "Ano";
+
+/* Class = "NSButton"; title = "No"; ObjectID = "wGX-ev-H3u"; */
+"wGX-ev-H3u.title" = "Ano";
+
+/* BASH Part - Do not remove this Line! */
+alarm= "Ale vězte, protože potřebuje nejnovější Lilu Kext! Pokud už nemáte to, dostanete černé obrazovky na další boty! Stáhněte si Lilu pomocí možnosti Single Kext a nainstalujte jej před dalším restartováním! Ale pokud nechcete aktualizovat, není to žádný problém. Jednoduše ignorujte tuto zprávu.";
+checkinet= "Zkontrolujte připojení k Internetu nebo aktualizaci serveru aktualizace! Program se ukončí za 5 sekund.";
+ozmosis= "Pozor! Jelikož používáte Ozmosis, ujistěte se, že ve vašem systému dvakrát nemáte KEXT. Jeden KEXT by neměl být uložen v paměti ROM, EFI a S / L / E současně.";
+greet1= "Dobré ráno $osuser. Uvidíme, jestli je pro tebe něco nového.";
+greet2= "Pěkný den $osuser. Uvidíme, jestli je pro tebe něco nového.";
+greet3= "Dobrý večer $osuser. Uvidíme, jestli je pro tebe něco nového.";
+latest= "Nejnovější verze je již stažena. Pokud je již nainstalovaná, odeberte složku z počítače.";
+upd= "Kontrola Kext Updater ...";
+upd1= "Aktualizace k dispozici!";
+upd2= "Vaše verze ...... =";
+upd3= "Verze serveru ... =";
+upd4= "Jste aktuální";
+checkver= "Kontrola";
+lastcheck= "Poslední kontrola";
+apfstext0= "√ Jste aktuální.";
+apfstext1= "Staženo novější verze apfs.efi.";
+apfsinit= "Nejnovější soubor apfs.efi byl stažen.";
+webdrload= " stahuje.";
+webdrloaded= "👍🏼 Hotovo.";
+loading= "Stahování souboru.";
+dloading= "stahování";
+dupekext= "Nejnovější verze je již stažena do vašeho počítače. Pokud je již nainstalovaná, odeberte složku z pracovní plochy.";
+obsolete1= "\nPozor!!!\\nProsím, nezapomeňte smazat staré";
+obsolete2= "a místo toho použijte";
+obsolete3= "místo. Nyní je v něm zahrnut.\n";
+nowebselected= "Chyba. Nebyl vybrán žádný Webdriver!";
+efimounted= "Unmount EFI";
+efinotmounted= "Mount EFI";
+nokextselected= "Aucun Kext sélectionné!";
+rebuildcache= "Přebudování Kextcache. To může chvíli trvat. Buďte trpěliví a nepřerušujte proces.";
+error= "Vyskytla se chyba. Prosím zkuste to znovu.";
+kextloaded= "Načtený Kexts třetí strany";
+hdaloaded= "je načten.";
+hdanotloaded= "není načten.";
+reportpath= "Soubor uložen na";
+massdlready= "Připraven jít. Zmáčkni Start.";
+notify1= "Nové aktualizace Kext:";
+notify2= "Kextdownload je hotovo.";
+notify3= "Zpráva byla vytvořena.";
+daemonnotify= "K dispozici jsou nové aktualizace. Otevřete Kext Updater.";
+daemonnotifyclose= "Zavřít";
+openkextupdater= "Otevřete aplikaci Kext Updater";
+atherosinstall= "Instalace programu Atheros40.kext pro použití karet Atheros AR92xx/93xx s 10.14 nebo vyšší. To může chvíli trvat. Buďte trpěliví a nepřerušujte proces.";
+fixsleepimage= "Sleepimage Fix bude aplikován nyní.";
+thirdparty= "Nainstalované Kexts ne Apple:";
+sysreport= "Vytváření profilu. To může chvíli trvat.";
+lspciinstalling= "lspci bude nyní nainstalován. To může chvíli trvat.";
+nolspciinstalled= "Nic, co byste odinstalovali. lspci není ve vašem systému.";
+uninstalllspci= "lspci se nyní odinstaluje. Prosím, buďte trpěliví.";
+collectingdata= "Načítání informací o systému. Prosím, buďte trpěliví.";
+createreport= "Zpráva systému HTML bude nyní sestavena.";
+updatepcidb= "Aktualizace databáze zařízení PCI.";
+efineedsmounted= "EFI je třeba připojit k vytvoření sestavy.";
+sipwarn= "Váš stav SIP neumožňuje instalovat Kexty třetí strany. Deaktivujte SIP, abyste získali seznam zařízení PCI. Zpráva bude sestavena bez informací o zařízeních PCI. Chcete-li zakázat SIP, nastavte CsrActiveConfig na hodnotu 0x67.\n";
+reportdone= "\nHotovo. Na vašem pracovním stole nyní najdete archiv ZIP (System-Report.zip). Obsah zipu je následující:\n\nHardwarové a OS informace, načteny Kexts, Kext cesty, PCI zařízení (SerialNumber, BoardSerialNumber, SmUUID, MLB a CustomUUID v config.plist jsou nahrazeny nulami, aby byly anonymní). Nahrajte prosím tento archiv do fóra Hackintosh pro lepší analýzu vašeho problému.";
+reportmsg= "Zpráva byla vytvořena.";
+wrongpass= "Špatné heslo. Prosím zkuste to znovu.";
+warnnouser= "Pozor! Žádný uživatel nebyl zadán. Váš současný uživatel bude nyní použit.";
+noadmin= "Uložený uživatel nemá žádné oprávnění správce. Kext Updater bude fungovat pouze omezeně. Přejděte prosím na Menupoint 'Reset Adminuser' a definujte další.";
+textadmin= "Pokud váš běžný účet nemá oprávnění správce, zadejte uživatelské jméno účtu správce v následujícím řádku. Pokud jste je zadali nesprávně (nebo stisknete tlačítko \"Cancle\"), bude použit váš skutečný uživatel (ale pokud tento uživatel nemá žádná administrátorská práva, Kext Updater bude fungovat pouze omezeně). Můžete jej kdykoli vynulovat v položce nabídky Reset Adminuser.";
+answeradmin= "Vložte svoji přezdívku";
+textpassword= "Zadejte prosím heslo správce";
+usernoexist= "Tento uživatel neexistuje. Prosím zkuste to znovu.";
+ahciportinstall= "Instalace podpory SATA Hotplug pro Mojave. To může chvíli trvat. Buďte trpěliví a nepřerušujte proces.";
+ahciportuninstall= "Odstranění podpory SATA Hotplug pro Mojave. To může chvíli trvat. Buďte trpěliví a nepřerušujte proces.";
+ocerror= "Hodnota 'ExposeSensitiveData' (Misc/Security) ve vašem config.plistu OpenCore musí být nastavena na '3'. Bez této hodnoty pracuje Kext Updater pouze v omezeném rozsahu.";
