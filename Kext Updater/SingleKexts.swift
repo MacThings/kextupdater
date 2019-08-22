@@ -320,4 +320,13 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/acidanthera/WhateverGreen", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
+    @IBAction func opencore(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/OpenCorePkg", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func clover(_ sender: Any) {
+        UserDefaults.standard.set("https://sourceforge.net/projects/cloverefiboot/files/", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    
 }
