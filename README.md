@@ -1,29 +1,6 @@
-# README #
+# Kext Updater
+A Tool to keep your Hackintosh Kexts up to Date.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+It checks on Project-Sites of your installed Kext(s) if a new Version is available. The Release is downloaded automatic then.
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+I wrote this Tool in the first line for www.hackintosh-forum.de and want to spread it here too.
