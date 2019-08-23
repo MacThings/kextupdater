@@ -5,6 +5,9 @@
       location = "group:Kext Updater.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Platypus/Platypus.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

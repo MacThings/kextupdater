@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A90208B230FC930009E8D3D /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A90208A230FC930009E8D3D /* appIcon.icns */; };
+		F4051D9F1C1B5AF900587F1F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F4051D9E1C1B5AF900587F1F /* Common.m */; };
+		F42A93E221783ECA00C40D46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42A93D82178365C00C40D46 /* Cocoa.framework */; };
+		F42A93E321783ECC00C40D46 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42A93D32178365C00C40D46 /* Security.framework */; };
+		F42A93E421783ECE00C40D46 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42A93D42178365C00C40D46 /* WebKit.framework */; };
+		F44A774D1C1887CC003CCA7A /* AppSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F44A77481C1887CC003CCA7A /* AppSettings.plist */; };
+		F44A774F1C1887CC003CCA7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44A774A1C1887CC003CCA7A /* MainMenu.xib */; };
+		F44A77501C1887CC003CCA7A /* script in Resources */ = {isa = PBXBuildFile; fileRef = F44A774B1C1887CC003CCA7A /* script */; };
+		F44EFF0612296F3700CAC9C2 /* NSColor+HexTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F44EFF0512296F3700CAC9C2 /* NSColor+HexTools.m */; };
+		F48B7B9511F766E600351575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B7B9011F766E600351575 /* main.m */; };
+		F48B7B9611F766E600351575 /* ScriptExecController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B7B9211F766E600351575 /* ScriptExecController.m */; };
+		F4975D741B2E09310099D16E /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F4975D731B2E09310099D16E /* STPrivilegedTask.m */; };
+		F4AB186B1BE182FA00B83A95 /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AB186A1BE182FA00B83A95 /* Alerts.m */; };
+		F4AB189A1BED3A0B00B83A95 /* ScriptExecJob.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AB18991BED3A0B00B83A95 /* ScriptExecJob.m */; };
+		F4AF785D14D1E5F200544C1B /* STDragWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AF785C14D1E5F200544C1B /* STDragWebView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A90208A230FC930009E8D3D /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
+		F4051D9E1C1B5AF900587F1F /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		F4051DA71C1C812600587F1F /* STReverseDNSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STReverseDNSTextField.h; path = Shared/STReverseDNSTextField.h; sourceTree = "<group>"; };
+		F4051DA81C1C812600587F1F /* STReverseDNSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STReverseDNSTextField.m; path = Shared/STReverseDNSTextField.m; sourceTree = "<group>"; };
+		F42A93D32178365C00C40D46 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../System/Library/Frameworks/Security.framework; sourceTree = "<group>"; };
+		F42A93D42178365C00C40D46 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		F42A93D52178365C00C40D46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F42A93D62178365C00C40D46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F42A93D82178365C00C40D46 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
+		F42A93D92178365C00C40D46 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = ../../System/Library/Frameworks/Accelerate.framework; sourceTree = "<group>"; };
+		F436471321A07B2D00A8749D /* srcloc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = srcloc.sh; sourceTree = "<group>"; };
+		F442E00B1EA38C7100BAD80C /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F44A77481C1887CC003CCA7A /* AppSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppSettings.plist; sourceTree = "<group>"; };
+		F44A77491C1887CC003CCA7A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		F44A774A1C1887CC003CCA7A /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		F44A774B1C1887CC003CCA7A /* script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = script; sourceTree = "<group>"; };
+		F44A774C1C1887CC003CCA7A /* KUDaemon-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KUDaemon-Info.plist"; sourceTree = "<group>"; };
+		F44EFF0412296F3700CAC9C2 /* NSColor+HexTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+HexTools.h"; path = "Shared/NSColor+HexTools.h"; sourceTree = "<group>"; };
+		F44EFF0512296F3700CAC9C2 /* NSColor+HexTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+HexTools.m"; path = "Shared/NSColor+HexTools.m"; sourceTree = "<group>"; };
+		F45B1EF41FF560D800A935D7 /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		F45B1EF51FF560D800A935D7 /* NSTextView+JSDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+JSDExtensions.h"; sourceTree = "<group>"; };
+		F45B1EF61FF560D800A935D7 /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
+		F45B1EF71FF560D800A935D7 /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
+		F45B1EF81FF560D800A935D7 /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
+		F45B1EF91FF560D800A935D7 /* NSTextView+JSDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+JSDExtensions.m"; sourceTree = "<group>"; };
+		F45B1F311FF561E700A935D7 /* NSTask+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTask+Description.h"; path = "Shared/NSTask+Description.h"; sourceTree = "<group>"; };
+		F45B1F321FF561E700A935D7 /* NSTask+Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTask+Description.m"; path = "Shared/NSTask+Description.m"; sourceTree = "<group>"; };
+		F479672B224EB3EF00CA0746 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F484D45C21AA03C1006EE28D /* NSFileManager+TempFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+TempFiles.m"; path = "Shared/NSFileManager+TempFiles.m"; sourceTree = "<group>"; };
+		F484D45D21AA03C2006EE28D /* NSFileManager+TempFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+TempFiles.h"; path = "Shared/NSFileManager+TempFiles.h"; sourceTree = "<group>"; };
+		F48B1EDD17935BBC007DA173 /* PlatypusScriptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatypusScriptUtils.h; path = Shared/PlatypusScriptUtils.h; sourceTree = "<group>"; };
+		F48B1EDE17935BBC007DA173 /* PlatypusScriptUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlatypusScriptUtils.m; path = Shared/PlatypusScriptUtils.m; sourceTree = "<group>"; };
+		F48B774111F7661C00351575 /* KUDaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUDaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48B7B9011F766E600351575 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = KUDaemon/main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F48B7B9111F766E600351575 /* ScriptExecController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScriptExecController.h; path = KUDaemon/ScriptExecController.h; sourceTree = "<group>"; };
+		F48B7B9211F766E600351575 /* ScriptExecController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScriptExecController.m; path = KUDaemon/ScriptExecController.m; sourceTree = "<group>"; };
+		F4975D6E1B2E09280099D16E /* NSWorkspace+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWorkspace+Additions.h"; path = "Shared/NSWorkspace+Additions.h"; sourceTree = "<group>"; };
+		F4975D6F1B2E09280099D16E /* NSWorkspace+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWorkspace+Additions.m"; path = "Shared/NSWorkspace+Additions.m"; sourceTree = "<group>"; };
+		F4975D721B2E09310099D16E /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPrivilegedTask.h; path = Shared/STPrivilegedTask.h; sourceTree = "<group>"; };
+		F4975D731B2E09310099D16E /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPrivilegedTask.m; path = Shared/STPrivilegedTask.m; sourceTree = "<group>"; };
+		F4975D761B2E09450099D16E /* STPathTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPathTextField.h; path = Shared/STPathTextField.h; sourceTree = "<group>"; };
+		F4975D771B2E09450099D16E /* STPathTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPathTextField.m; path = Shared/STPathTextField.m; sourceTree = "<group>"; };
+		F4975D7A1B2E462A0099D16E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F497C7EB2205CE8400F68637 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F4A4338B0E04C962000523E7 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Common.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		F4A8B5C82229ECB50049FA51 /* AGIconFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIconFamily.h; sourceTree = "<group>"; };
+		F4A8B5C92229ECB50049FA51 /* AGIconFamily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIconFamily.m; sourceTree = "<group>"; };
+		F4AB18691BE182FA00B83A95 /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alerts.h; path = Shared/Alerts.h; sourceTree = "<group>"; };
+		F4AB186A1BE182FA00B83A95 /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alerts.m; path = Shared/Alerts.m; sourceTree = "<group>"; };
+		F4AB186D1BE1908100B83A95 /* NSBundle+Templates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+Templates.h"; path = "Shared/NSBundle+Templates.h"; sourceTree = "<group>"; };
+		F4AB186E1BE1908100B83A95 /* NSBundle+Templates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+Templates.m"; path = "Shared/NSBundle+Templates.m"; sourceTree = "<group>"; };
+		F4AB18981BED3A0B00B83A95 /* ScriptExecJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScriptExecJob.h; path = KUDaemon/ScriptExecJob.h; sourceTree = "<group>"; };
+		F4AB18991BED3A0B00B83A95 /* ScriptExecJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScriptExecJob.m; path = KUDaemon/ScriptExecJob.m; sourceTree = "<group>"; };
+		F4AF785B14D1E5F200544C1B /* STDragWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STDragWebView.h; path = Shared/STDragWebView.h; sourceTree = "<group>"; };
+		F4AF785C14D1E5F200544C1B /* STDragWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STDragWebView.m; path = Shared/STDragWebView.m; sourceTree = "<group>"; };
+		F4B4F70F2230902C00F3C073 /* MutableDictProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MutableDictProxy.h; path = Shared/MutableDictProxy.h; sourceTree = "<group>"; };
+		F4B4F7102230902C00F3C073 /* MutableDictProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MutableDictProxy.m; path = Shared/MutableDictProxy.m; sourceTree = "<group>"; };
+		F4B87C581B403A6E00F4B8BE /* build_release.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_release.sh; sourceTree = "<group>"; };
+		F4C19A741BD1AB7300F411BD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F4C19A831BD1BFAB00F411BD /* STDragImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STDragImageView.h; path = Shared/STDragImageView.h; sourceTree = "<group>"; };
+		F4C19A841BD1BFAB00F411BD /* STDragImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STDragImageView.m; path = Shared/STDragImageView.m; sourceTree = "<group>"; };
+		F4D0F22F1C1DCEEE0065AD25 /* NSResponderNotifyingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSResponderNotifyingTableView.h; path = Shared/NSResponderNotifyingTableView.h; sourceTree = "<group>"; };
+		F4D0F2301C1DCEEE0065AD25 /* NSResponderNotifyingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSResponderNotifyingTableView.m; path = Shared/NSResponderNotifyingTableView.m; sourceTree = "<group>"; };
+		F4ECE1A011F7746A000DB012 /* CHANGES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES.txt; sourceTree = SOURCE_ROOT; };
+		F4F14CAF1C640857002A2402 /* make_examples.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = make_examples.pl; sourceTree = "<group>"; };
+		F4F2F3B81BF96C5C00FE463C /* VDKQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VDKQueue.h; path = Shared/Others/VDKQueue/VDKQueue.h; sourceTree = "<group>"; };
+		F4F2F3B91BF96C5C00FE463C /* VDKQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VDKQueue.m; path = Shared/Others/VDKQueue/VDKQueue.m; sourceTree = "<group>"; };
+		F4FE739611F792D5005FC23A /* PlatypusAppSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatypusAppSpec.h; path = Shared/PlatypusAppSpec.h; sourceTree = "<group>"; };
+		F4FE739711F792D5005FC23A /* PlatypusAppSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlatypusAppSpec.m; path = Shared/PlatypusAppSpec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F48B773F11F7661C00351575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42A93E221783ECA00C40D46 /* Cocoa.framework in Frameworks */,
+				F42A93E321783ECC00C40D46 /* Security.framework in Frameworks */,
+				F42A93E421783ECE00C40D46 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F4A8B5C72229ECB50049FA51 /* AGIconFamily */,
+				F484D46021AA03D7006EE28D /* NSFileManager+TempFiles */,
+				F45B1F041FF5610000A935D7 /* NSTask+Description */,
+				F45B1EF31FF560D800A935D7 /* NSTextView+JSDExtensions */,
+				F4D0F2321C1DCF790065AD25 /* NSResponderNotifyingTableView */,
+				F4051DAA1C1C816100587F1F /* STReverseDNSTextField */,
+				F4AB18701BE1911500B83A95 /* NSBundle+Templates */,
+				F4C19A821BD1BF7400F411BD /* STDragImageView */,
+				F48269871BCB1EAF00169D8B /* VDKQueue */,
+				F4ECE17511F76CC2000DB012 /* PlatypusAppSpec */,
+				F48A724D122E23B200964D71 /* PlatypusScriptUtils */,
+				F4AF785E14D1E5F600544C1B /* STDragWebView */,
+				F4B5DE431491A00900C43901 /* Alerts */,
+				F41306340FBD809A00A319B7 /* STPathTextField */,
+				F44587170FC386B500CD0C02 /* STPrivilegedTask */,
+				F4975D6D1B2E03250099D16E /* NSWorkspace+Additions */,
+				F44EFEFF12296F2C00CAC9C2 /* NSColor+HexTools */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F48B774111F7661C00351575 /* KUDaemon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Platypus */ = {
+			isa = PBXGroup;
+			children = (
+				F4975D7A1B2E462A0099D16E /* README.md */,
+				F4ECE1A011F7746A000DB012 /* CHANGES.txt */,
+				F442E00B1EA38C7100BAD80C /* LICENSE.txt */,
+				F479672B224EB3EF00CA0746 /* Makefile */,
+				F4F14CBB1C64264D002A2402 /* Scripts */,
+				F4B4F71C2231ECD300F3C073 /* Common */,
+				F48B7B8811F766CA00351575 /* KUDaemon */,
+				080E96DDFE201D6D7F000001 /* Shared */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Platypus;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F42A93D92178365C00C40D46 /* Accelerate.framework */,
+				F42A93D62178365C00C40D46 /* AppKit.framework */,
+				F42A93D52178365C00C40D46 /* Foundation.framework */,
+				F42A93D42178365C00C40D46 /* WebKit.framework */,
+				F42A93D32178365C00C40D46 /* Security.framework */,
+				F42A93D82178365C00C40D46 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4051DAA1C1C816100587F1F /* STReverseDNSTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F4051DA71C1C812600587F1F /* STReverseDNSTextField.h */,
+				F4051DA81C1C812600587F1F /* STReverseDNSTextField.m */,
+			);
+			name = STReverseDNSTextField;
+			sourceTree = "<group>";
+		};
+		F41306340FBD809A00A319B7 /* STPathTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F4975D761B2E09450099D16E /* STPathTextField.h */,
+				F4975D771B2E09450099D16E /* STPathTextField.m */,
+			);
+			name = STPathTextField;
+			sourceTree = "<group>";
+		};
+		F44587170FC386B500CD0C02 /* STPrivilegedTask */ = {
+			isa = PBXGroup;
+			children = (
+				F4975D721B2E09310099D16E /* STPrivilegedTask.h */,
+				F4975D731B2E09310099D16E /* STPrivilegedTask.m */,
+			);
+			name = STPrivilegedTask;
+			sourceTree = "<group>";
+		};
+		F44A77471C1887CC003CCA7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A90208A230FC930009E8D3D /* appIcon.icns */,
+				F44A774C1C1887CC003CCA7A /* KUDaemon-Info.plist */,
+				F44A77481C1887CC003CCA7A /* AppSettings.plist */,
+				F44A774B1C1887CC003CCA7A /* script */,
+				F44A774A1C1887CC003CCA7A /* MainMenu.xib */,
+				F44A77491C1887CC003CCA7A /* image.png */,
+			);
+			name = Resources;
+			path = KUDaemon/Resources;
+			sourceTree = "<group>";
+		};
+		F44EFEFF12296F2C00CAC9C2 /* NSColor+HexTools */ = {
+			isa = PBXGroup;
+			children = (
+				F44EFF0412296F3700CAC9C2 /* NSColor+HexTools.h */,
+				F44EFF0512296F3700CAC9C2 /* NSColor+HexTools.m */,
+			);
+			name = "NSColor+HexTools";
+			sourceTree = "<group>";
+		};
+		F45B1EF31FF560D800A935D7 /* NSTextView+JSDExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F45B1EF51FF560D800A935D7 /* NSTextView+JSDExtensions.h */,
+				F45B1EF91FF560D800A935D7 /* NSTextView+JSDExtensions.m */,
+				F45B1EF71FF560D800A935D7 /* NoodleLineNumberView.h */,
+				F45B1EF41FF560D800A935D7 /* NoodleLineNumberView.m */,
+				F45B1EF61FF560D800A935D7 /* NoodleLineNumberMarker.h */,
+				F45B1EF81FF560D800A935D7 /* NoodleLineNumberMarker.m */,
+			);
+			name = "NSTextView+JSDExtensions";
+			path = "Shared/Others/NSTextView+JSDExtensions";
+			sourceTree = "<group>";
+		};
+		F45B1F041FF5610000A935D7 /* NSTask+Description */ = {
+			isa = PBXGroup;
+			children = (
+				F45B1F311FF561E700A935D7 /* NSTask+Description.h */,
+				F45B1F321FF561E700A935D7 /* NSTask+Description.m */,
+			);
+			name = "NSTask+Description";
+			sourceTree = "<group>";
+		};
+		F48269871BCB1EAF00169D8B /* VDKQueue */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F3B81BF96C5C00FE463C /* VDKQueue.h */,
+				F4F2F3B91BF96C5C00FE463C /* VDKQueue.m */,
+			);
+			name = VDKQueue;
+			sourceTree = "<group>";
+		};
+		F484D46021AA03D7006EE28D /* NSFileManager+TempFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F484D45D21AA03C2006EE28D /* NSFileManager+TempFiles.h */,
+				F484D45C21AA03C1006EE28D /* NSFileManager+TempFiles.m */,
+			);
+			name = "NSFileManager+TempFiles";
+			sourceTree = "<group>";
+		};
+		F48A724D122E23B200964D71 /* PlatypusScriptUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F48B1EDD17935BBC007DA173 /* PlatypusScriptUtils.h */,
+				F48B1EDE17935BBC007DA173 /* PlatypusScriptUtils.m */,
+			);
+			name = PlatypusScriptUtils;
+			sourceTree = "<group>";
+		};
+		F48B7B8811F766CA00351575 /* KUDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				F48B7B9011F766E600351575 /* main.m */,
+				F48B7B9111F766E600351575 /* ScriptExecController.h */,
+				F48B7B9211F766E600351575 /* ScriptExecController.m */,
+				F4AB18981BED3A0B00B83A95 /* ScriptExecJob.h */,
+				F4AB18991BED3A0B00B83A95 /* ScriptExecJob.m */,
+				F44A77471C1887CC003CCA7A /* Resources */,
+			);
+			name = KUDaemon;
+			sourceTree = "<group>";
+		};
+		F4975D6D1B2E03250099D16E /* NSWorkspace+Additions */ = {
+			isa = PBXGroup;
+			children = (
+				F4975D6E1B2E09280099D16E /* NSWorkspace+Additions.h */,
+				F4975D6F1B2E09280099D16E /* NSWorkspace+Additions.m */,
+			);
+			name = "NSWorkspace+Additions";
+			sourceTree = "<group>";
+		};
+		F4A8B5C72229ECB50049FA51 /* AGIconFamily */ = {
+			isa = PBXGroup;
+			children = (
+				F4A8B5C82229ECB50049FA51 /* AGIconFamily.h */,
+				F4A8B5C92229ECB50049FA51 /* AGIconFamily.m */,
+			);
+			name = AGIconFamily;
+			path = Shared/Others/AGIconFamily;
+			sourceTree = "<group>";
+		};
+		F4AB18701BE1911500B83A95 /* NSBundle+Templates */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB186D1BE1908100B83A95 /* NSBundle+Templates.h */,
+				F4AB186E1BE1908100B83A95 /* NSBundle+Templates.m */,
+			);
+			name = "NSBundle+Templates";
+			sourceTree = "<group>";
+		};
+		F4AF785E14D1E5F600544C1B /* STDragWebView */ = {
+			isa = PBXGroup;
+			children = (
+				F4AF785B14D1E5F200544C1B /* STDragWebView.h */,
+				F4AF785C14D1E5F200544C1B /* STDragWebView.m */,
+			);
+			name = STDragWebView;
+			sourceTree = "<group>";
+		};
+		F4B4F71C2231ECD300F3C073 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4C19A741BD1AB7300F411BD /* PrefixHeader.pch */,
+				F4A4338B0E04C962000523E7 /* Common.h */,
+				F4051D9E1C1B5AF900587F1F /* Common.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		F4B5DE431491A00900C43901 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB18691BE182FA00B83A95 /* Alerts.h */,
+				F4AB186A1BE182FA00B83A95 /* Alerts.m */,
+			);
+			name = Alerts;
+			sourceTree = "<group>";
+		};
+		F4C19A821BD1BF7400F411BD /* STDragImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F4C19A831BD1BFAB00F411BD /* STDragImageView.h */,
+				F4C19A841BD1BFAB00F411BD /* STDragImageView.m */,
+			);
+			name = STDragImageView;
+			sourceTree = "<group>";
+		};
+		F4D0F2321C1DCF790065AD25 /* NSResponderNotifyingTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F4D0F22F1C1DCEEE0065AD25 /* NSResponderNotifyingTableView.h */,
+				F4D0F2301C1DCEEE0065AD25 /* NSResponderNotifyingTableView.m */,
+			);
+			name = NSResponderNotifyingTableView;
+			sourceTree = "<group>";
+		};
+		F4ECE17511F76CC2000DB012 /* PlatypusAppSpec */ = {
+			isa = PBXGroup;
+			children = (
+				F4B4F70F2230902C00F3C073 /* MutableDictProxy.h */,
+				F4B4F7102230902C00F3C073 /* MutableDictProxy.m */,
+				F4FE739611F792D5005FC23A /* PlatypusAppSpec.h */,
+				F4FE739711F792D5005FC23A /* PlatypusAppSpec.m */,
+			);
+			name = PlatypusAppSpec;
+			sourceTree = "<group>";
+		};
+		F4F14CBB1C64264D002A2402 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				F497C7EB2205CE8400F68637 /* Makefile */,
+				F4B87C581B403A6E00F4B8BE /* build_release.sh */,
+				F4F14CAF1C640857002A2402 /* make_examples.pl */,
+				F436471321A07B2D00A8749D /* srcloc.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F48B774011F7661C00351575 /* KUDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48B774711F7661D00351575 /* Build configuration list for PBXNativeTarget "KUDaemon" */;
+			buildPhases = (
+				F48B773D11F7661C00351575 /* Resources */,
+				F48B773E11F7661C00351575 /* Sources */,
+				F48B773F11F7661C00351575 /* Frameworks */,
+				F4302B7B21C5A04A001C8BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KUDaemon;
+			productName = ScriptExec;
+			productReference = F48B774111F7661C00351575 /* KUDaemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Sveinbjorn Thordarson";
+				TargetAttributes = {
+					F48B774011F7661C00351575 = {
+						DevelopmentTeam = 4ATFWV7M4B;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F41B2181085CD8FF00B63B0D /* Build configuration list for PBXProject "Platypus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Platypus */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F48B774011F7661C00351575 /* KUDaemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F48B773D11F7661C00351575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44A77501C1887CC003CCA7A /* script in Resources */,
+				2A90208B230FC930009E8D3D /* appIcon.icns in Resources */,
+				F44A774D1C1887CC003CCA7A /* AppSettings.plist in Resources */,
+				F44A774F1C1887CC003CCA7A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4302B7B21C5A04A001C8BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# Read interpreter path from the script's shebang line\n# and set it as interpreter in AppSettings.plist\nAPPSETTINGS=\"${TARGET_BUILD_DIR}/KUDaemon.app/Contents/Resources/AppSettings.plist\"\nSCRIPT=\"${TARGET_BUILD_DIR}/KUDaemon.app/Contents/Resources/script\"\nINTERPRETER=$(head -n 1 $SCRIPT | cut -b 3-300 | tr -d '\\n')\n/usr/libexec/PlistBuddy -c \"Set :InterpreterPath ${INTERPRETER}\" \"${APPSETTINGS}\"\ncp -r \"${TARGET_BUILD_DIR}/KUDaemon.app\" \"/Users/luigi/Documents/kextupdater/Kext Updater/bin\"\n\n\n\n\n\n\n\n\n\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F48B773E11F7661C00351575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48B7B9511F766E600351575 /* main.m in Sources */,
+				F48B7B9611F766E600351575 /* ScriptExecController.m in Sources */,
+				F4051D9F1C1B5AF900587F1F /* Common.m in Sources */,
+				F44EFF0612296F3700CAC9C2 /* NSColor+HexTools.m in Sources */,
+				F4AF785D14D1E5F200544C1B /* STDragWebView.m in Sources */,
+				F4975D741B2E09310099D16E /* STPrivilegedTask.m in Sources */,
+				F4AB186B1BE182FA00B83A95 /* Alerts.m in Sources */,
+				F4AB189A1BED3A0B00B83A95 /* ScriptExecJob.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F41B2182085CD8FF00B63B0D /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				CLANG_WARN_ASSIGN_ENUM = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer: s.lamprecht@sl-soft.de (85JZW6284R)";
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_STRICT_ALIASING = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				IBC_FLATTEN_NIBS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PLIST_FILE_OUTPUT_FORMAT = XML;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
+				STRIPFLAGS = "-x";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = build;
+				VALID_ARCHS = x86_64;
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Development;
+		};
+		F41B2183085CD8FF00B63B0D /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				CLANG_WARN_ASSIGN_ENUM = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer: s.lamprecht@sl-soft.de (85JZW6284R)";
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_FLATTEN_NIBS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = NO;
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
+				STRIPFLAGS = "-x";
+				SYMROOT = build;
+				VALID_ARCHS = x86_64;
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Deployment;
+		};
+		F41B2184085CD8FF00B63B0D /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				CLANG_WARN_ASSIGN_ENUM = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer: s.lamprecht@sl-soft.de (85JZW6284R)";
+				CONFIGURATION_TEMP_DIR = "";
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_STRICT_ALIASING = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_FLATTEN_NIBS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
+				STRIPFLAGS = "-x";
+				SYMROOT = build;
+				VALID_ARCHS = x86_64;
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Default;
+		};
+		F48B774411F7661D00351575 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_PASCAL_STRINGS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GENERATE_PKGINFO_FILE = NO;
+				IBC_FLATTEN_NIBS = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "KUDaemon/Resources/KUDaemon-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				PLIST_FILE_OUTPUT_FORMAT = xml;
+				PRODUCT_BUNDLE_IDENTIFIER = kextupdaterhelper.slsoft.de;
+				PRODUCT_NAME = KUDaemon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Development;
+		};
+		F48B774511F7661D00351575 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				EXCLUDED_SOURCE_FILE_NAMES = "PlatypusScriptAnalyser.*";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_PASCAL_STRINGS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_UNROLL_LOOPS = NO;
+				GENERATE_PKGINFO_FILE = NO;
+				IBC_FLATTEN_NIBS = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "KUDaemon/Resources/KUDaemon-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_BUNDLE_IDENTIFIER = kextupdaterhelper.slsoft.de;
+				PRODUCT_NAME = KUDaemon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Deployment;
+		};
+		F48B774611F7661D00351575 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_ENABLE_PASCAL_STRINGS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GENERATE_PKGINFO_FILE = NO;
+				IBC_FLATTEN_NIBS = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "KUDaemon/Resources/KUDaemon-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = kextupdaterhelper.slsoft.de;
+				PRODUCT_NAME = KUDaemon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WARNING_CFLAGS = "-Wpartial-availability";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F41B2181085CD8FF00B63B0D /* Build configuration list for PBXProject "Platypus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F41B2182085CD8FF00B63B0D /* Development */,
+				F41B2183085CD8FF00B63B0D /* Deployment */,
+				F41B2184085CD8FF00B63B0D /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		F48B774711F7661D00351575 /* Build configuration list for PBXNativeTarget "KUDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48B774411F7661D00351575 /* Development */,
+				F48B774511F7661D00351575 /* Deployment */,
+				F48B774611F7661D00351575 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

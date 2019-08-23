@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */; };
 		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; };
-		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A30A833230BF92700F572ED /* 10.13DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A822230BF84500F572ED /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A30A834230BF92800F572ED /* 10.14DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A823230BF84500F572ED /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A30A835230BF92800F572ED /* 10.10DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A824230BF84500F572ED /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A30A833230BF92700F572ED /* 10.13DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A822230BF84500F572ED /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A30A834230BF92800F572ED /* 10.14DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A823230BF84500F572ED /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A30A835230BF92800F572ED /* 10.10DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A824230BF84500F572ED /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A837230BF94A00F572ED /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81B230BF83800F572ED /* locked.png */; };
 		2A30A838230BF94A00F572ED /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81C230BF83800F572ED /* admin.png */; };
 		2A30A83A230BF96400F572ED /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80A230BF81F00F572ED /* passok.aif */; };
@@ -23,11 +23,12 @@
 		2A30A83F230BF96400F572ED /* error.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80F230BF81F00F572ED /* error.aif */; };
 		2A30A840230BF96400F572ED /* mq.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A810230BF81F00F572ED /* mq.mp3 */; };
 		2A30A841230BF96400F572ED /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A811230BF81F00F572ED /* ta.mp3 */; };
-		2A30A847230C02C100F572ED /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A30A845230C02B000F572ED /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A849230C064400F572ED /* Bootloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A848230C064400F572ED /* Bootloader.swift */; };
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
-		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A857230E773D00F572ED /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A856230E773D00F572ED /* Website.swift */; };
+		2A90208D230FCB4A009E8D3D /* KUDaemon.app in Resources */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; };
+		2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
 		2AC197AD230A9C920071932C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AC230A9C920071932C /* SingleKexts.swift */; };
@@ -131,7 +132,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2A30A847230C02C100F572ED /* KUDaemon.app in Bin Copy */,
+				2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */,
 				2AC197C2230AC34D0071932C /* alerter in Bin Copy */,
 				2AC197C3230AC34D0071932C /* PlistBuddy in Bin Copy */,
 				2AC197C4230AC34D0071932C /* BDMESG in Bin Copy */,
@@ -172,10 +173,11 @@
 		2A30A824230BF84500F572ED /* 10.10DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.10DirektHW.kext; sourceTree = "<group>"; };
 		2A30A825230BF84500F572ED /* IO80211Family.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IO80211Family.kext; sourceTree = "<group>"; };
 		2A30A82C230BF85400F572ED /* report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = report.html; sourceTree = "<group>"; };
-		2A30A845230C02B000F572ED /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
 		2A30A848230C064400F572ED /* Bootloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
 		2A30A84A230C1D9E00F572ED /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		2A30A856230E773D00F572ED /* Website.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
+		2A90208C230FCB4A009E8D3D /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
+		2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kext Updater.entitlements"; sourceTree = "<group>"; };
 		2ABA236A230EFAD9008D98C6 /* Changelog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
 		2AC197AA230A8D720071932C /* KextUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KextUpdater.swift; sourceTree = "<group>"; };
 		2AC197AC230A9C920071932C /* SingleKexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleKexts.swift; sourceTree = "<group>"; };
@@ -276,7 +278,7 @@
 		2AC197B3230AC30C0071932C /* bin */ = {
 			isa = PBXGroup;
 			children = (
-				2A30A845230C02B000F572ED /* KUDaemon.app */,
+				2A90208C230FCB4A009E8D3D /* KUDaemon.app */,
 				2AC197B4230AC30C0071932C /* lspci */,
 				2AC197B7230AC30C0071932C /* alerter */,
 				2AC197B8230AC30C0071932C /* PlistBuddy */,
@@ -315,6 +317,7 @@
 		2AD86C522306B95200D2334A /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */,
 				2AC197B3230AC30C0071932C /* bin */,
 				2A30A82B230BF85400F572ED /* html */,
 				2A30A81F230BF84500F572ED /* kexts */,
@@ -402,6 +405,9 @@
 					2AD86C4F2306B95200D2334A = {
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
@@ -435,6 +441,7 @@
 			files = (
 				2AD86C582306B95400D2334A /* Assets.xcassets in Resources */,
 				2AD86C5B2306B95400D2334A /* Main.storyboard in Resources */,
+				2A90208D230FCB4A009E8D3D /* KUDaemon.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    rm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    zip -r /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip Kext\\ Updater.app\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    rm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
 		};
 		FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -569,9 +576,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "Mac Developer: s.lamprecht@sl-soft.de (85JZW6284R)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -632,9 +640,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "Mac Developer: s.lamprecht@sl-soft.de (85JZW6284R)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -661,11 +670,12 @@
 			baseConfigurationReference = DE4B4A3712FD1CDFC277B6B5 /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,11 +693,12 @@
 			baseConfigurationReference = 46DBD829FF23E5BAC038B071 /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
