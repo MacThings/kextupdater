@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */; };
-		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; };
+		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A833230BF92700F572ED /* 10.13DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A822230BF84500F572ED /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A834230BF92800F572ED /* 10.14DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A823230BF84500F572ED /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A835230BF92800F572ED /* 10.10DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A824230BF84500F572ED /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A30A837230BF94A00F572ED /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81B230BF83800F572ED /* locked.png */; };
-		2A30A838230BF94A00F572ED /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81C230BF83800F572ED /* admin.png */; };
-		2A30A83A230BF96400F572ED /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80A230BF81F00F572ED /* passok.aif */; };
-		2A30A83B230BF96400F572ED /* quadra.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80B230BF81F00F572ED /* quadra.mp3 */; };
-		2A30A83C230BF96400F572ED /* done.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80C230BF81F00F572ED /* done.mp3 */; };
-		2A30A83D230BF96400F572ED /* pm52.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80D230BF81F00F572ED /* pm52.mp3 */; };
-		2A30A83E230BF96400F572ED /* quadradeath.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80E230BF81F00F572ED /* quadradeath.mp3 */; };
-		2A30A83F230BF96400F572ED /* error.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80F230BF81F00F572ED /* error.aif */; };
-		2A30A840230BF96400F572ED /* mq.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A810230BF81F00F572ED /* mq.mp3 */; };
-		2A30A841230BF96400F572ED /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A811230BF81F00F572ED /* ta.mp3 */; };
+		2A30A837230BF94A00F572ED /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81B230BF83800F572ED /* locked.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A838230BF94A00F572ED /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2A30A81C230BF83800F572ED /* admin.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83A230BF96400F572ED /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80A230BF81F00F572ED /* passok.aif */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83B230BF96400F572ED /* quadra.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80B230BF81F00F572ED /* quadra.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83C230BF96400F572ED /* done.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80C230BF81F00F572ED /* done.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83D230BF96400F572ED /* pm52.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80D230BF81F00F572ED /* pm52.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83E230BF96400F572ED /* quadradeath.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80E230BF81F00F572ED /* quadradeath.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A83F230BF96400F572ED /* error.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A80F230BF81F00F572ED /* error.aif */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A840230BF96400F572ED /* mq.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A810230BF81F00F572ED /* mq.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A30A841230BF96400F572ED /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2A30A811230BF81F00F572ED /* ta.mp3 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2A30A849230C064400F572ED /* Bootloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A848230C064400F572ED /* Bootloader.swift */; };
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
 		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -31,7 +31,7 @@
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
 		2AC197AD230A9C920071932C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AC230A9C920071932C /* SingleKexts.swift */; };
-		2AC197B2230A9E0F0071932C /* script.command in Script Copy */ = {isa = PBXBuildFile; fileRef = 2AC197AF230A9DBB0071932C /* script.command */; };
+		2AC197B2230A9E0F0071932C /* script.command in Script Copy */ = {isa = PBXBuildFile; fileRef = 2AC197AF230A9DBB0071932C /* script.command */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AC197C2230AC34D0071932C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B7230AC30C0071932C /* alerter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AC197C3230AC34D0071932C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B8230AC30C0071932C /* PlistBuddy */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AC197C4230AC34D0071932C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC197B9230AC30C0071932C /* BDMESG */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
