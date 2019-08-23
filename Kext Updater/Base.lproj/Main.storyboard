@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <plugIn identifier="com.apple.WebKitIBPlugin" version="14490.70"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,7 +161,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="296"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackGreen"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-5j-Qer" userLabel="Box Download3">
                                 <rect key="frame" x="501" y="99" width="18" height="298"/>
@@ -169,7 +170,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="296"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackGreen"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-nh-EFQ" userLabel="Box Exclude 1">
                                 <rect key="frame" x="31" y="99" width="18" height="298"/>
@@ -178,7 +179,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="296"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackRed"/>
                             </box>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zFB-Ad-h2V">
                                 <rect key="frame" x="51" y="379" width="156" height="18"/>
@@ -841,7 +842,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="334"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackRed"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h94-Jk-2eL">
                                 <rect key="frame" x="480" y="379" width="22" height="18"/>
@@ -1015,7 +1016,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="296"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackGreen"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="3Qa-mS-q5q" userLabel="Box Exclude 2">
                                 <rect key="frame" x="242" y="99" width="18" height="298"/>
@@ -1024,7 +1025,7 @@
                                     <rect key="frame" x="1" y="1" width="16" height="296"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackRed"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nX1-3X-e9F">
                                 <rect key="frame" x="262" y="379" width="129" height="18"/>
@@ -1830,7 +1831,7 @@ DQ
                                     <rect key="frame" x="1" y="1" width="16" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackRed"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ilh-Pu-e6v">
                                 <rect key="frame" x="9" y="481" width="213" height="18"/>
@@ -1847,7 +1848,7 @@ DQ
                                     <rect key="frame" x="1" y="1" width="16" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <color key="fillColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="SingleKextBackGreen"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-2o-zhE">
                                 <rect key="frame" x="9" y="454" width="94" height="18"/>
@@ -2165,7 +2166,7 @@ DQ
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hru-Po-qOY" userLabel="EFI Image Info">
                                             <rect key="frame" x="519" y="11" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info2" id="PqU-Qf-Mux"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Diskinfo" id="PqU-Qf-Mux"/>
                                         </imageView>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eug-xW-6I7" userLabel="EFI click">
                                             <rect key="frame" x="519" y="11" width="24" height="24"/>
@@ -4202,12 +4203,13 @@ DQ
         </scene>
     </scenes>
     <resources>
+        <image name="Diskinfo" width="128" height="128"/>
         <image name="HF Logo" width="512" height="512"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>
-        <image name="clover_logo_shadow" width="1221" height="1450"/>
+        <image name="clover_logo_shadow" width="600" height="713"/>
         <image name="crt" width="466" height="527"/>
         <image name="donate" width="197" height="78"/>
         <image name="efifolder" width="128" height="105"/>
@@ -4215,7 +4217,6 @@ DQ
         <image name="folder" width="128" height="105"/>
         <image name="harddisk" width="256" height="256"/>
         <image name="hflogo" width="860" height="170"/>
-        <image name="info2" width="128" height="128"/>
         <image name="kext" width="200" height="200"/>
         <image name="keychain" width="256" height="256"/>
         <image name="link" width="800" height="337"/>
@@ -4223,11 +4224,17 @@ DQ
         <image name="nointernet" width="599" height="598"/>
         <image name="notapplied" width="512" height="512"/>
         <image name="nvidia" width="1600" height="1244"/>
-        <image name="opencore_logo_shadow" width="1253" height="1253"/>
+        <image name="opencore_logo_shadow" width="600" height="600"/>
         <image name="speaker_off" width="50" height="50"/>
         <image name="speaker_on" width="50" height="50"/>
         <image name="ssd" width="256" height="256"/>
         <image name="usbhd" width="256" height="256"/>
         <image name="usbstick" width="128" height="128"/>
+        <namedColor name="SingleKextBackGreen">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SingleKextBackRed">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
