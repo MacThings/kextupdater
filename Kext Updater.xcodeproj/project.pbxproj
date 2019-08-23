@@ -27,7 +27,6 @@
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
 		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A857230E773D00F572ED /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A856230E773D00F572ED /* Website.swift */; };
-		2A90208D230FCB4A009E8D3D /* KUDaemon.app in Resources */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; };
 		2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
@@ -370,8 +369,8 @@
 			buildPhases = (
 				FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */,
 				2AD86C4C2306B95200D2334A /* Sources */,
-				2AD86C4D2306B95200D2334A /* Frameworks */,
 				2AD86C4E2306B95200D2334A /* Resources */,
+				2AD86C4D2306B95200D2334A /* Frameworks */,
 				1125763990DA553786F62E29 /* [CP] Embed Pods Frameworks */,
 				2AC197B1230A9DFD0071932C /* Script Copy */,
 				2AC197C1230AC3350071932C /* Bin Copy */,
@@ -441,7 +440,6 @@
 			files = (
 				2AD86C582306B95400D2334A /* Assets.xcassets in Resources */,
 				2AD86C5B2306B95400D2334A /* Main.storyboard in Resources */,
-				2A90208D230FCB4A009E8D3D /* KUDaemon.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +579,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -646,6 +644,7 @@
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
