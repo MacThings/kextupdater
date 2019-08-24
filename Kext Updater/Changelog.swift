@@ -22,6 +22,10 @@ class Changelog: NSViewController {
         
     }
     
+    @IBAction func close_button(_ sender: Any) {
+        self.view.window?.close()
+    }
+    
     override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.

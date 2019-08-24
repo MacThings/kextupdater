@@ -19,7 +19,7 @@ class Website: NSViewController {
         let urlstring = UserDefaults.standard.string(forKey: "SourceURL")
         let url = NSURL (string: urlstring!)
         let requestObj = NSURLRequest(url: url! as URL)
-        webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E188a Safari/601.1"
+        webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1"
         webView.mainFrame.load(requestObj as URLRequest)
     }
 }
