@@ -171,6 +171,7 @@
 		0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0710C02311459D00258F09 /* de.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = de.bashstrings; sourceTree = "<group>"; };
 		2A0710C12311459D00258F09 /* en.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.bashstrings; sourceTree = "<group>"; };
+		2A2D310F2311730000CC6F1A /* kextupdaterng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kextupdaterng.html; sourceTree = "<group>"; };
 		2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nVidiaWebdriver.swift; sourceTree = "<group>"; };
 		2A30A80A230BF81F00F572ED /* passok.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = passok.aif; sourceTree = "<group>"; };
 		2A30A80B230BF81F00F572ED /* quadra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quadra.mp3; sourceTree = "<group>"; };
@@ -353,6 +354,7 @@
 				2A30A848230C064400F572ED /* Bootloader.swift */,
 				2ABA236A230EFAD9008D98C6 /* Changelog.swift */,
 				2AC197CB230AE1820071932C /* DiskInformation.swift */,
+				2A2D310F2311730000CC6F1A /* kextupdaterng.html */,
 				2AC197AA230A8D720071932C /* KextUpdater.swift */,
 				2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */,
 				2AF4AADC230B025000648E48 /* PasswordWindow.swift */,
@@ -506,7 +508,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    rm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    cp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload/kextupdaterng.html\"\n    rm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
 		};
 		FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
