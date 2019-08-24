@@ -1,6 +1,6 @@
 
 #!/bin/bash
-
+#
 ################################################################
 ####################### Helper Function ########################
 ################################################################
@@ -606,6 +606,8 @@ function initial()
       fi
       if [[ $bootloader = "OpenCore" ]]; then
         efipath=$( find "$mountpoint" -maxdepth 3 -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" | grep -v "Trashes" | grep -w "OC" )
+        #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed  -e 's/.*\\EFI/\/EFI/g' -e 's/\\/\//g' -e 's/Open.*//g' )
+        #efipath=$( echo "/Volumes/EFI"$efipath )
       fi
     fi
 

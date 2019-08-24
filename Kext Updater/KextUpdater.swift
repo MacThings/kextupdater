@@ -10,6 +10,7 @@ import Cocoa
 import AVFoundation
 import KeychainSwift
 import LetsMove
+import APNGKit
 
 class KextUpdater: NSViewController {
     
@@ -21,7 +22,8 @@ class KextUpdater: NSViewController {
     
     @IBOutlet var output_window: NSTextView!
     @IBOutlet weak var app_logo: NSImageView!
-    @IBOutlet weak var progress_gear: NSProgressIndicator!
+    @IBOutlet weak var app_logo_animation: NSButton!
+    
     
     @IBOutlet weak var crtview: NSImageView!
     @IBOutlet weak var network_error: NSBox!
@@ -343,8 +345,8 @@ class KextUpdater: NSViewController {
      
         output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden=true
-        progress_gear.isHidden=false
-        self.progress_gear?.startAnimation(self);
+        
+        animstart()
         
         if let url = URL(string: "https://update.kextupdater.de/online") {
             do {
@@ -394,8 +396,8 @@ class KextUpdater: NSViewController {
                 self.quit_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
-                self.progress_gear?.stopAnimation(self);
-                self.progress_gear.isHidden=true
+                self.animstop()
+                
                 UserDefaults.standard.set("Update", forKey: "Choice")
             }
         }
@@ -449,8 +451,8 @@ class KextUpdater: NSViewController {
         quit_button.isEnabled=false
         efi_button.isEnabled=false
         tools_button.isEnabled=false
-        progress_gear?.startAnimation(self);
-        progress_gear.isHidden=false
+        animstart()
+        
         app_logo.isHidden=true
         UserDefaults.standard.set("Report", forKey: "Choice")
         
@@ -466,8 +468,8 @@ class KextUpdater: NSViewController {
                 self.quit_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
-                self.progress_gear?.stopAnimation(self);
-                self.progress_gear.isHidden=true
+                self.animstop()
+                
             }
             
         }
@@ -585,6 +587,13 @@ class KextUpdater: NSViewController {
         keychainyes.isHidden = true
         keychainno.isHidden = false
         
+    }
+    
+    @IBAction func bug_report_click_sendmail(_ sender: Any) {
+        let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
+        service.recipients = ["bug@kextupdater.de"]
+        service.subject = "Kext Updater Bug Report"
+        service.perform(withItems: [""])
     }
     
     /**
@@ -763,5 +772,21 @@ class KextUpdater: NSViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func animstart() -> Void {
+            self.app_logo_animation.isHidden=false
+            let image = APNGImage(named: "progressanim.png")
+            let imageView = APNGImageView(image: image)
+            app_logo_animation.addSubview(imageView)
+            imageView.startAnimating()
+    }
+    
+    func animstop() -> Void {
+        self.app_logo_animation.isHidden=true
+        let image = APNGImage(named: "progressanim.png")
+        let imageView = APNGImageView(image: image)
+        app_logo_animation.addSubview(imageView)
+        imageView.stopAnimating()
     }
 }

@@ -29,6 +29,7 @@
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
 		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A857230E773D00F572ED /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A856230E773D00F572ED /* Website.swift */; };
+		2A4AF1562311CB0A00EDB9E4 /* progressanim.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4AF1552311CB0A00EDB9E4 /* progressanim.png */; };
 		2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
@@ -192,6 +193,7 @@
 		2A30A848230C064400F572ED /* Bootloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
 		2A30A84A230C1D9E00F572ED /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		2A30A856230E773D00F572ED /* Website.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
+		2A4AF1552311CB0A00EDB9E4 /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
 		2A90208C230FCB4A009E8D3D /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
 		2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kext Updater.entitlements"; sourceTree = "<group>"; };
 		2ABA236A230EFAD9008D98C6 /* Changelog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
@@ -354,7 +356,6 @@
 				2A30A848230C064400F572ED /* Bootloader.swift */,
 				2ABA236A230EFAD9008D98C6 /* Changelog.swift */,
 				2AC197CB230AE1820071932C /* DiskInformation.swift */,
-				2A2D310F2311730000CC6F1A /* kextupdaterng.html */,
 				2AC197AA230A8D720071932C /* KextUpdater.swift */,
 				2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */,
 				2AF4AADC230B025000648E48 /* PasswordWindow.swift */,
@@ -365,6 +366,8 @@
 				2A30A856230E773D00F572ED /* Website.swift */,
 				2AD86C572306B95400D2334A /* Assets.xcassets */,
 				2AD86C592306B95400D2334A /* Main.storyboard */,
+				2A2D310F2311730000CC6F1A /* kextupdaterng.html */,
+				2A4AF1552311CB0A00EDB9E4 /* progressanim.png */,
 				2AD86C5C2306B95400D2334A /* Info.plist */,
 				2AD86C5D2306B95400D2334A /* Kext_Updater.entitlements */,
 			);
@@ -409,7 +412,8 @@
 				2A30A830230BF90600F572ED /* Kextx Copy */,
 				2A30A836230BF93300F572ED /* Pics Copy */,
 				2A30A839230BF95200F572ED /* Sounds Copy */,
-				2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare */,
+				2A4AF1542311B98500EDB9E4 /* Zip App and send to Homeshare */,
+				2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare Test */,
 			);
 			buildRules = (
 			);
@@ -467,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4AF1562311CB0A00EDB9E4 /* progressanim.png in Resources */,
 				2AD86C582306B95400D2334A /* Assets.xcassets in Resources */,
 				2AD86C5B2306B95400D2334A /* Main.storyboard in Resources */,
 			);
@@ -492,7 +497,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare */ = {
+		2A4AF1542311B98500EDB9E4 /* Zip App and send to Homeshare */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,7 +513,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    cp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload/kextupdaterng.html\"\n    rm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\ncp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
+		};
+		2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare Test */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Zip App and send to Homeshare Test";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    cp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload2/kextupdaterng.html\"\n    rm /Volumes/Homeshare/kextupdater/upload2/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload2/kextupdaterng2.zip\nfi\n";
 		};
 		FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -699,11 +722,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,11 +745,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -6,4 +6,5 @@ target 'Kext Updater' do
   pod 'LetsMove'
   pod 'Sparkle'
   pod 'KeychainSwift'
+  pod 'APNGKit'
 end

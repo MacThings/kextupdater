@@ -2235,10 +2235,6 @@ DQ
                                                 <segue destination="Crb-K7-oz6" kind="popover" popoverAnchorView="eug-xW-6I7" popoverBehavior="t" preferredEdge="maxY" id="dMf-ia-hNx"/>
                                             </connections>
                                         </button>
-                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ZrS-DF-gDR">
-                                            <rect key="frame" x="610" y="193" width="32" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsU-x5-KeN" userLabel="EFI Image Red">
                                             <rect key="frame" x="418" y="11" width="24" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -2250,7 +2246,7 @@ DQ
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="rq3-GA-RoS"/>
                                         </imageView>
                                         <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-Aa-dGh" userLabel="Paypal bt">
-                                            <rect key="frame" x="593" y="276" width="58" height="30"/>
+                                            <rect key="frame" x="597" y="119" width="58" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="donate" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="JV2-ol-t6U">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2259,6 +2255,25 @@ DQ
                                             <connections>
                                                 <action selector="paypal_button:" target="bdJ-Gk-pDf" id="5Bq-Us-C9D"/>
                                             </connections>
+                                        </button>
+                                        <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-Ni-UMM" userLabel="Paypal bt">
+                                            <rect key="frame" x="621" y="154" width="34" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="right" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="e2z-gF-Bwd">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="bug_report_click_sendmail:" target="bdJ-Gk-pDf" id="diy-Se-2PI"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xuk-j0-jIC" userLabel="App Logo Animation">
+                                            <rect key="frame" x="607" y="218" width="38" height="38"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QzC-UZ-0xU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
                                         </button>
                                     </subviews>
                                 </view>
@@ -2515,32 +2530,6 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box hidden="YES" fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="at2-t1-Qfd" userLabel="Networkerror">
-                                <rect key="frame" x="-3" y="0.0" width="683" height="460"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="H1w-KM-fW2">
-                                    <rect key="frame" x="1" y="1" width="681" height="458"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-cd-Pm4">
-                                            <rect key="frame" x="37" y="70" width="607" height="206"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="nointernet" id="rfp-47-z8c"/>
-                                        </imageView>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-ds-UTq">
-                                            <rect key="frame" x="48" y="292" width="585" height="106"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment." allowsEditingTextAttributes="YES" id="47t-5V-eq8">
-                                                <font key="font" metaFont="systemSemibold" size="22"/>
-                                                <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                    </subviews>
-                                </view>
-                                <color key="borderColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
-                                <color key="fillColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                            </box>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-2b-kiw" userLabel="CRT View">
                                 <rect key="frame" x="19" y="80" width="385" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2550,6 +2539,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="app_logo" destination="gLh-CT-dn6" id="QG2-Sx-bqo"/>
+                        <outlet property="app_logo_animation" destination="Xuk-j0-jIC" id="wbF-23-OUp"/>
                         <outlet property="bootloader_button" destination="FLW-E7-UGI" id="LBv-Aq-MOh"/>
                         <outlet property="crtview" destination="OnH-2b-kiw" id="2Wd-HS-G4s"/>
                         <outlet property="efi_button" destination="Gmk-gz-FIC" id="9Mr-Qa-w82"/>
@@ -2580,7 +2570,6 @@ DQ
                         <outlet property="kuversion" destination="v0v-Oh-JvP" id="7K3-TM-11p"/>
                         <outlet property="network_error" destination="at2-t1-Qfd" id="27u-bY-zo1"/>
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
-                        <outlet property="progress_gear" destination="ZrS-DF-gDR" id="i1J-BM-bcY"/>
                         <outlet property="quit_button" destination="nyp-0e-eWT" id="eTx-qV-KqC"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
@@ -3986,6 +3975,32 @@ DQ
                                     <segue destination="bdJ-Gk-pDf" kind="embed" id="jt8-93-b4E"/>
                                 </connections>
                             </containerView>
+                            <box hidden="YES" fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="at2-t1-Qfd" userLabel="Networkerror">
+                                <rect key="frame" x="155" y="0.0" width="683" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="H1w-KM-fW2">
+                                    <rect key="frame" x="1" y="1" width="681" height="458"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-cd-Pm4">
+                                            <rect key="frame" x="37" y="70" width="607" height="206"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="nointernet" id="rfp-47-z8c"/>
+                                        </imageView>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-ds-UTq">
+                                            <rect key="frame" x="48" y="292" width="585" height="106"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment." allowsEditingTextAttributes="YES" id="47t-5V-eq8">
+                                                <font key="font" metaFont="systemSemibold" size="22"/>
+                                                <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                            </box>
                         </subviews>
                     </view>
                 </viewController>
@@ -4279,6 +4294,7 @@ DQ
         <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>
+        <image name="bug-report" width="512" height="512"/>
         <image name="clover_logo_shadow" width="600" height="713"/>
         <image name="crt" width="466" height="527"/>
         <image name="donate" width="197" height="78"/>
