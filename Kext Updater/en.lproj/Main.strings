@@ -726,7 +726,7 @@
 "bGB-8s-18F.title" = "10.11.6 - 15G31";
 
 /* Class = "NSMenuItem"; title = "Gfx"; ObjectID = "bRU-Iv-WCR"; */
-"bRU-Iv-WCR.title" = "Gfx";
+"bRU-Iv-WCR.title" = "Graphics";
 
 /* Class = "NSViewController"; title = "Kext Updater"; ObjectID = "bdJ-Gk-pDf"; */
 "bdJ-Gk-pDf.title" = "Kext Updater";

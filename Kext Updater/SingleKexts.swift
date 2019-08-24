@@ -16,7 +16,6 @@ class SingleKexts: NSViewController {
     @IBOutlet weak var deselect_excluded_button: NSButton!
     @IBOutlet weak var close_button: NSButton!
     @IBOutlet weak var group_select_pulldown: NSPopUpButton!
-    @IBOutlet weak var group_select_pulldown_empty: NSMenuItem!
     @IBOutlet weak var webview_button: NSButton!
     
     
@@ -31,7 +30,7 @@ class SingleKexts: NSViewController {
     }
     
     @IBAction func group_select(_ sender: Any) {
-        self.group_select_pulldown_empty.isHidden=true
+        self.group_select_pulldown.removeItem(at: 0)
         let group_choice = (sender as AnyObject).selectedCell()!.tag
         if group_choice == 1 {
             for key in UserDefaults.standard.dictionaryRepresentation().keys {
