@@ -234,7 +234,8 @@ function _languageselect()
         mkdir "$ScriptTmpPath"
     fi
     if [ ! -f ${ScriptTmpPath}/locale.tmp ]; then
-        cat ../$language.lproj/Main.strings | sed "s/\=\ \"/\=\"/g" | grep -A 10000000 BASH | tail -n +2 > ${ScriptTmpPath}/locale.tmp
+        #cat ../$language.lproj/Main.strings | sed "s/\=\ \"/\=\"/g" | grep -A 10000000 BASH | tail -n +2 > ${ScriptTmpPath}/locale.tmp
+        cat ../bashstrings/$language.bashstrings > ${ScriptTmpPath}/locale.tmp
     fi
     source ${ScriptTmpPath}/locale.tmp
 }
@@ -460,7 +461,7 @@ function mountefiall()
         if [[ $checkchime = "1" ]]; then
           _playchime
         fi
-        echo "$webdrloaded"
+        echo "$alldone"
     fi
 
 }
@@ -489,7 +490,7 @@ function unmountefi()
       _playchime
     fi
 
-    echo "$webdrloaded"
+    echo "$alldone"
 
 }
 
@@ -522,7 +523,7 @@ function unmountefiall()
       _playchime
     fi
 
-    echo "$webdrloaded"
+    echo "$alldone"
 
 }
 
@@ -985,7 +986,7 @@ function _nvwebdriver()
     if [[ $checkchime = "1" ]]; then
         _playchime
     fi
-    echo $webdrloaded
+    echo $alldone
     exit 0
 }
 
@@ -1050,7 +1051,7 @@ function _main()
     _ozmosis
 
     echo ""
-    echo "$webdrloaded"
+    echo "$alldone"
 #cp ~/Documents/.kulog ~/.
     _cleanup
 
@@ -1213,7 +1214,7 @@ function rebuildcache()
             if [[ $checkchime = "1" ]]; then
                 _playchime
             fi
-        echo "$webdrloaded"
+        echo "$alldone"
         else
             if [[ $checkchime = "1" ]]; then
                 _playchimedeath
@@ -1395,7 +1396,7 @@ function ar92xx()
             if [[ $checkchime = "1" ]]; then
                 _playchime
             fi
-        echo -e "\n$webdrloaded"
+        echo -e "\n$alldone"
         else
             if [[ $checkchime = "1" ]]; then
                 _playchimedeath
@@ -1461,7 +1462,7 @@ function fixsleepimage()
             if [[ $checkchime = "1" ]]; then
                 _playchime
             fi
-        echo -e "\n$webdrloaded"
+        echo -e "\n$alldone"
         else
             if [[ $checkchime = "1" ]]; then
                 _playchimedeath
@@ -1549,7 +1550,7 @@ function thirdparty()
       _playchime
     fi
 
-    echo -e "\n$webdrloaded"
+    echo -e "\n$alldone"
 }
 
 ###################################################################
@@ -1581,7 +1582,7 @@ function sysreport()
 
     echo -e "$reportpath\n""$ScriptHome/Desktop/Systemreport.zip"
 
-    echo -e "\n$webdrloaded"
+    echo -e "\n$alldone"
 }
 
 ###################################################################
@@ -1911,7 +1912,7 @@ function lspciuninstall()
             if [[ $checkchime = "1" ]]; then
               _playchime
             fi
-          echo "$webdrloaded"
+          echo "$alldone"
         fi
     else
       echo "$nolspciinstalled"

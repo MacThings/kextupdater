@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0710C5231145CE00258F09 /* de.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2A0710C02311459D00258F09 /* de.bashstrings */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2A0710C6231145CE00258F09 /* en.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2A0710C12311459D00258F09 /* en.bashstrings */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2A30A808230BDB8300F572ED /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */; };
 		2A30A82F230BF8FF00F572ED /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2A30A82C230BF85400F572ED /* report.html */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2A30A832230BF92700F572ED /* 10.11+12DirektHW.kext in Kextx Copy */ = {isa = PBXBuildFile; fileRef = 2A30A821230BF84500F572ED /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -48,6 +50,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2A0710C4231145B100258F09 /* Copy Bash Strings */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bashstrings;
+			dstSubfolderSpec = 7;
+			files = (
+				2A0710C5231145CE00258F09 /* de.bashstrings in Copy Bash Strings */,
+				2A0710C6231145CE00258F09 /* en.bashstrings in Copy Bash Strings */,
+			);
+			name = "Copy Bash Strings";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A30A82E230BF8EE00F572ED /* HTML Copy */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +169,8 @@
 
 /* Begin PBXFileReference section */
 		0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A0710C02311459D00258F09 /* de.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = de.bashstrings; sourceTree = "<group>"; };
+		2A0710C12311459D00258F09 /* en.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.bashstrings; sourceTree = "<group>"; };
 		2A30A807230BDB8300F572ED /* nVidiaWebdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nVidiaWebdriver.swift; sourceTree = "<group>"; };
 		2A30A80A230BF81F00F572ED /* passok.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = passok.aif; sourceTree = "<group>"; };
 		2A30A80B230BF81F00F572ED /* quadra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quadra.mp3; sourceTree = "<group>"; };
@@ -214,6 +230,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0710BF2311459D00258F09 /* bashstrings */ = {
+			isa = PBXGroup;
+			children = (
+				2A0710C02311459D00258F09 /* de.bashstrings */,
+				2A0710C12311459D00258F09 /* en.bashstrings */,
+			);
+			path = bashstrings;
+			sourceTree = "<group>";
+		};
 		2A30A809230BF81F00F572ED /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */,
+				2A0710BF2311459D00258F09 /* bashstrings */,
 				2AC197B3230AC30C0071932C /* bin */,
 				2A30A82B230BF85400F572ED /* html */,
 				2A30A81F230BF84500F572ED /* kexts */,
@@ -372,6 +398,7 @@
 				2AD86C4E2306B95200D2334A /* Resources */,
 				2AD86C4D2306B95200D2334A /* Frameworks */,
 				1125763990DA553786F62E29 /* [CP] Embed Pods Frameworks */,
+				2A0710C4231145B100258F09 /* Copy Bash Strings */,
 				2AC197B1230A9DFD0071932C /* Script Copy */,
 				2AC197C1230AC3350071932C /* Bin Copy */,
 				2AC197C6230AC35E0071932C /* Bin LSPCI Copy */,
