@@ -3921,7 +3921,7 @@ DQ
                             <webView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fkh-j8-7K7">
                                 <rect key="frame" x="0.0" y="40" width="850" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
                                     <nil key="identifier"/>
                                 </webPreferences>
                             </webView>
@@ -4234,7 +4234,7 @@ DQ
                             <webView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-7i-8pV">
                                 <rect key="frame" x="20" y="53" width="660" height="228"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
                                     <nil key="identifier"/>
                                 </webPreferences>
                             </webView>

@@ -71,30 +71,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         process.waitUntilExit()
         filelHandler.readabilityHandler = nil
     }
-    
-    func asyncShellExec(path: String, args: [String] = []) {
-        let process            = Process.init()
-        process.launchPath     = "/bin/bash"
-        process.arguments      = [path] + args
-        let outputPipe         = Pipe()
-        process.standardOutput = outputPipe
-        process.launch()
-        //self.app_logo_animation.isHidden = false
-        //self.animstart()
-        
-        DispatchQueue.global().async {
-           
-            }
-            process.waitUntilExit()
-            DispatchQueue.main.async {
-                //self.output_window.scrollToEndOfDocument(nil)
-                //self.animstop()
-                //self.app_logo_animation.isHidden = true
-            }
-        
-        
-    }
-    
-    
 }
 
