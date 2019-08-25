@@ -29,7 +29,9 @@
 		2A30A84B230C1D9E00F572ED /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A84A230C1D9E00F572ED /* Preferences.swift */; };
 		2A30A855230D6F7500F572ED /* IO80211Family.kext in Kexts Copy IO */ = {isa = PBXBuildFile; fileRef = 2A30A825230BF84500F572ED /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A30A857230E773D00F572ED /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A30A856230E773D00F572ED /* Website.swift */; };
-		2A4AF1562311CB0A00EDB9E4 /* progressanim.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4AF1552311CB0A00EDB9E4 /* progressanim.png */; };
+		2A4AF15B2312A3AE00EDB9E4 /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2A4AF1582312A39200EDB9E4 /* progressanim.png */; };
+		2A4AF15E2312A92800EDB9E4 /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2A4AF15C2312A52300EDB9E4 /* progressanim-dark.png */; };
+		2A4AF15F2312A94300EDB9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD86C592306B95400D2334A /* Main.storyboard */; };
 		2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
@@ -44,7 +46,6 @@
 		2AD86C542306B95200D2334A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD86C532306B95200D2334A /* AppDelegate.swift */; };
 		2AD86C562306B95200D2334A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD86C552306B95200D2334A /* ViewController.swift */; };
 		2AD86C582306B95400D2334A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD86C572306B95400D2334A /* Assets.xcassets */; };
-		2AD86C5B2306B95400D2334A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD86C592306B95400D2334A /* Main.storyboard */; };
 		2AF4AADD230B025000648E48 /* PasswordWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4AADC230B025000648E48 /* PasswordWindow.swift */; };
 		2AF4AADF230C4DF300648E48 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4AADE230C4DF300648E48 /* Tools.swift */; };
 		BA8B3A01B90C8BB3DD0A8BA7 /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */; };
@@ -129,6 +130,18 @@
 			name = "Kexts Copy IO";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A4AF15A2312A39F00EDB9E4 /* Anim Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = anim;
+			dstSubfolderSpec = 7;
+			files = (
+				2A4AF15E2312A92800EDB9E4 /* progressanim-dark.png in Anim Copy */,
+				2A4AF15B2312A3AE00EDB9E4 /* progressanim.png in Anim Copy */,
+			);
+			name = "Anim Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AC197B1230A9DFD0071932C /* Script Copy */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,7 +206,8 @@
 		2A30A848230C064400F572ED /* Bootloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
 		2A30A84A230C1D9E00F572ED /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		2A30A856230E773D00F572ED /* Website.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
-		2A4AF1552311CB0A00EDB9E4 /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
+		2A4AF1582312A39200EDB9E4 /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
+		2A4AF15C2312A52300EDB9E4 /* progressanim-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressanim-dark.png"; sourceTree = "<group>"; };
 		2A90208C230FCB4A009E8D3D /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
 		2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kext Updater.entitlements"; sourceTree = "<group>"; };
 		2ABA236A230EFAD9008D98C6 /* Changelog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
@@ -294,6 +308,15 @@
 			path = html;
 			sourceTree = "<group>";
 		};
+		2A4AF1572312A39200EDB9E4 /* anim */ = {
+			isa = PBXGroup;
+			children = (
+				2A4AF15C2312A52300EDB9E4 /* progressanim-dark.png */,
+				2A4AF1582312A39200EDB9E4 /* progressanim.png */,
+			);
+			path = anim;
+			sourceTree = "<group>";
+		};
 		2AC197AE230A9DA30071932C /* script */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +367,7 @@
 		2AD86C522306B95200D2334A /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2A4AF1572312A39200EDB9E4 /* anim */,
 				2A90208F230FCC2F009E8D3D /* Kext Updater.entitlements */,
 				2A0710BF2311459D00258F09 /* bashstrings */,
 				2AC197B3230AC30C0071932C /* bin */,
@@ -367,7 +391,6 @@
 				2AD86C572306B95400D2334A /* Assets.xcassets */,
 				2AD86C592306B95400D2334A /* Main.storyboard */,
 				2A2D310F2311730000CC6F1A /* kextupdaterng.html */,
-				2A4AF1552311CB0A00EDB9E4 /* progressanim.png */,
 				2AD86C5C2306B95400D2334A /* Info.plist */,
 				2AD86C5D2306B95400D2334A /* Kext_Updater.entitlements */,
 			);
@@ -412,6 +435,7 @@
 				2A30A830230BF90600F572ED /* Kextx Copy */,
 				2A30A836230BF93300F572ED /* Pics Copy */,
 				2A30A839230BF95200F572ED /* Sounds Copy */,
+				2A4AF15A2312A39F00EDB9E4 /* Anim Copy */,
 				2A4AF1542311B98500EDB9E4 /* Zip App and send to Homeshare */,
 				2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare Test */,
 			);
@@ -471,9 +495,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A4AF1562311CB0A00EDB9E4 /* progressanim.png in Resources */,
+				2A4AF15F2312A94300EDB9E4 /* Main.storyboard in Resources */,
 				2AD86C582306B95400D2334A /* Assets.xcassets in Resources */,
-				2AD86C5B2306B95400D2334A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

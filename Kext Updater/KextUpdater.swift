@@ -775,18 +775,50 @@ class KextUpdater: NSViewController {
     }
     
     func animstart() -> Void {
-            self.app_logo_animation.isHidden=false
-            let image = APNGImage(named: "progressanim.png")
+        check_theme()
+        let themecheck = UserDefaults.standard.string(forKey: "System Theme")
+        if themecheck == "Light"{
+            let image = APNGImage(named: "anim/progressanim.png")
             let imageView = APNGImageView(image: image)
             app_logo_animation.addSubview(imageView)
             imageView.startAnimating()
+        } else {
+            let image = APNGImage(named: "anim/progressanim-dark.png")
+            let imageView = APNGImageView(image: image)
+            app_logo_animation.addSubview(imageView)
+            imageView.startAnimating()
+        }
+        self.app_logo_animation.isHidden=false
     }
     
     func animstop() -> Void {
+        check_theme()
+        let themecheck = UserDefaults.standard.string(forKey: "System Theme")
+        if themecheck == "Light"{
+            let image = APNGImage(named: "anim/progressanim.png")
+            let imageView = APNGImageView(image: image)
+            app_logo_animation.addSubview(imageView)
+            imageView.stopAnimating()
+        } else {
+            let image = APNGImage(named: "anim/progressanim-dark.png")
+            let imageView = APNGImageView(image: image)
+            app_logo_animation.addSubview(imageView)
+            imageView.stopAnimating()
+        }
         self.app_logo_animation.isHidden=true
-        let image = APNGImage(named: "progressanim.png")
-        let imageView = APNGImageView(image: image)
-        app_logo_animation.addSubview(imageView)
-        imageView.stopAnimating()
+
+        
+    }
+    
+    func check_theme() -> Void {
+    let path = self.userDesktopDirectory + "/Library/Preferences/.GlobalPreferences.plist"
+    let dictRoot = NSDictionary(contentsOfFile: path)
+    if let dict = dictRoot{
+        if (dict["AppleInterfaceStyle"] as? String) != nil {
+            UserDefaults.standard.set("Dark", forKey: "System Theme")
+        } else {
+            UserDefaults.standard.set("Light", forKey: "System Theme")
+        }
+    }
     }
 }
