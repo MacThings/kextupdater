@@ -261,7 +261,6 @@ if [[ $admin = "" ]]; then
       _helpDefaultWrite "Admin" "Yes"
       _helpDefaultWrite "Rootuser" "$user"
       _helpDefaultWrite "RootuserFull" "$userfull"
-#exit 0
     else
       _helpDefaultWrite "Admin" "No"
       admin="No"
@@ -428,20 +427,6 @@ function mountefiall()
         echo "$error"
     else
         _helpDefaultWrite "Mounted" "No"
-
-#efiroot=$( diskutil info "$node" |grep "Partition UUID" | sed "s/.*://g" |xargs )
-#_helpDefaultWrite "EFI Root" "$efiroot"
-#devicenode=$( diskutil info "$efiroot" | grep "Device Node:" | sed "s/.*://g" | xargs )
-#devicenodemain=$( echo -e "$node" | sed "s/s[0-9]//g" )
-#drivemodel=$( diskutil info $devicenodemain |grep "Media Name:" | sed "s/.*://g" |xargs )
-#diskscan=$( diskutil info $efiscan )
-#mountpoint=$( diskutil info "$node" | grep "Mount Point:" | sed "s/.*://g" | xargs )
-#protocol=$( diskutil info "$efiroot" | grep "Protocol:" | sed "s/.*://g" | xargs )
-#devicelocation=$( diskutil info "$efiroot" | grep "Device Location:" | sed "s/.*://g" | xargs )
-#_helpDefaultWrite "Mount Point" "$mountpoint"
-#_helpDefaultWrite "Drive Model" "$drivemodel"
-#_helpDefaultWrite "Device Node" "$devicenode"
-#_helpDefaultWrite "Device Protocol" "$protocol"
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
@@ -635,6 +620,7 @@ function initial()
     if [[ $bootloader = "OpenCore" ]]; then
     check_opencore_conf
     fi
+
 }
 
 #################################################################
@@ -752,44 +738,6 @@ function mainscript()
 
     for i in "${kextArray[@]}"; do echo "$i" >> "$ScriptTmpPath"/kextarraylist; done
 
-#========================= Check APFS =========================#
-function _apfscheck()
-{
-    apfscheck=$( ../bin/./BDMESG |grep "APFS driver" ) # Checks if apfs.efi is loaded
-
-    if [ -d /Volumes/ESP ]; then
-        efipath="ESP"
-    else
-        efipath="EFI"
-    fi
-
-    if [[ $apfscheck != "" ]]; then
-        if [ ! -d /Volumes/$efipath ]; then
-            efi="off"
-            diskutil mount $efiroot >/dev/null 2>&1
-            apfstrash=$( find /Volumes/$efipath/.Trashes -name "apfs.efi" )
-            if [ -f $apfstrash ]; then # Deletes apfs.efi from Trashcan if its there
-                rm $apfstrash >/dev/null 2>&1
-            fi
-        fi
-        if [ -d /Volumes/$efipath ]; then
-            apfstrash=$( find /Volumes/$efipath/.Trashes -name "apfs.efi" )
-            if [ -f $apfstrash ]; then # Deletes apfs.efi from Trashcan if its there
-                rm $apfstrash >/dev/null 2>&1
-            fi
-                apfspath=$( find /Volumes/$efipath -name "apfs.efi" |head -n 1 )
-            if [[ $apfspath = *apfs.efi* ]]; then # Check if apfs.efi is in place
-                apfs=$( cat "$apfspath" |xxd | grep -A 2 APFS | head -n 2 | tail -n 1 | sed -e "s/.*\ \ //g" -e "s/\.\.\..*//g" -e "s/\///g" )
-            fi
-        fi
-        if [[ $efi = "off" ]]; then #If the EFI wasn´t mounted before executing the Kext Updater it will be unmounted "politely"
-            if [[ $efipath = "EFI" ]]; then
-                diskutil umount $efiroot >/dev/null 2>&1
-            fi
-        fi
-    fi
-}
-
 #========================= Check for nVidia Webdriver =========================#
 checkweb=$( echo -e "$kextstats" |grep web.GeForceWeb )
 if [[ $checkweb != "" ]]; then
@@ -899,42 +847,6 @@ function _kextLoader()
     done
 }
 
-#========================= KextReport =========================#
-function _kextReport()
-{
-    kextstats=$( kextstat | grep -v com.apple )
-    date > "$ScriptReportPath"/kextreport.txt
-    echo "" >> "$ScriptReportPath"/kextreport.txt
-    sw_vers |tail -n2 >> "$ScriptReportPath"/kextreport.txt
-    echo "" >> "$ScriptReportPath"/kextreport.txt
-    echo "$kextloaded" >> "$ScriptReportPath"/kextreport.txt
-    echo "─────────────────" >> "$ScriptReportPath"/kextreport.txt
-    for kextList in "${kextArray[@]}"
-        do
-            IFS=","
-            data=($kextList)
-            name=${data[0]}
-            lecho=$( echo -e "$kextstats" |grep -w ${data[1]} | sed -e "s/.*(//g" -e "s/).*//g" )
-            local=$( echo $lecho | sed -e "s/\.//g" )
-            if ! [[ $local = "" ]]; then
-                echo "${data[2]}" "($lecho)" >> "$ScriptReportPath"/kextreport.txt
-            fi
-    done
-    echo "─────────────────" >> "$ScriptReportPath"/kextreport.txt
-    echo "" >> "$ScriptReportPath"/kextreport.txt
-    kextstat | grep AppleHDA\ \( > /dev/null
-    if [ $? = 0 ]; then
-        echo "$hdaloaded" >> "$ScriptReportPath"/kextreport.txt
-    else
-        echo "$hdanotloaded" >> "$ScriptReportPath"/kextreport.txt
-    fi
-    echo "" >> "$ScriptReportPath"/kextreport.txt
-    echo "$reportpath": >> "$ScriptReportPath"/kextreport.txt
-    echo "$ScriptReportPath"/kextreport.txt >> "$ScriptReportPath"/kextreport.txt
-
-    cat "$ScriptReportPath"/kextreport.txt
-}
-
 #========================= Helpfunction Update =========================
 function _toUpdate()
 {
@@ -1028,12 +940,6 @@ function _main()
             if [ -f ${ScriptTmpPath}/kextloaded ]; then
                 amount=$( cat "$ScriptTmpPath/kextloaded" | wc -l | xargs )
                 ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
-#getdate=`date`
-#echo -e "\n================================================================================" >> "$ScriptDownloadPath"/logging.txt
-#echo -e "========================= ""$getdate"" =========================" >> "$ScriptDownloadPath"/kulog.txt
-#echo -e "================================================================================\n" >> "$ScriptDownloadPath"/logging.txt
-#cat ~/Documents/.kulog >> "$ScriptDownloadPath"/logging.txt
-#rm ~/Documents/.kulog
             else
                 amount="0"
             fi
@@ -1054,7 +960,6 @@ function _main()
 
     echo ""
     echo "$alldone"
-#cp ~/Documents/.kulog ~/.
     _cleanup
 
     if [[ $name = "efidriver" ]]; then
@@ -1075,15 +980,12 @@ function _main()
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"AppleSupport"
     fi
     if [[ $name = "nvidiagraphicsfixup" ]]; then
-    #rm -r ${ScriptDownloadPath}/"NvidiaGraphicsFixup"
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"NvidiaGraphicsFixup"
     fi
     if [[ $name = "atheroswifiinjector" ]]; then
-    #rm -r ${ScriptDownloadPath}/"AtherosWiFiInjector"
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"AtherosWiFiInjector"
     fi
     if [[ $name = "tscadjustreset" ]]; then
-    #rm -r ${ScriptDownloadPath}/"AtherosWiFiInjector"
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"TSCAdjustReset"
     fi
 
@@ -1242,24 +1144,6 @@ function exitapp()
 }
 
 ###################################################################
-################ Reset Preferences and restart App ################
-###################################################################
-
-function resetprefs()
-{
-    pid=$(_helpDefaultRead "Pid")
-    kuroot=$(_helpDefaultRead "KU Root")
-    echo "rm ~/Library/Preferences/kextupdater.slsoft.de.plist" > /tmp/kurestarter
-    echo "rm -r ~/Library/Caches/com.slsoft.kextupdater" >> /tmp/kurestarter
-    echo "kill -term $pid" >> /tmp/kurestarter
-    echo "osascript -e 'tell application \"Kext Updater\" to quit'" >> /tmp/kurestarter
-    echo "sleep 1" >> /tmp/kurestarter
-    echo "open \"$kuroot\"/Kext\\ Updater.app" >> /tmp/kurestarter
-    echo "rm /tmp/kurestarter" >> /tmp/kurestarter
-    bash /tmp/kurestarter
-}
-
-###################################################################
 ####################### Kext Mass Download ########################
 ###################################################################
 
@@ -1290,21 +1174,6 @@ _playchimedeath
 fi
 fi
 exit 0
-}
-
-
-
-
-###################################################################
-##################### Reset excluded Kexts ########################
-###################################################################
-function excludereset()
-{
-    array=($allkextsupper)
-    for i in "${array[@]}"; do
-      _helpDefaultDelete "ex-$i" 2> /dev/null
-    done
-    exit 0
 }
 
 ###################################################################
@@ -1551,38 +1420,6 @@ function thirdparty()
     if [[ $checkchime = "1" ]]; then
       _playchime
     fi
-
-    echo -e "\n$alldone"
-}
-
-###################################################################
-####################### Create Systemreport #######################
-###################################################################
-
-function sysreport()
-{
-
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
-    lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
-
-    _languageselect
-
-    echo -e "$sysreport\n"
-
-    system_profiler -detailLevel mini SPHardwareDataType SPAudioDataType SPNetworkDataType SPExtensionsDataType SPDisplaysDataType SPPCIDataType SPSoftwareDataType SPUSBDataType SPBluetoothDataType SPCameraDataType SPCardReaderDataType SPEthernetDataType SPFireWireDataType SPHardwareRAIDDataType SPNVMeDataType SPParallelSCSIDataType SPPowerDataType SPSASDataType SPSerialATADataType SPThunderboltDataType SPAirPortDataType -xml > "$ScriptTmpPath/SystemProfiler.spx"
-
-    if [ -f /System/Library/LaunchDaemons/Niresh* ]; then
-        ../bin/./PlistBuddy -c "Set 0:_items:0:SMC_version_system Distro!" "$ScriptTmpPath/SystemProfiler.spx"
-        zip -jq "$ScriptHome/Desktop/Systemreport.zip" "$ScriptTmpPath/SystemProfiler.spx"
-        else
-        zip -jq "$ScriptHome/Desktop/Systemreport.zip" "$ScriptTmpPath/SystemProfiler.spx"
-    fi
-
-    if [[ $checkchime = "1" ]]; then
-      _playchime
-    fi
-
-    echo -e "$reportpath\n""$ScriptHome/Desktop/Systemreport.zip"
 
     echo -e "\n$alldone"
 }
@@ -1837,7 +1674,7 @@ function htmlreport()
 
     sed -e "s/!DATE!/$date/g" -e "s/!SWVERSION!/$swversion/g" -e "s/!SWBUILD!/$swbuild/g"  -e "s/!MODELNAME!/$modelname/g" -e "s/!MODELID!/$modelid/g" -e "s/!CPUNAME!/$cpuname/g" -e "s/!CORES!/$cores/g" -e "s/!MEMORY!/$memory/g" -e "s/!GFX!/$gfx/g" -e "s/!APPLEHDA!/$applehda/g" -e "s/!BOOTLOADER!/$bootloader2/g" -e "s/!HACKKEXTS!/$hackkexts/g" -e "s/!NONAPPLEKEXTS!/$nonapplekexts/g" -e "s/!DIS!/$dis/g" -e "s/!LSPCI!/$lspci/g" -e "s/!POWER!/$power/g" ../html/report.html > "$ScriptTmpPath"/report2.html
 
-    cat "$ScriptTmpPath"/report2.html | sed -e "s/xtempx/\//g" | tr '§' '\/' > "$ScriptTmpPath"/Report/Report.html
+    cat "$ScriptTmpPath"/report2.html |sed -e "s/xtempx/\//g" |tr '§' '\/' > "$ScriptTmpPath"/Report/Report.html
 
     ### If OpenCore is used it is not possible to locate path of the injected Kexts. Damn! )-:=
     if [[ $efikind = "OpenCore" ]]; then
@@ -1881,48 +1718,6 @@ function htmlreport()
       tempmnt=""
     fi
     fi
-}
-
-###################################################################
-####################### lspci Uninstaller #########################
-###################################################################
-
-function lspciuninstall()
-{
-    user=$( _helpDefaultRead "Rootuser" )
-    keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
-    lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
-
-    _languageselect
-
-    if [ -f /usr/local/bin/lspci ]; then
-      if [[ $keychain = "1" ]]; then
-      _getsecret
-      echo "$uninstalllspci"
-      osascript -e 'do shell script "kextunload /Library/Extensions/lspcidrv.kext; sudo rm -rf /usr/local/bin/lspci /usr/local/bin/setpci /usr/local/bin/update-pciids /usr/local/share/pci.ids.gz /Library/Extensions/lspcidrv.kext; sudo chmod -Rf 755 /Library/Extensions; sudo chown -Rf 0:0 /Library/Extensions; sudo touch -f /Library/Extensions; sudo kextcache -system-prelinked-kernel" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-      echo "$uninstalllspci"
-      osascript -e 'do shell script "kextunload /Library/Extensions/lspcidrv.kext; sudo rm -rf /usr/local/bin/lspci /usr/local/bin/setpci /usr/local/bin/update-pciids /usr/local/share/pci.ids.gz /Library/Extensions/lspcidrv.kext; sudo chmod -Rf 755 /Library/Extensions; sudo chown -Rf 0:0 /Library/Extensions; sudo touch -f /Library/Extensions; sudo kextcache -system-prelinked-kernel" with administrator privileges' >/dev/null 2>&1
-    fi
-        if [ $? != 0 ]; then
-            if [[ $checkchime = "1" ]]; then
-              _playchimedeath
-            fi
-          echo "$error"
-        else
-            if [[ $checkchime = "1" ]]; then
-              _playchime
-            fi
-          echo "$alldone"
-        fi
-    else
-      echo "$nolspciinstalled"
-            if [[ $checkchime = "1" ]]; then
-              _playchimedeath
-            fi
-    fi
-
 }
 
 ###################################################################

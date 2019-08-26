@@ -1954,7 +1954,6 @@ DQ
                         <outlet property="deselect_all_button" destination="pG1-JT-NSK" id="vDR-Ig-IVd"/>
                         <outlet property="deselect_excluded_button" destination="Zrm-DZ-xGj" id="I3S-Wr-4Vd"/>
                         <outlet property="group_select_pulldown" destination="jzT-xM-9h9" id="AkN-Ie-bsQ"/>
-                        <outlet property="group_select_pulldown_empty" destination="QTQ-x6-Dxw" id="mxV-uv-gbc"/>
                         <outlet property="select_all_button" destination="SNg-YO-ucq" id="M9r-7E-tow"/>
                         <outlet property="start_button" destination="kgv-E0-CJQ" id="NTP-D7-XGc"/>
                         <outlet property="webview_button" destination="W5T-QQ-JDg" id="3ef-rV-8CB"/>
@@ -2324,7 +2323,7 @@ DQ
                                     <rect key="frame" x="0.0" y="0.0" width="385" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="3me-WA-Top">
+                                        <textView ambiguous="YES" editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="3me-WA-Top">
                                             <rect key="frame" x="0.0" y="0.0" width="385" height="360"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
