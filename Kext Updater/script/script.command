@@ -1490,11 +1490,12 @@ function htmlreport()
 
     if [[ $efikind = "Oz" ]]; then
       mkdir "$ScriptTmpPath"/Report "$ScriptTmpPath"/Report/Ozmosis >/dev/null 2>&1
-      cp -r /Volumes/"$volumename"/EFI/Oz/Acpi /Volumes/"$volumename"/EFI/Oz/Darwin /Volumes/"$volumename"/EFI/Oz/Theme.bin /Volumes/"$volumename"/EFI/Oz/Defaults.plist "$ScriptTmpPath"/Report/Ozmosis/.
+    efipathoz=$( find /Volumes/EFI -name "Default.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" |sed 's/\/Oz.*//g' )
+      cp -r "$efipathoz"/Oz/Acpi "$efipathoz"/Oz/Darwin "$efipathoz"/Oz/Theme.bin "$efipathoz"/Oz/Defaults.plist "$ScriptTmpPath"/Report/Ozmosis/.
 
-      ozserial=$( grep -A1 'SystemSerial' /Volumes/"$volumename"/EFI/Oz/Defaults.plist|grep -v "SystemSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
+      ozserial=$( grep -A1 'SystemSerial' "$efipathoz"/Oz/Defaults.plist|grep -v "SystemSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
 
-      ozbaseboardserial=$( grep -A1 'BaseBoardSerial' /Volumes/"$volumename"/EFI/Oz/Defaults.plist|grep -v "BaseBoardSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
+      ozbaseboardserial=$( grep -A1 'BaseBoardSerial' "$efipathoz"/Oz/Defaults.plist|grep -v "BaseBoardSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
 
       sed -ib "s/$ozserial/000000000000/g" "$ScriptTmpPath"/Report/Ozmosis/Defaults.plist
       sed -ib "s/$ozbaseboardserial/00000000000000000/g" "$ScriptTmpPath"/Report/Ozmosis/Defaults.plist

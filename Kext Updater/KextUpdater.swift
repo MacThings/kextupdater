@@ -443,6 +443,7 @@ class KextUpdater: NSViewController {
     }
     
     @IBAction func report(_ sender: Any) {
+        output_window.textStorage?.mutableString.setString("")
         start_button.isEnabled=false
         kexts_button.isEnabled=false
         webdriver_button.isEnabled=false
