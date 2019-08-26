@@ -747,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE4B4A3712FD1CDFC277B6B5 /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
 				CODE_SIGN_IDENTITY = "";
@@ -770,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46DBD829FF23E5BAC038B071 /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
 				CODE_SIGN_IDENTITY = "";
