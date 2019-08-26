@@ -430,7 +430,7 @@ function mountefiall()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "Default.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" )
+        efipath=$( find "$mountpoint" -name "Defaults.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" )
       fi
       if [[ $bootloader = Clover* ]]; then
         cloverconfig=$( _helpDefaultRead "Cloverconfig" )
@@ -584,7 +584,7 @@ function initial()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "Default.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" | grep -w "Oz" )
+        efipath=$( find "$mountpoint" -name "Defaults.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" | grep -w "Oz" )
       fi
       if [[ $bootloader = Clover* ]]; then
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
@@ -686,7 +686,7 @@ function mountefi()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "Default.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" | grep -w "Oz" )
+        efipath=$( find "$mountpoint" -name "Defaults.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" | grep -w "Oz" )
       fi
       if [[ $bootloader = Clover* ]]; then
         cloverconfig=$( _helpDefaultRead "Cloverconfig" )
@@ -1488,14 +1488,14 @@ function htmlreport()
       ../bin/./PlistBuddy -c "set SystemParameters:CustomUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
     fi
 
-    if [[ $efikind = "Oz" ]]; then
+    if [[ $efikind = "Ozmosis" ]]; then
       mkdir "$ScriptTmpPath"/Report "$ScriptTmpPath"/Report/Ozmosis >/dev/null 2>&1
-    efipathoz=$( find /Volumes/EFI -name "Default.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" |sed 's/\/Oz.*//g' )
-      cp -r "$efipathoz"/Oz/Acpi "$efipathoz"/Oz/Darwin "$efipathoz"/Oz/Theme.bin "$efipathoz"/Oz/Defaults.plist "$ScriptTmpPath"/Report/Ozmosis/.
+      efipathoz=$( find /Volumes/EFI -name "*efaults.plist" |sed -e "s/defaul.*//g" -e "s/Defaul.*//g" |grep -v "Trashes" |head -n 1 )
+      cp -r "$efipathoz"Acpi "$efipathoz"Darwin "$efipathoz"Theme.bin* "$efipathoz"*efaults.plist "$ScriptTmpPath"/Report/Ozmosis/. >/dev/null 2>&1
 
-      ozserial=$( grep -A1 'SystemSerial' "$efipathoz"/Oz/Defaults.plist|grep -v "SystemSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
+      ozserial=$( grep -A1 'SystemSerial' "$efipathoz"*efaults.plist|grep -v "SystemSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
 
-      ozbaseboardserial=$( grep -A1 'BaseBoardSerial' "$efipathoz"/Oz/Defaults.plist|grep -v "BaseBoardSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
+      ozbaseboardserial=$( grep -A1 'BaseBoardSerial' "$efipathoz"*efaults.plist |grep -v "BaseBoardSerial" | xargs | sed -e "s/<string>//g" -e "s/<\/string>//g" )
 
       sed -ib "s/$ozserial/000000000000/g" "$ScriptTmpPath"/Report/Ozmosis/Defaults.plist
       sed -ib "s/$ozbaseboardserial/00000000000000000/g" "$ScriptTmpPath"/Report/Ozmosis/Defaults.plist
