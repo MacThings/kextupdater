@@ -2,7 +2,10 @@
 #
 
 ScriptHome=$(echo $HOME)
-intervall=`defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "UpdateIntervall"`
+interval=`defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "UpdateInterval"`
+let interval="$interval*60*60"
+kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
+kuroot="/Applications"
 
 function runcheck()
 {
@@ -17,18 +20,18 @@ function runcheck()
 
 function kumenubar()
 {
-    kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
-    kuroot="/Applications"
-
-    if [[ $? = "1" ]]; then
-        intervall="240"
-    fi
-
     while true
     do
         bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon
-        sleep "$intervall"
+        sleep "$interval"
     done
+}
+
+function open_kextupdater()
+{
+
+   open "$kuroot"/Kext\ Updater.app
+
 }
 
 function quitmenu()

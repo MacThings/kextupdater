@@ -37,6 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: -1)
+        
+        let intervalinit = UserDefaults.standard.string(forKey: "UpdateInterval")
+        if intervalinit == nil{
+            UserDefaults.standard.set("6", forKey: "UpdateInterval")
+        }
+        
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["runcheck"])
             self.syncShellExec(path: self.scriptPath, args: ["kumenubar"])
@@ -56,7 +62,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         button.action = #selector(displayMenu)
     }
 
-  
+
+    @IBAction func open_kextupdater(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["open_kextupdater"])
+            DispatchQueue.main.async {
+            }
+        }
+    }
+    
     @IBAction func quit_menubar(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
            self.syncShellExec(path: self.scriptPath, args: ["quitmenu"])
@@ -66,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
     }
-   
+
     /**
      * Performs an "asynchronous" shell exec with non blocking UI thread
      */

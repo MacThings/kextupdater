@@ -11,37 +11,38 @@
             <objects>
                 <viewController id="qdv-kZ-Khq" customClass="KUMenuBar" customModule="KUMenuBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" focusRingType="none" id="oYs-At-w56">
-                        <rect key="frame" x="0.0" y="0.0" width="339" height="112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="112"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="339" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-eg-Ogx">
-                                <rect key="frame" x="-2" y="80" width="343" height="24"/>
+                                <rect key="frame" x="-2" y="80" width="292" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Preferences" id="no6-as-NNY">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Update Interval" id="no6-as-NNY">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-Az-mRu">
-                                <rect key="frame" x="171" y="51" width="68" height="23"/>
+                                <rect key="frame" x="171" y="51" width="42" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="roundTextured" title="240" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="aAd-Az-Se2" id="hp1-k4-prK">
+                                <popUpButtonCell key="cell" type="roundTextured" title="6" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="aAd-Az-Se2" id="hp1-k4-prK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="luZ-hD-M3P">
                                         <items>
-                                            <menuItem title="30" id="B0G-wl-DPc"/>
-                                            <menuItem title="60" id="bBc-lm-RgD"/>
-                                            <menuItem title="90" id="qq0-Fk-B6B"/>
-                                            <menuItem title="120" id="Zys-O6-UlM"/>
-                                            <menuItem title="180" id="zBR-fz-Qdr"/>
-                                            <menuItem title="240" state="on" id="aAd-Az-Se2"/>
+                                            <menuItem title="1" id="B0G-wl-DPc"/>
+                                            <menuItem title="2" id="bBc-lm-RgD"/>
+                                            <menuItem title="3" id="qq0-Fk-B6B"/>
+                                            <menuItem title="4" id="Zys-O6-UlM"/>
+                                            <menuItem title="5" id="zBR-fz-Qdr"/>
+                                            <menuItem title="6" state="on" id="aAd-Az-Se2"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
-                                    <action selector="set_intervall:" target="qdv-kZ-Khq" id="ZYc-bi-NH3"/>
+                                    <action selector="set_interval:" target="qdv-kZ-Khq" id="V7F-eG-h3n"/>
+                                    <binding destination="ljD-kz-6T4" name="selectedValue" keyPath="values.UpdateInterval" id="Yax-Ty-rT9"/>
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-dW-MbP">
@@ -54,16 +55,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5D-3X-sfp">
-                                <rect key="frame" x="245" y="54" width="53" height="17"/>
+                                <rect key="frame" x="219" y="54" width="51" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Minutes" id="yYu-Pv-uSR">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Hour(s)" id="yYu-Pv-uSR">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-17-0jH">
-                                <rect key="frame" x="141" y="13" width="57" height="32"/>
+                                <rect key="frame" x="116" y="13" width="57" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Div-YM-d8p">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -79,7 +80,7 @@
                 <customObject id="Id3-Lh-mjz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ljD-kz-6T4"/>
             </objects>
-            <point key="canvasLocation" x="-274.5" y="-22"/>
+            <point key="canvasLocation" x="-300" y="-22"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
@@ -99,6 +100,13 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="XBd-n3-y4k"/>
+                                        <menuItem title="Open Kext Updater" id="6dn-K7-ING">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="open_kextupdater:" target="Voe-Tx-rLC" id="YvD-5J-4bX"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
                                         <menuItem title="Quit KUMenuBar" id="4sb-4s-VLi">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>

@@ -21,9 +21,7 @@ class KUMenuBar: NSViewController {
         self.view.window?.close()
     }
     
-    @IBAction func set_intervall(_ sender: Any) {
-        let intervall = (sender as AnyObject).selectedCell()!.title
-        UserDefaults.standard.set(intervall, forKey: "UpdateIntervall")
+    @IBAction func set_interval(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["runcheck"])
             self.syncShellExec(path: self.scriptPath, args: ["kumenubar"])
@@ -32,9 +30,7 @@ class KUMenuBar: NSViewController {
             }
         }
     }
-    
-    
-    
+
     /**
      * Performs an "asynchronous" shell exec with non blocking UI thread
      */
