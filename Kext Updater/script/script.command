@@ -1233,6 +1233,26 @@ function loginitem_off()
 }
 
 ###################################################################
+################## Kext Updater Menu Bar App ######################
+###################################################################
+function kumenubar_on()
+{
+
+    kuroot=$( _helpDefaultRead "KU Root" | sed -e "s/$/\/Kext\ Updater.app\/Contents\/Resources\/bin\/KUMenuBar.app/" )
+    osascript -e 'tell application "System Events" to delete login item "KUMenuBar"' > /dev/null
+    osascript -e 'tell application "System Events" to make login item at end with properties {path:"'"$kuroot"'", hidden:false}' > /dev/null
+    open "$kuroot"
+
+}
+
+function kumenubar_off()
+{
+    osascript -e 'tell application "System Events" to delete login item "KUMenuBar"' > /dev/null
+    pkill KUMenuBar
+    pkill -f kumenubar
+}
+
+###################################################################
 ################ Copy Atheros40 Kext to /S/L/E ####################
 ###################################################################
 function ar92xx()

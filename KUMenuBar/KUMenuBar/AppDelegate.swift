@@ -36,18 +36,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem = NSStatusBar.system.statusItem(withLength: -1)
-        
         let intervalinit = UserDefaults.standard.string(forKey: "UpdateInterval")
         if intervalinit == nil{
-            UserDefaults.standard.set("6", forKey: "UpdateInterval")
+            UserDefaults.standard.set("21600", forKey: "UpdateInterval")
         }
-        
+        let intervalstring = UserDefaults.standard.string(forKey: "UpdateInterval")
+        let myintervalstring = (intervalstring! as NSString).doubleValue
+        Timer.scheduledTimer(timeInterval: myintervalstring, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
+        statusItem = NSStatusBar.system.statusItem(withLength: -1)
+       
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["runcheck"])
-            self.syncShellExec(path: self.scriptPath, args: ["kumenubar"])
             DispatchQueue.main.async {
-                
             }
         }
         
@@ -62,6 +62,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         button.action = #selector(displayMenu)
     }
 
+    @objc func updatecheck() {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["updatecheck"])
+            DispatchQueue.main.async {
+            }
+        }
+        
+        
+    }
 
     @IBAction func open_kextupdater(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {

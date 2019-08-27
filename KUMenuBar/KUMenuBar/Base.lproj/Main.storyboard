@@ -26,23 +26,23 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-Az-mRu">
                                 <rect key="frame" x="171" y="51" width="42" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="roundTextured" title="6" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="aAd-Az-Se2" id="hp1-k4-prK">
+                                <popUpButtonCell key="cell" type="roundTextured" title="6" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="21600" imageScaling="proportionallyDown" inset="2" selectedItem="aAd-Az-Se2" id="hp1-k4-prK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="luZ-hD-M3P">
                                         <items>
-                                            <menuItem title="1" id="B0G-wl-DPc"/>
-                                            <menuItem title="2" id="bBc-lm-RgD"/>
-                                            <menuItem title="3" id="qq0-Fk-B6B"/>
-                                            <menuItem title="4" id="Zys-O6-UlM"/>
-                                            <menuItem title="5" id="zBR-fz-Qdr"/>
-                                            <menuItem title="6" state="on" id="aAd-Az-Se2"/>
+                                            <menuItem title="1" tag="3600" id="B0G-wl-DPc"/>
+                                            <menuItem title="2" tag="7200" id="bBc-lm-RgD"/>
+                                            <menuItem title="3" tag="10800" id="qq0-Fk-B6B"/>
+                                            <menuItem title="4" tag="14400" id="Zys-O6-UlM"/>
+                                            <menuItem title="5" tag="18000" id="zBR-fz-Qdr"/>
+                                            <menuItem title="6" state="on" tag="21600" id="aAd-Az-Se2"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
                                     <action selector="set_interval:" target="qdv-kZ-Khq" id="V7F-eG-h3n"/>
-                                    <binding destination="ljD-kz-6T4" name="selectedValue" keyPath="values.UpdateInterval" id="Yax-Ty-rT9"/>
+                                    <binding destination="ljD-kz-6T4" name="selectedTag" keyPath="values.UpdateInterval" id="pjw-x7-XCv"/>
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-dW-MbP">
@@ -80,7 +80,7 @@
                 <customObject id="Id3-Lh-mjz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ljD-kz-6T4"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="-22"/>
+            <point key="canvasLocation" x="-298" y="-37"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
@@ -93,26 +93,24 @@
                                 <menu key="submenu" title="KUMenuBar" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Set Update Interval" id="BOF-NM-1cW">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Set Update Interval" keyEquivalent="i" id="BOF-NM-1cW">
                                             <connections>
                                                 <segue destination="qdv-kZ-Khq" kind="show" id="NVj-kM-Ovh"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="XBd-n3-y4k"/>
-                                        <menuItem title="Open Kext Updater" id="6dn-K7-ING">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Open Kext Updater" keyEquivalent="k" id="6dn-K7-ING">
                                             <connections>
                                                 <action selector="open_kextupdater:" target="Voe-Tx-rLC" id="YvD-5J-4bX"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
-                                        <menuItem title="Quit KUMenuBar" id="4sb-4s-VLi">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Quit KUMenuBar" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="quit_menubar:" target="Voe-Tx-rLC" id="nxn-vk-Tfo"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="YAo-02-VrW"/>
                                     </items>
                                 </menu>
                             </menuItem>

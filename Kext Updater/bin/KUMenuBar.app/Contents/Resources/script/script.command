@@ -17,14 +17,11 @@ function runcheck()
 
 }
 
-
-function kumenubar()
+function updatecheck()
 {
-    while true
-    do
-        bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon
-        sleep "$interval"
-    done
+
+    bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemo
+
 }
 
 function open_kextupdater()

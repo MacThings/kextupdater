@@ -18,15 +18,19 @@ class KUMenuBar: NSViewController {
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     @IBAction func ok_button(_ sender: Any) {
-        self.view.window?.close()
+        if let path = Bundle.main.resourceURL?.deletingLastPathComponent().deletingLastPathComponent().absoluteString {
+            NSLog("restart \(path)")
+            _ = Process.launchedProcess(launchPath: "/usr/bin/open", arguments: [path])
+            NSApp.terminate(self)
+            exit(0)
+        }
     }
     
     @IBAction func set_interval(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["runcheck"])
-            self.syncShellExec(path: self.scriptPath, args: ["kumenubar"])
+            self.syncShellExec(path: self.scriptPath, args: ["updatecheck"])
             DispatchQueue.main.async {
-                
             }
         }
     }

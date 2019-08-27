@@ -76,6 +76,12 @@ class Preferences: NSViewController {
             } else if loginitem == false {
                 self.syncShellExec(path: self.scriptPath, args: ["loginitem_off"])
             }
+            let menubaritem = UserDefaults.standard.bool(forKey: "MenuBarItem")
+            if menubaritem == true {
+                self.syncShellExec(path: self.scriptPath, args: ["kumenubar_on"])
+            } else if menubaritem == false {
+                self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
+            }
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ClosePrefs"), object: nil, userInfo: ["name" : self.close_button?.stringValue as Any])
                 }
