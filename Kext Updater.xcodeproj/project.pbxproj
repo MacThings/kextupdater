@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
+		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
+		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
+		2AB304A523150E1500D618FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A323150E1500D618FF /* Main.storyboard */; };
+		2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE123150F61006D447C /* SingleKexts.swift */; };
+		2AC44BED23150F61006D447C /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE223150F61006D447C /* Website.swift */; };
+		2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */; };
+		2AC44BF023150F61006D447C /* DiskInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE523150F61006D447C /* DiskInformation.swift */; };
+		2AC44BF123150F61006D447C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE623150F61006D447C /* KextUpdater.swift */; };
+		2AC44BF223150F61006D447C /* Bootloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE723150F61006D447C /* Bootloader.swift */; };
+		2AC44BF323150F61006D447C /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE823150F61006D447C /* Preferences.swift */; };
+		2AC44BF423150F61006D447C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE923150F61006D447C /* Tools.swift */; };
+		2AC44BF523150F61006D447C /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BEA23150F61006D447C /* Changelog.swift */; };
+		2AC44BF623150F61006D447C /* PasswordWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BEB23150F61006D447C /* PasswordWindow.swift */; };
+		2AC44BFA23151059006D447C /* de.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA523150F38006D447C /* de.bashstrings */; };
+		2AC44BFB23151059006D447C /* en.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA623150F38006D447C /* en.bashstrings */; };
+		2AC44BFD23151081006D447C /* script.command in Script copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAF23150F38006D447C /* script.command */; };
+		2AC44BFF231510A4006D447C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBD23150F39006D447C /* alerter */; };
+		2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBE23150F39006D447C /* PlistBuddy */; };
+		2AC44C01231510A4006D447C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBF23150F39006D447C /* BDMESG */; };
+		2AC44C02231510A4006D447C /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC023150F39006D447C /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC123150F39006D447C /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C05231510CD006D447C /* lspci in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBB23150F39006D447C /* lspci */; };
+		2AC44C06231510CD006D447C /* pci.ids in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBC23150F39006D447C /* pci.ids */; };
+		2AC44C08231510F6006D447C /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA023150F38006D447C /* report.html */; };
+		2AC44C0A23151110006D447C /* IO80211Family.kext in Kext Copy IO */ = {isa = PBXBuildFile; fileRef = 2AC44BAD23150F38006D447C /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C0C23151136006D447C /* 10.11+12DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C0D23151136006D447C /* 10.13DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C0E23151136006D447C /* 10.14DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C0F23151136006D447C /* 10.10DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC44C1123151154006D447C /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA223150F38006D447C /* locked.png */; };
+		2AC44C1223151154006D447C /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA323150F38006D447C /* admin.png */; };
+		2AC44C1423151173006D447C /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB123150F39006D447C /* passok.aif */; };
+		2AC44C1523151173006D447C /* quadra.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB223150F39006D447C /* quadra.mp3 */; };
+		2AC44C1623151173006D447C /* done.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB323150F39006D447C /* done.mp3 */; };
+		2AC44C1723151173006D447C /* pm52.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB423150F39006D447C /* pm52.mp3 */; };
+		2AC44C1823151173006D447C /* quadradeath.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB523150F39006D447C /* quadradeath.mp3 */; };
+		2AC44C1923151173006D447C /* error.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB623150F39006D447C /* error.aif */; };
+		2AC44C1A23151173006D447C /* mq.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB723150F39006D447C /* mq.mp3 */; };
+		2AC44C1B23151173006D447C /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB823150F39006D447C /* ta.mp3 */; };
+		2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC323150F39006D447C /* progressanim.png */; };
+		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
+		7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AC44BF92315103F006D447C /* Copy Bash Strings */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bashstrings;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44BFA23151059006D447C /* de.bashstrings in Copy Bash Strings */,
+				2AC44BFB23151059006D447C /* en.bashstrings in Copy Bash Strings */,
+			);
+			name = "Copy Bash Strings";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44BFC2315106E006D447C /* Script copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = script;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44BFD23151081006D447C /* script.command in Script copy */,
+			);
+			name = "Script copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44BFE23151089006D447C /* Bin Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bin;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44BFF231510A4006D447C /* alerter in Bin Copy */,
+				2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */,
+				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
+				2AC44C02231510A4006D447C /* KUDaemon.app in Bin Copy */,
+				2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */,
+			);
+			name = "Bin Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C04231510AC006D447C /* Bin LSPCI Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bin/lspci;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C05231510CD006D447C /* lspci in Bin LSPCI Copy */,
+				2AC44C06231510CD006D447C /* pci.ids in Bin LSPCI Copy */,
+			);
+			name = "Bin LSPCI Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C07231510E4006D447C /* HTML Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = html;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C08231510F6006D447C /* report.html in HTML Copy */,
+			);
+			name = "HTML Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C0923151100006D447C /* Kext Copy IO */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = kexts;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C0A23151110006D447C /* IO80211Family.kext in Kext Copy IO */,
+			);
+			name = "Kext Copy IO";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C0B2315111F006D447C /* Kexts Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = kexts/lspci;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C0C23151136006D447C /* 10.11+12DirektHW.kext in Kexts Copy */,
+				2AC44C0D23151136006D447C /* 10.13DirektHW.kext in Kexts Copy */,
+				2AC44C0E23151136006D447C /* 10.14DirektHW.kext in Kexts Copy */,
+				2AC44C0F23151136006D447C /* 10.10DirektHW.kext in Kexts Copy */,
+			);
+			name = "Kexts Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C1023151144006D447C /* Pics Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = pics;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C1123151154006D447C /* locked.png in Pics Copy */,
+				2AC44C1223151154006D447C /* admin.png in Pics Copy */,
+			);
+			name = "Pics Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C132315115F006D447C /* Sounds Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = sounds;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C1423151173006D447C /* passok.aif in Sounds Copy */,
+				2AC44C1523151173006D447C /* quadra.mp3 in Sounds Copy */,
+				2AC44C1623151173006D447C /* done.mp3 in Sounds Copy */,
+				2AC44C1723151173006D447C /* pm52.mp3 in Sounds Copy */,
+				2AC44C1823151173006D447C /* quadradeath.mp3 in Sounds Copy */,
+				2AC44C1923151173006D447C /* error.aif in Sounds Copy */,
+				2AC44C1A23151173006D447C /* mq.mp3 in Sounds Copy */,
+				2AC44C1B23151173006D447C /* ta.mp3 in Sounds Copy */,
+			);
+			name = "Sounds Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC44C1C23151180006D447C /* Anim Copy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = anim;
+			dstSubfolderSpec = 7;
+			files = (
+				2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */,
+				2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */,
+			);
+			name = "Anim Copy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AB3049F23150E1300D618FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AB304A123150E1500D618FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AB304A423150E1500D618FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AB304A623150E1500D618FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AB304A723150E1500D618FF /* Kext_Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kext_Updater.entitlements; sourceTree = "<group>"; };
+		2AC44BA023150F38006D447C /* report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = report.html; sourceTree = "<group>"; };
+		2AC44BA223150F38006D447C /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		2AC44BA323150F38006D447C /* admin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = admin.png; sourceTree = "<group>"; };
+		2AC44BA523150F38006D447C /* de.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = de.bashstrings; sourceTree = "<group>"; };
+		2AC44BA623150F38006D447C /* en.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.bashstrings; sourceTree = "<group>"; };
+		2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = "10.11+12DirektHW.kext"; sourceTree = "<group>"; };
+		2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.13DirektHW.kext; sourceTree = "<group>"; };
+		2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.14DirektHW.kext; sourceTree = "<group>"; };
+		2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.10DirektHW.kext; sourceTree = "<group>"; };
+		2AC44BAD23150F38006D447C /* IO80211Family.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IO80211Family.kext; sourceTree = "<group>"; };
+		2AC44BAF23150F38006D447C /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.command; sourceTree = "<group>"; };
+		2AC44BB123150F39006D447C /* passok.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = passok.aif; sourceTree = "<group>"; };
+		2AC44BB223150F39006D447C /* quadra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quadra.mp3; sourceTree = "<group>"; };
+		2AC44BB323150F39006D447C /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
+		2AC44BB423150F39006D447C /* pm52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pm52.mp3; sourceTree = "<group>"; };
+		2AC44BB523150F39006D447C /* quadradeath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quadradeath.mp3; sourceTree = "<group>"; };
+		2AC44BB623150F39006D447C /* error.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.aif; sourceTree = "<group>"; };
+		2AC44BB723150F39006D447C /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
+		2AC44BB823150F39006D447C /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
+		2AC44BBB23150F39006D447C /* lspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = lspci; sourceTree = "<group>"; };
+		2AC44BBC23150F39006D447C /* pci.ids */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pci.ids; sourceTree = "<group>"; };
+		2AC44BBD23150F39006D447C /* alerter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = alerter; sourceTree = "<group>"; };
+		2AC44BBE23150F39006D447C /* PlistBuddy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PlistBuddy; sourceTree = "<group>"; };
+		2AC44BBF23150F39006D447C /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
+		2AC44BC023150F39006D447C /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
+		2AC44BC123150F39006D447C /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
+		2AC44BC323150F39006D447C /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
+		2AC44BC423150F39006D447C /* progressanim-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressanim-dark.png"; sourceTree = "<group>"; };
+		2AC44BE123150F61006D447C /* SingleKexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleKexts.swift; sourceTree = "<group>"; };
+		2AC44BE223150F61006D447C /* Website.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
+		2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nVidiaWebdriver.swift; sourceTree = "<group>"; };
+		2AC44BE523150F61006D447C /* DiskInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskInformation.swift; sourceTree = "<group>"; };
+		2AC44BE623150F61006D447C /* KextUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KextUpdater.swift; sourceTree = "<group>"; };
+		2AC44BE723150F61006D447C /* Bootloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
+		2AC44BE823150F61006D447C /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		2AC44BE923150F61006D447C /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		2AC44BEA23150F61006D447C /* Changelog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
+		2AC44BEB23150F61006D447C /* PasswordWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordWindow.swift; sourceTree = "<group>"; };
+		2AC44BF723150F6B006D447C /* kextupdaterng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kextupdaterng.html; sourceTree = "<group>"; };
+		2AC44C2223151293006D447C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		2AC44C23231512B5006D447C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
+		2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
+		5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AB3049723150E1300D618FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AB3049123150E1300D618FF = {
+			isa = PBXGroup;
+			children = (
+				2AB3049C23150E1300D618FF /* Kext Updater */,
+				2AB3049B23150E1300D618FF /* Products */,
+				4D9645F01E633C8E1A77F904 /* Pods */,
+				EFCEF92E17A76F1031C73313 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2AB3049B23150E1300D618FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AB3049A23150E1300D618FF /* Kext Updater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AB3049C23150E1300D618FF /* Kext Updater */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BF723150F6B006D447C /* kextupdaterng.html */,
+				2AC44BE723150F61006D447C /* Bootloader.swift */,
+				2AC44BEA23150F61006D447C /* Changelog.swift */,
+				2AC44BE523150F61006D447C /* DiskInformation.swift */,
+				2AC44BE623150F61006D447C /* KextUpdater.swift */,
+				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
+				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
+				2AC44BE823150F61006D447C /* Preferences.swift */,
+				2AC44BE123150F61006D447C /* SingleKexts.swift */,
+				2AC44BE923150F61006D447C /* Tools.swift */,
+				2AC44BE223150F61006D447C /* Website.swift */,
+				2AC44BC223150F39006D447C /* anim */,
+				2AC44BA423150F38006D447C /* bashstrings */,
+				2AC44BB923150F39006D447C /* bin */,
+				2AC44B9F23150F38006D447C /* html */,
+				2AC44BA723150F38006D447C /* kexts */,
+				2AC44BA123150F38006D447C /* pics */,
+				2AC44BAE23150F38006D447C /* script */,
+				2AC44BB023150F38006D447C /* sounds */,
+				2AB3049D23150E1300D618FF /* AppDelegate.swift */,
+				2AB3049F23150E1300D618FF /* ViewController.swift */,
+				2AB304A123150E1500D618FF /* Assets.xcassets */,
+				2AB304A323150E1500D618FF /* Main.storyboard */,
+				2AB304A623150E1500D618FF /* Info.plist */,
+				2AB304A723150E1500D618FF /* Kext_Updater.entitlements */,
+			);
+			path = "Kext Updater";
+			sourceTree = "<group>";
+		};
+		2AC44B9F23150F38006D447C /* html */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BA023150F38006D447C /* report.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		2AC44BA123150F38006D447C /* pics */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BA223150F38006D447C /* locked.png */,
+				2AC44BA323150F38006D447C /* admin.png */,
+			);
+			path = pics;
+			sourceTree = "<group>";
+		};
+		2AC44BA423150F38006D447C /* bashstrings */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BA523150F38006D447C /* de.bashstrings */,
+				2AC44BA623150F38006D447C /* en.bashstrings */,
+			);
+			path = bashstrings;
+			sourceTree = "<group>";
+		};
+		2AC44BA723150F38006D447C /* kexts */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BA823150F38006D447C /* lspci */,
+				2AC44BAD23150F38006D447C /* IO80211Family.kext */,
+			);
+			path = kexts;
+			sourceTree = "<group>";
+		};
+		2AC44BA823150F38006D447C /* lspci */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */,
+				2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */,
+				2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */,
+				2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */,
+			);
+			path = lspci;
+			sourceTree = "<group>";
+		};
+		2AC44BAE23150F38006D447C /* script */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BAF23150F38006D447C /* script.command */,
+			);
+			path = script;
+			sourceTree = "<group>";
+		};
+		2AC44BB023150F38006D447C /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BB123150F39006D447C /* passok.aif */,
+				2AC44BB223150F39006D447C /* quadra.mp3 */,
+				2AC44BB323150F39006D447C /* done.mp3 */,
+				2AC44BB423150F39006D447C /* pm52.mp3 */,
+				2AC44BB523150F39006D447C /* quadradeath.mp3 */,
+				2AC44BB623150F39006D447C /* error.aif */,
+				2AC44BB723150F39006D447C /* mq.mp3 */,
+				2AC44BB823150F39006D447C /* ta.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		2AC44BB923150F39006D447C /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BBA23150F39006D447C /* lspci */,
+				2AC44BBD23150F39006D447C /* alerter */,
+				2AC44BBE23150F39006D447C /* PlistBuddy */,
+				2AC44BBF23150F39006D447C /* BDMESG */,
+				2AC44BC023150F39006D447C /* KUDaemon.app */,
+				2AC44BC123150F39006D447C /* KUMenuBar.app */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		2AC44BBA23150F39006D447C /* lspci */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BBB23150F39006D447C /* lspci */,
+				2AC44BBC23150F39006D447C /* pci.ids */,
+			);
+			path = lspci;
+			sourceTree = "<group>";
+		};
+		2AC44BC223150F39006D447C /* anim */ = {
+			isa = PBXGroup;
+			children = (
+				2AC44BC323150F39006D447C /* progressanim.png */,
+				2AC44BC423150F39006D447C /* progressanim-dark.png */,
+			);
+			path = anim;
+			sourceTree = "<group>";
+		};
+		4D9645F01E633C8E1A77F904 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */,
+				2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFCEF92E17A76F1031C73313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AB3049923150E1300D618FF /* Kext Updater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AB304AA23150E1500D618FF /* Build configuration list for PBXNativeTarget "Kext Updater" */;
+			buildPhases = (
+				30ACD4D9158E7E9A667B8EC7 /* [CP] Check Pods Manifest.lock */,
+				2AB3049623150E1300D618FF /* Sources */,
+				2AB3049723150E1300D618FF /* Frameworks */,
+				2AB3049823150E1300D618FF /* Resources */,
+				3FC8C920A2F8D767A365A887 /* [CP] Embed Pods Frameworks */,
+				2AC44BF92315103F006D447C /* Copy Bash Strings */,
+				2AC44BFC2315106E006D447C /* Script copy */,
+				2AC44BFE23151089006D447C /* Bin Copy */,
+				2AC44C04231510AC006D447C /* Bin LSPCI Copy */,
+				2AC44C07231510E4006D447C /* HTML Copy */,
+				2AC44C0923151100006D447C /* Kext Copy IO */,
+				2AC44C0B2315111F006D447C /* Kexts Copy */,
+				2AC44C1023151144006D447C /* Pics Copy */,
+				2AC44C132315115F006D447C /* Sounds Copy */,
+				2AC44C1C23151180006D447C /* Anim Copy */,
+				2AC44C202315119F006D447C /* Zip App and send to Homeshare */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kext Updater";
+			productName = "Kext Updater";
+			productReference = 2AB3049A23150E1300D618FF /* Kext Updater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AB3049223150E1300D618FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Sascha Lamprecht";
+				TargetAttributes = {
+					2AB3049923150E1300D618FF = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2AB3049523150E1300D618FF /* Build configuration list for PBXProject "Kext Updater" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 2AB3049123150E1300D618FF;
+			productRefGroup = 2AB3049B23150E1300D618FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AB3049923150E1300D618FF /* Kext Updater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AB3049823150E1300D618FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
+				2AB304A523150E1500D618FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AC44C202315119F006D447C /* Zip App and send to Homeshare */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Zip App and send to Homeshare";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\ncp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
+		};
+		30ACD4D9158E7E9A667B8EC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kext Updater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC8C920A2F8D767A365A887 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AB3049623150E1300D618FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
+				2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */,
+				2AC44BF123150F61006D447C /* KextUpdater.swift in Sources */,
+				2AB304A023150E1300D618FF /* ViewController.swift in Sources */,
+				2AC44BF523150F61006D447C /* Changelog.swift in Sources */,
+				2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */,
+				2AC44BED23150F61006D447C /* Website.swift in Sources */,
+				2AC44BF223150F61006D447C /* Bootloader.swift in Sources */,
+				2AC44BF023150F61006D447C /* DiskInformation.swift in Sources */,
+				2AC44BF323150F61006D447C /* Preferences.swift in Sources */,
+				2AC44BF623150F61006D447C /* PasswordWindow.swift in Sources */,
+				2AC44BF423150F61006D447C /* Tools.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2AB304A323150E1500D618FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AB304A423150E1500D618FF /* Base */,
+				2AC44C2223151293006D447C /* en */,
+				2AC44C23231512B5006D447C /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AB304A823150E1500D618FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2AB304A923150E1500D618FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2AB304AB23150E1500D618FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		2AB304AC23150E1500D618FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Kext Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AB3049523150E1300D618FF /* Build configuration list for PBXProject "Kext Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AB304A823150E1500D618FF /* Debug */,
+				2AB304A923150E1500D618FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AB304AA23150E1500D618FF /* Build configuration list for PBXNativeTarget "Kext Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AB304AB23150E1500D618FF /* Debug */,
+				2AB304AC23150E1500D618FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AB3049223150E1300D618FF /* Project object */;
+}

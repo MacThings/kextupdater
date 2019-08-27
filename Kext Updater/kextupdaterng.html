@@ -1,0 +1,804 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+    <style type="text/css">
+        <!--
+        body { margin:0px; background-color:#fff; height:100% }
+        html { height:100% }
+        img { margin:0px; border-style:none }
+        button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+        p:first-child { margin-top:0px }
+        table { empty-cells:hide }
+        .f-sp { font-size:1px; visibility:hidden }
+        .f-lp { margin-bottom:0px }
+        .f-fp { margin-top:0px }
+        .f-x1 { }
+        .f-x2 { }
+        .f-x3 { }
+        a:link { color:#000 }
+        a:visited { color:#000 }
+        a:active { color:#000 }
+        .style3 { line-height:1; margin-left:0px; margin-right:0px; text-indent:0px; direction:ltr; text-align:left; margin-top:0px; margin-bottom:0.1px }
+        .newstext { color:#000; font-family:Verdana, Arial, Helvetica; font-size:12px; text-transform:none; font-variant:normal; letter-spacing:0px; word-spacing:0px }
+        .header { color:#000; font-family:Arial,Helvetica,sans-serif; font-weight:bold; font-size:16px; text-transform:none; font-variant:normal; letter-spacing:0px; word-spacing:0px }-->
+        </style>
+</head>
+<body>
+ 
+     <p><span class="header" lang="en">New in 3.0.5</span></p>
+     <ul>
+     <span class="newstext">
+         <li>And again ... hopefully the crash bug is really fixed now. /-:</li>
+         <div style="font-size: 14px; color: red; font-weight: bold">Attention. Due to a certificate error with Sparkle Update Framework, you have to manually load Version 3.0.5 if you are using Version 3.0.0 or earlier. An update via the internal function is not possible before version 3.0.1. Please grab 3.0.5 here: <a href="https://bitbucket.org/profdrluigi/kextupdater/downloads/Kext%20Updater%203.0.5.zip">CLICK</a></div>
+    </ul></span>
+ 
+    <p><span class="header" lang="en">New in 3.0.4</span></p>
+    <ul>
+        <span class="newstext">
+            <li>Fixed Crash Bug</li>
+            <li>Added new Progress Indicator</li>
+        </ul></span>
+            
+            <p><span class="header" lang="en">New in 3.0.3</span></p>
+            <ul>
+                <span class="newstext">
+                    <li>And once again developer signing is switched off due to crashes with one or the other user. It's a pain in the Ass! <strong>Thanks a lot Apple! /-:</strong></li>
+            </ul></span>
+        
+        <p><span class="header" lang="en">New in 3.0.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Optimized Images for Dark Mode</li>
+                <li>Changed Single Kext GUI slightly</li>
+                <li>Misc Bugfixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 3.0.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added 'Exclude Kexts from Update'-Option again</li>
+                <li>Bugfix Bootloader Selection</li>
+                <li>Bugfix in Preferences Section</li>
+                <li>Enhancements in Tools Section</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 3.0.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>New much more compact and cleaner Interface. Application is build up from scratch. Much faster than before. Have fun. (-:</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added AppleSupportPkg to 'Bootloader' (EFI Driver for Acidanthera's OpenCore Project)</li>
+                <li>Added WebDriver 16G2028, 17G8029, 17G8030</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed issue where Ozmosis would be considered OpenCore in a particular constellation.</li>
+                <li>Detection of bootloader in general has been improved.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Kext 'VoodooSMBus'</li>
+                <li>Minor fixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Kext 'IntelMausi' (Acidanthera fork of IntelMausiEthernet)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Kext 'TSCAdjustReset'</li>
+                <li>Improved Catalina compatibility</li>
+                <strong>Have a look at the new Kext Updater Homepage. <a href="https://www.kextupdater.de" target="_blank"><br><br>Klick me!</a></strong>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Improved Clover detection</li>
+                <li>More contrastful Main Window (Light Theme)</li>
+                <li>Fixed Typos in german</li>
+                <li>Moved NoVPAJpeg back to Main list (should be inlcuded in WhatEvergreen but it don't work).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Better/clearer arrangement of Preferences Window</li>
+                <li>Downloaded Kext Folders are uppercase now</li>
+                <li>New Style of the Infobox on the Main Window</li>
+                <li>Button for excluding Kext's from Update is on the Main Window now</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Some GUI enhancements in 'Multiple Kext Download', 'Excluded Kexts'. </li>
+                <li>Multiple Code-Enhancements. For example better Bootloader recognition.</li>
+                <li>Better error handling</li>
+                <li>In the Tools menu, only the volumes that are NOT the EFI boot volume are now displayed in the EFI mount section. The boot EFI can only be mounted/unmounted via the button on the main page.
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed crash after Kext Update Check in Catalina</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.9.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Corrected bug that caused the text to be black in dark mode.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Atheros40 Support for Catalina (AR92xx and 93xx WLan Cards)</li>
+                <li>LSPCI (for output PCI-Devices) is 64-bit cappable now (Catalina)</li>
+                <li>Minor GUI changes</li>
+                <li><strong>If you have Problems with a freezing GUI after Kext-Update-Check please reset the Prefs with the Resetbutton in the Configuration Menu. That should fix these Freezes and the GUI is now not longer blocked if an Update Check is running.</strong></li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Removed obsolete code</li>
+                <li>Fixed a bug which could make the Kext Updater freezing upon initial launch/kext-update-check</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed Program Crash on opening 'Preferences'</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed Program Crash by clicking on 'Tools'</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added VoodooSDHC Kext</li>
+                <li>Added Sinetek-RTSX Kext</li>
+                <li>Added WebDriver 16G1917, 16G1918, 16G2016</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed a bug that could lead to freezing when exiting the program. It should now also run a bit faster.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added standalone EFI Drivers. Only the EFI drivers from the Clover Package are included here. This means that you can always download the latest EFI Driver separately without having to install Clover. So you can easily keep your driver up to date. You can find them under 'Load Bootloader'. It is mainly aimed at OpenCore users, as these drivers are not included in the OpenCore package. All credits for these drivers goes to Clover Team.</li><br>
+                <li>Added Function to send a Bug Report (above the PayPal Button) via Mail.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed Error Message in Update Routine</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>NoVPAJpeg merged into WhateverGreen</li>
+                <li>Support-Report fix</li>
+                <li>WebDriver 17G7024 is now really added!</li>
+                <li>Changed Splashscreen Logo</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.8.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>WebDriver 17G7024 added</li>
+                <li>Warning added, if in the configuration of OpenCore the criteria are not fulfilled which the Kext Updater needs for the full function.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Bug fixes</li>
+                <li>Support-Report changes</li>
+                <li>doll.txt (forgot to remove these debbuging file from script) is not longer created on your Desktop. Sorry folx. (-:</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Support for the new BootLoader <strong>'OpenCore'</strong><br><br><strong>IMPORTANT:</strong> If you are already using OpenCore please set the options as shown in the picture to keep the Kext Updater fully functional<br><img src="images/opencore.png" width="600"></img><br><strong>Check: Expose Boot Path<br>Value 3: Expose Sensitive Data</strong><br><br></li>
+                <li>Added nVidia Webdriver for 10.13.6 (Build 17G6030)</li>
+                <li>Slightly Changes to GUI (Added Bootloader Pulldown Menu and a Splash Screen)</li>
+                <li>Upgradet Code to Swift 5.0</li>
+                <li>Updated KeyChainSwift to 15.0.0</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added nVidia Webdriver for 10.13.6 (Build 17G6029)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed System-Report Problem</li>
+                <li>Fixed Theme Problems</li>
+                <li>Minor improvements</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Webdriver 16G1618, 16G1710, 16G1815</strong></li>
+                <li>Optimized Sleepfix check</li>
+                <li>Updated to Sparkle Update-Framework 1.21.3</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new Kext <strong>RTCMemoryFixup</strong></li>
+                <li>Fixed a bug that could cause a wheel of death when closing the program.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Webdriver 17G5019</li>
+                <li>When you click on this Icon the original Repo page of the kext opens in the browser.<br><br><img src="images/sources.png"></img><br></li>
+                <li>Minor improvements</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new Lilu Plugin <strong>DiskArbitrationFixup</strong></li>
+                <li>Added AtherosWiFiInjector</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.7.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new Lilu Plugin <strong>SystemProfilerMemoryFixup</strong></li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Info of used Bootloader (Clover UEFI / Clover Legacy / Ozmosis) to main Screen and System Report</li>
+                <li>Minor GUI changes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added <strong>SATA Hotplug Support</strong> for Mojave (you will find it in 'Tools')</li>
+                <li>Fixed Volume-Slider. If set to 100% only 10% where used.</li>
+                <li>Added logfile in Kext Download folder in case of available updates. So can always be reconstructed when which version was downloaded.</li>
+                <li>Updated Sparkle-Updater-Framework to V 1.21.2</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Webdriver 17G4015</li>
+                <li>Added Volume-Slider for Sound Effects in Preferences</li>
+                <li>Minor improvements under the hood</li>
+                <li>Updated Sparkle- and macOSThemeKit Frameworks</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added System-wide Power Settings to Report</li>
+                <li>Visual improvement of the Report</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Some GUI changes (added APNGKit Framework)</li>
+                <li>Option to set/reset Keychain usage in the Menu Bar or simply click on this Icon:<br><br><img src="images/keychain.png"></img><br>In addition, it is an Indicator whether the Keychain is already in use or not.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li><b>Added Keychain framework</b><br> This means you can, if you want, deposit your password permanently and securely in your keychain. The Kext Updater asks you for a password again if you should change it. Otherwise you do not need to enter the password for any action.<br>If you do not want to use the keychain, you have the option to tell the updater to not use it at the beginning. From then on, for most actions (except for checking and downloading the Kexts, Webdriver, Clover) the password has to be entered again.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed problem that Usernames can't contain Special Characters.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.6.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li><b>It is now no longer necessary lspci permanently installed in the system to get a PCI Device overview. If you have it installed in the system, please select 'Uninstall lspci' from the menu.</b></li>
+                <br>
+                <li>Changed user management. If the program is run as a normal user there is the possibility to deposit a user with adiministrative rights. If no one is deposited, some functions are not available. If you have any Problems after updating to 2.6.2 use 'Reset Adminuser' from the Main Menu.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en"><strike>New in 2.6.1</strike></span></p>
+        
+        <p><span class="header" lang="en">New in 2.6.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed EFI Mount Function. If Windows is installed on the Harddrive too it claims the first Place on the Drive for it's 'Windows Recovery Partition' and the EFI is on the 2nd Place and the Mount Function didn't recognized it and tries to mount the Windows Partition which fails.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Function to mount any other EFI Partition than the booted one. (look into 'Tools')</li>
+                <li>Minor Corrections.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Ozmosis to Support-Report</li>
+                <li>Added Bootloader Info to Support-Report</li>
+                <li>Added 'Changelog' to the top Main Menu</li>
+                <li>Fixed Translation Typo</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Misc Changes to Support-Report</li>
+                <li>Added nVidia Webdriver 17G3025</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>New System-Report for better Support in your Hackintosh Board:</li><br>
+                After the Report is created you will find a zip Archive (System-Report.zip) on your Desktop.<br>
+                The Content of the Report is the following:<br>
+                - Hardware- and OS Informations<br>
+                - Loaded Non-Apple Kexts<br>
+                - AppleHDA Status<br>
+                - Kext Paths<br>
+                - PCI Devices<br>
+                <img src="images/report.png" height="140"></img><br>
+                Additionaly the Essentials of the CLOVER Folder (SerialNumber, BoardSerialNumber, SmUUID, MLB and CustomUUID in the config.plist are replaced with Zeros to make it anonymous) are included too.<br><br>
+                <b>You could upload this Archive to your Hackintosh Forum for a better analysis of your Problem.</b>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Option to show loaded non Apple Kexts (not only the Hackintosh Stuff).</li>
+                <li>Systemreport creation for further Analyzes.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed Typo</li>
+                <li>Bug Fixes</li>
+                <li>Script optimizations</li>
+                <li>Cleaned up GUI (arrangement of Objects)</li>
+                <li>Added new Sounds</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Sleep Fix Option</li>
+                <li>Renamed 'Extras' to 'Tools'. Cache rebuild and Permission Fix is now in 'Tools'</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new AsusSMC Lilu Plugin.</li>
+                <li>Added Clover to exclude options.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new AppleBacklightFixup Kext</li>
+                <li>Moved Azulpatcher4600 to obsolete Kexts. It's replaced by WhateverGreen.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.5.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added GenericUSBXHCI Kext (is needed for some ''older'' Boards, GB Z97-UD5H for example, to get all USB3.0 Ports running.</li>
+                <li>Added 'Select all/Deselect all' option in multiple downloads window.</li>
+                <li>Updated Sparkle Framework (App-Update) from 1.19 to 1.20. Hopefully the 'Silent Update' is working now properly.</li>
+                <li>Updated macOSThemeKit (Light and Dark Theme) from 1.2.0 to 1.2.3
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added obsolete Kexts which are substituted by WEG to the Exclude- and Multiplewindow options.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.8</span></p>
+        <ul>
+            <span class="newstext">
+                Added "Extra"-Button. It contains the following:</li>
+                <li>Installation of the Atheros40.kext for Mojave and higher. Because Apple dropped the support for Atheros AR92xx/AR93xx Wlan Cards. With this kext (from High Sierra) you can use your card again.
+                    <li>If your system doesn't run with WhateverGreen (WEG) you can download the "obsolete" Kexts.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new NoVPAJpeg Kext (fixes the problem with Preview in Mojave)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed error where Daemon not checking for updates</li>
+                <li>Minor code changes</li>
+                <li>Added more Font sizes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Optimized and cleanup Bash-Code</li>
+                <li>Fixed: Last check Date</li>
+                <li>Fixed: LoginItem</li>
+                <li>Corrected Spain Language</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed: Daemon doesn't ignore the excluded Kexts</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Update Daemon (you can set it in preferences as loginitem). After every reboot it will look automatically once for Updates and will inform you if there is something new.</li>
+                <li>Fixed Kext-Report</li>
+                <li>Optimized/Enhanced Bash-Code</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added option in Preferences to exclude defined Kexts from Update</li>
+                <li>Fixed Error in download routine for "Mass Kexts" (Lilu and Lilufriend where not seperated)</li>
+                <li>Optimized/Enhanced Bash-Code</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added option in Preferences to exclude defined Kexts from Update</li>
+                <li>Fixed Error in download routine for "Mass Kexts" (Lilu and Lilufriend where not seperated)</li>
+                <li>Optimized/Enhanced Bash-Code</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Changed Notifications (Appicon is now shown)</li>
+                <li>Added option in Preferences for setting the notifications appereance in seconds</li>
+                <li>Fixed Logwindowsize (space to the right was not fully used)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.4.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Notification Support</li>
+                <li>Added Multiple Kext Downloader (Option in "Single Kext" ... Download as many Kexts you want with one step)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added NullCpuPowerManagement Kext</li>
+                <li>Added NullEthernet Kext</li>
+                <li>Added BrcmPatchRam</li>
+                <li>Fixed Typo</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Kext-Report Option</li>
+                <li>Added function to delete the Kext Updater Prefs</li>
+                <li>Minor Changes</li>
+                <li>Removed apfs.efi and APFSDriverLoader download option (APFSDriverLoader is included in Clover)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Included the brand new VirtualSMC (FakeSMC alternative)</li>
+                <li>Bug Fixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Bug-Fixes</li>
+                <li>Added Donate-Button</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Cleaned up Interface for obsolete IntelGraphicsDVMTFixup Kext (now merged into WhateverGreen too) and String Fix</li>
+                <li>Changed query for obsolete IntelGraphicsDVMTFixup</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Cleaned up Interface for obsolete Kexts (now merged into WhateverGreen) and String Fixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added warning if Lilu is not present on the system and the Grapicsfixup is replaced by Whatevergreen. The latest Lilu is needed to use this. Otherwise the user will get a Black screen on next reboot.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added permission Fix for Cache Rebuild</li>
+                <li>Changed query for obsolete nVidiaGraphicsFixup, IntelGraphicsFixup and CoreDisplayFixup</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Button for Kextcache-Rebuild</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.3.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added nVidia Webdriver for following Builds:<br>
+                    17D2102, 17C2120, 16B2659, 16G510, 16G1314, 16G1408, 16C68, 16B2657, 15G22010, 15G21013, 15G20015, 15G1611, 15G1510, 15G1421, 15G1217, 15G1212, 15G1108, 15G1004, 14F1021, 14F1505, 14F1509, 14F1605, 14F1713, 14F1808, 14F1909, 14F1912, 14F2009, 14F2109, 14F2315, 14F2411, 14F2511, 14D131, 14C1514, 14C1510</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added nVidia Webdriver for 10.13.6 (17G65)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed a Problem where a later Kext isn't downloaded if an older Version of it is already in the Download-Folder.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Bug Fixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Removed Bug in Theme-Chooser</li>
+                <li>Optimized Code</li>
+                <li>Changed query of IntelMausiEthernet</li>
+                <li>Minor changes of GUI (now all Elements are Dark in Dark Mode)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added CRT-Filter-Option for Oldschool-Feeling (-:</li>
+                <li>Fixed Webdriver Download</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Speedup Check-Routine.</li>
+                <li>Merged all Bashscripts to one.</li>
+                <li>Fixed Fontcolor selection (No Effect on other languages than German).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Options for Output Text Color (Red, Yellow, Green, Orange).</li>
+                <li>Changed GUI. Folder Icon (instead of a button) to jump directly to the Downloadpath. Added a second one for EFI too.</li>
+                <li>Optimized App Logo for Darkmode.</li>
+                <li>Optimized Bash-Script for faster checks.</li>
+                <li>Kicked out Alamofire Framework (Connection Check) and replaced it with a few simple lines of Code.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>And again EFI Mount Problems in Mojave ... hopefully done now! Sorry.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed a Bug which could cause Appcrashing.</li>
+                <li>Refurbished EFI Mount Function (Mojave and 10.13.6 Beta).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.2.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Redesigned User Interface.</li>
+                <li>More Disk Infos and Volume Icons.</li>
+                <li>Bash optimizations.</li>
+                <li>Bugfixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>It's now possible to download Single Kexts.</li>
+                <li>Disk Info for the Mounted EFI (under the EFI-Button).</li>
+                <li>EFI Mount Indicator (Red=Not mounted / Green=Mounted).</li>
+                <li>Bugfixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Themes (Light and Dark Mode).</li>
+                <li>Added ApfsDriverLoader as Download Option.</li>
+                <li>Fixed EFI Mount in 10.14 and 10.13.6 Beta.</li>
+                <li>Bugfixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Finnish Language.</li>
+                <li>Added Polish Language.</li>
+                <li>Added Swedish Language.</li>
+                <li>Added Czeck Language</li>
+                <li>EFI Mount Button modified (shows now if EFI is mounted or not).</li>
+                <li>Bugfixes</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added new Preferences Option and styled the Prefs-Section completely new.</li>
+                <li>A lot of changes "under the hood". Means more Bash Tasks converted to Swift.</li>
+                <li>New Online Check Routine (Alamofire)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>2 new Options in Preferences (Fontfamily and Fontsize).</li>
+                <li>Bug Fix: Sometimes one or more Output lines were not shown (randomly).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Bug Fix: Downloadpath wasn't displayed in Main Window</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Switched a lot of Bash Scripts to Swift (only 3 pure Bash Scripts remaining).</li>
+                <li>Added Prefences Option to Switch Chime on/off.</li>
+                <li>A lot of Code optimizations (faster response).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.2</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Fixed EFI mounting (if EFi is mounted automatic at boot time as /Volumes/ESP).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.1</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Button (Preferences) for Reset Download Path to Default (Desktop/Kext-Updates).</li>
+                <li>Button for jumping to the Downloadpath and open in Finder Window.</li>
+                <li>Spanish gramatical fix.</li>
+                <li>Some Code Changes.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.1.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Italian Language.</li>
+                <li>Added French Language.</li>
+                <li>Added Preferences to set a Download Path.</li>
+                <li>Speeding up. Checks much faster now.</li>
+                <li>Changed Spinner to ProgressBar.</li>
+                <li>Updated to latest Sparkle Framework-</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.9</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Dutch Language (Thanks Technotron).</li>
+                <li>Added Portugese Language (Thanks LoveIsHackintosh).</li>
+                <li>Changed Output Window Font to a sharper one (Menlo Regular).</li>
+                <li>Minor Code Changes-</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.8</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Some Bug Fixes-</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.7</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Sparkle Update Framework-</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.6</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Addes Spanish Language (Thanks Maniac10)</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.5</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Webdriver for Build 17F77 (10.13.5).</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.4</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Added Clover Nightlybuild Option.</li>
+                <li>Added Russian Language (Thanks DSM2).</li>
+                <li>Added Turkish Language (Thanks CobanRamo).</li>
+                <li>Bug Fixes.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.1 - 2.0.3</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Internal Testversions.</li>
+        </ul></span>
+        
+        <p><span class="header" lang="en">New in 2.0.0</span></p>
+        <ul>
+            <span class="newstext">
+                <li>Build with Xcode/Swift.</li>
+                <li>Better and clearer Userinterface.</li>
+                <li>Minimum Systemversion: 10.10</li>
+        </ul></span>
+        
+</body></html>
