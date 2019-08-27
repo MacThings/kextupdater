@@ -2,7 +2,7 @@
 //  PasswordWindow.swift
 //  Kext Updater
 //
-//  Created by Prof. Dr. Luigi on 19.08.19.
+//  Created by Sascha Lamprecht on 16.08.19.
 //  Copyright © 2019 Sascha Lamprecht. All rights reserved.
 //
 

@@ -2,19 +2,13 @@
 //  AppDelegate.swift
 //  Kext Updater
 //
-//  Created by Prof. Dr. Luigi on 16.08.19.
+//  Created by Sascha Lamprecht on 16.08.19.
 //  Copyright © 2019 Sascha Lamprecht. All rights reserved.
 //
 
 import Cocoa
-import KeychainSwift
-import LetsMove
-
-extension String {
-    func localized(bundle: Bundle = .main, tableName: String = "Main") -> String {
-        return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
-    }
-}
+//import KeychainSwift
+//import LetsMove
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

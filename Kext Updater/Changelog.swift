@@ -2,7 +2,8 @@
 //  Website.swift
 //  
 //
-//  Created by Prof. Dr. Luigi on 21.08.19.
+//  Created by Sascha Lamprecht on 16.08.19.
+//  Copyright © 2019 Sascha Lamprecht. All rights reserved.
 //
 
 import Cocoa

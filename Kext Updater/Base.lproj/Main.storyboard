@@ -147,7 +147,7 @@
                 <customObject id="MIT-Ed-CrS" customClass="SUUpdater"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="145"/>
+            <point key="canvasLocation" x="638" y="166"/>
         </scene>
         <!--Single Kexts-->
         <scene sceneID="76a-Z9-6Ku">
@@ -2162,7 +2162,7 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-Tm-6pA">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="266" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-Tm-6pA">
                                             <rect key="frame" x="397" y="312" width="270" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Always the latest Kexts for your Hackintosh" id="yHa-Eb-aM3">
@@ -2550,7 +2550,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="nointernet" id="rfp-47-z8c"/>
                                         </imageView>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-ds-UTq">
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="581" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-ds-UTq">
                                             <rect key="frame" x="48" y="292" width="585" height="106"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment." allowsEditingTextAttributes="YES" id="47t-5V-eq8">
@@ -3032,7 +3032,7 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-t9-xxy">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-t9-xxy">
                                             <rect key="frame" x="364" y="-17" width="158" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" title="Check once for updates in background after every reboot." id="lTj-Id-1fA">
@@ -3262,7 +3262,7 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
                                 <rect key="frame" x="31" y="321" width="450" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" title="Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)." id="9hN-PQ-DIu">
@@ -3271,7 +3271,7 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-C4-kQ9">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-C4-kQ9">
                                 <rect key="frame" x="31" y="375" width="450" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" title="Rebuild Kextcache and repair Permissions in /S/L/E + /L/E." id="va9-o7-tkl">
@@ -3280,7 +3280,7 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
                                 <rect key="frame" x="33" y="239" width="540" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" id="CWj-gf-uEx">
@@ -3332,7 +3332,7 @@ DQ
                                     <action selector="efi_tools_unmount_all:" target="PFO-7L-TjR" id="J6X-z6-iRr"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kot-JU-52U">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="Kot-JU-52U">
                                 <rect key="frame" x="35" y="177" width="450" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" title="Mount EFI from another Harddisk." id="YUq-V5-jjD">
@@ -4011,19 +4011,6 @@ DQ
             </objects>
             <point key="canvasLocation" x="237" y="648"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LbX-LY-dbJ">
-            <objects>
-                <viewController id="d6B-WC-R3F" sceneMemberID="viewController">
-                    <view key="view" id="o1T-3e-J0A">
-                        <rect key="frame" x="0.0" y="0.0" width="850" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="xd8-xH-hxv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-309" y="1202"/>
-        </scene>
         <!--About-->
         <scene sceneID="HSR-6c-Wgf">
             <objects>
@@ -4032,7 +4019,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-8v-4nx">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-8v-4nx">
                                 <rect key="frame" x="100" y="17" width="265" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="© 2019 Sascha Lamprecht" id="ayB-Ht-Pb3">
@@ -4060,7 +4047,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HF Logo" id="oUw-ca-lQd"/>
                             </imageView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-MF-vlZ">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-MF-vlZ">
                                 <rect key="frame" x="28" y="187" width="248" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Developed By: Sascha Lamprecht Program Icon: Nio82" allowsEditingTextAttributes="YES" id="hEx-SJ-Y1C">
