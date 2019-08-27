@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sleep 120
-ScriptHome=$(echo $HOME)
-kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
-bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon
