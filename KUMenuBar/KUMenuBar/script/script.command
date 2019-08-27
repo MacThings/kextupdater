@@ -2,10 +2,7 @@
 #
 
 ScriptHome=$(echo $HOME)
-interval=`defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "UpdateInterval"`
-let interval="$interval*60*60"
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
-kuroot="/Applications"
 
 function runcheck()
 {
