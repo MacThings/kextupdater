@@ -392,11 +392,7 @@ static BOOL Trash(NSString *path) {
 	BOOL result = NO;
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_8
 	if (floor(NSAppKitVersionNumber) >= NSAppKitVersionNumber10_8) {
-        if (@available(macOS 10.8, *)) {
-            result = [[NSFileManager defaultManager] trashItemAtURL:[NSURL fileURLWithPath:path] resultingItemURL:NULL error:NULL];
-        } else {
-            // Fallback on earlier versions
-        }
+		result = [[NSFileManager defaultManager] trashItemAtURL:[NSURL fileURLWithPath:path] resultingItemURL:NULL error:NULL];
 	}
 #endif
 #if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_11

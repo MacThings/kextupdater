@@ -32,7 +32,6 @@
 		2A4AF15B2312A3AE00EDB9E4 /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2A4AF1582312A39200EDB9E4 /* progressanim.png */; };
 		2A4AF15E2312A92800EDB9E4 /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2A4AF15C2312A52300EDB9E4 /* progressanim-dark.png */; };
 		2A4AF15F2312A94300EDB9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD86C592306B95400D2334A /* Main.storyboard */; };
-		2A4AF16D2314687F00EDB9E4 /* KUMenuBar.app in Resources */ = {isa = PBXBuildFile; fileRef = 2A4AF16C2314687F00EDB9E4 /* KUMenuBar.app */; };
 		2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A90208C230FCB4A009E8D3D /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ABA236B230EFAD9008D98C6 /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA236A230EFAD9008D98C6 /* Changelog.swift */; };
 		2AC197AB230A8D720071932C /* KextUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC197AA230A8D720071932C /* KextUpdater.swift */; };
@@ -47,9 +46,10 @@
 		2AD86C542306B95200D2334A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD86C532306B95200D2334A /* AppDelegate.swift */; };
 		2AD86C562306B95200D2334A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD86C552306B95200D2334A /* ViewController.swift */; };
 		2AD86C582306B95400D2334A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD86C572306B95400D2334A /* Assets.xcassets */; };
+		2ADACBA0231471F90075EAC9 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A4AF16C2314687F00EDB9E4 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AF4AADD230B025000648E48 /* PasswordWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4AADC230B025000648E48 /* PasswordWindow.swift */; };
 		2AF4AADF230C4DF300648E48 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4AADE230C4DF300648E48 /* Tools.swift */; };
-		BA8B3A01B90C8BB3DD0A8BA7 /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */; };
+		C009500869C928F25BC09529 /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6291CAB27F3F2D9D39705E0 /* Pods_Kext_Updater.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -160,6 +160,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
+				2ADACBA0231471F90075EAC9 /* KUMenuBar.app in Bin Copy */,
 				2A90208E230FCB60009E8D3D /* KUDaemon.app in Bin Copy */,
 				2AC197C2230AC34D0071932C /* alerter in Bin Copy */,
 				2AC197C3230AC34D0071932C /* PlistBuddy in Bin Copy */,
@@ -183,7 +184,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0710C02311459D00258F09 /* de.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = de.bashstrings; sourceTree = "<group>"; };
 		2A0710C12311459D00258F09 /* en.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.bashstrings; sourceTree = "<group>"; };
 		2A2D310F2311730000CC6F1A /* kextupdaterng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kextupdaterng.html; sourceTree = "<group>"; };
@@ -233,8 +233,9 @@
 		2AF4AADE230C4DF300648E48 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		2AF4AAE1230DA60300648E48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2AF4AAE2230DA62C00648E48 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		46DBD829FF23E5BAC038B071 /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
-		DE4B4A3712FD1CDFC277B6B5 /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
+		D8AAE8183F2032B265560187 /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
+		E6291CAB27F3F2D9D39705E0 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED56DBB9EBD541FDC75DAF29 /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8B3A01B90C8BB3DD0A8BA7 /* Pods_Kext_Updater.framework in Frameworks */,
+				C009500869C928F25BC09529 /* Pods_Kext_Updater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +356,7 @@
 				2AD86C522306B95200D2334A /* Kext Updater */,
 				2AD86C512306B95200D2334A /* Products */,
 				8F20979384327AD46614B9C1 /* Pods */,
-				30F5A55597F0A40AC20D3251 /* Frameworks */,
+				7A9E05B3C84C95E18E90C7CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -400,10 +401,10 @@
 			path = "Kext Updater";
 			sourceTree = "<group>";
 		};
-		30F5A55597F0A40AC20D3251 /* Frameworks */ = {
+		7A9E05B3C84C95E18E90C7CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C5D5D937C85C2B691139CC4 /* Pods_Kext_Updater.framework */,
+				E6291CAB27F3F2D9D39705E0 /* Pods_Kext_Updater.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -411,8 +412,8 @@
 		8F20979384327AD46614B9C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE4B4A3712FD1CDFC277B6B5 /* Pods-Kext Updater.debug.xcconfig */,
-				46DBD829FF23E5BAC038B071 /* Pods-Kext Updater.release.xcconfig */,
+				D8AAE8183F2032B265560187 /* Pods-Kext Updater.debug.xcconfig */,
+				ED56DBB9EBD541FDC75DAF29 /* Pods-Kext Updater.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -424,11 +425,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AD86C602306B95400D2334A /* Build configuration list for PBXNativeTarget "Kext Updater" */;
 			buildPhases = (
-				FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */,
+				5ACD77EC57C3809DF3AC0117 /* [CP] Check Pods Manifest.lock */,
 				2AD86C4C2306B95200D2334A /* Sources */,
 				2AD86C4E2306B95200D2334A /* Resources */,
 				2AD86C4D2306B95200D2334A /* Frameworks */,
-				1125763990DA553786F62E29 /* [CP] Embed Pods Frameworks */,
 				2A0710C4231145B100258F09 /* Copy Bash Strings */,
 				2AC197B1230A9DFD0071932C /* Script Copy */,
 				2AC197C1230AC3350071932C /* Bin Copy */,
@@ -441,6 +441,7 @@
 				2A4AF15A2312A39F00EDB9E4 /* Anim Copy */,
 				2A4AF1542311B98500EDB9E4 /* Zip App and send to Homeshare */,
 				2AF4AAE6230DC4C200648E48 /* Zip App and send to Homeshare Test */,
+				23C5962B5A865817C9156B5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -499,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4AF15F2312A94300EDB9E4 /* Main.storyboard in Resources */,
-				2A4AF16D2314687F00EDB9E4 /* KUMenuBar.app in Resources */,
 				2AD86C582306B95400D2334A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +507,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1125763990DA553786F62E29 /* [CP] Embed Pods Frameworks */ = {
+		23C5962B5A865817C9156B5F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -560,7 +560,7 @@
 			shellPath = /bin/bash;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\n    cp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload2/kextupdaterng.html\"\n    rm /Volumes/Homeshare/kextupdater/upload2/kextupdaterng.zip 2> /dev/null\n    cd /Applications\n    ditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload2/kextupdaterng2.zip\nfi\n";
 		};
-		FE4D48A38C2589997AA6E614 /* [CP] Check Pods Manifest.lock */ = {
+		5ACD77EC57C3809DF3AC0117 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -745,9 +745,9 @@
 		};
 		2AD86C612306B95400D2334A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE4B4A3712FD1CDFC277B6B5 /* Pods-Kext Updater.debug.xcconfig */;
+			baseConfigurationReference = D8AAE8183F2032B265560187 /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
 				CODE_SIGN_IDENTITY = "";
@@ -769,9 +769,9 @@
 		};
 		2AD86C622306B95400D2334A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46DBD829FF23E5BAC038B071 /* Pods-Kext Updater.release.xcconfig */;
+			baseConfigurationReference = ED56DBB9EBD541FDC75DAF29 /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kext Updater/Kext Updater.entitlements";
 				CODE_SIGN_IDENTITY = "";

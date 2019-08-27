@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:KUMenuBar/KUMenuBar.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Kext Updater.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,5 +9,8 @@
    </FileRef>
    <FileRef
       location = "group:Platypus/Platypus.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:KUMenuBar/KUMenuBar.xcodeproj">
    </FileRef>
 </Workspace>
