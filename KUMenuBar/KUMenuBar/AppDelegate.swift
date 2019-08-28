@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Kext Updater
 //
-//  Created by Prof. Dr. Luigi on 16.08.19.
+//  Created by Sascha Lamprecht on 16.08.19.
 //  Copyright © 2019 Sascha Lamprecht. All rights reserved.
 //
 
@@ -36,13 +36,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let afterrebootinit = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
+        if afterrebootinit == false{
+            UserDefaults.standard.set(false, forKey: "AfterRebootOnly")
+        }
         let intervalinit = UserDefaults.standard.string(forKey: "UpdateInterval")
         if intervalinit == nil{
             UserDefaults.standard.set("21600", forKey: "UpdateInterval")
         }
         let intervalstring = UserDefaults.standard.string(forKey: "UpdateInterval")
         let myintervalstring = (intervalstring! as NSString).doubleValue
-        Timer.scheduledTimer(timeInterval: myintervalstring, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
+
+        let afterrebootinit2 = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
+        if afterrebootinit2 == false {
+            Timer.scheduledTimer(timeInterval: myintervalstring, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
+        } else {
+            Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: false)
+        }
+ 
         statusItem = NSStatusBar.system.statusItem(withLength: -1)
        
         DispatchQueue.global(qos: .background).async {

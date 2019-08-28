@@ -2,21 +2,31 @@
 //  KUMenuBar.swift
 //  KUMenuBar
 //
-//  Created by Prof. Dr. Luigi on 26.08.19.
-//  Copyright © 2019 Kelvin Ng. All rights reserved.
+//  Created by Sascha Lamprecht on 16.08.19.
+//  Copyright © 2019 Sascha Lamprecht. All rights reserved.
 //
 
 import Cocoa
 
 class KUMenuBar: NSViewController {
 
+    @IBOutlet weak var interval_pulldown: NSPopUpButton!
+    @IBOutlet weak var label_1: NSTextField!
+    @IBOutlet weak var label_2: NSTextField!
+    
+
+    let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        NSApp.activate(ignoringOtherApps: true)
+        let afterreboot = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
+        if afterreboot == true{
+            interval_pulldown.isEnabled=false
+        }
     }
   
-    let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
-    
     @IBAction func ok_button(_ sender: Any) {
         if let path = Bundle.main.resourceURL?.deletingLastPathComponent().deletingLastPathComponent().absoluteString {
             NSLog("restart \(path)")
@@ -35,6 +45,15 @@ class KUMenuBar: NSViewController {
         }
     }
 
+    @IBAction func only_after_reboot(_ sender: Any) {
+        let afterreboot = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
+        if afterreboot == true{
+            self.interval_pulldown.isEnabled=false
+        } else {
+            self.interval_pulldown.isEnabled=true
+        }
+        
+    }
     /**
      * Performs an "asynchronous" shell exec with non blocking UI thread
      */

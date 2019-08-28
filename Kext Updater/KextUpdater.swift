@@ -348,18 +348,6 @@ class KextUpdater: NSViewController {
         
         animstart()
         
-        if let url = URL(string: "https://update.kextupdater.de/online") {
-            do {
-                if try String(contentsOf: url) != "1\n"{
-                    //self.networkerror.setIsVisible(true)
-                    return
-                }
-            } catch {
-                    //self.networkerror.setIsVisible(true)
-                return
-            }
-        }
-
         let fontpt = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
         let fontfam = UserDefaults.standard.string(forKey: "Font Family")
         output_window.font = NSFont(name: fontfam!, size: fontpt)

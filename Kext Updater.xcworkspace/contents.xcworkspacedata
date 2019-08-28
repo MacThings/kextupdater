@@ -5,9 +5,6 @@
       location = "group:KUMenuBar/KUMenuBar.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:KUDaemon/KUDaemon.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Kext Updater.xcodeproj">
    </FileRef>
    <FileRef
