@@ -44,6 +44,8 @@
 	<string>1030</string>
 	<key>DTXcodeBuild</key>
 	<string>10G8</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.10</string>
 	<key>LSUIElement</key>
