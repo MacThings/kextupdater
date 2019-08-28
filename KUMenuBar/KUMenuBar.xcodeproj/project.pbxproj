@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		2A4AF16423144CC500EDB9E4 /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.command; sourceTree = "<group>"; };
 		2A4AF168231450C600EDB9E4 /* KUMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUMenuBar.swift; sourceTree = "<group>"; };
+		2A6FAAC923169CFF002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		FCC6C4D219A58C7A0063EC3C /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC6C4D619A58C7A0063EC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC6C4D719A58C7A0063EC3C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 				English,
 				en,
 				Base,
+				de,
 			);
 			mainGroup = FCC6C4C919A58C7A0063EC3C;
 			productRefGroup = FCC6C4D319A58C7A0063EC3C /* Products */;
@@ -208,6 +210,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FCC6C4E019A58C7A0063EC3C /* Base */,
+				2A6FAAC923169CFF002E6BA2 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

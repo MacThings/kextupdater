@@ -1,0 +1,54 @@
+/* Class = "NSMenuItem"; title = "KU MenuBar"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "KU MenuBar";
+
+/* Class = "NSMenuItem"; title = "Quit KU MenuBar"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Beende KU MenuBar";
+
+/* Class = "NSMenuItem"; title = "Open Kext Updater"; ObjectID = "6dn-K7-ING"; */
+"6dn-K7-ING.title" = "Öffne Kext Updater";
+
+/* Class = "NSTextFieldCell"; title = "Check for Updates every"; ObjectID = "9Ll-4n-mqZ"; */
+"9Ll-4n-mqZ.title" = "Prüfe auf Updates alle";
+
+/* Class = "NSMenuItem"; title = "6"; ObjectID = "aAd-Az-Se2"; */
+"aAd-Az-Se2.title" = "6";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "1"; ObjectID = "B0G-wl-DPc"; */
+"B0G-wl-DPc.title" = "1";
+
+/* Class = "NSMenuItem"; title = "2"; ObjectID = "bBc-lm-RgD"; */
+"bBc-lm-RgD.title" = "2";
+
+/* Class = "NSMenuItem"; title = "Set Update Interval"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Updaterintervall einstellen";
+
+/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p"; */
+"Div-YM-d8p.title" = "Ok";
+
+/* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
+"lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
+
+/* Class = "NSTextFieldCell"; title = "Update Interval"; ObjectID = "no6-as-NNY"; */
+"no6-as-NNY.title" = "Update Intervall";
+
+/* Class = "NSViewController"; title = "Interval"; ObjectID = "qdv-kZ-Khq"; */
+"qdv-kZ-Khq.title" = "Interval";
+
+/* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
+"qq0-Fk-B6B.title" = "3";
+
+/* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "KU MenuBar";
+
+/* Class = "NSTextFieldCell"; title = "Hour(s)"; ObjectID = "yYu-Pv-uSR"; */
+"yYu-Pv-uSR.title" = "Stunde(n)";
+
+/* Class = "NSMenuItem"; title = "5"; ObjectID = "zBR-fz-Qdr"; */
+"zBR-fz-Qdr.title" = "5";
+
+/* Class = "NSMenuItem"; title = "4"; ObjectID = "Zys-O6-UlM"; */
+"Zys-O6-UlM.title" = "4";
+

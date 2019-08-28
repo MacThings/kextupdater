@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "Kext Updater";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2019 Sascha Lamprecht. Alle Rechte vorbehalten.";
+

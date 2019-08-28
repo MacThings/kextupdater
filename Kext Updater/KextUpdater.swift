@@ -24,9 +24,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var app_logo: NSImageView!
     @IBOutlet weak var app_logo_animation: NSButton!
     
-    
     @IBOutlet weak var crtview: NSImageView!
-    @IBOutlet weak var network_error: NSBox!
     
     @IBOutlet weak var egg1: NSButton!
     @IBOutlet weak var egg2: NSButton!
@@ -50,19 +48,14 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var folder_efi_path: NSTextField!
     @IBOutlet weak var folder_download_icon: NSButton!
     @IBOutlet weak var folder_download_path: NSTextField!
-    @IBOutlet weak var folder_bug_report_image_light: NSImageView!
-    @IBOutlet weak var folder_bug_report_image_dark: NSImageView!
     // Folder Section - End
     
     // Footer Section
-    @IBOutlet weak var footer_efi_efimount_bt: NSButton!
     @IBOutlet weak var footer_efi_image_red: NSImageView!
     @IBOutlet weak var footer_efi_image_green: NSImageView!
-    @IBOutlet weak var footer_efi_image_info: NSImageView!
     @IBOutlet weak var footer_efi_diskinfo_click: NSButton!
     // Footer Section - End
     
-    @IBOutlet weak var kuversion_about: NSTextField!
     @IBOutlet weak var kuversion: NSTextField!
     
     @IBOutlet weak var keychainyes: NSImageView!
@@ -308,15 +301,12 @@ class KextUpdater: NSViewController {
         //        }
         //    } catch {
         //        //self.network_error.isHidden=false
-        //        return
-        //        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+        //        //return
+                //DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
         //            //self.network_error.isHidden=true
-        //
         //        }
-
         //    }
         //}
-        
         start_button.isEnabled=false
         kexts_button.isEnabled=false
         webdriver_button.isEnabled=false
@@ -604,7 +594,6 @@ class KextUpdater: NSViewController {
         if mounted == "Yes"{
             //footer_efi_efimount_bt.title = "efimounted".localized()
             footer_efi_image_green.isHidden = false
-            footer_efi_image_info.isHidden = false
             footer_efi_diskinfo_click.isHidden = false
             folder_efi_icon.isEnabled = true
             folder_efi_path.stringValue = (cloverpath ?? "")
@@ -612,7 +601,6 @@ class KextUpdater: NSViewController {
             //footer_efi_efimount_bt.title = "efinotmounted".localized()
             footer_efi_image_red.isHidden = false
             footer_efi_image_green.isHidden = true
-            footer_efi_image_info.isHidden = true
             footer_efi_diskinfo_click.isHidden = true
             folder_efi_icon.isEnabled = false
             folder_efi_path.stringValue = ("")

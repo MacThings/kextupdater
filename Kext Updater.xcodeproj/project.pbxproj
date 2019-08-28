@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
@@ -27,7 +28,6 @@
 		2AC44BFF231510A4006D447C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBD23150F39006D447C /* alerter */; };
 		2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBE23150F39006D447C /* PlistBuddy */; };
 		2AC44C01231510A4006D447C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBF23150F39006D447C /* BDMESG */; };
-		2AC44C02231510A4006D447C /* KUDaemon.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC023150F39006D447C /* KUDaemon.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC123150F39006D447C /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC44C05231510CD006D447C /* lspci in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBB23150F39006D447C /* lspci */; };
 		2AC44C06231510CD006D447C /* pci.ids in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBC23150F39006D447C /* pci.ids */; };
@@ -85,7 +85,6 @@
 				2AC44BFF231510A4006D447C /* alerter in Bin Copy */,
 				2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
-				2AC44C02231510A4006D447C /* KUDaemon.app in Bin Copy */,
 				2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */,
 			);
 			name = "Bin Copy";
@@ -184,6 +183,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB3049F23150E1300D618FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,7 +215,6 @@
 		2AC44BBD23150F39006D447C /* alerter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = alerter; sourceTree = "<group>"; };
 		2AC44BBE23150F39006D447C /* PlistBuddy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PlistBuddy; sourceTree = "<group>"; };
 		2AC44BBF23150F39006D447C /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
-		2AC44BC023150F39006D447C /* KUDaemon.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUDaemon.app; sourceTree = "<group>"; };
 		2AC44BC123150F39006D447C /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AC44BC323150F39006D447C /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
 		2AC44BC423150F39006D447C /* progressanim-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressanim-dark.png"; sourceTree = "<group>"; };
@@ -270,7 +269,6 @@
 		2AB3049C23150E1300D618FF /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
-				2AC44BF723150F6B006D447C /* kextupdaterng.html */,
 				2AC44BE723150F61006D447C /* Bootloader.swift */,
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
@@ -281,6 +279,7 @@
 				2AC44BE123150F61006D447C /* SingleKexts.swift */,
 				2AC44BE923150F61006D447C /* Tools.swift */,
 				2AC44BE223150F61006D447C /* Website.swift */,
+				2AC44BF723150F6B006D447C /* kextupdaterng.html */,
 				2AC44BC223150F39006D447C /* anim */,
 				2AC44BA423150F38006D447C /* bashstrings */,
 				2AC44BB923150F39006D447C /* bin */,
@@ -294,6 +293,7 @@
 				2AB304A123150E1500D618FF /* Assets.xcassets */,
 				2AB304A323150E1500D618FF /* Main.storyboard */,
 				2AB304A623150E1500D618FF /* Info.plist */,
+				2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */,
 				2AB304A723150E1500D618FF /* Kext_Updater.entitlements */,
 			);
 			path = "Kext Updater";
@@ -375,7 +375,6 @@
 				2AC44BBD23150F39006D447C /* alerter */,
 				2AC44BBE23150F39006D447C /* PlistBuddy */,
 				2AC44BBF23150F39006D447C /* BDMESG */,
-				2AC44BC023150F39006D447C /* KUDaemon.app */,
 				2AC44BC123150F39006D447C /* KUMenuBar.app */,
 			);
 			path = bin;
@@ -494,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
+				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
 				2AB304A523150E1500D618FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +583,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A6FAACB2316A1DD002E6BA2 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		2AB304A323150E1500D618FF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

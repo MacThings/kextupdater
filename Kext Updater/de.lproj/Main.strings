@@ -40,11 +40,17 @@
 /* Class = "NSViewController"; title = "Bootloader"; ObjectID = "3pD-vQ-Z2c"; */
 "3pD-vQ-Z2c.title" = "Bootloader";
 
+/* Class = "NSBox"; title = "Box"; ObjectID = "3Qa-mS-q5q"; */
+"3Qa-mS-q5q.title" = "Box";
+
 /* Class = "NSButtonCell"; title = "CoreDisplayFixup"; ObjectID = "3SQ-qK-q2V"; */
 "3SQ-qK-q2V.title" = "CoreDisplayFixup";
 
 /* Class = "NSTextFieldCell"; title = "Solid State:"; ObjectID = "4a5-bF-2zi"; */
 "4a5-bF-2zi.title" = "Solid State:";
+
+/* Class = "NSViewController"; title = "Web View"; ObjectID = "4BS-eg-2np"; */
+"4BS-eg-2np.title" = "Web View";
 
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "4CV-tO-sI8"; */
 "4CV-tO-sI8.title" = "Schließen";
@@ -79,7 +85,7 @@
 /* Class = "NSTextFieldCell"; title = "nVidia Webdriver"; ObjectID = "7q9-hi-f5h"; */
 "7q9-hi-f5h.title" = "nVidia Webdriver";
 
-/* Class = "NSButtonCell"; title = "Deselect excl."; ObjectID = "7rq-Op-hJk"; */
+/* Class = "NSButtonCell"; title = "Deselect \"X\""; ObjectID = "7rq-Op-hJk"; */
 "7rq-Op-hJk.title" = "\"X\" Abwählen";
 
 /* Class = "NSButtonCell"; title = "NoVPAJpeg"; ObjectID = "8cn-Cg-vV0"; */
@@ -111,9 +117,6 @@
 
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C2205"; ObjectID = "33D-V8-8oC"; */
 "33D-V8-8oC.title" = "10.13.2 - 17C2205";
-
-/* Class = "NSTextFieldCell"; title = "Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment."; ObjectID = "47t-5V-eq8"; */
-"47t-5V-eq8.title" = "Oh nein! Du bist nicht mit dem Internet verbunden oder der Server ist gerade nicht erreichbar.";
 
 /* Class = "NSButtonCell"; title = "BT4LEContinuityFixup"; ObjectID = "64H-cz-ls9"; */
 "64H-cz-ls9.title" = "BT4LEContinuityFixup";
@@ -159,6 +162,9 @@
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "Fenster";
+
+/* Class = "NSTextFieldCell"; title = "© 2019 Sascha Lamprecht"; ObjectID = "ayB-Ht-Pb3"; */
+"ayB-Ht-Pb3.title" = "© 2019 Sascha Lamprecht";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Hauptmenu";
@@ -253,11 +259,17 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G7024"; ObjectID = "dQc-Nx-z2c"; */
 "dQc-Nx-z2c.title" = "10.13.6 - 17G7024";
 
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "dVk-qX-xPm"; */
+"dVk-qX-xPm.title" = "Schließen";
+
 /* Class = "NSMenuItem"; title = "10.11.4 - 15E65"; ObjectID = "e1e-bg-T2d"; */
 "e1e-bg-T2d.title" = "10.11.4 - 15E65";
 
 /* Class = "NSBox"; ibShadowedToolTip = "Deprecated. Included now in WhateverGreen."; ObjectID = "E2B-iX-bHK"; */
 "E2B-iX-bHK.ibShadowedToolTip" = "Veraltet. Diese Kexte sind nun in WhateverGreen enthalten.";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "E2B-iX-bHK"; */
+"E2B-iX-bHK.title" = "Box";
 
 /* Class = "NSButtonCell"; title = "LiluFriend"; ObjectID = "E2G-tA-nuH"; */
 "E2G-tA-nuH.title" = "LiluFriend";
@@ -292,6 +304,9 @@
 /* Class = "NSMenuItem"; title = "10.10.2 - 14C1514"; ObjectID = "ePb-cE-cI5"; */
 "ePb-cE-cI5.title" = "10.10.2 - 14C1514";
 
+/* Class = "NSTextFieldCell"; title = "Click for Keychain"; ObjectID = "erf-OA-ftX"; */
+"erf-OA-ftX.title" = "Klicke für Schlüsselbund";
+
 /* Class = "NSButtonCell"; title = "NullCpuPowerManagement"; ObjectID = "ErS-Be-2t3"; */
 "ErS-Be-2t3.title" = "NullCpuPowerManagement";
 
@@ -303,6 +318,9 @@
 
 /* Class = "NSMenuItem"; title = "El Capitan"; ObjectID = "EUj-7t-cNU"; */
 "EUj-7t-cNU.title" = "El Capitan";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "evA-ZV-Ndv"; */
+"evA-ZV-Ndv.title" = "Box";
 
 /* Class = "NSMenuItem"; title = "10.10.0 - 14A389"; ObjectID = "evB-L7-vk2"; */
 "evB-L7-vk2.title" = "10.10.0 - 14A389";
@@ -318,6 +336,9 @@
 
 /* Class = "NSMenuItem"; title = "Bootloader Nightly Build"; ObjectID = "f8Q-lz-EdP"; */
 "f8Q-lz-EdP.title" = "Bootloader Nightly Build";
+
+/* Class = "NSTextFieldCell"; title = "Seconds"; ObjectID = "F9q-4T-UJH"; */
+"F9q-4T-UJH.title" = "Sekunden";
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G17023"; ObjectID = "fCl-yj-YCP"; */
 "fCl-yj-YCP.title" = "10.11.6 - 15G17023";
@@ -370,11 +391,17 @@
 /* Class = "NSButtonCell"; title = "NoTouchID"; ObjectID = "hEG-Hv-KOH"; */
 "hEG-Hv-KOH.title" = "NoTouchID";
 
+/* Class = "NSTextFieldCell"; title = "Developed By: Sascha Lamprecht Program Icon: Nio82"; ObjectID = "hEx-SJ-Y1C"; */
+"hEx-SJ-Y1C.title" = "Entwickelt von: Sascha Lamprecht Programm Symbol: Nio82";
+
 /* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hjw-Fy-cag"; */
 "hjw-Fy-cag.title" = "Unmounten";
 
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1815"; ObjectID = "hMp-1E-UWa"; */
 "hMp-1E-UWa.title" = "10.12.6 - 16G1815";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "hp4-nh-EFQ"; */
+"hp4-nh-EFQ.title" = "Box";
 
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */
 "HQV-TC-zTT.title" = "Lilu";
@@ -511,8 +538,11 @@
 /* Class = "NSMenuItem"; title = "10.13.4 - 17E199"; ObjectID = "Lmh-fW-L4J"; */
 "Lmh-fW-L4J.title" = "10.13.4 - 17E199";
 
-/* Class = "NSTextFieldCell"; title = "Check once for updates in background after every reboot."; ObjectID = "lTj-Id-1fA"; */
-"lTj-Id-1fA.title" = "Check once for updates in background after every reboot.";
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "LoL-pt-uI2"; */
+"LoL-pt-uI2.title" = "X";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "lPS-FA-v7S"; */
+"lPS-FA-v7S.title" = "Schließen";
 
 /* Class = "NSButtonCell"; title = "CodecCommander"; ObjectID = "MaA-rD-UBc"; */
 "MaA-rD-UBc.title" = "CodecCommander";
@@ -619,8 +649,11 @@
 /* Class = "NSButtonCell"; title = "= Exclude from Updates"; ObjectID = "ozW-44-bhX"; */
 "ozW-44-bhX.title" = "= Von Updates ausschließen";
 
-/* Class = "NSTextFieldCell"; title = "Show in seconds"; ObjectID = "p27-eL-LCi"; */
+/* Class = "NSTextFieldCell"; title = "Show"; ObjectID = "p27-eL-LCi"; */
 "p27-eL-LCi.title" = "Zeige in Sekunden";
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "pcc-jI-JYu"; */
+"pcc-jI-JYu.title" = "Über";
 
 /* Class = "NSViewController"; title = "Tools"; ObjectID = "PFO-7L-TjR"; */
 "PFO-7L-TjR.title" = "Werkzeuge";
@@ -664,6 +697,9 @@
 /* Class = "NSMenuItem"; title = "10.12.2 - 16C68"; ObjectID = "QLN-fx-CJv"; */
 "QLN-fx-CJv.title" = "10.12.2 - 16C68";
 
+/* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
+"qoN-tI-Qfd.title" = "Menu Bar Item";
+
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F27"; ObjectID = "qQk-uy-On7"; */
 "qQk-uy-On7.title" = "10.10.5 - 14F27";
 
@@ -685,11 +721,20 @@
 /* Class = "NSButtonCell"; title = "EnableLidWake"; ObjectID = "RFJ-ik-xgv"; */
 "RFJ-ik-xgv.title" = "EnableLidWake";
 
+/* Class = "NSTextFieldCell"; title = "D"; ObjectID = "RGX-Ss-zA2"; */
+"RGX-Ss-zA2.title" = "D";
+
 /* Class = "NSButtonCell"; title = "VoodooHDA"; ObjectID = "RMT-fD-ghI"; */
 "RMT-fD-ghI.title" = "VoodooHDA";
 
+/* Class = "NSBox"; title = "Box"; ObjectID = "RNd-5j-Qer"; */
+"RNd-5j-Qer.title" = "Box";
+
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1917"; ObjectID = "RQB-h9-xVq"; */
 "RQB-h9-xVq.title" = "10.12.6 - 16G1917";
+
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "RRi-jn-I5r"; */
+"RRi-jn-I5r.title" = "X";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1912"; ObjectID = "RTp-wZ-x19"; */
 "RTp-wZ-x19.title" = "10.10.5 - 14F1912";
@@ -706,6 +751,9 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G4015"; ObjectID = "Sd5-Gi-311"; */
 "Sd5-Gi-311.title" = "10.13.6 - 17G4015";
 
+/* Class = "NSTextFieldCell"; title = "Kext Updater"; ObjectID = "Sfg-Nd-3CD"; */
+"Sfg-Nd-3CD.title" = "Kext Updater";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G19009"; ObjectID = "ShE-Mw-ig1"; */
 "ShE-Mw-ig1.title" = "10.11.6 - 15G19009";
 
@@ -721,6 +769,9 @@
 /* Class = "NSButtonCell"; title = "AtherosWiFiInjector"; ObjectID = "sUQ-kz-ytb"; */
 "sUQ-kz-ytb.title" = "AtherosWiFiInjector";
 
+/* Class = "NSTextFieldCell"; title = "D"; ObjectID = "sUz-eo-LkJ"; */
+"sUz-eo-LkJ.title" = "D";
+
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Tbd-kw-pCp"; */
 "Tbd-kw-pCp.title" = "Bitte auswählen";
 
@@ -732,6 +783,12 @@
 
 /* Class = "NSTextFieldCell"; title = "Device Location:"; ObjectID = "Teb-Ff-h5u"; */
 "Teb-Ff-h5u.title" = "Device Location:";
+
+/* Class = "NSButtonCell"; title = "= Download"; ObjectID = "Tee-oq-9Oh"; */
+"Tee-oq-9Oh.title" = "= Download";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
+"Tfb-H6-fo8.title" = "Box";
 
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
 "Tho-W6-S5A.title" = "3";
@@ -754,6 +811,9 @@
 /* Class = "NSButtonCell"; title = "Reset all"; ObjectID = "U2w-vj-aHe"; */
 "U2w-vj-aHe.title" = "Alles zurücksetzen";
 
+/* Class = "NSTextFieldCell"; title = "D"; ObjectID = "udA-bw-8DN"; */
+"udA-bw-8DN.title" = "D";
+
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "uiW-zY-YjW"; */
 "uiW-zY-YjW.title" = "Auswählen";
 
@@ -766,8 +826,8 @@
 /* Class = "NSTextFieldCell"; title = "Enter your password to allow this."; ObjectID = "Uvo-FW-yym"; */
 "Uvo-FW-yym.title" = "Gib dein Passwort ein, um dies zu erlauben.";
 
-/* Class = "NSButtonCell"; title = "Login Item"; ObjectID = "uXK-PV-tLq"; */
-"uXK-PV-tLq.title" = "Login Item";
+/* Class = "NSTextFieldCell"; title = "D"; ObjectID = "uZq-8x-n6O"; */
+"uZq-8x-n6O.title" = "D";
 
 /* Class = "NSTextFieldCell"; title = "Rebuild Kextcache and repair Permissions in /S/L/E + /L/E."; ObjectID = "va9-o7-tkl"; */
 "va9-o7-tkl.title" = "Baut Kextcache neu auf und repariert die Dateirechte in /S/L/E & /L/E.";
@@ -805,6 +865,9 @@
 /* Class = "NSMenuItem"; title = "10.10.3 - 14D136"; ObjectID = "w4u-1h-WSk"; */
 "w4u-1h-WSk.title" = "10.10.3 - 14D136";
 
+/* Class = "NSTextFieldCell"; title = "Option 1: Check at defined intervals whether kext updates are available.\nOption 2: Check for kext updates only once after each system reboot.\nThese options can be set in the settings of the KU MenuBar."; ObjectID = "w05-T2-IYR"; */
+"w05-T2-IYR.title" = "Option 1: Prüfe nach definiertem Zeitintervall auf Updates.\nOption 2: Es wird nur einmal nach jedem Systemstart auf Updates geprüft.\nDiese Optionen können in den Einstellungen von der KU MenuBar vorgenommen werden.";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G21013"; ObjectID = "WAi-k2-t8Z"; */
 "WAi-k2-t8Z.title" = "10.11.6 - 15G21013";
 
@@ -826,8 +889,14 @@
 /* Class = "NSMenuItem"; title = "Courier New"; ObjectID = "wQH-QJ-jP7"; */
 "wQH-QJ-jP7.title" = "Courier New";
 
+/* Class = "NSBox"; title = "Box"; ObjectID = "WRj-TK-zEl"; */
+"WRj-TK-zEl.title" = "Box";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1421"; ObjectID = "wTM-uf-HpV"; */
 "wTM-uf-HpV.title" = "10.11.6 - 15G1421";
+
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "X5C-Pk-Lj9"; */
+"X5C-Pk-Lj9.title" = "X";
 
 /* Class = "NSMenuItem"; title = "1"; ObjectID = "x5m-oz-NRO"; */
 "x5m-oz-NRO.title" = "1";
@@ -855,6 +924,9 @@
 
 /* Class = "NSButtonCell"; title = "VoodooPS2"; ObjectID = "Xok-l5-ElV"; */
 "Xok-l5-ElV.title" = "VoodooPS2";
+
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "XxK-Iy-qJI"; */
+"XxK-Iy-qJI.title" = "X";
 
 /* Class = "NSButtonCell"; title = "Oldschool CRT"; ObjectID = "Y9R-c0-5Tt"; */
 "Y9R-c0-5Tt.title" = "Oldschool CRT";

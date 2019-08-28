@@ -2218,11 +2218,6 @@ DQ
                                                 <segue destination="PFO-7L-TjR" kind="sheet" id="lhj-GB-WEL"/>
                                             </connections>
                                         </button>
-                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hru-Po-qOY" userLabel="EFI Image Info">
-                                            <rect key="frame" x="519" y="11" width="24" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Diskinfo" id="PqU-Qf-Mux"/>
-                                        </imageView>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eug-xW-6I7" userLabel="EFI click">
                                             <rect key="frame" x="519" y="11" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2307,7 +2302,7 @@ DQ
                             <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-AI-aIY" userLabel="Keychain click yes">
                                 <rect key="frame" x="625" y="17" width="44" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="keychain" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LQR-88-8WB">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LQR-88-8WB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -2521,7 +2516,7 @@ DQ
                                 <color key="contentTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEf-sb-w5V">
-                                <rect key="frame" x="209" y="23" width="302" height="36"/>
+                                <rect key="frame" x="61" y="23" width="450" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Click for Keychain" id="erf-OA-ftX">
                                     <font key="font" metaFont="systemBlack" size="30"/>
@@ -2552,7 +2547,6 @@ DQ
                         <outlet property="folder_efi_path" destination="Aho-tJ-6y0" id="fBg-Fh-4Dx"/>
                         <outlet property="footer_efi_diskinfo_click" destination="eug-xW-6I7" id="ChV-5c-c3y"/>
                         <outlet property="footer_efi_image_green" destination="H1e-oY-n6y" id="B9n-O9-RQ5"/>
-                        <outlet property="footer_efi_image_info" destination="hru-Po-qOY" id="Z9S-G2-bWy"/>
                         <outlet property="footer_efi_image_red" destination="fsU-x5-KeN" id="mMm-by-65K"/>
                         <outlet property="infobox_admin_status_content_no" destination="sj4-s1-9gP" id="z9V-do-b80"/>
                         <outlet property="infobox_admin_status_content_yes" destination="cKg-Va-Bn8" id="sUo-rm-c8I"/>
@@ -3039,8 +3033,24 @@ DQ
                                                 <binding destination="6AW-Jc-UYO" name="selectedValue" keyPath="values.NotificationSeconds" id="xxg-sx-1ih"/>
                                             </connections>
                                         </popUpButton>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-Fp-fhs">
+                                            <rect key="frame" x="186" y="11" width="324" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" id="w05-T2-IYR">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <string key="title">Option 1: Check at defined intervals whether kext updates are available.
+Option 2: Check for kext updates only once after each system reboot.
+These options can be set in the settings of the KU MenuBar.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="RAe-px-vh4">
+                                            <rect key="frame" x="170" y="10" width="5" height="92"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-eY-YqK">
-                                            <rect key="frame" x="198" y="88" width="134" height="18"/>
+                                            <rect key="frame" x="186" y="88" width="134" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Menu Bar Item" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qoN-tI-Qfd">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -3050,37 +3060,6 @@ DQ
                                                 <binding destination="6AW-Jc-UYO" name="value" keyPath="values.MenuBarItem" id="EPH-Jf-eql"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-Fp-fhs">
-                                            <rect key="frame" x="198" y="60" width="311" height="28"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" title="Option 1: Check at defined intervals whether kext updates are available." id="w05-T2-IYR">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-RM-I4h">
-                                            <rect key="frame" x="198" y="31" width="311" height="28"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" title="Option 2: Check for kext updates only once after each system reboot." id="Hfc-z8-3I3">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="Rpg-yk-kFK">
-                                            <rect key="frame" x="198" y="1" width="311" height="28"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" title="These options can be set in the settings of the KU MenuBar." id="ghw-dW-bh8">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="RAe-px-vh4">
-                                            <rect key="frame" x="170" y="10" width="5" height="92"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
                                     </subviews>
                                 </view>
                             </box>
