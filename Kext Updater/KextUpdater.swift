@@ -301,21 +301,21 @@ class KextUpdater: NSViewController {
         self.egg2.isEnabled=false
         self.egg3.isEnabled=false
         self.egg4.isEnabled=false
-        if let url = URL(string: "https://update.kextupdater.de/online") {
-            do {
-                if try String(contentsOf: url) != "1\n"{
-                    return
-                }
-            } catch {
-                self.network_error.isHidden=false
-                return
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                    self.network_error.isHidden=true
-                   
-                }
+        //if let url = URL(string: "https://update.kextupdater.de/online") {
+        //    do {
+        //        if try String(contentsOf: url) != "1\n"{
+        //            return
+        //        }
+        //    } catch {
+        //        //self.network_error.isHidden=false
+        //        return
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+        //            //self.network_error.isHidden=true
+        //
+        //        }
 
-            }
-        }
+        //    }
+        //}
         
         start_button.isEnabled=false
         kexts_button.isEnabled=false

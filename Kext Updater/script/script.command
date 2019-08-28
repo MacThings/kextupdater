@@ -708,6 +708,15 @@ function mountefi()
 
 function mainscript()
 {
+
+    _languageselect
+
+    onlinecheck=$( curl -s -S https://update.kextupdater.de/online )
+    if [[ $onlinecheck != "1" ]]; then
+        echo "$networkerror"
+        exit
+    fi
+
 #========================= Script Pathes =========================#
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
 
