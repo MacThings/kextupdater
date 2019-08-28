@@ -3,6 +3,9 @@
 
 ScriptHome=$(echo $HOME)
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
+processid=$( pgrep KUMenuBar )
+defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "PID" "$processid"
+
 
 function runcheck()
 {
