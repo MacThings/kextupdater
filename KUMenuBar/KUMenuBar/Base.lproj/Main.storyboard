@@ -131,6 +131,10 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
+                                        <menuItem title="PID" enabled="NO" id="HBZ-fQ-iEw">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="voJ-Jf-g6A"/>
                                         <menuItem title="Quit KU MenuBar" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="quit_menubar:" target="Voe-Tx-rLC" id="nxn-vk-Tfo"/>
@@ -149,6 +153,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KUMenuBar" customModuleProvider="target">
                     <connections>
                         <outlet property="appMenu" destination="uQy-DD-JDr" id="RjQ-yg-w2e"/>
+                        <outlet property="process_id" destination="HBZ-fQ-iEw" id="ff7-7w-dtn"/>
                     </connections>
                 </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

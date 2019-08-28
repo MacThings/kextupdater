@@ -20,7 +20,7 @@ function runcheck()
 function updatecheck()
 {
 
-    bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemo
+    bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon &
 
 }
 

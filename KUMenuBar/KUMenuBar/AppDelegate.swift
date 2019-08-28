@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var statusItem: NSStatusItem?
     
     @IBOutlet weak var appMenu: NSMenu!
+    @IBOutlet weak var process_id: NSMenuItem!
     
     @objc func displayMenu() {
         guard let button = statusItem?.button else { return }
@@ -36,6 +37,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let pid: Int32 = ProcessInfo.processInfo.processIdentifier
+        let pid2 = String(pid)
+        self.process_id.title="PID: " + pid2
+        
         let afterrebootinit = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
         if afterrebootinit == false{
             UserDefaults.standard.set(false, forKey: "AfterRebootOnly")

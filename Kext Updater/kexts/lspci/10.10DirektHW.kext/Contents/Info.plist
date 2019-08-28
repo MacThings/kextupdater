@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>11G30</string>
+	<string>15A263e</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>DirektHW</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.coresystems.driver.DirektHW</string>
+	<string>org.apple.dont.block.DirektHW</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -18,28 +18,32 @@
 	<string>KEXT</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1.3</string>
+	<string>1.4</string>
 	<key>DTCompiler</key>
-	<string></string>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>4F243</string>
+	<string>7A176x</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>11G30</string>
+	<string>15A244e</string>
 	<key>DTSDKName</key>
-	<string></string>
+	<string>macosx10.11</string>
 	<key>DTXcode</key>
-	<string>0440</string>
+	<string>0700</string>
 	<key>DTXcodeBuild</key>
-	<string>4F243</string>
+	<string>7A176x</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>DirektHWUserClient</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.coresystems.driver.DirektHW</string>
+			<string>org.apple.dont.block.DirektHW</string>
 			<key>IOClass</key>
 			<string>DirektHWService</string>
 			<key>IOMatchCategory</key>

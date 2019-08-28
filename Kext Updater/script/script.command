@@ -1216,29 +1216,13 @@ function kudaemon()
 
     if [ -f "$ScriptTmpPath"/daemon_notify ]; then
         kuroot=$( _helpDefaultRead "KU Root" )
-        ANSWER="$(../bin/./alerter -message "$daemonnotify" -title "Kext Updater Daemon" -actions "$openkextupdater" -closeLabel "$daemonnotifyclose" -appIcon https://update.kextupdater.de/kextupdater/appicon.png)"
+        ANSWER="$(../bin/./alerter -message "$daemonnotify" -title "KU MenuBar" -actions "$openkextupdater" -closeLabel "$daemonnotifyclose" -appIcon https://update.kextupdater.de/kextupdater/appicon.png)"
         case $ANSWER in
         "$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
         esac
         rm "$ScriptTmpPath"/daemon_*
     fi
     exit 0
-}
-
-###################################################################
-################ Kext Updater Daemon LoginItem ####################
-###################################################################
-function loginitem_on()
-{
-
-    kuroot=$( _helpDefaultRead "KU Root" | sed -e "s/$/\/Kext\ Updater.app\/Contents\/Resources\/bin\/KUDaemon.app/" )
-    osascript -e 'tell application "System Events" to delete login item "KUDaemon"' > /dev/null
-    osascript -e 'tell application "System Events" to make login item at end with properties {path:"'"$kuroot"'", hidden:false}' > /dev/null
-}
-
-function loginitem_off()
-{
-    osascript -e 'tell application "System Events" to delete login item "KUDaemon"' > /dev/null
 }
 
 ###################################################################
