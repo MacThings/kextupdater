@@ -2269,6 +2269,19 @@ DQ
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-Zx-QzG" userLabel="Check EFI hidden Button">
+                                            <rect key="frame" x="635" y="298" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="UgM-ZT-OGg">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent"></string>
+                                                <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="rechecl_efi:" target="bdJ-Gk-pDf" id="d8e-7f-u28"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="separatorColor" catalog="System" colorSpace="catalog"/>

@@ -442,6 +442,7 @@ function mountefiall()
     fi
 
     _helpDefaultWrite "EFI Path" "$efipath"
+    defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
 
         if [[ $checkchime = "1" ]]; then
           _playchime
@@ -613,6 +614,8 @@ function initial()
     _helpDefaultWrite "OSVersion" "$osversion" &
     _helpDefaultWrite "Read-Only" "$oswriteprotected" &
 
+    defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath" 
+
     _setrootuser
 
     rootuser=$( _helpDefaultRead "Rootuser" )
@@ -698,6 +701,7 @@ function mountefi()
     fi
 
         _helpDefaultWrite "EFI Path" "$efipath"
+        defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
     fi
     exit 0
 }

@@ -74,6 +74,7 @@ class KextUpdater: NSViewController {
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
+    
     @IBAction func quit_app(_ sender: Any) {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
             if key.hasPrefix("dl-"){
@@ -89,6 +90,8 @@ class KextUpdater: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
 
+        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
+        
         PFMoveToApplicationsFolderIfNecessary()
 
         let occheck = UserDefaults.standard.string(forKey: "OCChecked")
@@ -568,6 +571,9 @@ class KextUpdater: NSViewController {
         
     }
     
+    @IBAction func rechecl_efi(_ sender: Any) {
+        checkefi()
+    }
     @IBAction func bug_report_click_sendmail(_ sender: Any) {
         let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
         service.recipients = ["bug@kextupdater.de"]
@@ -797,5 +803,14 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set("Light", forKey: "System Theme")
         }
     }
+    }		
+    
+    @objc func updatecheck() {
+        let refreshtime = UserDefaults.standard.string(forKey: "Refreshtime")
+        if refreshtime == "Yes" {
+            print("check efi")
+            self.checkefi()
+            UserDefaults.standard.set("No", forKey: "Refreshtime")
+        }
     }
 }

@@ -3,23 +3,32 @@
 
 ScriptHome=$(echo $HOME)
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
-efi_mounted_check=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Mounted" )
-efi_path=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Path" )
-defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efi_path"
+efi_root=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Root" )
+efi_mounted_check=$( diskutil info "$efi_root" |grep Mounted |sed 's/.*://g' |xargs )
 
 if [[ "$efi_mounted_check" = "Yes" ]]; then
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "Mounted" "Yes"
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Mounted" "Yes"
 else
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "Mounted" "No"
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Mounted" "No"
 fi
 
 function open_menu() {
 
 if [[ "$efi_mounted_check" = "Yes" ]]; then
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "Mounted" "Yes"
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Mounted" "Yes"
 else
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "Mounted" "No"
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Mounted" "No"
 fi
+
+}
+
+function refreshtime() {
+
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Refreshtime" "Yes"
 
 }
 

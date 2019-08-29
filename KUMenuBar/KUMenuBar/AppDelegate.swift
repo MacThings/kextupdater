@@ -30,9 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if checkefimount == "Yes"{
                     self.unmount_efi.isHidden=false
                     self.mount_efi.isHidden=true
+                    self.efi_folder.isHidden=false
                 } else {
                     self.unmount_efi.isHidden=true
                     self.mount_efi.isHidden=false
+                    self.efi_folder.isHidden=true
                 }
             }
         }
@@ -125,6 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func mount_efi(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["mount_bootefi"])
+            self.syncShellExec(path: self.scriptPath, args: ["refreshtime"])
             DispatchQueue.main.async {
                 self.unmount_efi.isHidden=false
                 self.mount_efi.isHidden=true
@@ -136,6 +139,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func unmount_efi(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["mount_bootefi"])
+            self.syncShellExec(path: self.scriptPath, args: ["refreshtime"])
             DispatchQueue.main.async {
                 self.mount_efi.isHidden=false
                 self.unmount_efi.isHidden=true
