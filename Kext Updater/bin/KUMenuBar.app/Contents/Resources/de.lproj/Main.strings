@@ -32,7 +32,7 @@
 "HBZ-fQ-iEw.title" = "PID";
 
 /* Class = "NSMenuItem"; title = "Mount EFI"; ObjectID = "IZa-m5-XsH"; */
-"IZa-m5-XsH.title" = "EFI mounten";
+"IZa-m5-XsH.title" = "Boot-EFI mounten";
 
 /* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
 "lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
@@ -47,7 +47,7 @@
 "qq0-Fk-B6B.title" = "3";
 
 /* Class = "NSMenuItem"; title = "Unmount EFI"; ObjectID = "RDM-FW-6PS"; */
-"RDM-FW-6PS.title" = "EFI auswerfen";
+"RDM-FW-6PS.title" = "Boot-EFI auswerfen";
 
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";

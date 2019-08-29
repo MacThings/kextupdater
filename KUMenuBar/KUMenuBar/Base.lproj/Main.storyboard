@@ -131,12 +131,12 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
-                                        <menuItem title="Mount EFI" image="NSStatusUnavailable" hidden="YES" keyEquivalent="m" id="IZa-m5-XsH">
+                                        <menuItem title="Mount Booot-EFI" image="NSStatusUnavailable" hidden="YES" keyEquivalent="m" id="IZa-m5-XsH">
                                             <connections>
                                                 <action selector="mount_efi:" target="Voe-Tx-rLC" id="jxM-BD-OEK"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Unmount EFI" image="NSStatusAvailable" hidden="YES" keyEquivalent="u" id="RDM-FW-6PS">
+                                        <menuItem title="Unmount Boot-EFI" image="NSStatusAvailable" hidden="YES" keyEquivalent="u" id="RDM-FW-6PS">
                                             <connections>
                                                 <action selector="unmount_efi:" target="Voe-Tx-rLC" id="bS9-a4-qv4"/>
                                             </connections>
@@ -170,7 +170,6 @@
                     <connections>
                         <outlet property="appMenu" destination="uQy-DD-JDr" id="RjQ-yg-w2e"/>
                         <outlet property="efi_folder" destination="wNO-id-TVJ" id="jLO-8H-AZs"/>
-                        <outlet property="efi_foler" destination="wNO-id-TVJ" id="3t2-gs-EJW"/>
                         <outlet property="mount_efi" destination="IZa-m5-XsH" id="d5m-Jq-w7f"/>
                         <outlet property="process_id" destination="HBZ-fQ-iEw" id="ff7-7w-dtn"/>
                         <outlet property="unmount_efi" destination="RDM-FW-6PS" id="6TD-uO-c80"/>
