@@ -1770,12 +1770,12 @@
                             <popUpButton focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-xM-9h9">
                                 <rect key="frame" x="299" y="424" width="136" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" altersStateOfSelectedItem="NO" selectedItem="QTQ-x6-Dxw" id="cik-ck-erl">
+                                <popUpButtonCell key="cell" type="push" title="  " bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" altersStateOfSelectedItem="NO" selectedItem="QTQ-x6-Dxw" id="cik-ck-erl">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="01V-T1-z1j">
                                         <items>
-                                            <menuItem id="QTQ-x6-Dxw"/>
+                                            <menuItem title="  " id="QTQ-x6-Dxw"/>
                                             <menuItem title="Basic" tag="1" id="IJQ-l3-9Cz"/>
                                             <menuItem title="Audio" tag="2" id="tuE-TW-czw"/>
                                             <menuItem title="Gfx" tag="3" id="bRU-Iv-WCR"/>
@@ -3477,10 +3477,10 @@ DQ
                                             <menuItem title="Please select" state="on" id="Kri-LH-JvQ">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="El Capitan" tag="1" id="EUj-7t-cNU">
+                                            <menuItem title="Yosemite" tag="2" id="Ops-Av-Y4z">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="Yosemite" tag="2" id="Ops-Av-Y4z">
+                                            <menuItem title="El Capitan" tag="1" id="EUj-7t-cNU">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="Sierra" tag="3" id="buk-uA-1rc">
@@ -3496,7 +3496,7 @@ DQ
                                     <action selector="os_choice:" target="FlY-af-uzG" id="2fz-oJ-X0Z"/>
                                 </connections>
                             </popUpButton>
-                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv9-K3-wAu" userLabel="Yosemite Builds">
+                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv9-K3-wAu" userLabel="El Capitan Builds">
                                 <rect key="frame" x="415" y="78" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Please select" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="MyU-5a-jmZ" id="mzO-Ee-l96">
@@ -3571,10 +3571,10 @@ DQ
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
-                                    <action selector="yosemite_choice:" target="FlY-af-uzG" id="0yS-kv-iq4"/>
+                                    <action selector="elcapitan_choice:" target="FlY-af-uzG" id="EDP-eM-KYk"/>
                                 </connections>
                             </popUpButton>
-                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Dd-l3-aKz" userLabel="El Capitan Builds">
+                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Dd-l3-aKz" userLabel="Yosemite Builds">
                                 <rect key="frame" x="415" y="78" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Please select" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="csb-9Z-hAo" id="SpI-iH-mOd">
@@ -3655,7 +3655,7 @@ DQ
                                     </menu>
                                 </popUpButtonCell>
                                 <connections>
-                                    <action selector="elcapitan_choice:" target="FlY-af-uzG" id="0l2-DN-x9O"/>
+                                    <action selector="yosemite_choice:" target="FlY-af-uzG" id="erW-KN-DOx"/>
                                 </connections>
                             </popUpButton>
                             <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpD-eI-8Oc">
@@ -3882,7 +3882,7 @@ DQ
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="elcapitan_builds" destination="0Dd-l3-aKz" id="fgB-iL-7d8"/>
+                        <outlet property="elcapitan_builds" destination="Zv9-K3-wAu" id="Btf-oG-hJj"/>
                         <outlet property="elcapitan_empty_entry" destination="csb-9Z-hAo" id="Oyy-O5-l8m"/>
                         <outlet property="highsierra_builds" destination="mCR-RQ-Fig" id="sUx-yl-GTh"/>
                         <outlet property="highsierra_empty_entry" destination="AQu-gQ-jTO" id="EG9-hv-qC6"/>
@@ -3891,7 +3891,7 @@ DQ
                         <outlet property="sierra_builds" destination="rpD-eI-8Oc" id="mZh-Dw-euI"/>
                         <outlet property="sierra_empty_entry" destination="9p3-6R-FFK" id="OyE-fV-x1y"/>
                         <outlet property="start_button" destination="phl-PS-zsa" id="ONT-oX-w19"/>
-                        <outlet property="yosemite_builds" destination="Zv9-K3-wAu" id="zRe-hW-rDp"/>
+                        <outlet property="yosemite_builds" destination="0Dd-l3-aKz" id="526-KP-acj"/>
                         <outlet property="yosemite_empty_entry" destination="MyU-5a-jmZ" id="7Yh-2g-khP"/>
                     </connections>
                 </viewController>

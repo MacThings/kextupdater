@@ -30,7 +30,7 @@ class SingleKexts: NSViewController {
     }
     
     @IBAction func group_select(_ sender: Any) {
-        self.group_select_pulldown.removeItem(at: 0)
+        self.group_select_pulldown.item(withTitle: "  ")?.isHidden=true
         let group_choice = (sender as AnyObject).selectedCell()!.tag
         if group_choice == 1 {
             for key in UserDefaults.standard.dictionaryRepresentation().keys {
