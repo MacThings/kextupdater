@@ -571,9 +571,6 @@ class KextUpdater: NSViewController {
         
     }
     
-    @IBAction func rechecl_efi(_ sender: Any) {
-        checkefi()
-    }
     @IBAction func bug_report_click_sendmail(_ sender: Any) {
         let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
         service.recipients = ["bug@kextupdater.de"]
