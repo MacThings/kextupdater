@@ -130,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = "Kelvin Ng";
+				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					FCC6C4D119A58C7A0063EC3C = {
 						CreatedOnToolsVersion = 6.0;

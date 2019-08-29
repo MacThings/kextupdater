@@ -20,8 +20,10 @@ function runcheck()
 function updatecheck()
 {
 
-    bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon &
-
+    alertercheck=$( ps -A | grep alerter | grep appicon | awk '{print $1}' )
+    if [[ "$alertercheck" = "" ]]; then
+        bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon &
+    fi
 }
 
 function open_kextupdater()

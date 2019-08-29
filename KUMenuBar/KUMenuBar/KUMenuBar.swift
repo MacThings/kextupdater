@@ -54,9 +54,7 @@ class KUMenuBar: NSViewController {
         }
         
     }
-    /**
-     * Performs an "asynchronous" shell exec with non blocking UI thread
-     */
+
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()
         process.launchPath     = "/bin/bash"
