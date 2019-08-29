@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:KUMenuBar/KUMenuBar.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Kext Updater.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:KUMenuBar/KUMenuBar.xcodeproj">
    </FileRef>
 </Workspace>

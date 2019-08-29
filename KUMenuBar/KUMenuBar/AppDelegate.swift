@@ -17,8 +17,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var appMenu: NSMenu!
     @IBOutlet weak var process_id: NSMenuItem!
-    
+    @IBOutlet weak var mount_efi: NSMenuItem!
+    @IBOutlet weak var unmount_efi: NSMenuItem!
+    @IBOutlet weak var efi_folder: NSMenuItem!
+
     @objc func displayMenu() {
+        
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["open_menu"])
+            DispatchQueue.main.async {
+                let checkefimount = UserDefaults.standard.string(forKey: "Mounted")
+                if checkefimount == "Yes"{
+                    self.unmount_efi.isHidden=false
+                    self.mount_efi.isHidden=true
+                } else {
+                    self.unmount_efi.isHidden=true
+                    self.mount_efi.isHidden=false
+                }
+            }
+        }
         guard let button = statusItem?.button else { return }
         let x = button.frame.origin.x
         let y = button.frame.origin.y - 5
@@ -45,13 +62,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if afterrebootinit == false{
             UserDefaults.standard.set(false, forKey: "AfterRebootOnly")
         }
+
         let intervalinit = UserDefaults.standard.string(forKey: "UpdateInterval")
         if intervalinit == nil{
             UserDefaults.standard.set("21600", forKey: "UpdateInterval")
         }
+        
         let intervalstring = UserDefaults.standard.string(forKey: "UpdateInterval")
         let myintervalstring = (intervalstring! as NSString).doubleValue
-
         let afterrebootinit2 = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
         if afterrebootinit2 == false {
             Timer.scheduledTimer(timeInterval: myintervalstring, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
@@ -64,6 +82,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["runcheck"])
             DispatchQueue.main.async {
+                let checkefimount = UserDefaults.standard.string(forKey: "Mounted")
+                if checkefimount == "Yes"{
+                    self.unmount_efi.isHidden=false
+                    self.mount_efi.isHidden=true
+                    self.efi_folder.isHidden=false
+                } else {
+                    self.unmount_efi.isHidden=true
+                    self.mount_efi.isHidden=false
+                    self.efi_folder.isHidden=true
+                }
             }
         }
         
@@ -84,8 +112,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             DispatchQueue.main.async {
             }
         }
-        
-        
     }
 
     @IBAction func open_kextupdater(_ sender: Any) {
@@ -96,6 +122,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func mount_efi(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["mount_bootefi"])
+            DispatchQueue.main.async {
+                self.unmount_efi.isHidden=false
+                self.mount_efi.isHidden=true
+                self.efi_folder.isHidden=false
+            }
+        }
+    }
+    
+    @IBAction func unmount_efi(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["mount_bootefi"])
+            DispatchQueue.main.async {
+                self.mount_efi.isHidden=false
+                self.unmount_efi.isHidden=true
+                self.efi_folder.isHidden=true
+            }
+        }
+    }
+    
+    @IBAction func open_efi(_ sender: Any) {
+        let efipath = UserDefaults.standard.string(forKey: "EFI Path")
+        let url = URL(fileURLWithPath: efipath ?? "")
+        do {
+            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+        } catch _ {
+            print("")
+        }
+        
+        let efipath2 = UserDefaults.standard.string(forKey: "EFI Path")
+        NSWorkspace.shared.openFile(efipath2 ?? "")
+    }
+
     @IBAction func quit_menubar(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
            self.syncShellExec(path: self.scriptPath, args: ["quitmenu"])

@@ -28,6 +28,12 @@
 /* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p"; */
 "Div-YM-d8p.title" = "Ok";
 
+/* Class = "NSMenuItem"; title = "PID"; ObjectID = "HBZ-fQ-iEw"; */
+"HBZ-fQ-iEw.title" = "PID";
+
+/* Class = "NSMenuItem"; title = "Mount EFI"; ObjectID = "IZa-m5-XsH"; */
+"IZa-m5-XsH.title" = "EFI mounten";
+
 /* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
 "lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
 
@@ -40,8 +46,14 @@
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
 "qq0-Fk-B6B.title" = "3";
 
+/* Class = "NSMenuItem"; title = "Unmount EFI"; ObjectID = "RDM-FW-6PS"; */
+"RDM-FW-6PS.title" = "EFI auswerfen";
+
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";
+
+/* Class = "NSMenuItem"; title = "Go to ..."; ObjectID = "wNO-id-TVJ"; */
+"wNO-id-TVJ.title" = "Gehe zu ...";
 
 /* Class = "NSTextFieldCell"; title = "Hour(s)"; ObjectID = "yYu-Pv-uSR"; */
 "yYu-Pv-uSR.title" = "Stunde(n)";

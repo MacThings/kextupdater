@@ -131,6 +131,22 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
+                                        <menuItem title="Mount EFI" image="NSStatusUnavailable" hidden="YES" keyEquivalent="m" id="IZa-m5-XsH">
+                                            <connections>
+                                                <action selector="mount_efi:" target="Voe-Tx-rLC" id="jxM-BD-OEK"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Unmount EFI" image="NSStatusAvailable" hidden="YES" keyEquivalent="u" id="RDM-FW-6PS">
+                                            <connections>
+                                                <action selector="unmount_efi:" target="Voe-Tx-rLC" id="bS9-a4-qv4"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Go to ..." image="menubar_efifolder" keyEquivalent="g" id="wNO-id-TVJ">
+                                            <connections>
+                                                <action selector="open_efi:" target="Voe-Tx-rLC" id="MU9-6M-8bd"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wYL-K8-Qj6"/>
                                         <menuItem title="PID" enabled="NO" id="HBZ-fQ-iEw">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
@@ -153,7 +169,11 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KUMenuBar" customModuleProvider="target">
                     <connections>
                         <outlet property="appMenu" destination="uQy-DD-JDr" id="RjQ-yg-w2e"/>
+                        <outlet property="efi_folder" destination="wNO-id-TVJ" id="jLO-8H-AZs"/>
+                        <outlet property="efi_foler" destination="wNO-id-TVJ" id="3t2-gs-EJW"/>
+                        <outlet property="mount_efi" destination="IZa-m5-XsH" id="d5m-Jq-w7f"/>
                         <outlet property="process_id" destination="HBZ-fQ-iEw" id="ff7-7w-dtn"/>
+                        <outlet property="unmount_efi" destination="RDM-FW-6PS" id="6TD-uO-c80"/>
                     </connections>
                 </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -161,4 +181,9 @@
             <point key="canvasLocation" x="-25" y="-293"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
+        <image name="menubar_efifolder" width="26" height="21"/>
+    </resources>
 </document>
