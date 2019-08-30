@@ -190,42 +190,42 @@ function _languageselect()
     if [[ $lan2 = de* ]]; then
     export LC_ALL=de_DE
     language="de"
-    elif [[ $lan2 = tr* ]]; then
-    export LC_ALL=tr_TR
-    language="tr"
-    elif [[ $lan2 = ru* ]]; then
-    export LC_ALL=ru_RU
-    language="ru"
-    elif [[ $lan2 = uk* ]]; then
-    export LC_ALL=uk_UK
-    language="uk"
-    elif [[ $lan2 = es* ]]; then
-    export LC_ALL=es_ES
-    language="es"
-    elif [[ $lan2 = pt* ]]; then
-    export LC_ALL=pt_PT
-    language="pt-PT"
-    elif [[ $lan2 = nl* ]]; then
-    export LC_ALL=nl_NL
-    language="nl"
-    elif [[ $lan2 = fr* ]]; then
-    export LC_ALL=fr_FR
-    language="fr"
-    elif [[ $lan2 = it* ]]; then
-    export LC_ALL=it_IT
-    language="it"
-    elif [[ $lan2 = fi* ]]; then
-    export LC_ALL=fi_FI
-    language="fi"
-    elif [[ $lan2 = pl* ]]; then
-    export LC_ALL=pl_PL
-    language="pl"
-    elif [[ $lan2 = sv* ]]; then
-    export LC_ALL=sv_SV
-    language="sv"
-    elif [[ $lan2 = cs* ]]; then
-    export LC_ALL=cs_CS
-    language="cs"
+#elif [[ $lan2 = tr* ]]; then
+#    export LC_ALL=tr_TR
+#   language="tr"
+#   elif [[ $lan2 = ru* ]]; then
+#   export LC_ALL=ru_RU
+#   language="ru"
+#   elif [[ $lan2 = uk* ]]; then
+#   export LC_ALL=uk_UK
+#   language="uk"
+#   elif [[ $lan2 = es* ]]; then
+#   export LC_ALL=es_ES
+#   language="es"
+#   elif [[ $lan2 = pt* ]]; then
+#   export LC_ALL=pt_PT
+#   language="pt-PT"
+#   elif [[ $lan2 = nl* ]]; then
+#   export LC_ALL=nl_NL
+#   language="nl"
+#   elif [[ $lan2 = fr* ]]; then
+#   export LC_ALL=fr_FR
+#   language="fr"
+#   elif [[ $lan2 = it* ]]; then
+#   export LC_ALL=it_IT
+#   language="it"
+#   elif [[ $lan2 = fi* ]]; then
+#   export LC_ALL=fi_FI
+#   language="fi"
+#   elif [[ $lan2 = pl* ]]; then
+#   export LC_ALL=pl_PL
+#   language="pl"
+#   elif [[ $lan2 = sv* ]]; then
+#   export LC_ALL=sv_SV
+#   language="sv"
+#   elif [[ $lan2 = cs* ]]; then
+#   export LC_ALL=cs_CS
+#   language="cs"
     else
     export LC_ALL=en_EN
     language="en"
@@ -234,7 +234,6 @@ function _languageselect()
         mkdir "$ScriptTmpPath"
     fi
     if [ ! -f ${ScriptTmpPath}/locale.tmp ]; then
-        #cat ../$language.lproj/Main.strings | sed "s/\=\ \"/\=\"/g" | grep -A 10000000 BASH | tail -n +2 > ${ScriptTmpPath}/locale.tmp
         cat ../bashstrings/$language.bashstrings > ${ScriptTmpPath}/locale.tmp
     fi
     source ${ScriptTmpPath}/locale.tmp
@@ -614,7 +613,7 @@ function initial()
     _helpDefaultWrite "OSVersion" "$osversion" &
     _helpDefaultWrite "Read-Only" "$oswriteprotected" &
 
-    defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath" 
+    defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
 
     _setrootuser
 

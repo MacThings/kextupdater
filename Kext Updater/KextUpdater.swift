@@ -805,9 +805,11 @@ class KextUpdater: NSViewController {
     @objc func updatecheck() {
         let refreshtime = UserDefaults.standard.string(forKey: "Refreshtime")
         if refreshtime == "Yes" {
-            print("check efi")
             self.checkefi()
             UserDefaults.standard.set("No", forKey: "Refreshtime")
         }
     }
+    
+    
+    
 }
