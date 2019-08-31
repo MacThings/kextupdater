@@ -68,7 +68,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if afterrebootinit == false{
             UserDefaults.standard.set(false, forKey: "AfterRebootOnly")
         }
-
+        
+        let checkefimount = UserDefaults.standard.bool(forKey: "Mounted")
+        let mount_efi_automatic = UserDefaults.standard.bool(forKey: "AutomaticEfiMount")
+        if mount_efi_automatic == true{
+            if checkefimount == false {
+                DispatchQueue.global(qos: .background).async {
+                    self.syncShellExec(path: self.scriptPath, args: ["mount_bootefi"])
+                    DispatchQueue.main.async {
+                    }
+                }
+            }
+        }
+        
         let intervalinit = UserDefaults.standard.string(forKey: "UpdateInterval")
         if intervalinit == nil{
             UserDefaults.standard.set("21600", forKey: "UpdateInterval")

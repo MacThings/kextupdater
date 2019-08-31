@@ -22,8 +22,11 @@
 /* Class = "NSMenuItem"; title = "2"; ObjectID = "bBc-lm-RgD"; */
 "bBc-lm-RgD.title" = "2";
 
-/* Class = "NSMenuItem"; title = "Set Update Interval"; ObjectID = "BOF-NM-1cW"; */
-"BOF-NM-1cW.title" = "Updaterintervall einstellen";
+/* Class = "NSTextFieldCell"; title = "Automatically mounts the boot EFI after every boot. The menu Bar Item has to be started permanently."; ObjectID = "bF3-cv-DWp"; */
+"bF3-cv-DWp.title" = "Mounte die Boot EFI nach jedem Systemstart automatisch neu. Das Menu Bar Item muss dafür aber dauerhaft gestartet sein.";
+
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Einstellungen...";
 
 /* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p"; */
 "Div-YM-d8p.title" = "Ok";
@@ -31,14 +34,14 @@
 /* Class = "NSMenuItem"; title = "PID"; ObjectID = "HBZ-fQ-iEw"; */
 "HBZ-fQ-iEw.title" = "PID";
 
-/* Class = "NSMenuItem"; title = "Mount EFI"; ObjectID = "IZa-m5-XsH"; */
+/* Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH"; */
 "IZa-m5-XsH.title" = "Boot-EFI mounten";
 
 /* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
 "lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
 
-/* Class = "NSTextFieldCell"; title = "Update Interval"; ObjectID = "no6-as-NNY"; */
-"no6-as-NNY.title" = "Update Intervall";
+/* Class = "NSTextFieldCell"; title = "Preferences"; ObjectID = "no6-as-NNY"; */
+"no6-as-NNY.title" = "Einstellungen";
 
 /* Class = "NSViewController"; title = "Interval"; ObjectID = "qdv-kZ-Khq"; */
 "qdv-kZ-Khq.title" = "Interval";
@@ -46,7 +49,7 @@
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
 "qq0-Fk-B6B.title" = "3";
 
-/* Class = "NSMenuItem"; title = "Unmount EFI"; ObjectID = "RDM-FW-6PS"; */
+/* Class = "NSMenuItem"; title = "Unmount Boot-EFI"; ObjectID = "RDM-FW-6PS"; */
 "RDM-FW-6PS.title" = "Boot-EFI auswerfen";
 
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
