@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Interval-->
+        <!--Menu Bar-->
         <scene sceneID="WDy-pZ-oD9">
             <objects>
-                <viewController title="Interval" id="qdv-kZ-Khq" customClass="KUMenuBar" customModule="KUMenuBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qdv-kZ-Khq" customClass="KUMenuBar" customModule="KUMenuBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" focusRingType="none" id="oYs-At-w56">
                         <rect key="frame" x="0.0" y="0.0" width="299" height="198"/>
                         <autoresizingMask key="autoresizingMask"/>
