@@ -2250,17 +2250,6 @@ DQ
                                                 <action selector="paypal_button:" target="bdJ-Gk-pDf" id="5Bq-Us-C9D"/>
                                             </connections>
                                         </button>
-                                        <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-Ni-UMM" userLabel="Bug Report">
-                                            <rect key="frame" x="621" y="154" width="34" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="right" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="e2z-gF-Bwd">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="bug_report_click_sendmail:" target="bdJ-Gk-pDf" id="diy-Se-2PI"/>
-                                            </connections>
-                                        </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xuk-j0-jIC" userLabel="App Logo Animation">
                                             <rect key="frame" x="607" y="218" width="38" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -2268,6 +2257,17 @@ DQ
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
+                                            <rect key="frame" x="615" y="159" width="36" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="GNb-bk-Uiw">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="bug_report_click_sendmail:" target="bdJ-Gk-pDf" id="YYm-OD-RG6"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -2484,6 +2484,20 @@ DQ
                                     <action selector="egg3:" target="bdJ-Gk-pDf" id="QQd-2N-Xbp"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-nI-Tsy" userLabel="Start bt">
+                                <rect key="frame" x="520" y="13" width="100" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NnJ-Dx-gBx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="start_button:" target="bdJ-Gk-pDf" id="0Dy-Ft-JMP"/>
+                                </connections>
+                            </button>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-4o-XyX" userLabel="Keychain Pfeil">
                                 <rect key="frame" x="508" y="-28" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2504,20 +2518,6 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="crt" id="N5W-Hb-aO1"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-nI-Tsy" userLabel="Start bt">
-                                <rect key="frame" x="520" y="13" width="100" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NnJ-Dx-gBx">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="start_button:" target="bdJ-Gk-pDf" id="0Dy-Ft-JMP"/>
-                                </connections>
-                            </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyp-0e-eWT">
                                 <rect key="frame" x="14" y="13" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

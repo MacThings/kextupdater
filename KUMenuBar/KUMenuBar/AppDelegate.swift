@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var mount_efi: NSMenuItem!
     @IBOutlet weak var unmount_efi: NSMenuItem!
     @IBOutlet weak var efi_folder: NSMenuItem!
-
+    
     @objc func displayMenu() {
         
         DispatchQueue.global(qos: .background).async {
@@ -56,9 +56,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        UserDefaults.standard.set(appVersion, forKey: "AppVersion")
+        
         let pid: Int32 = ProcessInfo.processInfo.processIdentifier
         let pid2 = String(pid)
-        self.process_id.title="PID: " + pid2
+        self.process_id.title=("PID: " + pid2 + " / Version " + appVersion!)
+        UserDefaults.standard.set(pid2, forKey: "PID")
         
         let afterrebootinit = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
         if afterrebootinit == false{
@@ -162,6 +166,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func quit_menubar(_ sender: Any) {
+        UserDefaults.standard.set("", forKey: "PID")
         DispatchQueue.global(qos: .background).async {
            self.syncShellExec(path: self.scriptPath, args: ["quitmenu"])
             DispatchQueue.main.async {

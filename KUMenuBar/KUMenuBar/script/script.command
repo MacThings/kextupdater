@@ -54,6 +54,7 @@ function mount_bootefi()
 {
 
     bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command mountefi
+    refreshtime
 
 }
 

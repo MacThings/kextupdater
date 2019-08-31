@@ -536,7 +536,7 @@ function initial()
     efiroot=$( echo -e "$efiscan" )
     efiname=$( echo -e "$diskscan" | grep "Volume Name:" | sed "s/.*://g" | xargs )
     clovermode=$( ../bin/./BDMESG | grep -i "starting clover" | sed "s/.*EFI/UEFI/g" | tr -d '\r' )
-    cloverconfig=$( ../bin/./BDMESG | grep .plist | grep loaded | sed -e "s/\ loaded.*//g" -e "s/.*\\\//g" | xargs )
+    cloverconfig=$( ../bin/./BDMESG | grep .plist | grep loaded | sed -e "s/\ loaded.*//g" -e "s/.*\\\//g" |sed 's/.plist.*/.plist/g' | xargs )
     ozmosischeck=$( ../bin/./BDMESG | grep "Ozmosis" )
     ozmosischeck2=$( nvram 1F8E0C02-58A9-4E34-AE22-2B63745FA101:UserInterface 2> /dev/null )
     ozmosischeck3=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:BaseBoardSerial 2> /dev/null )
@@ -614,6 +614,22 @@ function initial()
     _helpDefaultWrite "Read-Only" "$oswriteprotected" &
 
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
+
+    menubar_version_running=$( defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "AppVersion" )
+    menubar_pid=$( defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "PID" )
+    menubar_version_bundle=$( defaults read "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app/Contents/Info.plist" "CFBundleShortVersionString" )
+    menubar_prefs_activated=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "MenuBarItem" )
+
+    if [[ "$menubar_version_running" != "$menubar_version_bundle" ]]; then
+        if [[ "$menubar_pid" = "" ]] && [[ "$menubar_prefs_activated" = "1" ]]; then
+            kill -kill "$menubar_pid"
+            open "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app"
+        fi
+    fi
+
+    if [[ "$menubar_pid" = "" ]] && [[ "$menubar_prefs_activated" = "1" ]]; then
+        open "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app"
+    fi
 
     _setrootuser
 
