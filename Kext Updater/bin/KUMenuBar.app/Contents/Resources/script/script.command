@@ -41,6 +41,14 @@ function runcheck()
     fi
 }
 
+function updatecheck_now()
+{
+
+    bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command mainscript
+
+}
+
+
 function updatecheck()
 {
 

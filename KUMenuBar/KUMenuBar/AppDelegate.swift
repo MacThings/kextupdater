@@ -11,7 +11,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
-
+    
     //strong reference to retain the status bar item object
 	var statusItem: NSStatusItem?
     
@@ -122,6 +122,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         button.image = NSImage(named: "MenuBarButton")
         button.target = self
         button.action = #selector(displayMenu)
+    }
+
+    @IBAction func update_check_now(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["updatecheck_now"])
+            DispatchQueue.main.async {
+            }
+        }
     }
 
     @objc func updatecheck() {

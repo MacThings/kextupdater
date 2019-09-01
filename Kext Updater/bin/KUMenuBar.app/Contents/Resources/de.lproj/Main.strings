@@ -43,14 +43,14 @@
 /* Class = "NSTextFieldCell"; title = "Preferences"; ObjectID = "no6-as-NNY"; */
 "no6-as-NNY.title" = "Einstellungen";
 
-/* Class = "NSViewController"; title = "Interval"; ObjectID = "qdv-kZ-Khq"; */
-"qdv-kZ-Khq.title" = "Interval";
-
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
 "qq0-Fk-B6B.title" = "3";
 
 /* Class = "NSMenuItem"; title = "Unmount Boot-EFI"; ObjectID = "RDM-FW-6PS"; */
 "RDM-FW-6PS.title" = "Boot-EFI auswerfen";
+
+/* Class = "NSMenuItem"; title = "Check now ..."; ObjectID = "RyK-ui-asr"; */
+"RyK-ui-asr.title" = "Jetzt prüfen ...";
 
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";
