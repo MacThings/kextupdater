@@ -620,8 +620,14 @@ function initial()
     menubar_version_bundle=$( defaults read "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app/Contents/Info.plist" "CFBundleShortVersionString" )
     menubar_prefs_activated=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "MenuBarItem" )
 
+    if [[ "$menubar_version_running" = "" || "$menubar_version_bundle" = "" ]]; then
+        pkill KUMenuBar
+        menubar_version_running="ToChange"
+    fi
+
     if [[ "$menubar_version_running" != "$menubar_version_bundle" ]]; then
         if [[ "$menubar_pid" = "" ]] && [[ "$menubar_prefs_activated" = "1" ]]; then
+            pkill KUMenuBar
             kill -kill "$menubar_pid"
             open "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app"
         fi
