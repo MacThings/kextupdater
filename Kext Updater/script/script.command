@@ -429,14 +429,15 @@ function mountefiall()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g'|head -n 1 )
+        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g' |head -n 1 )
       fi
       if [[ $bootloader = Clover* ]]; then
         cloverconfig=$( _helpDefaultRead "Cloverconfig" )
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" )
+        efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
+        efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -584,15 +585,14 @@ function initial()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g'|head -n 1 )
+        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g' |head -n 1 )
       fi
       if [[ $bootloader = Clover* ]]; then
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -maxdepth 3 -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" | grep -v "Trashes" | grep -w "OC" )
-        #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed  -e 's/.*\\EFI/\/EFI/g' -e 's/\\/\//g' -e 's/Open.*//g' )
-        #efipath=$( echo "/Volumes/EFI"$efipath )
+        efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
+        efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -710,14 +710,15 @@ function mountefi()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g'|head -n 1 )
+        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g' |head -n 1 )
       fi
       if [[ $bootloader = Clover* ]]; then
         cloverconfig=$( _helpDefaultRead "Cloverconfig" )
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -maxdepth 3 -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" | grep -v "Trashes" | grep -w "OC" )
+        efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
+        efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
