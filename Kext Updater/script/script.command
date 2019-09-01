@@ -584,7 +584,7 @@ function initial()
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
-        efipath=$( find "$mountpoint" -name "Defaults.plist" |sed -e "s/\.//g" -e "s/Defaul.*//g" |grep -v "Trashes" | grep -w "Oz" )
+        efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" |grep -w "Oz" |grep -v "OZ" )
       fi
       if [[ $bootloader = Clover* ]]; then
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
