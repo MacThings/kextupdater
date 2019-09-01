@@ -621,13 +621,13 @@ function initial()
     menubar_prefs_activated=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "MenuBarItem" )
 
     if [[ "$menubar_version_running" = "" || "$menubar_version_bundle" = "" ]]; then
-        pkill KUMenuBar
+        pkill -f KUMenuBar
         menubar_version_running="ToChange"
     fi
 
     if [[ "$menubar_version_running" != "$menubar_version_bundle" ]]; then
-        if [[ "$menubar_pid" = "" ]] && [[ "$menubar_prefs_activated" = "1" ]]; then
-            pkill KUMenuBar
+        if [[ "$menubar_prefs_activated" = "1" ]]; then
+            pkill -f KUMenuBar
             kill -kill "$menubar_pid"
             open "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app"
         fi
@@ -1226,7 +1226,7 @@ function kudaemon()
 
     echo "$kextstats" | tr '[:upper:]' '[:lower:]' > "$ScriptTmpPath"/daemon_kextstat
 
-    curl -sS -A "KU Daemon" -o "$ScriptTmpPath"/daemon_overview https://$url/overview.html
+    curl -sS -A "KU MenuBar" -o "$ScriptTmpPath"/daemon_overview https://$url/overview.html
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         kext=$( echo "$line" |sed "s/-.*//g" )

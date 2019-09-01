@@ -146,7 +146,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="XBd-n3-y4k"/>
-                                        <menuItem title="Check now ..." keyEquivalent="k" id="RyK-ui-asr">
+                                        <menuItem title="Check now ..." keyEquivalent="c" id="RyK-ui-asr">
                                             <connections>
                                                 <action selector="update_check_now:" target="Voe-Tx-rLC" id="IMD-1P-DCK"/>
                                             </connections>
