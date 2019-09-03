@@ -2247,10 +2247,10 @@ DQ
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
+                                        <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
                                             <rect key="frame" x="623" y="136" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="GNb-bk-Uiw">
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="GNb-bk-Uiw">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -4261,7 +4261,7 @@ DQ
         <image name="crt" width="466" height="527"/>
         <image name="efifolder" width="128" height="105"/>
         <image name="efihd" width="246" height="255"/>
-        <image name="folder" width="128" height="105"/>
+        <image name="folder" width="26" height="21"/>
         <image name="harddisk" width="256" height="256"/>
         <image name="hflogo" width="860" height="170"/>
         <image name="kext" width="200" height="200"/>

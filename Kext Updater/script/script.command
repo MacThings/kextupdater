@@ -187,6 +187,7 @@ kextArray=(
 #========================= Language Detection =========================#
 function _languageselect()
 {
+
     if [[ $lan2 = de* ]]; then
     export LC_ALL=de_DE
     language="de"
@@ -233,9 +234,9 @@ function _languageselect()
     if [ ! -d "$ScriptTmpPath" ]; then
         mkdir "$ScriptTmpPath"
     fi
-    if [ ! -f ${ScriptTmpPath}/locale.tmp ]; then
-        cat ../bashstrings/$language.bashstrings > ${ScriptTmpPath}/locale.tmp
-    fi
+    #if [ ! -f ${ScriptTmpPath}/locale.tmp ]; then
+    cat ../bashstrings/$language.bashstrings > ${ScriptTmpPath}/locale.tmp
+    #fi
     source ${ScriptTmpPath}/locale.tmp
 }
 
