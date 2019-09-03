@@ -140,7 +140,7 @@
                                 <menu key="submenu" title="KU MenuBar" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Preferences..." keyEquivalent="i" id="BOF-NM-1cW">
+                                        <menuItem title="Preferences..." keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
                                                 <segue destination="qdv-kZ-Khq" kind="show" id="NVj-kM-Ovh"/>
                                             </connections>
@@ -167,9 +167,14 @@
                                                 <action selector="unmount_efi:" target="Voe-Tx-rLC" id="bS9-a4-qv4"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Go to ..." image="menubar_efifolder" hidden="YES" keyEquivalent="g" id="wNO-id-TVJ">
+                                        <menuItem title="Open EFI Folder" image="menubar_efifolder" hidden="YES" keyEquivalent="e" id="wNO-id-TVJ">
                                             <connections>
                                                 <action selector="open_efi:" target="Voe-Tx-rLC" id="MU9-6M-8bd"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open Download Folder" image="menubar_folder" hidden="YES" keyEquivalent="d" id="4zv-QS-4Dz">
+                                            <connections>
+                                                <action selector="open_download:" target="Voe-Tx-rLC" id="WEA-Bd-VWF"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wYL-K8-Qj6"/>
@@ -195,6 +200,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KUMenuBar" customModuleProvider="target">
                     <connections>
                         <outlet property="appMenu" destination="uQy-DD-JDr" id="RjQ-yg-w2e"/>
+                        <outlet property="download_folder" destination="4zv-QS-4Dz" id="Qm9-0v-DCZ"/>
                         <outlet property="efi_folder" destination="wNO-id-TVJ" id="jLO-8H-AZs"/>
                         <outlet property="mount_efi" destination="IZa-m5-XsH" id="d5m-Jq-w7f"/>
                         <outlet property="process_id" destination="HBZ-fQ-iEw" id="ff7-7w-dtn"/>
@@ -210,5 +216,6 @@
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="menubar_efifolder" width="26" height="21"/>
+        <image name="menubar_folder" width="26" height="21"/>
     </resources>
 </document>

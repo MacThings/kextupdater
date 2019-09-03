@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var mount_efi: NSMenuItem!
     @IBOutlet weak var unmount_efi: NSMenuItem!
     @IBOutlet weak var efi_folder: NSMenuItem!
+    @IBOutlet weak var download_folder: NSMenuItem!
     
     @objc func displayMenu() {
         
@@ -31,10 +32,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     self.unmount_efi.isHidden=false
                     self.mount_efi.isHidden=true
                     self.efi_folder.isHidden=false
+                    self.download_folder.isHidden=false
                 } else {
                     self.unmount_efi.isHidden=true
                     self.mount_efi.isHidden=false
                     self.efi_folder.isHidden=true
+                    self.download_folder.isHidden=true
                 }
             }
         }
@@ -105,10 +108,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     self.unmount_efi.isHidden=false
                     self.mount_efi.isHidden=true
                     self.efi_folder.isHidden=false
+                    self.download_folder.isHidden=false
                 } else {
                     self.unmount_efi.isHidden=true
                     self.mount_efi.isHidden=false
                     self.efi_folder.isHidden=true
+                    self.download_folder.isHidden=true
                 }
             }
         }
@@ -156,6 +161,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 self.unmount_efi.isHidden=false
                 self.mount_efi.isHidden=true
                 self.efi_folder.isHidden=false
+                self.download_folder.isHidden=false
             }
         }
     }
@@ -168,6 +174,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 self.mount_efi.isHidden=false
                 self.unmount_efi.isHidden=true
                 self.efi_folder.isHidden=true
+                self.download_folder.isHidden=true
             }
         }
     }
@@ -185,6 +192,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.shared.openFile(efipath2 ?? "")
     }
 
+    @IBAction func open_download(_ sender: Any) {
+        let downloadpath = UserDefaults.standard.string(forKey: "Downloadpath")
+        let url = URL(fileURLWithPath: downloadpath ?? "")
+        do {
+            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+        } catch _ {
+            print("")
+        }
+        
+        let downloadpath2 = UserDefaults.standard.string(forKey: "Downloadpath")
+        NSWorkspace.shared.openFile(downloadpath2 ?? "")
+    }
+    
     @IBAction func quit_menubar(_ sender: Any) {
         UserDefaults.standard.set("", forKey: "PID")
         DispatchQueue.global(qos: .background).async {

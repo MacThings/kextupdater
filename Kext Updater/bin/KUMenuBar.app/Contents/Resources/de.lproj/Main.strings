@@ -4,6 +4,9 @@
 /* Class = "NSMenuItem"; title = "Quit KU MenuBar"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "KU MenuBar beenden";
 
+/* Class = "NSMenuItem"; title = "Open Download Folder"; ObjectID = "4zv-QS-4Dz"; */
+"4zv-QS-4Dz.title" = "Öffne Download Ordner";
+
 /* Class = "NSMenuItem"; title = "Open Kext Updater"; ObjectID = "6dn-K7-ING"; */
 "6dn-K7-ING.title" = "Kext Updater öffnen";
 
@@ -55,8 +58,8 @@
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";
 
-/* Class = "NSMenuItem"; title = "Go to ..."; ObjectID = "wNO-id-TVJ"; */
-"wNO-id-TVJ.title" = "Gehe zu ...";
+/* Class = "NSMenuItem"; title = "Open EFI Folder"; ObjectID = "wNO-id-TVJ"; */
+"wNO-id-TVJ.title" = "Öffne EFI Ordner";
 
 /* Class = "NSTextFieldCell"; title = "Hour(s)"; ObjectID = "yYu-Pv-uSR"; */
 "yYu-Pv-uSR.title" = "Stunde(n)";

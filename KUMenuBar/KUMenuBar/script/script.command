@@ -5,6 +5,9 @@ ScriptHome=$(echo $HOME)
 ScriptTmpPath="/private/tmp/kextupdater"
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
 efi_root=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Root" )
+download_path=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Downloadpath" )
+defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "Downloadpath" "$download_path"
+
 efi_mounted_check=$( diskutil info "$efi_root" |grep Mounted |sed 's/.*://g' |xargs )
 
 if [[ "$efi_mounted_check" = "Yes" ]]; then
