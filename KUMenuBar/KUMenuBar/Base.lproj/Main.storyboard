@@ -167,7 +167,7 @@
                                                 <action selector="unmount_efi:" target="Voe-Tx-rLC" id="bS9-a4-qv4"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Go to ..." image="menubar_efifolder" keyEquivalent="g" id="wNO-id-TVJ">
+                                        <menuItem title="Go to ..." image="menubar_efifolder" hidden="YES" keyEquivalent="g" id="wNO-id-TVJ">
                                             <connections>
                                                 <action selector="open_efi:" target="Voe-Tx-rLC" id="MU9-6M-8bd"/>
                                             </connections>

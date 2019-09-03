@@ -2,6 +2,7 @@
 #
 
 ScriptHome=$(echo $HOME)
+ScriptTmpPath="/private/tmp/kextupdater"
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
 efi_root=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Root" )
 efi_mounted_check=$( diskutil info "$efi_root" |grep Mounted |sed 's/.*://g' |xargs )
@@ -45,6 +46,7 @@ function updatecheck_now()
 {
 
     bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command mainscript
+    touch "$ScriptTmpPath"/daemon_notify
 
 }
 
