@@ -572,10 +572,27 @@ class KextUpdater: NSViewController {
     }
     
     @IBAction func bug_report_click_sendmail(_ sender: Any) {
-        let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
-        service.recipients = ["bug@kextupdater.de"]
-        service.subject = "Kext Updater Bug Report"
-        service.perform(withItems: [""])
+        let plist1 = self.userDesktopDirectory + "/Library/Preferences/kextupdater.slsoft.de.plist"
+        let plist2 = self.userDesktopDirectory + "/Library/Preferences/kextupdaterhelper.slsoft.de.plist"
+        let bdmesg = "/private/tmp/kextupdater/bdmesg.txt"
+        
+        let bootloader = UserDefaults.standard.string(forKey: "Bootloader")
+        if (bootloader?.contains("Open"))! {
+            syncShellExec(path: scriptPath, args: ["bug_report"])
+        }
+        
+        let email = "bug@kextupdater.de"
+
+        let fileURL1 = URL(fileURLWithPath: bdmesg)
+        let fileURL2 = URL(fileURLWithPath: plist1)
+        let fileURL3 = URL(fileURLWithPath: plist2)
+        
+        let sharingService = NSSharingService(named: NSSharingService.Name.composeEmail)
+        sharingService?.recipients = [email]
+        sharingService?.subject = "Kext Updater Bug Report"
+        let items: [Any] = ["Bug Report", fileURL1, fileURL2, fileURL3]
+       
+        sharingService?.perform(withItems: items)
     }
     
     /**

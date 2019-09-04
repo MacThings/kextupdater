@@ -1775,6 +1775,17 @@ function check_opencore_conf()
         exit 0
       fi
 }
+
+function bug_report()
+{
+
+    ../bin/./BDMESG > "$ScriptTmpPath"/bdmesg.txt
+
+}
+
+
+
+
 $1
 exit 0
 
