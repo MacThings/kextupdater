@@ -2499,6 +2499,20 @@ DQ
                                     <action selector="start_button:" target="bdJ-Gk-pDf" id="0Dy-Ft-JMP"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-Wr-6iP" userLabel="Stop bt">
+                                <rect key="frame" x="520" y="13" width="100" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E4b-uj-GdI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stop_button:" target="bdJ-Gk-pDf" id="jI9-w4-SID"/>
+                                </connections>
+                            </button>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-4o-XyX" userLabel="Keychain Pfeil">
                                 <rect key="frame" x="508" y="-28" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2566,6 +2580,7 @@ DQ
                         <outlet property="quit_button" destination="nyp-0e-eWT" id="eTx-qV-KqC"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
+                        <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
                         <outlet property="tools_button" destination="x2E-cO-O2m" id="91i-Ho-ffA"/>
                         <outlet property="webdriver_button" destination="hN0-v8-72Q" id="aa7-tc-r4s"/>
                     </connections>
@@ -2876,7 +2891,7 @@ DQ
                                                         <menuItem title="Theme" state="on" id="Pod-Cp-WME">
                                                             <modifierMask key="keyEquivalentModifierMask"/>
                                                         </menuItem>
-                                                        <menuItem title="Black" tag="1" id="xeg-fS-orT">
+                                                        <menuItem title="Black" tag="1" hidden="YES" enabled="NO" id="xeg-fS-orT">
                                                             <modifierMask key="keyEquivalentModifierMask"/>
                                                         </menuItem>
                                                         <menuItem title="Green" tag="2" id="3I9-SM-J8J">

@@ -1783,7 +1783,12 @@ function bug_report()
 
 }
 
+function stop_execution()
+{
 
+    pkill -f script.command
+
+}
 
 
 $1

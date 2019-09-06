@@ -64,6 +64,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var key_no_button: NSButton!
     
     @IBOutlet var start_button: NSButton!
+    @IBOutlet var stop_button: NSButton!
     @IBOutlet weak var kexts_button: NSButton!
     @IBOutlet weak var webdriver_button: NSButton!
     @IBOutlet weak var bootloader_button: NSButton!
@@ -327,6 +328,8 @@ class KextUpdater: NSViewController {
         //    }
         //}
         start_button.isEnabled=false
+        start_button.isHidden=true
+        stop_button.isHidden=false
         kexts_button.isEnabled=false
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
@@ -349,9 +352,16 @@ class KextUpdater: NSViewController {
             output_window.textColor = NSColor.yellow
         } else if fontcolor == "1" {
             output_window.textColor = NSColor.black
+        } else if fontcolor == "0" {
+            check_theme()
+            let themecheck = UserDefaults.standard.string(forKey: "System Theme")
+            if themecheck == "Light" {
+                output_window.textColor = NSColor.black
+            } else {
+                output_window.textColor = NSColor.white
+            }
         }
-        
-     
+
         output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden=true
         
@@ -386,6 +396,8 @@ class KextUpdater: NSViewController {
             
             DispatchQueue.main.async {
                 self.start_button.isEnabled=true
+                self.start_button.isHidden=false
+                self.stop_button.isHidden=true
                 self.kexts_button.isEnabled=true
                 self.webdriver_button.isEnabled=true
                 self.bootloader_button.isEnabled=true
@@ -399,6 +411,15 @@ class KextUpdater: NSViewController {
             }
         }
     }
+    
+    @IBAction func stop_button(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["stop_execution"])
+                DispatchQueue.main.async {
+            }
+        }
+    }
+    
     
     @IBAction func footer_efi_efimount_bt(_ sender: NSButton) {
         sender.isEnabled = false
