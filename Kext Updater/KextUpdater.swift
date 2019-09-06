@@ -89,6 +89,22 @@ class KextUpdater: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.pressStartbutton),
+            name: NSNotification.Name(rawValue: "Startbutton"),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.doRefreshKeychain),
+            name: NSNotification.Name(rawValue: "DoRefreshKeychain"),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.closePrefs),
+            name: NSNotification.Name(rawValue: "ClosePrefs"),
+            object: nil)
 
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         
@@ -628,21 +644,7 @@ class KextUpdater: NSViewController {
     }
     
     override func awakeFromNib() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.pressStartbutton),
-            name: NSNotification.Name(rawValue: "Startbutton"),
-            object: nil)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.doRefreshKeychain),
-            name: NSNotification.Name(rawValue: "DoRefreshKeychain"),
-            object: nil)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.closePrefs),
-            name: NSNotification.Name(rawValue: "ClosePrefs"),
-            object: nil)
+
     }
     
     @objc private func pressStartbutton(notification: NSNotification){
