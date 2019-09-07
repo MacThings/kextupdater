@@ -2170,7 +2170,7 @@ DQ
                                         <button toolTip="*click*" focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O11-yy-mid" userLabel="Folder EFI Icon">
                                             <rect key="frame" x="411" y="73" width="28" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="efifolder" imagePosition="overlaps" alignment="center" enabled="NO" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="32P-St-6ih">
+                                            <buttonCell key="cell" type="square" title="EFI" bezelStyle="shadowlessSquare" image="NSFolder" imagePosition="overlaps" alignment="center" enabled="NO" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="32P-St-6ih">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -2190,7 +2190,7 @@ DQ
                                         <button toolTip="*click*" focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d64-To-qcz" userLabel="Folder Download Icon">
                                             <rect key="frame" x="411" y="41" width="28" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="folder" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="IOH-YW-nvu">
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSFolder" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="IOH-YW-nvu">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -2221,7 +2221,7 @@ DQ
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eug-xW-6I7" userLabel="EFI click">
                                             <rect key="frame" x="519" y="11" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="Diskinfo" imagePosition="only" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="3KQ-uE-UJS">
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSInfo" imagePosition="only" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="3KQ-uE-UJS">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -2275,14 +2275,14 @@ DQ
                                 <color key="fillColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTX-lA-Dnf" userLabel="Keychain Image No">
-                                <rect key="frame" x="625" y="22" width="15" height="15"/>
+                                <rect key="frame" x="628" y="22" width="15" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="4dP-HX-7oF"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusUnavailable" id="4dP-HX-7oF"/>
                             </imageView>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axm-8K-AE6" userLabel="Keychain Image Yes">
-                                <rect key="frame" x="625" y="22" width="15" height="15"/>
+                                <rect key="frame" x="628" y="22" width="15" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="4nG-Je-N4z"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="4nG-Je-N4z"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-dW-PDM" userLabel="Keychain Image">
                                 <rect key="frame" x="639" y="16" width="36" height="27"/>
@@ -2950,14 +2950,14 @@ DQ
                                             </connections>
                                         </slider>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-UI-Aj8" userLabel="Speakericon on">
-                                            <rect key="frame" x="13" y="17" width="18" height="18"/>
+                                            <rect key="frame" x="10" y="14" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="speaker_on" id="PMP-KC-2bh"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarAudioOutputVolumeHighTemplate" id="PMP-KC-2bh"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3E-RU-oPi">
-                                            <rect key="frame" x="13" y="17" width="18" height="18"/>
+                                            <rect key="frame" x="10" y="14" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="speaker_off" id="uVI-Wq-Lj7"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarAudioOutputMuteTemplate" id="uVI-Wq-Lj7"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-GI-yFQ">
                                             <rect key="frame" x="12" y="43" width="45" height="13"/>
@@ -4265,18 +4265,19 @@ DQ
         </scene>
     </scenes>
     <resources>
-        <image name="Diskinfo" width="128" height="128"/>
         <image name="HF Logo" width="512" height="512"/>
+        <image name="NSFolder" width="32" height="32"/>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
+        <image name="NSTouchBarAudioOutputMuteTemplate" width="26" height="30"/>
+        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="23" height="30"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>
         <image name="bug-report" width="512" height="512"/>
         <image name="clover_logo_shadow" width="600" height="713"/>
         <image name="crt" width="466" height="527"/>
-        <image name="efifolder" width="128" height="105"/>
         <image name="efihd" width="246" height="255"/>
-        <image name="folder" width="26" height="21"/>
         <image name="harddisk" width="256" height="256"/>
         <image name="hflogo" width="860" height="170"/>
         <image name="kext" width="200" height="200"/>
@@ -4287,8 +4288,6 @@ DQ
         <image name="nvidia" width="1600" height="1244"/>
         <image name="opencore_logo_shadow" width="600" height="600"/>
         <image name="paypal-logo" width="16" height="18"/>
-        <image name="speaker_off" width="50" height="50"/>
-        <image name="speaker_on" width="50" height="50"/>
         <image name="ssd" width="256" height="256"/>
         <image name="usbhd" width="256" height="256"/>
         <image name="usbstick" width="128" height="128"/>
