@@ -340,7 +340,7 @@ class KextUpdater: NSViewController {
         let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
         let fontfamily = UserDefaults.standard.string(forKey: "Font Family")
         output_window.font = NSFont(name: fontfamily!, size: fontsize)
-        
+
         let fontcolor = UserDefaults.standard.string(forKey: "Font Color")
         if fontcolor == "2" {
             output_window.textColor = NSColor.green
@@ -356,7 +356,7 @@ class KextUpdater: NSViewController {
 
         output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden=true
-        
+
         animstart()
         
         let fontpt = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
