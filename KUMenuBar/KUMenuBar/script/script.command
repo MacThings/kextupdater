@@ -48,8 +48,17 @@ function runcheck()
 function updatecheck_now()
 {
 
+    notifications=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Notifications" )
+    if [[ "$notifications" = "0" ]]; then
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Notifications" -bool YES
+        waszero="yes"
+    fi
+
     bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command mainscript
-    touch "$ScriptTmpPath"/daemon_notify
+
+    if [[ "$waszero" = "yes" ]]; then
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Notifications" -bool NO
+    fi
 
 }
 

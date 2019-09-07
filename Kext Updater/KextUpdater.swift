@@ -455,6 +455,8 @@ class KextUpdater: NSViewController {
     @IBAction func report(_ sender: Any) {
         output_window.textStorage?.mutableString.setString("")
         start_button.isEnabled=false
+        stop_button.isEnabled=true
+        stop_button.isHidden=false
         kexts_button.isEnabled=false
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
@@ -472,6 +474,8 @@ class KextUpdater: NSViewController {
             
             DispatchQueue.main.async {
                 self.start_button.isEnabled=true
+                self.stop_button.isEnabled=false
+                self.stop_button.isHidden=true
                 self.kexts_button.isEnabled=true
                 self.webdriver_button.isEnabled=true
                 self.bootloader_button.isEnabled=true
