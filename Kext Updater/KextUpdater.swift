@@ -350,16 +350,8 @@ class KextUpdater: NSViewController {
             output_window.textColor = NSColor.orange
         } else if fontcolor == "5" {
             output_window.textColor = NSColor.yellow
-        } else if fontcolor == "1" {
-            output_window.textColor = NSColor.black
         } else if fontcolor == "0" {
-            check_theme()
-            let themecheck = UserDefaults.standard.string(forKey: "System Theme")
-            if themecheck == "Light" {
-                output_window.textColor = NSColor.black
-            } else {
-                output_window.textColor = NSColor.white
-            }
+            output_window.textColor = NSColor.textColor
         }
 
         output_window.textStorage?.mutableString.setString("")

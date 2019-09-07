@@ -65,8 +65,7 @@ class Preferences: NSViewController {
             speakericon.isHidden = false
         }
     }
-    
-    
+
     @IBAction func preferencesclose(_ sender: Any) {
         self.view.window?.close()
         DispatchQueue.global(qos: .background).async {
