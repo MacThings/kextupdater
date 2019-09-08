@@ -80,7 +80,11 @@ class KextUpdater: NSViewController {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
             if key.hasPrefix("dl-"){
                 UserDefaults.standard.removeObject(forKey: key)
-                syncShellExec(path: scriptPath, args: ["exitapp"])
+                DispatchQueue.global(qos: .background).async {
+                    self.syncShellExec(path: self.scriptPath, args: ["exitapp"])
+                    DispatchQueue.main.async {
+                    }
+                }
             }
         }
         NSApplication.shared.terminate(self)
