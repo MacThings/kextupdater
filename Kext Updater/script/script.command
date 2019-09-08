@@ -538,7 +538,8 @@ function initial()
     efiroot=$( echo -e "$efiscan" )
     efiname=$( echo -e "$diskscan" | grep "Volume Name:" | sed "s/.*://g" | xargs )
     clovermode=$( ../bin/./BDMESG | grep -i "starting clover" | sed "s/.*EFI/UEFI/g" | tr -d '\r' )
-    cloverconfig=$( ../bin/./BDMESG | grep .plist | grep -v "not" | grep loaded | sed -e "s/\ loaded.*//g" -e "s/.*\\\//g" |sed 's/.plist.*/.plist/g' |grep -v "nvram" | xargs )
+    #cloverconfig=$( ../bin/./BDMESG | grep .plist | grep -v "not" | grep loaded | sed -e "s/\ loaded.*//g" -e "s/.*\\\//g" |sed 's/.plist.*/.plist/g' |grep -v "nvram" | xargs )
+    cloverconfig=$( ../bin/./BDMESG |grep -w "plist loaded: Success" |sed -e "s/.*\\\//g" -e 's/.plist.*/.plist/g' |xargs )
     ozmosischeck=$( ../bin/./BDMESG | grep "Ozmosis" )
     ozmosischeck2=$( nvram 1F8E0C02-58A9-4E34-AE22-2B63745FA101:UserInterface 2> /dev/null )
     ozmosischeck3=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:BaseBoardSerial 2> /dev/null )
@@ -887,6 +888,7 @@ function _kextLoader()
 function _toUpdate()
 {
     _PRINT_MSG "☝🏼 $upd1\n
+    touch "$ScriptTmpPath"/kumenuitem
     $upd2 $lecho
     $upd3 $recho\n\n
     $loading\n─────────────────\n"
@@ -979,7 +981,15 @@ function _main()
             else
                 amount="0"
             fi
-            ../bin/./alerter -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            runcheck_ku=$( pgrep "Kext Updater" )
+            if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
+                ANSWER="$(../bin/./alerter -message "$daemonnotify" -title "KU MenuBar" -actions "$openkextupdater" -closeLabel "$daemonnotifyclose" -appIcon https://update.kextupdater.de/kextupdater/appicon.png)"
+                case $ANSWER in
+                "$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
+                esac
+            else
+                ../bin/./alerter -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            fi
         fi
     elif [[ $1 == kextLoader ]]; then
         _kextLoader

@@ -39,7 +39,7 @@ function refreshtime() {
 function runcheck()
 {
 
-    runcheck=$( ps -A | grep KUMenuBar | grep bash | grep kumenubar | awk '{print $1}' )
+    runcheck=$( pgrep KUMenuBar )
     if [[ "$runcheck" != "" ]]; then
         kill -kill "$runcheck"
     fi
@@ -66,7 +66,7 @@ function updatecheck_now()
 function updatecheck()
 {
 
-    alertercheck=$( ps -A | grep alerter | grep appicon | awk '{print $1}' )
+    alertercheck=$( pgrep alerter )
     if [[ "$alertercheck" = "" ]]; then
         bash "$kuroot"/Kext\ Updater.app/Contents/Resources/script/script.command kudaemon &
     fi
@@ -90,7 +90,7 @@ function open_kextupdater()
 function quitmenu()
 {
 
-    runcheck=$( ps -A | grep KUMenuBar | grep bash | grep kumenubar | awk '{print $1}' )
+    runcheck=$( pgrep KUMenuBar )
     if [[ "$runcheck" != "" ]]; then
         kill -kill "$runcheck"
     fi
