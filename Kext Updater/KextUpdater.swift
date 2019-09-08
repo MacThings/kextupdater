@@ -667,6 +667,7 @@ class KextUpdater: NSViewController {
     @objc private func pressStartbutton(notification: NSNotification){
         start_button.performClick(nil)
     }
+    
     @objc private func doRefreshKeychain(notification: NSNotification){
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")
         if keychaincheck == true {
