@@ -111,7 +111,7 @@ class KextUpdater: NSViewController {
             name: NSNotification.Name(rawValue: "ClosePrefs"),
             object: nil)
 
-        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         
         PFMoveToApplicationsFolderIfNecessary()
 

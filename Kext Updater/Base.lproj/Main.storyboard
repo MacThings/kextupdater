@@ -1968,14 +1968,14 @@ DQ
         <scene sceneID="nH3-7u-Zng">
             <objects>
                 <viewController title="Kext Updater" id="bdJ-Gk-pDf" customClass="KextUpdater" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="nld-wa-jLV">
+                    <view key="view" wantsLayer="YES" id="nld-wa-jLV">
                         <rect key="frame" x="0.0" y="0.0" width="680" height="460"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="6" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Q4s-ts-6fA" userLabel="BackgroundBox">
                                 <rect key="frame" x="7" y="67" width="665" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="qlb-Ik-ABS">
+                                <view key="contentView" wantsLayer="YES" ambiguous="YES" id="qlb-Ik-ABS">
                                     <rect key="frame" x="0.0" y="0.0" width="665" height="384"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -2179,7 +2179,7 @@ DQ
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-tJ-6y0" userLabel="Folder EFI Path">
-                                            <rect key="frame" x="440" y="77" width="221" height="17"/>
+                                            <rect key="frame" x="440" y="76" width="221" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" id="zYQ-ni-R5d">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -2199,7 +2199,7 @@ DQ
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJc-uA-cv6" userLabel="Folder Download Path">
-                                            <rect key="frame" x="440" y="45" width="221" height="17"/>
+                                            <rect key="frame" x="440" y="44" width="221" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" id="0SF-FL-3Qu">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -2918,7 +2918,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-dn-Gi8">
-                                            <rect key="frame" x="12" y="63" width="135" height="18"/>
+                                            <rect key="frame" x="11" y="63" width="155" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Notifications" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZQg-K0-jyG">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -3236,7 +3236,7 @@ DQ
         <scene sceneID="r4o-NH-ks4">
             <objects>
                 <viewController title="Tools" id="PFO-7L-TjR" customClass="Tools" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="91y-LP-8zY">
+                    <view key="view" wantsLayer="YES" id="91y-LP-8zY">
                         <rect key="frame" x="0.0" y="0.0" width="650" height="460"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -3461,7 +3461,7 @@ DQ
                             <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="GF6-ql-1RH">
                                 <rect key="frame" x="9" y="16" width="148" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="Y7c-1z-4ji">
+                                <view key="contentView" wantsLayer="YES" ambiguous="YES" id="Y7c-1z-4ji">
                                     <rect key="frame" x="3" y="3" width="142" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -4002,7 +4002,7 @@ DQ
         <scene sceneID="HSR-6c-Wgf">
             <objects>
                 <viewController title="About" id="pcc-jI-JYu" sceneMemberID="viewController">
-                    <view key="view" id="ZIK-ED-mTe">
+                    <view key="view" wantsLayer="YES" id="ZIK-ED-mTe">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -4032,6 +4032,9 @@ DQ
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-ig-Fe1">
                                 <rect key="frame" x="261" y="88" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </shadow>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HF Logo" id="oUw-ca-lQd"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-MF-vlZ">
@@ -4054,7 +4057,7 @@ DQ
         <scene sceneID="Sqk-bY-wk5">
             <objects>
                 <viewController title="Bootloader" id="3pD-vQ-Z2c" customClass="Bootloader" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" focusRingType="none" id="yTk-ue-1dY">
+                    <view key="view" wantsLayer="YES" focusRingType="none" id="yTk-ue-1dY">
                         <rect key="frame" x="0.0" y="0.0" width="650" height="163"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -4158,11 +4161,17 @@ DQ
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-An-nKH" userLabel="OpenCore Logo">
                                 <rect key="frame" x="521" y="19" width="109" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </shadow>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opencore_logo_shadow" id="0ux-Im-Hq3"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-tP-p6C" userLabel="Clover Logo">
                                 <rect key="frame" x="12" y="21" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </shadow>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="clover_logo_shadow" id="WbM-71-rBU"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-tt-iml">

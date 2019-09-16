@@ -503,7 +503,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2AC44C202315119F006D447C /* Zip App and send to Homeshare */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (

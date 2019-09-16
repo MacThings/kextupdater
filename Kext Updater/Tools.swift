@@ -50,15 +50,15 @@ class Tools: NSViewController {
             DispatchQueue.main.async {
                 self.progress_gear.isHidden=true
                 self.progress_gear?.stopAnimation(self);
-            let filePath = "/tmp/kextupdater/drives_pulldown"
+            let filePath = "/private/tmp/kextupdater/drives_pulldown"
             if (FileManager.default.fileExists(atPath: filePath)) {
                 print("")
             } else{
                 return
             }
 
-            let location = NSString(string:"/tmp/kextupdater/drives_pulldown").expandingTildeInPath
-            self.pulldown_menu.menu?.removeAllItems()
+            let location = NSString(string:"/private/tmp/kextupdater/drives_pulldown").expandingTildeInPath
+            //self.pulldown_menu.item(withTitle: "  ")?.isHidden=true
             let fileContent = try? NSString(contentsOfFile: location, encoding: String.Encoding.utf8.rawValue)
             for (_, drive) in (fileContent?.components(separatedBy: "\n").enumerated())! {
                 self.pulldown_menu.menu?.addItem(withTitle: drive, action: #selector(Tools.menuItemClicked(_:)), keyEquivalent: "")
@@ -293,7 +293,8 @@ class Tools: NSViewController {
     }
        
     @objc func menuItemClicked(_ sender: NSMenuItem) {
-        self.pulldown_menu.menu?.removeItem(at: 0)
+        self.pulldown_menu.item(withTitle: "")?.isHidden=true
+        //self.pulldown_menu.menu?.removeItem(at: 0)
         self.button_mount.isEnabled=true
         self.button_unmount.isEnabled=true
         self.button_unmount_all.isEnabled=true
