@@ -383,6 +383,12 @@ class KextUpdater: NSViewController {
             let choicecheck = UserDefaults.standard.string(forKey: "Choice")
             if choicecheck == "Single" {
             self.syncShellExec(path: self.scriptPath, args: ["massdownload"])
+                for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    if key.hasPrefix("dl-"){
+                        UserDefaults.standard.removeObject(forKey: key)
+                }
+                }
+                
             }
             self.syncShellExec(path: self.scriptPath, args: ["mainscript"])
             
