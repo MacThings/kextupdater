@@ -54,8 +54,6 @@ class KUMenuBar: NSViewController {
         }
         
     }
-
-    
     
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()
