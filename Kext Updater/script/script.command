@@ -1207,7 +1207,7 @@ if [ -f "$ScriptTmpPath"/array ]; then
 rm "$ScriptTmpPath"/array
 fi
 
-../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist"| grep "dl-" | sort | xargs | sed -e "s/dl-/\"/g" -e "s/\ =\ true/\"/g" > "$ScriptTmpPath"/array
+../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist"| grep "dl-" |grep -v "false" | sort | xargs | sed -e "s/dl-/\"/g" -e "s/\ =\ true/\"/g" > "$ScriptTmpPath"/array
 
 kexts=$( cat "$ScriptTmpPath"/array )
 
