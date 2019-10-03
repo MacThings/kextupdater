@@ -847,13 +847,15 @@ function _kextUpdate()
                     fi
                 else
                     returnVALUE=$(
-                    awk -v num1="$recho" -v num2="$lecho" '
+                    awk -v num1="$lecho" -v num2="$recho" '
                     BEGIN {
-                            {if (num2 < num1) print "smaller"}
+                            {if (num1 < num2) print "smaller"}
                     }
                     '
                     )
+                    
                     #returnVALUE=$(expr $local '<' $remote)
+                    echo "$lecho" - "$recho" - "$returnVALUE"
                     if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
