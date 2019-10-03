@@ -846,6 +846,12 @@ function _kextUpdate()
                         _dupeKext
                     fi
                 else
+                    if [[ "$name" = "voodoops2" ]]; then
+                        count_voodoops2=$( echo "$lecho" | wc -c )
+                        if [ "$count_voodoops2" -lt 7 ]; then
+                            local=$( echo "$local" |sed 's/$/0/' )
+                        fi
+                    fi
                     returnVALUE=$(expr $local '<' $remote)
                     if [[ $returnVALUE == "1" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
