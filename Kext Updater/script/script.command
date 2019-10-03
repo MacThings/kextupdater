@@ -846,14 +846,15 @@ function _kextUpdate()
                         _dupeKext
                     fi
                 else
-                    if [[ "$name" = "voodoops2" ]]; then
-                        count_voodoops2=$( echo "$lecho" | wc -c )
-                        if [ "$count_voodoops2" -lt 7 ]; then
-                            local=$( echo "$local" |sed 's/$/0/' )
-                        fi
-                    fi
-                    returnVALUE=$(expr $local '<' $remote)
-                    if [[ $returnVALUE == "1" ]]; then
+                    returnVALUE=$(
+                    awk -v num1="$recho" -v num2="$lecho" '
+                    BEGIN {
+                            {if (num2 < num1) print "smaller"}
+                    }
+                    '
+                    )
+                    #returnVALUE=$(expr $local '<' $remote)
+                    if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
                         curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
