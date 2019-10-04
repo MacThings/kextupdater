@@ -469,7 +469,7 @@
 				};
 			};
 			buildConfigurationList = 2AB3049523150E1300D618FF /* Build configuration list for PBXProject "Kext Updater" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
