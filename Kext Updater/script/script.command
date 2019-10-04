@@ -855,7 +855,6 @@ function _kextUpdate()
                     )
                     
                     #returnVALUE=$(expr $local '<' $remote)
-                    echo "$lecho" - "$recho" - "$returnVALUE"
                     if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
