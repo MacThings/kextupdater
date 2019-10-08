@@ -994,23 +994,24 @@ function _main()
             fi
             runcheck_ku=$( pgrep "Kext Updater" )
             if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
-                ANSWER="$(../bin/./alerter -message "$daemonnotify" -title "KU MenuBar" -actions "$openkextupdater" -closeLabel "$daemonnotifyclose" -appIcon https://update.kextupdater.de/kextupdater/appicon.png)"
+                echo ""
+                ANSWER="$(../bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de' )"
                 case $ANSWER in
                 "$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
                 esac
             else
-                ../bin/./alerter -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+                ../bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
             fi
         fi
     elif [[ $1 == kextLoader ]]; then
         _kextLoader
         if [[ $notifications = "true" ]]; then
-            ../bin/./alerter -message "$notify2" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            ../bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "$notify2" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
         fi
     elif [[ $1 == htmlreport ]]; then
         htmlreport
         if [[ $notifications = "true" ]]; then
-            ../bin/./alerter -message "$notify3" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            ../bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "$notify3" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
         fi
     fi
     _ozmosis

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A27923D234CF18C00147961 /* terminal-notifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A27923B234CF12100147961 /* terminal-notifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
@@ -25,7 +26,6 @@
 		2AC44BFA23151059006D447C /* de.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA523150F38006D447C /* de.bashstrings */; };
 		2AC44BFB23151059006D447C /* en.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA623150F38006D447C /* en.bashstrings */; };
 		2AC44BFD23151081006D447C /* script.command in Script copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAF23150F38006D447C /* script.command */; };
-		2AC44BFF231510A4006D447C /* alerter in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBD23150F39006D447C /* alerter */; };
 		2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBE23150F39006D447C /* PlistBuddy */; };
 		2AC44C01231510A4006D447C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBF23150F39006D447C /* BDMESG */; };
 		2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC123150F39006D447C /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -82,7 +82,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2AC44BFF231510A4006D447C /* alerter in Bin Copy */,
+				2A27923D234CF18C00147961 /* terminal-notifier.app in Bin Copy */,
 				2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
 				2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */,
@@ -183,6 +183,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A27923B234CF12100147961 /* terminal-notifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "terminal-notifier.app"; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -212,7 +213,6 @@
 		2AC44BB823150F39006D447C /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
 		2AC44BBB23150F39006D447C /* lspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = lspci; sourceTree = "<group>"; };
 		2AC44BBC23150F39006D447C /* pci.ids */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pci.ids; sourceTree = "<group>"; };
-		2AC44BBD23150F39006D447C /* alerter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = alerter; sourceTree = "<group>"; };
 		2AC44BBE23150F39006D447C /* PlistBuddy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PlistBuddy; sourceTree = "<group>"; };
 		2AC44BBF23150F39006D447C /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AC44BC123150F39006D447C /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
@@ -371,8 +371,8 @@
 		2AC44BB923150F39006D447C /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				2A27923B234CF12100147961 /* terminal-notifier.app */,
 				2AC44BBA23150F39006D447C /* lspci */,
-				2AC44BBD23150F39006D447C /* alerter */,
 				2AC44BBE23150F39006D447C /* PlistBuddy */,
 				2AC44BBF23150F39006D447C /* BDMESG */,
 				2AC44BC123150F39006D447C /* KUMenuBar.app */,
@@ -731,7 +731,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 317;
+				CURRENT_PROJECT_VERSION = 318;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,7 +741,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.7;
+				MARKETING_VERSION = 3.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -758,7 +758,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 317;
+				CURRENT_PROJECT_VERSION = 318;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,7 +768,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.7;
+				MARKETING_VERSION = 3.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

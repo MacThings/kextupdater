@@ -589,8 +589,8 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G65"; ObjectID = "NmO-ED-sB5"; */
 "NmO-ED-sB5.title" = "10.13.6 - 17G65";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "NnJ-Dx-gBx"; */
-"NnJ-Dx-gBx.title" = "Start";
+/* Class = "NSButtonCell"; title = "Go!"; ObjectID = "NnJ-Dx-gBx"; */
+"NnJ-Dx-gBx.title" = "Los!";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1505"; ObjectID = "npz-t5-LdQ"; */
 "npz-t5-LdQ.title" = "10.10.5 - 14F1505";
