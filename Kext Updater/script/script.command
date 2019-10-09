@@ -996,7 +996,7 @@ function _main()
             if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
                 echo ""
                 #ANSWER="$(
-                ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" #-appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
+                ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
                 #)"
                 #case $ANSWER in
                 #"$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
