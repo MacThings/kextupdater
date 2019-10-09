@@ -979,3 +979,8 @@
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G22010"; ObjectID = "zkx-M3-tK7"; */
 "zkx-M3-tK7.title" = "10.11.6 - 15G22010";
+
+/* Class = "NSTextFieldCell"; title = "Chime Volume"; ObjectID = "5hR-NV-HhX"; */
+"5hR-NV-HhX.title" = "Chime Volume";
+
+

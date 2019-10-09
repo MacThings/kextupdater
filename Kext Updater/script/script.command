@@ -995,10 +995,12 @@ function _main()
             runcheck_ku=$( pgrep "Kext Updater" )
             if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
                 echo ""
-                ANSWER="$(../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de' )"
-                case $ANSWER in
-                "$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
-                esac
+                #ANSWER="$(
+                ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" #-appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
+                #)"
+                #case $ANSWER in
+                #"$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
+                #esac
             else
                 ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
             fi
@@ -1265,10 +1267,12 @@ function kudaemon()
 
     if [ -f "$ScriptTmpPath"/daemon_notify ]; then
         kuroot=$( _helpDefaultRead "KU Root" )
-        ANSWER="$(../bin/./alerter -message "$daemonnotify" -title "KU MenuBar" -actions "$openkextupdater" -closeLabel "$daemonnotifyclose" -appIcon https://update.kextupdater.de/kextupdater/appicon.png)"
-        case $ANSWER in
-        "$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
-        esac
+        #ANSWER="$(
+        ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" #-appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
+        #)"
+        #case $ANSWER in
+        #"$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
+        #esac
         rm "$ScriptTmpPath"/daemon_*
     fi
     exit 0

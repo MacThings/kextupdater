@@ -490,6 +490,7 @@ class KextUpdater: NSViewController {
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
                 self.animstop()
+                UserDefaults.standard.set("Update", forKey: "Choice")
                 
             }
             

@@ -967,3 +967,5 @@
 /* Class = "NSButtonCell"; title = "AtherosE2200Ethernet"; ObjectID = "zZm-MP-N6M"; */
 "zZm-MP-N6M.title" = "AtherosE2200Ethernet";
 
+/* Class = "NSTextFieldCell"; title = "Chime Volume"; ObjectID = "5hR-NV-HhX"; */
+"5hR-NV-HhX.title" = "Chime Lautstärke";
