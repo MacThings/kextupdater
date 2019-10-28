@@ -278,6 +278,9 @@
 /* Class = "NSButtonCell"; title = "AppleBacklightFixup"; ObjectID = "JjW-CG-tmb"; */
 "JjW-CG-tmb.title" = "AppleBacklightFixup";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts."; ObjectID = "DYk-dr-O7m"; */
+"DYk-dr-O7m.ibShadowedToolTip" = "Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts.";
+
 /* Class = "NSMenuItem"; title = "4"; ObjectID = "JlQ-So-Ctb"; */
 "JlQ-So-Ctb.title" = "4";
 
@@ -362,8 +365,8 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G65"; ObjectID = "NmO-ED-sB5"; */
 "NmO-ED-sB5.title" = "10.13.6 - 17G65";
 
-/* Class = "NSButtonCell"; title = "Go!"; ObjectID = "NnJ-Dx-gBx"; */
-"NnJ-Dx-gBx.title" = "Go!";
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "NnJ-Dx-gBx"; */
+"NnJ-Dx-gBx.title" = "Check";
 
 /* Class = "NSMenuItem"; title = "10.11.5 - 15F34"; ObjectID = "NtV-aD-ERf"; */
 "NtV-aD-ERf.title" = "10.11.5 - 15F34";
@@ -839,6 +842,9 @@
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1108"; ObjectID = "psM-cp-HRB"; */
 "psM-cp-HRB.title" = "10.11.6 - 15G1108";
 
+/* Class = "NSButtonCell"; title = "Kextmanager"; ObjectID = "UUv-he-hdP"; */
+"UUv-he-hdP.title" = "Kextmanager";
+
 /* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
 "qIS-W8-SiK.title" = "Page Setup…";
 
@@ -928,6 +934,9 @@
 
 /* Class = "NSMenuItem"; title = "10.11.0 - 15A284"; ObjectID = "wHV-ao-HCM"; */
 "wHV-ao-HCM.title" = "10.11.0 - 15A284";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts and download them."; ObjectID = "xkJ-nI-Tsy"; */
+"xkJ-nI-Tsy.ibShadowedToolTip" = "Checks if there are newer kexts and download them.";
 
 /* Class = "NSMenuItem"; title = "Courier New"; ObjectID = "wQH-QJ-jP7"; */
 "wQH-QJ-jP7.title" = "Courier New";

@@ -58,6 +58,9 @@
 /* Class = "NSMenuItem"; title = "AppleSupport"; ObjectID = "4i4-wk-0pn"; */
 "4i4-wk-0pn.title" = "AppleSupport";
 
+/* Class = "NSButtonCell"; title = "Donate"; ObjectID = "4MZ-9L-eCg"; */
+"4MZ-9L-eCg.title" = "Spende";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1004"; ObjectID = "4rc-AX-eSR"; */
 "4rc-AX-eSR.title" = "10.11.6 - 15G1004";
 
@@ -66,6 +69,9 @@
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G6029"; ObjectID = "4Xs-mB-uXq"; */
 "4Xs-mB-uXq.title" = "10.13.6 - 17G6029";
+
+/* Class = "NSTextFieldCell"; title = "Chime Volume"; ObjectID = "5hR-NV-HhX"; */
+"5hR-NV-HhX.title" = "Chime Lautstärke";
 
 /* Class = "NSMenuItem"; title = "About Kext Updater"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Über Kext Updater";
@@ -97,6 +103,9 @@
 /* Class = "NSMenuItem"; title = "Please Select"; ObjectID = "9bX-ps-dhp"; */
 "9bX-ps-dhp.title" = "Bitte auswählen";
 
+/* Class = "NSMenuItem"; title = "10.13.6 - 17G8037"; ObjectID = "9fk-I7-alU"; */
+"9fk-I7-alU.title" = "10.13.6 - 17G8037";
+
 /* Class = "NSViewController"; title = "Preferences"; ObjectID = "9HD-lp-UVI"; */
 "9HD-lp-UVI.title" = "Einstellungen";
 
@@ -114,6 +123,9 @@
 
 /* Class = "NSMenuItem"; title = "13"; ObjectID = "21j-B7-8qR"; */
 "21j-B7-8qR.title" = "13";
+
+/* Class = "NSButtonCell"; title = "EFI"; ObjectID = "32P-St-6ih"; */
+"32P-St-6ih.title" = "EFI";
 
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C2205"; ObjectID = "33D-V8-8oC"; */
 "33D-V8-8oC.title" = "10.13.2 - 17C2205";
@@ -190,6 +202,9 @@
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
 "bib-Uj-vzu.title" = "File";
 
+/* Class = "NSMenuItem"; title = "10.12.6 - 16G2136"; ObjectID = "bij-CN-gVc"; */
+"bij-CN-gVc.title" = "10.12.6 - 16G2136";
+
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B1003"; ObjectID = "BkE-pV-AqO"; */
 "BkE-pV-AqO.title" = "10.13.1 - 17B1003";
 
@@ -262,6 +277,9 @@
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "dVk-qX-xPm"; */
 "dVk-qX-xPm.title" = "Schließen";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts."; ObjectID = "DYk-dr-O7m"; */
+"DYk-dr-O7m.ibShadowedToolTip" = "Hier können Kexte von Hand herunterladen und/oder von der Updateprüfung ausgeschlossen werden. Der Manager ist NICHT dafür gedacht, die aktuell installierten Kexte zu überprüfen.";
+
 /* Class = "NSMenuItem"; title = "10.11.4 - 15E65"; ObjectID = "e1e-bg-T2d"; */
 "e1e-bg-T2d.title" = "10.11.4 - 15E65";
 
@@ -273,6 +291,12 @@
 
 /* Class = "NSButtonCell"; title = "LiluFriend"; ObjectID = "E2G-tA-nuH"; */
 "E2G-tA-nuH.title" = "LiluFriend";
+
+/* Class = "NSButtonCell"; title = "Stop"; ObjectID = "E4b-uj-GdI"; */
+"E4b-uj-GdI.title" = "Stop";
+
+/* Class = "NSMenuItem"; title = "10.12.6 - 16G2028"; ObjectID = "e5H-XZ-FGs"; */
+"e5H-XZ-FGs.title" = "10.12.6 - 16G2028";
 
 /* Class = "NSMenuItem"; title = "EFI Driver"; ObjectID = "EC5-ZN-zNQ"; */
 "EC5-ZN-zNQ.title" = "EFI Driver";
@@ -508,9 +532,6 @@
 /* Class = "NSMenuItem"; title = "PT Mono"; ObjectID = "KSB-qN-D3m"; */
 "KSB-qN-D3m.title" = "PT Mono";
 
-/* Class = "NSMenuItem"; title = "10.12.6 - 16G2028"; ObjectID = "kT8-oG-YDI"; */
-"kT8-oG-YDI.title" = "10.12.6 - 16G2028";
-
 /* Class = "NSTextFieldCell"; title = "Changelog"; ObjectID = "KWr-Qp-VWP"; */
 "KWr-Qp-VWP.title" = "Changelog";
 
@@ -544,14 +565,14 @@
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "lPS-FA-v7S"; */
 "lPS-FA-v7S.title" = "Schließen";
 
+/* Class = "NSMenuItem"; title = "10.13.6 - 17G8030"; ObjectID = "lwO-Mj-Fe6"; */
+"lwO-Mj-Fe6.title" = "10.13.6 - 17G8030";
+
 /* Class = "NSButtonCell"; title = "CodecCommander"; ObjectID = "MaA-rD-UBc"; */
 "MaA-rD-UBc.title" = "CodecCommander";
 
 /* Class = "NSMenuItem"; title = "10.10.4 - 14E46"; ObjectID = "MFe-3R-VJ2"; */
 "MFe-3R-VJ2.title" = "10.10.4 - 14E46";
-
-/* Class = "NSMenuItem"; title = "10.13.6 - 17G8030"; ObjectID = "mkt-I2-Ykb"; */
-"mkt-I2-Ykb.title" = "10.13.6 - 17G8030";
 
 /* Class = "NSButtonCell"; title = "RTCMemoryFixup"; ObjectID = "Ml5-Qr-rRQ"; */
 "Ml5-Qr-rRQ.title" = "RTCMemoryFixup";
@@ -589,8 +610,8 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G65"; ObjectID = "NmO-ED-sB5"; */
 "NmO-ED-sB5.title" = "10.13.6 - 17G65";
 
-/* Class = "NSButtonCell"; title = "Go!"; ObjectID = "NnJ-Dx-gBx"; */
-"NnJ-Dx-gBx.title" = "Los!";
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "NnJ-Dx-gBx"; */
+"NnJ-Dx-gBx.title" = "Prüfen";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1505"; ObjectID = "npz-t5-LdQ"; */
 "npz-t5-LdQ.title" = "10.10.5 - 14F1505";
@@ -820,8 +841,8 @@
 /* Class = "NSMenu"; title = "Kext Updater"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Kext Updater";
 
-/* Class = "NSButtonCell"; title = "Kexts"; ObjectID = "UUv-he-hdP"; */
-"UUv-he-hdP.title" = "Kexte";
+/* Class = "NSButtonCell"; title = "Kextmanager"; ObjectID = "UUv-he-hdP"; */
+"UUv-he-hdP.title" = "Kextmanager";
 
 /* Class = "NSTextFieldCell"; title = "Enter your password to allow this."; ObjectID = "Uvo-FW-yym"; */
 "Uvo-FW-yym.title" = "Gib dein Passwort ein, um dies zu erlauben.";
@@ -913,6 +934,9 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G5019"; ObjectID = "xjx-oH-hv4"; */
 "xjx-oH-hv4.title" = "10.13.6 - 17G5019";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts for you."; ObjectID = "xkJ-nI-Tsy"; */
+"xkJ-nI-Tsy.ibShadowedToolTip" = "Prüft ob aktuellere Kexte vorhanden sind und lädt sie dann herunter.";
+
 /* Class = "NSMenuItem"; title = "14"; ObjectID = "xn4-4H-2MR"; */
 "xn4-4H-2MR.title" = "14";
 
@@ -939,6 +963,9 @@
 
 /* Class = "NSMenuItem"; title = "10.13.3 - 17D47"; ObjectID = "Ydw-T7-Sch"; */
 "Ydw-T7-Sch.title" = "10.13.3 - 17D47";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "yem-HY-3eF"; */
+"yem-HY-3eF.title" = "Box";
 
 /* Class = "NSTextFieldCell"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "yHa-Eb-aM3"; */
 "yHa-Eb-aM3.title" = "Die aktuellsten Kexte für Deinen Hackintosh";
@@ -967,5 +994,3 @@
 /* Class = "NSButtonCell"; title = "AtherosE2200Ethernet"; ObjectID = "zZm-MP-N6M"; */
 "zZm-MP-N6M.title" = "AtherosE2200Ethernet";
 
-/* Class = "NSTextFieldCell"; title = "Chime Volume"; ObjectID = "5hR-NV-HhX"; */
-"5hR-NV-HhX.title" = "Chime Lautstärke";

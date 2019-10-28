@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="LvB-jk-mfp">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="LvB-jk-mfp">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="15400"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2259,7 +2259,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-vt-f2o">
-                                            <rect key="frame" x="597" y="111" width="68" height="18"/>
+                                            <rect key="frame" x="590" y="111" width="75" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="Donate" bezelStyle="shadowlessSquare" image="paypal-logo" imagePosition="left" alignment="left" state="on" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="4MZ-9L-eCg">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2392,10 +2392,11 @@ DQ
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYk-dr-O7m">
-                                <rect key="frame" x="115" y="13" width="100" height="32"/>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYk-dr-O7m" userLabel="Kextmanager button">
+                                <rect key="frame" x="112" y="13" width="106" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Kexts" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="UUv-he-hdP">
+                                <string key="toolTip">Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts.</string>
+                                <buttonCell key="cell" type="push" title="Kextmanager" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="UUv-he-hdP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -2485,10 +2486,10 @@ DQ
                                     <action selector="egg3:" target="bdJ-Gk-pDf" id="QQd-2N-Xbp"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-nI-Tsy" userLabel="Start bt">
+                            <button toolTip="Checks if there are newer kexts for you." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-nI-Tsy" userLabel="Start bt">
                                 <rect key="frame" x="520" y="13" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Go!" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NnJ-Dx-gBx">
+                                <buttonCell key="cell" type="push" title="Check" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NnJ-Dx-gBx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
