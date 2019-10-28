@@ -278,7 +278,7 @@
 "dVk-qX-xPm.title" = "Schließen";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts."; ObjectID = "DYk-dr-O7m"; */
-"DYk-dr-O7m.ibShadowedToolTip" = "Hier können Kexte von Hand herunterladen und/oder von der Updateprüfung ausgeschlossen werden. Der Manager ist NICHT dafür gedacht, die aktuell installierten Kexte zu überprüfen.";
+"DYk-dr-O7m.ibShadowedToolTip" = "Hier können Kexte von Hand heruntergeladen und/oder von der Updateprüfung ausgeschlossen werden. Der Manager überprüft NICHT die installierten Kexte auf Aktualität.";
 
 /* Class = "NSMenuItem"; title = "10.11.4 - 15E65"; ObjectID = "e1e-bg-T2d"; */
 "e1e-bg-T2d.title" = "10.11.4 - 15E65";
@@ -901,8 +901,8 @@
 /* Class = "NSMenuItem"; title = "10.11.0 - 15A284"; ObjectID = "wHV-ao-HCM"; */
 "wHV-ao-HCM.title" = "10.11.0 - 15A284";
 
-/* Class = "NSTextFieldCell"; title = "Single Kexts"; ObjectID = "wlo-L5-nag"; */
-"wlo-L5-nag.title" = "Einzelkexte";
+/* Class = "NSTextFieldCell"; title = "Kextmanager"; ObjectID = "wlo-L5-nag"; */
+"wlo-L5-nag.title" = "Kextmanager";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Hilfe";
@@ -935,7 +935,7 @@
 "xjx-oH-hv4.title" = "10.13.6 - 17G5019";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts for you."; ObjectID = "xkJ-nI-Tsy"; */
-"xkJ-nI-Tsy.ibShadowedToolTip" = "Prüft ob aktuellere Kexte vorhanden sind und lädt sie dann herunter.";
+"xkJ-nI-Tsy.ibShadowedToolTip" = "Prüft ob aktuellere Kexte vorhanden sind und lädt sie ggf. herunter.";
 
 /* Class = "NSMenuItem"; title = "14"; ObjectID = "xn4-4H-2MR"; */
 "xn4-4H-2MR.title" = "14";
@@ -970,8 +970,8 @@
 /* Class = "NSTextFieldCell"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "yHa-Eb-aM3"; */
 "yHa-Eb-aM3.title" = "Die aktuellsten Kexte für Deinen Hackintosh";
 
-/* Class = "NSViewController"; title = "Single Kexts"; ObjectID = "YIT-P4-KYQ"; */
-"YIT-P4-KYQ.title" = "Einzelkexte";
+/* Class = "NSViewController"; title = "Kextmanager"; ObjectID = "YIT-P4-KYQ"; */
+"YIT-P4-KYQ.title" = "Kextmanager";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1021"; ObjectID = "Yms-dr-MtC"; */
 "Yms-dr-MtC.title" = "10.10.5 - 14F1021";

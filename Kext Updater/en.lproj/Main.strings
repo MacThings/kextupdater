@@ -533,8 +533,8 @@
 /* Class = "NSButtonCell"; title = "Oldschool CRT"; ObjectID = "Y9R-c0-5Tt"; */
 "Y9R-c0-5Tt.title" = "Oldschool CRT";
 
-/* Class = "NSViewController"; title = "Single Kexts"; ObjectID = "YIT-P4-KYQ"; */
-"YIT-P4-KYQ.title" = "Single Kexts";
+/* Class = "NSViewController"; title = "Kextmanager"; ObjectID = "YIT-P4-KYQ"; */
+"YIT-P4-KYQ.title" = "Kextmanager";
 
 /* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "YUq-V5-jjD"; */
 "YUq-V5-jjD.title" = "Mount EFI from another Harddisk.";
@@ -947,8 +947,8 @@
 /* Class = "NSTextFieldCell"; title = "Font Family"; ObjectID = "whC-9e-OnV"; */
 "whC-9e-OnV.title" = "Font Family";
 
-/* Class = "NSTextFieldCell"; title = "Single Kexts"; ObjectID = "wlo-L5-nag"; */
-"wlo-L5-nag.title" = "Single Kexts";
+/* Class = "NSTextFieldCell"; title = "Kextmanager"; ObjectID = "wlo-L5-nag"; */
+"wlo-L5-nag.title" = "Kextmanager";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Help";

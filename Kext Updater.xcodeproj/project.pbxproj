@@ -48,6 +48,7 @@
 		2AC44C1B23151173006D447C /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB823150F39006D447C /* ta.mp3 */; };
 		2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC323150F39006D447C /* progressanim.png */; };
 		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
+		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
 /* End PBXBuildFile section */
@@ -230,6 +231,7 @@
 		2AC44BF723150F6B006D447C /* kextupdaterng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kextupdaterng.html; sourceTree = "<group>"; };
 		2AC44C2223151293006D447C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2AC44C23231512B5006D447C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		2AD19D8A2367273D0014D005 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
 		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
 		2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				2AC44BB023150F38006D447C /* sounds */,
 				2AB3049D23150E1300D618FF /* AppDelegate.swift */,
 				2AB3049F23150E1300D618FF /* ViewController.swift */,
+				2AD19D8A2367273D0014D005 /* WindowController.swift */,
 				2AB304A123150E1500D618FF /* Assets.xcassets */,
 				2AB304A323150E1500D618FF /* Main.storyboard */,
 				2AB304A623150E1500D618FF /* Info.plist */,
@@ -566,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
+				2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */,
 				2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */,
 				2AC44BF123150F61006D447C /* KextUpdater.swift in Sources */,
 				2AB304A023150E1300D618FF /* ViewController.swift in Sources */,
