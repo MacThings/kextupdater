@@ -396,7 +396,15 @@ function scanallefis()
 
     cp "$ScriptTmpPath"/drives_pulldown "$ScriptTmpPath"/drives_pulldown2
     awk 'BEGIN{print""}1' "$ScriptTmpPath"/drives_pulldown2 > "$ScriptTmpPath"/drives_pulldown
+    rm "$ScriptTmpPath"/drives_pulldown2
     perl -e 'truncate $ARGV[0], ((-s $ARGV[0]) - 1)' "$ScriptTmpPath"/drives_pulldown  2> /dev/null
+    
+    drives_size=$( stat -f%z "$ScriptTmpPath"/drives_pulldown )
+    
+    if [[ "$drives_size" -lt "8" ]]; then
+        rm "$ScriptTmpPath"/drives_pulldown
+    fi
+    
 }
 
 function mountefiall()
