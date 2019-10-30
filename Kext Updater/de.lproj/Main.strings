@@ -97,8 +97,8 @@
 /* Class = "NSButtonCell"; title = "NoVPAJpeg"; ObjectID = "8cn-Cg-vV0"; */
 "8cn-Cg-vV0.title" = "NoVPAJpeg";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "8KI-5D-e2p"; */
-"8KI-5D-e2p.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
+"8KI-5D-e2p.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Please Select"; ObjectID = "9bX-ps-dhp"; */
 "9bX-ps-dhp.title" = "Bitte auswählen";
@@ -238,8 +238,8 @@
 /* Class = "NSMenuItem"; title = "17"; ObjectID = "ccz-yv-NkB"; */
 "ccz-yv-NkB.title" = "17";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "CkC-KB-Dk4"; */
-"CkC-KB-Dk4.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "CkC-KB-Dk4"; */
+"CkC-KB-Dk4.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "cMN-Co-Raf"; */
 "cMN-Co-Raf.title" = "Bootloader";
@@ -304,8 +304,8 @@
 /* Class = "NSTextFieldCell"; title = "Kextupdater wants to make changes."; ObjectID = "EDp-8g-xwr"; */
 "EDp-8g-xwr.title" = "Kextupdater möchte Änderungen vornehmen.";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "eDZ-tt-sAH"; */
-"eDZ-tt-sAH.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "eDZ-tt-sAH"; */
+"eDZ-tt-sAH.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "eH4-n6-fhn"; */
 "eH4-n6-fhn.title" = "Bitte auswählen";
@@ -397,6 +397,9 @@
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C2120"; ObjectID = "gj4-6n-oJc"; */
 "gj4-6n-oJc.title" = "10.13.2 - 17C2120";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Mounts/Unmounts the Boot-EFI"; ObjectID = "Gmk-gz-FIC"; */
+"Gmk-gz-FIC.ibShadowedToolTip" = "Mounted/Unmounted die Boot-EFI";
+
 /* Class = "NSButtonCell"; title = "WebDriver"; ObjectID = "gqe-Mv-U15"; */
 "gqe-Mv-U15.title" = "WebDriver";
 
@@ -430,8 +433,8 @@
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */
 "HQV-TC-zTT.title" = "Lilu";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "hvg-Oj-Vjg"; */
-"hvg-Oj-Vjg.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "hvg-Oj-Vjg"; */
+"hvg-Oj-Vjg.title" = "Download";
 
 /* Class = "NSButtonCell"; title = "TSCAdjustReset"; ObjectID = "hxQ-d2-8hR"; */
 "hxQ-d2-8hR.title" = "TSCAdjustReset";
@@ -730,8 +733,8 @@
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Vergrößern";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "R9u-E4-WBq"; */
-"R9u-E4-WBq.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "R9u-E4-WBq"; */
+"R9u-E4-WBq.title" = "Download";
 
 /* Class = "NSButtonCell"; title = "IntelMausiEthernet"; ObjectID = "rDC-Pi-as8"; */
 "rDC-Pi-as8.title" = "IntelMausiEthernet";
@@ -796,8 +799,8 @@
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Tbd-kw-pCp"; */
 "Tbd-kw-pCp.title" = "Bitte auswählen";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "tc4-iy-weU"; */
-"tc4-iy-weU.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "tc4-iy-weU"; */
+"tc4-iy-weU.title" = "Download";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Fenster";
@@ -970,7 +973,7 @@
 /* Class = "NSTextFieldCell"; title = "Always the latest Kexts for your Hackintosh"; ObjectID = "yHa-Eb-aM3"; */
 "yHa-Eb-aM3.title" = "Die aktuellsten Kexte für Deinen Hackintosh";
 
-/* Class = "NSViewController"; title = "Kextmanager"; ObjectID = "YIT-P4-KYQ"; */
+/* Class = "NSViewController"; title = "Single Kexts"; ObjectID = "YIT-P4-KYQ"; */
 "YIT-P4-KYQ.title" = "Kextmanager";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1021"; ObjectID = "Yms-dr-MtC"; */

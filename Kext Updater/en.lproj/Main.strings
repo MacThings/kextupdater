@@ -113,8 +113,8 @@
 /* Class = "NSMenuItem"; title = "10.13.3 - 17D102"; ObjectID = "83j-iN-voK"; */
 "83j-iN-voK.title" = "10.13.3 - 17D102";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "8KI-5D-e2p"; */
-"8KI-5D-e2p.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
+"8KI-5D-e2p.title" = "Download";
 
 /* Class = "NSButtonCell"; title = "NoVPAJpeg"; ObjectID = "8cn-Cg-vV0"; */
 "8cn-Cg-vV0.title" = "NoVPAJpeg";
@@ -188,8 +188,8 @@
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2511"; ObjectID = "Cbt-hN-4tn"; */
 "Cbt-hN-4tn.title" = "10.10.5 - 14F2511";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "CkC-KB-Dk4"; */
-"CkC-KB-Dk4.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "CkC-KB-Dk4"; */
+"CkC-KB-Dk4.title" = "Download";
 
 /* Class = "NSViewController"; title = "Disk Information"; ObjectID = "Crb-K7-oz6"; */
 "Crb-K7-oz6.title" = "Disk Information";
@@ -398,6 +398,9 @@
 /* Class = "NSMenuItem"; title = "Theme"; ObjectID = "Pod-Cp-WME"; */
 "Pod-Cp-WME.title" = "Theme";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Mounts/Unmounts the Boot-EFI"; ObjectID = "Gmk-gz-FIC"; */
+"Gmk-gz-FIC.ibShadowedToolTip" = "Mounts/Unmounts the Boot-EFI";
+
 /* Class = "NSBox"; title = "Box"; ObjectID = "Q4s-ts-6fA"; */
 "Q4s-ts-6fA.title" = "Box";
 
@@ -419,8 +422,8 @@
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "R9u-E4-WBq"; */
-"R9u-E4-WBq.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "R9u-E4-WBq"; */
+"R9u-E4-WBq.title" = "Download";
 
 /* Class = "NSButtonCell"; title = "EnableLidWake"; ObjectID = "RFJ-ik-xgv"; */
 "RFJ-ik-xgv.title" = "EnableLidWake";
@@ -629,8 +632,8 @@
 /* Class = "NSMenuItem"; title = "10.11.4 - 15E65"; ObjectID = "e1e-bg-T2d"; */
 "e1e-bg-T2d.title" = "10.11.4 - 15E65";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "eDZ-tt-sAH"; */
-"eDZ-tt-sAH.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "eDZ-tt-sAH"; */
+"eDZ-tt-sAH.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "eH4-n6-fhn"; */
 "eH4-n6-fhn.title" = "Please select";
@@ -713,8 +716,8 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "hp4-nh-EFQ"; */
 "hp4-nh-EFQ.title" = "Box";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "hvg-Oj-Vjg"; */
-"hvg-Oj-Vjg.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "hvg-Oj-Vjg"; */
+"hvg-Oj-Vjg.title" = "Download";
 
 /* Class = "NSButtonCell"; title = "TSCAdjustReset"; ObjectID = "hxQ-d2-8hR"; */
 "hxQ-d2-8hR.title" = "TSCAdjustReset";
@@ -884,8 +887,8 @@
 /* Class = "NSButtonCell"; title = "Default"; ObjectID = "tS6-WA-m9v"; */
 "tS6-WA-m9v.title" = "Default";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "tc4-iy-weU"; */
-"tc4-iy-weU.title" = "Start";
+/* Class = "NSButtonCell"; title = "Download"; ObjectID = "tc4-iy-weU"; */
+"tc4-iy-weU.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2009"; ObjectID = "tlc-Af-39T"; */
 "tlc-Af-39T.title" = "10.10.5 - 14F2009";
@@ -991,5 +994,3 @@
 
 /* Class = "NSTextFieldCell"; title = "Chime Volume"; ObjectID = "5hR-NV-HhX"; */
 "5hR-NV-HhX.title" = "Chime Volume";
-
-
