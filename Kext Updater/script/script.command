@@ -78,7 +78,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 function _excludedkexts()
 {
     kextstatsori=$( kextstat | grep -v com.apple )
-    bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" )
+    bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
     #kuversion=$( _helpDefaultRead "KUVersion" )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -794,7 +794,7 @@ if [[ $checkweb != "" ]]; then
 fi
 
 #========================= Add Non-Kext Values =========================#
-bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/\ on.*/)/g" )
+bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
 kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" )
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
