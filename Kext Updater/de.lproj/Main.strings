@@ -1,6 +1,9 @@
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1509"; ObjectID = "0Td-p9-QHK"; */
 "0Td-p9-QHK.title" = "10.10.5 - 14F1509";
 
+/* Class = "NSTextFieldCell"; title = "System Partition Status:"; ObjectID = "1gY-5O-x6G"; */
+"1gY-5O-x6G.title" = "System Partition Status:";
+
 /* Class = "NSMenuItem"; title = "10.11.2 - 15C50"; ObjectID = "1L8-wF-g4z"; */
 "1L8-wF-g4z.title" = "10.11.2 - 15C50";
 
@@ -88,6 +91,9 @@
 /* Class = "NSTextFieldCell"; title = "Device Node:"; ObjectID = "7dp-s4-yn9"; */
 "7dp-s4-yn9.title" = "Device Node:";
 
+/* Class = "NSTextFieldCell"; title = "Read only"; ObjectID = "7iC-s8-MNV"; */
+"7iC-s8-MNV.title" = "Nur lesen";
+
 /* Class = "NSTextFieldCell"; title = "nVidia Webdriver"; ObjectID = "7q9-hi-f5h"; */
 "7q9-hi-f5h.title" = "nVidia Webdriver";
 
@@ -159,6 +165,9 @@
 
 /* Class = "NSButtonCell"; title = "OK"; ObjectID = "ahX-4b-swP"; */
 "ahX-4b-swP.title" = "OK";
+
+/* Class = "NSTextFieldCell"; title = "Read / Write"; ObjectID = "aid-bC-OiP"; */
+"aid-bC-OiP.title" = "Lesen / Schreiben";
 
 /* Class = "NSTextFieldCell"; title = "Please choose a Bootloader"; ObjectID = "aNc-Xf-4S2"; */
 "aNc-Xf-4S2.title" = "Bitte Bootloader wählen";
@@ -238,7 +247,7 @@
 /* Class = "NSMenuItem"; title = "17"; ObjectID = "ccz-yv-NkB"; */
 "ccz-yv-NkB.title" = "17";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "CkC-KB-Dk4"; */
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "CkC-KB-Dk4"; */
 "CkC-KB-Dk4.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "cMN-Co-Raf"; */
@@ -304,7 +313,7 @@
 /* Class = "NSTextFieldCell"; title = "Kextupdater wants to make changes."; ObjectID = "EDp-8g-xwr"; */
 "EDp-8g-xwr.title" = "Kextupdater möchte Änderungen vornehmen.";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "eDZ-tt-sAH"; */
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "eDZ-tt-sAH"; */
 "eDZ-tt-sAH.title" = "Download";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "eH4-n6-fhn"; */
@@ -433,8 +442,8 @@
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */
 "HQV-TC-zTT.title" = "Lilu";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "hvg-Oj-Vjg"; */
-"hvg-Oj-Vjg.title" = "Download";
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "hvg-Oj-Vjg"; */
+"hvg-Oj-Vjg.title" = "Start";
 
 /* Class = "NSButtonCell"; title = "TSCAdjustReset"; ObjectID = "hxQ-d2-8hR"; */
 "hxQ-d2-8hR.title" = "TSCAdjustReset";
@@ -498,6 +507,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1713"; ObjectID = "jmQ-4H-q0o"; */
 "jmQ-4H-q0o.title" = "10.10.5 - 14F1713";
+
+/* Class = "NSBox"; title = "Status"; ObjectID = "jna-hs-BsX"; */
+"jna-hs-BsX.title" = "Status";
 
 /* Class = "NSMenuItem"; title = "5"; ObjectID = "JQq-IY-uys"; */
 "JQq-IY-uys.title" = "5";
@@ -713,7 +725,7 @@
 "qiq-Qq-0Iu.title" = "10.13.2 - 17C205";
 
 /* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
-"qIS-W8-SiK.title" = "Page Setup…";
+"qIS-W8-SiK.title" = "Seite einrichten…";
 
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1710"; ObjectID = "QKm-v2-el9"; */
 "QKm-v2-el9.title" = "10.12.6 - 16G1710";
@@ -733,8 +745,8 @@
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Vergrößern";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "R9u-E4-WBq"; */
-"R9u-E4-WBq.title" = "Download";
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "R9u-E4-WBq"; */
+"R9u-E4-WBq.title" = "Start";
 
 /* Class = "NSButtonCell"; title = "IntelMausiEthernet"; ObjectID = "rDC-Pi-as8"; */
 "rDC-Pi-as8.title" = "IntelMausiEthernet";
@@ -778,8 +790,14 @@
 /* Class = "NSTextFieldCell"; title = "Kext Updater"; ObjectID = "Sfg-Nd-3CD"; */
 "Sfg-Nd-3CD.title" = "Kext Updater";
 
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "sgB-pg-PMm"; */
+"sgB-pg-PMm.title" = "Start";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G19009"; ObjectID = "ShE-Mw-ig1"; */
 "ShE-Mw-ig1.title" = "10.11.6 - 15G19009";
+
+/* Class = "NSTextFieldCell"; title = "Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent."; ObjectID = "sjO-TN-9bF"; */
+"sjO-TN-9bF.title" = "Seit Catalina ist die Systempartition nach dem Booten als Nur-Lesen gemounted. Hier kannst Du die Partition auf Lesen/Schreiben umstellen. Das hält aber nur solange an, bis ein Neustart durchgeführt wird. Es ist nicht dauerhaft.";
 
 /* Class = "NSTextFieldCell"; title = "Bootloader"; ObjectID = "sl3-gt-Cmo"; */
 "sl3-gt-Cmo.title" = "Bootloader";

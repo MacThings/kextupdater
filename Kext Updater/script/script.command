@@ -1467,6 +1467,28 @@ function checksleepfix()
 }
 
 ###################################################################
+############### Sets systempartition to read/write ################
+###################################################################
+
+function set_read_write()
+{
+    
+    keychain=$( _helpDefaultRead "Keychain" )
+
+    if [[ $keychain = "1" ]]; then
+      _getsecret
+      osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+      osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+    fi
+   
+    oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
+    if [[ "$ososwriteprotected" = "No" ]]; then
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
+    fi
+}
+
+###################################################################
 ############### Show all loaded 3rd Party Kexts ###################
 ###################################################################
 

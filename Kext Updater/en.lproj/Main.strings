@@ -92,6 +92,9 @@
 /* Class = "NSButtonCell"; title = "Mount"; ObjectID = "6nV-VG-RBM"; */
 "6nV-VG-RBM.title" = "Mount";
 
+/* Class = "NSTextFieldCell"; title = "Read only"; ObjectID = "7iC-s8-MNV"; */
+"7iC-s8-MNV.title" = "Read only";
+
 /* Class = "NSButtonCell"; title = "Shiki"; ObjectID = "71I-RO-UFE"; */
 "71I-RO-UFE.title" = "Shiki";
 
@@ -163,6 +166,9 @@
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSTextFieldCell"; title = "Read / Write"; ObjectID = "aid-bC-OiP"; */
+"aid-bC-OiP.title" = "Read / Write";
 
 /* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "BX8-fj-PQC"; */
 "BX8-fj-PQC.title" = "Bootloader";
@@ -422,8 +428,8 @@
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "R9u-E4-WBq"; */
-"R9u-E4-WBq.title" = "Download";
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "R9u-E4-WBq"; */
+"R9u-E4-WBq.title" = "Start";
 
 /* Class = "NSButtonCell"; title = "EnableLidWake"; ObjectID = "RFJ-ik-xgv"; */
 "RFJ-ik-xgv.title" = "EnableLidWake";
@@ -716,8 +722,8 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "hp4-nh-EFQ"; */
 "hp4-nh-EFQ.title" = "Box";
 
-/* Class = "NSButtonCell"; title = "Download"; ObjectID = "hvg-Oj-Vjg"; */
-"hvg-Oj-Vjg.title" = "Download";
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "hvg-Oj-Vjg"; */
+"hvg-Oj-Vjg.title" = "Start";
 
 /* Class = "NSButtonCell"; title = "TSCAdjustReset"; ObjectID = "hxQ-d2-8hR"; */
 "hxQ-d2-8hR.title" = "TSCAdjustReset";
@@ -796,6 +802,9 @@
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G8030"; ObjectID = "mkt-I2-Ykb"; */
 "mkt-I2-Ykb.title" = "10.13.6 - 17G8030";
+
+/* Class = "NSTextFieldCell"; title = "Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent."; ObjectID = "sjO-TN-9bF"; */
+"sjO-TN-9bF.title" = "Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent.";
 
 /* Class = "NSButtonCell"; title = "FakePCIID"; ObjectID = "nkJ-ur-9aW"; */
 "nkJ-ur-9aW.title" = "FakePCIID";

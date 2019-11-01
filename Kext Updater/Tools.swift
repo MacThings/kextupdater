@@ -26,6 +26,10 @@ class Tools: NSViewController {
     @IBOutlet weak var fixapplied: NSImageView!
     @IBOutlet weak var button_fix_sleep: NSButton!
     
+    @IBOutlet weak var read_only: NSTextField!
+    @IBOutlet weak var read_write: NSTextField!
+    @IBOutlet weak var button_read_write: NSButton!
+    
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
     @IBOutlet weak var button_unmount: NSButton!
@@ -89,7 +93,20 @@ class Tools: NSViewController {
             self.atheros40applied.isHidden = true
             self.atheros40notapplied.isHidden = true
         }
+                        
+        let readonly = UserDefaults.standard.string(forKey: "Read-Only")
+        if readonly == "Yes" {
+            self.button_read_write.isEnabled = true
+            self.read_only.isHidden = false
+            self.read_write.isHidden = true
+        } else {
+            self.button_read_write.isEnabled = false
+            self.read_only.isHidden = true
+            self.read_write.isHidden = false
+        }
+            
             }
+      
     }
     }
  
@@ -106,7 +123,7 @@ class Tools: NSViewController {
         self.progress_gear_cache.isHidden=false
         DispatchQueue.global(qos: .background).async {
             let rwcheck = UserDefaults.standard.string(forKey: "Read-Only")
-            if rwcheck == "No"{
+            if rwcheck == "Yes"{
                 self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
             }
             DispatchQueue.main.async {
@@ -178,6 +195,20 @@ class Tools: NSViewController {
                 self.button_close.isEnabled=true
                 self.pulldown_menu.isEnabled=true
             }
+        }
+    }
+    
+    @IBAction func set_read_write(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
+        let readonly = UserDefaults.standard.string(forKey: "Read-Only")
+        if readonly == "Yes" {
+            self.button_read_write.isEnabled = true
+            self.read_only.isHidden = false
+            self.read_write.isHidden = true
+        } else {
+            self.button_read_write.isEnabled = false
+            self.read_only.isHidden = true
+            self.read_write.isHidden = false
         }
     }
     
