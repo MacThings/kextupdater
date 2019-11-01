@@ -1474,6 +1474,7 @@ function set_read_write()
 {
     
     keychain=$( _helpDefaultRead "Keychain" )
+    user=$( _helpDefaultRead "Rootuser" )
 
     if [[ $keychain = "1" ]]; then
       _getsecret
