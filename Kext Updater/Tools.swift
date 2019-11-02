@@ -123,7 +123,7 @@ class Tools: NSViewController {
         self.progress_gear_cache.isHidden=false
         DispatchQueue.global(qos: .background).async {
             let rwcheck = UserDefaults.standard.string(forKey: "Read-Only")
-            if rwcheck == "Yes"{
+            if rwcheck == "No"{
                 self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
             }
             DispatchQueue.main.async {
