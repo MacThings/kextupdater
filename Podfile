@@ -7,4 +7,5 @@ target 'Kext Updater' do
   pod 'Sparkle'
   pod 'KeychainSwift'
   pod 'APNGKit'
+  pod 'LoginServiceKit', :git => 'https://github.com/Clipy/LoginServiceKit.git'
 end

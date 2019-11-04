@@ -2,5 +2,6 @@ ${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks
 ${BUILT_PRODUCTS_DIR}/APNGKit/APNGKit.framework
 ${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework
 ${BUILT_PRODUCTS_DIR}/LetsMove/LetsMove.framework
+${BUILT_PRODUCTS_DIR}/LoginServiceKit/LoginServiceKit.framework
 ${PODS_ROOT}/Sparkle/Sparkle.framework
 ${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM
