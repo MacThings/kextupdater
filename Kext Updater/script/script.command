@@ -1484,7 +1484,7 @@ function set_read_write()
     fi
    
     oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
-    if [[ "$ososwriteprotected" = "No" ]]; then
+    if [[ "$oswriteprotected" = "No" ]]; then
         defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
     fi
 }

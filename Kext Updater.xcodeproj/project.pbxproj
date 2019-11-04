@@ -520,7 +520,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/kextupdater ]; then\ncp \"/Users/luigi/Documents/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
 		};
 		30ACD4D9158E7E9A667B8EC7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -735,7 +735,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 321;
+				CURRENT_PROJECT_VERSION = 320;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -745,7 +745,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.1;
+				MARKETING_VERSION = 3.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -762,7 +762,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 321;
+				CURRENT_PROJECT_VERSION = 320;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -772,7 +772,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.1;
+				MARKETING_VERSION = 3.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
