@@ -159,8 +159,6 @@ class Tools: NSViewController {
                 self.button_kextcache.isEnabled=true
                 self.button_atheros.isEnabled=true
                 self.button_fix_sleep.isEnabled=true
-                self.progress_gear_mount.isHidden=false
-                self.progress_gear_mount?.startAnimation(self);
                 self.button_mount.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
@@ -187,8 +185,6 @@ class Tools: NSViewController {
                 self.button_kextcache.isEnabled=true
                 self.button_atheros.isEnabled=true
                 self.button_fix_sleep.isEnabled=true
-                self.progress_gear_mount.isHidden=false
-                self.progress_gear_mount?.startAnimation(self);
                 self.button_mount.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
@@ -201,7 +197,7 @@ class Tools: NSViewController {
     @IBAction func set_read_write(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         let readonly = UserDefaults.standard.string(forKey: "Read-Only")
-        if readonly == "Yes" {
+        if readonly == "No" {
             self.button_read_write.isEnabled = true
             self.read_only.isHidden = false
             self.read_write.isHidden = true

@@ -314,7 +314,7 @@
 "EDp-8g-xwr.title" = "Kextupdater möchte Änderungen vornehmen.";
 
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "eDZ-tt-sAH"; */
-"eDZ-tt-sAH.title" = "Download";
+"eDZ-tt-sAH.title" = "Start";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "eH4-n6-fhn"; */
 "eH4-n6-fhn.title" = "Bitte auswählen";

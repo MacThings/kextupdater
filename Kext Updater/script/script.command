@@ -398,6 +398,7 @@ function scanallefis()
     awk 'BEGIN{print""}1' "$ScriptTmpPath"/drives_pulldown2 > "$ScriptTmpPath"/drives_pulldown
     rm "$ScriptTmpPath"/drives_pulldown2
     perl -e 'truncate $ARGV[0], ((-s $ARGV[0]) - 1)' "$ScriptTmpPath"/drives_pulldown  2> /dev/null
+    sed -ib '/^\s*$/d' "$ScriptTmpPath"/drives_pulldown
     
     drives_size=$( stat -f%z "$ScriptTmpPath"/drives_pulldown )
     
@@ -511,7 +512,7 @@ function unmountefiall()
             else
         osascript -e 'do shell script "diskutil unmount '$disk'" with administrator privileges' >/dev/null 2>&1
         fi
-    done < ""$ScriptTmpPath"/drives_pulldown2"
+    done < ""$ScriptTmpPath"/drives_pulldown"
 
     _helpDefaultWrite "Mounted" "No"
 

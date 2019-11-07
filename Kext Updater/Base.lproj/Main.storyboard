@@ -2162,7 +2162,7 @@ DQ
                                             <rect key="frame" x="397" y="312" width="270" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Always the latest Kexts for your Hackintosh" id="yHa-Eb-aM3">
-                                                <font key="font" metaFont="controlContent"/>
+                                                <font key="font" metaFont="label" size="12"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -3097,7 +3097,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="smallSquare" title="3" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Tho-W6-S5A" id="ey2-Yo-Op6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="controlContent"/>
+                                    <font key="font" metaFont="label" size="12"/>
                                     <menu key="menu" id="Yit-Ja-m6c">
                                         <items>
                                             <menuItem title="1" id="x5m-oz-NRO"/>
