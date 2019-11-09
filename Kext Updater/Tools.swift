@@ -95,14 +95,14 @@ class Tools: NSViewController {
         }
                         
         let readonly = UserDefaults.standard.string(forKey: "Read-Only")
-        if readonly == "Yes" {
-            self.button_read_write.isEnabled = true
-            self.read_only.isHidden = false
-            self.read_write.isHidden = true
-        } else {
+        if readonly == "No" {
             self.button_read_write.isEnabled = false
             self.read_only.isHidden = true
             self.read_write.isHidden = false
+        } else {
+            self.button_read_write.isEnabled = true
+            self.read_only.isHidden = false
+            self.read_write.isHidden = true
         }
             
             }
@@ -198,13 +198,13 @@ class Tools: NSViewController {
         self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         let readonly = UserDefaults.standard.string(forKey: "Read-Only")
         if readonly == "No" {
-            self.button_read_write.isEnabled = true
-            self.read_only.isHidden = false
-            self.read_write.isHidden = true
-        } else {
             self.button_read_write.isEnabled = false
             self.read_only.isHidden = true
             self.read_write.isHidden = false
+        } else {
+            self.button_read_write.isEnabled = true
+            self.read_only.isHidden = false
+            self.read_write.isHidden = true
         }
     }
     

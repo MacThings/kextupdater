@@ -78,7 +78,8 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 function _excludedkexts()
 {
     kextstatsori=$( kextstat | grep -v com.apple )
-    bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
+    #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
+    bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     #kuversion=$( _helpDefaultRead "KUVersion" )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -137,7 +138,7 @@ kextArray=(
 "applebacklightfixup","AppleBacklightFixup","AppleBacklightFixup","WhateverGreen","Alarm"
 "asussmc","AsusSMC","AsusSMC",""
 "ath9kfixup","ATH9KFixup","ATH9KFixup",""
-"atherose2200ethernet","AtherosE2200","AtherosE2200Ethernet",""
+"atherose2200ethernet","AtherosE2200Ethernet","AtherosE2200Ethernet",""
 "azulpatcher4600","AzulPatcher4600","AzulPatcher4600",""
 "brcmpatchram","BrcmFirmwareStore","BrcmPatchRam",""
 "bt4lecontinuityfixup","BT4LEContinuityFixup","BT4LEContinuityFixup",""
@@ -152,8 +153,8 @@ kextArray=(
 "hibernationfixup","HibernationFixup","HibernationFixup",""
 "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup","WhateverGreen","Alarm"
 "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup","WhateverGreen","Alarm"
-"intelmausiethernet","AppleIntelE1000","AppleIntelE1000","IntelMausiEthernet"
-"intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
+"intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
+"intelmausi","IntelMausiEthernet","IntelMausiEthernet","IntelMausi"
 "intelmausi","IntelMausi","IntelMausi",""
 "lilu","Lilu ","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
@@ -398,7 +399,7 @@ function scanallefis()
     awk 'BEGIN{print""}1' "$ScriptTmpPath"/drives_pulldown2 > "$ScriptTmpPath"/drives_pulldown
     rm "$ScriptTmpPath"/drives_pulldown2
     perl -e 'truncate $ARGV[0], ((-s $ARGV[0]) - 1)' "$ScriptTmpPath"/drives_pulldown  2> /dev/null
-    sed -ib '/^\s*$/d' "$ScriptTmpPath"/drives_pulldown
+    #sed -ib '/^\s*$/d' "$ScriptTmpPath"/drives_pulldown
     
     drives_size=$( stat -f%z "$ScriptTmpPath"/drives_pulldown )
     
@@ -795,7 +796,8 @@ if [[ $checkweb != "" ]]; then
 fi
 
 #========================= Add Non-Kext Values =========================#
-bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
+#bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
+bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
 kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" )
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
