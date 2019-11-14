@@ -1616,6 +1616,7 @@ function htmlreport()
       ../bin/./PlistBuddy -c "set PlatformInfo:PlatformNVRAM:ROM 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
       ../bin/./PlistBuddy -c "set PlatformInfo:SMBIOS:ChassisSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
       ../bin/./PlistBuddy -c "set PlatformInfo:DataHub:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      ../bin/./PlistBuddy -c "set PlatformInfo:DataHub:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
 
     fi
 
