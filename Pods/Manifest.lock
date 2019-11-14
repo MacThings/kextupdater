@@ -1,6 +1,6 @@
 PODS:
   - APNGKit (1.1.3)
-  - KeychainSwift (17.0.0)
+  - KeychainSwift (18.0.0)
   - LetsMove (1.24)
   - LoginServiceKit (2.1.0)
   - Sparkle (1.22.0)
@@ -30,7 +30,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APNGKit: fbf5270804a2861f451ca27cf1cce0893b13fbf5
-  KeychainSwift: 9f43f562dffc88af6efadb57d74b14c598eb337f
+  KeychainSwift: c46e1438d121e47459fb304ac88c5e058a2a91ed
   LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
   LoginServiceKit: 9a8b258c3111fa0d9585615052f778b08be92302
   Sparkle: 593ac2e677c07bcb6c3b22d621240e7cbedaab57
