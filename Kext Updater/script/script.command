@@ -61,6 +61,18 @@ function _checkpass() {
     fi
 }
 
+function _checkpass_initial() {
+
+    user=$( _helpDefaultRead "Rootuser" )
+    passw=$( security find-generic-password -a "Kext Updater" -w | sed "s/\"/\\\\\"/g")
+
+    osascript -e 'do shell script "dscl /Local/Default -u '$user'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+
+    if [ $? != 0 ]; then
+      defaults delete "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Keychain"
+    fi
+}
+
 function _getsecret() {
     secret=$(security find-generic-password -a "Kext Updater" -w)
     if [[ $secret = "44" ]]; then

@@ -117,6 +117,7 @@ class KextUpdater: NSViewController {
         }
         
         syncShellExec(path: scriptPath, args: ["initial"])
+        syncShellExec(path: scriptPath, args: ["_checkpass_initial"])
         
         
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")
