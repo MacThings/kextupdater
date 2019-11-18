@@ -25,6 +25,9 @@
 /* Class = "NSButtonCell"; title = "AzulPatcher4600"; ObjectID = "2sy-9F-ZoW"; */
 "2sy-9F-ZoW.title" = "AzulPatcher4600";
 
+/* Class = "NSMenuItem"; title = "10.13.6 - 17G9016"; ObjectID = "2VX-wl-Jga"; */
+"2VX-wl-Jga.title" = "10.13.6 - 17G9016";
+
 /* Class = "NSMenuItem"; title = "Clover"; ObjectID = "2zv-fg-rx2"; */
 "2zv-fg-rx2.title" = "Clover";
 
@@ -153,6 +156,9 @@
 
 /* Class = "NSMenuItem"; title = "Red"; ObjectID = "922-og-AnU"; */
 "922-og-AnU.title" = "Rot";
+
+/* Class = "NSButtonCell"; title = "Check for Kext Updates"; ObjectID = "A96-L1-Gm1"; */
+"A96-L1-Gm1.title" = "Nach Kext Updates suchen";
 
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C89"; ObjectID = "aAU-7a-5oS"; */
 "aAU-7a-5oS.title" = "10.13.2 - 17C89";
@@ -655,6 +661,9 @@
 /* Class = "NSButtonCell"; title = "Report"; ObjectID = "oCj-NC-GNi"; */
 "oCj-NC-GNi.title" = "Report";
 
+/* Class = "NSButton"; ibShadowedToolTip = "*click*"; ObjectID = "oCK-QL-bHb"; */
+"oCK-QL-bHb.ibShadowedToolTip" = "*klick*";
+
 /* Class = "NSTextFieldCell"; title = "= Show Sources"; ObjectID = "oex-LX-K57"; */
 "oex-LX-K57.title" = "= Zeige Sourcen";
 
@@ -732,6 +741,9 @@
 
 /* Class = "NSMenuItem"; title = "10.12.2 - 16C68"; ObjectID = "QLN-fx-CJv"; */
 "QLN-fx-CJv.title" = "10.12.2 - 16C68";
+
+/* Class = "NSTextFieldCell"; title = "Select an EFI folder you want to check for kext updates."; ObjectID = "qMl-rE-aP9"; */
+"qMl-rE-aP9.title" = "Wähle einen (EFI)-Ordner den du auf Kext Updates prüfen möchtest.";
 
 /* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
 "qoN-tI-Qfd.title" = "Menu Bar Item";
@@ -901,6 +913,9 @@
 /* Class = "NSMenuItem"; title = "10.13.5 - 17F77"; ObjectID = "VQD-4g-BZs"; */
 "VQD-4g-BZs.title" = "10.13.5 - 17F77";
 
+/* Class = "NSButtonCell"; title = "Check for Kext Updates"; ObjectID = "Vwp-Mq-aV9"; */
+"Vwp-Mq-aV9.title" = "Nach Kext Updates suchen";
+
 /* Class = "NSBox"; title = "Download Path"; ObjectID = "vzD-NN-MML"; */
 "vzD-NN-MML.title" = "Download Pfad";
 
@@ -993,6 +1008,9 @@
 
 /* Class = "NSViewController"; title = "Single Kexts"; ObjectID = "YIT-P4-KYQ"; */
 "YIT-P4-KYQ.title" = "Kextmanager";
+
+/* Class = "NSButtonCell"; title = "Choose folder"; ObjectID = "Yj7-HC-KJ3"; */
+"Yj7-HC-KJ3.title" = "Wähle Ordner";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1021"; ObjectID = "Yms-dr-MtC"; */
 "Yms-dr-MtC.title" = "10.10.5 - 14F1021";

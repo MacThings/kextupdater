@@ -30,6 +30,10 @@ class Tools: NSViewController {
     @IBOutlet weak var read_write: NSTextField!
     @IBOutlet weak var button_read_write: NSButton!
     
+    @IBOutlet weak var custom_efi_folder: NSTextField!
+    @IBOutlet weak var custom_efi_folder_path: NSTextField!
+    @IBOutlet weak var button_custom_efi_folder: NSButton!
+    
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
     @IBOutlet weak var button_unmount: NSButton!
@@ -214,6 +218,41 @@ class Tools: NSViewController {
             self.read_only.isHidden = false
             self.read_write.isHidden = true
         }
+    }
+    
+    @IBAction func browseFile(sender: AnyObject) {
+        
+        let dialog = NSOpenPanel();
+        
+        dialog.title                   = "Choose a Folder";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = true;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["txt"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            let result = dialog.url // Pathname of the file
+            
+            if (result != nil) {
+                self.button_custom_efi_folder.isEnabled=true
+                let path = result!.path
+                custom_efi_folder_path.stringValue = path
+                let cefipath = (path as String)
+                UserDefaults.standard.set(cefipath, forKey: "CustomEfiPath")
+            }
+        } else {
+            self.button_custom_efi_folder.isEnabled=false
+            return
+        }
+    }
+    
+    
+    @IBAction func custom_efi_check(_ sender: Any) {
+            UserDefaults.standard.set(true, forKey: "CustomEFI")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_offline_efi.stringValue as Any])
+        self.view.window?.close()
     }
     
     @IBAction func offline_efi_check(_ sender: Any) {

@@ -104,23 +104,48 @@ function _excludedkexts()
         fi
     fi
 
-if [[ "$offline_efi" = "yes" ]]; then
-    rm "$ScriptTmpPath"/offline_efi_kexts
-    kextstatsori=""
-    offline_node=$( _helpDefaultRead "EFIx" )
-    offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
-    find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-    kext_name=$( defaults read "$fname" CFBundleName )
-    kext_version=$( defaults read "$fname" CFBundleVersion )
-    echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
-    done
+    if [[ "$offline_efi" = "yes" ]]; then
+        rm "$ScriptTmpPath"/offline_efi_kexts
+        kextstatsori=""
+        offline_node=$( _helpDefaultRead "EFIx" )
+        offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
+        find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_version=$( defaults read "$fname" CFBundleVersion )
+        echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+        done
+        
+        find "$offline_path" -name "CLOVERX64.efi" |grep -v 501 | while read fname; do
+        kext_version=$( strings "$fname" |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
+        echo "Clover (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+        done
 
-    sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
-    rm "$ScriptTmpPath"/offline_efi_kexts
-    mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
-    kextstatsori=$( cat "$ScriptTmpPath"/offline_efi_kexts )
-fi
+        sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
+        rm "$ScriptTmpPath"/offline_efi_kexts
+        mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
+        kextstatsori=$( cat "$ScriptTmpPath"/offline_efi_kexts )
+    fi
 
+    if [[ "$custom_efi" = "yes" ]]; then
+        rm "$ScriptTmpPath"/custom_efi_kexts
+        kextstatsori=""
+        custom_path=$( _helpDefaultRead "CustomEfiPath" )
+        find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_version=$( defaults read "$fname" CFBundleVersion )
+        echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
+        done
+
+        find "$custom_path" -name "CLOVERX64.efi" |grep -v 501 | while read fname; do
+        kext_version=$( strings "$fname" |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
+        echo "Clover (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
+        done
+
+        sort -u "$ScriptTmpPath"/custom_efi_kexts |uniq > "$ScriptTmpPath"/custom_efi_kexts2
+        rm "$ScriptTmpPath"/custom_efi_kexts
+        mv "$ScriptTmpPath"/custom_efi_kexts2 "$ScriptTmpPath"/custom_efi_kexts
+        kextstatsori=$( cat "$ScriptTmpPath"/custom_efi_kexts )
+    fi
 
     kext="ACPIBatteryManager"
     check=$( echo "$content" | grep -w ex-$kext | sed "s/.*=\ //g" )
@@ -832,22 +857,48 @@ kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
 kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" )
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
 
-if [[ "$offline_efi" = "yes" ]]; then
-    rm "$ScriptTmpPath"/offline_efi_kexts
-    kextstats=""
-    offline_node=$( _helpDefaultRead "EFIx" )
-    offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
-    find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-    kext_name=$( defaults read "$fname" CFBundleName )
-    kext_version=$( defaults read "$fname" CFBundleVersion )
-    echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
-    done
+    if [[ "$offline_efi" = "yes" ]]; then
+        rm "$ScriptTmpPath"/offline_efi_kexts
+        kextstats=""
+        offline_node=$( _helpDefaultRead "EFIx" )
+        offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
+        find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_version=$( defaults read "$fname" CFBundleVersion )
+        echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+        done
 
-    sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
-    rm "$ScriptTmpPath"/offline_efi_kexts
-    mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
-    kextstats=$( cat "$ScriptTmpPath"/offline_efi_kexts )
-fi
+        find "$offline_path" -name "CLOVERX64.efi" |grep -v 501 | while read fname; do
+        kext_version=$( strings "$fname" |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
+        echo "Clover (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+        done
+
+        sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
+        rm "$ScriptTmpPath"/offline_efi_kexts
+        mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
+        kextstats=$( cat "$ScriptTmpPath"/offline_efi_kexts )
+    fi
+
+    if [[ "$custom_efi" = "yes" ]]; then
+        rm "$ScriptTmpPath"/custom_efi_kexts
+        kextstats=""
+        custom_path=$( _helpDefaultRead "CustomEfiPath" )
+        find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_version=$( defaults read "$fname" CFBundleVersion )
+        echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
+        done
+
+        find "$custom_path" -name "CLOVERX64.efi" |grep -v 501 | while read fname; do
+        kext_version=$( strings "$fname" |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
+        echo "Clover (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
+        done
+
+        sort -u "$ScriptTmpPath"/custom_efi_kexts |uniq > "$ScriptTmpPath"/custom_efi_kexts2
+        rm "$ScriptTmpPath"/custom_efi_kexts
+        mv "$ScriptTmpPath"/custom_efi_kexts2 "$ScriptTmpPath"/custom_efi_kexts
+        kextstats=$( cat "$ScriptTmpPath"/custom_efi_kexts )
+    fi
 
 #========================= Get loaded Kexts =========================#
 _excludedkexts
@@ -1887,6 +1938,12 @@ function check_opencore_conf()
 function _offline_efi()
 {
     offline_efi="yes"
+    mainscript
+}
+
+function _custom_efi()
+{
+    custom_efi="yes"
     mainscript
 }
 

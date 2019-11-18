@@ -393,13 +393,17 @@ class KextUpdater: NSViewController {
             }
             
             let offline_efi = UserDefaults.standard.bool(forKey: "OfflineEFI")
+            let custom_efi = UserDefaults.standard.bool(forKey: "CustomEFI")
             if offline_efi == true{
                 self.syncShellExec(path: self.scriptPath, args: ["_offline_efi"])
+            } else if custom_efi == true{
+                self.syncShellExec(path: self.scriptPath, args: ["_custom_efi"])
             } else {
                 self.syncShellExec(path: self.scriptPath, args: ["mainscript"])
             }
             
             UserDefaults.standard.set(false, forKey: "OfflineEFI")
+            UserDefaults.standard.set(false, forKey: "CustomEFI")
 
             DispatchQueue.main.async {
                 self.start_button.isEnabled=true
