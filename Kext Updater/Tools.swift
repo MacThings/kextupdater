@@ -35,8 +35,10 @@ class Tools: NSViewController {
     @IBOutlet weak var button_unmount: NSButton!
     @IBOutlet weak var button_unmount_all: NSButton!
     
-    @IBOutlet weak var button_close: NSButton!
+    @IBOutlet weak var button_offline_efi: NSButton!
     
+    @IBOutlet weak var button_close: NSButton!
+        
     @IBOutlet weak var progress_gear_cache: NSProgressIndicator!
     @IBOutlet weak var progress_gear_atheros: NSProgressIndicator!
     @IBOutlet weak var progress_gear_mount: NSProgressIndicator!
@@ -115,6 +117,7 @@ class Tools: NSViewController {
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -131,6 +134,7 @@ class Tools: NSViewController {
                 self.button_atheros.isEnabled=true
                 self.button_fix_sleep.isEnabled=true
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -147,6 +151,7 @@ class Tools: NSViewController {
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -160,6 +165,7 @@ class Tools: NSViewController {
                 self.button_atheros.isEnabled=true
                 self.button_fix_sleep.isEnabled=true
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -175,6 +181,7 @@ class Tools: NSViewController {
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -186,6 +193,7 @@ class Tools: NSViewController {
                 self.button_atheros.isEnabled=true
                 self.button_fix_sleep.isEnabled=true
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -208,11 +216,49 @@ class Tools: NSViewController {
         }
     }
     
+    @IBAction func offline_efi_check(_ sender: Any) {
+            self.button_kextcache.isEnabled=false
+            self.button_atheros.isEnabled=false
+            self.button_fix_sleep.isEnabled=false
+            self.button_mount.isEnabled=false
+            self.button_offline_efi.isEnabled=false
+            self.button_unmount.isEnabled=false
+            self.button_unmount_all.isEnabled=false
+            self.button_close.isEnabled=false
+            self.pulldown_menu.isEnabled=false
+            self.progress_gear_mount.isHidden=false
+            self.progress_gear_mount?.startAnimation(self);
+            DispatchQueue.global(qos: .background).sync {
+                self.syncShellExec(path: self.scriptPath, args: ["mountefiall"])
+                DispatchQueue.main.async {
+                    self.button_kextcache.isEnabled=true
+                    self.button_atheros.isEnabled=true
+                    self.button_fix_sleep.isEnabled=true
+                    self.progress_gear_mount.isHidden=false
+                    self.progress_gear_mount?.startAnimation(self);
+                    self.button_mount.isEnabled=true
+                    self.button_offline_efi.isEnabled=true
+                    self.button_unmount.isEnabled=true
+                    self.button_unmount_all.isEnabled=true
+                    self.button_close.isEnabled=true
+                    self.pulldown_menu.isEnabled=true
+                    self.progress_gear_mount.isHidden=true
+                    self.progress_gear_mount?.stopAnimation(self);
+                }
+            }
+        
+            UserDefaults.standard.set(true, forKey: "OfflineEFI")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_offline_efi.stringValue as Any])
+        self.view.window?.close()
+    }
+    
+    
     @IBAction func efi_tools_mount(_ sender: Any) {
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -228,6 +274,7 @@ class Tools: NSViewController {
                 self.progress_gear_mount.isHidden=false
                 self.progress_gear_mount?.startAnimation(self);
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -243,6 +290,7 @@ class Tools: NSViewController {
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -258,6 +306,7 @@ class Tools: NSViewController {
                 self.progress_gear_mount.isHidden=false
                 self.progress_gear_mount?.startAnimation(self);
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -273,6 +322,7 @@ class Tools: NSViewController {
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
         self.button_unmount.isEnabled=false
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
@@ -288,6 +338,7 @@ class Tools: NSViewController {
                 self.progress_gear_mount.isHidden=false
                 self.progress_gear_mount?.startAnimation(self);
                 self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
                 self.button_unmount.isEnabled=true
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
@@ -323,6 +374,7 @@ class Tools: NSViewController {
         self.pulldown_menu.item(withTitle: "")?.isHidden=true
         //self.pulldown_menu.menu?.removeItem(at: 0)
         self.button_mount.isEnabled=true
+        self.button_offline_efi.isEnabled=true
         self.button_unmount.isEnabled=true
         self.button_unmount_all.isEnabled=true
         let efichoice = sender.title

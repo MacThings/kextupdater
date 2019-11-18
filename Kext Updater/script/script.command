@@ -104,6 +104,24 @@ function _excludedkexts()
         fi
     fi
 
+if [[ "$offline_efi" = "yes" ]]; then
+    rm "$ScriptTmpPath"/offline_efi_kexts
+    kextstatsori=""
+    offline_node=$( _helpDefaultRead "EFIx" )
+    offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
+    find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+    kext_name=$( defaults read "$fname" CFBundleName )
+    kext_version=$( defaults read "$fname" CFBundleVersion )
+    echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+    done
+
+    sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
+    rm "$ScriptTmpPath"/offline_efi_kexts
+    mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
+    kextstatsori=$( cat "$ScriptTmpPath"/offline_efi_kexts )
+fi
+
+
     kext="ACPIBatteryManager"
     check=$( echo "$content" | grep -w ex-$kext | sed "s/.*=\ //g" )
     if [[ $check = "true" ]]; then
@@ -813,6 +831,23 @@ bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
 kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" )
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
+
+if [[ "$offline_efi" = "yes" ]]; then
+    rm "$ScriptTmpPath"/offline_efi_kexts
+    kextstats=""
+    offline_node=$( _helpDefaultRead "EFIx" )
+    offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
+    find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
+    kext_name=$( defaults read "$fname" CFBundleName )
+    kext_version=$( defaults read "$fname" CFBundleVersion )
+    echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
+    done
+
+    sort -u "$ScriptTmpPath"/offline_efi_kexts |uniq > "$ScriptTmpPath"/offline_efi_kexts2
+    rm "$ScriptTmpPath"/offline_efi_kexts
+    mv "$ScriptTmpPath"/offline_efi_kexts2 "$ScriptTmpPath"/offline_efi_kexts
+    kextstats=$( cat "$ScriptTmpPath"/offline_efi_kexts )
+fi
 
 #========================= Get loaded Kexts =========================#
 _excludedkexts
@@ -1847,6 +1882,12 @@ function check_opencore_conf()
         echo -e "$ocerror"
         exit 0
       fi
+}
+
+function _offline_efi()
+{
+    offline_efi="yes"
+    mainscript
 }
 
 function bug_report()

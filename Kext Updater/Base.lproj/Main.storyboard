@@ -328,7 +328,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-usbinjectall" id="daY-ks-ZHr"/>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-usbinjectall" id="lzQ-dh-lFc"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-MO-UD5">
@@ -3296,7 +3296,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkB-hH-A2t">
-                                <rect key="frame" x="45" y="143" width="316" height="25"/>
+                                <rect key="frame" x="45" y="143" width="314" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="hy1-np-ogO">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -3505,6 +3505,17 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-TZ-u7M">
+                                <rect key="frame" x="191" y="111" width="171" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Check for Kext Updates" bezelStyle="rounded" alignment="center" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A96-L1-Gm1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="offline_efi_check:" target="PFO-7L-TjR" id="3yk-R4-ufe"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -3515,6 +3526,7 @@ DQ
                         <outlet property="button_fix_sleep" destination="koU-E0-Yex" id="KzO-Yq-yre"/>
                         <outlet property="button_kextcache" destination="VRn-Tm-ms3" id="tXy-f1-stz"/>
                         <outlet property="button_mount" destination="cyz-bZ-0js" id="NJm-nI-ChF"/>
+                        <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>
                         <outlet property="button_read_write" destination="rIK-O5-mOn" id="hTr-XT-ahl"/>
                         <outlet property="button_unmount" destination="vSC-14-Cuf" id="ypX-uR-1t6"/>
                         <outlet property="button_unmount_all" destination="Xq7-rS-1W5" id="gUD-Ss-DzA"/>
