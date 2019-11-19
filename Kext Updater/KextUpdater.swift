@@ -457,9 +457,9 @@ class KextUpdater: NSViewController {
     
     @IBAction func folder_efi_open(_ sender: Any) {
         let efipath = UserDefaults.standard.string(forKey: "EFI Path")
-        let url = URL(fileURLWithPath: efipath ?? "")
+        //let url = URL(fileURLWithPath: efipath ?? "")
         do {
-            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+            try FileManager.default.contentsOfDirectory(atPath: efipath ?? "")
         } catch _ {
             print("")
         }

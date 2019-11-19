@@ -502,7 +502,7 @@ function mountefiall()
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" )
+        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
         #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
         #efipath=$( echo "$mountpoint"/"$efipath" )
       fi
@@ -661,7 +661,7 @@ function initial()
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" )
+        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
 #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
 #efipath=$( echo "$mountpoint"/"$efipath" )
       fi
@@ -788,7 +788,7 @@ function mountefi()
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" )
+        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
 #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
 #efipath=$( echo "$mountpoint"/"$efipath" )
       fi
