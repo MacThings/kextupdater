@@ -52,8 +52,8 @@
 /* Class = "NSMenuItem"; title = "Unmount Boot-EFI"; ObjectID = "RDM-FW-6PS"; */
 "RDM-FW-6PS.title" = "Boot-EFI auswerfen";
 
-/* Class = "NSMenuItem"; title = "Check now ..."; ObjectID = "RyK-ui-asr"; */
-"RyK-ui-asr.title" = "Jetzt prüfen ...";
+/* Class = "NSMenuItem"; title = "Check kexts now ..."; ObjectID = "RyK-ui-asr"; */
+"RyK-ui-asr.title" = "Jetzt Kexte prüfen ...";
 
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";

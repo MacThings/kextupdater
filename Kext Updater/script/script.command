@@ -476,7 +476,7 @@ function mountefiall()
 
     _languageselect
 
-
+    offlineefi=$( _helpDefaultRead "OfflineEFI" )
     node=$( _helpDefaultRead "EFIx" )
     if [[ $keychain = "1" ]]; then
     _getsecret
@@ -503,8 +503,8 @@ function mountefiall()
       fi
       if [[ $bootloader = "OpenCore" ]]; then
         efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" )
-#efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
-#efipath=$( echo "$mountpoint"/"$efipath" )
+        #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
+        #efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -512,7 +512,9 @@ function mountefiall()
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
 
         if [[ $checkchime = "1" ]]; then
-          _playchime
+            if [[ "$offlineefi" = "0" ]]; then
+                _playchime
+            fi
         fi
         echo "$alldone"
     fi
@@ -1072,16 +1074,22 @@ function _cleanup()
     if [ -f ${ScriptTmpPath}/kextloaded ]; then
         rm ${ScriptTmpPath}/kextloaded
     fi
+    
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OfflineEFI" -bool NO
+    
 }
 
 #============================== Kext Updater Last Run ==============================#
 function _lastcheck()
 {
-    lastcheckfunc=$( _helpDefaultRead "Last Check" )
-    if [[ $lastcheckfunc != "Never" ]]; then
-        echo $lastcheck
-        echo $lastcheckfunc
-        echo " "
+
+    if [[ "$custom_efi" = "" ]] && [[ "$offline_efi" = "" ]]; then
+        lastcheckfunc=$( _helpDefaultRead "Last Check" )
+        if [[ $lastcheckfunc != "Never" ]]; then
+            echo $lastcheck
+            echo $lastcheckfunc
+            echo " "
+        fi
     fi
 }
 

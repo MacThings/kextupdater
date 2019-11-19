@@ -369,14 +369,6 @@ class KextUpdater: NSViewController {
         formatter.dateFormat = "EEEE, dd.M.yyyy, HH:mm:ss"
         let result = formatter.string(from: date)
 
-        let checklast = UserDefaults.standard.string(forKey: "Last Check")
-        if checklast != "Never"{
-        UserDefaults.standard.set(checklast, forKey: "Last Check")
-        }
-
-        let lastcheck = (result as String)
-        UserDefaults.standard.set(lastcheck, forKey: "Last Check")
-        
         //output_window.textStorage?.mutableString.setString("")
         
         DispatchQueue.global(qos: .background).async {
@@ -391,7 +383,7 @@ class KextUpdater: NSViewController {
                 }
                 
             }
-            
+
             let offline_efi = UserDefaults.standard.bool(forKey: "OfflineEFI")
             let custom_efi = UserDefaults.standard.bool(forKey: "CustomEFI")
             if offline_efi == true{
@@ -399,11 +391,14 @@ class KextUpdater: NSViewController {
             } else if custom_efi == true{
                 self.syncShellExec(path: self.scriptPath, args: ["_custom_efi"])
             } else {
+                let checklast = UserDefaults.standard.string(forKey: "Last Check")
+                    if checklast != "Never"{
+                    UserDefaults.standard.set(checklast, forKey: "Last Check")
+                    }
+                let lastcheck = (result as String)
+                UserDefaults.standard.set(lastcheck, forKey: "Last Check")
                 self.syncShellExec(path: self.scriptPath, args: ["mainscript"])
             }
-            
-            UserDefaults.standard.set(false, forKey: "OfflineEFI")
-            UserDefaults.standard.set(false, forKey: "CustomEFI")
 
             DispatchQueue.main.async {
                 self.start_button.isEnabled=true
@@ -424,6 +419,8 @@ class KextUpdater: NSViewController {
     }
     
     @IBAction func stop_button(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "OfflineEFI")
+        UserDefaults.standard.set(false, forKey: "CustomEFI")
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["stop_execution"])
                 DispatchQueue.main.async {

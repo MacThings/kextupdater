@@ -52,6 +52,8 @@ class Tools: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        UserDefaults.standard.set(false, forKey: "OfflineEFI")
+        UserDefaults.standard.set(false, forKey: "CustomEFI")
         self.progress_gear.isHidden=false
         self.progress_gear?.startAnimation(self);
         DispatchQueue.global(qos: .background).async {
@@ -256,6 +258,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func offline_efi_check(_ sender: Any) {
+            UserDefaults.standard.set(true, forKey: "OfflineEFI")
             self.button_kextcache.isEnabled=false
             self.button_atheros.isEnabled=false
             self.button_fix_sleep.isEnabled=false
@@ -286,7 +289,6 @@ class Tools: NSViewController {
                 }
             }
         
-            UserDefaults.standard.set(true, forKey: "OfflineEFI")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_offline_efi.stringValue as Any])
         self.view.window?.close()
     }
