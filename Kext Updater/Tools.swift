@@ -93,11 +93,11 @@ class Tools: NSViewController {
             self.syncShellExec(path: self.scriptPath, args: ["checkatheros40"])
         let atheros40check = UserDefaults.standard.string(forKey: "Atheros40")
         if atheros40check == "1" {
-            //button_atheros.isEnabled = false
+            self.button_atheros.isEnabled = false
             self.atheros40applied.isHidden = false
             self.atheros40notapplied.isHidden = true
         } else {
-            //button_atheros.isEnabled = true
+            self.button_atheros.isEnabled = true
             self.atheros40applied.isHidden = true
             self.atheros40notapplied.isHidden = true
         }
@@ -119,6 +119,7 @@ class Tools: NSViewController {
     }
  
     @IBAction func cacherebuild(_ sender: Any) {
+        catalina_read_write()
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
@@ -153,6 +154,7 @@ class Tools: NSViewController {
         }
 
     @IBAction func atheros_yes(_ sender: Any) {
+        catalina_read_write()
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
@@ -183,6 +185,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func sleepfix_yes(_ sender: Any) {
+        catalina_read_write()
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
         self.button_fix_sleep.isEnabled=false
@@ -209,17 +212,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func set_read_write(_ sender: Any) {
-        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
-        let readonly = UserDefaults.standard.string(forKey: "Read-Only")
-        if readonly == "No" {
-            self.button_read_write.isEnabled = false
-            self.read_only.isHidden = true
-            self.read_write.isHidden = false
-        } else {
-            self.button_read_write.isEnabled = true
-            self.read_only.isHidden = false
-            self.read_write.isHidden = true
-        }
+        catalina_read_write()
     }
     
     @IBAction func browseFile(sender: AnyObject) {
@@ -422,5 +415,19 @@ class Tools: NSViewController {
         let efichoice2 = efichoice.prefix(7)
         UserDefaults.standard.set(efichoice2, forKey: "EFIx")
     }
+    
+    func catalina_read_write() {
+    self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
+    let readonly = UserDefaults.standard.string(forKey: "Read-Only")
+    if readonly == "No" {
+        self.button_read_write.isEnabled = false
+        self.read_only.isHidden = true
+        self.read_write.isHidden = false
+    } else {
+        self.button_read_write.isEnabled = true
+        self.read_only.isHidden = false
+        self.read_write.isHidden = true
+    }
+}
     
 }

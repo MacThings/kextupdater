@@ -1076,6 +1076,7 @@ function _cleanup()
     fi
     
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OfflineEFI" -bool NO
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "CustomEFI" -bool NO
     
 }
 
