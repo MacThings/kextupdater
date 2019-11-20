@@ -1582,20 +1582,21 @@ function checksleepfix()
 
 function set_read_write()
 {
-    
-    keychain=$( _helpDefaultRead "Keychain" )
-    user=$( _helpDefaultRead "Rootuser" )
-
-    if [[ $keychain = "1" ]]; then
-      _getsecret
-      osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-      osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-    fi
-   
     oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
-    if [[ "$oswriteprotected" = "No" ]]; then
-        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
+    if [[ "$oswriteprotected" = "Yes" ]]; then
+        keychain=$( _helpDefaultRead "Keychain" )
+        user=$( _helpDefaultRead "Rootuser" )
+
+        if [[ $keychain = "1" ]]; then
+          _getsecret
+          osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+          osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+        fi
+       
+        oswriteprotected2=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
+        if [[ "$oswriteprotected2" = "No" ]]; then
+            defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
     fi
 }
 
