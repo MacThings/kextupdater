@@ -1582,8 +1582,8 @@ function checksleepfix()
 
 function set_read_write()
 {
-    oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
-    if [[ "$oswriteprotected" = "Yes" ]]; then
+     oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
+     if [[ "$oswriteprotected" = "Yes" ]]; then
         keychain=$( _helpDefaultRead "Keychain" )
         user=$( _helpDefaultRead "Rootuser" )
 
@@ -1597,6 +1597,7 @@ function set_read_write()
         oswriteprotected2=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
         if [[ "$oswriteprotected2" = "No" ]]; then
             defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
+        fi
     fi
 }
 
