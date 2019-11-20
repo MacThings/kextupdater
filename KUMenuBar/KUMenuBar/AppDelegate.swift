@@ -197,9 +197,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func open_efi(_ sender: Any) {
         let efipath = UserDefaults.standard.string(forKey: "EFI Path")
-        let url = URL(fileURLWithPath: efipath ?? "")
+        //let url = URL(fileURLWithPath: efipath ?? "")
         do {
-            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+            try FileManager.default.contentsOfDirectory(atPath: efipath ?? "")
         } catch _ {
             print("")
         }
@@ -210,9 +210,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func open_download(_ sender: Any) {
         let downloadpath = UserDefaults.standard.string(forKey: "Downloadpath")
-        let url = URL(fileURLWithPath: downloadpath ?? "")
+        //let url = URL(fileURLWithPath: downloadpath ?? "")
         do {
-            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+            try FileManager.default.contentsOfDirectory(atPath: downloadpath ?? "")
         } catch _ {
             print("")
         }

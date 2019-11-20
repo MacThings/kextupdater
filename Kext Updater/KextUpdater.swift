@@ -444,9 +444,9 @@ class KextUpdater: NSViewController {
     
     @IBAction func folder_download_open(_ sender: Any) {
         let downloadpath = UserDefaults.standard.string(forKey: "Downloadpath")
-        let url = URL(fileURLWithPath: downloadpath ?? "")
+        //let url = URL(fileURLWithPath: downloadpath ?? "")
         do {
-            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+            try FileManager.default.contentsOfDirectory(atPath: downloadpath ?? "")
         } catch _ {
             print("")
         }
