@@ -4302,6 +4302,9 @@ DQ
                                             <menuItem title="Bootloader" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem title="Bootloader Beta" id="tGB-Gh-Bvm">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
                                             <menuItem title="AppleSupport" id="4i4-wk-0pn">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>

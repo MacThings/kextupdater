@@ -1154,6 +1154,9 @@ function _main()
     if [[ $name = "opencore" ]]; then
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"OpenCore"
     fi
+    if [[ $name = "opencorebeta" ]]; then
+    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"OpenCore Beta"
+    fi
     if [[ $name = "applesupport" ]]; then
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"AppleSupport"
     fi
@@ -1220,8 +1223,11 @@ if [ $kexte = "Bootloader" ]; then
         if [[ $kextchoice = "Clover Nightly Build" ]]; then
           kextchoice="clovernightly"
         fi
-        if [[ $kextchoice = OpenCore* ]]; then
+        if [[ $kextchoice = "OpenCore" ]]; then
           kextchoice="opencore"
+        fi
+        if [[ $kextchoice = "OpenCoreBeta" ]]; then
+          kextchoice="opencorebeta"
         fi
         if [[ $kextchoice = AppleSupport* ]]; then
           kextchoice="applesupport"

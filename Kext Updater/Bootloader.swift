@@ -60,10 +60,12 @@ class Bootloader: NSViewController {
         self.opencore_empty_entry.isHidden=true
         self.start_button.isEnabled=true
         let gettitle = (sender as AnyObject).selectedCell()!.title
-        if gettitle.contains("Bootloader") {
+        if gettitle == "Bootloader"{
            UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
         } else if gettitle.contains("AppleSupport") {
             UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
+        } else if gettitle.contains("Beta") {
+            UserDefaults.standard.set("OpenCoreBeta", forKey: "Bootloaderkind")
         }
     }
     
