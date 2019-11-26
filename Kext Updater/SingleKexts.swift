@@ -120,6 +120,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-rtcmemoryfixup")
         UserDefaults.standard.set(true, forKey: "dl-sinetekrtsx")
         UserDefaults.standard.set(true, forKey: "dl-systemprofilermemoryfixup")
+        UserDefaults.standard.set(true, forKey: "dl-thunderboltreset")
         UserDefaults.standard.set(true, forKey: "dl-tscadjustreset")
         UserDefaults.standard.set(true, forKey: "dl-usbinjectall")
         UserDefaults.standard.set(true, forKey: "dl-virtualsmc")
@@ -277,6 +278,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func systemprofilermemoryfixup(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/Goldfish64/SystemProfilerMemoryFixup", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func thunderboltreset(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/osy86/ThunderboltReset", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func tscadjustreset(_ sender: Any) {

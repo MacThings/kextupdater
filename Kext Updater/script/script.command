@@ -82,7 +82,7 @@ function _getsecret() {
     fi
 }
 
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -226,6 +226,7 @@ kextArray=(
 "shiki","Shiki","Shiki","WhateverGreen","Alarm"
 "sinetekrtsx","Sinetek-rtsx","Sinetekrtsx",""
 "systemprofilermemoryfixup","SystemProfilerMemoryFixup","SystemProfilerMemoryFixup",""
+"thunderboltreset","ThunderboltReset ","ThunderboltReset",""
 "tscadjustreset","TSCAdjustReset","TSCAdjustReset",""
 "usbinjectall","USBInjectAll","USBInjectAll",""
 "virtualsmc","VirtualSMC","VirtualSMC",""
@@ -856,7 +857,8 @@ fi
 #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
 bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
-kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" )
+kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" ) ### Removing shitty Character "d" from Version String @ IntelMausiEthernet
+kextstats=$( echo -e "$kextstats" |sed "s/d)/./g" ) ### Removing shitty Character "d" from Version String @ ThunderboltReset
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
@@ -1981,4 +1983,5 @@ function stop_execution()
 
 $1
 exit 0
+
 
