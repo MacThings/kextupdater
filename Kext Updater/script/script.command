@@ -1146,33 +1146,54 @@ function _main()
     rm -r ${ScriptDownloadPath}/"EFI Driver"
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"EFI Driver"
     fi
-    if [[ $name = "clovernightly" ]]; then
+    if [ -d ${ScriptDownloadPath}/"clovernightly" ]; then
         if [ ! -d ${ScriptDownloadPath}/"Clover Nightly Build" ]; then
             mkdir ${ScriptDownloadPath}/"Clover Nightly Build"/
         fi
-    mv ${ScriptDownloadPath}/${name}/* ${ScriptDownloadPath}/"Clover Nightly Build"/.
-    rm -r ${ScriptDownloadPath}/${name}
+    mv ${ScriptDownloadPath}/clovernightly/* ${ScriptDownloadPath}/"Clover Nightly Build"/.
+    rm -r ${ScriptDownloadPath}/clovernightly
     fi
-    if [[ $name = "opencore" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"OpenCore"
+    if [ -d ${ScriptDownloadPath}/"opencore" ]; then
+    mv ${ScriptDownloadPath}/opencore ${ScriptDownloadPath}/"OpenCore"
     fi
-    if [[ $name = "opencorebeta" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"OpenCore Beta"
+    if [ -d ${ScriptDownloadPath}/"opencorebeta" ]; then
+    mv ${ScriptDownloadPath}/opencorebeta ${ScriptDownloadPath}/"OpenCore Beta"
     fi
-    if [[ $name = "applesupport" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"AppleSupport"
+    if [ -d ${ScriptDownloadPath}/"applesupport" ]; then
+    mv ${ScriptDownloadPath}/applesupport ${ScriptDownloadPath}/"AppleSupport"
     fi
-    if [[ $name = "nvidiagraphicsfixup" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"NvidiaGraphicsFixup"
+    if [ -d ${ScriptDownloadPath}/"nvidiagraphicsfixup" ]; then
+    mv ${ScriptDownloadPath}/nvidiagraphicsfixup ${ScriptDownloadPath}/"NvidiaGraphicsFixup"
     fi
-    if [[ $name = "atheroswifiinjector" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"AtherosWiFiInjector"
+    if [ -d ${ScriptDownloadPath}/"atheroswifiinjector" ]; then
+    mv ${ScriptDownloadPath}/atheroswifiinjector ${ScriptDownloadPath}/"AtherosWiFiInjector"
     fi
-    if [[ $name = "thunderboltreset" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"ThunderboltReset"
+    if [ -d ${ScriptDownloadPath}/"thunderboltreset" ]; then
+    mv ${ScriptDownloadPath}/thunderboltreset ${ScriptDownloadPath}/"ThunderboltReset"
     fi
-    if [[ $name = "tscadjustreset" ]]; then
-    mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"TSCAdjustReset"
+    if [ -d ${ScriptDownloadPath}/"tscadjustreset" ]; then
+    mv ${ScriptDownloadPath}/tscadjustreset ${ScriptDownloadPath}/"TSCAdjustReset"
+    fi
+    if [ -d ${ScriptDownloadPath}/"applealcnightly" ]; then
+    mv ${ScriptDownloadPath}/applealcnightly ${ScriptDownloadPath}/"AppleALC Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"lilunightly" ]; then
+    mv ${ScriptDownloadPath}/lilunightly ${ScriptDownloadPath}/"Lilu Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"whatevergreennightly" ]; then
+    mv ${ScriptDownloadPath}/whatevergreennightly ${ScriptDownloadPath}/"WhateverGreen Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"voodoops2nightly" ]; then
+    mv ${ScriptDownloadPath}/voodoops2nightly ${ScriptDownloadPath}/"VoodooPS2 Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"hibernationfixupnightly" ]; then
+    mv ${ScriptDownloadPath}/hibernationfixupnightly ${ScriptDownloadPath}/"HibernationFixup Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"virtualsmcnightly" ]; then
+    mv ${ScriptDownloadPath}/virtualsmcnightly ${ScriptDownloadPath}/"VirtualSMC Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"brcmpatchramnightly" ]; then
+    mv ${ScriptDownloadPath}/brcmpatchramnightly ${ScriptDownloadPath}/"BrcmPatchRAM Nightly"
     fi
 
     if [[ $checkchime = "1" ]]; then
