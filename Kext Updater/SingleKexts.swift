@@ -73,6 +73,17 @@ class SingleKexts: NSViewController {
     
     }
 
+    @IBAction func efi_creator_pulldown(_ sender: Any) {
+        let bootloader_kind = (sender as AnyObject).selectedCell()!.tag
+        
+        if bootloader_kind == 1 {
+        UserDefaults.standard.set("OpenCore", forKey: "EFICreator")
+        } else if bootloader_kind == 2 {
+        UserDefaults.standard.set("Clover", forKey: "EFICreator")
+        }
+    }
+    
+    
     @IBAction func send_start (sender: NSButton) {
         UserDefaults.standard.set("Single", forKey: "Choice")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.start_button?.stringValue as Any])
