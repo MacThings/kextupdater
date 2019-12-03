@@ -77,14 +77,21 @@ class SingleKexts: NSViewController {
         let bootloader_kind = (sender as AnyObject).selectedCell()!.tag
         
         if bootloader_kind == 1 {
-        UserDefaults.standard.set("OpenCore", forKey: "EFICreator")
+        UserDefaults.standard.set("OpenCore", forKey: "EFI Creator")
         } else if bootloader_kind == 2 {
-        UserDefaults.standard.set("Clover", forKey: "EFICreator")
+        UserDefaults.standard.set("OpenCore Beta", forKey: "EFI Creator")
+        } else if bootloader_kind == 3 {
+        UserDefaults.standard.set("Clover", forKey: "EFI Creator")
+        } else if bootloader_kind == 4 {
+        UserDefaults.standard.set("Clover Nightly", forKey: "EFI Creator")
+        }else if bootloader_kind == 0 {
+        UserDefaults.standard.set("None", forKey: "EFI Creator")
         }
     }
     
     
     @IBAction func send_start (sender: NSButton) {
+        //UserDefaults.standard.set("None", forKey: "EFI Creator")
         UserDefaults.standard.set("Single", forKey: "Choice")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.start_button?.stringValue as Any])
         self.view.window?.close()

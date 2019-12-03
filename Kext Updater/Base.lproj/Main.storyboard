@@ -2062,14 +2062,16 @@ DQ
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-DC-eUE">
                                 <rect key="frame" x="286" y="58" width="133" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="No thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
+                                <popUpButtonCell key="cell" type="push" title="No, thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <menu key="menu" id="KBd-XJ-hqV">
                                         <items>
-                                            <menuItem title="No thank you" state="on" id="fle-ZA-Ec8"/>
+                                            <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
                                             <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
-                                            <menuItem title="Clover" tag="2" id="9vw-ao-Ppq"/>
+                                            <menuItem title="OpenCore Beta" tag="2" id="2xY-of-vfI"/>
+                                            <menuItem title="Clover" tag="3" id="9vw-ao-Ppq"/>
+                                            <menuItem title="Clover Nightly" tag="4" id="k4x-tK-fSm"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>

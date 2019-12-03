@@ -209,7 +209,7 @@ kextArray=(
 "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup","WhateverGreen","Alarm"
 "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup","WhateverGreen","Alarm"
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
-"intelmausi","IntelMausiEthernet","IntelMausiEthernet","IntelMausi"
+"intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet","IntelMausi"
 "intelmausi","IntelMausi","IntelMausi",""
 "lilu","Lilu ","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
@@ -991,6 +991,10 @@ function _kextUpdate()
 #============================== KextLoad ==============================#
 function _kextLoader()
 {
+    if [ -f ${ScriptTmpPath}/eficreator ]; then
+        rm ${ScriptTmpPath}/eficreator
+    fi
+
     for kextLoadList in "${kextLoadArray[@]}"
         do
             IFS=","
@@ -1000,6 +1004,7 @@ function _kextLoader()
             vers=$( curl -sS https://update.kextupdater.de/${name}/version.html )
             mkdir ${ScriptDownloadPath}/${newname}
             mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
+            echo "$newname" >> ${ScriptTmpPath}/eficreator
             _toUpdateLoad
             curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
             curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
@@ -1139,6 +1144,9 @@ function _main()
     _ozmosis
 
     echo ""
+    
+    _efi_folder_creator
+    
     echo "$alldone"
     _cleanup
 
@@ -1976,6 +1984,84 @@ function check_opencore_conf()
         echo -e "$ocerror"
         exit 0
       fi
+}
+
+###################################################################
+#################### Create basic EFI folder ######################
+###################################################################
+
+function _efi_folder_creator()
+{
+    _languageselect
+
+    efi_creator=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Creator" )
+    
+    efi_name="EFI"
+    
+    if [[ "$efi_creator" != "None" ]]; then
+    
+        if [[ "$efi_creator" = "Clover" ]]; then
+            folder="clovercreator"
+            kext_target="CLOVER/kexts/Other"
+        elif [[ "$efi_creator" = "Clover Nightly" ]]; then
+            folder="clovernightlycreator"
+            kext_target="CLOVER/kexts/Other"
+        elif [[ "$efi_creator" = "OpenCore" ]]; then
+            folder="opencorecreator"
+            kext_target="OC/Kexts"
+        elif [[ "$efi_creator" = "OpenCore Beta" ]]; then
+            folder="opencorebetacreator"
+            kext_target="OC/Kexts"
+        fi
+
+        echo "Bootloader: $efi_creator"
+        echo " "
+        echo "$creating_efi"
+        echo " "
+        
+        curl -sS -o ${ScriptTmpPath}/EFI.zip https://$url/${folder}/EFI.zip
+        unzip -o -q ${ScriptTmpPath}/EFI.zip -d ${ScriptDownloadPath}/EFI
+
+        while read -r line; do
+            if [[ "$line" = "ACPIBatteryManager" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "AppleBacklightFixup" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+                cp -r ${ScriptDownloadPath}/$line/*.aml ${ScriptDownloadPath}/${name}/CLOVER/ACPI/patched/.
+            elif [[ "$line" = "ATH9KFixup" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "BrcmPatchRam" ]]; then
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n\n"
+            elif [[ "$line" = "CodecCommander" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "FakePCIID" ]]; then
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
+            elif [[ "$line" = "GenericUSBXHCI" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Universal/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "NullEthernet" ]]; then
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
+            elif [[ "$line" = "RealtekRTL8111" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/$line-*/Vers*/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "Sinetekrtsx" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "USBInjectAll" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "VirtualSMC" ]]; then
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
+            elif [[ "$line" = "VoodooPS2" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "VoodooSMBus" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Voodoo*/kext/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "VoodooTSCSync" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            else
+                cp -r ${ScriptDownloadPath}/$line/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            fi
+        done < "${ScriptTmpPath}"/eficreator
+    
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Creator" "None"
+
+    fi
 }
 
 function _offline_efi()

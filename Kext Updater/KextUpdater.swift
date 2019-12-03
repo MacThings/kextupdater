@@ -148,6 +148,8 @@ class KextUpdater: NSViewController {
         
         checkefi()
 
+        UserDefaults.standard.set("None", forKey: "EFI Creator")
+        
         let tmpnotify = UserDefaults.standard.string(forKey: "Notifications")
         if tmpnotify == nil{
             UserDefaults.standard.set("NO", forKey: "Notifications")

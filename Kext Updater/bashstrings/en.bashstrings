@@ -62,3 +62,6 @@ ahciportinstall="Installing SATA Hotplug Support for Mojave. This could take a w
 ahciportuninstall="Removing SATA Hotplug Support for Mojave. This could take a while. Please be patient and don't interrupt the Process."
 ocerror="The value for 'Expose Sensitive Data' (Misc/Security) in your OpenCore config.plist must be set to '3'. Without this value, the Kext Updater works only to a limited extent."
 networkerror="Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment."
+creating_efi="Creating EFI Folder..."
+efi_manual_1="Attention!"
+efi_manual_2="must be copied to the EFI Folder by hand!"
