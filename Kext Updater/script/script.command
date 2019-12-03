@@ -2031,7 +2031,7 @@ function _efi_folder_creator()
             elif [[ "$line" = "ATH9KFixup" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "BrcmPatchRam" ]]; then
-                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n\n"
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "CodecCommander" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "FakePCIID" ]]; then

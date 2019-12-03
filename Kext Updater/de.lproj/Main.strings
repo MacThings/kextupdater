@@ -28,6 +28,9 @@
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G9016"; ObjectID = "2VX-wl-Jga"; */
 "2VX-wl-Jga.title" = "10.13.6 - 17G9016";
 
+/* Class = "NSMenuItem"; title = "OpenCore Beta"; ObjectID = "2xY-of-vfI"; */
+"2xY-of-vfI.title" = "OpenCore Beta";
+
 /* Class = "NSMenuItem"; title = "Clover"; ObjectID = "2zv-fg-rx2"; */
 "2zv-fg-rx2.title" = "Clover";
 
@@ -124,6 +127,9 @@
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "9p3-6R-FFK"; */
 "9p3-6R-FFK.title" = "Bitte auswählen";
 
+/* Class = "NSMenuItem"; title = "Clover"; ObjectID = "9vw-ao-Ppq"; */
+"9vw-ao-Ppq.title" = "Clover";
+
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G6030"; ObjectID = "9YW-q7-91P"; */
 "9YW-q7-91P.title" = "10.13.6 - 17G6030";
 
@@ -181,8 +187,14 @@
 /* Class = "NSMenuItem"; title = "Ethernet"; ObjectID = "aon-Kd-dbJ"; */
 "aon-Kd-dbJ.title" = "Ethernet";
 
+/* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "AOz-aN-VqB"; */
+"AOz-aN-VqB.title" = "Lilu";
+
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "AQu-gQ-jTO"; */
 "AQu-gQ-jTO.title" = "Bitte auswählen";
+
+/* Class = "NSTextFieldCell"; title = "EFI Folder Creator"; ObjectID = "Asi-UQ-1TT"; */
+"Asi-UQ-1TT.title" = "EFI Folder Creator";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Drucken…";
@@ -234,6 +246,9 @@
 
 /* Class = "NSMenuItem"; title = "Sierra"; ObjectID = "buk-uA-1rc"; */
 "buk-uA-1rc.title" = "Sierra";
+
+/* Class = "NSTextFieldCell"; title = "Nightly Builds"; ObjectID = "bww-KP-bU2"; */
+"bww-KP-bU2.title" = "Nightly Builds";
 
 /* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "BX8-fj-PQC"; */
 "BX8-fj-PQC.title" = "Bootloader";
@@ -388,6 +403,9 @@
 /* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Kext Updater Hilfe";
 
+/* Class = "NSMenuItem"; title = "No, thank you"; ObjectID = "fle-ZA-Ec8"; */
+"fle-ZA-Ec8.title" = "Nein, danke";
+
 /* Class = "NSViewController"; title = "nVidia Webdriver"; ObjectID = "FlY-af-uzG"; */
 "FlY-af-uzG.title" = "nVidia Webdriver";
 
@@ -435,6 +453,9 @@
 
 /* Class = "NSTextFieldCell"; title = "Developed By: Sascha Lamprecht Program Icon: Nio82"; ObjectID = "hEx-SJ-Y1C"; */
 "hEx-SJ-Y1C.title" = "Entwickelt von: Sascha Lamprecht Programm Symbol: Nio82";
+
+/* Class = "NSButtonCell"; title = "ThunderboltReset"; ObjectID = "hhd-3S-jgf"; */
+"hhd-3S-jgf.title" = "ThunderboltReset";
 
 /* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hjw-Fy-cag"; */
 "hjw-Fy-cag.title" = "Unmounten";
@@ -526,6 +547,9 @@
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1611"; ObjectID = "jYY-lM-pud"; */
 "jYY-lM-pud.title" = "10.11.6 - 15G1611";
 
+/* Class = "NSMenuItem"; title = "Clover Nightly"; ObjectID = "k4x-tK-fSm"; */
+"k4x-tK-fSm.title" = "Clover Nightly";
+
 /* Class = "NSButtonCell"; title = "FakeSMC"; ObjectID = "k7e-m5-xyL"; */
 "k7e-m5-xyL.title" = "FakeSMC";
 
@@ -591,6 +615,9 @@
 
 /* Class = "NSButtonCell"; title = "CodecCommander"; ObjectID = "MaA-rD-UBc"; */
 "MaA-rD-UBc.title" = "CodecCommander";
+
+/* Class = "NSButtonCell"; title = "AppleALC"; ObjectID = "mF0-lM-S3o"; */
+"mF0-lM-S3o.title" = "AppleALC";
 
 /* Class = "NSMenuItem"; title = "10.10.4 - 14E46"; ObjectID = "MFe-3R-VJ2"; */
 "MFe-3R-VJ2.title" = "10.10.4 - 14E46";
@@ -670,6 +697,9 @@
 /* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "oib-Bm-e9K"; */
 "oib-Bm-e9K.title" = "Auf Updates prüfen";
 
+/* Class = "NSButtonCell"; title = "HibernationFixup"; ObjectID = "OjB-DI-yV8"; */
+"OjB-DI-yV8.title" = "HibernationFixup";
+
 /* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Kext Updater ausblenden";
 
@@ -727,6 +757,9 @@
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "qex-0E-mHd"; */
 "qex-0E-mHd.title" = "Schließen";
 
+/* Class = "NSButtonCell"; title = "BrcmPatchRam"; ObjectID = "QeY-7y-ejt"; */
+"QeY-7y-ejt.title" = "BrcmPatchRam";
+
 /* Class = "NSTextFieldCell"; title = "Font Color"; ObjectID = "QIl-tn-f5t"; */
 "QIl-tn-f5t.title" = "Font Farbe";
 
@@ -759,6 +792,9 @@
 
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "R9u-E4-WBq"; */
 "R9u-E4-WBq.title" = "Start";
+
+/* Class = "NSButtonCell"; title = "VoodooPS2"; ObjectID = "r9X-YF-NZh"; */
+"r9X-YF-NZh.title" = "VoodooPS2";
 
 /* Class = "NSButtonCell"; title = "IntelMausiEthernet"; ObjectID = "rDC-Pi-as8"; */
 "rDC-Pi-as8.title" = "IntelMausiEthernet";
@@ -798,6 +834,9 @@
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G4015"; ObjectID = "Sd5-Gi-311"; */
 "Sd5-Gi-311.title" = "10.13.6 - 17G4015";
+
+/* Class = "NSTextFieldCell"; title = "Select your desired Kext´s for Download and let the KU create a basic EFI-Folder (OpenCore or Clover) for you. Since the EFI folder is only equipped with a skeleton you have to edit things like ACPI patches and drivers manually if necessary. And for sure the config.plist."; ObjectID = "sEC-1F-TvQ"; */
+"sEC-1F-TvQ.title" = "Wähle die gewünschten Kexte aus und lasse den KU einen Grund-EFI Folder (OpenCore oder Clover) für Dich anlegen. Da diese EFI nur generisch ist musst Du so Sachen wie den ACPI Ordner bzw. die config.plist von Hand bearbeiten. Ggf. auch den Kext- sowie Drivers Ordner.";
 
 /* Class = "NSTextFieldCell"; title = "Kext Updater"; ObjectID = "Sfg-Nd-3CD"; */
 "Sfg-Nd-3CD.title" = "Kext Updater";
@@ -844,6 +883,9 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
 "Tfb-H6-fo8.title" = "Box";
 
+/* Class = "NSMenuItem"; title = "Bootloader Beta"; ObjectID = "tGB-Gh-Bvm"; */
+"tGB-Gh-Bvm.title" = "Bootloader Beta";
+
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
 "Tho-W6-S5A.title" = "3";
 
@@ -888,6 +930,9 @@
 
 /* Class = "NSButtonCell"; title = "SystemProfilerMemoryFixup"; ObjectID = "Vae-a9-Mia"; */
 "Vae-a9-Mia.title" = "SystemProfilerMemoryFixup";
+
+/* Class = "NSButtonCell"; title = "WhateverGreen"; ObjectID = "vaT-ze-Oea"; */
+"vaT-ze-Oea.title" = "WhateverGreen";
 
 /* Class = "NSMenuItem"; title = "10.10.2 - 14C109"; ObjectID = "vbo-UX-IR0"; */
 "vbo-UX-IR0.title" = "10.10.2 - 14C109";
@@ -1020,6 +1065,12 @@
 
 /* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "YUq-V5-jjD"; */
 "YUq-V5-jjD.title" = "Mounte EFI von andere(n) Festplatten.";
+
+/* Class = "NSMenuItem"; title = "OpenCore"; ObjectID = "z7q-3q-FPw"; */
+"z7q-3q-FPw.title" = "OpenCore";
+
+/* Class = "NSButtonCell"; title = "VirtualSMC"; ObjectID = "ZCd-5w-cvc"; */
+"ZCd-5w-cvc.title" = "VirtualSMC";
 
 /* Class = "NSButtonCell"; title = "ACPI Battery Manager"; ObjectID = "zFb-cM-MoL"; */
 "zFb-cM-MoL.title" = "ACPI Battery Manager";

@@ -2032,7 +2032,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-kk-2t0">
-                                <rect key="frame" x="286" y="83" width="358" height="92"/>
+                                <rect key="frame" x="286" y="77" width="366" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" selectable="YES" id="sEC-1F-TvQ">
                                     <font key="font" metaFont="system"/>
@@ -2060,7 +2060,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-DC-eUE">
-                                <rect key="frame" x="286" y="58" width="133" height="25"/>
+                                <rect key="frame" x="286" y="55" width="133" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="No, thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
