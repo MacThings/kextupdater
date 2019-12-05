@@ -1254,20 +1254,26 @@ if [ $kexte = "Bootloader" ]; then
         if [[ $kextchoice = "Clover" ]]; then
           kextchoice="clover"
         fi
-        if [[ $kextchoice = "Clover Nightly Build" ]]; then
+        if [[ $kextchoice = "CloverNightly" ]]; then
           kextchoice="clovernightly"
         fi
         if [[ $kextchoice = "OpenCore" ]]; then
           kextchoice="opencore"
         fi
-        if [[ $kextchoice = "OpenCoreBeta" ]]; then
-          kextchoice="opencorebeta"
+        if [[ $kextchoice = "OpenCoreNightly" ]]; then
+          kextchoice="opencorenightly"
         fi
-        if [[ $kextchoice = AppleSupport* ]]; then
+        if [[ $kextchoice = "AppleSupport" ]]; then
           kextchoice="applesupport"
         fi
-        if [[ $kextchoice = EFI* ]]; then
+        if [[ $kextchoice = "AppleSupportNightly" ]]; then
+          kextchoice="applesupportnightly"
+        fi
+        if [[ $kextchoice = "EFIDriver" ]]; then
           kextchoice="efidriver"
+        fi
+        if [[ $kextchoice = "EFIDriverNightly" ]]; then
+          kextchoice="efidrivernightly"
         fi
     kextLoadArray=("$kextchoice")
     recho="Kexte"

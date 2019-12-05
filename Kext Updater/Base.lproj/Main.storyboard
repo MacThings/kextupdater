@@ -4404,13 +4404,17 @@ DQ
                                             <menuItem title="Please select" state="on" id="Tbd-kw-pCp">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="Bootloader" id="cMN-Co-Raf">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                            <menuItem title="Bootloader Nightly Build" id="f8Q-lz-EdP">
+                                            <menuItem title="Clover" id="cMN-Co-Raf">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="EFI Driver" id="EC5-ZN-zNQ">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="cr0-Dz-hxb"/>
+                                            <menuItem title="Clover Nightly" id="f8Q-lz-EdP">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="EFI Driver Nightly" id="nkr-c8-1Z7">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>
@@ -4431,13 +4435,17 @@ DQ
                                             <menuItem title="Please Select" state="on" id="9bX-ps-dhp">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="Bootloader" id="BX8-fj-PQC">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                            <menuItem title="Bootloader Beta" id="tGB-Gh-Bvm">
+                                            <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport" id="4i4-wk-0pn">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="Vgw-hs-zhR"/>
+                                            <menuItem title="OpenCore Nightly" id="tGB-Gh-Bvm">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>

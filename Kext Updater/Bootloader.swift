@@ -62,10 +62,12 @@ class Bootloader: NSViewController {
         let gettitle = (sender as AnyObject).selectedCell()!.title
         if gettitle == "Bootloader"{
            UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
-        } else if gettitle.contains("AppleSupport") {
+        } else if gettitle == "AppleSupport" {
             UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
-        } else if gettitle.contains("Beta") {
-            UserDefaults.standard.set("OpenCoreBeta", forKey: "Bootloaderkind")
+        } else if gettitle == "AppleSupport Nightly" {
+            UserDefaults.standard.set("AppleSupportNightly", forKey: "Bootloaderkind")
+        } else if gettitle == "OpenCore Nightly" {
+            UserDefaults.standard.set("OpenCoreNightly", forKey: "Bootloaderkind")
         }
     }
     
@@ -75,10 +77,12 @@ class Bootloader: NSViewController {
         let gettitle = (sender as AnyObject).selectedCell()!.title
         if gettitle == "Bootloader" {
             UserDefaults.standard.set("Clover", forKey: "Bootloaderkind")
-        } else if gettitle.contains("Nightly") {
-            UserDefaults.standard.set("Clover Nightly Build", forKey: "Bootloaderkind")
-        } else if gettitle.contains("EFI") {
-            UserDefaults.standard.set("EFI Driver", forKey: "Bootloaderkind")
+        } else if gettitle == "Clover Nightly" {
+            UserDefaults.standard.set("CloverNightly", forKey: "Bootloaderkind")
+        } else if gettitle == "EFI Driver" {
+            UserDefaults.standard.set("EFIDriver", forKey: "Bootloaderkind")
+        } else if gettitle == "EFI Driver Nightly" {
+            UserDefaults.standard.set("EFIDriverNightly", forKey: "Bootloaderkind")
         }
     }
 
