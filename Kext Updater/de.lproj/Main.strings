@@ -19,17 +19,11 @@
 /* Class = "NSMenuItem"; title = "10.12.1 - 16B2657"; ObjectID = "2kb-Nx-hno"; */
 "2kb-Nx-hno.title" = "10.12.1 - 16B2657";
 
-/* Class = "NSButtonCell"; title = "Bootloader"; ObjectID = "2LG-ET-PWz"; */
-"2LG-ET-PWz.title" = "Bootloader";
-
 /* Class = "NSButtonCell"; title = "AzulPatcher4600"; ObjectID = "2sy-9F-ZoW"; */
 "2sy-9F-ZoW.title" = "AzulPatcher4600";
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G9016"; ObjectID = "2VX-wl-Jga"; */
 "2VX-wl-Jga.title" = "10.13.6 - 17G9016";
-
-/* Class = "NSMenuItem"; title = "OpenCore Beta"; ObjectID = "2xY-of-vfI"; */
-"2xY-of-vfI.title" = "OpenCore Beta";
 
 /* Class = "NSMenuItem"; title = "Clover"; ObjectID = "2zv-fg-rx2"; */
 "2zv-fg-rx2.title" = "Clover";
@@ -45,9 +39,6 @@
 
 /* Class = "NSTextFieldCell"; title = "UUID:"; ObjectID = "3mK-oL-B4h"; */
 "3mK-oL-B4h.title" = "UUID:";
-
-/* Class = "NSViewController"; title = "Bootloader"; ObjectID = "3pD-vQ-Z2c"; */
-"3pD-vQ-Z2c.title" = "Bootloader";
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "3Qa-mS-q5q"; */
 "3Qa-mS-q5q.title" = "Box";
@@ -250,9 +241,6 @@
 /* Class = "NSTextFieldCell"; title = "Nightly Builds"; ObjectID = "bww-KP-bU2"; */
 "bww-KP-bU2.title" = "Nightly Builds";
 
-/* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "BX8-fj-PQC"; */
-"BX8-fj-PQC.title" = "Bootloader";
-
 /* Class = "NSBox"; title = "Box"; ObjectID = "BxW-2q-tbN"; */
 "BxW-2q-tbN.title" = "Box";
 
@@ -270,9 +258,6 @@
 
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "CkC-KB-Dk4"; */
 "CkC-KB-Dk4.title" = "Download";
-
-/* Class = "NSMenuItem"; title = "Bootloader"; ObjectID = "cMN-Co-Raf"; */
-"cMN-Co-Raf.title" = "Bootloader";
 
 /* Class = "NSViewController"; title = "Disk Information"; ObjectID = "Crb-K7-oz6"; */
 "Crb-K7-oz6.title" = "Disk Information";
@@ -388,9 +373,6 @@
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B1002"; ObjectID = "f7j-di-FfB"; */
 "f7j-di-FfB.title" = "10.13.1 - 17B1002";
 
-/* Class = "NSMenuItem"; title = "Bootloader Nightly Build"; ObjectID = "f8Q-lz-EdP"; */
-"f8Q-lz-EdP.title" = "Bootloader Nightly Build";
-
 /* Class = "NSTextFieldCell"; title = "Seconds"; ObjectID = "F9q-4T-UJH"; */
 "F9q-4T-UJH.title" = "Sekunden";
 
@@ -411,9 +393,6 @@
 
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B48"; ObjectID = "g99-h6-PL9"; */
 "g99-h6-PL9.title" = "10.13.1 - 17B48";
-
-/* Class = "NSTextFieldCell"; title = "Bootloader"; ObjectID = "gCe-JZ-cNe"; */
-"gCe-JZ-cNe.title" = "Bootloader";
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "gcN-Xh-jrg"; */
 "gcN-Xh-jrg.title" = "Box";
@@ -546,9 +525,6 @@
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1611"; ObjectID = "jYY-lM-pud"; */
 "jYY-lM-pud.title" = "10.11.6 - 15G1611";
-
-/* Class = "NSMenuItem"; title = "Clover Nightly"; ObjectID = "k4x-tK-fSm"; */
-"k4x-tK-fSm.title" = "Clover Nightly";
 
 /* Class = "NSButtonCell"; title = "FakeSMC"; ObjectID = "k7e-m5-xyL"; */
 "k7e-m5-xyL.title" = "FakeSMC";
@@ -784,9 +760,6 @@
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F27"; ObjectID = "qQk-uy-On7"; */
 "qQk-uy-On7.title" = "10.10.5 - 14F27";
 
-/* Class = "NSMenuItem"; title = "OpenCore"; ObjectID = "QZG-0q-NUd"; */
-"QZG-0q-NUd.title" = "OpenCore";
-
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Vergrößern";
 
@@ -850,9 +823,6 @@
 /* Class = "NSTextFieldCell"; title = "Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent."; ObjectID = "sjO-TN-9bF"; */
 "sjO-TN-9bF.title" = "Seit Catalina ist die Systempartition nach dem Booten als Nur-Lesen gemounted. Hier kannst Du die Partition auf Lesen/Schreiben umstellen. Das hält aber nur solange an, bis ein Neustart durchgeführt wird. Es ist nicht dauerhaft.";
 
-/* Class = "NSTextFieldCell"; title = "Bootloader"; ObjectID = "sl3-gt-Cmo"; */
-"sl3-gt-Cmo.title" = "Bootloader";
-
 /* Class = "NSMenuItem"; title = "15"; ObjectID = "sSQ-4c-ftY"; */
 "sSQ-4c-ftY.title" = "15";
 
@@ -882,9 +852,6 @@
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
 "Tfb-H6-fo8.title" = "Box";
-
-/* Class = "NSMenuItem"; title = "Bootloader Beta"; ObjectID = "tGB-Gh-Bvm"; */
-"tGB-Gh-Bvm.title" = "Bootloader Beta";
 
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
 "Tho-W6-S5A.title" = "3";
@@ -1065,9 +1032,6 @@
 
 /* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "YUq-V5-jjD"; */
 "YUq-V5-jjD.title" = "Mounte EFI von andere(n) Festplatten.";
-
-/* Class = "NSMenuItem"; title = "OpenCore"; ObjectID = "z7q-3q-FPw"; */
-"z7q-3q-FPw.title" = "OpenCore";
 
 /* Class = "NSButtonCell"; title = "VirtualSMC"; ObjectID = "ZCd-5w-cvc"; */
 "ZCd-5w-cvc.title" = "VirtualSMC";

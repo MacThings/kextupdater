@@ -38,7 +38,7 @@ class SingleKexts: NSViewController {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
             }
-            UserDefaults.standard.set(true, forKey: "dl-fakesmc")
+            //UserDefaults.standard.set(true, forKey: "dl-fakesmc")
             UserDefaults.standard.set(true, forKey: "dl-voodoops2")
             UserDefaults.standard.set(true, forKey: "dl-virtualsmc")
         } else if group_choice == 2 {
@@ -79,7 +79,7 @@ class SingleKexts: NSViewController {
         if bootloader_kind == 1 {
         UserDefaults.standard.set("OpenCore", forKey: "EFI Creator")
         } else if bootloader_kind == 2 {
-        UserDefaults.standard.set("OpenCore Beta", forKey: "EFI Creator")
+        UserDefaults.standard.set("OpenCore Nightly", forKey: "EFI Creator")
         } else if bootloader_kind == 3 {
         UserDefaults.standard.set("Clover", forKey: "EFI Creator")
         } else if bootloader_kind == 4 {

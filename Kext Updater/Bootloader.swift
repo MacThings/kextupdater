@@ -60,7 +60,7 @@ class Bootloader: NSViewController {
         self.opencore_empty_entry.isHidden=true
         self.start_button.isEnabled=true
         let gettitle = (sender as AnyObject).selectedCell()!.title
-        if gettitle == "Bootloader"{
+        if gettitle == "OpenCore"{
            UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
         } else if gettitle == "AppleSupport" {
             UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
@@ -75,7 +75,7 @@ class Bootloader: NSViewController {
         self.clover_empty_entry.isHidden=true
         self.start_button.isEnabled=true
         let gettitle = (sender as AnyObject).selectedCell()!.title
-        if gettitle == "Bootloader" {
+        if gettitle == "Clover" {
             UserDefaults.standard.set("Clover", forKey: "Bootloaderkind")
         } else if gettitle == "Clover Nightly" {
             UserDefaults.standard.set("CloverNightly", forKey: "Bootloaderkind")

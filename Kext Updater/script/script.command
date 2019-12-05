@@ -1155,17 +1155,14 @@ function _main()
     mv ${ScriptDownloadPath}/${name} ${ScriptDownloadPath}/"EFI Driver"
     fi
     if [ -d ${ScriptDownloadPath}/"clovernightly" ]; then
-        if [ ! -d ${ScriptDownloadPath}/"Clover Nightly Build" ]; then
-            mkdir ${ScriptDownloadPath}/"Clover Nightly Build"/
+        if [ ! -d ${ScriptDownloadPath}/"Clover Nightly" ]; then
+            mkdir ${ScriptDownloadPath}/"Clover Nightly"/
         fi
-    mv ${ScriptDownloadPath}/clovernightly/* ${ScriptDownloadPath}/"Clover Nightly Build"/.
+    mv ${ScriptDownloadPath}/clovernightly/* ${ScriptDownloadPath}/"Clover Nightly"/.
     rm -r ${ScriptDownloadPath}/clovernightly
     fi
     if [ -d ${ScriptDownloadPath}/"opencore" ]; then
     mv ${ScriptDownloadPath}/opencore ${ScriptDownloadPath}/"OpenCore"
-    fi
-    if [ -d ${ScriptDownloadPath}/"opencorebeta" ]; then
-    mv ${ScriptDownloadPath}/opencorebeta ${ScriptDownloadPath}/"OpenCore Beta"
     fi
     if [ -d ${ScriptDownloadPath}/"applesupport" ]; then
     mv ${ScriptDownloadPath}/applesupport ${ScriptDownloadPath}/"AppleSupport"
@@ -1202,6 +1199,15 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"brcmpatchramnightly" ]; then
     mv ${ScriptDownloadPath}/brcmpatchramnightly ${ScriptDownloadPath}/"BrcmPatchRAM Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"applesupportnightly" ]; then
+    mv ${ScriptDownloadPath}/applesupportnightly ${ScriptDownloadPath}/"AppleSupport Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"efidrivernightly" ]; then
+    mv ${ScriptDownloadPath}/efidrivernightly ${ScriptDownloadPath}/"EFI Driver Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"opencorenightly" ]; then
+    mv ${ScriptDownloadPath}/opencorenightly ${ScriptDownloadPath}/"OpenCore Nightly"
     fi
 
     if [[ $checkchime = "1" ]]; then
@@ -2015,8 +2021,8 @@ function _efi_folder_creator()
         elif [[ "$efi_creator" = "OpenCore" ]]; then
             folder="opencorecreator"
             kext_target="OC/Kexts"
-        elif [[ "$efi_creator" = "OpenCore Beta" ]]; then
-            folder="opencorebetacreator"
+        elif [[ "$efi_creator" = "OpenCore Nightly" ]]; then
+            folder="opencorenightlycreator"
             kext_target="OC/Kexts"
         fi
 

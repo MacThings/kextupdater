@@ -1712,26 +1712,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-xM-9h9">
-                                <rect key="frame" x="299" y="593" width="136" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="  " bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" altersStateOfSelectedItem="NO" selectedItem="QTQ-x6-Dxw" id="cik-ck-erl">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="01V-T1-z1j">
-                                        <items>
-                                            <menuItem title="  " id="QTQ-x6-Dxw"/>
-                                            <menuItem title="Basic" tag="1" id="IJQ-l3-9Cz"/>
-                                            <menuItem title="Audio" tag="2" id="tuE-TW-czw"/>
-                                            <menuItem title="Gfx" tag="3" id="bRU-Iv-WCR"/>
-                                            <menuItem title="Ethernet" tag="4" id="aon-Kd-dbJ"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="group_select:" target="YIT-P4-KYQ" id="eRQ-Es-NYG"/>
-                                </connections>
-                            </popUpButton>
                             <box toolTip="Deprecated. Included now in WhateverGreen." fixedFrame="YES" boxType="custom" borderWidth="2" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-iX-bHK">
                                 <rect key="frame" x="459" y="266" width="191" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2069,7 +2049,8 @@ DQ
                                         <items>
                                             <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
                                             <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
-                                            <menuItem title="OpenCore Beta" tag="2" id="2xY-of-vfI"/>
+                                            <menuItem title="OpenCore Nightly" tag="2" id="2xY-of-vfI"/>
+                                            <menuItem isSeparatorItem="YES" id="wcX-R5-uz0"/>
                                             <menuItem title="Clover" tag="3" id="9vw-ao-Ppq"/>
                                             <menuItem title="Clover Nightly" tag="4" id="k4x-tK-fSm"/>
                                         </items>
@@ -2077,6 +2058,26 @@ DQ
                                 </popUpButtonCell>
                                 <connections>
                                     <action selector="efi_creator_pulldown:" target="YIT-P4-KYQ" id="XJx-Bk-16t"/>
+                                </connections>
+                            </popUpButton>
+                            <popUpButton focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-xM-9h9">
+                                <rect key="frame" x="298" y="593" width="136" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="  " bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" altersStateOfSelectedItem="NO" selectedItem="QTQ-x6-Dxw" id="cik-ck-erl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="01V-T1-z1j">
+                                        <items>
+                                            <menuItem title="  " id="QTQ-x6-Dxw"/>
+                                            <menuItem title="Basic" tag="1" id="IJQ-l3-9Cz"/>
+                                            <menuItem title="Audio" tag="2" id="tuE-TW-czw"/>
+                                            <menuItem title="Gfx" tag="3" id="bRU-Iv-WCR"/>
+                                            <menuItem title="Ethernet" tag="4" id="aon-Kd-dbJ"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="group_select:" target="YIT-P4-KYQ" id="eRQ-Es-NYG"/>
                                 </connections>
                             </popUpButton>
                         </subviews>
@@ -2294,7 +2295,7 @@ DQ
                                             <rect key="frame" x="397" y="312" width="270" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Always the latest Kexts for your Hackintosh" id="yHa-Eb-aM3">
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="controlContent"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -3229,7 +3230,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="smallSquare" title="3" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Tho-W6-S5A" id="ey2-Yo-Op6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="controlContent"/>
                                     <menu key="menu" id="Yit-Ja-m6c">
                                         <items>
                                             <menuItem title="1" id="x5m-oz-NRO"/>
