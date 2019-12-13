@@ -83,7 +83,9 @@ class Bootloader: NSViewController {
             UserDefaults.standard.set("EFIDriver", forKey: "Bootloaderkind")
         } else if gettitle == "EFI Driver Nightly" {
             UserDefaults.standard.set("EFIDriverNightly", forKey: "Bootloaderkind")
-        }
+        } else if gettitle == "OcQuirks Nightly" {
+            UserDefaults.standard.set("OcQuirksNightly", forKey: "Bootloaderkind")
+        } 
     }
 
     @IBAction func send_start(_ sender: Any) {

@@ -318,6 +318,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://sourceforge.net/projects/voodoohda", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
+    @IBAction func voodooinput(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/VoodooInput", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
     @IBAction func voodooi2c(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/alexandred/VoodooI2C", forKey: "SourceURL")
         webview_button.performClick(nil)

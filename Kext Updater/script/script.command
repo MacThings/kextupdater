@@ -82,7 +82,7 @@ function _getsecret() {
     fi
 }
 
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -232,6 +232,7 @@ kextArray=(
 "virtualsmc","VirtualSMC","VirtualSMC",""
 "voodoohda","VoodooHDA","VoodooHDA",""
 "voodooi2c","VoodooI2C (","VoodooI2C",""
+"voodooinput","VoodooInput","VoodooInput",""
 "voodoops2","PS2Controller","VoodooPS2",""
 "voodoosdhc","VoodooSDHC","VoodooSDHC",""
 "voodoosmbus","VoodooSMBus","VoodooSMBus",""
@@ -1188,6 +1189,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"whatevergreennightly" ]; then
     mv ${ScriptDownloadPath}/whatevergreennightly ${ScriptDownloadPath}/"WhateverGreen Nightly"
     fi
+    if [ -d ${ScriptDownloadPath}/"voodooinputnightly" ]; then
+    mv ${ScriptDownloadPath}/voodooinputnightly ${ScriptDownloadPath}/"VoodooInput Nightly"
+    fi
     if [ -d ${ScriptDownloadPath}/"voodoops2nightly" ]; then
     mv ${ScriptDownloadPath}/voodoops2nightly ${ScriptDownloadPath}/"VoodooPS2 Nightly"
     fi
@@ -1281,6 +1285,7 @@ if [ $kexte = "Bootloader" ]; then
         if [[ $kextchoice = "EFIDriverNightly" ]]; then
           kextchoice="efidrivernightly"
         fi
+     
     kextLoadArray=("$kextchoice")
     recho="Kexte"
     _main "kextLoader"
