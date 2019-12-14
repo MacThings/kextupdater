@@ -91,6 +91,12 @@ class KextUpdater: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(self.AppShutdown),
+            name: NSWorkspace.willPowerOffNotification,
+            object: nil)
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.pressStartbutton),
@@ -660,6 +666,10 @@ class KextUpdater: NSViewController {
         start_button.performClick(nil)
     }
     
+    @objc private func AppShutdown(notification: NSWorkspace){
+        NSApp.stop(nil)
+    }
+    
     @objc private func doRefreshKeychain(notification: NSNotification){
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")
         if keychaincheck == true {
@@ -669,6 +679,8 @@ class KextUpdater: NSViewController {
             key_yes_button.isHidden=true
         }
      }
+    
+    
     @objc private func closePrefs(notification: NSNotification){
         let crt = UserDefaults.standard.bool(forKey: "CRT")
         if crt == true{
