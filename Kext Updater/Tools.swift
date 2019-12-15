@@ -209,6 +209,7 @@ class Tools: NSViewController {
                 self.pulldown_menu.isEnabled=true
             }
         }
+        self.view.window?.close()
     }
     
     @IBAction func set_read_write(_ sender: Any) {
