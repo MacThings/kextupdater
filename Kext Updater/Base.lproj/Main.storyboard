@@ -1792,7 +1792,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-FR-cX0">
-                                <rect key="frame" x="481" y="566" width="16" height="21"/>
+                                <rect key="frame" x="481" y="565" width="16" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="X" id="RRi-jn-I5r">
                                     <font key="font" metaFont="systemSemibold" size="17"/>
@@ -1801,7 +1801,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtB-sd-BWu">
-                                <rect key="frame" x="500" y="566" width="17" height="21"/>
+                                <rect key="frame" x="500" y="565" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="D" id="uZq-8x-n6O">
                                     <font key="font" metaFont="systemSemibold" size="17"/>
