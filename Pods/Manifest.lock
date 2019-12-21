@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   LoginServiceKit:
-    :commit: 01b162248760b5fed4c7bffebee37eb92351b41b
+    :commit: 0b25f256e07ca110c2883f4f5072a7fe525b5805
     :git: https://github.com/Clipy/LoginServiceKit.git
 
 SPEC CHECKSUMS:
