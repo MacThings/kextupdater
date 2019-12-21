@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = Sparkle;
+			productName = Sparkle;
 		};
 /* End PBXAggregateTarget section */
 
@@ -141,118 +142,118 @@
 /* Begin PBXFileReference section */
 		0436E241BCCBE956F5AC92EAAAF35E84 /* SPUDownloaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderProtocol.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderProtocol.h; sourceTree = "<group>"; };
 		06B9F60B3FDDCC8E54DB0D86B34731C9 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
-		0763C7C167445DDE0C4F95145C7CC236 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
-		080C70BEB2845A74F5BDAE491AB9AC31 /* APNGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = APNGKit.framework; path = APNGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B52058FE79B880F9A7B744D4B8D6360 /* pt_BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt_BR.lproj; sourceTree = "<group>"; };
+		0763C7C167445DDE0C4F95145C7CC236 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fr.lproj; sourceTree = "<group>"; };
+		080C70BEB2845A74F5BDAE491AB9AC31 /* APNGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APNGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B52058FE79B880F9A7B744D4B8D6360 /* pt_BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pt_BR.lproj; sourceTree = "<group>"; };
 		0C053347A2F5986A2AE933FD0E2CE4FA /* pngpriv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pngpriv.h; path = "APNGKit/libpng-apng/pngpriv.h"; sourceTree = "<group>"; };
 		105CEA13C1E7E2F2B65F46CCAA4C2AAF /* Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Frame.swift; path = APNGKit/Frame.swift; sourceTree = "<group>"; };
 		117776401C9915F271B5253D6E4B1D59 /* Disassembler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disassembler.swift; path = APNGKit/Disassembler.swift; sourceTree = "<group>"; };
 		149781F3FD056B9503419FFDA0230C36 /* APNGKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APNGKit-umbrella.h"; sourceTree = "<group>"; };
-		183B010D8A4B1ABA5B511BE15F514666 /* pngerror.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngerror.c; path = "APNGKit/libpng-apng/pngerror.c"; sourceTree = "<group>"; };
+		183B010D8A4B1ABA5B511BE15F514666 /* pngerror.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngerror.c; path = "APNGKit/libpng-apng/pngerror.c"; sourceTree = "<group>"; };
 		190CA5642D5E588EA5CCCE1284097652 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
-		19C67E59F17A0F8685C49F6853272DD9 /* pngwutil.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwutil.c; path = "APNGKit/libpng-apng/pngwutil.c"; sourceTree = "<group>"; };
-		19CDD033DC7218370781B6F3A2F4A361 /* pngset.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngset.c; path = "APNGKit/libpng-apng/pngset.c"; sourceTree = "<group>"; };
+		19C67E59F17A0F8685C49F6853272DD9 /* pngwutil.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngwutil.c; path = "APNGKit/libpng-apng/pngwutil.c"; sourceTree = "<group>"; };
+		19CDD033DC7218370781B6F3A2F4A361 /* pngset.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngset.c; path = "APNGKit/libpng-apng/pngset.c"; sourceTree = "<group>"; };
 		1EA0516F81D061199C30BB52E7804217 /* LoginServiceKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginServiceKit.swift; path = Lib/LoginServiceKit/LoginServiceKit.swift; sourceTree = "<group>"; };
 		21B6007855EF4B2DE226A9301CDA39AD /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
-		23CE69D5FC5959B19F766930FA13E681 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
-		244491B4F543ED5E54120D3154D16A66 /* filter_neon.S */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_neon.S; path = "APNGKit/libpng-apng/filter_neon.S"; sourceTree = "<group>"; };
+		23CE69D5FC5959B19F766930FA13E681 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		244491B4F543ED5E54120D3154D16A66 /* filter_neon.S */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.asm; name = filter_neon.S; path = "APNGKit/libpng-apng/filter_neon.S"; sourceTree = "<group>"; };
 		2B09684F4EEAD666B2266B87A976694F /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
 		2B41859FE4B1165E1AADC33835FD286C /* LetsMove.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LetsMove.xcconfig; sourceTree = "<group>"; };
-		2F3F2F3123469C806581995E1EB2C8E7 /* png.c */ = {isa = PBXFileReference; includeInIndex = 1; name = png.c; path = "APNGKit/libpng-apng/png.c"; sourceTree = "<group>"; };
+		2F3F2F3123469C806581995E1EB2C8E7 /* png.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = png.c; path = "APNGKit/libpng-apng/png.c"; sourceTree = "<group>"; };
 		2FB07F9281948224CD83D40D2D6FD52C /* Sparkle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sparkle.xcconfig; sourceTree = "<group>"; };
 		3AFDBEB106194D869A57F527F4ADBFA4 /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
-		3F775937828ABC0225F44C2EE09EE0B0 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
+		3F775937828ABC0225F44C2EE09EE0B0 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pt.lproj; sourceTree = "<group>"; };
 		41112F13E6B54D6F299D65E2047C8C3E /* pngdebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pngdebug.h; path = "APNGKit/libpng-apng/pngdebug.h"; sourceTree = "<group>"; };
 		47D94C7B74F558DF728A1D1C77DE0D6B /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
 		4918D8EC3411C39C93E956D479A905A1 /* SPUDownloaderDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDeprecated.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDeprecated.h; sourceTree = "<group>"; };
 		49FBFB955C6C44D2D0CFB16FB022B3A9 /* APNGKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APNGKit-prefix.pch"; sourceTree = "<group>"; };
-		4BCC35341B7318E70278F7C07C1FCADC /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
+		4BCC35341B7318E70278F7C07C1FCADC /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ko.lproj; sourceTree = "<group>"; };
 		4C381415853AD317C6E2B0BF3EA4B67A /* APNGImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APNGImageCache.swift; path = APNGKit/APNGImageCache.swift; sourceTree = "<group>"; };
-		4CD55A5F39C6BF5A5844F3F07FD4F6E5 /* filter_neon_intrinsics.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_neon_intrinsics.c; path = "APNGKit/libpng-apng/filter_neon_intrinsics.c"; sourceTree = "<group>"; };
-		4E6A16FCC1A50E121C1DBCA03681EAA6 /* pngpread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngpread.c; path = "APNGKit/libpng-apng/pngpread.c"; sourceTree = "<group>"; };
+		4CD55A5F39C6BF5A5844F3F07FD4F6E5 /* filter_neon_intrinsics.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = filter_neon_intrinsics.c; path = "APNGKit/libpng-apng/filter_neon_intrinsics.c"; sourceTree = "<group>"; };
+		4E6A16FCC1A50E121C1DBCA03681EAA6 /* pngpread.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngpread.c; path = "APNGKit/libpng-apng/pngpread.c"; sourceTree = "<group>"; };
 		4EA59242DE859166B76B90772A2D8C43 /* SUCodeSigningVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUCodeSigningVerifier.h; path = Sparkle.framework/Versions/A/Headers/SUCodeSigningVerifier.h; sourceTree = "<group>"; };
 		5191022A1CC50EC088ED0DE3DC19C451 /* SPUURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUURLRequest.h; path = Sparkle.framework/Versions/A/Headers/SPUURLRequest.h; sourceTree = "<group>"; };
 		52365B68B15669074566E20CEF23565C /* LetsMove-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LetsMove-dummy.m"; sourceTree = "<group>"; };
 		55C25FC48B571EFDE02DCF21E94F3CAF /* APNGKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = APNGKit.modulemap; sourceTree = "<group>"; };
-		5A24FD95F9EBBFFD63D7A9D6A7FE09D5 /* pngget.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngget.c; path = "APNGKit/libpng-apng/pngget.c"; sourceTree = "<group>"; };
+		5A24FD95F9EBBFFD63D7A9D6A7FE09D5 /* pngget.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngget.c; path = "APNGKit/libpng-apng/pngget.c"; sourceTree = "<group>"; };
 		5AAF7190D1349BC18223212B9E4146CB /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
-		5DAFFF5C645E0775FEDAD09EB99D07A0 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nb.lproj; sourceTree = "<group>"; };
+		5DAFFF5C645E0775FEDAD09EB99D07A0 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = nb.lproj; sourceTree = "<group>"; };
 		5F15775EA5C4E689025FBF0DC3FB2D33 /* Pods-Kext Updater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kext Updater-umbrella.h"; sourceTree = "<group>"; };
-		5F549448735A2D564C8E965DE7611174 /* sr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sr.lproj; sourceTree = "<group>"; };
+		5F549448735A2D564C8E965DE7611174 /* sr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = sr.lproj; sourceTree = "<group>"; };
 		6240985F6DB147766ACE0CFF0CF0A5E2 /* LetsMove-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-prefix.pch"; sourceTree = "<group>"; };
-		630CA025A4BE596E73480EE3763159F4 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
+		630CA025A4BE596E73480EE3763159F4 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = cs.lproj; sourceTree = "<group>"; };
 		63F14EA1D2391D654B51FE9642376AD7 /* LoginServiceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LoginServiceKit-dummy.m"; sourceTree = "<group>"; };
 		64C6F301D43F015CCC7D70D36A7A80B6 /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
 		66C7411A0E8A16A892A9B11AC5043A04 /* APNGKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APNGKit.h; path = APNGKit/APNGKit.h; sourceTree = "<group>"; };
 		6A5F44BB25D1F7D82276C181E7F433EE /* APNGKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "APNGKit-Info.plist"; sourceTree = "<group>"; };
-		6B6EF667038F50BC785F6EFD088F2779 /* pngrutil.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngrutil.c; path = "APNGKit/libpng-apng/pngrutil.c"; sourceTree = "<group>"; };
+		6B6EF667038F50BC785F6EFD088F2779 /* pngrutil.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngrutil.c; path = "APNGKit/libpng-apng/pngrutil.c"; sourceTree = "<group>"; };
 		6C571A1EC0507804EACA499C0A3F5CEE /* Reader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reader.swift; path = APNGKit/Reader.swift; sourceTree = "<group>"; };
 		6D626458201040065357F32A4B45D192 /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
-		6FBCC3642155665429F44CCB5BD230DF /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
+		6FBCC3642155665429F44CCB5BD230DF /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = hu.lproj; sourceTree = "<group>"; };
 		6FD3E10E9A3B20ADF14D561AF3316A63 /* GCDTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCDTimer.swift; path = APNGKit/GCDTimer.swift; sourceTree = "<group>"; };
-		730483849A89C4EE27708679D93DC85E /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
+		730483849A89C4EE27708679D93DC85E /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = it.lproj; sourceTree = "<group>"; };
 		7639C88F59A052800D2AF04A8BC2F2D7 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
 		79D6BC6196A8521F523D784D0F0A1424 /* APNGKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = APNGKit.xcconfig; sourceTree = "<group>"; };
-		7B118CECB0836816DCED986FA2A76117 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
+		7B118CECB0836816DCED986FA2A76117 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ca.lproj; sourceTree = "<group>"; };
 		7C9350661302C6D186B7273D8A769432 /* PFMoveApplication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 		7D7E28F6D9A9C3D437F95EACE09EA8D1 /* SPUDownloaderSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderSession.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderSession.h; sourceTree = "<group>"; };
-		820475DEE643F008B5FBA1874C6447A9 /* LoginServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LoginServiceKit.framework; path = LoginServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		820475DEE643F008B5FBA1874C6447A9 /* LoginServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoginServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B3309D68A566AE88B4A9C9C328ECB0 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
 		865EC4A5F7783C2CB59CDF890121D536 /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
 		8ACC8072B50ED1328AF74E2B86C71492 /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
 		8B0C9B9B33FE5A0FD432D99533C5DBA1 /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
-		8C297479E57BD1C109ADC7AE2B542F0B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
-		8C5AC41031515F536AC6D917E3897968 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
+		8C297479E57BD1C109ADC7AE2B542F0B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = es.lproj; sourceTree = "<group>"; };
+		8C5AC41031515F536AC6D917E3897968 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = sk.lproj; sourceTree = "<group>"; };
 		8D4C4482802D5C05B0B0EF58D4240450 /* Pods-Kext Updater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kext Updater-acknowledgements.plist"; sourceTree = "<group>"; };
 		8DC550AED45AC6DE7F3480C87FC545C7 /* png.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = png.h; path = "APNGKit/libpng-apng/png.h"; sourceTree = "<group>"; };
 		8F1FE15208769100533CF7883D694710 /* LoginServiceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LoginServiceKit-Info.plist"; sourceTree = "<group>"; };
 		90C7F9E215E8B170115E82FA65E0B3CF /* KeychainSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainSwift-Info.plist"; sourceTree = "<group>"; };
 		91B2F225C4295FD0A10443B942740F5E /* LetsMove.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LetsMove.h; sourceTree = "<group>"; };
-		92B1002C14D0A49E07D2AEA0462EC9BB /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
-		95C37B43C87BC34DA8A4B2224027EF93 /* pngrtran.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngrtran.c; path = "APNGKit/libpng-apng/pngrtran.c"; sourceTree = "<group>"; };
-		96054600D8DC0C6CF4DB1AA462CB7206 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
-		9D0C9A3EA9B95B57E4CD80A2CFFD450E /* pngwrite.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwrite.c; path = "APNGKit/libpng-apng/pngwrite.c"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift.framework; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A29F4F29BDDA23FEE702F6E6493AA3B3 /* pngwio.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwio.c; path = "APNGKit/libpng-apng/pngwio.c"; sourceTree = "<group>"; };
+		92B1002C14D0A49E07D2AEA0462EC9BB /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = sv.lproj; sourceTree = "<group>"; };
+		95C37B43C87BC34DA8A4B2224027EF93 /* pngrtran.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngrtran.c; path = "APNGKit/libpng-apng/pngrtran.c"; sourceTree = "<group>"; };
+		96054600D8DC0C6CF4DB1AA462CB7206 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pl.lproj; sourceTree = "<group>"; };
+		9D0C9A3EA9B95B57E4CD80A2CFFD450E /* pngwrite.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngwrite.c; path = "APNGKit/libpng-apng/pngwrite.c"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29F4F29BDDA23FEE702F6E6493AA3B3 /* pngwio.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngwio.c; path = "APNGKit/libpng-apng/pngwio.c"; sourceTree = "<group>"; };
 		A46AE6834E7F2955CD1F8C2F25FACD87 /* Pods-Kext Updater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kext Updater.modulemap"; sourceTree = "<group>"; };
 		A94BD239C065E6C281F5DCFAB8585D9D /* LetsMove-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-umbrella.h"; sourceTree = "<group>"; };
 		AD2DE70C096E1576F1688CD1F52105AE /* PFMoveApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
 		AE394C4A7AA20437FC1E2E9532FD373B /* LoginServiceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LoginServiceKit-prefix.pch"; sourceTree = "<group>"; };
-		AF05BC783AB8FF1B0866F03C3377E2F4 /* arm_init.c */ = {isa = PBXFileReference; includeInIndex = 1; name = arm_init.c; path = "APNGKit/libpng-apng/arm_init.c"; sourceTree = "<group>"; };
+		AF05BC783AB8FF1B0866F03C3377E2F4 /* arm_init.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = arm_init.c; path = "APNGKit/libpng-apng/arm_init.c"; sourceTree = "<group>"; };
 		B180BBC2890725D94B5CF5F010012C94 /* APNGKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "APNGKit-dummy.m"; sourceTree = "<group>"; };
 		B664DFC75146459CA56B4288FB579314 /* Pods-Kext Updater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kext Updater-dummy.m"; sourceTree = "<group>"; };
 		B6D5A6D03243F074B17FDB0C0CF59E89 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		B78861AAB8786289874DD410B5EB6AAC /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
-		B8FD5C3A9CAC39384E1D04F04996C937 /* mk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = mk.lproj; sourceTree = "<group>"; };
+		B8FD5C3A9CAC39384E1D04F04996C937 /* mk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = mk.lproj; sourceTree = "<group>"; };
 		B951A6CA58C0F6E896C7809571691B63 /* pngstruct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pngstruct.h; path = "APNGKit/libpng-apng/pngstruct.h"; sourceTree = "<group>"; };
 		BB15410CF9ADC373FF4284E82519C01D /* LoginServiceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LoginServiceKit.modulemap; sourceTree = "<group>"; };
-		BD7F69C26774720C94A92EFDEB5DDD29 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
-		C4206F14416461C6B3B792FFA53065F6 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
-		C58BD2E25E47F4C0C5106168EAA86396 /* zh_TW.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_TW.lproj; sourceTree = "<group>"; };
+		BD7F69C26774720C94A92EFDEB5DDD29 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = da.lproj; sourceTree = "<group>"; };
+		C4206F14416461C6B3B792FFA53065F6 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = nl.lproj; sourceTree = "<group>"; };
+		C58BD2E25E47F4C0C5106168EAA86396 /* zh_TW.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = zh_TW.lproj; sourceTree = "<group>"; };
 		C913369017E4FA7FE3B7A628AABAB9BE /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
 		C93EFDDDFD4AAEABE741918CC8A5B39F /* LoginServiceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LoginServiceKit-umbrella.h"; sourceTree = "<group>"; };
 		D069D52FBC1E81C88D25CCC4C471CB8C /* pngconf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pngconf.h; path = "APNGKit/libpng-apng/pngconf.h"; sourceTree = "<group>"; };
 		D1F77F68F0F0D9F4DBBEEE866A517F44 /* Pods-Kext Updater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kext Updater-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D2FBA41E3514A048A6DC1C62750D8BD5 /* Pods-Kext Updater-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kext Updater-Info.plist"; sourceTree = "<group>"; };
-		D3865C2B61D6DFB9DA93B8B695B35809 /* pngmem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngmem.c; path = "APNGKit/libpng-apng/pngmem.c"; sourceTree = "<group>"; };
-		D87AC91B19D0A6B161BD3ED08F81D6E9 /* LetsMove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LetsMove.framework; path = LetsMove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB328E6A842B4220CED6970A841203BB /* pngread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngread.c; path = "APNGKit/libpng-apng/pngread.c"; sourceTree = "<group>"; };
+		D3865C2B61D6DFB9DA93B8B695B35809 /* pngmem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngmem.c; path = "APNGKit/libpng-apng/pngmem.c"; sourceTree = "<group>"; };
+		D87AC91B19D0A6B161BD3ED08F81D6E9 /* LetsMove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LetsMove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB328E6A842B4220CED6970A841203BB /* pngread.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngread.c; path = "APNGKit/libpng-apng/pngread.c"; sourceTree = "<group>"; };
 		DC18E9043B9225C5EC728F856E57A34C /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
-		DC2BC6C00EC53BCD48F5C2255D5E49AD /* pngwtran.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwtran.c; path = "APNGKit/libpng-apng/pngwtran.c"; sourceTree = "<group>"; };
-		DC66DB96C1B1BAE1A2F8B3F5AD83251D /* pngtrans.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngtrans.c; path = "APNGKit/libpng-apng/pngtrans.c"; sourceTree = "<group>"; };
+		DC2BC6C00EC53BCD48F5C2255D5E49AD /* pngwtran.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngwtran.c; path = "APNGKit/libpng-apng/pngwtran.c"; sourceTree = "<group>"; };
+		DC66DB96C1B1BAE1A2F8B3F5AD83251D /* pngtrans.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngtrans.c; path = "APNGKit/libpng-apng/pngtrans.c"; sourceTree = "<group>"; };
 		DCAF8D2FDB9E8E6A1A9CE87DB4B66F23 /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
 		DDC0422D325DE187020CB7E01A984D3F /* APNGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APNGImage.swift; path = APNGKit/APNGImage.swift; sourceTree = "<group>"; };
 		E197683C6F661C9950CC0FFEE63EDCAE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		E3294C53A236E1882B570BA8BF2A0BC0 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
-		E3C3CA2E15017A1EC024A46AE8C665F6 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
+		E3294C53A236E1882B570BA8BF2A0BC0 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ru.lproj; sourceTree = "<group>"; };
+		E3C3CA2E15017A1EC024A46AE8C665F6 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = tr.lproj; sourceTree = "<group>"; };
 		E467D1AA1BD26A0193FD4E85FFBE6F40 /* Pods-Kext Updater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kext Updater-frameworks.sh"; sourceTree = "<group>"; };
 		E8685540BF48199D3A9EF0C194CFF49C /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
 		E8CB04DFDB1E49495B258EAED342F3AA /* APNGImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APNGImageView.swift; path = APNGKit/APNGImageView.swift; sourceTree = "<group>"; };
 		E97462002151733F2F099E4BDB282DBB /* pnginfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pnginfo.h; path = "APNGKit/libpng-apng/pnginfo.h"; sourceTree = "<group>"; };
-		EA67960E5BD2FFC1C1A2766CFB6E8490 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
-		ECDBCA72D810D82C1445F34D27A29CDC /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_CN.lproj; sourceTree = "<group>"; };
-		EF7122ABC71940E14A01ED57D2AAFF72 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kext_Updater.framework; path = "Pods-Kext Updater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA67960E5BD2FFC1C1A2766CFB6E8490 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
+		ECDBCA72D810D82C1445F34D27A29CDC /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = zh_CN.lproj; sourceTree = "<group>"; };
+		EF7122ABC71940E14A01ED57D2AAFF72 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F108A94251EC34B095ECBAF52111958A /* LoginServiceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LoginServiceKit.xcconfig; sourceTree = "<group>"; };
 		F2BF3933285F070584D6E1C6E96D82C2 /* SPUDownloaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDelegate.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDelegate.h; sourceTree = "<group>"; };
 		F61A21C14A71335E1CE0704BC9323514 /* SPUDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloader.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloader.h; sourceTree = "<group>"; };
@@ -260,8 +261,8 @@
 		F86AE684B6FA67AA02DA177DF835AB96 /* LetsMove-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LetsMove-Info.plist"; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		F9839802AE32A248525AF6F8D855FEFE /* SPUDownloadData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloadData.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloadData.h; sourceTree = "<group>"; };
-		F9C75EB3EFEB5BE56419572FA8C4B1F1 /* pngrio.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngrio.c; path = "APNGKit/libpng-apng/pngrio.c"; sourceTree = "<group>"; };
-		FAEB4134E549C0E47068D94413F561F0 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
+		F9C75EB3EFEB5BE56419572FA8C4B1F1 /* pngrio.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pngrio.c; path = "APNGKit/libpng-apng/pngrio.c"; sourceTree = "<group>"; };
+		FAEB4134E549C0E47068D94413F561F0 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ja.lproj; sourceTree = "<group>"; };
 		FFFA99B8AAE8C9EBE130B00A9252D8CF /* pnglibconf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pnglibconf.h; path = "APNGKit/libpng-apng/pnglibconf.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,7 +365,6 @@
 				9BA03FC8CF9178AFABF2AD374A93DF18 /* Frameworks */,
 				2BA207379AEFEE07632A635CDB197E68 /* Support Files */,
 			);
-			name = Sparkle;
 			path = Sparkle;
 			sourceTree = "<group>";
 		};
@@ -377,7 +377,6 @@
 				E5C50F88EFCA7718CBF15A54B4B78589 /* Resources */,
 				2982688F6A2ADCE1A88DD9233312FAD5 /* Support Files */,
 			);
-			name = LetsMove;
 			path = LetsMove;
 			sourceTree = "<group>";
 		};
@@ -437,7 +436,6 @@
 				7639C88F59A052800D2AF04A8BC2F2D7 /* TegKeychainConstants.swift */,
 				F6F76889917B7190E9F73353D7E042AE /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -479,7 +477,6 @@
 				6C571A1EC0507804EACA499C0A3F5CEE /* Reader.swift */,
 				86BC83F60628EAF1683E7407DF24F37B /* Support Files */,
 			);
-			name = APNGKit;
 			path = APNGKit;
 			sourceTree = "<group>";
 		};
@@ -564,7 +561,6 @@
 				1EA0516F81D061199C30BB52E7804217 /* LoginServiceKit.swift */,
 				94ECC4530D36EDD614F54E9A4B9A3EDC /* Support Files */,
 			);
-			name = LoginServiceKit;
 			path = LoginServiceKit;
 			sourceTree = "<group>";
 		};
@@ -752,7 +748,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1120;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -760,6 +756,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = F9D9368EA031951E1A6D340AB52BC580 /* Products */;

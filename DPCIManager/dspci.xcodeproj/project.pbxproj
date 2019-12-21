@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6E2F1123AEC2870093FCC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8716DE1B212854C500C47DE6 /* JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		8716DE1C2128553200C47DE6 /* JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		8726C0E7212A9DB3000177BF /* DataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTypes.h; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		B025714D1601496400B0E1EB /* DPCIManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DPCIManager-Prefix.pch"; sourceTree = "<group>"; };
 		B02571511601496400B0E1EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B02571521601496400B0E1EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B02571551601496400B0E1EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B025716716018CF000B0E1EB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B025716916018D0600B0E1EB /* DPCIManager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DPCIManager.icns; sourceTree = SOURCE_ROOT; };
 		B025716B16018D9600B0E1EB /* pci.ids */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pci.ids; sourceTree = SOURCE_ROOT; };
@@ -229,16 +229,16 @@
 		B02571321601496300B0E1EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = B02571351601496300B0E1EB /* Build configuration list for PBXProject "dspci" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = B02571301601496300B0E1EB;
 			productRefGroup = B025713C1601496400B0E1EB /* Products */;
@@ -296,7 +296,7 @@
 		B02571541601496400B0E1EB /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B02571551601496400B0E1EB /* en */,
+				2A6E2F1123AEC2870093FCC1 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

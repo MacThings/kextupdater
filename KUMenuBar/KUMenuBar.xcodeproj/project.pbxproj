@@ -132,7 +132,7 @@
 		FCC6C4CA19A58C7A0063EC3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					FCC6C4D119A58C7A0063EC3C = {
@@ -144,10 +144,9 @@
 			};
 			buildConfigurationList = FCC6C4CD19A58C7A0063EC3C /* Build configuration list for PBXProject "KUMenuBar" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				de,
