@@ -1369,7 +1369,7 @@ function rebuildcache()
 function exitapp()
 {
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
-    if [ -d $ScriptDownloadPath ]; then
+    if [[ -d $ScriptDownloadPath ]]; then
     find "$ScriptDownloadPath" -name ".version.htm" -exec rm {} \;
     fi
 

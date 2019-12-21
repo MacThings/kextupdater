@@ -69,6 +69,9 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var efi_button: NSButton!
     @IBOutlet weak var tools_button: NSButton!
     
+    @IBOutlet weak var show_malwareinfo: NSButton!
+    
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     
@@ -90,13 +93,12 @@ class KextUpdater: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+
         NSWorkspace.shared.notificationCenter.addObserver(
             self,
             selector: #selector(self.AppShutdown),
             name: NSWorkspace.willPowerOffNotification,
             object: nil)
-        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.pressStartbutton),
@@ -113,6 +115,12 @@ class KextUpdater: NSViewController {
             name: NSNotification.Name(rawValue: "ClosePrefs"),
             object: nil)
 
+        
+        let malwareinfo = UserDefaults.standard.string(forKey: "MalwareInfoShown")
+        if malwareinfo != "Yes" {
+            show_malwareinfo.performClick(nil)
+        }
+        
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         
         PFMoveToApplicationsFolderIfNecessary()
@@ -316,6 +324,7 @@ class KextUpdater: NSViewController {
                         UserDefaults.standard.set(true, forKey: "KeyChainAdvise")
                 }
             }
+        
     }
     
     @IBAction func start_button(_ sender: Any) {

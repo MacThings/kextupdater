@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="LvB-jk-mfp">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
@@ -2361,7 +2361,7 @@ DQ
                                             <rect key="frame" x="440" y="76" width="221" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" id="zYQ-ni-R5d">
-                                                <font key="font" metaFont="menu" size="10"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2381,7 +2381,7 @@ DQ
                                             <rect key="frame" x="440" y="44" width="221" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" id="0SF-FL-3Qu">
-                                                <font key="font" metaFont="menu" size="10"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2732,6 +2732,17 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                             </box>
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COx-cu-9jq" userLabel="Webview button dummy">
+                                <rect key="frame" x="0.0" y="1" width="18" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PUn-1W-HYg">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="Twa-vs-6MY" kind="show" id="PJc-yZ-6cY"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -2767,6 +2778,7 @@ DQ
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
                         <outlet property="quit_button" destination="nyp-0e-eWT" id="eTx-qV-KqC"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
+                        <outlet property="show_malwareinfo" destination="COx-cu-9jq" id="cyt-qv-1aL"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
                         <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
                         <outlet property="tools_button" destination="x2E-cO-O2m" id="91i-Ho-ffA"/>
@@ -2777,6 +2789,42 @@ DQ
                 <userDefaultsController id="M5w-5M-l63"/>
             </objects>
             <point key="canvasLocation" x="978" y="648"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="tZG-Sw-Id8">
+            <objects>
+                <viewController title="Information" id="Twa-vs-6MY" customClass="MalwareInfo" customModule="Kext_Updater" sceneMemberID="viewController">
+                    <view key="view" id="7Dc-Hu-9t7">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="146"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-Zn-JEd">
+                                <rect key="frame" x="18" y="47" width="444" height="87"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" id="Qto-Kk-dTf">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">If you have installed antimalware or antivirus software, it may incorrectly classify the Kext Updater or part of the package as potentially threatening. This is a FAIL ALARM. No part of the program is dangerous for your computer in any way.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bw-Vy-C8v">
+                                <rect key="frame" x="323" y="11" width="143" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Ok, I understand" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rsM-B7-M2e">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="close_window:" target="Twa-vs-6MY" id="YyL-di-WWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="jYH-up-BBJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="235"/>
         </scene>
         <!--Disk Information-->
         <scene sceneID="vnp-oE-Rb1">
