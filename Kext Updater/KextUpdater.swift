@@ -116,10 +116,10 @@ class KextUpdater: NSViewController {
             object: nil)
 
         
-        let malwareinfo = UserDefaults.standard.string(forKey: "MalwareInfoShown")
-        if malwareinfo != "Yes" {
-            show_malwareinfo.performClick(nil)
-        }
+//        let malwareinfo = UserDefaults.standard.string(forKey: "MalwareInfoShown")
+//        if malwareinfo != "Yes" {
+//            show_malwareinfo.performClick(nil)
+//        }
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         

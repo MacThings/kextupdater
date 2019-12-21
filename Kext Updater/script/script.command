@@ -305,7 +305,7 @@ function _languageselect()
 function _setrootuser()
 {
 
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     user=$( id -un )
     userfull=$( id -F "$user" )
@@ -407,9 +407,9 @@ fi
 function _resetrootuser()
 {
 
-    ../bin/./PlistBuddy -c "Delete Rootuser" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-    ../bin/./PlistBuddy -c "Delete Admin" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-    ../bin/./PlistBuddy -c "Delete Passwordok" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete Rootuser" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete Admin" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete Passwordok" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
     _setrootuser
 
 }
@@ -421,10 +421,10 @@ function scanallefis()
 {
 
     for a in {1..8}; do
-    ../bin/./PlistBuddy -c "Delete EFI$a-Name" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete EFI$a-Name" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
     done
 
-    ../bin/./PlistBuddy -c "Delete EFIx" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete EFIx" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
 
     if [ -f "$ScriptTmpPath"/drives ]; then
       rm "$ScriptTmpPath"/drives*
@@ -473,7 +473,7 @@ function mountefiall()
 
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
 
     _languageselect
@@ -528,7 +528,7 @@ function unmountefi()
 
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
 
     _languageselect
@@ -556,7 +556,7 @@ function unmountefiall()
 
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
 
     user=$( _helpDefaultRead "Rootuser" )
@@ -591,10 +591,10 @@ function unmountefiall()
 function initial()
 {
 
-    ../bin/./PlistBuddy -c "Print RootuserFull" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Print RootuserFull" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
     if [[ $? = "1" ]]; then
-    ../bin/./PlistBuddy -c "Delete Admin" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-    ../bin/./PlistBuddy -c "Delete Rootuser" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete Admin" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    /usr/libexec/PlistBuddy -c "Delete Rootuser" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
     fi
 
     efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
@@ -821,7 +821,7 @@ function mainscript()
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
 
 #========================== Set Variables =========================#
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     url=$( echo -e "$content" | grep "Updater URL" | sed "s/.*\=\ //g" | xargs )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     username=$( echo -e "$content" | grep "User Name" | sed "s/.*\=\ //g" | xargs )
@@ -1325,7 +1325,7 @@ function rebuildcache()
 {
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     rwcheck=$( _helpDefaultRead "Read-Only" )
 
@@ -1384,7 +1384,7 @@ function exitapp()
 
 function massdownload()
 {
-content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
 lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
 
 _languageselect
@@ -1393,7 +1393,7 @@ if [ -f "$ScriptTmpPath"/array ]; then
 rm "$ScriptTmpPath"/array
 fi
 
-../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist"| grep "dl-" |grep -v "false" | sort | xargs | sed -e "s/dl-/\"/g" -e "s/\ =\ true/\"/g" > "$ScriptTmpPath"/array
+/usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist"| grep "dl-" |grep -v "false" | sort | xargs | sed -e "s/dl-/\"/g" -e "s/\ =\ true/\"/g" > "$ScriptTmpPath"/array
 
 kexts=$( cat "$ScriptTmpPath"/array )
 
@@ -1416,7 +1416,7 @@ exit 0
 ###################################################################
 function kudaemon()
 {
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     url=$( echo -e "$content" | grep "Updater URL" | sed "s/.*\=\ //g" | xargs )
 
@@ -1480,7 +1480,7 @@ function ar92xx()
 {
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     kuroot=$( _helpDefaultRead "KU Root" )
     rwcheck=$( _helpDefaultRead "Read-Only" )
@@ -1538,7 +1538,7 @@ function fixsleepimage()
 {
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     pwcheck=$( pmset -g |grep proximitywake )
     rwcheck=$( _helpDefaultRead "Read-Only" )
@@ -1664,7 +1664,7 @@ function set_read_write()
 
 function thirdparty()
 {
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     ../bin/./BDMESG | grep -w kext | sed -e "s/.*EFI/EFI/g" -e "s/(.*//g" -e "s/\\\/\//g" > "$ScriptTmpPath/kextpaths"
     system_profiler -detailLevel mini SPExtensionsDataType -xml | grep -w kext | sed -e "s/.*<string>//g" -e "s/<.*//g" >> "$ScriptTmpPath/kextpaths"
@@ -1698,7 +1698,7 @@ function htmlreport()
 {
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
-    content=$( ../bin/./PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     kuroot2=$( _helpDefaultRead "KU Root" )
     bootloader2=$( _helpDefaultRead "Bootloaderversion" )
@@ -1747,11 +1747,11 @@ function htmlreport()
       mkdir "$ScriptTmpPath"/Report "$ScriptTmpPath"/Report/CLOVER >/dev/null 2>&1
       cp -r /Volumes/"$volumename"/EFI/CLOVER/ACPI /Volumes/"$volumename"/EFI/CLOVER/drivers* /Volumes/"$volumename"/EFI/CLOVER/kexts /Volumes/"$volumename"/EFI/CLOVER/"$cloverconfig" "$ScriptTmpPath"/Report/CLOVER/.
 
-      ../bin/./PlistBuddy -c "set SMBIOS:SerialNumber 000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
-      ../bin/./PlistBuddy -c "set SMBIOS:BoardSerialNumber 0000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
-      ../bin/./PlistBuddy -c "set SMBIOS:SmUUID 00000000-0000-0000-0000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
-      ../bin/./PlistBuddy -c "set RtVariables:MLB 0000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
-      ../bin/./PlistBuddy -c "set SystemParameters:CustomUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
+      /usr/libexec/PlistBuddy -c "set SMBIOS:SerialNumber 000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
+      /usr/libexec/PlistBuddy -c "set SMBIOS:BoardSerialNumber 0000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
+      /usr/libexec/PlistBuddy -c "set SMBIOS:SmUUID 00000000-0000-0000-0000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
+      /usr/libexec/PlistBuddy -c "set RtVariables:MLB 0000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
+      /usr/libexec/PlistBuddy -c "set SystemParameters:CustomUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/CLOVER/"$cloverconfig"
     fi
 
     if [[ $efikind = "Ozmosis" ]]; then
@@ -1772,17 +1772,17 @@ function htmlreport()
       mkdir "$ScriptTmpPath"/Report "$ScriptTmpPath"/Report/OpenCore >/dev/null 2>&1
       cp -r /Volumes/"$volumename"/EFI/OC/ACPI /Volumes/"$volumename"/EFI/OC/Drivers /Volumes/"$volumename"/EFI/OC/Kexts /Volumes/"$volumename"/EFI/OC/config.plist /Volumes/"$volumename"/EFI/OC/OpenCore.efi "$ScriptTmpPath"/Report/OpenCore/.
 
-      ../bin/./PlistBuddy -c "set PlatformInfo:SMBIOS:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:SMBIOS:BoardSerialNumber 00000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:SMBIOS:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:Generic:MLB 0000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:Generic:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:Generic:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:PlatformNVRAM:MLB 0000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:PlatformNVRAM:ROM 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:SMBIOS:ChassisSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:DataHub:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
-      ../bin/./PlistBuddy -c "set PlatformInfo:DataHub:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:SMBIOS:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:SMBIOS:BoardSerialNumber 00000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:SMBIOS:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:Generic:MLB 0000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:Generic:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:Generic:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:PlatformNVRAM:MLB 0000000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:PlatformNVRAM:ROM 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:SMBIOS:ChassisSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:DataHub:SystemSerialNumber 000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
+      /usr/libexec/PlistBuddy -c "set PlatformInfo:DataHub:SystemUUID 00000000-0000-0000-0000-000000000000" "$ScriptTmpPath"/Report/OpenCore/config.plist
 
     fi
 
@@ -1854,64 +1854,65 @@ function htmlreport()
     done < "$ScriptTmpPath"/kextstat
 
     ### Table "PCI Devices" ###
-    lastcheck=$( _helpDefaultRead "PCIDB" )
-    today=$( date +%s )
-    calc1=$((today/86400))
-    calc2=$((calc1-lastcheck))
-    if [ $calc2 -gt 30 ]; then
-      echo -e "\n$updatepcidb\n"
-      curl -sS https://update.kextupdater.de/lspci/pciids.zip -o "$ScriptTmpPath"/pciids.zip
-      unzip -jo "$ScriptTmpPath"/pciids.zip -d ../bin/lspci/ >/dev/null 2>&1
-      _helpDefaultWrite "PCIDB" "$calc1"
-     fi
+    # lspci-replace ##lastcheck=$( _helpDefaultRead "PCIDB" )
+    # lspci-replace ##today=$( date +%s )
+    # lspci-replace ##calc1=$((today/86400))
+    # lspci-replace ##calc2=$((calc1-lastcheck))
+    # lspci-replace ##if [ $calc2 -gt 30 ]; then
+      # lspci-replace ##echo -e "\n$updatepcidb\n"
+      # lspci-replace ##curl -sS https://update.kextupdater.de/lspci/pciids.zip -o "$ScriptTmpPath"/pciids.zip
+      # lspci-replace ##unzip -jo "$ScriptTmpPath"/pciids.zip -d ../bin/lspci/ >/dev/null 2>&1
+      # lspci-replace ##_helpDefaultWrite "PCIDB" "$calc1"
+    # lspci-replace ##fi
 
-    if [[ $osversionnumber = "10.14" ]] || [[ $osversionnumber = "10.15" ]] || [[ $osversionnumber = "10.16" ]]; then
-        if [[ $keychain = "1" ]]; then
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' #>/dev/null 2>&1
-        else
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' #>/dev/null 2>&1
-        fi
-    fi
-
-    if [[ $osversionnumber = "10.13" ]]; then
-        if [[ $keychain = "1" ]]; then
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-        else
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-        fi
-    fi
-
-    if [[ $osversionnumber = "10.11" ]] || [[ $osversionnumber = "10.12" ]]; then
-        if [[ $keychain = "1" ]]; then
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-        else
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-        fi
-    fi
-
-    if [[ $osversionnumber = "10.10" ]]; then
-        if [[ $keychain = "1" ]]; then
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-        else
-            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-        fi
-    fi
-
-    ../bin/lspci/./lspci -mnn -i ../bin/lspci/pci.ids | sed -E 's/\[([A-Za-z ]+)\]/(\1)/g' | grep -v ignored |sed -e "s/\[GeForce/(GeForce/g" -e "s/\[AMD/(AMD/g" -e "s/\[Radeon/(Radeon/g" > "$ScriptTmpPath"/pci
+#    if [[ $osversionnumber = "10.14" ]] || [[ $osversionnumber = "10.15" ]] || [[ $osversionnumber = "10.16" ]]; then
+#        if [[ $keychain = "1" ]]; then
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' #>/dev/null 2>&1
+#        else
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' #>/dev/null 2>&1
+#        fi
+#    fi
+#
+#    if [[ $osversionnumber = "10.13" ]]; then
+#        if [[ $keychain = "1" ]]; then
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#        else
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
+#        fi
+#    fi
+#
+#    if [[ $osversionnumber = "10.11" ]] || [[ $osversionnumber = "10.12" ]]; then
+#        if [[ $keychain = "1" ]]; then
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#        else
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
+#        fi
+#    fi
+#
+#    if [[ $osversionnumber = "10.10" ]]; then
+#        if [[ $keychain = "1" ]]; then
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#        else
+#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
+#        fi
+#    fi
+    
+    ../bin/./dspci | sed -E 's/\[([A-Za-z ]+)\]/(\1)/g' | grep -v ignored |sed -e "s/\[GeForce/(GeForce/g" -e "s/\[AMD/(AMD/g" -e "s/\[Radeon/(Radeon/g" > "$ScriptTmpPath"/pci
+    #../bin/lspci/./lspci -mnn -i ../bin/lspci/pci.ids | sed -E 's/\[([A-Za-z ]+)\]/(\1)/g' | grep -v ignored |sed -e "s/\[GeForce/(GeForce/g" -e "s/\[AMD/(AMD/g" -e "s/\[Radeon/(Radeon/g" > "$ScriptTmpPath"/pci
     while IFS='' read -r line; do
-    vendor=`echo -e "$line" | cut -d "[" -f3 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]'`
-    device=`echo -e "$line" | cut -d "[" -f4 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]'`
-    subven=`echo -e "$line" | cut -d "[" -f5 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]'`
-    subdev=`echo -e "$line" | cut -d "[" -f6 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]'`
-    vendorname=`echo -e "$line" | cut -d "\"" -f4 | cut -d "\"" -f1 | sed "s/\[.*//g" | xargs`
-    devicename=`echo -e "$line" | cut -d "\"" -f6 | cut -d "\"" -f1 | sed "s/\[.*//g" | xargs`
+    vendor=`echo -e "$line" | cut -d "[" -f3 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]' | sed 's/:.*//g'`
+    device=`echo -e "$line" | cut -d "[" -f3 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]' | sed 's/.*://g'`
+    subven=`echo -e "$line" | cut -d "(" -f3 | cut -d ")" -f1 | tr '[:lower:]' '[:upper:]' | sed -e 's/.*\ //g' -e 's/:.*//g'`
+    subdev=`echo -e "$line" | cut -d "(" -f3 | cut -d ")" -f1 | tr '[:lower:]' '[:upper:]' | sed -e 's/.*\ //g' -e 's/.*://g'`
+    deviceinfo=`echo -e "$line" | sed -e 's/.*]:\ //g' -e 's/\[.*//g'`
+    #devicename=`echo -e "$line" | cut -d "\"" -f6 | cut -d "\"" -f1 | sed "s/\[.*//g" | xargs`
         if [[ $subven = "" ]]; then
           subven="0000"
         fi
         if [[ $subdev = "" ]]; then
           subdev="0000"
         fi
-    echo -e "<tr><td>""$vendor""</td>""<td>""$device""</td>""<td>""$subven""</td>""<td>""$subdev""</td>""<td>""$vendorname""</td>""<td>""$devicename""</td></tr>" | sed -e "s/:/\\\:/g" -e 's#/#\\/#g' | tr '\n' ' ' >> "$ScriptTmpPath"/pci2
+    echo -e "<tr><td>""$vendor""</td>""<td>""$device""</td>""<td>""$subven""</td>""<td>""$subdev""</td>""<td>""$deviceinfo""</td></tr>" | sed -e "s/:/\\\:/g" -e 's#/#\\/#g' | tr '\n' ' ' >> "$ScriptTmpPath"/pci2
     done < "$ScriptTmpPath"/pci
 
     powervars=`pmset -g | tail -n +3`
@@ -1925,11 +1926,11 @@ function htmlreport()
 
     ### Merging HTML Report ###
 
-    if [[ $sipcheck = "disabled" ]]; then
-      lspci=$( cat "$ScriptTmpPath/pci2" | tr '\n' ' ' | sed "s/]/)/g")
-    else
-      lspci=$( echo "Error! Kext-Signing is enabled. Please disable it in your SIP Configuration" )
-    fi
+#    if [[ $sipcheck = "disabled" ]]; then
+    lspci=$( cat "$ScriptTmpPath/pci2" | tr '\n' ' ' | sed "s/]/)/g")
+#    else
+#      lspci=$( echo "Error! Kext-Signing is enabled. Please disable it in your SIP Configuration" )
+#    fi
 
     power=$( cat "$ScriptTmpPath/powerm" | tr '\n' ' ' )
     hackkexts=$( cat "$ScriptTmpPath"/kextreport | tr '\n' ' ' )
@@ -1951,10 +1952,10 @@ function htmlreport()
     fi
     ### End
 
-    if [[ $sipcheck = "isabled" ]]; then
-      sed -ib '/Vendor\ Name/d' "$ScriptTmpPath"/Report/Report.html
-      rm "$ScriptTmpPath"/Report/Report.htmlb
-    fi
+#    if [[ $sipcheck = "isabled" ]]; then
+#      sed -ib '/Vendor\ Name/d' "$ScriptTmpPath"/Report/Report.html
+#      rm "$ScriptTmpPath"/Report/Report.htmlb
+#    fi
 
     path=$( echo "$PWD" )
 

@@ -26,17 +26,10 @@
 		2AC44BFA23151059006D447C /* de.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA523150F38006D447C /* de.bashstrings */; };
 		2AC44BFB23151059006D447C /* en.bashstrings in Copy Bash Strings */ = {isa = PBXBuildFile; fileRef = 2AC44BA623150F38006D447C /* en.bashstrings */; };
 		2AC44BFD23151081006D447C /* script.command in Script copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAF23150F38006D447C /* script.command */; };
-		2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBE23150F39006D447C /* PlistBuddy */; };
 		2AC44C01231510A4006D447C /* BDMESG in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBF23150F39006D447C /* BDMESG */; };
 		2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC123150F39006D447C /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC44C05231510CD006D447C /* lspci in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBB23150F39006D447C /* lspci */; };
-		2AC44C06231510CD006D447C /* pci.ids in Bin LSPCI Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BBC23150F39006D447C /* pci.ids */; };
 		2AC44C08231510F6006D447C /* report.html in HTML Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA023150F38006D447C /* report.html */; };
 		2AC44C0A23151110006D447C /* IO80211Family.kext in Kext Copy IO */ = {isa = PBXBuildFile; fileRef = 2AC44BAD23150F38006D447C /* IO80211Family.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC44C0C23151136006D447C /* 10.11+12DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC44C0D23151136006D447C /* 10.13DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC44C0E23151136006D447C /* 10.14DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC44C0F23151136006D447C /* 10.10DirektHW.kext in Kexts Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC44C1123151154006D447C /* locked.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA223150F38006D447C /* locked.png */; };
 		2AC44C1223151154006D447C /* admin.png in Pics Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BA323150F38006D447C /* admin.png */; };
 		2AC44C1423151173006D447C /* passok.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB123150F39006D447C /* passok.aif */; };
@@ -51,6 +44,7 @@
 		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,24 +78,12 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
+				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
 				2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */,
-				2AC44C00231510A4006D447C /* PlistBuddy in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
 				2AC44C03231510A4006D447C /* KUMenuBar.app in Bin Copy */,
 			);
 			name = "Bin Copy";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AC44C04231510AC006D447C /* Bin LSPCI Copy */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = bin/lspci;
-			dstSubfolderSpec = 7;
-			files = (
-				2AC44C05231510CD006D447C /* lspci in Bin LSPCI Copy */,
-				2AC44C06231510CD006D447C /* pci.ids in Bin LSPCI Copy */,
-			);
-			name = "Bin LSPCI Copy";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2AC44C07231510E4006D447C /* HTML Copy */ = {
@@ -132,10 +114,6 @@
 			dstPath = kexts/lspci;
 			dstSubfolderSpec = 7;
 			files = (
-				2AC44C0C23151136006D447C /* 10.11+12DirektHW.kext in Kexts Copy */,
-				2AC44C0D23151136006D447C /* 10.13DirektHW.kext in Kexts Copy */,
-				2AC44C0E23151136006D447C /* 10.14DirektHW.kext in Kexts Copy */,
-				2AC44C0F23151136006D447C /* 10.10DirektHW.kext in Kexts Copy */,
 			);
 			name = "Kexts Copy";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,10 +177,6 @@
 		2AC44BA323150F38006D447C /* admin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = admin.png; sourceTree = "<group>"; };
 		2AC44BA523150F38006D447C /* de.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = de.bashstrings; sourceTree = "<group>"; };
 		2AC44BA623150F38006D447C /* en.bashstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.bashstrings; sourceTree = "<group>"; };
-		2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = "10.11+12DirektHW.kext"; sourceTree = "<group>"; };
-		2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.13DirektHW.kext; sourceTree = "<group>"; };
-		2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.14DirektHW.kext; sourceTree = "<group>"; };
-		2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = 10.10DirektHW.kext; sourceTree = "<group>"; };
 		2AC44BAD23150F38006D447C /* IO80211Family.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IO80211Family.kext; sourceTree = "<group>"; };
 		2AC44BAF23150F38006D447C /* script.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.command; sourceTree = "<group>"; };
 		2AC44BB123150F39006D447C /* passok.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = passok.aif; sourceTree = "<group>"; };
@@ -213,9 +187,6 @@
 		2AC44BB623150F39006D447C /* error.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.aif; sourceTree = "<group>"; };
 		2AC44BB723150F39006D447C /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
 		2AC44BB823150F39006D447C /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
-		2AC44BBB23150F39006D447C /* lspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = lspci; sourceTree = "<group>"; };
-		2AC44BBC23150F39006D447C /* pci.ids */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pci.ids; sourceTree = "<group>"; };
-		2AC44BBE23150F39006D447C /* PlistBuddy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PlistBuddy; sourceTree = "<group>"; };
 		2AC44BBF23150F39006D447C /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
 		2AC44BC123150F39006D447C /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AC44BC323150F39006D447C /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
@@ -235,6 +206,7 @@
 		2AC44C23231512B5006D447C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2AD19D8A2367273D0014D005 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
+		2AFE137423AEAF4700A5186D /* dspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dspci; sourceTree = "<group>"; };
 		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
 		2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,21 +306,9 @@
 		2AC44BA723150F38006D447C /* kexts */ = {
 			isa = PBXGroup;
 			children = (
-				2AC44BA823150F38006D447C /* lspci */,
 				2AC44BAD23150F38006D447C /* IO80211Family.kext */,
 			);
 			path = kexts;
-			sourceTree = "<group>";
-		};
-		2AC44BA823150F38006D447C /* lspci */ = {
-			isa = PBXGroup;
-			children = (
-				2AC44BA923150F38006D447C /* 10.11+12DirektHW.kext */,
-				2AC44BAA23150F38006D447C /* 10.13DirektHW.kext */,
-				2AC44BAB23150F38006D447C /* 10.14DirektHW.kext */,
-				2AC44BAC23150F38006D447C /* 10.10DirektHW.kext */,
-			);
-			path = lspci;
 			sourceTree = "<group>";
 		};
 		2AC44BAE23150F38006D447C /* script */ = {
@@ -377,22 +337,12 @@
 		2AC44BB923150F39006D447C /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				2AFE137423AEAF4700A5186D /* dspci */,
 				2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */,
-				2AC44BBA23150F39006D447C /* lspci */,
-				2AC44BBE23150F39006D447C /* PlistBuddy */,
 				2AC44BBF23150F39006D447C /* BDMESG */,
 				2AC44BC123150F39006D447C /* KUMenuBar.app */,
 			);
 			path = bin;
-			sourceTree = "<group>";
-		};
-		2AC44BBA23150F39006D447C /* lspci */ = {
-			isa = PBXGroup;
-			children = (
-				2AC44BBB23150F39006D447C /* lspci */,
-				2AC44BBC23150F39006D447C /* pci.ids */,
-			);
-			path = lspci;
 			sourceTree = "<group>";
 		};
 		2AC44BC223150F39006D447C /* anim */ = {
@@ -436,7 +386,6 @@
 				2AC44BF92315103F006D447C /* Copy Bash Strings */,
 				2AC44BFC2315106E006D447C /* Script copy */,
 				2AC44BFE23151089006D447C /* Bin Copy */,
-				2AC44C04231510AC006D447C /* Bin LSPCI Copy */,
 				2AC44C07231510E4006D447C /* HTML Copy */,
 				2AC44C0923151100006D447C /* Kext Copy IO */,
 				2AC44C0B2315111F006D447C /* Kexts Copy */,

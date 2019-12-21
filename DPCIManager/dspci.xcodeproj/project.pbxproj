@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8716DE1F21285D0D00C47DE6 /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716DE1C2128553200C47DE6 /* JSON.m */; };
+		8726C0E9212ABAB5000177BF /* DataTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8726C0E8212ABAB5000177BF /* DataTypeHandler.m */; };
+		876B52812129F464003E6A82 /* dd_getopt_long-fbsd.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B52782129F463003E6A82 /* dd_getopt_long-fbsd.m */; };
+		876B52822129F464003E6A82 /* DDCliApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B52792129F463003E6A82 /* DDCliApplication.m */; };
+		876B52832129F464003E6A82 /* DDCliParseException.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B527B2129F464003E6A82 /* DDCliParseException.m */; };
+		876B52842129F464003E6A82 /* DDCliUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B527E2129F464003E6A82 /* DDCliUtil.m */; };
+		876B52852129F464003E6A82 /* DDGetoptLongParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B52802129F464003E6A82 /* DDGetoptLongParser.m */; };
+		876B52882129F5BA003E6A82 /* dspci.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B52872129F5BA003E6A82 /* dspci.m */; };
+		B0F67A821696BDDD0059FD30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F67A811696BDDD0059FD30 /* Foundation.framework */; };
+		B0F67A851696BDDD0059FD30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F67A841696BDDD0059FD30 /* main.m */; };
+		B0F67A8E1696BE6D0059FD30 /* PCI.m in Sources */ = {isa = PBXBuildFile; fileRef = B07193821623B776006D5666 /* PCI.m */; };
+		B0F67A8F1696BEA40059FD30 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B025716716018CF000B0E1EB /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8716DE1B212854C500C47DE6 /* JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		8716DE1C2128553200C47DE6 /* JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
+		8726C0E7212A9DB3000177BF /* DataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTypes.h; sourceTree = "<group>"; };
+		8726C0E8212ABAB5000177BF /* DataTypeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTypeHandler.m; sourceTree = "<group>"; };
+		8726C0EA212ABAC4000177BF /* DataTypeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTypeHandler.h; sourceTree = "<group>"; };
+		876B52772129F463003E6A82 /* DDCliUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCliUtil.h; path = ddcli/lib/DDCliUtil.h; sourceTree = SOURCE_ROOT; };
+		876B52782129F463003E6A82 /* dd_getopt_long-fbsd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "dd_getopt_long-fbsd.m"; path = "ddcli/lib/dd_getopt_long-fbsd.m"; sourceTree = SOURCE_ROOT; };
+		876B52792129F463003E6A82 /* DDCliApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCliApplication.m; path = ddcli/lib/DDCliApplication.m; sourceTree = SOURCE_ROOT; };
+		876B527A2129F464003E6A82 /* DDCommandLineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCommandLineInterface.h; path = ddcli/lib/DDCommandLineInterface.h; sourceTree = SOURCE_ROOT; };
+		876B527B2129F464003E6A82 /* DDCliParseException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCliParseException.m; path = ddcli/lib/DDCliParseException.m; sourceTree = SOURCE_ROOT; };
+		876B527C2129F464003E6A82 /* DDCliApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCliApplication.h; path = ddcli/lib/DDCliApplication.h; sourceTree = SOURCE_ROOT; };
+		876B527D2129F464003E6A82 /* DDCliParseException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCliParseException.h; path = ddcli/lib/DDCliParseException.h; sourceTree = SOURCE_ROOT; };
+		876B527E2129F464003E6A82 /* DDCliUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCliUtil.m; path = ddcli/lib/DDCliUtil.m; sourceTree = SOURCE_ROOT; };
+		876B527F2129F464003E6A82 /* DDGetoptLongParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDGetoptLongParser.h; path = ddcli/lib/DDGetoptLongParser.h; sourceTree = SOURCE_ROOT; };
+		876B52802129F464003E6A82 /* DDGetoptLongParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDGetoptLongParser.m; path = ddcli/lib/DDGetoptLongParser.m; sourceTree = SOURCE_ROOT; };
+		876B52862129F599003E6A82 /* dspci.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dspci.h; sourceTree = "<group>"; };
+		876B52872129F5BA003E6A82 /* dspci.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dspci.m; sourceTree = "<group>"; };
+		B025713F1601496400B0E1EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B02571421601496400B0E1EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B02571431601496400B0E1EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B02571441601496400B0E1EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B02571471601496400B0E1EB /* DPCIManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DPCIManager-Info.plist"; sourceTree = "<group>"; };
+		B025714B1601496400B0E1EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B025714D1601496400B0E1EB /* DPCIManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DPCIManager-Prefix.pch"; sourceTree = "<group>"; };
+		B02571511601496400B0E1EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B02571521601496400B0E1EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B02571551601496400B0E1EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B025716716018CF000B0E1EB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B025716916018D0600B0E1EB /* DPCIManager.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DPCIManager.icns; sourceTree = SOURCE_ROOT; };
+		B025716B16018D9600B0E1EB /* pci.ids */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pci.ids; sourceTree = SOURCE_ROOT; };
+		B051DE22160682A4005CC4B6 /* Tables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tables.h; sourceTree = "<group>"; };
+		B051DE2416068316005CC4B6 /* License.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		B05AE9BA162A500B005190E4 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		B05AE9BB162A500B005190E4 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Task.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B07193811623B776006D5666 /* PCI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCI.h; sourceTree = "<group>"; };
+		B07193821623B776006D5666 /* PCI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PCI.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B08396EB1627F137003427F4 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		B08396EC1627F137003427F4 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		B090127F1705921600D0F913 /* Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hardware.h; sourceTree = "<group>"; };
+		B09012801705921600D0F913 /* Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hardware.m; sourceTree = "<group>"; };
+		B0F67A7F1696BDDD0059FD30 /* dspci */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dspci; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F67A811696BDDD0059FD30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B0F67A841696BDDD0059FD30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0F67A7C1696BDDD0059FD30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F67A821696BDDD0059FD30 /* Foundation.framework in Frameworks */,
+				B0F67A8F1696BEA40059FD30 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		876B52762129F43E003E6A82 /* ddcli */ = {
+			isa = PBXGroup;
+			children = (
+				876B52782129F463003E6A82 /* dd_getopt_long-fbsd.m */,
+				876B527C2129F464003E6A82 /* DDCliApplication.h */,
+				876B52792129F463003E6A82 /* DDCliApplication.m */,
+				876B527D2129F464003E6A82 /* DDCliParseException.h */,
+				876B527B2129F464003E6A82 /* DDCliParseException.m */,
+				876B52772129F463003E6A82 /* DDCliUtil.h */,
+				876B527E2129F464003E6A82 /* DDCliUtil.m */,
+				876B527A2129F464003E6A82 /* DDCommandLineInterface.h */,
+				876B527F2129F464003E6A82 /* DDGetoptLongParser.h */,
+				876B52802129F464003E6A82 /* DDGetoptLongParser.m */,
+			);
+			name = ddcli;
+			sourceTree = "<group>";
+		};
+		B02571301601496300B0E1EB = {
+			isa = PBXGroup;
+			children = (
+				B02571451601496400B0E1EB /* DPCIManager */,
+				B0F67A831696BDDD0059FD30 /* dspci */,
+				B025713E1601496400B0E1EB /* Frameworks */,
+				B025713C1601496400B0E1EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B025713C1601496400B0E1EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0F67A7F1696BDDD0059FD30 /* dspci */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B025713E1601496400B0E1EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B025713F1601496400B0E1EB /* Cocoa.framework */,
+				B0F67A811696BDDD0059FD30 /* Foundation.framework */,
+				B02571411601496400B0E1EB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B02571411601496400B0E1EB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B025716716018CF000B0E1EB /* IOKit.framework */,
+				B02571421601496400B0E1EB /* AppKit.framework */,
+				B02571431601496400B0E1EB /* CoreData.framework */,
+				B02571441601496400B0E1EB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B02571451601496400B0E1EB /* DPCIManager */ = {
+			isa = PBXGroup;
+			children = (
+				B02571511601496400B0E1EB /* AppDelegate.h */,
+				B02571521601496400B0E1EB /* AppDelegate.m */,
+				B090127F1705921600D0F913 /* Hardware.h */,
+				B09012801705921600D0F913 /* Hardware.m */,
+				B08396EB1627F137003427F4 /* Match.h */,
+				B08396EC1627F137003427F4 /* Match.m */,
+				B051DE22160682A4005CC4B6 /* Tables.h */,
+				B051DE2416068316005CC4B6 /* License.h */,
+				B02571541601496400B0E1EB /* MainMenu.xib */,
+				B07193811623B776006D5666 /* PCI.h */,
+				B07193821623B776006D5666 /* PCI.m */,
+				B05AE9BA162A500B005190E4 /* Task.h */,
+				B05AE9BB162A500B005190E4 /* Task.m */,
+				B02571461601496400B0E1EB /* Supporting Files */,
+			);
+			path = DPCIManager;
+			sourceTree = "<group>";
+		};
+		B02571461601496400B0E1EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B02571471601496400B0E1EB /* DPCIManager-Info.plist */,
+				B025716916018D0600B0E1EB /* DPCIManager.icns */,
+				B025716B16018D9600B0E1EB /* pci.ids */,
+				B025714B1601496400B0E1EB /* main.m */,
+				B025714D1601496400B0E1EB /* DPCIManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0F67A831696BDDD0059FD30 /* dspci */ = {
+			isa = PBXGroup;
+			children = (
+				876B52762129F43E003E6A82 /* ddcli */,
+				8716DE1C2128553200C47DE6 /* JSON.m */,
+				8716DE1B212854C500C47DE6 /* JSON.h */,
+				B0F67A841696BDDD0059FD30 /* main.m */,
+				876B52862129F599003E6A82 /* dspci.h */,
+				876B52872129F5BA003E6A82 /* dspci.m */,
+				8726C0E7212A9DB3000177BF /* DataTypes.h */,
+				8726C0E8212ABAB5000177BF /* DataTypeHandler.m */,
+				8726C0EA212ABAC4000177BF /* DataTypeHandler.h */,
+			);
+			path = dspci;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		B0683A9D17AF4EE7003A10CB /* PCI IDs */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-LOz pci.ids https://update.kextupdater.de/lspci/pciids.zip";
+			buildConfigurationList = B0683AA017AF4EE7003A10CB /* Build configuration list for PBXLegacyTarget "PCI IDs" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/curl;
+			buildWorkingDirectory = "$(SRCROOT)";
+			dependencies = (
+			);
+			name = "PCI IDs";
+			passBuildSettingsInEnvironment = 1;
+			productName = "PCI IDs";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		B0F67A7E1696BDDD0059FD30 /* dspci */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F67A8C1696BDDD0059FD30 /* Build configuration list for PBXNativeTarget "dspci" */;
+			buildPhases = (
+				B0F67A7B1696BDDD0059FD30 /* Sources */,
+				B0F67A7C1696BDDD0059FD30 /* Frameworks */,
+				2AFE137323AEAEC500A5186D /* Copy Binary */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dspci;
+			productName = dspci;
+			productReference = B0F67A7F1696BDDD0059FD30 /* dspci */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B02571321601496300B0E1EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = B02571351601496300B0E1EB /* Build configuration list for PBXProject "dspci" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = B02571301601496300B0E1EB;
+			productRefGroup = B025713C1601496400B0E1EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0F67A7E1696BDDD0059FD30 /* dspci */,
+				B0683A9D17AF4EE7003A10CB /* PCI IDs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AFE137323AEAEC500A5186D /* Copy Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Binary";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUMenuBar.app\"\ncp -r \"${TARGET_BUILD_DIR}/dspci\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0F67A7B1696BDDD0059FD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8716DE1F21285D0D00C47DE6 /* JSON.m in Sources */,
+				876B52812129F464003E6A82 /* dd_getopt_long-fbsd.m in Sources */,
+				8726C0E9212ABAB5000177BF /* DataTypeHandler.m in Sources */,
+				B0F67A8E1696BE6D0059FD30 /* PCI.m in Sources */,
+				876B52882129F5BA003E6A82 /* dspci.m in Sources */,
+				876B52842129F464003E6A82 /* DDCliUtil.m in Sources */,
+				B0F67A851696BDDD0059FD30 /* main.m in Sources */,
+				876B52832129F464003E6A82 /* DDCliParseException.m in Sources */,
+				876B52822129F464003E6A82 /* DDCliApplication.m in Sources */,
+				876B52852129F464003E6A82 /* DDGetoptLongParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B02571541601496400B0E1EB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B02571551601496400B0E1EB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B02571571601496400B0E1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_MARKETING_VERSION = 2.1;
+				CURRENT_PROJECT_VERSION = 315;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B02571581601496400B0E1EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_MARKETING_VERSION = 2.1;
+				CURRENT_PROJECT_VERSION = 315;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B0683A9E17AF4EE7003A10CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0683A9F17AF4EE7003A10CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0F67A8A1696BDDD0059FD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DPCIManager/DPCIManager-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DPCIManager/DPCIManager-Info.plist";
+				LD_NO_PIE = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__pci_ids,
+					pci.ids,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.muntashirakon.dspci;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0F67A8B1696BDDD0059FD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DPCIManager/DPCIManager-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DPCIManager/DPCIManager-Info.plist";
+				LD_NO_PIE = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__pci_ids,
+					pci.ids,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.muntashirakon.dspci;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B02571351601496300B0E1EB /* Build configuration list for PBXProject "dspci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B02571571601496400B0E1EB /* Debug */,
+				B02571581601496400B0E1EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0683AA017AF4EE7003A10CB /* Build configuration list for PBXLegacyTarget "PCI IDs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0683A9E17AF4EE7003A10CB /* Debug */,
+				B0683A9F17AF4EE7003A10CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F67A8C1696BDDD0059FD30 /* Build configuration list for PBXNativeTarget "dspci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F67A8A1696BDDD0059FD30 /* Debug */,
+				B0F67A8B1696BDDD0059FD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B02571321601496300B0E1EB /* Project object */;
+}
