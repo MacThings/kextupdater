@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Infowindow: NSViewController {
+class Networkerror: NSViewController {
     
     @IBOutlet weak var close_window: NSButton!
     
