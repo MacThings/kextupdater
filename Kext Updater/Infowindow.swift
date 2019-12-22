@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class MalwareInfo: NSViewController {
+class Infowindow: NSViewController {
     
     @IBOutlet weak var close_window: NSButton!
     
@@ -18,7 +18,6 @@ class MalwareInfo: NSViewController {
     }
 
     @IBAction func close_window(_ sender: Any) {
-        UserDefaults.standard.set("Yes", forKey: "MalwareInfoShown")
         self.view.window?.close()
     }
     

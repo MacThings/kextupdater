@@ -69,7 +69,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var efi_button: NSButton!
     @IBOutlet weak var tools_button: NSButton!
     
-    @IBOutlet weak var show_malwareinfo: NSButton!
+    @IBOutlet weak var show_infowindow: NSButton!
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -116,9 +116,9 @@ class KextUpdater: NSViewController {
             object: nil)
 
         
-//        let malwareinfo = UserDefaults.standard.string(forKey: "MalwareInfoShown")
-//        if malwareinfo != "Yes" {
-//            show_malwareinfo.performClick(nil)
+//        let infowindow = UserDefaults.standard.string(forKey: "KEY")
+//        if infowindow != "Yes" {
+//            show_infowindow.performClick(nil)
 //        }
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
