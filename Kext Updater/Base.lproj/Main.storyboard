@@ -27,7 +27,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="9HD-lp-UVI" kind="modal" id="tSc-wz-pun"/>
+                                                <segue destination="9HD-lp-UVI" kind="show" id="tSc-wz-pun"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Check for Updates..." id="oib-Bm-e9K">

@@ -22,6 +22,9 @@ class SingleKexts: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
             if key.hasPrefix("dl-"){
                 UserDefaults.standard.removeObject(forKey: key)

@@ -23,7 +23,9 @@ class Preferences: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-
+        
+        //self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
         let speakervolume = UserDefaults.standard.string(forKey: "Speakervolume")
         if speakervolume == "0" {
             speakericon_off.isHidden = false
@@ -35,6 +37,7 @@ class Preferences: NSViewController {
         
         let downloadpath = UserDefaults.standard.string(forKey: "Downloadpath")
         download_path_textfield.stringValue = (downloadpath ?? "")
+
     }
 
     @IBAction func resetprefs(_ sender: Any) {

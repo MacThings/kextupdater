@@ -52,6 +52,9 @@ class Tools: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
         UserDefaults.standard.set(false, forKey: "OfflineEFI")
         UserDefaults.standard.set(false, forKey: "CustomEFI")
         self.progress_gear.isHidden=false

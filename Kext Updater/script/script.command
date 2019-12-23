@@ -811,12 +811,6 @@ function mainscript()
 
     _languageselect
 
-#    onlinecheck=$( curl -s -S https://update.kextupdater.de/online )
-#    if [[ $onlinecheck != "1" ]]; then
-#        echo "$networkerror"
-#        exit
-#    fi
-
 #========================= Script Pathes =========================#
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
 
@@ -2079,6 +2073,18 @@ function _efi_folder_creator()
     
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Creator" "None"
 
+    fi
+}
+
+function _online_check()
+{
+
+    onlinecheck=$( curl -s -S https://update.kextupdater.de/online )
+    if [[ $onlinecheck != "1" ]]; then
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Networkerror" "Yes"
+        exit
+    else
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Networkerror" "No"
     fi
 }
 

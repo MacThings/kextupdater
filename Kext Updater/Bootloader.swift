@@ -27,6 +27,8 @@ class Bootloader: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
     }
     
     @IBAction func close_button(_ sender: Any) {

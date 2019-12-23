@@ -15,7 +15,7 @@ import APNGKit
 class KextUpdater: NSViewController {
     
     var player: AVAudioPlayer?
-    
+        
     @IBOutlet var output_window: NSTextView!
     @IBOutlet weak var app_logo: NSImageView!
     @IBOutlet weak var app_logo_animation: NSButton!
@@ -93,6 +93,8 @@ class KextUpdater: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
 
         NSWorkspace.shared.notificationCenter.addObserver(
             self,
@@ -332,19 +334,31 @@ class KextUpdater: NSViewController {
         self.egg2.isEnabled=false
         self.egg3.isEnabled=false
         self.egg4.isEnabled=false
-        if let url = URL(string: "https://update.kextupdater.de/online") {
-            do {
-                if try String(contentsOf: url) != "1\n"{
-                    return
-                }
-            } catch {
-                self.show_networkerror.performClick(nil)
-                return
-                //DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    //self.show_networkerror.performClick(nil)
-                //}
-            }
+        
+        self.syncShellExec(path: self.scriptPath, args: ["_online_check"])
+        let networkerror = UserDefaults.standard.string(forKey: "Networkerror")
+        
+        if networkerror == "Yes" {
+            self.show_networkerror.performClick(nil)
+            return
         }
+        
+//        if let url = URL(string: "https://update.kextupdater.de/online") {
+//            do {
+//                print(url)
+//                if try String(contentsOf: url) != "1\n"{
+//                    return
+//                }
+//            } catch {
+//                self.show_networkerror.performClick(nil)
+//                return
+//                //DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                    //self.show_networkerror.performClick(nil)
+//                //}
+//            }
+//        }
+        
+        
         start_button.isEnabled=false
         start_button.isHidden=true
         stop_button.isHidden=false
