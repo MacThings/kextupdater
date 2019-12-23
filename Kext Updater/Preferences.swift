@@ -20,11 +20,13 @@ class Preferences: NSViewController {
 
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
+    override func viewDidAppear() {
+        self.view.window?.styleMask.remove(NSWindow.StyleMask.resizable)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
-        //self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
         
         let speakervolume = UserDefaults.standard.string(forKey: "Speakervolume")
         if speakervolume == "0" {
