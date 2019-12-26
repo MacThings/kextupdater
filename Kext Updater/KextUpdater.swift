@@ -26,6 +26,9 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var egg2: NSButton!
     @IBOutlet weak var egg3: NSButton!
     @IBOutlet weak var egg4: NSButton!
+    @IBOutlet weak var surprise_xmas: NSImageView!
+    @IBOutlet weak var surprise_newyear: NSImageView!
+    
     
     @IBOutlet weak var keychain_pfeil: NSImageView!
     @IBOutlet weak var keychain_text: NSTextField!
@@ -93,6 +96,23 @@ class KextUpdater: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM"
+        let result = formatter.string(from: date)
+        
+        if result == "24.12" {
+            self.surprise_xmas.isHidden = false
+        } else if result == "25.12" {
+            self.surprise_xmas.isHidden = false
+        } else if result == "26.12" {
+            self.surprise_xmas.isHidden = false
+        } else if result == "31.12" {
+            self.surprise_newyear.isHidden = false
+        } else if result == "01.01" {
+            self.surprise_newyear.isHidden = false
+        }
         
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
 
@@ -387,7 +407,9 @@ class KextUpdater: NSViewController {
         }
 
         output_window.textStorage?.mutableString.setString("")
-        app_logo.isHidden=true
+        app_logo.isHidden = true
+        surprise_xmas.isHidden = true
+        surprise_newyear.isHidden = true
 
         animstart()
         

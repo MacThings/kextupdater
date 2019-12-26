@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDEE123AE4F04008879BE /* Networkerror.swift */; };
-		2A856DB623B0FADF008760A9 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC123150F39006D447C /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A856DC323B429A6008760A9 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A856DC123B4291F008760A9 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
@@ -78,7 +78,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2A856DB623B0FADF008760A9 /* KUMenuBar.app in Bin Copy */,
+				2A856DC323B429A6008760A9 /* KUMenuBar.app in Bin Copy */,
 				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
 				2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
@@ -155,6 +155,7 @@
 /* Begin PBXFileReference section */
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A7FDEE123AE4F04008879BE /* Networkerror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkerror.swift; sourceTree = "<group>"; };
+		2A856DC123B4291F008760A9 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB3049F23150E1300D618FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +179,6 @@
 		2AC44BB723150F39006D447C /* mq.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mq.mp3; sourceTree = "<group>"; };
 		2AC44BB823150F39006D447C /* ta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ta.mp3; sourceTree = "<group>"; };
 		2AC44BBF23150F39006D447C /* BDMESG */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BDMESG; sourceTree = "<group>"; };
-		2AC44BC123150F39006D447C /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AC44BC323150F39006D447C /* progressanim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressanim.png; sourceTree = "<group>"; };
 		2AC44BC423150F39006D447C /* progressanim-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressanim-dark.png"; sourceTree = "<group>"; };
 		2AC44BE123150F61006D447C /* SingleKexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleKexts.swift; sourceTree = "<group>"; };
@@ -327,10 +327,10 @@
 		2AC44BB923150F39006D447C /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				2A856DC123B4291F008760A9 /* KUMenuBar.app */,
 				2AFE137423AEAF4700A5186D /* dspci */,
 				2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */,
 				2AC44BBF23150F39006D447C /* BDMESG */,
-				2AC44BC123150F39006D447C /* KUMenuBar.app */,
 			);
 			path = bin;
 			sourceTree = "<group>";

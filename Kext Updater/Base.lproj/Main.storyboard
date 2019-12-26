@@ -2730,6 +2730,18 @@ DQ
                                 <view key="contentView" ambiguous="YES" id="NxJ-8T-BAX">
                                     <rect key="frame" x="1" y="1" width="384" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wuo-Wy-Qq0">
+                                            <rect key="frame" x="35" y="166" width="205" height="205"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hf-xmas" id="nrW-5L-BKo"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nx5-lS-W85">
+                                            <rect key="frame" x="158" y="148" width="206" height="206"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hf-newyear" id="YAi-2E-5I1"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
                             </box>
                             <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COx-cu-9jq" userLabel="Button dummy">
@@ -2781,6 +2793,8 @@ DQ
                         <outlet property="show_networkerror" destination="COx-cu-9jq" id="laY-MV-KJL"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
                         <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
+                        <outlet property="surprise_newyear" destination="Nx5-lS-W85" id="kA3-Ea-9Yc"/>
+                        <outlet property="surprise_xmas" destination="Wuo-Wy-Qq0" id="hQa-mE-5Zb"/>
                         <outlet property="tools_button" destination="x2E-cO-O2m" id="91i-Ho-ffA"/>
                         <outlet property="webdriver_button" destination="hN0-v8-72Q" id="aa7-tc-r4s"/>
                     </connections>
@@ -2788,7 +2802,7 @@ DQ
                 <customObject id="NzJ-n6-hdE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="M5w-5M-l63"/>
             </objects>
-            <point key="canvasLocation" x="978" y="648"/>
+            <point key="canvasLocation" x="1110" y="639"/>
         </scene>
         <!--Network Error-->
         <scene sceneID="tZG-Sw-Id8">
@@ -4699,6 +4713,8 @@ DQ
         <image name="efihd" width="246" height="255"/>
         <image name="efimaker" width="355" height="512"/>
         <image name="harddisk" width="256" height="256"/>
+        <image name="hf-newyear" width="400" height="400"/>
+        <image name="hf-xmas" width="200" height="182"/>
         <image name="hflogo" width="860" height="170"/>
         <image name="kext" width="200" height="200"/>
         <image name="keychain" width="256" height="256"/>
