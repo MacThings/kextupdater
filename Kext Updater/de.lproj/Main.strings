@@ -415,6 +415,9 @@
 /* Class = "NSViewController"; title = "nVidia Webdriver"; ObjectID = "FlY-af-uzG"; */
 "FlY-af-uzG.title" = "nVidia Webdriver";
 
+/* Class = "NSButtonCell"; title = "Undo"; ObjectID = "fr2-Fp-Zso"; */
+"fr2-Fp-Zso.title" = "Zurücksetzen";
+
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B48"; ObjectID = "g99-h6-PL9"; */
 "g99-h6-PL9.title" = "10.13.1 - 17B48";
 
@@ -792,6 +795,9 @@
 
 /* Class = "NSMenuItem"; title = "10.12.2 - 16C68"; ObjectID = "QLN-fx-CJv"; */
 "QLN-fx-CJv.title" = "10.12.2 - 16C68";
+
+/* Class = "NSButtonCell"; title = "Uninstall"; ObjectID = "Qm8-k0-x1M"; */
+"Qm8-k0-x1M.title" = "Entfernen";
 
 /* Class = "NSTextFieldCell"; title = "Select an EFI folder you want to check for kext updates."; ObjectID = "qMl-rE-aP9"; */
 "qMl-rE-aP9.title" = "Wähle einen (EFI)-Ordner den du auf Kext Updates prüfen möchtest.";

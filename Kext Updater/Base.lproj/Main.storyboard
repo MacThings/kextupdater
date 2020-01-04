@@ -3616,9 +3616,9 @@ DQ
                                 </connections>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
-                                <rect key="frame" x="29" y="384" width="132" height="32"/>
+                                <rect key="frame" x="29" y="384" width="130" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" enabled="NO" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -3816,15 +3816,39 @@ DQ
                                     <action selector="browseFileWithSender:" target="PFO-7L-TjR" id="uqA-wA-RmO"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-1d-pVl">
+                                <rect key="frame" x="27" y="468" width="130" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Qm8-k0-x1M">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="atheros_uninstall:" target="PFO-7L-TjR" id="vVZ-Q2-R1x"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
+                                <rect key="frame" x="29" y="384" width="130" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="atheros40applied" destination="btT-Id-K9q" id="hhe-Zm-nKm"/>
                         <outlet property="atheros40notapplied" destination="6as-on-FXo" id="de5-2w-bRI"/>
                         <outlet property="button_atheros" destination="Trt-2Z-QxN" id="GbG-YE-cQc"/>
+                        <outlet property="button_atheros_uninstall" destination="iMF-1d-pVl" id="b6x-pS-RyZ"/>
                         <outlet property="button_close" destination="L55-W1-zjv" id="9ZX-Zf-h1t"/>
                         <outlet property="button_custom_efi_folder" destination="njP-iK-fFt" id="Led-0n-eWd"/>
                         <outlet property="button_fix_sleep" destination="koU-E0-Yex" id="KzO-Yq-yre"/>
+                        <outlet property="button_fix_sleep_undo" destination="YXy-aO-DHP" id="eYQ-aN-sOW"/>
                         <outlet property="button_kextcache" destination="VRn-Tm-ms3" id="tXy-f1-stz"/>
                         <outlet property="button_mount" destination="cyz-bZ-0js" id="NJm-nI-ChF"/>
                         <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>

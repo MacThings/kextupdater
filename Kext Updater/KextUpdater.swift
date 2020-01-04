@@ -536,6 +536,8 @@ class KextUpdater: NSViewController {
         animstart()
         
         app_logo.isHidden=true
+        surprise_xmas.isHidden=true
+        surprise_newyear.isHidden=true
         UserDefaults.standard.set("Report", forKey: "Choice")
         
         DispatchQueue.global(qos: .background).async {

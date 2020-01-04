@@ -1468,7 +1468,7 @@ function kumenubar_off()
 }
 
 ###################################################################
-################ Copy Atheros40 Kext to /S/L/E ####################
+################ Copy Atheros40 Kext to /L/E ######################
 ###################################################################
 function ar92xx()
 {
@@ -1497,6 +1497,50 @@ function ar92xx()
     else
     echo "$atherosinstall"
     osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+    fi
+    if [ $? = 0 ]; then
+            if [[ $checkchime = "1" ]]; then
+                _playchime
+            fi
+        echo -e "\n$alldone"
+        else
+            if [[ $checkchime = "1" ]]; then
+                _playchimedeath
+            fi
+        echo -e "\n$error"
+    fi
+}
+
+###################################################################
+################ Remove Atheros40 Kext from /L/E ##################
+###################################################################
+function ar92xx_remove()
+{
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
+    kuroot=$( _helpDefaultRead "KU Root" )
+    rwcheck=$( _helpDefaultRead "Read-Only" )
+
+    _languageselect
+
+    if [[ $rwcheck = "Yes" ]]; then
+      if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+      else
+        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+      fi
+    fi
+
+    if [[ $keychain = "1" ]]; then
+    _getsecret
+    echo "$atherosuninstall"
+    osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+    echo "$atherosuninstall"
+    osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
     fi
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
@@ -1553,14 +1597,53 @@ function fixsleepimage()
         if [[ $pwcheck != "" ]]; then
           osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
-          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
-    else
+    fi
+
+    if [ $? = 0 ]; then
+            if [[ $checkchime = "1" ]]; then
+                _playchime
+            fi
+        echo -e "\n$alldone"
+        else
+            if [[ $checkchime = "1" ]]; then
+                _playchimedeath
+            fi
+        echo -e "\n$error"
+    fi
+}
+
+###################################################################
+####################### Fix Sleepimage undo #######################
+###################################################################
+
+function fixsleepimage_undo()
+{
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+    content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
+    lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
+    pwcheck=$( pmset -g |grep proximitywake )
+    rwcheck=$( _helpDefaultRead "Read-Only" )
+
+    _languageselect
+
+    if [[ $rwcheck = "Yes" ]]; then
+      if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+      else
+        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+      fi
+    fi
+    if [[ $keychain = "1" ]]; then
+      _getsecret
       echo "$fixsleepimage"
         if [[ $pwcheck != "" ]]; then
-          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
+          osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
-          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
+          osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     fi
 

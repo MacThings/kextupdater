@@ -21,10 +21,12 @@ class Tools: NSViewController {
     @IBOutlet weak var atheros40notapplied: NSImageView!
     @IBOutlet weak var atheros40applied: NSImageView!
     @IBOutlet weak var button_atheros: NSButton!
+    @IBOutlet weak var button_atheros_uninstall: NSButton!
     
     @IBOutlet weak var fixnotapplied: NSImageView!
     @IBOutlet weak var fixapplied: NSImageView!
     @IBOutlet weak var button_fix_sleep: NSButton!
+    @IBOutlet weak var button_fix_sleep_undo: NSButton!
     
     @IBOutlet weak var read_only: NSTextField!
     @IBOutlet weak var read_write: NSTextField!
@@ -84,11 +86,13 @@ class Tools: NSViewController {
         DispatchQueue.main.async {
         let sleepcheck = UserDefaults.standard.string(forKey: "Sleepfix")
         if sleepcheck == "1" {
-            self.button_fix_sleep.isEnabled = false
+            self.button_fix_sleep.isHidden = true
+            self.button_fix_sleep_undo.isHidden = false
             self.fixapplied.isHidden = false
             self.fixnotapplied.isHidden = true
         } else {
-            self.button_fix_sleep.isEnabled = true
+            self.button_fix_sleep.isHidden = false
+            self.button_fix_sleep_undo.isHidden = true
             self.fixapplied.isHidden = true
             self.fixnotapplied.isHidden = false
         }
@@ -96,11 +100,13 @@ class Tools: NSViewController {
             self.syncShellExec(path: self.scriptPath, args: ["checkatheros40"])
         let atheros40check = UserDefaults.standard.string(forKey: "Atheros40")
         if atheros40check == "1" {
-            self.button_atheros.isEnabled = false
+            self.button_atheros.isHidden = true
+            self.button_atheros_uninstall.isHidden = false
             self.atheros40applied.isHidden = false
             self.atheros40notapplied.isHidden = true
         } else {
-            self.button_atheros.isEnabled = true
+            self.button_atheros.isHidden = false
+            self.button_atheros_uninstall.isHidden = true
             self.atheros40applied.isHidden = true
             self.atheros40notapplied.isHidden = true
         }
@@ -183,9 +189,44 @@ class Tools: NSViewController {
                 self.pulldown_menu.isEnabled=true
                 self.progress_gear_atheros?.stopAnimation(self);
                 self.progress_gear_atheros.isHidden=true
+                self.view.window?.close()
             }
         }
     }
+    
+    @IBAction func atheros_uninstall(_ sender: Any) {
+        self.button_kextcache.isEnabled=false
+        self.button_atheros.isEnabled=false
+        self.button_atheros_uninstall.isEnabled=false
+        self.button_fix_sleep.isEnabled=false
+        self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
+        self.button_unmount.isEnabled=false
+        self.button_unmount_all.isEnabled=false
+        self.button_close.isEnabled=false
+        self.pulldown_menu.isEnabled=false
+        self.progress_gear_atheros?.startAnimation(self);
+        self.progress_gear_atheros.isHidden=false
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["ar92xx_remove"])
+            DispatchQueue.main.async {
+                self.button_kextcache.isEnabled=true
+                self.button_atheros.isEnabled=true
+                self.button_fix_sleep.isEnabled=true
+                self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
+                self.button_unmount.isEnabled=true
+                self.button_unmount_all.isEnabled=true
+                self.button_close.isEnabled=true
+                self.pulldown_menu.isEnabled=true
+                self.progress_gear_atheros?.stopAnimation(self);
+                self.progress_gear_atheros.isHidden=true
+                self.view.window?.close()
+            }
+        }
+
+    }
+    
     
     @IBAction func sleepfix_yes(_ sender: Any) {
         catalina_read_write()
@@ -210,10 +251,39 @@ class Tools: NSViewController {
                 self.button_unmount_all.isEnabled=true
                 self.button_close.isEnabled=true
                 self.pulldown_menu.isEnabled=true
+                self.view.window?.close()
             }
         }
-        self.view.window?.close()
     }
+ 
+    @IBAction func sleepfix_undo(_ sender: Any) {
+        catalina_read_write()
+        self.button_kextcache.isEnabled=false
+        self.button_atheros.isEnabled=false
+        self.button_fix_sleep.isEnabled=false
+        self.button_mount.isEnabled=false
+        self.button_offline_efi.isEnabled=false
+        self.button_unmount.isEnabled=false
+        self.button_unmount_all.isEnabled=false
+        self.button_close.isEnabled=false
+        self.pulldown_menu.isEnabled=false
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage_undo"])
+            DispatchQueue.main.async {
+                self.button_kextcache.isEnabled=true
+                self.button_atheros.isEnabled=true
+                self.button_fix_sleep.isEnabled=true
+                self.button_mount.isEnabled=true
+                self.button_offline_efi.isEnabled=true
+                self.button_unmount.isEnabled=true
+                self.button_unmount_all.isEnabled=true
+                self.button_close.isEnabled=true
+                self.pulldown_menu.isEnabled=true
+                self.view.window?.close()
+            }
+        }
+    }
+    
     
     @IBAction func set_read_write(_ sender: Any) {
         catalina_read_write()
