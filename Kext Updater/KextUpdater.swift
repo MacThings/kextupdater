@@ -28,12 +28,10 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var egg4: NSButton!
     @IBOutlet weak var surprise_xmas: NSImageView!
     @IBOutlet weak var surprise_newyear: NSImageView!
-    
-    
+        
     @IBOutlet weak var keychain_pfeil: NSImageView!
     @IBOutlet weak var keychain_text: NSTextField!
     
-
     // Infobox
     @IBOutlet weak var infobox_system_version: NSTextField!
     @IBOutlet weak var infobox_admin_status_image_red: NSImageView!
@@ -73,11 +71,9 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var tools_button: NSButton!
     
     @IBOutlet weak var show_networkerror: NSButton!
-        
-    
+       
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
-    
-    
+        
     @IBAction func quit_app(_ sender: Any) {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
             if key.hasPrefix("dl-"){
@@ -136,7 +132,6 @@ class KextUpdater: NSViewController {
             selector: #selector(self.closePrefs),
             name: NSNotification.Name(rawValue: "ClosePrefs"),
             object: nil)
-
         
 //        let infowindow = UserDefaults.standard.string(forKey: "KEY")
 //        if infowindow != "Yes" {
@@ -154,7 +149,6 @@ class KextUpdater: NSViewController {
         
         syncShellExec(path: scriptPath, args: ["initial"])
         syncShellExec(path: scriptPath, args: ["_checkpass_initial"])
-        
         
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")
         if keychaincheck == true{
@@ -346,7 +340,6 @@ class KextUpdater: NSViewController {
                         UserDefaults.standard.set(true, forKey: "KeyChainAdvise")
                 }
             }
-        
     }
     
     @IBAction func start_button(_ sender: Any) {
@@ -377,7 +370,6 @@ class KextUpdater: NSViewController {
 //                //}
 //            }
 //        }
-        
         
         start_button.isEnabled=false
         start_button.isHidden=true
@@ -434,7 +426,6 @@ class KextUpdater: NSViewController {
                         UserDefaults.standard.removeObject(forKey: key)
                 }
                 }
-                
             }
 
             let offline_efi = UserDefaults.standard.bool(forKey: "OfflineEFI")
@@ -558,10 +549,8 @@ class KextUpdater: NSViewController {
                 UserDefaults.standard.set("Update", forKey: "Choice")
                 
             }
-            
         }
-        
-    }
+     }
     
     @IBAction func paypal_button(_ sender: Any) {
         if let url = URL(string: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal@sl-soft.de&item_name=Kext-Updater&currency_code=EUR"),
@@ -706,7 +695,6 @@ class KextUpdater: NSViewController {
     }
     
     override func awakeFromNib() {
-
     }
     
     @objc private func pressStartbutton(notification: NSNotification){
@@ -726,7 +714,6 @@ class KextUpdater: NSViewController {
             key_yes_button.isHidden=true
         }
      }
-    
     
     @objc private func closePrefs(notification: NSNotification){
         let crt = UserDefaults.standard.bool(forKey: "CRT")
@@ -874,8 +861,6 @@ class KextUpdater: NSViewController {
             imageView.stopAnimating()
         }
         self.app_logo_animation.isHidden=true
-
-        
     }
     
     func check_theme() -> Void {
@@ -897,7 +882,4 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set("No", forKey: "Refreshtime")
         }
     }
-    
-    
-    
 }
