@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDEE123AE4F04008879BE /* Networkerror.swift */; };
-		2A856DC323B429A6008760A9 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A856DC123B4291F008760A9 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
@@ -43,6 +42,7 @@
 		2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC323150F39006D447C /* progressanim.png */; };
 		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
+		2AE9017D23CE3DA4000AB24D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A856DC123B4291F008760A9 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; };
 		7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
@@ -78,7 +78,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2A856DC323B429A6008760A9 /* KUMenuBar.app in Bin Copy */,
+				2AE9017D23CE3DA4000AB24D /* KUMenuBar.app in Bin Copy */,
 				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
 				2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
