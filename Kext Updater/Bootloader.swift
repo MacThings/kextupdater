@@ -64,12 +64,16 @@ class Bootloader: NSViewController {
         let gettitle = (sender as AnyObject).selectedCell()!.title
         if gettitle == "OpenCore"{
            UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
+        } else if gettitle == "OpenCore (NDK Fork)" {
+            UserDefaults.standard.set("OpenCore-NDK", forKey: "Bootloaderkind")
         } else if gettitle == "AppleSupport" {
             UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
         } else if gettitle == "AppleSupport Nightly" {
             UserDefaults.standard.set("AppleSupportNightly", forKey: "Bootloaderkind")
         } else if gettitle == "OpenCore Nightly" {
             UserDefaults.standard.set("OpenCoreNightly", forKey: "Bootloaderkind")
+        } else if gettitle == "OpenCore Nightly (NDK Fork)" {
+            UserDefaults.standard.set("OpenCoreNightly-NDK", forKey: "Bootloaderkind")
         }
     }
     

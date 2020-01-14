@@ -272,6 +272,11 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set("0", forKey: "PCIDB")
         }
         
+        let navlast = UserDefaults.standard.string(forKey: "NSNavLastRootDirectory")
+        if navlast == nil{
+            UserDefaults.standard.set("~/Downloads", forKey: "NSNavLastRootDirectory")
+        }
+        
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
             infobox_admin_status_content_yes.isHidden = true

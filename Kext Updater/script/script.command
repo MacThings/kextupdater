@@ -1159,6 +1159,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"opencore" ]; then
     mv ${ScriptDownloadPath}/opencore ${ScriptDownloadPath}/"OpenCore"
     fi
+    if [ -d ${ScriptDownloadPath}/"opencore-ndk" ]; then
+    mv ${ScriptDownloadPath}/opencore-ndk ${ScriptDownloadPath}/"OpenCore (NDK Fork)"
+    fi
     if [ -d ${ScriptDownloadPath}/"applesupport" ]; then
     mv ${ScriptDownloadPath}/applesupport ${ScriptDownloadPath}/"AppleSupport"
     fi
@@ -1206,6 +1209,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"opencorenightly" ]; then
     mv ${ScriptDownloadPath}/opencorenightly ${ScriptDownloadPath}/"OpenCore Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"opencorenightly-ndk" ]; then
+    mv ${ScriptDownloadPath}/opencorenightly-ndk ${ScriptDownloadPath}/"OpenCore Nightly (NDK Fork)"
     fi
 
     if [[ $checkchime = "1" ]]; then
@@ -1264,8 +1270,14 @@ if [ $kexte = "Bootloader" ]; then
         if [[ $kextchoice = "OpenCore" ]]; then
           kextchoice="opencore"
         fi
+        if [[ $kextchoice = "OpenCore-NDK" ]]; then
+          kextchoice="opencore-ndk"
+        fi
         if [[ $kextchoice = "OpenCoreNightly" ]]; then
           kextchoice="opencorenightly"
+        fi
+        if [[ $kextchoice = "OpenCoreNightly-NDK" ]]; then
+          kextchoice="opencorenightly-ndk"
         fi
         if [[ $kextchoice = "AppleSupport" ]]; then
           kextchoice="applesupport"
@@ -2107,6 +2119,12 @@ function _efi_folder_creator()
         elif [[ "$efi_creator" = "OpenCore Nightly" ]]; then
             folder="opencorenightlycreator"
             kext_target="OC/Kexts"
+        elif [[ "$efi_creator" = "OpenCore Nightly (NDK Fork)" ]]; then
+            folder="opencorenightly-ndkcreator"
+            kext_target="OC/Kexts"
+        elif [[ "$efi_creator" = "OpenCore (NDK Fork)" ]]; then
+            folder="opencore-ndkcreator"
+            kext_target="OC/Kexts"
         fi
 
         echo "Bootloader: $efi_creator"
@@ -2114,8 +2132,12 @@ function _efi_folder_creator()
         echo "$creating_efi"
         echo " "
         
+        if [[ ! -d "${ScriptDownloadPath}" ]]; then
+            mkdir "${ScriptDownloadPath}"
+        fi
+        
         curl -sS -o ${ScriptTmpPath}/EFI.zip https://$url/${folder}/EFI.zip
-        unzip -o -q ${ScriptTmpPath}/EFI.zip -d ${ScriptDownloadPath}/EFI
+        unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
 
         while read -r line; do
             if [[ "$line" = "ACPIBatteryManager" ]]; then
@@ -2153,7 +2175,7 @@ function _efi_folder_creator()
                 cp -r ${ScriptDownloadPath}/$line/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             fi
         done < "${ScriptTmpPath}"/eficreator
-    
+
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Creator" "None"
 
     fi

@@ -89,6 +89,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("Clover Nightly", forKey: "EFI Creator")
         }else if bootloader_kind == 0 {
         UserDefaults.standard.set("None", forKey: "EFI Creator")
+        }else if bootloader_kind == 5 {
+        UserDefaults.standard.set("OpenCore Nightly (NDK Fork)", forKey: "EFI Creator")
+        }else if bootloader_kind == 6 {
+        UserDefaults.standard.set("OpenCore (NDK Fork)", forKey: "EFI Creator")
         }
     }
     
