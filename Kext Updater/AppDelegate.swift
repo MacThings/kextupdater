@@ -13,6 +13,10 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    func applicationShouldTerminateAfterLastWindowClosed (_ theApplication: NSApplication) -> Bool {
+        return true
+    }
+    
     var process:Process!
     var out:FileHandle?
     var outputTimer: Timer?

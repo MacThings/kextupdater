@@ -4411,7 +4411,7 @@ DQ
                 </windowController>
                 <customObject id="faS-5V-PUH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="659"/>
+            <point key="canvasLocation" x="-408" y="653"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VuM-Os-INa">
