@@ -112,6 +112,9 @@
 /* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
 "8KI-5D-e2p.title" = "Download";
 
+/* Class = "NSMenuItem"; title = "OpenCore (NDK Fork)"; ObjectID = "8ss-Jz-7PF"; */
+"8ss-Jz-7PF.title" = "OpenCore (NDK Fork)";
+
 /* Class = "NSMenuItem"; title = "Please Select"; ObjectID = "9bX-ps-dhp"; */
 "9bX-ps-dhp.title" = "Bitte auswählen";
 
@@ -193,6 +196,9 @@
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "AQu-gQ-jTO"; */
 "AQu-gQ-jTO.title" = "Bitte auswählen";
 
+/* Class = "NSMenuItem"; title = "OpenCore (NDK Fork)"; ObjectID = "AQy-ED-smk"; */
+"AQy-ED-smk.title" = "OpenCore (NDK Fork)";
+
 /* Class = "NSTextFieldCell"; title = "EFI Folder Creator"; ObjectID = "Asi-UQ-1TT"; */
 "Asi-UQ-1TT.title" = "EFI Folder Creator";
 
@@ -270,6 +276,9 @@
 
 /* Class = "NSMenuItem"; title = "17"; ObjectID = "ccz-yv-NkB"; */
 "ccz-yv-NkB.title" = "17";
+
+/* Class = "NSMenuItem"; title = "OpenCore Nightly (NDK Fork)"; ObjectID = "cJN-jU-ADV"; */
+"cJN-jU-ADV.title" = "OpenCore Nightly (NDK Fork)";
 
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "CkC-KB-Dk4"; */
 "CkC-KB-Dk4.title" = "Download";
@@ -442,8 +451,8 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Mounts/Unmounts the Boot-EFI"; ObjectID = "Gmk-gz-FIC"; */
 "Gmk-gz-FIC.ibShadowedToolTip" = "Mounted/Unmounted die Boot-EFI";
 
-/* Class = "NSButtonCell"; title = "WebDriver"; ObjectID = "gqe-Mv-U15"; */
-"gqe-Mv-U15.title" = "WebDriver";
+/* Class = "NSButtonCell"; title = "Webdriver"; ObjectID = "gqe-Mv-U15"; */
+"gqe-Mv-U15.title" = "Webdriver";
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1217"; ObjectID = "gVe-vH-pKe"; */
 "gVe-vH-pKe.title" = "10.11.6 - 15G1217";
@@ -483,9 +492,6 @@
 
 /* Class = "NSButtonCell"; title = "TSCAdjustReset"; ObjectID = "hxQ-d2-8hR"; */
 "hxQ-d2-8hR.title" = "TSCAdjustReset";
-
-/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "hyr-lg-hWh"; */
-"hyr-lg-hWh.title" = "Beenden";
 
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1408"; ObjectID = "i4T-Lh-gXu"; */
 "i4T-Lh-gXu.title" = "10.12.6 - 16G1408";
@@ -909,6 +915,9 @@
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
 "Tfb-H6-fo8.title" = "Box";
+
+/* Class = "NSMenuItem"; title = "OpenCore Nightly (NDK Fork)"; ObjectID = "TG2-Dr-2zV"; */
+"TG2-Dr-2zV.title" = "OpenCore Nightly (NDK Fork)";
 
 /* Class = "NSMenuItem"; title = "OpenCore Nightly"; ObjectID = "tGB-Gh-Bvm"; */
 "tGB-Gh-Bvm.title" = "OpenCore Nightly";

@@ -66,7 +66,6 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var webdriver_button: NSButton!
     @IBOutlet weak var bootloader_button: NSButton!
     @IBOutlet weak var report_button: NSButton!
-    @IBOutlet weak var quit_button: NSButton!
     @IBOutlet weak var efi_button: NSButton!
     @IBOutlet weak var tools_button: NSButton!
     
@@ -383,7 +382,6 @@ class KextUpdater: NSViewController {
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
         report_button.isEnabled=false
-        quit_button.isEnabled=false
         efi_button.isEnabled=false
         tools_button.isEnabled=false
         let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
@@ -457,7 +455,6 @@ class KextUpdater: NSViewController {
                 self.webdriver_button.isEnabled=true
                 self.bootloader_button.isEnabled=true
                 self.report_button.isEnabled=true
-                self.quit_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
                 self.animstop()
@@ -526,7 +523,6 @@ class KextUpdater: NSViewController {
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
         report_button.isEnabled=false
-        quit_button.isEnabled=false
         efi_button.isEnabled=false
         tools_button.isEnabled=false
         animstart()
@@ -547,7 +543,6 @@ class KextUpdater: NSViewController {
                 self.webdriver_button.isEnabled=true
                 self.bootloader_button.isEnabled=true
                 self.report_button.isEnabled=true
-                self.quit_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
                 self.animstop()

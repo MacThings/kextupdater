@@ -13,9 +13,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    func applicationShouldTerminateAfterLastWindowClosed (_ theApplication: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed (_
+        theApplication: NSApplication) -> Bool {
         return true
     }
+    
+    
     
     var process:Process!
     var out:FileHandle?
@@ -30,6 +33,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+ 
+         for key in UserDefaults.standard.dictionaryRepresentation().keys {
+             if key.hasPrefix("dl-"){
+                 UserDefaults.standard.removeObject(forKey: key)
+             }
+         }
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["exitapp"])
         }

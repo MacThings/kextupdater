@@ -2574,7 +2574,7 @@ DQ
                                 </buttonCell>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYk-dr-O7m" userLabel="Kextmanager button">
-                                <rect key="frame" x="112" y="13" width="106" height="32"/>
+                                <rect key="frame" x="10" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <string key="toolTip">Here you can download kexts by hand or exclude kext´s which you don´t want to check. The manager is NOT there to check the currently installed kexts.</string>
                                 <buttonCell key="cell" type="push" title="Kextmanager" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="UUv-he-hdP">
@@ -2586,9 +2586,9 @@ DQ
                                 </connections>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-v8-72Q">
-                                <rect key="frame" x="217" y="13" width="100" height="32"/>
+                                <rect key="frame" x="136" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="WebDriver" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="gqe-Mv-U15">
+                                <buttonCell key="cell" type="push" title="Webdriver" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="gqe-Mv-U15">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -2597,7 +2597,7 @@ DQ
                                 </connections>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-E7-UGI">
-                                <rect key="frame" x="319" y="13" width="100" height="32"/>
+                                <rect key="frame" x="261" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Bootloader" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="2LG-ET-PWz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2608,7 +2608,7 @@ DQ
                                 </connections>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-iI-xm0">
-                                <rect key="frame" x="421" y="13" width="100" height="32"/>
+                                <rect key="frame" x="387" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Report" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="oCj-NC-GNi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2668,7 +2668,7 @@ DQ
                                 </connections>
                             </button>
                             <button toolTip="Checks if there are newer kexts for you." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-nI-Tsy" userLabel="Start bt">
-                                <rect key="frame" x="520" y="13" width="100" height="32"/>
+                                <rect key="frame" x="515" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Check" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NnJ-Dx-gBx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2682,7 +2682,7 @@ DQ
                                 </connections>
                             </button>
                             <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-Wr-6iP" userLabel="Stop bt">
-                                <rect key="frame" x="520" y="13" width="100" height="32"/>
+                                <rect key="frame" x="515" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" continuous="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E4b-uj-GdI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2715,17 +2715,6 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="crt" id="N5W-Hb-aO1"/>
                             </imageView>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyp-0e-eWT">
-                                <rect key="frame" x="14" y="13" width="100" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="hyr-lg-hWh">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="quit_app:" target="bdJ-Gk-pDf" id="lxf-Zb-ub6"/>
-                                </connections>
-                            </button>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="yem-HY-3eF">
                                 <rect key="frame" x="18" y="79" width="386" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2790,7 +2779,6 @@ DQ
                         <outlet property="keychainyes" destination="axm-8K-AE6" id="8FK-on-F9x"/>
                         <outlet property="kuversion" destination="v0v-Oh-JvP" id="7K3-TM-11p"/>
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
-                        <outlet property="quit_button" destination="nyp-0e-eWT" id="eTx-qV-KqC"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="show_networkerror" destination="COx-cu-9jq" id="laY-MV-KJL"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
