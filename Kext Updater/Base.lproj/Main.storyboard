@@ -1947,7 +1947,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7i-1Z-ijn">
-                                <rect key="frame" x="138" y="96" width="117" height="18"/>
+                                <rect key="frame" x="9" y="76" width="117" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vaT-ze-Oea">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1958,7 +1958,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-qc-MPF">
-                                <rect key="frame" x="8" y="96" width="113" height="18"/>
+                                <rect key="frame" x="138" y="96" width="113" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VoodooPS2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="r9X-YF-NZh">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1980,7 +1980,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lv2-uu-bms">
-                                <rect key="frame" x="8" y="116" width="91" height="18"/>
+                                <rect key="frame" x="138" y="116" width="91" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VirtualSMC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZCd-5w-cvc">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2087,7 +2087,7 @@ DQ
                                 </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-Vi-dkU">
-                                <rect key="frame" x="138" y="116" width="109" height="18"/>
+                                <rect key="frame" x="9" y="96" width="109" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VoodooInput" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mtV-lF-xbc">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2128,6 +2128,17 @@ DQ
                                 </view>
                                 <color key="fillColor" white="0.0" alpha="0.080710827464788734" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oy-KQ-PHx">
+                                <rect key="frame" x="9" y="116" width="110" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="USBInjectAll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WHC-ZH-fTB">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-usbinjectallnightly" id="YDH-ub-dpT"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

@@ -17,9 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         theApplication: NSApplication) -> Bool {
         return true
     }
-    
-    
-    
+
     var process:Process!
     var out:FileHandle?
     var outputTimer: Timer?
