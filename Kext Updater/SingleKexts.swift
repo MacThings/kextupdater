@@ -314,7 +314,7 @@ class SingleKexts: NSViewController {
         webview_button.performClick(nil)
     }
     @IBAction func usbinjectall(_ sender: Any) {
-        UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-usb-inject-all/overview", forKey: "SourceURL")
+        UserDefaults.standard.set("https://github.com/Sniki/OS-X-USB-Inject-All", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func virtualsmc(_ sender: Any) {
