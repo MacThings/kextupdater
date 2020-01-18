@@ -655,6 +655,12 @@ function initial()
         _helpDefaultWrite "Bootloaderversion" "$bootloader v$ocversion"
     fi
 
+    nohack=$( _helpDefaultRead "Bootloaderversion" )
+    if [[ "$nohack" = "OpenCore v" ]]; then
+        _helpDefaultWrite "Bootloaderversion" ")-: Buy a Hackintosh!"
+    fi
+    
+
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
         efipath=$( find "$mountpoint" -name "*efaults.plist" |grep -v "Trashes" | grep -v "._" | sed -e 's/Defaul.*//g' -e 's/defaul.*//g' -e 's/DEFAUL.*//g' |head -n 1 )
