@@ -2044,7 +2044,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-DC-eUE">
-                                <rect key="frame" x="286" y="55" width="196" height="25"/>
+                                <rect key="frame" x="286" y="55" width="235" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="No, thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -4582,7 +4582,7 @@ DQ
                                             <menuItem title="OpenCore (NDK Fork)" id="8ss-Jz-7PF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="AppleSupport" id="4i4-wk-0pn">
+                                            <menuItem title="AppleSupport" hidden="YES" id="4i4-wk-0pn">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem isSeparatorItem="YES" id="Vgw-hs-zhR"/>
@@ -4592,7 +4592,11 @@ DQ
                                             <menuItem title="OpenCore Nightly (NDK Fork)" id="TG2-Dr-2zV">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
+                                            <menuItem isSeparatorItem="YES" id="zf7-qe-DHl"/>
+                                            <menuItem title="OcSupportPkg" id="25w-aq-FCF">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="AppleSupport Nightly" hidden="YES" id="Edg-dY-fWs">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>
