@@ -597,6 +597,8 @@ function initial()
     /usr/libexec/PlistBuddy -c "Delete Rootuser" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
     fi
 
+    _languageselect
+
     efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     if [[ $efiscan = "" ]]; then
     efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
@@ -657,9 +659,13 @@ function initial()
 
     nohack=$( _helpDefaultRead "Bootloaderversion" )
     if [[ "$nohack" = "OpenCore v" ]]; then
-        _helpDefaultWrite "Bootloaderversion" ")-: Buy a Hackintosh!"
+        lang=$( osascript -e 'user locale of (get system info)' )
+        if [[ "$lang" = "de_DE" ]]; then
+            _helpDefaultWrite "Bootloaderversion" "😢 Kein Hackintosh!"
+        else
+            _helpDefaultWrite "Bootloaderversion" "😢 Get a Hackintosh!"
+        fi
     fi
-    
 
     if [[ $mountpoint != "" ]];then
       if [[ $bootloader = "Ozmosis" ]]; then
