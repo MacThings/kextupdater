@@ -137,6 +137,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-intelmausiethernet")
         UserDefaults.standard.set(true, forKey: "dl-lilu")
         UserDefaults.standard.set(true, forKey: "dl-lilufriend")
+        UserDefaults.standard.set(true, forKey: "dl-macpromnd")
         UserDefaults.standard.set(true, forKey: "dl-nightshiftunlocker")
         UserDefaults.standard.set(true, forKey: "dl-notouchid")
         UserDefaults.standard.set(true, forKey: "dl-novpajpeg")
@@ -272,6 +273,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func lilufriend(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/PMheart/LiluFriend", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func macpromnd(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/IOIIIO/MacProMemoryNotificationDisabler", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func nightshiftunlocker(_ sender: Any) {

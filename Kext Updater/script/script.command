@@ -214,6 +214,7 @@ kextArray=(
 "intelmausi","IntelMausi","IntelMausi",""
 "lilu","Lilu ","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
+"macpromnd","MacProMemoryNotificationDisabler","MacProMemoryNotificationDisabler",""
 "nightshiftunlocker","NightShiftUnlocker","NightShiftUnlocker",""
 "notouchid","NoTouchID","NoTouchID",""
 "novpajpeg","NoVPAJpeg","NoVPAJpeg",""
@@ -1186,6 +1187,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"atheroswifiinjector" ]; then
     mv ${ScriptDownloadPath}/atheroswifiinjector ${ScriptDownloadPath}/"AtherosWiFiInjector"
+    fi
+    if [ -d ${ScriptDownloadPath}/"macpromnd" ]; then
+    mv ${ScriptDownloadPath}/macpromnd ${ScriptDownloadPath}/"MacProMemoryNotificationDisabler"
     fi
     if [ -d ${ScriptDownloadPath}/"thunderboltreset" ]; then
     mv ${ScriptDownloadPath}/thunderboltreset ${ScriptDownloadPath}/"ThunderboltReset"
@@ -2178,6 +2182,8 @@ function _efi_folder_creator()
             elif [[ "$line" = "GenericUSBXHCI" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Universal/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "IntelBluetoothFirmware" ]]; then
+                 _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
+            elif [[ "$line" = "MacProMemoryNotificationDisabler" ]]; then
                  _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "NullEthernet" ]]; then
                 _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
