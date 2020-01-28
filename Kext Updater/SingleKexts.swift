@@ -132,6 +132,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-fakesmc")
         UserDefaults.standard.set(true, forKey: "dl-genericusbxhci")
         UserDefaults.standard.set(true, forKey: "dl-hibernationfixup")
+        UserDefaults.standard.set(true, forKey: "dl-intelbluetoothfirmware")
         UserDefaults.standard.set(true, forKey: "dl-intelmausi")
         UserDefaults.standard.set(true, forKey: "dl-intelmausiethernet")
         UserDefaults.standard.set(true, forKey: "dl-lilu")
@@ -251,6 +252,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func hibernationfixup(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/HibernationFixup", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func intelbluetoothfirmware(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/zxystd/IntelBluetoothFirmware", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func intelmausi(_ sender: Any) {

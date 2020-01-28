@@ -82,7 +82,7 @@ function _getsecret() {
     fi
 }
 
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -206,6 +206,7 @@ kextArray=(
 "fakesmc","FakeSMC","FakeSMC",""
 "genericusbxhci","GenericUSBXHCI","GenericUSBXHCI",""
 "hibernationfixup","HibernationFixup","HibernationFixup",""
+"intelbluetoothfirmware","IntelBluetoothFirmware","IntelBluetoothFirmware",""
 "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup","WhateverGreen","Alarm"
 "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup","WhateverGreen","Alarm"
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
@@ -1192,6 +1193,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"tscadjustreset" ]; then
     mv ${ScriptDownloadPath}/tscadjustreset ${ScriptDownloadPath}/"TSCAdjustReset"
     fi
+    if [ -d ${ScriptDownloadPath}/"intelbluetoothfirmware" ]; then
+    mv ${ScriptDownloadPath}/tscadjustreset ${ScriptDownloadPath}/"IntelBluetoothFirmware"
+    fi
     if [ -d ${ScriptDownloadPath}/"applealcnightly" ]; then
     mv ${ScriptDownloadPath}/applealcnightly ${ScriptDownloadPath}/"AppleALC Nightly"
     fi
@@ -2173,6 +2177,8 @@ function _efi_folder_creator()
                 _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "GenericUSBXHCI" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Universal/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "IntelBluetoothFirmware" ]]; then
+                 _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "NullEthernet" ]]; then
                 _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "RealtekRTL8111" ]]; then
