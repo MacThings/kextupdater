@@ -110,7 +110,7 @@ function _excludedkexts()
         offline_node=$( _helpDefaultRead "EFIx" )
         offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
         find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_name=$( defaults read "$fname" CFBundleIdentifier )
         kext_version=$( defaults read "$fname" CFBundleVersion )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
         done
@@ -131,7 +131,7 @@ function _excludedkexts()
         kextstatsori=""
         custom_path=$( _helpDefaultRead "CustomEfiPath" )
         find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_name=$( defaults read "$fname" CFBundleIdentifier )
         kext_version=$( defaults read "$fname" CFBundleVersion )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
         done
@@ -227,6 +227,7 @@ kextArray=(
 "rtcmemoryfixup","RTCMemoryFixup","RTCMemoryFixup",""
 "shiki","Shiki","Shiki","WhateverGreen","Alarm"
 "sinetekrtsx","Sinetek-rtsx","Sinetekrtsx",""
+"smalltreeintel82576","SmallTreeIntel82576","SmallTreeIntel82576",""
 "systemprofilermemoryfixup","SystemProfilerMemoryFixup","SystemProfilerMemoryFixup",""
 "thunderboltreset","ThunderboltReset ","ThunderboltReset",""
 "tscadjustreset","TSCAdjustReset","TSCAdjustReset",""
@@ -876,7 +877,7 @@ kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character
         offline_node=$( _helpDefaultRead "EFIx" )
         offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
         find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_name=$( defaults read "$fname" CFBundleIdentifier )
         kext_version=$( defaults read "$fname" CFBundleVersion )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
         done
@@ -897,7 +898,7 @@ kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character
         kextstats=""
         custom_path=$( _helpDefaultRead "CustomEfiPath" )
         find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleName )
+        kext_name=$( defaults read "$fname" CFBundleIdentifier )
         kext_version=$( defaults read "$fname" CFBundleVersion )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
         done
