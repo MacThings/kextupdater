@@ -110,8 +110,8 @@ function _excludedkexts()
         offline_node=$( _helpDefaultRead "EFIx" )
         offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
         find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleIdentifier )
-        kext_version=$( defaults read "$fname" CFBundleVersion )
+        kext_name=$( /usr/libexec/PlistBuddy -c "print CFBundleIdentifier" "$fname" )
+        kext_version=$( /usr/libexec/PlistBuddy -c "print CFBundleVersion" "$fname" )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
         done
         
@@ -131,8 +131,8 @@ function _excludedkexts()
         kextstatsori=""
         custom_path=$( _helpDefaultRead "CustomEfiPath" )
         find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleIdentifier )
-        kext_version=$( defaults read "$fname" CFBundleVersion )
+        kext_name=$( /usr/libexec/PlistBuddy -c "print CFBundleIdentifier" "$fname" )
+        kext_version=$( /usr/libexec/PlistBuddy -c "print CFBundleVersion" "$fname" )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
         done
 
@@ -877,8 +877,8 @@ kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character
         offline_node=$( _helpDefaultRead "EFIx" )
         offline_path=$( df -h |grep $offline_node |sed 's/.*\/Vol/\/Vol/g')
         find "$offline_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleIdentifier )
-        kext_version=$( defaults read "$fname" CFBundleVersion )
+        kext_name=$( /usr/libexec/PlistBuddy -c "print CFBundleIdentifier" "$fname" )
+        kext_version=$( /usr/libexec/PlistBuddy -c "print CFBundleVersion" "$fname" )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/offline_efi_kexts
         done
 
@@ -898,8 +898,8 @@ kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character
         kextstats=""
         custom_path=$( _helpDefaultRead "CustomEfiPath" )
         find "$custom_path" -name "Info.plist" |grep -v Sensor |grep -v 501 | while read fname; do
-        kext_name=$( defaults read "$fname" CFBundleIdentifier )
-        kext_version=$( defaults read "$fname" CFBundleVersion )
+        kext_name=$( /usr/libexec/PlistBuddy -c "print CFBundleIdentifier" "$fname" )
+        kext_version=$( /usr/libexec/PlistBuddy -c "print CFBundleVersion" "$fname" )
         echo "$kext_name (""$kext_version"")" >> "$ScriptTmpPath"/custom_efi_kexts
         done
 
@@ -2192,6 +2192,8 @@ function _efi_folder_creator()
                 cp -r ${ScriptDownloadPath}/$line/$line-*/Vers*/Release/$line.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "Sinetekrtsx" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "SmallTreeIntel82576" ]]; then
+                cp -r ${ScriptDownloadPath}/$line/Extensions/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "USBInjectAll" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "VirtualSMC" ]]; then
