@@ -4295,6 +4295,9 @@ DQ
                                             <menuItem title="Please select" state="on" id="AQu-gQ-jTO">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem title="10.13.6 - 17G11023" id="IOX-cB-Qui">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
                                             <menuItem title="10.13.6 - 17G10021" id="B9c-RJ-BXi">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
