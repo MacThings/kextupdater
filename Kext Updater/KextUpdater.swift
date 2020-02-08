@@ -51,6 +51,9 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var footer_efi_image_red: NSImageView!
     @IBOutlet weak var footer_efi_image_green: NSImageView!
     @IBOutlet weak var footer_efi_diskinfo_click: NSButton!
+    @IBOutlet weak var footer_efi_image_eject: NSImageView!
+    
+    
     // Footer Section - End
     
     @IBOutlet weak var kuversion: NSTextField!
@@ -681,6 +684,7 @@ class KextUpdater: NSViewController {
         if mounted == "Yes"{
             //footer_efi_efimount_bt.title = "efimounted".localized()
             footer_efi_image_green.isHidden = false
+            footer_efi_image_eject.isHidden = false
             footer_efi_diskinfo_click.isHidden = false
             folder_efi_icon.isEnabled = true
             folder_efi_path.stringValue = (cloverpath ?? "")
@@ -688,6 +692,7 @@ class KextUpdater: NSViewController {
             //footer_efi_efimount_bt.title = "efinotmounted".localized()
             footer_efi_image_red.isHidden = false
             footer_efi_image_green.isHidden = true
+            footer_efi_image_eject.isHidden = true
             footer_efi_diskinfo_click.isHidden = true
             folder_efi_icon.isEnabled = false
             folder_efi_path.stringValue = ("")

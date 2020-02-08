@@ -2558,6 +2558,11 @@ DQ
                                                 <action selector="paypal_button:" target="bdJ-Gk-pDf" id="2dt-8D-wpL"/>
                                             </connections>
                                         </button>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuX-Zb-se3">
+                                            <rect key="frame" x="478" y="18" width="10" height="10"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="eject" id="vz9-lB-z7A"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
@@ -2870,6 +2875,7 @@ DQ
                         <outlet property="folder_efi_icon" destination="O11-yy-mid" id="pyg-Wg-BTS"/>
                         <outlet property="folder_efi_path" destination="Aho-tJ-6y0" id="fBg-Fh-4Dx"/>
                         <outlet property="footer_efi_diskinfo_click" destination="eug-xW-6I7" id="ChV-5c-c3y"/>
+                        <outlet property="footer_efi_image_eject" destination="vuX-Zb-se3" id="khi-ZL-2YM"/>
                         <outlet property="footer_efi_image_green" destination="H1e-oY-n6y" id="B9n-O9-RQ5"/>
                         <outlet property="footer_efi_image_red" destination="fsU-x5-KeN" id="mMm-by-65K"/>
                         <outlet property="infobox_admin_status_content_no" destination="sj4-s1-9gP" id="z9V-do-b80"/>
@@ -4869,6 +4875,7 @@ DQ
         <image name="crt" width="466" height="527"/>
         <image name="efihd" width="246" height="255"/>
         <image name="efimaker" width="355" height="512"/>
+        <image name="eject" width="84" height="84"/>
         <image name="harddisk" width="256" height="256"/>
         <image name="hf-newyear" width="400" height="400"/>
         <image name="hf-xmas" width="200" height="182"/>
