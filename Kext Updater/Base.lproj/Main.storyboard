@@ -4593,11 +4593,11 @@ DQ
             <objects>
                 <viewController title="Bootloader" id="3pD-vQ-Z2c" customClass="Bootloader" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" focusRingType="none" id="yTk-ue-1dY">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="163"/>
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="216"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGj-fy-vrb">
-                                <rect key="frame" x="-2" y="109" width="654" height="47"/>
+                                <rect key="frame" x="-8" y="157" width="654" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Bootloader" id="gCe-JZ-cNe">
                                     <font key="font" size="33" name="ArialRoundedMTBold"/>
@@ -4606,11 +4606,11 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="TSM-tI-DH2">
-                                <rect key="frame" x="146" y="102" width="333" height="5"/>
+                                <rect key="frame" x="146" y="155" width="333" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59n-g8-Uei">
-                                <rect key="frame" x="170" y="62" width="145" height="25"/>
+                                <rect key="frame" x="170" y="115" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Please select" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="eH4-n6-fhn" id="60o-LF-v7J">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4634,7 +4634,7 @@ DQ
                                 </connections>
                             </popUpButton>
                             <popUpButton hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cu0-Ru-HB3" userLabel="Clover Pulldown">
-                                <rect key="frame" x="338" y="62" width="145" height="25"/>
+                                <rect key="frame" x="338" y="115" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Please select" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" selectedItem="Tbd-kw-pCp" id="yGN-bf-pdV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4665,7 +4665,7 @@ DQ
                                 </connections>
                             </popUpButton>
                             <popUpButton hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-oi-kyD" userLabel="OpenCore Pulldown">
-                                <rect key="frame" x="338" y="62" width="145" height="25"/>
+                                <rect key="frame" x="338" y="115" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Please Select" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" selectedItem="9bX-ps-dhp" id="2Rn-u3-kgV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4706,7 +4706,7 @@ DQ
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zty-PZ-fLA">
-                                <rect key="frame" x="336" y="65" width="199" height="17"/>
+                                <rect key="frame" x="338" y="120" width="199" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Please choose a Bootloader" id="aNc-Xf-4S2">
                                     <font key="font" metaFont="system"/>
@@ -4715,7 +4715,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-An-nKH" userLabel="OpenCore Logo">
-                                <rect key="frame" x="521" y="19" width="109" height="109"/>
+                                <rect key="frame" x="521" y="72" width="109" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4723,7 +4723,7 @@ DQ
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opencore_logo_shadow" id="0ux-Im-Hq3"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-tP-p6C" userLabel="Clover Logo">
-                                <rect key="frame" x="12" y="21" width="106" height="106"/>
+                                <rect key="frame" x="12" y="74" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4731,7 +4731,7 @@ DQ
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="clover_logo_shadow" id="WbM-71-rBU"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-tt-iml">
-                                <rect key="frame" x="172" y="17" width="140" height="32"/>
+                                <rect key="frame" x="14" y="13" width="140" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CYc-di-9EN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4741,8 +4741,30 @@ DQ
                                     <action selector="close_button:" target="3pD-vQ-Z2c" id="ZMa-tr-TDA"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-iS-5s8">
+                                <rect key="frame" x="170" y="85" width="311" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Exclude OpenCore from Update check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1uw-NE-J1u">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="3It-W6-KlE" name="value" keyPath="values.ex-OpenCore" id="9GQ-ZW-HSa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-9J-kXf">
+                                <rect key="frame" x="170" y="58" width="311" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Exclude Clover from Update check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JKH-QD-EW1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="3It-W6-KlE" name="value" keyPath="values.ex-Clover" id="15u-3v-Nru"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgY-LP-6yU" userLabel="Download button">
-                                <rect key="frame" x="340" y="17" width="140" height="32"/>
+                                <rect key="frame" x="496" y="13" width="140" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Download" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8KI-5D-e2p">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4769,8 +4791,9 @@ DQ
                     </connections>
                 </viewController>
                 <customObject id="gsR-PU-wiB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="3It-W6-KlE"/>
             </objects>
-            <point key="canvasLocation" x="1397" y="1382"/>
+            <point key="canvasLocation" x="1397" y="1408"/>
         </scene>
         <!--Changelog-->
         <scene sceneID="Klp-qA-dOj">
