@@ -386,6 +386,10 @@ class KextUpdater: NSViewController {
         bootloader_button.isEnabled=false
         report_button.isEnabled=false
         efi_button.isEnabled=false
+        footer_efi_image_eject.isEnabled=false
+        footer_efi_image_red.isEnabled=false
+        footer_efi_image_green.isEnabled=false
+        footer_efi_diskinfo_click.isEnabled=false
         tools_button.isEnabled=false
         let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
         let fontfamily = UserDefaults.standard.string(forKey: "Font Family")
@@ -460,6 +464,10 @@ class KextUpdater: NSViewController {
                 self.report_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
+                self.footer_efi_image_eject.isEnabled=true
+                self.footer_efi_image_red.isEnabled=true
+                self.footer_efi_image_green.isEnabled=true
+                self.footer_efi_diskinfo_click.isEnabled=true
                 self.animstop()
                 
                 UserDefaults.standard.set("Update", forKey: "Choice")
