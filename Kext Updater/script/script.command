@@ -64,7 +64,7 @@ function _checkpass() {
 function _checkpass_initial() {
 
     user=$( _helpDefaultRead "Rootuser" )
-    passw=$( security find-generic-password -a "Kext Updater" -w | sed "s/\"/\\\\\"/g")
+    passw=$( security find-generic-password -a "Kext Updater" -w | sed "s/\"/\\\\\"/g" )
 
     osascript -e 'do shell script "dscl /Local/Default -u '$user'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
 
@@ -731,6 +731,18 @@ function initial()
 
     if [[ $bootloader = "OpenCore" ]]; then
     check_opencore_conf
+    fi
+
+    keychain=$( _helpDefaultRead "Keychain" )
+
+    if [[ "$keychain" = 1 ]]; then ### Checks if the Rootpassword is still valid
+        passw=$( security find-generic-password -a "Kext Updater" -w | sed "s/\"/\\\\\"/g" )
+            if [[ "$passw" != 44 ]]; then
+                osascript -e 'do shell script "sudo date" user name "'"$rootuser"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+                if [[ $? != "0" ]]; then
+                    echo "$rootpass_wrong"
+                fi
+            fi
     fi
 
 }
