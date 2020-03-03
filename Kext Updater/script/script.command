@@ -82,7 +82,7 @@ function _getsecret() {
     fi
 }
 
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -225,6 +225,7 @@ kextArray=(
 "opencore","OpenCore","OpenCore",""
 "realtekrtl8111","RealtekRTL8111","RealtekRTL8111",""
 "rtcmemoryfixup","RTCMemoryFixup","RTCMemoryFixup",""
+"smcamdprocessor","SMCAMDProcessor","SMCAMDProcessor",""
 "shiki","Shiki","Shiki","WhateverGreen","Alarm"
 "sinetekrtsx","Sinetek-rtsx","Sinetekrtsx",""
 "smalltreeintel82576","SmallTreeIntel82576","SmallTreeIntel82576",""
@@ -1113,14 +1114,14 @@ function _cleanup()
 function _lastcheck()
 {
 
-    if [[ "$custom_efi" = "" ]] && [[ "$offline_efi" = "" ]]; then
+    #if [[ "$custom_efi" = "" ]] && [[ "$offline_efi" = "" ]]; then
         lastcheckfunc=$( _helpDefaultRead "Last Check" )
         if [[ $lastcheckfunc != "Never" ]]; then
             echo $lastcheck
             echo $lastcheckfunc
             echo " "
         fi
-    fi
+    #fi
 }
 
 #============================== Main Function ==============================#
@@ -2206,6 +2207,8 @@ function _efi_folder_creator()
                 cp -r ${ScriptDownloadPath}/$line/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "SmallTreeIntel82576" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Extensions/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
+            elif [[ "$line" = "SMCAMDProcessor" ]]; then
+                _PRINT_MSG "$efi_manual_1 $line $efi_manual_2\n"
             elif [[ "$line" = "USBInjectAll" ]]; then
                 cp -r ${ScriptDownloadPath}/$line/Release/*.kext ${ScriptDownloadPath}/${efi_name}/$kext_target/.
             elif [[ "$line" = "VirtualSMC" ]]; then

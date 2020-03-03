@@ -147,6 +147,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-rtcmemoryfixup")
         UserDefaults.standard.set(true, forKey: "dl-sinetekrtsx")
         UserDefaults.standard.set(true, forKey: "dl-smalltreeintel82576")
+        UserDefaults.standard.set(true, forKey: "dl-smcamdprocessor")
         UserDefaults.standard.set(true, forKey: "dl-systemprofilermemoryfixup")
         UserDefaults.standard.set(true, forKey: "dl-thunderboltreset")
         UserDefaults.standard.set(true, forKey: "dl-tscadjustreset")
@@ -311,6 +312,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func sinetekrtsx(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/sinetek/Sinetek-rtsx", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func smcamdprocessor(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/trulyspinach/SMCAMDProcessor", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func systemprofilermemoryfixup(_ sender: Any) {

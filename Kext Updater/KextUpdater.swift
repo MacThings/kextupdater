@@ -450,8 +450,8 @@ class KextUpdater: NSViewController {
                     UserDefaults.standard.set(checklast, forKey: "Last Check")
                     }
                 let lastcheck = (result as String)
-                UserDefaults.standard.set(lastcheck, forKey: "Last Check")
                 self.syncShellExec(path: self.scriptPath, args: ["mainscript"])
+                UserDefaults.standard.set(lastcheck, forKey: "Last Check")
             }
 
             DispatchQueue.main.async {
