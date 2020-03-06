@@ -4734,6 +4734,9 @@ DQ
                                             <menuItem title="OcSupportPkg" id="25w-aq-FCF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem title="OcBinaryData" id="IlB-pf-d4J">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
                                             <menuItem title="AppleSupport Nightly" hidden="YES" id="Edg-dY-fWs">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>

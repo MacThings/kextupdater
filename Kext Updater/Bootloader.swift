@@ -70,6 +70,8 @@ class Bootloader: NSViewController {
             UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
         } else if gettitle == "OcSupportPkg" {
                 UserDefaults.standard.set("OcSupportPkg", forKey: "Bootloaderkind")
+        } else if gettitle == "OcBinaryData" {
+            UserDefaults.standard.set("OcBinaryData", forKey: "Bootloaderkind")
         } else if gettitle == "AppleSupport Nightly" {
             UserDefaults.standard.set("AppleSupportNightly", forKey: "Bootloaderkind")
         } else if gettitle == "OpenCore Nightly" {

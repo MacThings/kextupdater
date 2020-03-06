@@ -1194,7 +1194,10 @@ function _main()
     mv ${ScriptDownloadPath}/applesupport ${ScriptDownloadPath}/"AppleSupport"
     fi
     if [ -d ${ScriptDownloadPath}/"ocsupportpkg" ]; then
-    mv ${ScriptDownloadPath}/applesupport ${ScriptDownloadPath}/"OcSupportPkg"
+    mv ${ScriptDownloadPath}/ocsupportpkg ${ScriptDownloadPath}/"OcSupportPkg"
+    fi
+    if [ -d ${ScriptDownloadPath}/"ocbinarydata" ]; then
+    mv ${ScriptDownloadPath}/ocbinarydata ${ScriptDownloadPath}/"OcBinaryData"
     fi
     if [ -d ${ScriptDownloadPath}/"nvidiagraphicsfixup" ]; then
     mv ${ScriptDownloadPath}/nvidiagraphicsfixup ${ScriptDownloadPath}/"NvidiaGraphicsFixup"
@@ -1321,6 +1324,9 @@ if [ $kexte = "Bootloader" ]; then
         fi
         if [[ $kextchoice = "OcSupportPkg" ]]; then
           kextchoice="ocsupportpkg"
+        fi
+        if [[ $kextchoice = "OcBinaryData" ]]; then
+          kextchoice="ocbinarydata"
         fi
         if [[ $kextchoice = "AppleSupportNightly" ]]; then
           kextchoice="applesupportnightly"
