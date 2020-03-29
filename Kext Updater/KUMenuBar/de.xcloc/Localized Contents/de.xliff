@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="KUMenuBar/Base.lproj/Main.storyboard" source-language="en" target-language="de" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.3.1" build-num="11C504"/>
+    </header>
+    <body>
+      <trans-unit id="1Xt-HY-uBw.title" xml:space="preserve">
+        <source>KU MenuBar</source>
+        <target>KU MenuBar</target>
+        <note>Class = "NSMenuItem"; title = "KU MenuBar"; ObjectID = "1Xt-HY-uBw";</note>
+      </trans-unit>
+      <trans-unit id="4sb-4s-VLi.title" xml:space="preserve">
+        <source>Quit KU MenuBar</source>
+        <target>KU MenuBar beenden</target>
+        <note>Class = "NSMenuItem"; title = "Quit KU MenuBar"; ObjectID = "4sb-4s-VLi";</note>
+      </trans-unit>
+      <trans-unit id="4zv-QS-4Dz.title" xml:space="preserve">
+        <source>Open Download Folder</source>
+        <target>Öffne Download Ordner</target>
+        <note>Class = "NSMenuItem"; title = "Open Download Folder"; ObjectID = "4zv-QS-4Dz";</note>
+      </trans-unit>
+      <trans-unit id="6dn-K7-ING.title" xml:space="preserve">
+        <source>Open Kext Updater</source>
+        <target>Kext Updater öffnen</target>
+        <note>Class = "NSMenuItem"; title = "Open Kext Updater"; ObjectID = "6dn-K7-ING";</note>
+      </trans-unit>
+      <trans-unit id="9Ll-4n-mqZ.title" xml:space="preserve">
+        <source>Check for Updates every</source>
+        <target>Prüfe auf Updates alle</target>
+        <note>Class = "NSTextFieldCell"; title = "Check for Updates every"; ObjectID = "9Ll-4n-mqZ";</note>
+      </trans-unit>
+      <trans-unit id="AYu-sK-qS6.title" xml:space="preserve">
+        <source>Main Menu</source>
+        <target>Main Menu</target>
+        <note>Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6";</note>
+      </trans-unit>
+      <trans-unit id="B0G-wl-DPc.title" xml:space="preserve">
+        <source>1</source>
+        <target>1</target>
+        <note>Class = "NSMenuItem"; title = "1"; ObjectID = "B0G-wl-DPc";</note>
+      </trans-unit>
+      <trans-unit id="BOF-NM-1cW.title" xml:space="preserve">
+        <source>Preferences...</source>
+        <target>Einstellungen...</target>
+        <note>Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "BOF-NM-1cW";</note>
+      </trans-unit>
+      <trans-unit id="Div-YM-d8p.title" xml:space="preserve">
+        <source>Ok</source>
+        <target>Ok</target>
+        <note>Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p";</note>
+      </trans-unit>
+      <trans-unit id="HBZ-fQ-iEw.title" xml:space="preserve">
+        <source>PID</source>
+        <target>PID</target>
+        <note>Class = "NSMenuItem"; title = "PID"; ObjectID = "HBZ-fQ-iEw";</note>
+      </trans-unit>
+      <trans-unit id="IZa-m5-XsH.title" xml:space="preserve">
+        <source>Mount Booot-EFI</source>
+        <target>Boot-EFI mounten</target>
+        <note>Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH";</note>
+      </trans-unit>
+      <trans-unit id="RDM-FW-6PS.title" xml:space="preserve">
+        <source>Unmount Boot-EFI</source>
+        <target>Boot-EFI auswerfen</target>
+        <note>Class = "NSMenuItem"; title = "Unmount Boot-EFI"; ObjectID = "RDM-FW-6PS";</note>
+      </trans-unit>
+      <trans-unit id="RyK-ui-asr.title" xml:space="preserve">
+        <source>Check kexts now ...</source>
+        <target>Jetzt Kexte prüfen ...</target>
+        <note>Class = "NSMenuItem"; title = "Check kexts now ..."; ObjectID = "RyK-ui-asr";</note>
+      </trans-unit>
+      <trans-unit id="Zys-O6-UlM.title" xml:space="preserve">
+        <source>4</source>
+        <target>4</target>
+        <note>Class = "NSMenuItem"; title = "4"; ObjectID = "Zys-O6-UlM";</note>
+      </trans-unit>
+      <trans-unit id="aAd-Az-Se2.title" xml:space="preserve">
+        <source>6</source>
+        <target>6</target>
+        <note>Class = "NSMenuItem"; title = "6"; ObjectID = "aAd-Az-Se2";</note>
+      </trans-unit>
+      <trans-unit id="bBc-lm-RgD.title" xml:space="preserve">
+        <source>2</source>
+        <target>2</target>
+        <note>Class = "NSMenuItem"; title = "2"; ObjectID = "bBc-lm-RgD";</note>
+      </trans-unit>
+      <trans-unit id="bF3-cv-DWp.title" xml:space="preserve">
+        <source>Automatically mounts the boot EFI after every boot. The menu Bar Item has to be started permanently.</source>
+        <target>Mounte die Boot EFI nach jedem Systemstart automatisch neu. Das Menu Bar Item muss dafür aber dauerhaft gestartet sein.</target>
+        <note>Class = "NSTextFieldCell"; title = "Automatically mounts the boot EFI after every boot. The menu Bar Item has to be started permanently."; ObjectID = "bF3-cv-DWp";</note>
+      </trans-unit>
+      <trans-unit id="lVx-SX-Mkn.title" xml:space="preserve">
+        <source>Check for kext updates only once after each system reboot.</source>
+        <target>Prüfe nur einmal nach jedem Systemstart auf Kext Updates.</target>
+        <note>Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn";</note>
+      </trans-unit>
+      <trans-unit id="no6-as-NNY.title" xml:space="preserve">
+        <source>Preferences</source>
+        <target>Einstellungen</target>
+        <note>Class = "NSTextFieldCell"; title = "Preferences"; ObjectID = "no6-as-NNY";</note>
+      </trans-unit>
+      <trans-unit id="qq0-Fk-B6B.title" xml:space="preserve">
+        <source>3</source>
+        <target>3</target>
+        <note>Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B";</note>
+      </trans-unit>
+      <trans-unit id="uQy-DD-JDr.title" xml:space="preserve">
+        <source>KU MenuBar</source>
+        <target>KU MenuBar</target>
+        <note>Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr";</note>
+      </trans-unit>
+      <trans-unit id="wNO-id-TVJ.title" xml:space="preserve">
+        <source>Open EFI Folder</source>
+        <target>Öffne EFI Ordner</target>
+        <note>Class = "NSMenuItem"; title = "Open EFI Folder"; ObjectID = "wNO-id-TVJ";</note>
+      </trans-unit>
+      <trans-unit id="yYu-Pv-uSR.title" xml:space="preserve">
+        <source>Hour(s)</source>
+        <target>Stunde(n)</target>
+        <note>Class = "NSTextFieldCell"; title = "Hour(s)"; ObjectID = "yYu-Pv-uSR";</note>
+      </trans-unit>
+      <trans-unit id="zBR-fz-Qdr.title" xml:space="preserve">
+        <source>5</source>
+        <target>5</target>
+        <note>Class = "NSMenuItem"; title = "5"; ObjectID = "zBR-fz-Qdr";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="KUMenuBar/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="de">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.3.1" build-num="11C504"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>KUMenuBar</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
+        <source>Copyright © 2019 Sascha Lamprecht. All rights reserved.</source>
+        <note>Copyright (human-readable)</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

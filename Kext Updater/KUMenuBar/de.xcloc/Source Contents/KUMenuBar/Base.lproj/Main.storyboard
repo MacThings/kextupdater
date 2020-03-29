@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Bar-->
+        <scene sceneID="WDy-pZ-oD9">
+            <objects>
+                <viewController id="qdv-kZ-Khq" customClass="KUMenuBar" customModule="KUMenuBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" focusRingType="none" id="oYs-At-w56">
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="198"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="339" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-eg-Ogx">
+                                <rect key="frame" x="-2" y="164" width="292" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Preferences" id="no6-as-NNY">
+                                    <font key="font" size="20" name="ArialRoundedMTBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-Az-mRu">
+                                <rect key="frame" x="169" y="136" width="42" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="roundTextured" title="6" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="21600" imageScaling="proportionallyDown" inset="2" selectedItem="aAd-Az-Se2" id="hp1-k4-prK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="luZ-hD-M3P">
+                                        <items>
+                                            <menuItem title="1" tag="3600" id="B0G-wl-DPc"/>
+                                            <menuItem title="2" tag="7200" id="bBc-lm-RgD"/>
+                                            <menuItem title="3" tag="10800" id="qq0-Fk-B6B"/>
+                                            <menuItem title="4" tag="14400" id="Zys-O6-UlM"/>
+                                            <menuItem title="5" tag="18000" id="zBR-fz-Qdr"/>
+                                            <menuItem title="6" state="on" tag="21600" id="aAd-Az-Se2"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="set_interval:" target="qdv-kZ-Khq" id="V7F-eG-h3n"/>
+                                    <binding destination="ljD-kz-6T4" name="selectedTag" keyPath="values.UpdateInterval" id="pjw-x7-XCv"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-dW-MbP">
+                                <rect key="frame" x="10" y="140" width="155" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Check for Updates every" id="9Ll-4n-mqZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5D-3X-sfp">
+                                <rect key="frame" x="219" y="139" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Hour(s)" id="yYu-Pv-uSR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGi-Nb-1kV">
+                                <rect key="frame" x="32" y="96" width="233" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Check for kext updates only once after each system reboot." id="lVx-SX-Mkn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKv-op-yzn">
+                                <rect key="frame" x="10" y="104" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" inset="2" id="kOG-Uw-ii8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="only_after_reboot:" target="qdv-kZ-Khq" id="yeF-35-I1X"/>
+                                    <binding destination="ljD-kz-6T4" name="value" keyPath="values.AfterRebootOnly" id="Uf9-JG-fxn"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="567-WJ-aQi">
+                                <rect key="frame" x="10" y="44" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" inset="2" id="tcd-QZ-Nar">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="only_after_reboot:" target="qdv-kZ-Khq" id="FEd-qP-Xa2"/>
+                                    <binding destination="ljD-kz-6T4" name="value" keyPath="values.AutomaticEfiMount" id="QQq-gu-ZIB"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqp-EX-EOY">
+                                <rect key="frame" x="32" y="19" width="233" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" title="Automatically mounts the boot EFI after every boot. The menu Bar Item has to be started permanently." id="bF3-cv-DWp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-17-0jH">
+                                <rect key="frame" x="237" y="3" width="57" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Div-YM-d8p">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ok_button:" target="qdv-kZ-Khq" id="R4Z-9H-EXU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="interval_pulldown" destination="EmY-Az-mRu" id="ciM-jt-kMI"/>
+                        <outlet property="label_1" destination="yOd-dW-MbP" id="cCb-RT-Cog"/>
+                        <outlet property="label_2" destination="g5D-3X-sfp" id="hfg-pl-jkZ"/>
+                    </connections>
+                </viewController>
+                <customObject id="Id3-Lh-mjz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="ljD-kz-6T4"/>
+            </objects>
+            <point key="canvasLocation" x="-292.5" y="6"/>
+        </scene>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="KU MenuBar" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="KU MenuBar" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Preferences..." keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="qdv-kZ-Khq" kind="show" id="NVj-kM-Ovh"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="XBd-n3-y4k"/>
+                                        <menuItem title="Check kexts now ..." keyEquivalent="c" id="RyK-ui-asr">
+                                            <connections>
+                                                <action selector="update_check_now:" target="Voe-Tx-rLC" id="IMD-1P-DCK"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open Kext Updater" keyEquivalent="k" id="6dn-K7-ING">
+                                            <connections>
+                                                <action selector="open_kextupdater:" target="Voe-Tx-rLC" id="YvD-5J-4bX"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="1Es-ib-Ot4"/>
+                                        <menuItem title="Mount Booot-EFI" image="NSStatusUnavailable" hidden="YES" keyEquivalent="m" id="IZa-m5-XsH">
+                                            <connections>
+                                                <action selector="mount_efi:" target="Voe-Tx-rLC" id="jxM-BD-OEK"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Unmount Boot-EFI" image="NSStatusAvailable" hidden="YES" keyEquivalent="u" id="RDM-FW-6PS">
+                                            <connections>
+                                                <action selector="unmount_efi:" target="Voe-Tx-rLC" id="bS9-a4-qv4"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open EFI Folder" image="menubar_efifolder" hidden="YES" keyEquivalent="e" id="wNO-id-TVJ">
+                                            <connections>
+                                                <action selector="open_efi:" target="Voe-Tx-rLC" id="MU9-6M-8bd"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open Download Folder" image="menubar_folder" hidden="YES" keyEquivalent="d" id="4zv-QS-4Dz">
+                                            <connections>
+                                                <action selector="open_download:" target="Voe-Tx-rLC" id="WEA-Bd-VWF"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wYL-K8-Qj6"/>
+                                        <menuItem title="PID" enabled="NO" id="HBZ-fQ-iEw">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="voJ-Jf-g6A"/>
+                                        <menuItem title="Quit KU MenuBar" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="quit_menubar:" target="Voe-Tx-rLC" id="nxn-vk-Tfo"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="YAo-02-VrW"/>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KUMenuBar" customModuleProvider="target">
+                    <connections>
+                        <outlet property="appMenu" destination="uQy-DD-JDr" id="RjQ-yg-w2e"/>
+                        <outlet property="download_folder" destination="4zv-QS-4Dz" id="Qm9-0v-DCZ"/>
+                        <outlet property="efi_folder" destination="wNO-id-TVJ" id="jLO-8H-AZs"/>
+                        <outlet property="mount_efi" destination="IZa-m5-XsH" id="d5m-Jq-w7f"/>
+                        <outlet property="process_id" destination="HBZ-fQ-iEw" id="ff7-7w-dtn"/>
+                        <outlet property="unmount_efi" destination="RDM-FW-6PS" id="6TD-uO-c80"/>
+                    </connections>
+                </customObject>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="-293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
+        <image name="menubar_efifolder" width="26" height="21"/>
+        <image name="menubar_folder" width="26" height="21"/>
+    </resources>
+</document>
