@@ -132,7 +132,7 @@
 		FCC6C4CA19A58C7A0063EC3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					FCC6C4D119A58C7A0063EC3C = {

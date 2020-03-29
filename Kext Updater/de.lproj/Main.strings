@@ -1,3 +1,6 @@
+/* Class = "NSViewController"; title = "Menu Item Hint"; ObjectID = "0fw-r7-aUL"; */
+"0fw-r7-aUL.title" = "Menu Item Hinweis";
+
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1509"; ObjectID = "0Td-p9-QHK"; */
 "0Td-p9-QHK.title" = "10.10.5 - 14F1509";
 
@@ -159,6 +162,9 @@
 
 /* Class = "NSButtonCell"; title = "BT4LEContinuityFixup"; ObjectID = "64H-cz-ls9"; */
 "64H-cz-ls9.title" = "BT4LEContinuityFixup";
+
+/* Class = "NSTextFieldCell"; title = "Did you already know?"; ObjectID = "71f-1I-tXj"; */
+"71f-1I-tXj.title" = "Wusstest Du schon?";
 
 /* Class = "NSButtonCell"; title = "Shiki"; ObjectID = "71I-RO-UFE"; */
 "71I-RO-UFE.title" = "Shiki";
@@ -529,6 +535,9 @@
 /* Class = "NSButtonCell"; title = "VoodooInput"; ObjectID = "iku-FN-fy7"; */
 "iku-FN-fy7.title" = "VoodooInput";
 
+/* Class = "NSMenuItem"; title = "OcBinaryData"; ObjectID = "IlB-pf-d4J"; */
+"IlB-pf-d4J.title" = "OcBinaryData";
+
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "ima-vg-UwR"; */
 "ima-vg-UwR.title" = "Schließen";
 
@@ -573,6 +582,9 @@
 
 /* Class = "NSBox"; title = "Status"; ObjectID = "jna-hs-BsX"; */
 "jna-hs-BsX.title" = "Status";
+
+/* Class = "NSButtonCell"; title = "SMCAMDProcessor"; ObjectID = "Jnu-Md-nV5"; */
+"Jnu-Md-nV5.title" = "SMCAMDProcessor";
 
 /* Class = "NSMenuItem"; title = "5"; ObjectID = "JQq-IY-uys"; */
 "JQq-IY-uys.title" = "5";
@@ -660,6 +672,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.4 - 14E46"; ObjectID = "MFe-3R-VJ2"; */
 "MFe-3R-VJ2.title" = "10.10.4 - 14E46";
+
+/* Class = "NSTextFieldCell"; title = "In the settings (⌘+,) you can activate this menu bar item. This allows you to use the core functions of the Kext Updater without having to open it."; ObjectID = "MhY-OD-m3h"; */
+"MhY-OD-m3h.title" = "In den Einstellungen (⌘+,) kannst Du das Menu Bar Item aktivieren. Damit kannst Du die Kernfunktionen vom Kext Updater nutzen ohne diesen geöffnet haben zu müssen.";
 
 /* Class = "NSButtonCell"; title = "RTCMemoryFixup"; ObjectID = "Ml5-Qr-rRQ"; */
 "Ml5-Qr-rRQ.title" = "RTCMemoryFixup";
@@ -783,6 +798,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.1 - 14B25"; ObjectID = "pGU-ze-42i"; */
 "pGU-ze-42i.title" = "10.10.1 - 14B25";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "Pk4-5O-gEV"; */
+"Pk4-5O-gEV.title" = "Box";
 
 /* Class = "NSMenuItem"; title = "Theme"; ObjectID = "Pod-Cp-WME"; */
 "Pod-Cp-WME.title" = "Thema";
@@ -918,6 +936,9 @@
 
 /* Class = "NSTextFieldCell"; title = "D"; ObjectID = "sUz-eo-LkJ"; */
 "sUz-eo-LkJ.title" = "D";
+
+/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "T24-nD-isB"; */
+"T24-nD-isB.title" = "Ok";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Tbd-kw-pCp"; */
 "Tbd-kw-pCp.title" = "Bitte auswählen";

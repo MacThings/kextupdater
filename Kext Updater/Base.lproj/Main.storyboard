@@ -2869,7 +2869,7 @@ DQ
                                     </subviews>
                                 </view>
                             </box>
-                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COx-cu-9jq" userLabel="Button dummy">
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COx-cu-9jq" userLabel="Button dummy Network">
                                 <rect key="frame" x="0.0" y="1" width="18" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PUn-1W-HYg">
@@ -2889,6 +2889,17 @@ DQ
                                 </buttonCell>
                                 <connections>
                                     <segue destination="FlY-af-uzG" kind="sheet" id="jDB-Qg-yx3"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BP0-GU-5Qz" userLabel="Button dummy Hint">
+                                <rect key="frame" x="28" y="1" width="18" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JP3-67-NDP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="0fw-r7-aUL" kind="show" id="LEr-KB-tK5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2926,6 +2937,7 @@ DQ
                         <outlet property="kuversion" destination="v0v-Oh-JvP" id="7K3-TM-11p"/>
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
+                        <outlet property="show_hint" destination="BP0-GU-5Qz" id="IDl-Ll-cOm"/>
                         <outlet property="show_networkerror" destination="COx-cu-9jq" id="laY-MV-KJL"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
                         <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
@@ -2978,7 +2990,7 @@ DQ
                 </viewController>
                 <customObject id="jYH-up-BBJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798.5" y="209"/>
+            <point key="canvasLocation" x="1796" y="261"/>
         </scene>
         <!--Disk Information-->
         <scene sceneID="vnp-oE-Rb1">
@@ -3161,7 +3173,7 @@ DQ
                 </viewController>
                 <customObject id="9XP-bj-pKu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="471"/>
+            <point key="canvasLocation" x="1958" y="459"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="sn4-yY-4X4">
@@ -3629,7 +3641,7 @@ DQ
                 </viewController>
                 <customObject id="ChP-96-PQa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="757"/>
+            <point key="canvasLocation" x="1937" y="746"/>
         </scene>
         <!--Tools-->
         <scene sceneID="r4o-NH-ks4">
@@ -4893,6 +4905,68 @@ DQ
             </objects>
             <point key="canvasLocation" x="2" y="100"/>
         </scene>
+        <!--Menu Item Hint-->
+        <scene sceneID="VSV-U3-atE">
+            <objects>
+                <viewController title="Menu Item Hint" id="0fw-r7-aUL" customClass="Hint" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="DOd-ro-qUF">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="285"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-bm-gwV">
+                                <rect key="frame" x="312" y="50" width="206" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hint" id="TmW-G0-0eZ"/>
+                            </imageView>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="3" cornerRadius="9" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Pk4-5O-gEV">
+                                <rect key="frame" x="310" y="50" width="210" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="PS2-4w-xkq">
+                                    <rect key="frame" x="3" y="3" width="204" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="borderColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crM-c8-3C8" userLabel="In the settings">
+                                <rect key="frame" x="18" y="125" width="275" height="109"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" id="MhY-OD-m3h">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">In the settings (⌘+,) you can activate this menu bar item. This allows you to use the core functions of the Kext Updater without having to open it.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-F4-BuQ">
+                                <rect key="frame" x="213" y="10" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T24-nD-isB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="close_window:" target="0fw-r7-aUL" id="vRf-iq-6V8"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxL-gN-AC0">
+                                <rect key="frame" x="0.0" y="250" width="542" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Did you already know?" id="71f-1I-tXj">
+                                    <font key="font" metaFont="systemBlack" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="close_window" destination="XHg-F4-BuQ" id="OH3-za-HLr"/>
+                    </connections>
+                </viewController>
+                <customObject id="M0a-FJ-9UX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="9.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HF Logo" width="512" height="512"/>
@@ -4916,6 +4990,7 @@ DQ
         <image name="hf-newyear" width="400" height="400"/>
         <image name="hf-xmas" width="200" height="182"/>
         <image name="hflogo" width="860" height="170"/>
+        <image name="hint" width="215" height="193"/>
         <image name="kext" width="200" height="200"/>
         <image name="keychain" width="256" height="256"/>
         <image name="link" width="800" height="337"/>

@@ -73,7 +73,8 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var tools_button: NSButton!
     
     @IBOutlet weak var show_networkerror: NSButton!
-       
+    @IBOutlet weak var show_hint: NSButton!
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
         
     @IBAction func quit_app(_ sender: Any) {
@@ -347,6 +348,8 @@ class KextUpdater: NSViewController {
                         UserDefaults.standard.set(true, forKey: "KeyChainAdvise")
                 }
             }
+        
+        
     }
     
     @IBAction func start_button(_ sender: Any) {
@@ -354,7 +357,7 @@ class KextUpdater: NSViewController {
         self.egg2.isEnabled=false
         self.egg3.isEnabled=false
         self.egg4.isEnabled=false
-        
+
         self.syncShellExec(path: self.scriptPath, args: ["_online_check"])
         let networkerror = UserDefaults.standard.string(forKey: "Networkerror")
         
@@ -473,6 +476,13 @@ class KextUpdater: NSViewController {
                 UserDefaults.standard.set("Update", forKey: "Choice")
             }
         }
+        
+        let hint = UserDefaults.standard.string(forKey: "HintShown")
+        if hint == nil {
+            UserDefaults.standard.set(true, forKey: "HintShown")
+            self.show_hint.performClick(nil)
+        }
+        
     }
     
     @IBAction func stop_button(_ sender: Any) {

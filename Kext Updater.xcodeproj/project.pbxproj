@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
+		2A56BDFE2430A69E0064CD4D /* KUMenuBar.app in Resources */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; };
+		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDEE123AE4F04008879BE /* Networkerror.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
@@ -42,7 +45,6 @@
 		2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC323150F39006D447C /* progressanim.png */; };
 		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
-		2AE9017D23CE3DA4000AB24D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A856DC123B4291F008760A9 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; };
 		7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
@@ -78,7 +80,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2AE9017D23CE3DA4000AB24D /* KUMenuBar.app in Bin Copy */,
+				2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */,
 				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
 				2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */,
 				2AC44C01231510A4006D447C /* BDMESG in Bin Copy */,
@@ -153,6 +155,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A7FDEE123AE4F04008879BE /* Networkerror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkerror.swift; sourceTree = "<group>"; };
 		2A856DC123B4291F008760A9 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
 				2AC44BE623150F61006D447C /* KextUpdater.swift */,
 				2A7FDEE123AE4F04008879BE /* Networkerror.swift */,
+				2A56BDFB2430A5BE0064CD4D /* Hint.swift */,
 				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
 				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
 				2AC44BE823150F61006D447C /* Preferences.swift */,
@@ -356,6 +361,7 @@
 		EFCEF92E17A76F1031C73313 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */,
 				5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */,
 			);
 			name = Frameworks;
@@ -399,7 +405,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					2AB3049923150E1300D618FF = {
@@ -438,6 +444,7 @@
 			files = (
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
 				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
+				2A56BDFE2430A69E0064CD4D /* KUMenuBar.app in Resources */,
 				2AB304A523150E1500D618FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */,
 				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
 				2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */,
 				2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */,
