@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
-		2A56BDFE2430A69E0064CD4D /* KUMenuBar.app in Resources */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDEE123AE4F04008879BE /* Networkerror.swift */; };
@@ -444,7 +443,6 @@
 			files = (
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
 				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
-				2A56BDFE2430A69E0064CD4D /* KUMenuBar.app in Resources */,
 				2AB304A523150E1500D618FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
