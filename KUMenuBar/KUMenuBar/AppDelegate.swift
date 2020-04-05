@@ -21,6 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var unmount_efi: NSMenuItem!
     @IBOutlet weak var efi_folder: NSMenuItem!
     @IBOutlet weak var download_folder: NSMenuItem!
+    @IBOutlet weak var rebuild_kextcache: NSMenuItem!
+    
     
     @objc func displayMenu() {
         
@@ -221,6 +223,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.shared.openFile(downloadpath2 ?? "")
     }
     
+    @IBAction func rebuild_kextcache(_ sender: Any) {
+        infowindow()
+        let alertcontinue = UserDefaults.standard.bool(forKey: "Continue")
+        if alertcontinue == true {
+        self.syncShellExec(path: self.scriptPath, args: ["rebuild_kextcache"])
+        infowindow_done()
+        }
+        UserDefaults.standard.removeObject(forKey: "Continue")
+    }
+    
     @IBAction func quit_menubar(_ sender: Any) {
         UserDefaults.standard.set("", forKey: "PID")
         DispatchQueue.global(qos: .background).async {
@@ -246,6 +258,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         process.waitUntilExit()
         filelHandler.readabilityHandler = nil
     }
+
+    func infowindow (){
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("The Kextcache is rebuilding now", comment: "")
+        alert.informativeText = NSLocalizedString("This could take some time. Please be patient. Don't forget to restart so that the changes take effect.", comment: "")
+        alert.alertStyle = .informational
+        let Button = NSLocalizedString("Ok", comment: "")
+        alert.addButton(withTitle: Button)
+        let CancelButtonText = NSLocalizedString("Cancel", comment: "")
+        alert.addButton(withTitle: CancelButtonText)
+        
+        if alert.runModal() == .alertFirstButtonReturn {
+            UserDefaults.standard.set(true, forKey: "Continue")
+        }
+    }
+
+    func infowindow_done (){
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("Done!", comment: "")
+        alert.informativeText = NSLocalizedString("Do you want to restart now?", comment: "")
+        alert.alertStyle = .informational
+        let Button = NSLocalizedString("Yes", comment: "")
+        alert.addButton(withTitle: Button)
+        let CancelButtonText = NSLocalizedString("No", comment: "")
+        alert.addButton(withTitle: CancelButtonText)
+        
+        if alert.runModal() == .alertFirstButtonReturn {
+            self.syncShellExec(path: self.scriptPath, args: ["reboot"])
+        } else {
+            return
+        }
+    }
+
 }
 
 

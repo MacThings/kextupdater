@@ -31,6 +31,9 @@
 /* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Einstellungen...";
 
+/* Class = "NSMenuItem"; title = "Rebuild Kext Cache"; ObjectID = "c4Z-91-peq"; */
+"c4Z-91-peq.title" = "Kextcache neu aufbauen";
+
 /* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p"; */
 "Div-YM-d8p.title" = "Ok";
 
