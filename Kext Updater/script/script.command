@@ -82,7 +82,8 @@ function _getsecret() {
     fi
 }
 
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+### kextadd ###
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -222,6 +223,7 @@ kextArray=(
 "nullethernet","NullEthernet","NullEthernet",""
 "nvidiagraphicsfixup","LibValFix","NVWebDriverLibValFix","WhateverGreen","Alarm"
 "nvidiagraphicsfixup","NvidiaGraphicsFixup","NvidiaGraphicsFixup","WhateverGreen","Alarm"
+"nvmefix","NVMeFix","NVMeFix",""
 "opencore","OpenCore","OpenCore",""
 "realtekrtl8111","RealtekRTL8111","RealtekRTL8111",""
 "rtcmemoryfixup","RTCMemoryFixup","RTCMemoryFixup",""

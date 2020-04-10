@@ -143,6 +143,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-novpajpeg")
         UserDefaults.standard.set(true, forKey: "dl-nullcpupowermanagement")
         UserDefaults.standard.set(true, forKey: "dl-nullethernet")
+        UserDefaults.standard.set(true, forKey: "dl-nvmefix")
         UserDefaults.standard.set(true, forKey: "dl-realtekrtl8111")
         UserDefaults.standard.set(true, forKey: "dl-rtcmemoryfixup")
         UserDefaults.standard.set(true, forKey: "dl-sinetekrtsx")
@@ -300,6 +301,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func nullethernet(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/RehabMan/OS-X-Null-Ethernet", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func nvmefix(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/NVMeFix", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func realtekrtl8111(_ sender: Any) {
