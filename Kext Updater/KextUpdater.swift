@@ -483,6 +483,8 @@ class KextUpdater: NSViewController {
             self.show_hint.performClick(nil)
         }
         
+        //UserDefaults.standard.removeObject(forKey: "Bootloader")
+        
     }
     
     @IBAction func stop_button(_ sender: Any) {

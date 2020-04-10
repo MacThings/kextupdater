@@ -1443,6 +1443,8 @@ lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
 
 _languageselect
 
+
+
 if [ -f "$ScriptTmpPath"/array ]; then
 rm "$ScriptTmpPath"/array
 fi
@@ -1457,9 +1459,19 @@ checkarray=$( cat "$ScriptTmpPath"/array )
 
 if [[ $checkarray = "kextLoadArray=()" ]]; then
 _helpDefaultWrite "Ready" "Error"
-echo "$nokextselected"
+
+check_bootloader=$( _helpDefaultRead "EFI Creator" )
+
+if [[ "$check_bootloader" = "None" ]]; then
+    echo "$nokextselected"
+fi
+
 if [[ $checkchime = "1" ]]; then
-_playchimedeath
+
+if [[ "$check_bootloader" = "None" ]]; then
+    _playchimedeath
+fi
+
 fi
 fi
 exit 0

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="16096"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,7 +156,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="WRj-TK-zEl" userLabel="Box Download1">
                                 <rect key="frame" x="51" y="264" width="18" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="qHe-cS-hzE">
+                                <view key="contentView" id="qHe-cS-hzE">
                                     <rect key="frame" x="1" y="1" width="16" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -164,7 +164,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="RNd-5j-Qer" userLabel="Box Download3">
                                 <rect key="frame" x="500" y="262" width="18" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="0F5-uc-apT">
+                                <view key="contentView" id="0F5-uc-apT">
                                     <rect key="frame" x="1" y="1" width="16" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -172,7 +172,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-nh-EFQ" userLabel="Box Exclude 1">
                                 <rect key="frame" x="31" y="264" width="18" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="OHc-Nd-Gtd">
+                                <view key="contentView" id="OHc-Nd-Gtd">
                                     <rect key="frame" x="1" y="1" width="16" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -823,7 +823,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="evA-ZV-Ndv" userLabel="Box Exclude 2">
                                 <rect key="frame" x="480" y="262" width="18" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="T1T-pz-cT2">
+                                <view key="contentView" id="T1T-pz-cT2">
                                     <rect key="frame" x="1" y="1" width="16" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1009,7 +1009,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-H6-fo8" userLabel="Box Download2">
                                 <rect key="frame" x="262" y="243" width="18" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="AG1-KS-4FH">
+                                <view key="contentView" id="AG1-KS-4FH">
                                     <rect key="frame" x="1" y="1" width="16" height="356"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -1017,7 +1017,7 @@
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="3Qa-mS-q5q" userLabel="Box Exclude 2">
                                 <rect key="frame" x="242" y="243" width="18" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="AOB-7B-FcQ">
+                                <view key="contentView" id="AOB-7B-FcQ">
                                     <rect key="frame" x="1" y="1" width="16" height="356"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -2053,7 +2053,7 @@ DQ
                                         <items>
                                             <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
                                             <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
-                                            <menuItem title="OpenCore (NDK Fork)" tag="6" hidden="YES" id="AQy-ED-smk"/>
+                                            <menuItem title="OpenCore (NDK Fork)" tag="6" id="AQy-ED-smk"/>
                                             <menuItem title="OpenCore Nightly" tag="2" id="2xY-of-vfI"/>
                                             <menuItem title="OpenCore Nightly (NDK Fork)" tag="5" id="cJN-jU-ADV"/>
                                             <menuItem isSeparatorItem="YES" id="wcX-R5-uz0"/>
@@ -2122,7 +2122,7 @@ DQ
                             <box toolTip="Deprecated. Included now in WhateverGreen." fixedFrame="YES" boxType="custom" borderWidth="2" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-iX-bHK">
                                 <rect key="frame" x="459" y="260" width="191" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="QiT-Nf-ABo">
+                                <view key="contentView" id="QiT-Nf-ABo">
                                     <rect key="frame" x="2" y="2" width="187" height="116"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -2329,14 +2329,14 @@ DQ
                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="6" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Q4s-ts-6fA" userLabel="BackgroundBox">
                                 <rect key="frame" x="7" y="67" width="665" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" wantsLayer="YES" ambiguous="YES" id="qlb-Ik-ABS">
+                                <view key="contentView" wantsLayer="YES" id="qlb-Ik-ABS">
                                     <rect key="frame" x="0.0" y="0.0" width="665" height="384"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="2" cornerRadius="4" title="Box" titlePosition="aboveTop" translatesAutoresizingMaskIntoConstraints="NO" id="gcN-Xh-jrg" userLabel="Infobox">
                                             <rect key="frame" x="411" y="111" width="172" height="195"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" ambiguous="YES" id="gWb-xF-kYW">
+                                            <view key="contentView" id="gWb-xF-kYW">
                                                 <rect key="frame" x="2" y="2" width="168" height="191"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -2674,11 +2674,11 @@ DQ
                             <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-vD-bpX">
                                 <rect key="frame" x="19" y="79" width="385" height="360"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="MyR-Zl-sYm">
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="MyR-Zl-sYm">
                                     <rect key="frame" x="0.0" y="0.0" width="385" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="3me-WA-Top">
+                                        <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="3me-WA-Top">
                                             <rect key="frame" x="0.0" y="0.0" width="385" height="360"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -2885,7 +2885,7 @@ DQ
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="yem-HY-3eF">
                                 <rect key="frame" x="18" y="79" width="386" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="NxJ-8T-BAX">
+                                <view key="contentView" id="NxJ-8T-BAX">
                                     <rect key="frame" x="1" y="1" width="384" height="360"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -3036,7 +3036,7 @@ DQ
                             <box fixedFrame="YES" boxType="custom" cornerRadius="7" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="GH7-Xs-ikJ">
                                 <rect key="frame" x="5" y="6" width="595" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="WxJ-ka-vmA">
+                                <view key="contentView" id="WxJ-ka-vmA">
                                     <rect key="frame" x="1" y="1" width="593" height="193"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -3901,7 +3901,7 @@ DQ
                             <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
                                 <rect key="frame" x="424" y="303" width="140" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="xfH-pD-gm7">
+                                <view key="contentView" id="xfH-pD-gm7">
                                     <rect key="frame" x="3" y="3" width="134" height="23"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -4065,7 +4065,7 @@ DQ
                             <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="GF6-ql-1RH">
                                 <rect key="frame" x="9" y="16" width="148" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" wantsLayer="YES" ambiguous="YES" id="Y7c-1z-4ji">
+                                <view key="contentView" wantsLayer="YES" id="Y7c-1z-4ji">
                                     <rect key="frame" x="3" y="3" width="142" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -4764,10 +4764,10 @@ DQ
                                             <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore (NDK Fork)" hidden="YES" id="8ss-Jz-7PF">
+                                            <menuItem title="OpenCore (NDK Fork)" id="8ss-Jz-7PF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="AppleSupport" hidden="YES" id="4i4-wk-0pn">
+                                            <menuItem title="AppleSupport" id="4i4-wk-0pn">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem isSeparatorItem="YES" id="Vgw-hs-zhR"/>
@@ -4777,14 +4777,14 @@ DQ
                                             <menuItem title="OpenCore Nightly (NDK Fork)" id="TG2-Dr-2zV">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
                                             <menuItem isSeparatorItem="YES" id="zf7-qe-DHl"/>
                                             <menuItem title="OcSupportPkg" hidden="YES" id="25w-aq-FCF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="OcBinaryData" id="IlB-pf-d4J">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                            <menuItem title="AppleSupport Nightly" hidden="YES" id="Edg-dY-fWs">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>
@@ -4895,7 +4895,7 @@ DQ
                             <box fixedFrame="YES" boxType="custom" borderWidth="3" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-2q-tbN">
                                 <rect key="frame" x="17" y="48" width="666" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="cJU-zB-nyo">
+                                <view key="contentView" id="cJU-zB-nyo">
                                     <rect key="frame" x="3" y="3" width="660" height="231"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
@@ -4956,7 +4956,7 @@ DQ
                             <box fixedFrame="YES" boxType="custom" borderWidth="3" cornerRadius="9" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Pk4-5O-gEV">
                                 <rect key="frame" x="310" y="50" width="210" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="PS2-4w-xkq">
+                                <view key="contentView" id="PS2-4w-xkq">
                                     <rect key="frame" x="3" y="3" width="204" height="180"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
