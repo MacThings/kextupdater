@@ -4728,6 +4728,7 @@ DQ
                                             <menuItem title="Please select" state="on" id="Tbd-kw-pCp">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="C9d-3K-WMH"/>
                                             <menuItem title="Clover" id="cMN-Co-Raf">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
@@ -4759,6 +4760,7 @@ DQ
                                             <menuItem title="Please Select" state="on" id="9bX-ps-dhp">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="bAf-AQ-kFE"/>
                                             <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
@@ -4776,7 +4778,7 @@ DQ
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem isSeparatorItem="YES" id="zf7-qe-DHl"/>
-                                            <menuItem title="OcSupportPkg" id="25w-aq-FCF">
+                                            <menuItem title="OcSupportPkg" hidden="YES" id="25w-aq-FCF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="OcBinaryData" id="IlB-pf-d4J">
