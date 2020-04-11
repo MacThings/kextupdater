@@ -2902,17 +2902,6 @@ DQ
                                     </subviews>
                                 </view>
                             </box>
-                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COx-cu-9jq" userLabel="Button dummy Network">
-                                <rect key="frame" x="0.0" y="1" width="18" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PUn-1W-HYg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="Twa-vs-6MY" kind="show" id="PJc-yZ-6cY"/>
-                                </connections>
-                            </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-v8-72Q">
                                 <rect key="frame" x="261" y="13" width="110" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2925,7 +2914,7 @@ DQ
                                 </connections>
                             </button>
                             <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BP0-GU-5Qz" userLabel="Button dummy Hint">
-                                <rect key="frame" x="28" y="1" width="18" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="18" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JP3-67-NDP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2971,7 +2960,6 @@ DQ
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="show_hint" destination="BP0-GU-5Qz" id="IDl-Ll-cOm"/>
-                        <outlet property="show_networkerror" destination="COx-cu-9jq" id="laY-MV-KJL"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
                         <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
                         <outlet property="surprise_newyear" destination="Nx5-lS-W85" id="kA3-Ea-9Yc"/>
@@ -2984,46 +2972,6 @@ DQ
                 <userDefaultsController id="M5w-5M-l63"/>
             </objects>
             <point key="canvasLocation" x="1110" y="639"/>
-        </scene>
-        <!--Network Error-->
-        <scene sceneID="tZG-Sw-Id8">
-            <objects>
-                <viewController title="Network Error" id="Twa-vs-6MY" customClass="Networkerror" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="7Dc-Hu-9t7">
-                        <rect key="frame" x="0.0" y="0.0" width="331" height="94"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-Jj-WeN">
-                                <rect key="frame" x="45" y="29" width="275" height="59"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" selectable="YES" title="Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment." id="kRf-K4-isr">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-vG-4JL">
-                                <rect key="frame" x="1" y="46" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="1RW-Hg-l5B"/>
-                            </imageView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koY-yJ-LfR">
-                                <rect key="frame" x="137" y="2" width="57" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rwf-9D-Zgg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="close_window:" target="Twa-vs-6MY" id="Hrk-wQ-eFh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="jYH-up-BBJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1796" y="261"/>
         </scene>
         <!--Disk Information-->
         <scene sceneID="vnp-oE-Rb1">
@@ -4764,7 +4712,7 @@ DQ
                                             <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore (NDK Fork)" id="8ss-Jz-7PF">
+                                            <menuItem title="OpenCore (N-D-K Fork)" id="8ss-Jz-7PF">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport" id="4i4-wk-0pn">
@@ -4774,7 +4722,7 @@ DQ
                                             <menuItem title="OpenCore Nightly" id="tGB-Gh-Bvm">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore Nightly (NDK Fork)" id="TG2-Dr-2zV">
+                                            <menuItem title="OpenCore Nightly (N-D-K Fork)" id="TG2-Dr-2zV">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
@@ -5005,7 +4953,6 @@ DQ
     </scenes>
     <resources>
         <image name="HF Logo" width="512" height="512"/>
-        <image name="NSCaution" width="32" height="32"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSStatusAvailable" width="16" height="16"/>

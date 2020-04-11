@@ -72,7 +72,6 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var efi_button: NSButton!
     @IBOutlet weak var tools_button: NSButton!
     
-    @IBOutlet weak var show_networkerror: NSButton!
     @IBOutlet weak var show_hint: NSButton!
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -135,11 +134,6 @@ class KextUpdater: NSViewController {
             selector: #selector(self.closePrefs),
             name: NSNotification.Name(rawValue: "ClosePrefs"),
             object: nil)
-        
-//        let infowindow = UserDefaults.standard.string(forKey: "KEY")
-//        if infowindow != "Yes" {
-//            show_infowindow.performClick(nil)
-//        }
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         
@@ -362,7 +356,14 @@ class KextUpdater: NSViewController {
         let networkerror = UserDefaults.standard.string(forKey: "Networkerror")
         
         if networkerror == "Yes" {
-            self.show_networkerror.performClick(nil)
+            let alert = NSAlert()
+            alert.messageText = NSLocalizedString("Uh Oh! An error has occured.", comment: "")
+            alert.informativeText = NSLocalizedString("You are not connected to the Internet or the Server is not reachable at the moment. Please try again later.", comment: "")
+            alert.alertStyle = .warning
+            alert.icon = NSImage(named: "notapplied")
+            let Button = NSLocalizedString("Bummer", comment: "")
+            alert.addButton(withTitle: Button)
+            alert.runModal()
             return
         }
         
@@ -482,9 +483,7 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(true, forKey: "HintShown")
             self.show_hint.performClick(nil)
         }
-        
-        //UserDefaults.standard.removeObject(forKey: "Bootloader")
-        
+      
     }
     
     @IBAction func stop_button(_ sender: Any) {

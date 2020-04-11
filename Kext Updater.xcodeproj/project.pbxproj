@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
-		2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDEE123AE4F04008879BE /* Networkerror.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
@@ -156,8 +156,8 @@
 /* Begin PBXFileReference section */
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2A7FDEE123AE4F04008879BE /* Networkerror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkerror.swift; sourceTree = "<group>"; };
 		2A856DC123B4291F008760A9 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -242,7 +242,6 @@
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
 				2AC44BE623150F61006D447C /* KextUpdater.swift */,
-				2A7FDEE123AE4F04008879BE /* Networkerror.swift */,
 				2A56BDFB2430A5BE0064CD4D /* Hint.swift */,
 				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
 				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
@@ -264,6 +263,7 @@
 				2AD19D8A2367273D0014D005 /* WindowController.swift */,
 				2AB304A123150E1500D618FF /* Assets.xcassets */,
 				2AB304A323150E1500D618FF /* Main.storyboard */,
+				2A598E4C2441B2EA00D4563C /* Localizable.strings */,
 				2AB304A623150E1500D618FF /* Info.plist */,
 				2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */,
 				2AB304A723150E1500D618FF /* Kext_Updater.entitlements */,
@@ -441,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */,
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
 				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
 				2AB304A523150E1500D618FF /* Main.storyboard in Resources */,
@@ -518,7 +519,6 @@
 				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
 				2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */,
 				2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */,
-				2A7FDEE223AE4F04008879BE /* Networkerror.swift in Sources */,
 				2AC44BF123150F61006D447C /* KextUpdater.swift in Sources */,
 				2AB304A023150E1300D618FF /* ViewController.swift in Sources */,
 				2AC44BF523150F61006D447C /* Changelog.swift in Sources */,
@@ -535,6 +535,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2A598E4C2441B2EA00D4563C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A598E4D2441B2EA00D4563C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
