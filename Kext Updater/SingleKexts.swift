@@ -79,6 +79,8 @@ class SingleKexts: NSViewController {
     @IBAction func efi_creator_pulldown(_ sender: Any) {
         let bootloader_kind = (sender as AnyObject).selectedCell()!.tag
         
+        UserDefaults.standard.set(true, forKey: "Choosed anything")
+        
         if bootloader_kind == 1 {
         UserDefaults.standard.set("OpenCore", forKey: "EFI Creator")
         } else if bootloader_kind == 2 {
@@ -98,10 +100,31 @@ class SingleKexts: NSViewController {
     
     
     @IBAction func send_start (sender: NSButton) {
-        //UserDefaults.standard.set("None", forKey: "EFI Creator")
         UserDefaults.standard.set("Single", forKey: "Choice")
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.start_button?.stringValue as Any])
-        self.view.window?.close()
+
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+        if key.hasPrefix("dl-") {
+            UserDefaults.standard.set(true, forKey: "Choosed anything")
+            }
+        }
+        
+        let choosedanything = UserDefaults.standard.bool(forKey: "Choosed anything")
+        if choosedanything == true {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.start_button?.stringValue as Any])
+                self.view.window?.close()
+            } else {
+                let alert = NSAlert()
+                alert.messageText = NSLocalizedString("No selection!", comment: "")
+                alert.informativeText = NSLocalizedString("Please choose anything before and try again.", comment: "")
+                alert.alertStyle = .warning
+                alert.icon = NSImage(named: "notapplied")
+                let Button = NSLocalizedString("Ok", comment: "")
+                alert.addButton(withTitle: Button)
+                alert.runModal()
+                return
+            }
+
+        UserDefaults.standard.removeObject(forKey: "Choosed anything")
     }
     
     @IBAction func close(_ sender: Any) {
