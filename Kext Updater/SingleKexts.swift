@@ -117,7 +117,7 @@ class SingleKexts: NSViewController {
                 alert.messageText = NSLocalizedString("No selection!", comment: "")
                 alert.informativeText = NSLocalizedString("Please choose anything before and try again.", comment: "")
                 alert.alertStyle = .warning
-                alert.icon = NSImage(named: "notapplied")
+                alert.icon = NSImage(named: "NSCaution")
                 let Button = NSLocalizedString("Ok", comment: "")
                 alert.addButton(withTitle: Button)
                 alert.runModal()
