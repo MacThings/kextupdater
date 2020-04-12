@@ -537,39 +537,52 @@ class KextUpdater: NSViewController {
     }
     
     @IBAction func report(_ sender: Any) {
-        output_window.textStorage?.mutableString.setString("")
-        start_button.isEnabled=false
-        stop_button.isEnabled=true
-        stop_button.isHidden=false
-        kexts_button.isEnabled=false
-        webdriver_button.isEnabled=false
-        bootloader_button.isEnabled=false
-        report_button.isEnabled=false
-        efi_button.isEnabled=false
-        tools_button.isEnabled=false
-        animstart()
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("Do you want to create a system report right now?", comment: "")
+        alert.informativeText = NSLocalizedString("This could take some time. You can abort it every time.", comment: "")
+        alert.alertStyle = .informational
+        alert.icon = NSImage(named: "NSInfo")
+        let Button = NSLocalizedString("Yes", comment: "")
+        alert.addButton(withTitle: Button)
+        let CancelButtonText = NSLocalizedString("No", comment: "")
+        alert.addButton(withTitle: CancelButtonText)
         
-        app_logo.isHidden=true
-        surprise_xmas.isHidden=true
-        surprise_newyear.isHidden=true
-        UserDefaults.standard.set("Report", forKey: "Choice")
-        
-        DispatchQueue.global(qos: .background).async {
-            self.syncShellExec(path: self.scriptPath, args: ["htmlreport"])
+        if alert.runModal() == .alertFirstButtonReturn {
             
-            DispatchQueue.main.async {
-                self.start_button.isEnabled=true
-                self.stop_button.isEnabled=false
-                self.stop_button.isHidden=true
-                self.kexts_button.isEnabled=true
-                self.webdriver_button.isEnabled=true
-                self.bootloader_button.isEnabled=true
-                self.report_button.isEnabled=true
-                self.efi_button.isEnabled=true
-                self.tools_button.isEnabled=true
-                self.animstop()
-                UserDefaults.standard.set("Update", forKey: "Choice")
+            output_window.textStorage?.mutableString.setString("")
+            start_button.isEnabled=false
+            stop_button.isEnabled=true
+            stop_button.isHidden=false
+            kexts_button.isEnabled=false
+            webdriver_button.isEnabled=false
+            bootloader_button.isEnabled=false
+            report_button.isEnabled=false
+            efi_button.isEnabled=false
+            tools_button.isEnabled=false
+            animstart()
+            
+            app_logo.isHidden=true
+            surprise_xmas.isHidden=true
+            surprise_newyear.isHidden=true
+            UserDefaults.standard.set("Report", forKey: "Choice")
+            
+            DispatchQueue.global(qos: .background).async {
+                self.syncShellExec(path: self.scriptPath, args: ["htmlreport"])
                 
+                DispatchQueue.main.async {
+                    self.start_button.isEnabled=true
+                    self.stop_button.isEnabled=false
+                    self.stop_button.isHidden=true
+                    self.kexts_button.isEnabled=true
+                    self.webdriver_button.isEnabled=true
+                    self.bootloader_button.isEnabled=true
+                    self.report_button.isEnabled=true
+                    self.efi_button.isEnabled=true
+                    self.tools_button.isEnabled=true
+                    self.animstop()
+                    UserDefaults.standard.set("Update", forKey: "Choice")
+                    
+                }
             }
         }
      }

@@ -719,7 +719,7 @@ function initial()
     if [[ "$menubar_version_running" != "$menubar_version_bundle" ]]; then
         if [[ "$menubar_prefs_activated" = "1" ]]; then
             pkill -f KUMenuBar
-            kill -kill "$menubar_pid"
+            kill -kill "$menubar_pid" >/dev/null 2>&1
             open "${kuroot}/Kext Updater.app/Contents/Resources/bin/KUMenuBar.app"
         fi
     fi
