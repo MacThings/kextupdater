@@ -1210,6 +1210,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"macpromnd" ]; then
     mv ${ScriptDownloadPath}/macpromnd ${ScriptDownloadPath}/"MacProMemoryNotificationDisabler"
     fi
+    if [ -d ${ScriptDownloadPath}/"radeonboost" ]; then
+    mv ${ScriptDownloadPath}/radeonboost ${ScriptDownloadPath}/"RadeonBoost"
+    fi
     if [ -d ${ScriptDownloadPath}/"thunderboltreset" ]; then
     mv ${ScriptDownloadPath}/thunderboltreset ${ScriptDownloadPath}/"ThunderboltReset"
     fi
