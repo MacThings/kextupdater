@@ -710,7 +710,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 344;
+				CURRENT_PROJECT_VERSION = 345;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,7 +720,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.4;
+				MARKETING_VERSION = 3.4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -737,7 +737,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 344;
+				CURRENT_PROJECT_VERSION = 345;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -747,7 +747,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.4;
+				MARKETING_VERSION = 3.4.5;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

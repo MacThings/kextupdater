@@ -2537,7 +2537,7 @@ DQ
                                             <rect key="frame" x="397" y="312" width="270" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Always the latest Kexts for your Hackintosh" id="yHa-Eb-aM3">
-                                                <font key="font" metaFont="label" size="12"/>
+                                                <font key="font" metaFont="controlContent"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -4733,7 +4733,7 @@ DQ
                                             <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore (N-D-K Fork)" id="8ss-Jz-7PF">
+                                            <menuItem title="OpenCore (N-D-K Fork)" id="Apz-uY-cPW">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport" id="4i4-wk-0pn">
@@ -4743,7 +4743,7 @@ DQ
                                             <menuItem title="OpenCore Nightly" id="tGB-Gh-Bvm">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore Nightly (N-D-K Fork)" id="TG2-Dr-2zV">
+                                            <menuItem title="OpenCore Nightly (N-D-K Fork)" id="1Vm-3k-b5u">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
