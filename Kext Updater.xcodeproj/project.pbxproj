@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A46C01524653A5E0013C0B5 /* Clibpng in Frameworks */ = {isa = PBXBuildFile; productRef = 2A46C01424653A5E0013C0B5 /* Clibpng */; };
+		2A46C01724653A5E0013C0B5 /* APNGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A46C01624653A5E0013C0B5 /* APNGKit */; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
@@ -44,8 +46,6 @@
 		2AC44C1D2315118E006D447C /* progressanim.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC323150F39006D447C /* progressanim.png */; };
 		2AC44C1E2315118E006D447C /* progressanim-dark.png in Anim Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BC423150F39006D447C /* progressanim-dark.png */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
-		2AE75AB2244B3D7100A209A7 /* Clibpng in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB1244B3D7100A209A7 /* Clibpng */; };
-		2AE75AB4244B3D7100A209A7 /* APNGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB3244B3D7100A209A7 /* APNGKit */; };
 		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
 		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -214,10 +214,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE75AB4244B3D7100A209A7 /* APNGKit in Frameworks */,
-				2AE75AB2244B3D7100A209A7 /* Clibpng in Frameworks */,
 				2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */,
 				7A1CDE974E06B5023B397C1C /* Pods_Kext_Updater.framework in Frameworks */,
+				2A46C01524653A5E0013C0B5 /* Clibpng in Frameworks */,
+				2A46C01724653A5E0013C0B5 /* APNGKit in Frameworks */,
 				2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,10 +402,10 @@
 			);
 			name = "Kext Updater";
 			packageProductDependencies = (
-				2AE75AB1244B3D7100A209A7 /* Clibpng */,
-				2AE75AB3244B3D7100A209A7 /* APNGKit */,
 				2AE75AB6244B3D9C00A209A7 /* KeychainSwift */,
 				2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */,
+				2A46C01424653A5E0013C0B5 /* Clibpng */,
+				2A46C01624653A5E0013C0B5 /* APNGKit */,
 			);
 			productName = "Kext Updater";
 			productReference = 2AB3049A23150E1300D618FF /* Kext Updater.app */;
@@ -442,9 +442,9 @@
 			);
 			mainGroup = 2AB3049123150E1300D618FF;
 			packageReferences = (
-				2AE75AB0244B3D7100A209A7 /* XCRemoteSwiftPackageReference "APNGKit" */,
 				2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */,
+				2A46C01324653A5E0013C0B5 /* XCRemoteSwiftPackageReference "APNGKit" */,
 			);
 			productRefGroup = 2AB3049B23150E1300D618FF /* Products */;
 			projectDirPath = "";
@@ -710,7 +710,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 345;
+				CURRENT_PROJECT_VERSION = 346;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,7 +720,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.5;
+				MARKETING_VERSION = 3.4.6;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -737,7 +737,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 345;
+				CURRENT_PROJECT_VERSION = 346;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -747,7 +747,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.5;
+				MARKETING_VERSION = 3.4.6;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -780,7 +780,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2AE75AB0244B3D7100A209A7 /* XCRemoteSwiftPackageReference "APNGKit" */ = {
+		2A46C01324653A5E0013C0B5 /* XCRemoteSwiftPackageReference "APNGKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/APNGKit";
 			requirement = {
@@ -807,14 +807,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2AE75AB1244B3D7100A209A7 /* Clibpng */ = {
+		2A46C01424653A5E0013C0B5 /* Clibpng */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB0244B3D7100A209A7 /* XCRemoteSwiftPackageReference "APNGKit" */;
+			package = 2A46C01324653A5E0013C0B5 /* XCRemoteSwiftPackageReference "APNGKit" */;
 			productName = Clibpng;
 		};
-		2AE75AB3244B3D7100A209A7 /* APNGKit */ = {
+		2A46C01624653A5E0013C0B5 /* APNGKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB0244B3D7100A209A7 /* XCRemoteSwiftPackageReference "APNGKit" */;
+			package = 2A46C01324653A5E0013C0B5 /* XCRemoteSwiftPackageReference "APNGKit" */;
 			productName = APNGKit;
 		};
 		2AE75AB6244B3D9C00A209A7 /* KeychainSwift */ = {

@@ -1,40 +1,24 @@
 PODS:
   - APNGKit (1.1.3)
-  - KeychainSwift (19.0.0)
   - LetsMove (1.24)
-  - LoginServiceKit (2.2.0)
   - Sparkle (1.23.0)
 
 DEPENDENCIES:
   - APNGKit
-  - KeychainSwift
   - LetsMove
-  - LoginServiceKit (from `https://github.com/Clipy/LoginServiceKit.git`)
   - Sparkle
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - APNGKit
-    - KeychainSwift
     - LetsMove
     - Sparkle
 
-EXTERNAL SOURCES:
-  LoginServiceKit:
-    :git: https://github.com/Clipy/LoginServiceKit.git
-
-CHECKOUT OPTIONS:
-  LoginServiceKit:
-    :commit: d8c24ad7e9b48294a8ae47f94bb1debeba74e102
-    :git: https://github.com/Clipy/LoginServiceKit.git
-
 SPEC CHECKSUMS:
   APNGKit: fbf5270804a2861f451ca27cf1cce0893b13fbf5
-  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
-  LoginServiceKit: 3c86ce2f2bcd1e373326839d6d863d8a6a5915b4
   Sparkle: 55b1a87ba69d56913375a281546b7c82dec95bb0
 
-PODFILE CHECKSUM: 5580c3dfe434df75e4d6a15540fd970a0a2392aa
+PODFILE CHECKSUM: b1079dc3589a2585719cf34d89849ddfd5c18258
 
 COCOAPODS: 1.8.3

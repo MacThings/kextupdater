@@ -160,6 +160,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-intelmausiethernet")
         UserDefaults.standard.set(true, forKey: "dl-lilu")
         UserDefaults.standard.set(true, forKey: "dl-lilufriend")
+        UserDefaults.standard.set(true, forKey: "dl-lucyrtl8125ethernet")
         UserDefaults.standard.set(true, forKey: "dl-macpromnd")
         UserDefaults.standard.set(true, forKey: "dl-nightshiftunlocker")
         UserDefaults.standard.set(true, forKey: "dl-notouchid")
@@ -297,6 +298,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func lilu(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/Lilu", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func lucyrtl8125ethernet(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/Mieze/LucyRTL8125Ethernet", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func lilufriend(_ sender: Any) {
