@@ -90,7 +90,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple |sed -e "s/d0/.0/g" -e "s/d1/.1/g" -e "s/d2/.2/g" -e "s/d3/.3/g" -e "s/d4/.4/g" -e "s/d5/.5/g" -e "s/d6/.6/g" -e "s/d7/.7/g" -e "s/d8/.8/g" -e "s/d9/.9/g")
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" |sed -e "s/d0/.0/g" -e "s/d1/.1/g" -e "s/d2/.2/g" -e "s/d3/.3/g" -e "s/d4/.4/g" -e "s/d5/.5/g" -e "s/d6/.6/g" -e "s/d7/.7/g" -e "s/d8/.8/g" -e "s/d9/.9/g")
     #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     #kuversion=$( _helpDefaultRead "KUVersion" )
@@ -104,6 +104,9 @@ function _excludedkexts()
           kextstatsori=$( echo -e "$kextstatsori" "\nOpenCore ($ocversion)" )
         fi
     fi
+
+    ### DEBUG Point. Testing Kexts without really loaded ###
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  116    1 0xffffff7f8423a000 0x28000    0x28000    com.alexandred.VoodooI2C (2.4.2) 31FC3ED7-7A4D-3AB7-B32B-29AD171FD393 <115 57 41 13 12 6 5 3 1>" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -237,7 +240,7 @@ kextArray=(
 "usbinjectall","USBInjectAll","USBInjectAll",""
 "virtualsmc","VirtualSMC","VirtualSMC",""
 "voodoohda","VoodooHDA","VoodooHDA",""
-"voodooi2c","VoodooI2C (","VoodooI2C",""
+"voodooi2c","VoodooI2C","VoodooI2C",""
 "voodooinput","VoodooInput","VoodooInput",""
 "voodoops2","PS2Controller","VoodooPS2",""
 "voodoosdhc","VoodooSDHC","VoodooSDHC",""
@@ -253,54 +256,18 @@ function _languageselect()
 {
 
     if [[ $lan2 = de* ]]; then
-    export LC_ALL=de_DE
-    language="de"
-#elif [[ $lan2 = tr* ]]; then
-#    export LC_ALL=tr_TR
-#   language="tr"
-#   elif [[ $lan2 = ru* ]]; then
-#   export LC_ALL=ru_RU
-#   language="ru"
-#   elif [[ $lan2 = uk* ]]; then
-#   export LC_ALL=uk_UK
-#   language="uk"
-#   elif [[ $lan2 = es* ]]; then
-#   export LC_ALL=es_ES
-#   language="es"
-#   elif [[ $lan2 = pt* ]]; then
-#   export LC_ALL=pt_PT
-#   language="pt-PT"
-#   elif [[ $lan2 = nl* ]]; then
-#   export LC_ALL=nl_NL
-#   language="nl"
-#   elif [[ $lan2 = fr* ]]; then
-#   export LC_ALL=fr_FR
-#   language="fr"
-#   elif [[ $lan2 = it* ]]; then
-#   export LC_ALL=it_IT
-#   language="it"
-#   elif [[ $lan2 = fi* ]]; then
-#   export LC_ALL=fi_FI
-#   language="fi"
-#   elif [[ $lan2 = pl* ]]; then
-#   export LC_ALL=pl_PL
-#   language="pl"
-#   elif [[ $lan2 = sv* ]]; then
-#   export LC_ALL=sv_SV
-#   language="sv"
-#   elif [[ $lan2 = cs* ]]; then
-#   export LC_ALL=cs_CS
-#   language="cs"
+      export LC_ALL=de_DE
+      language="de"
     else
-    export LC_ALL=en_EN
-    language="en"
+      export LC_ALL=en_EN
+      language="en"
     fi
     if [ ! -d "$ScriptTmpPath" ]; then
         mkdir "$ScriptTmpPath"
     fi
-    #if [ ! -f ${ScriptTmpPath}/locale.tmp ]; then
+
     cat ../bashstrings/$language.bashstrings > ${ScriptTmpPath}/locale.tmp
-    #fi
+
     source ${ScriptTmpPath}/locale.tmp
 }
 
@@ -1209,6 +1176,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"macpromnd" ]; then
     mv ${ScriptDownloadPath}/macpromnd ${ScriptDownloadPath}/"MacProMemoryNotificationDisabler"
+    fi
+    if [ -d ${ScriptDownloadPath}/"radeonboost" ]; then
+    mv ${ScriptDownloadPath}/radeonboost ${ScriptDownloadPath}/"RadeonBoost"
     fi
     if [ -d ${ScriptDownloadPath}/"thunderboltreset" ]; then
     mv ${ScriptDownloadPath}/thunderboltreset ${ScriptDownloadPath}/"ThunderboltReset"
