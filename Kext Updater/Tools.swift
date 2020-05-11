@@ -503,5 +503,9 @@ class Tools: NSViewController {
         self.read_write.isHidden = true
     }
 }
+   
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
+    }
     
 }

@@ -417,4 +417,8 @@ class SingleKexts: NSViewController {
         webview_button.performClick(nil)
     }
     
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
+    }
+    
 }

@@ -57,6 +57,10 @@ class DiskInformation: NSViewController {
         //diskwindow.setIsVisible(true)
     }
         
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
     }
+    
+}
     
 

@@ -22,7 +22,10 @@ class Hint: NSViewController {
         self.view.window?.close()
     }
     
-
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
+    }
+    
 }
 
 

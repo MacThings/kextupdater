@@ -116,4 +116,8 @@ class nVidiaWebdriver: NSViewController {
         defaults.synchronize()
     }
     
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
+    }
+    
 }
