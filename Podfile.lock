@@ -1,24 +1,20 @@
 PODS:
-  - APNGKit (1.1.3)
   - LetsMove (1.24)
   - Sparkle (1.23.0)
 
 DEPENDENCIES:
-  - APNGKit
   - LetsMove
   - Sparkle
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - APNGKit
     - LetsMove
     - Sparkle
 
 SPEC CHECKSUMS:
-  APNGKit: fbf5270804a2861f451ca27cf1cce0893b13fbf5
   LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
   Sparkle: 55b1a87ba69d56913375a281546b7c82dec95bb0
 
-PODFILE CHECKSUM: b1079dc3589a2585719cf34d89849ddfd5c18258
+PODFILE CHECKSUM: 26f31d2eba31f94b156c9264c1721cac11b5db21
 
 COCOAPODS: 1.8.3

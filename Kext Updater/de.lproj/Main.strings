@@ -121,9 +121,6 @@
 /* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
 "8KI-5D-e2p.title" = "Download";
 
-/* Class = "NSMenuItem"; title = "OpenCore (NDK Fork)"; ObjectID = "8ss-Jz-7PF"; */
-"8ss-Jz-7PF.title" = "OpenCore (NDK Fork)";
-
 /* Class = "NSMenuItem"; title = "Please Select"; ObjectID = "9bX-ps-dhp"; */
 "9bX-ps-dhp.title" = "Bitte auswählen";
 
@@ -619,9 +616,6 @@
 /* Class = "NSMenuItem"; title = "10.10.3 - 14D131"; ObjectID = "KpK-9x-aN4"; */
 "KpK-9x-aN4.title" = "10.10.3 - 14D131";
 
-/* Class = "NSTextFieldCell"; title = "Uh Oh! You are not connected to the Internet or the Server is not reachable at the moment."; ObjectID = "kRf-K4-isr"; */
-"kRf-K4-isr.title" = "Oh nein! Du bist nicht mit dem Internet verbunden oder der Server ist gerade nicht erreichbar.";
-
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Kri-LH-JvQ"; */
 "Kri-LH-JvQ.title" = "Bitte auswählen";
 
@@ -763,6 +757,9 @@
 /* Class = "NSMenuItem"; title = "Hide Kext Updater"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Kext Updater ausblenden";
 
+/* Class = "NSButtonCell"; title = "Remember last Selection"; ObjectID = "Onk-nj-QDg"; */
+"Onk-nj-QDg.title" = "Letzte Auswahl merken";
+
 /* Class = "NSMenuItem"; title = "Yosemite"; ObjectID = "Ops-Av-Y4z"; */
 "Ops-Av-Y4z.title" = "Yosemite";
 
@@ -892,9 +889,6 @@
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1912"; ObjectID = "RTp-wZ-x19"; */
 "RTp-wZ-x19.title" = "10.10.5 - 14F1912";
 
-/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Rwf-9D-Zgg"; */
-"Rwf-9D-Zgg.title" = "Ok";
-
 /* Class = "NSButtonCell"; title = "IntelMausi"; ObjectID = "RZ3-Ic-BVb"; */
 "RZ3-Ic-BVb.title" = "IntelMausi";
 
@@ -958,9 +952,6 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
 "Tfb-H6-fo8.title" = "Box";
 
-/* Class = "NSMenuItem"; title = "OpenCore Nightly (NDK Fork)"; ObjectID = "TG2-Dr-2zV"; */
-"TG2-Dr-2zV.title" = "OpenCore Nightly (NDK Fork)";
-
 /* Class = "NSMenuItem"; title = "OpenCore Nightly"; ObjectID = "tGB-Gh-Bvm"; */
 "tGB-Gh-Bvm.title" = "OpenCore Nightly";
 
@@ -981,9 +972,6 @@
 
 /* Class = "NSMenuItem"; title = "Audio"; ObjectID = "tuE-TW-czw"; */
 "tuE-TW-czw.title" = "Audio";
-
-/* Class = "NSViewController"; title = "Network Error"; ObjectID = "Twa-vs-6MY"; */
-"Twa-vs-6MY.title" = "Netzwerk Fehler";
 
 /* Class = "NSButtonCell"; title = "Reset all"; ObjectID = "U2w-vj-aHe"; */
 "U2w-vj-aHe.title" = "Alles zurücksetzen";

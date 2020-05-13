@@ -274,6 +274,11 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set("~/Downloads", forKey: "NSNavLastRootDirectory")
         }
         
+        let bootloader_remember = UserDefaults.standard.string(forKey: "Bootloader_remember_choice")
+        if bootloader_remember == nil{
+            UserDefaults.standard.set(false, forKey: "Bootloader_remember_choice")
+        }
+        
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
             infobox_admin_status_content_yes.isHidden = true

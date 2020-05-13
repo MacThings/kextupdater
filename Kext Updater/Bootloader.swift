@@ -16,6 +16,7 @@ class Bootloader: NSViewController {
     @IBOutlet weak var opencore: NSPopUpButton!
     @IBOutlet weak var please_choose_label: NSTextField!
     @IBOutlet weak var start_button: NSButton!
+    @IBOutlet weak var bootloader_kind: NSPopUpButton!
     
     @IBOutlet weak var bootloader_empty: NSMenuItem!
     
@@ -27,8 +28,73 @@ class Bootloader: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
+        let bootloaderchoice = UserDefaults.standard.bool(forKey: "Bootloader_remember_choice")
+        if bootloaderchoice == true {
+            let bootloaderchoice = UserDefaults.standard.string(forKey: "Bootloader_remember_bootloaderchoice")
+            let bootloadertitle = UserDefaults.standard.string(forKey: "Bootloader_remember_title")
+            UserDefaults.standard.set(bootloadertitle, forKey: "Bootloaderkind")
+            if bootloaderchoice == "Clover" {
+                self.bootloader_kind.selectItem(withTitle: bootloaderchoice!)
+                
+                if bootloadertitle != nil {
+                    self.clover.selectItem(withTitle: bootloadertitle!)
+                }
+
+                let gettitle = UserDefaults.standard.string(forKey: "Bootloader_remember_title")
+                UserDefaults.standard.set(gettitle, forKey: "Bootloader_remember_title")
+                if gettitle == "Clover" {
+                    UserDefaults.standard.set("Clover", forKey: "Bootloaderkind")
+                } else if gettitle == "Clover Nightly" {
+                    UserDefaults.standard.set("CloverNightly", forKey: "Bootloaderkind")
+                } else if gettitle == "EFI Driver" {
+                    UserDefaults.standard.set("EFIDriver", forKey: "Bootloaderkind")
+                } else if gettitle == "EFI Driver Nightly" {
+                    UserDefaults.standard.set("EFIDriverNightly", forKey: "Bootloaderkind")
+                } else if gettitle == "OcQuirks Nightly" {
+                    UserDefaults.standard.set("OcQuirksNightly", forKey: "Bootloaderkind")
+                }
+                
+                self.clover_empty_entry.isHidden=true
+                self.start_button.isEnabled=true
+                self.clover.isHidden=false
+                self.opencore.isHidden=true
+                self.please_choose_label.isHidden=true
+                self.bootloader_empty.isHidden=true
+            } else if bootloaderchoice == "OpenCore" {
+                self.bootloader_kind.selectItem(withTitle: bootloaderchoice!)
+                
+                if bootloadertitle != nil {
+                    self.opencore.selectItem(withTitle: bootloadertitle!)
+                }
+                
+                let gettitle = UserDefaults.standard.string(forKey: "Bootloader_remember_title")
+                if gettitle == "OpenCore"{
+                   UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
+                } else if gettitle == "OpenCore (N-D-K Fork)" {
+                    UserDefaults.standard.set("OpenCore-NDK", forKey: "Bootloaderkind")
+                } else if gettitle == "AppleSupport" {
+                    UserDefaults.standard.set("AppleSupport", forKey: "Bootloaderkind")
+                } else if gettitle == "OcBinaryData" {
+                    UserDefaults.standard.set("OcBinaryData", forKey: "Bootloaderkind")
+                } else if gettitle == "AppleSupport Nightly" {
+                    UserDefaults.standard.set("AppleSupportNightly", forKey: "Bootloaderkind")
+                } else if gettitle == "OpenCore Nightly" {
+                    UserDefaults.standard.set("OpenCoreNightly", forKey: "Bootloaderkind")
+                } else if gettitle == "OpenCore Nightly (N-D-K Fork)" {
+                    UserDefaults.standard.set("OpenCoreNightly-NDK", forKey: "Bootloaderkind")
+                }
+                
+                self.opencore_empty_entry.isHidden=true
+                self.start_button.isEnabled=true
+                self.clover.isHidden=true
+                self.opencore.isHidden=false
+                self.please_choose_label.isHidden=true
+                self.bootloader_empty.isHidden=true
+            }
+           
+        }
     }
     
     @IBAction func close_button(_ sender: Any) {
@@ -41,6 +107,7 @@ class Bootloader: NSViewController {
     
     @IBAction func bootloader_choice(_ sender: Any) {
         let bootloaderchoice = (sender as AnyObject).selectedCell()!.title
+        UserDefaults.standard.set(bootloaderchoice, forKey: "Bootloader_remember_bootloaderchoice")
         if bootloaderchoice == "Clover" {
             self.clover.isHidden=false
             self.opencore.isHidden=true
@@ -62,6 +129,7 @@ class Bootloader: NSViewController {
         self.opencore_empty_entry.isHidden=true
         self.start_button.isEnabled=true
         let gettitle = (sender as AnyObject).selectedCell()!.title
+        UserDefaults.standard.set(gettitle, forKey: "Bootloader_remember_title")
         if gettitle == "OpenCore"{
            UserDefaults.standard.set("OpenCore", forKey: "Bootloaderkind")
         } else if gettitle == "OpenCore (N-D-K Fork)" {
@@ -83,6 +151,7 @@ class Bootloader: NSViewController {
         self.clover_empty_entry.isHidden=true
         self.start_button.isEnabled=true
         let gettitle = (sender as AnyObject).selectedCell()!.title
+        UserDefaults.standard.set(gettitle, forKey: "Bootloader_remember_title")
         if gettitle == "Clover" {
             UserDefaults.standard.set("Clover", forKey: "Bootloaderkind")
         } else if gettitle == "Clover Nightly" {

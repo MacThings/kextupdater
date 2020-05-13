@@ -4833,7 +4833,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-iS-5s8">
-                                <rect key="frame" x="170" y="85" width="311" height="18"/>
+                                <rect key="frame" x="171" y="64" width="311" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Exclude OpenCore from Update check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1uw-NE-J1u">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4844,7 +4844,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-9J-kXf">
-                                <rect key="frame" x="170" y="58" width="311" height="18"/>
+                                <rect key="frame" x="171" y="37" width="311" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Exclude Clover from Update check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JKH-QD-EW1">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4868,10 +4868,22 @@ DQ
                                     <action selector="send_start:" target="3pD-vQ-Z2c" id="ztN-G0-Bkd"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUo-5t-w15">
+                                <rect key="frame" x="171" y="90" width="173" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Remember last Selection" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Onk-nj-QDg">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="lOH-Vu-QUH" name="value" keyPath="values.Bootloader_remember_choice" id="uFH-Tx-12M"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="bootloader_empty" destination="eH4-n6-fhn" id="16t-iJ-chK"/>
+                        <outlet property="bootloader_kind" destination="59n-g8-Uei" id="mnd-Ib-M82"/>
                         <outlet property="close_button" destination="x1M-tt-iml" id="Vvn-Bi-wWv"/>
                         <outlet property="clover" destination="Cu0-Ru-HB3" id="4VZ-kI-y4Q"/>
                         <outlet property="clover_empty_entry" destination="Tbd-kw-pCp" id="6it-iO-m4E"/>
@@ -4883,6 +4895,7 @@ DQ
                 </viewController>
                 <customObject id="gsR-PU-wiB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="3It-W6-KlE"/>
+                <userDefaultsController id="lOH-Vu-QUH"/>
             </objects>
             <point key="canvasLocation" x="1397" y="1408"/>
         </scene>
