@@ -286,7 +286,7 @@ function _setrootuser()
     OK="0"
 
     admin=$( _helpDefaultRead "Admin" ) >/dev/null 2>&1
-if [[ $admin = "" ]]; then
+    if [[ $admin = "" ]]; then
 
     groups "$user" | grep -q -w admin
     if [ $? = 0 ]; then

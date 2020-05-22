@@ -2671,14 +2671,6 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="rq3-GA-RoS"/>
                                         </imageView>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xuk-j0-jIC" userLabel="App Logo Animation">
-                                            <rect key="frame" x="607" y="218" width="38" height="38"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QzC-UZ-0xU">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
                                         <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
                                             <rect key="frame" x="623" y="136" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2707,6 +2699,10 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="eject" id="vz9-lB-z7A"/>
                                         </imageView>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" fixedFrame="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="9iu-Sn-KJm">
+                                            <rect key="frame" x="612" y="219" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
@@ -3006,7 +3002,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="app_logo" destination="gLh-CT-dn6" id="QG2-Sx-bqo"/>
-                        <outlet property="app_logo_animation" destination="Xuk-j0-jIC" id="wbF-23-OUp"/>
+                        <outlet property="app_logo_animation" destination="9iu-Sn-KJm" id="589-Ng-2el"/>
                         <outlet property="bootloader_button" destination="FLW-E7-UGI" id="LBv-Aq-MOh"/>
                         <outlet property="crtview" destination="OnH-2b-kiw" id="2Wd-HS-G4s"/>
                         <outlet property="efi_button" destination="Gmk-gz-FIC" id="9Mr-Qa-w82"/>

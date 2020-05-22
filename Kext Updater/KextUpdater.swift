@@ -10,7 +10,6 @@ import Cocoa
 import AVFoundation
 import KeychainSwift
 import LetsMove
-import APNGKit
 
 class KextUpdater: NSViewController {
     
@@ -18,7 +17,7 @@ class KextUpdater: NSViewController {
         
     @IBOutlet var output_window: NSTextView!
     @IBOutlet weak var app_logo: NSImageView!
-    @IBOutlet weak var app_logo_animation: NSButton!
+    @IBOutlet weak var app_logo_animation: NSProgressIndicator!
     
     @IBOutlet weak var crtview: NSImageView!
     
@@ -872,37 +871,13 @@ class KextUpdater: NSViewController {
     }
     
     func animstart() -> Void {
-        check_theme()
-        let themecheck = UserDefaults.standard.string(forKey: "System Theme")
-        if themecheck == "Light"{
-            let image = APNGImage(named: "anim/progressanim.png")
-            let imageView = APNGImageView(image: image)
-            app_logo_animation.addSubview(imageView)
-            imageView.startAnimating()
-        } else {
-            let image = APNGImage(named: "anim/progressanim-dark.png")
-            let imageView = APNGImageView(image: image)
-            app_logo_animation.addSubview(imageView)
-            imageView.startAnimating()
-        }
         self.app_logo_animation.isHidden=false
+        self.app_logo_animation.startAnimation("")
     }
     
     func animstop() -> Void {
-        check_theme()
-        let themecheck = UserDefaults.standard.string(forKey: "System Theme")
-        if themecheck == "Light"{
-            let image = APNGImage(named: "anim/progressanim.png")
-            let imageView = APNGImageView(image: image)
-            app_logo_animation.addSubview(imageView)
-            imageView.stopAnimating()
-        } else {
-            let image = APNGImage(named: "anim/progressanim-dark.png")
-            let imageView = APNGImageView(image: image)
-            app_logo_animation.addSubview(imageView)
-            imageView.stopAnimating()
-        }
         self.app_logo_animation.isHidden=true
+        self.app_logo_animation.stopAnimation("")
     }
     
     func check_theme() -> Void {

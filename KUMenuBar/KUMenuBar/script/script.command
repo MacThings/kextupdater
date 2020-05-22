@@ -107,7 +107,7 @@ function rebuild_kextcache()
 function reboot()
 {
 
-    reboot
+    osascript -e 'tell app "System Events" to restart'
 
 }
 
