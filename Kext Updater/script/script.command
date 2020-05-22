@@ -175,7 +175,7 @@ function _excludedkexts()
 ################################################################
 
 ScriptHome=$(echo $HOME)
-ScriptTmpPath="/private/tmp/kextupdater"
+ScriptTmpPath="$HOME"/.ku_temp
 MY_PATH="`dirname \"$0\"`"
 cd "$MY_PATH"
 

@@ -90,6 +90,17 @@ class KextUpdater: NSViewController {
         //UserDefaults.standard.set(false, forKey: "DoDownload")
     }
     
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
+            DispatchQueue.main.async {
+            }
+        }
+        
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -479,6 +490,8 @@ class KextUpdater: NSViewController {
                 self.animstop()
                 
                 UserDefaults.standard.set("Update", forKey: "Choice")
+                
+                self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
             }
         }
         
