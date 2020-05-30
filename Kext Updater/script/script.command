@@ -407,8 +407,7 @@ function scanallefis()
     bootnode=$( _helpDefaultRead "EFI Root" )
     excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" | rev | sed 's/[0-9]s//g' | rev )
 
-    #efis=$( cat /Users/luigi/Downloads/laufwerke.txt | grep "EFI" | sed "s/.*disk/disk/g" | cut -c 1-7 | grep -v "$excludebootefi")
-    efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi")
+    efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi$")
    
     while read -r line; do
     node=$( echo $line )
@@ -545,7 +544,6 @@ function unmountefiall()
         if [[ "$line" != "" ]]; then
             disk=$( echo "$line" | sed 's/\ -\ .*//g' )
             disk=$( echo "$disk"s1 )
-            echo "$disk" >> /Users/luigi/test/count
             if [[ $keychain = "1" ]]; then
                 _getsecret
             osascript -e 'do shell script "diskutil unmount '$disk'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
