@@ -491,7 +491,7 @@ class KextUpdater: NSViewController {
                 
                 UserDefaults.standard.set("Update", forKey: "Choice")
                 
-                self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
+                //self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
             }
         }
         
@@ -693,7 +693,7 @@ class KextUpdater: NSViewController {
     @IBAction func bug_report_click_sendmail(_ sender: Any) {
         let plist1 = self.userDesktopDirectory + "/Library/Preferences/kextupdater.slsoft.de.plist"
         let plist2 = self.userDesktopDirectory + "/Library/Preferences/kextupdaterhelper.slsoft.de.plist"
-        let bdmesg = "/private/tmp/kextupdater/bdmesg.txt"
+        let bdmesg = self.userDesktopDirectory + "/.ku_temp/bdmesg.txt"
         
         let bootloader = UserDefaults.standard.string(forKey: "Bootloader")
         if (bootloader?.contains("Open"))! {

@@ -2,7 +2,7 @@
 #
 
 ScriptHome=$(echo $HOME)
-ScriptTmpPath="/private/tmp/kextupdater"
+ScriptTmpPath="$HOME"/.ku_temp
 kuroot=`defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "KU Root"`
 efi_root=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Root" )
 download_path=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Downloadpath" )

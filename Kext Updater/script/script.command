@@ -214,7 +214,7 @@ kextArray=(
 "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup","WhateverGreen","Alarm"
 "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup","WhateverGreen","Alarm"
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
-"intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet","IntelMausi"
+"intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
 "lilu","Lilu ","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
@@ -394,24 +394,24 @@ function _resetrootuser()
 function scanallefis()
 {
 
-    for a in {1..8}; do
-    /usr/libexec/PlistBuddy -c "Delete EFI$a-Name" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-    done
+    #for a in {1..30}; do
+    #/usr/libexec/PlistBuddy -c "Delete EFI$a-Name" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    #done
 
-    /usr/libexec/PlistBuddy -c "Delete EFIx" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
+    #/usr/libexec/PlistBuddy -c "Delete EFIx" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
 
     if [ -f "$ScriptTmpPath"/drives ]; then
       rm "$ScriptTmpPath"/drives*
     fi
 
     bootnode=$( _helpDefaultRead "EFI Root" )
-    excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" )
+    excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" | rev | sed 's/[0-9]s//g' | rev )
 
-    efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | cut -c 1-7 | grep -v "$excludebootefi")
-    #efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | cut -c 1-7 )
-
+    #efis=$( cat /Users/luigi/Downloads/laufwerke.txt | grep "EFI" | sed "s/.*disk/disk/g" | cut -c 1-7 | grep -v "$excludebootefi")
+    efis=$( diskutil list | grep "EFI" | grep -v "UEFI" | grep -v "NO NAME" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi")
+   
     while read -r line; do
-    node=$( echo $line | cut -c 1-5 )
+    node=$( echo $line )
     efiname=$( diskutil info $node |grep "Media Name:" | sed "s/.*://g" |xargs )
     echo -e "$line"";""$efiname" >> "$ScriptTmpPath"/drives
     done <<< "$efis"
@@ -537,16 +537,23 @@ function unmountefiall()
 
     _languageselect
 
+    cp "$ScriptTmpPath"/drives_pulldown "$ScriptTmpPath"/drives_pulldown_unmount
+    echo "" >> "$ScriptTmpPath"/drives_pulldown_unmount
+
     while IFS= read -r line
     do
-        disk=$( echo "$line" | sed "s/\ -.*//g" )
-        if [[ $keychain = "1" ]]; then
-            _getsecret
-        osascript -e 'do shell script "diskutil unmount '$disk'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-            else
-        osascript -e 'do shell script "diskutil unmount '$disk'" with administrator privileges' >/dev/null 2>&1
+        if [[ "$line" != "" ]]; then
+            disk=$( echo "$line" | sed 's/\ -\ .*//g' )
+            disk=$( echo "$disk"s1 )
+            echo "$disk" >> /Users/luigi/test/count
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+            osascript -e 'do shell script "diskutil unmount '$disk'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+                else
+            osascript -e 'do shell script "diskutil unmount '$disk'" with administrator privileges' >/dev/null 2>&1
+            fi
         fi
-    done < ""$ScriptTmpPath"/drives_pulldown"
+    done < ""$ScriptTmpPath"/drives_pulldown_unmount"
 
     _helpDefaultWrite "Mounted" "No"
 

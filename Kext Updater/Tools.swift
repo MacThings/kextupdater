@@ -50,6 +50,7 @@ class Tools: NSViewController {
     @IBOutlet weak var progress_gear_mount: NSProgressIndicator!
     @IBOutlet weak var progress_gear: NSProgressIndicator!
     
+    let userDesktopDirectory:String = NSHomeDirectory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,19 +63,27 @@ class Tools: NSViewController {
         self.progress_gear.isHidden=false
         self.progress_gear?.startAnimation(self);
         DispatchQueue.global(qos: .background).async {
+            for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                if key.contains("-Name"){
+                    UserDefaults.standard.removeObject(forKey: key)
+                }
+                if key.contains("EFIx"){
+                    UserDefaults.standard.removeObject(forKey: key)
+                }
+            }
             self.syncShellExec(path: self.scriptPath, args: ["scanallefis"])
             self.syncShellExec(path: self.scriptPath, args: ["checksleepfix"])
             DispatchQueue.main.async {
                 self.progress_gear.isHidden=true
                 self.progress_gear?.stopAnimation(self);
-            let filePath = "/private/tmp/kextupdater/drives_pulldown"
+            let filePath = self.userDesktopDirectory + "/.ku_temp/drives_pulldown"
             if (FileManager.default.fileExists(atPath: filePath)) {
                 print("")
             } else{
                 return
             }
 
-            let location = NSString(string:"/private/tmp/kextupdater/drives_pulldown").expandingTildeInPath
+            let location = NSString(string:self.userDesktopDirectory + "/.ku_temp/drives_pulldown").expandingTildeInPath
             //self.pulldown_menu.item(withTitle: "  ")?.isHidden=true
             let fileContent = try? NSString(contentsOfFile: location, encoding: String.Encoding.utf8.rawValue)
             for (_, drive) in (fileContent?.components(separatedBy: "\n").enumerated())! {
@@ -486,8 +495,12 @@ class Tools: NSViewController {
         self.button_unmount.isEnabled=true
         self.button_unmount_all.isEnabled=true
         let efichoice = sender.title
-        let efichoice2 = efichoice.prefix(7)
-        UserDefaults.standard.set(efichoice2, forKey: "EFIx")
+        if let range = efichoice.range(of: " - ") {
+            let efichoice2 = efichoice[efichoice.startIndex..<range.lowerBound]
+            UserDefaults.standard.set(efichoice2 + "s1", forKey: "EFIx")
+        }
+        
+                
     }
     
     func catalina_read_write() {
