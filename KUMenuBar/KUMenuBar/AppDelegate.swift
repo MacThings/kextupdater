@@ -23,7 +23,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var download_folder: NSMenuItem!
     @IBOutlet weak var rebuild_kextcache: NSMenuItem!
     
-    
     @objc func displayMenu() {
         
         DispatchQueue.global(qos: .background).async {

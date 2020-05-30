@@ -111,4 +111,12 @@ function reboot()
 
 }
 
+function mounthelper()
+{
+
+    efi_mount=$( defaults read "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFIx" )
+    defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFIx" "$efi_mount"
+    
+}
+
 $1

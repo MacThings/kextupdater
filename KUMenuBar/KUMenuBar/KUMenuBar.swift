@@ -20,6 +20,7 @@ class KUMenuBar: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
         NSApp.activate(ignoringOtherApps: true)
         let afterreboot = UserDefaults.standard.bool(forKey: "AfterRebootOnly")
         if afterreboot == true{
@@ -53,6 +54,10 @@ class KUMenuBar: NSViewController {
             self.interval_pulldown.isEnabled=true
         }
         
+    }
+    
+    @objc func cancel(_ sender: Any?) {
+        self.view.window?.close()
     }
     
     func syncShellExec(path: String, args: [String] = []) {

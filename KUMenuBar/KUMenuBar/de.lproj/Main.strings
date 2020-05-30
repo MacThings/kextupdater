@@ -16,6 +16,9 @@
 /* Class = "NSMenuItem"; title = "6"; ObjectID = "aAd-Az-Se2"; */
 "aAd-Az-Se2.title" = "6";
 
+/* Class = "NSButtonCell"; title = "Mount"; ObjectID = "AEd-8C-mR6"; */
+"AEd-8C-mR6.title" = "Mounten";
+
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Main Menu";
 
@@ -40,14 +43,29 @@
 /* Class = "NSMenuItem"; title = "PID"; ObjectID = "HBZ-fQ-iEw"; */
 "HBZ-fQ-iEw.title" = "PID";
 
+/* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hnL-JR-gU9"; */
+"hnL-JR-gU9.title" = "Auswerfen";
+
 /* Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH"; */
 "IZa-m5-XsH.title" = "Boot-EFI mounten";
+
+/* Class = "NSTextFieldCell"; title = "Mount foreign EFI"; ObjectID = "J9a-zM-9yu"; */
+"J9a-zM-9yu.title" = "\"Fremde\" EFI mounten";
 
 /* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
 "lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
 
+/* Class = "NSButtonCell"; title = "Unmount all"; ObjectID = "MiQ-WT-X83"; */
+"MiQ-WT-X83.title" = "Alle auswerfen";
+
+/* Class = "NSViewController"; title = "EFI"; ObjectID = "mjF-K0-W90"; */
+"mjF-K0-W90.title" = "EFI";
+
 /* Class = "NSTextFieldCell"; title = "Preferences"; ObjectID = "no6-as-NNY"; */
 "no6-as-NNY.title" = "Einstellungen";
+
+/* Class = "NSMenuItem"; title = "Mount foreign EFI"; ObjectID = "Nus-1m-TTV"; */
+"Nus-1m-TTV.title" = "\"Fremde\" EFI mounten";
 
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
 "qq0-Fk-B6B.title" = "3";
@@ -60,6 +78,12 @@
 
 /* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "KU MenuBar";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "v6C-Kf-HWC"; */
+"v6C-Kf-HWC.title" = "Schließen";
+
+/* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "VLC-sX-XAW"; */
+"VLC-sX-XAW.title" = "Mounte EFI von andere(n) Festplatten.";
 
 /* Class = "NSMenuItem"; title = "Open EFI Folder"; ObjectID = "wNO-id-TVJ"; */
 "wNO-id-TVJ.title" = "Öffne EFI Ordner";
