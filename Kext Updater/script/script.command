@@ -408,7 +408,7 @@ function scanallefis()
     excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" | rev | sed 's/[0-9]s//g' | rev )
 
     #efis=$( cat /Users/luigi/Downloads/laufwerke.txt | grep "EFI" | sed "s/.*disk/disk/g" | cut -c 1-7 | grep -v "$excludebootefi")
-    efis=$( diskutil list | grep "EFI" | grep -v "UEFI" | grep -v "NO NAME" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi")
+    efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi")
    
     while read -r line; do
     node=$( echo $line )
