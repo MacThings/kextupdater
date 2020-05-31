@@ -90,7 +90,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" |sed -e "s/d0/.0/g" -e "s/d1/.1/g" -e "s/d2/.2/g" -e "s/d3/.3/g" -e "s/d4/.4/g" -e "s/d5/.5/g" -e "s/d6/.6/g" -e "s/d7/.7/g" -e "s/d8/.8/g" -e "s/d9/.9/g")
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" )
     #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     #kuversion=$( _helpDefaultRead "KUVersion" )
@@ -855,8 +855,8 @@ fi
 #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
 bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
-kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" ) ### Removing shitty Character "d" from Version String @ IntelMausiEthernet
-kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character "d" from Version String @ ThunderboltReset
+#kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" ) ### Removing shitty Character "d" from Version String @ IntelMausiEthernet
+#kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character "d" from Version String @ ThunderboltReset
 #kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
@@ -1472,7 +1472,7 @@ function kudaemon()
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         kext=$( echo "$line" |sed "s/-.*//g" )
-        kstat=$( grep -w "$kext" "$ScriptTmpPath"/daemon_kextstat | sed -e "s/.*(//g" -e "s/).*//g" -e "s/\.//g" -e "s/d0//g" -e "s/d/./g" )
+        kstat=$( grep -w "$kext" "$ScriptTmpPath"/daemon_kextstat | sed -e "s/.*(//g" -e "s/).*//g" -e "s/\.//g" )
         kover=$( grep -w "$kext" "$ScriptTmpPath"/daemon_overview | sed -e "s/.*-//g" -e "s/+.*//g" )
 
         if [[ $kstat != "" ]]; then
