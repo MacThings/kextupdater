@@ -1198,6 +1198,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"applealcnightly" ]; then
     mv ${ScriptDownloadPath}/applealcnightly ${ScriptDownloadPath}/"AppleALC Nightly"
     fi
+    if [ -d ${ScriptDownloadPath}/"intelmausiethernet" ]; then
+    mv ${ScriptDownloadPath}/lilunightly ${ScriptDownloadPath}/"IntelMausiEthernet"
+    fi
     if [ -d ${ScriptDownloadPath}/"lilunightly" ]; then
     mv ${ScriptDownloadPath}/lilunightly ${ScriptDownloadPath}/"Lilu Nightly"
     fi
@@ -2155,10 +2158,10 @@ function _efi_folder_creator()
         elif [[ "$efi_creator" = "OpenCore Nightly" ]]; then
             folder="opencorenightlycreator"
             kext_target="OC/Kexts"
-        elif [[ "$efi_creator" = "OpenCore Nightly (NDK Fork)" ]]; then
+        elif [[ "$efi_creator" = "OpenCore Nightly (N-D-K Fork)" ]]; then
             folder="opencorenightly-ndkcreator"
             kext_target="OC/Kexts"
-        elif [[ "$efi_creator" = "OpenCore (NDK Fork)" ]]; then
+        elif [[ "$efi_creator" = "OpenCore (N-D-K Fork)" ]]; then
             folder="opencore-ndkcreator"
             kext_target="OC/Kexts"
         fi

@@ -49,8 +49,8 @@
 /* Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH"; */
 "IZa-m5-XsH.title" = "Boot-EFI mounten";
 
-/* Class = "NSTextFieldCell"; title = "Mount foreign EFI"; ObjectID = "J9a-zM-9yu"; */
-"J9a-zM-9yu.title" = "\"Fremde\" EFI mounten";
+/* Class = "NSTextFieldCell"; title = "Mount other EFI"; ObjectID = "J9a-zM-9yu"; */
+"J9a-zM-9yu.title" = "Andere EFI mounten";
 
 /* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
 "lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
@@ -65,7 +65,7 @@
 "no6-as-NNY.title" = "Einstellungen";
 
 /* Class = "NSMenuItem"; title = "Mount foreign EFI"; ObjectID = "Nus-1m-TTV"; */
-"Nus-1m-TTV.title" = "\"Fremde\" EFI mounten";
+"Nus-1m-TTV.title" = "Andere EFI mounten";
 
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
 "qq0-Fk-B6B.title" = "3";
