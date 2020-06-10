@@ -39,7 +39,7 @@
 	<key>SUEnableSystemProfiling</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://update.kextupdater.de/kextupdater/appcastng.xml</string>
+	<string>https://www.sl-soft.de/extern/software/kextupdater/appcastng.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>IocWX96bR2E4UoPBgFT3KVRVWbut/1HjJVrfChE6l+s=</string>
 </dict>

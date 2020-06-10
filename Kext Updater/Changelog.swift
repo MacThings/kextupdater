@@ -17,7 +17,7 @@ class Changelog: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
-        let url = NSURL (string: "https://update.kextupdater.de/kextupdater/kextupdaterng.html")
+        let url = NSURL (string: "https://www.sl-soft.de/extern/software/kextupdater/kextupdaterng.html")
         let requestObj = NSURLRequest(url: url! as URL)
         webView.mainFrame.load(requestObj as URLRequest)
         
