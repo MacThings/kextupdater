@@ -1,0 +1,1 @@
+../../../Kext Updater/script/script.command
