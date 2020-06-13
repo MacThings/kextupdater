@@ -83,7 +83,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx itl80211 Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -216,7 +216,9 @@ kextArray=(
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
 "intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
-"lilu","Lilu ","Lilu",""
+"itlwm","itlwm ","itlwm",""
+"itlwmx","itlwmx ","itlwmx",""
+"itl80211","itl80211 ","itl80211",""
 "lilufriend","LiluFriend","LiluFriend",""
 "lucyrtl8125ethernet","LucyRTL8125Ethernet","LucyRTL8125Ethernet",""
 "macpromnd","MacProMemoryNotificationDisabler","MacProMemoryNotificationDisabler",""
