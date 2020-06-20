@@ -1078,9 +1078,11 @@ function _cleanup()
     find $ScriptDownloadPath/ -name *.dSYM -exec rm -r {} \; >/dev/null 2>&1
     find $ScriptDownloadPath/ -name __MACOSX -exec rm -r {} \; >/dev/null 2>&1
     fi
-    if [ -f ${ScriptTmpPath}/kextloaded ]; then
-        rm ${ScriptTmpPath}/kextloaded
-    fi
+    #if [ -f ${ScriptTmpPath}/kextloaded ]; then
+    #    rm ${ScriptTmpPath}/kextloaded
+    #fi
+    
+    rm -rf ${ScriptTmpPath}
     
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OfflineEFI" -bool NO
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "CustomEFI" -bool NO
@@ -2252,6 +2254,19 @@ function _custom_efi()
 {
     custom_efi="yes"
     mainscript
+}
+
+function _check_oc_config()
+{
+
+    oc_file=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCConfigFile" )
+    curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+    #cd ${ScriptTmpPath}
+    unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
+    ${ScriptTmpPath}/./ConfigValidity "$oc_file"
+    if [[ $checkchime = "1" ]]; then
+        _playchime
+    fi
 }
 
 function bug_report()

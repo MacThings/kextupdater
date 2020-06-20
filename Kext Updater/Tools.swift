@@ -362,6 +362,12 @@ class Tools: NSViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_offline_efi.stringValue as Any])
         self.view.window?.close()
     }
+ 
+    @IBAction func oc_config_check(_ sender: Any) {
+            UserDefaults.standard.set(true, forKey: "OCConfigCheck")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_oc_config_file.stringValue as Any])
+        self.view.window?.close()
+    }
     
     @IBAction func offline_efi_check(_ sender: Any) {
             UserDefaults.standard.set(true, forKey: "OfflineEFI")

@@ -457,12 +457,20 @@ class KextUpdater: NSViewController {
                 }
             }
 
+            let oc_config_check = UserDefaults.standard.bool(forKey: "OCConfigCheck")
             let offline_efi = UserDefaults.standard.bool(forKey: "OfflineEFI")
             let custom_efi = UserDefaults.standard.bool(forKey: "CustomEFI")
             if offline_efi == true{
                 self.syncShellExec(path: self.scriptPath, args: ["_offline_efi"])
             } else if custom_efi == true{
                 self.syncShellExec(path: self.scriptPath, args: ["_custom_efi"])
+            } else if oc_config_check == true{
+                self.syncShellExec(path: self.scriptPath, args: ["_check_oc_config"])
+                for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    if key.hasPrefix("OCC"){
+                        UserDefaults.standard.removeObject(forKey: key)
+                }
+                }
             } else {
                 let checklast = UserDefaults.standard.string(forKey: "Last Check")
                     if checklast != "Never"{

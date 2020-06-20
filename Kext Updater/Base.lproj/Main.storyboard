@@ -4060,6 +4060,9 @@ DQ
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="message" size="11"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="oc_config_check:" target="PFO-7L-TjR" id="2g3-c7-zoG"/>
+                                            </connections>
                                         </button>
                                         <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CbN-gD-oYc">
                                             <rect key="frame" x="0.0" y="24" width="306" height="18"/>
