@@ -99,7 +99,7 @@ function _excludedkexts()
     #kextstatsori=$( echo -e "$kextstats" "\nKextupdater ($kuversion)" )
     bootloader=$( _helpDefaultRead "Bootloader" )
     if [[ $bootloader = "OpenCore" ]]; then
-      ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/-.*//g" )
+      ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
         if [[ $ocversion != "" ]]; then
           kextstatsori=$( echo -e "$kextstatsori" "\nOpenCore ($ocversion)" )
         fi
@@ -634,7 +634,7 @@ function initial()
 
     if [[ "$choosed" != "1" ]]; then
         bootloader="OpenCore"
-        ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/-.*//g" )
+        ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
         _helpDefaultWrite "Bootloaderversion" "$bootloader v$ocversion"
     fi
 
@@ -2126,7 +2126,7 @@ function htmlreport()
 function check_opencore_conf()
 {
     _languageselect
-    ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/-.*//g" )
+    ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
     ocbootpath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
       if [[ $ocversion = "" ]] || [[ $ocbootpath = "" ]]; then
         echo -e "$ocerror"

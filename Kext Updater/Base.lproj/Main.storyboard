@@ -2627,7 +2627,7 @@ DQ
                                             <rect key="frame" x="397" y="312" width="270" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Always the latest Kexts for your Hackintosh" id="yHa-Eb-aM3">
-                                                <font key="font" metaFont="label" size="12"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -3578,7 +3578,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="smallSquare" title="3" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Tho-W6-S5A" id="ey2-Yo-Op6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="12"/>
+                                    <font key="font" metaFont="system" size="12"/>
                                     <menu key="menu" id="Yit-Ja-m6c">
                                         <items>
                                             <menuItem title="1" id="x5m-oz-NRO"/>
@@ -3736,178 +3736,35 @@ DQ
             <objects>
                 <viewController title="Tools" id="PFO-7L-TjR" customClass="Tools" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="91y-LP-8zY">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="654"/>
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="583"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-kl-7u7">
-                                <rect key="frame" x="25" y="297" width="599" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="btY-9r-eM3">
-                                <rect key="frame" x="25" y="202" width="599" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R59-26-0y6">
-                                <rect key="frame" x="-2" y="585" width="654" height="47"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Misc Tools" id="If5-ZO-ngg">
-                                    <font key="font" size="33" name="ArialRoundedMTBold"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
-                                <rect key="frame" x="31" y="499" width="450" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)." id="9hN-PQ-DIu">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-C4-kQ9">
-                                <rect key="frame" x="31" y="553" width="450" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="Rebuild Kextcache and repair Permissions in /S/L/E + /L/E." id="va9-o7-tkl">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
-                                <rect key="frame" x="33" y="417" width="540" height="51"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" id="CWj-gf-uEx">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkB-hH-A2t">
-                                <rect key="frame" x="45" y="147" width="335" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="hy1-np-ogO">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="hHz-So-dZN"/>
-                                </popUpButtonCell>
-                            </popUpButton>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-bZ-0js">
-                                <rect key="frame" x="41" y="115" width="150" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Mount" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6nV-VG-RBM">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="efi_tools_mount:" target="PFO-7L-TjR" id="7Ik-pC-fTK"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-14-Cuf">
-                                <rect key="frame" x="41" y="88" width="150" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Unmount" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hjw-Fy-cag">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="efi_tools_unmount:" target="PFO-7L-TjR" id="qo8-Ls-Nbd"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xq7-rS-1W5">
-                                <rect key="frame" x="41" y="62" width="150" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Unmount all" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wHQ-0o-YQJ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="efi_tools_unmount_all:" target="PFO-7L-TjR" id="J6X-z6-iRr"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="Kot-JU-52U">
-                                <rect key="frame" x="45" y="177" width="450" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="Mount EFI from another Harddisk." id="YUq-V5-jjD">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMU-Yw-1aC">
-                                <rect key="frame" x="431" y="32" width="173" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="efihd" id="ZH1-1K-hSv"/>
-                            </imageView>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRn-Tm-ms3">
-                                <rect key="frame" x="29" y="521" width="130" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="hvg-Oj-Vjg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="cacherebuild:" target="PFO-7L-TjR" id="Hz5-dG-jyl"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
-                                <rect key="frame" x="29" y="384" width="130" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
-                                </connections>
-                            </button>
-                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-rf-BW1">
-                                <rect key="frame" x="189" y="532" width="16" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </progressIndicator>
-                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="S82-8q-mdv">
-                                <rect key="frame" x="189" y="480" width="16" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </progressIndicator>
-                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="mge-oP-iKS">
-                                <rect key="frame" x="305" y="180" width="16" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </progressIndicator>
-                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
-                                <rect key="frame" x="579" y="371" width="51" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
-                            </imageView>
-                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
-                                <rect key="frame" x="579" y="371" width="50" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
-                            </imageView>
-                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btT-Id-K9q" userLabel="Atheros40applied">
-                                <rect key="frame" x="577" y="452" width="50" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="BLb-qV-UeJ"/>
-                            </imageView>
-                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6as-on-FXo" userLabel="Atheros40notapplied">
-                                <rect key="frame" x="577" y="452" width="51" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="rK9-pV-BjB"/>
-                            </imageView>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="K5k-Sp-wO4">
-                                <rect key="frame" x="20" y="518" width="599" height="5"/>
+                                <rect key="frame" x="20" y="492" width="540" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-Gj-iNn">
-                                <rect key="frame" x="20" y="466" width="599" height="5"/>
+                                <rect key="frame" x="20" y="444" width="540" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-lx-OG0">
-                                <rect key="frame" x="19" y="383" width="599" height="5"/>
+                                <rect key="frame" x="20" y="363" width="540" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-kl-7u7">
+                                <rect key="frame" x="20" y="285" width="540" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="btY-9r-eM3">
+                                <rect key="frame" x="20" y="217" width="540" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6S1-Pb-0c1">
+                                <rect key="frame" x="20" y="145" width="540" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L55-W1-zjv">
-                                <rect key="frame" x="243" y="13" width="140" height="32"/>
+                                <rect key="frame" x="220" y="3" width="140" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="INj-fo-uW0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3917,63 +3774,160 @@ DQ
                                     <action selector="close_button:" target="PFO-7L-TjR" id="gQv-yN-0fF"/>
                                 </connections>
                             </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trt-2Z-QxN">
-                                <rect key="frame" x="27" y="468" width="130" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="R9u-E4-WBq">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="atheros_yes:" target="PFO-7L-TjR" id="m2h-vh-ejt"/>
-                                </connections>
-                            </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-Cn-gKP">
-                                <rect key="frame" x="297" y="49" width="32" height="32"/>
+                                <rect key="frame" x="528" y="10" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-MF-Kp9">
-                                <rect key="frame" x="33" y="332" width="536" height="51"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" id="sjO-TN-9bF">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent.</string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
-                                <rect key="frame" x="29" y="301" width="130" height="32"/>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="uIO-WK-ibb" userLabel="Kextcache">
+                                <rect key="frame" x="23" y="496" width="530" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
-                                </connections>
-                            </button>
-                            <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
-                                <rect key="frame" x="424" y="303" width="140" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="xfH-pD-gm7">
-                                    <rect key="frame" x="3" y="3" width="134" height="23"/>
+                                <view key="contentView" id="5Vf-Xe-L7x">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-rG-0Gm">
-                                            <rect key="frame" x="7" y="4" width="120" height="16"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-C4-kQ9">
+                                            <rect key="frame" x="-2" y="17" width="450" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read / Write" id="aid-bC-OiP">
-                                                <font key="font" metaFont="systemBold"/>
+                                            <textFieldCell key="cell" title="Rebuild Kextcache and repair Permissions in /S/L/E + /L/E." id="va9-o7-tkl">
+                                                <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-rT-NYh">
-                                            <rect key="frame" x="7" y="4" width="120" height="16"/>
+                                        <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRn-Tm-ms3">
+                                            <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="hvg-Oj-Vjg">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="cacherebuild:" target="PFO-7L-TjR" id="Hz5-dG-jyl"/>
+                                            </connections>
+                                        </button>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-rf-BW1">
+                                            <rect key="frame" x="153" y="4" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="peC-hC-wxz" userLabel="Atheros">
+                                <rect key="frame" x="23" y="452" width="530" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="S0v-Km-uF1">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
+                                            <rect key="frame" x="-2" y="18" width="450" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read only" id="7iC-s8-MNV">
-                                                <font key="font" metaFont="systemBold"/>
+                                            <textFieldCell key="cell" title="Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)." id="9hN-PQ-DIu">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="S82-8q-mdv">
+                                            <rect key="frame" x="154" y="3" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trt-2Z-QxN">
+                                            <rect key="frame" x="-5" y="-7" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="R9u-E4-WBq">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="atheros_yes:" target="PFO-7L-TjR" id="m2h-vh-ejt"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-1d-pVl">
+                                            <rect key="frame" x="-5" y="-7" width="110" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Qm8-k0-x1M">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="atheros_uninstall:" target="PFO-7L-TjR" id="vVZ-Q2-R1x"/>
+                                            </connections>
+                                        </button>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btT-Id-K9q" userLabel="Atheros40applied">
+                                            <rect key="frame" x="490" y="-2" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="BLb-qV-UeJ"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6as-on-FXo" userLabel="Atheros40notapplied">
+                                            <rect key="frame" x="490" y="-2" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="rK9-pV-BjB"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="h2Q-vj-BUW" userLabel="Read/Write">
+                                <rect key="frame" x="23" y="294" width="530" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="sKv-Ec-R44">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="72"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-MF-Kp9">
+                                            <rect key="frame" x="-2" y="19" width="536" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" id="sjO-TN-9bF">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                            <rect key="frame" x="-5" y="-8" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
+                                            </connections>
+                                        </button>
+                                        <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
+                                            <rect key="frame" x="389" y="-4" width="140" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="xfH-pD-gm7">
+                                                <rect key="frame" x="3" y="3" width="134" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-rG-0Gm">
+                                                        <rect key="frame" x="7" y="4" width="120" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read / Write" id="aid-bC-OiP">
+                                                            <font key="font" metaFont="systemBold"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-rT-NYh">
+                                                        <rect key="frame" x="7" y="4" width="120" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read only" id="7iC-s8-MNV">
+                                                            <font key="font" metaFont="systemBold"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-0k-mG5">
+                                            <rect key="frame" x="236" y="2" width="150" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="System Partition Status:" id="1gY-5O-x6G">
+                                                <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -3981,99 +3935,245 @@ DQ
                                     </subviews>
                                 </view>
                             </box>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-0k-mG5">
-                                <rect key="frame" x="271" y="311" width="150" height="16"/>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-F4-nne" userLabel="Select EFI Folder">
+                                <rect key="frame" x="23" y="222" width="530" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="y4q-R7-TY0">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-m6-A1D">
+                                            <rect key="frame" x="-2" y="42" width="446" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" title="Select an EFI folder you want to check for kext updates." id="qMl-rE-aP9">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njP-iK-fFt">
+                                            <rect key="frame" x="-5" y="-6" width="170" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Check for Kext Updates" bezelStyle="rounded" alignment="center" controlSize="small" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vwp-Mq-aV9">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="custom_efi_check:" target="PFO-7L-TjR" id="P16-Ij-1Hu"/>
+                                            </connections>
+                                        </button>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-UW-1xr">
+                                            <rect key="frame" x="0.0" y="25" width="306" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" id="QRH-0W-fF8">
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="td6-I9-cUG">
+                                            <rect key="frame" x="311" y="16" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Choose folder" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yj7-HC-KJ3">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="browseEFIfolderWithSender:" target="PFO-7L-TjR" id="oIe-6V-eyG"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cM-wi4" userLabel="Sleepfix">
+                                <rect key="frame" x="23" y="369" width="530" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="CRe-0W-lGV">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="78"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
+                                            <rect key="frame" x="-2" y="25" width="540" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" id="CWj-gf-uEx">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
+                                            <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
+                                            <rect key="frame" x="-5" y="-6" width="110" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
+                                            </connections>
+                                        </button>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
+                                            <rect key="frame" x="490" y="0.0" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
+                                        </imageView>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
+                                            <rect key="frame" x="490" y="0.0" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="L7l-Sp-GK3" userLabel="Check OC config">
+                                <rect key="frame" x="23" y="151" width="530" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="A7X-lf-wra">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="66"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="SqQ-Mq-8V8">
+                                            <rect key="frame" x="-2" y="43" width="446" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" title="Select an OpenCore config.plist which you want to check." id="8G1-E3-FCy">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69i-C0-He1">
+                                            <rect key="frame" x="-5" y="-6" width="170" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Check for validity" bezelStyle="rounded" alignment="center" controlSize="small" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aua-gt-vVe">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CbN-gD-oYc">
+                                            <rect key="frame" x="0.0" y="24" width="306" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" id="Y8H-EB-bfl">
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-2i-r87">
+                                            <rect key="frame" x="309" y="15" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Choose .plist" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3We-9K-zX3">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="browseOCconfigWithSender:" target="PFO-7L-TjR" id="eoR-ZG-U9V"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-Vb-chn" userLabel="Mount EFI">
+                                <rect key="frame" x="23" y="54" width="530" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="auB-yr-Ymc">
+                                    <rect key="frame" x="0.0" y="0.0" width="530" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkB-hH-A2t">
+                                            <rect key="frame" x="-1" y="45" width="236" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="hy1-np-ogO">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                                <menu key="menu" id="hHz-So-dZN"/>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-bZ-0js">
+                                            <rect key="frame" x="-3" y="16" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Mount" bezelStyle="rounded" alignment="center" controlSize="small" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6nV-VG-RBM">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="efi_tools_mount:" target="PFO-7L-TjR" id="7Ik-pC-fTK"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-14-Cuf">
+                                            <rect key="frame" x="-3" y="-6" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Unmount" bezelStyle="rounded" alignment="center" controlSize="small" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hjw-Fy-cag">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="efi_tools_unmount:" target="PFO-7L-TjR" id="qo8-Ls-Nbd"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="Kot-JU-52U">
+                                            <rect key="frame" x="-1" y="67" width="364" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" title="Mount EFI from another Harddisk." id="YUq-V5-jjD">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="mge-oP-iKS">
+                                            <rect key="frame" x="240" y="51" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-TZ-u7M">
+                                            <rect key="frame" x="112" y="16" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Kext Update" bezelStyle="rounded" alignment="center" controlSize="small" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A96-L1-Gm1">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="offline_efi_check:" target="PFO-7L-TjR" id="3yk-R4-ufe"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xq7-rS-1W5">
+                                            <rect key="frame" x="112" y="-6" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Unmount all" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wHQ-0o-YQJ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message" size="11"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="efi_tools_unmount_all:" target="PFO-7L-TjR" id="J6X-z6-iRr"/>
+                                            </connections>
+                                        </button>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMU-Yw-1aC">
+                                            <rect key="frame" x="249" y="0.0" width="115" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="efihd" id="ZH1-1K-hSv"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R59-26-0y6">
+                                <rect key="frame" x="-2" y="536" width="584" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="System Partition Status:" id="1gY-5O-x6G">
-                                    <font key="font" metaFont="system"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Misc Tools" id="If5-ZO-ngg">
+                                    <font key="font" size="33" name="ArialRoundedMTBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-TZ-u7M">
-                                <rect key="frame" x="191" y="115" width="192" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Check for Kext Updates" bezelStyle="rounded" alignment="center" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A96-L1-Gm1">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="offline_efi_check:" target="PFO-7L-TjR" id="3yk-R4-ufe"/>
-                                </connections>
-                            </button>
-                            <button toolTip="*click*" focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCK-QL-bHb" userLabel="Folder Download Icon">
-                                <rect key="frame" x="35" y="241" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSFolder" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="WF1-QH-pjw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="folder_download_open:" target="bdJ-Gk-pDf" id="Kie-ym-epe"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-m6-A1D">
-                                <rect key="frame" x="33" y="270" width="446" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="Select an EFI folder you want to check for kext updates." id="qMl-rE-aP9">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njP-iK-fFt">
-                                <rect key="frame" x="65" y="208" width="192" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Check for Kext Updates" bezelStyle="rounded" alignment="center" continuous="YES" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vwp-Mq-aV9">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="custom_efi_check:" target="PFO-7L-TjR" id="P16-Ij-1Hu"/>
-                                </connections>
-                            </button>
-                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-UW-1xr">
-                                <rect key="frame" x="71" y="244" width="306" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" id="QRH-0W-fF8">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="td6-I9-cUG">
-                                <rect key="frame" x="379" y="237" width="140" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Choose folder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yj7-HC-KJ3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="browseFileWithSender:" target="PFO-7L-TjR" id="uqA-wA-RmO"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-1d-pVl">
-                                <rect key="frame" x="27" y="468" width="130" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Qm8-k0-x1M">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="atheros_uninstall:" target="PFO-7L-TjR" id="vVZ-Q2-R1x"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
-                                <rect key="frame" x="29" y="384" width="130" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -4087,6 +4187,7 @@ DQ
                         <outlet property="button_fix_sleep_undo" destination="YXy-aO-DHP" id="eYQ-aN-sOW"/>
                         <outlet property="button_kextcache" destination="VRn-Tm-ms3" id="tXy-f1-stz"/>
                         <outlet property="button_mount" destination="cyz-bZ-0js" id="NJm-nI-ChF"/>
+                        <outlet property="button_oc_config_file" destination="69i-C0-He1" id="09J-vo-eoQ"/>
                         <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>
                         <outlet property="button_read_write" destination="rIK-O5-mOn" id="hTr-XT-ahl"/>
                         <outlet property="button_unmount" destination="vSC-14-Cuf" id="ypX-uR-1t6"/>
@@ -4095,6 +4196,8 @@ DQ
                         <outlet property="custom_efi_folder_path" destination="dg6-UW-1xr" id="9gy-S5-p9L"/>
                         <outlet property="fixapplied" destination="nfC-iN-8nh" id="OaY-TQ-BKb"/>
                         <outlet property="fixnotapplied" destination="B8z-iR-1s6" id="iB9-6P-AB8"/>
+                        <outlet property="oc_config_file" destination="CbN-gD-oYc" id="UvB-x4-C7a"/>
+                        <outlet property="oc_config_file_path" destination="CbN-gD-oYc" id="iJ7-8b-2Id"/>
                         <outlet property="progress_gear" destination="3Qy-Cn-gKP" id="9XR-o5-YAt"/>
                         <outlet property="progress_gear_atheros" destination="S82-8q-mdv" id="Nzk-3g-oqC"/>
                         <outlet property="progress_gear_cache" destination="ZNe-rf-BW1" id="lSu-aT-W57"/>
@@ -4107,7 +4210,7 @@ DQ
                 <customObject id="GYc-WM-W1i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="gea-QB-ZRN"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="1386"/>
+            <point key="canvasLocation" x="2065" y="1474"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cHF-2k-mMG">

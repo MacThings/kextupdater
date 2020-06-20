@@ -36,6 +36,10 @@ class Tools: NSViewController {
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
     @IBOutlet weak var button_custom_efi_folder: NSButton!
     
+    @IBOutlet weak var oc_config_file: NSTextField!
+    @IBOutlet weak var oc_config_file_path: NSTextField!
+    @IBOutlet weak var button_oc_config_file: NSButton!
+    
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
     @IBOutlet weak var button_unmount: NSButton!
@@ -298,11 +302,11 @@ class Tools: NSViewController {
         catalina_read_write()
     }
     
-    @IBAction func browseFile(sender: AnyObject) {
+    @IBAction func browseEFIfolder(sender: AnyObject) {
         
         let dialog = NSOpenPanel();
         
-        dialog.title                   = "Choose a Folder";
+        dialog.title                   = NSLocalizedString("Choose an EFI folder", comment: "");
         dialog.showsResizeIndicator    = true;
         dialog.showsHiddenFiles        = false;
         dialog.canChooseDirectories    = true;
@@ -326,6 +330,32 @@ class Tools: NSViewController {
         }
     }
     
+    @IBAction func browseOCconfig(sender: AnyObject) {
+        
+        let dialog = NSOpenPanel();
+        dialog.title                   = NSLocalizedString("Choose an OpenCore config file", comment: "");
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = true;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["plist"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            let result = dialog.url // Pathname of the file
+            
+            if (result != nil) {
+                self.button_oc_config_file.isEnabled=true
+                let path = result!.path
+                oc_config_file_path.stringValue = path
+                let ocpath = (path as String)
+                UserDefaults.standard.set(ocpath, forKey: "OCConfigFile")
+            }
+        } else {
+            self.button_oc_config_file.isEnabled=false
+            return
+        }
+    }
     
     @IBAction func custom_efi_check(_ sender: Any) {
             UserDefaults.standard.set(true, forKey: "CustomEFI")
