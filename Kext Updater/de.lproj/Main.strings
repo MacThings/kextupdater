@@ -61,6 +61,9 @@
 /* Class = "NSButtonCell"; title = "CoreDisplayFixup"; ObjectID = "3SQ-qK-q2V"; */
 "3SQ-qK-q2V.title" = "CoreDisplayFixup";
 
+/* Class = "NSButtonCell"; title = "Choose .plist"; ObjectID = "3We-9K-zX3"; */
+"3We-9K-zX3.title" = "Wähle .plist";
+
 /* Class = "NSTextFieldCell"; title = "Solid State:"; ObjectID = "4a5-bF-2zi"; */
 "4a5-bF-2zi.title" = "Solid State:";
 
@@ -117,6 +120,9 @@
 
 /* Class = "NSButtonCell"; title = "NoVPAJpeg"; ObjectID = "8cn-Cg-vV0"; */
 "8cn-Cg-vV0.title" = "NoVPAJpeg";
+
+/* Class = "NSTextFieldCell"; title = "Select an OpenCore config.plist which you want to check."; ObjectID = "8G1-E3-FCy"; */
+"8G1-E3-FCy.title" = "Wähle eine OpenCore Konfiguration die Du überprüfen möchtest.";
 
 /* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
 "8KI-5D-e2p.title" = "Download";
@@ -216,6 +222,9 @@
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Drucken…";
+
+/* Class = "NSButtonCell"; title = "Check for validity"; ObjectID = "aua-gt-vVe"; */
+"aua-gt-vVe.title" = "Überprüfen";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "Fenster";
@@ -742,9 +751,6 @@
 /* Class = "NSButtonCell"; title = "Report"; ObjectID = "oCj-NC-GNi"; */
 "oCj-NC-GNi.title" = "Report";
 
-/* Class = "NSButton"; ibShadowedToolTip = "*click*"; ObjectID = "oCK-QL-bHb"; */
-"oCK-QL-bHb.ibShadowedToolTip" = "*klick*";
-
 /* Class = "NSTextFieldCell"; title = "= Show Sources"; ObjectID = "oex-LX-K57"; */
 "oex-LX-K57.title" = "= Zeige Sourcen";
 
@@ -877,9 +883,6 @@
 /* Class = "NSButtonCell"; title = "VoodooHDA"; ObjectID = "RMT-fD-ghI"; */
 "RMT-fD-ghI.title" = "VoodooHDA";
 
-/* Class = "NSBox"; title = "Box"; ObjectID = "RNd-5j-Qer"; */
-"RNd-5j-Qer.title" = "Box";
-
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1917"; ObjectID = "RQB-h9-xVq"; */
 "RQB-h9-xVq.title" = "10.12.6 - 16G1917";
 
@@ -948,9 +951,6 @@
 
 /* Class = "NSButtonCell"; title = "= Download"; ObjectID = "Tee-oq-9Oh"; */
 "Tee-oq-9Oh.title" = "= Download";
-
-/* Class = "NSBox"; title = "Box"; ObjectID = "Tfb-H6-fo8"; */
-"Tfb-H6-fo8.title" = "Box";
 
 /* Class = "NSMenuItem"; title = "OpenCore Nightly"; ObjectID = "tGB-Gh-Bvm"; */
 "tGB-Gh-Bvm.title" = "OpenCore Nightly";
@@ -1027,7 +1027,7 @@
 /* Class = "NSMenuItem"; title = "10.13.5 - 17F77"; ObjectID = "VQD-4g-BZs"; */
 "VQD-4g-BZs.title" = "10.13.5 - 17F77";
 
-/* Class = "NSButtonCell"; title = "Kext Update"; ObjectID = "Vwp-Mq-aV9"; */
+/* Class = "NSButtonCell"; title = "Check for Kext Updates"; ObjectID = "Vwp-Mq-aV9"; */
 "Vwp-Mq-aV9.title" = "Kext Update";
 
 /* Class = "NSBox"; title = "Download Path"; ObjectID = "vzD-NN-MML"; */

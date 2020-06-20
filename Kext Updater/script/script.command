@@ -2261,7 +2261,6 @@ function _check_oc_config()
 
     oc_file=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCConfigFile" )
     curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
-    #cd ${ScriptTmpPath}
     unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
     ${ScriptTmpPath}/./ConfigValidity "$oc_file"
     if [[ $checkchime = "1" ]]; then
