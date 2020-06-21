@@ -319,6 +319,8 @@ class Tools: NSViewController {
             
             if (result != nil) {
                 self.button_custom_efi_folder.isEnabled=true
+                self.button_custom_efi_folder.keyEquivalent = "\r"
+                self.button_oc_config_file.keyEquivalent = ""
                 let path = result!.path
                 custom_efi_folder_path.stringValue = path
                 let cefipath = (path as String)
@@ -346,6 +348,8 @@ class Tools: NSViewController {
             
             if (result != nil) {
                 self.button_oc_config_file.isEnabled=true
+                self.button_oc_config_file.keyEquivalent = "\r"
+                self.button_custom_efi_folder.keyEquivalent = ""
                 let path = result!.path
                 oc_config_file_path.stringValue = path
                 let ocpath = (path as String)
