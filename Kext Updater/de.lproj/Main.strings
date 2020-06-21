@@ -122,7 +122,7 @@
 "8cn-Cg-vV0.title" = "NoVPAJpeg";
 
 /* Class = "NSTextFieldCell"; title = "Select an OpenCore config.plist which you want to check."; ObjectID = "8G1-E3-FCy"; */
-"8G1-E3-FCy.title" = "Wähle eine OpenCore Konfiguration die Du überprüfen möchtest.";
+"8G1-E3-FCy.title" = "Wähle eine OpenCore Konfiguration zum Validieren.";
 
 /* Class = "NSButtonCell"; title = "Download"; ObjectID = "8KI-5D-e2p"; */
 "8KI-5D-e2p.title" = "Download";
@@ -137,7 +137,7 @@
 "9HD-lp-UVI.title" = "Einstellungen";
 
 /* Class = "NSTextFieldCell"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)."; ObjectID = "9hN-PQ-DIu"; */
-"9hN-PQ-DIu.title" = "Installiert Kext für Atheros AR92xx/93xx Wlan Karten. (nur 10.14 +)";
+"9hN-PQ-DIu.title" = "Installiert Kext für Atheros AR92xx/93xx Wlan Karten. (10.14 +)";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "9p3-6R-FFK"; */
 "9p3-6R-FFK.title" = "Bitte auswählen";
@@ -848,7 +848,7 @@
 "Qm8-k0-x1M.title" = "Entfernen";
 
 /* Class = "NSTextFieldCell"; title = "Select an EFI folder you want to check for kext updates."; ObjectID = "qMl-rE-aP9"; */
-"qMl-rE-aP9.title" = "Wähle einen (EFI)-Ordner den du auf Kext Updates prüfen möchtest.";
+"qMl-rE-aP9.title" = "Wähle Ordner den du auf Kext Updates prüfen möchtest.";
 
 /* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
 "qoN-tI-Qfd.title" = "Menu Bar Item";
@@ -917,7 +917,7 @@
 "ShE-Mw-ig1.title" = "10.11.6 - 15G19009";
 
 /* Class = "NSTextFieldCell"; title = "Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent."; ObjectID = "sjO-TN-9bF"; */
-"sjO-TN-9bF.title" = "Seit Catalina ist die Systempartition nach dem Booten als Nur-Lesen gemounted. Hier kannst Du die Partition auf Lesen/Schreiben umstellen. Das hält aber nur solange an, bis ein Neustart durchgeführt wird. Es ist nicht dauerhaft.";
+"sjO-TN-9bF.title" = "Seit Catalina ist die Systempartition als nur lesen gemounted. Hier kannst Du sie auf Lesen/Schreiben umstellen. Das hält aber nur solange an bis zum Neustart und ist nicht permanent.";
 
 /* Class = "NSTextFieldCell"; title = "Bootloader"; ObjectID = "sl3-gt-Cmo"; */
 "sl3-gt-Cmo.title" = "Bootloader";
@@ -995,7 +995,7 @@
 "uZq-8x-n6O.title" = "D";
 
 /* Class = "NSTextFieldCell"; title = "Rebuild Kextcache and repair Permissions in /S/L/E + /L/E."; ObjectID = "va9-o7-tkl"; */
-"va9-o7-tkl.title" = "Baut Kextcache neu auf und repariert die Dateirechte in /S/L/E & /L/E.";
+"va9-o7-tkl.title" = "Baut Kextcache neu auf und repariert Dateirechte in /S/L/E & /L/E.";
 
 /* Class = "NSButtonCell"; title = "SystemProfilerMemoryFixup"; ObjectID = "Vae-a9-Mia"; */
 "Vae-a9-Mia.title" = "SystemProfilerMemoryFixup";
