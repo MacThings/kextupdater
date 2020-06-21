@@ -54,9 +54,7 @@ class KextUpdater: NSViewController {
     
     
     // Footer Section - End
-    
-    @IBOutlet weak var kuversion: NSTextField!
-    
+
     @IBOutlet weak var keychainyes: NSImageView!
     @IBOutlet weak var keychainno: NSImageView!
     @IBOutlet weak var key_yes_button: NSButton!
@@ -74,6 +72,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var show_hint: NSButton!
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         
     @IBAction func quit_app(_ sender: Any) {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
@@ -99,7 +98,12 @@ class KextUpdater: NSViewController {
         }
         
     }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = "Kext Updater v. " + appVersion!
 
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -326,10 +330,6 @@ class KextUpdater: NSViewController {
         let osinfos = String(osversionread ?? "") + String (" (") + String(osbuildread ?? "") + String (")")
         UserDefaults.standard.set(String(osinfos), forKey: "InfoBoxOSVersion")
         infobox_system_version.stringValue = (osinfos)
-        
-        let kuversionread = UserDefaults.standard.string(forKey: "KUVersion")
-        kuversion.stringValue = String("v. ") + (kuversionread ?? "")
-        //kuversion_about.stringValue = (kuversionread ?? "")
         
         UserDefaults.standard.set(String(getpid()), forKey: "Pid")
         

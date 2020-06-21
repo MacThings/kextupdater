@@ -2809,15 +2809,6 @@ DQ
                                 <rect key="frame" x="10" y="51" width="662" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0v-Oh-JvP" userLabel="Kext Updater Version Label">
-                                <rect key="frame" x="619" y="50" width="53" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="right" id="jTB-o4-Uq9">
-                                    <font key="font" metaFont="message" size="11"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-tJ-GID" userLabel="Egg 1">
                                 <rect key="frame" x="181" y="248" width="36" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -3063,7 +3054,6 @@ DQ
                         <outlet property="keychain_text" destination="HEf-sb-w5V" id="gwg-sJ-bER"/>
                         <outlet property="keychainno" destination="PTX-lA-Dnf" id="KxM-hj-dTH"/>
                         <outlet property="keychainyes" destination="axm-8K-AE6" id="8FK-on-F9x"/>
-                        <outlet property="kuversion" destination="v0v-Oh-JvP" id="7K3-TM-11p"/>
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="show_hint" destination="BP0-GU-5Qz" id="IDl-Ll-cOm"/>
@@ -3794,7 +3784,7 @@ DQ
                                                         </textFieldCell>
                                                     </textField>
                                                     <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRn-Tm-ms3">
-                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <rect key="frame" x="-5" y="-7" width="110" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="hvg-Oj-Vjg">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3805,7 +3795,7 @@ DQ
                                                         </connections>
                                                     </button>
                                                     <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-rf-BW1">
-                                                        <rect key="frame" x="153" y="4" width="16" height="16"/>
+                                                        <rect key="frame" x="153" y="3" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
                                                 </subviews>
@@ -3828,11 +3818,11 @@ DQ
                                                         </textFieldCell>
                                                     </textField>
                                                     <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="S82-8q-mdv">
-                                                        <rect key="frame" x="154" y="3" width="16" height="16"/>
+                                                        <rect key="frame" x="154" y="2" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
                                                     <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trt-2Z-QxN">
-                                                        <rect key="frame" x="-5" y="-7" width="110" height="32"/>
+                                                        <rect key="frame" x="-5" y="-8" width="110" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="R9u-E4-WBq">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3843,7 +3833,7 @@ DQ
                                                         </connections>
                                                     </button>
                                                     <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-1d-pVl">
-                                                        <rect key="frame" x="-5" y="-7" width="110" height="30"/>
+                                                        <rect key="frame" x="-5" y="-8" width="110" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Qm8-k0-x1M">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
