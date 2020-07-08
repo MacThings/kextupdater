@@ -219,6 +219,7 @@ kextArray=(
 "itlwm","itlwm ","itlwm",""
 "itlwmx","itlwmx ","itlwmx",""
 "itl80211","itl80211 ","itl80211",""
+"lilu","Lilu","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
 "lucyrtl8125ethernet","LucyRTL8125Ethernet","LucyRTL8125Ethernet",""
 "macpromnd","MacProMemoryNotificationDisabler","MacProMemoryNotificationDisabler",""
