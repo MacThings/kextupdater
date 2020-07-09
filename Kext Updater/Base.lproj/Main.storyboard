@@ -1214,9 +1214,9 @@ DQ
                                         <items>
                                             <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
                                             <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
-                                            <menuItem title="OpenCore (NDK Fork)" tag="6" id="AQy-ED-smk"/>
+                                            <menuItem title="OpenCore (NDK Fork)" tag="6" hidden="YES" id="AQy-ED-smk"/>
                                             <menuItem title="OpenCore Nightly" tag="2" id="2xY-of-vfI"/>
-                                            <menuItem title="OpenCore Nightly (NDK Fork)" tag="5" id="cJN-jU-ADV"/>
+                                            <menuItem title="OpenCore Nightly (NDK Fork)" tag="5" hidden="YES" id="cJN-jU-ADV"/>
                                             <menuItem isSeparatorItem="YES" id="wcX-R5-uz0"/>
                                             <menuItem title="Clover" tag="3" id="9vw-ao-Ppq"/>
                                             <menuItem title="Clover Nightly" tag="4" id="k4x-tK-fSm"/>
@@ -4935,7 +4935,7 @@ DQ
                                             <menuItem title="OpenCore" id="BX8-fj-PQC">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore (N-D-K Fork)" id="Apz-uY-cPW">
+                                            <menuItem title="OpenCore (N-D-K Fork)" hidden="YES" id="Apz-uY-cPW">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport" id="4i4-wk-0pn">
@@ -4945,7 +4945,7 @@ DQ
                                             <menuItem title="OpenCore Nightly" id="tGB-Gh-Bvm">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="OpenCore Nightly (N-D-K Fork)" id="1Vm-3k-b5u">
+                                            <menuItem title="OpenCore Nightly (N-D-K Fork)" hidden="YES" id="1Vm-3k-b5u">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="AppleSupport Nightly" id="Edg-dY-fWs">
