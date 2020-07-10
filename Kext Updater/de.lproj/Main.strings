@@ -472,6 +472,9 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Mounts/Unmounts the Boot-EFI"; ObjectID = "Gmk-gz-FIC"; */
 "Gmk-gz-FIC.ibShadowedToolTip" = "Mounted/Unmounted die Boot-EFI";
 
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "GO1-0f-QSB"; */
+"GO1-0f-QSB.title" = "Start";
+
 /* Class = "NSButtonCell"; title = "Webdriver"; ObjectID = "gqe-Mv-U15"; */
 "gqe-Mv-U15.title" = "Webdriver";
 
@@ -820,6 +823,9 @@
 /* Class = "NSButtonCell"; title = "NvidiaGraphicsFixup"; ObjectID = "qa9-SZ-ngG"; */
 "qa9-SZ-ngG.title" = "NvidiaGraphicsFixup";
 
+/* Class = "NSButtonCell"; title = "Uninstall"; ObjectID = "QbQ-ms-22Q"; */
+"QbQ-ms-22Q.title" = "Entfernen";
+
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1909"; ObjectID = "QBx-c0-JG2"; */
 "QBx-c0-JG2.title" = "10.10.5 - 14F1909";
 
@@ -1146,6 +1152,9 @@
 
 /* Class = "NSButtonCell"; title = "ACPI Battery Manager"; ObjectID = "zFb-cM-MoL"; */
 "zFb-cM-MoL.title" = "ACPI Battery Manager";
+
+/* Class = "NSTextFieldCell"; title = "Block loading AppleGFXHDA. It´s useful if you don´t want DP or HDMI Audio Device from your Graphicscard in Systemoutputs."; ObjectID = "ZKa-IM-Gve"; */
+"ZKa-IM-Gve.title" = "Blockiert AppleGFXHDA. Sinnvoll wenn die Audiogeräte der Grafikkarte nicht in den Ausgabegeräten auftauchen sollen.";
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G22010"; ObjectID = "zkx-M3-tK7"; */
 "zkx-M3-tK7.title" = "10.11.6 - 15G22010";

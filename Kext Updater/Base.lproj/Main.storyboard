@@ -2216,7 +2216,7 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-zL-FeI">
-                                <rect key="frame" x="-3" y="521" width="932" height="47"/>
+                                <rect key="frame" x="-3" y="537" width="932" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Kextmanager" id="wlo-L5-nag">
                                     <font key="font" size="33" name="ArialRoundedMTBold"/>
@@ -3726,11 +3726,11 @@ DQ
             <objects>
                 <viewController title="Tools" id="PFO-7L-TjR" customClass="Tools" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="91y-LP-8zY">
-                        <rect key="frame" x="0.0" y="0.0" width="832" height="351"/>
+                        <rect key="frame" x="0.0" y="0.0" width="832" height="429"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L55-W1-zjv">
-                                <rect key="frame" x="346" y="6" width="140" height="32"/>
+                                <rect key="frame" x="346" y="13" width="140" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="INj-fo-uW0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3741,34 +3741,14 @@ DQ
                                 </connections>
                             </button>
                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NBh-QD-TWO">
-                                <rect key="frame" x="6" y="46" width="820" height="299"/>
+                                <rect key="frame" x="6" y="61" width="820" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="TCd-RM-MNg">
-                                    <rect key="frame" x="0.0" y="0.0" width="820" height="299"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="820" height="362"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="K5k-Sp-wO4">
-                                            <rect key="frame" x="8" y="214" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-Gj-iNn">
-                                            <rect key="frame" x="8" y="168" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-lx-OG0">
-                                            <rect key="frame" x="8" y="89" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="btY-9r-eM3">
-                                            <rect key="frame" x="443" y="183" width="370" height="4"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6S1-Pb-0c1">
-                                            <rect key="frame" x="443" y="102" width="370" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="uIO-WK-ibb" userLabel="Kextcache">
-                                            <rect key="frame" x="11" y="219" width="400" height="40"/>
+                                            <rect key="frame" x="11" y="282" width="400" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="5Vf-Xe-L7x">
                                                 <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
@@ -3801,22 +3781,17 @@ DQ
                                                 </subviews>
                                             </view>
                                         </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="K5k-Sp-wO4">
+                                            <rect key="frame" x="8" y="277" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="peC-hC-wxz" userLabel="Atheros">
-                                            <rect key="frame" x="11" y="175" width="400" height="40"/>
+                                            <rect key="frame" x="11" y="238" width="400" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="S0v-Km-uF1">
                                                 <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
-                                                        <rect key="frame" x="-2" y="18" width="404" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" title="Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)." id="9hN-PQ-DIu">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
                                                     <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="S82-8q-mdv">
                                                         <rect key="frame" x="154" y="2" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -3853,8 +3828,131 @@ DQ
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="rK9-pV-BjB"/>
                                                     </imageView>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="446" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-Hb-taW">
+                                                        <rect key="frame" x="-2" y="19" width="404" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" title="Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)." id="9hN-PQ-DIu">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                 </subviews>
                                             </view>
+                                        </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="VK4-iV-pCA">
+                                            <rect key="frame" x="8" y="231" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="n7m-RE-CVP" userLabel="DisableGFXHDA">
+                                            <rect key="frame" x="11" y="167" width="400" height="61"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="5Xh-zP-asM">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="80T-Fx-2dI">
+                                                        <rect key="frame" x="154" y="11" width="16" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    </progressIndicator>
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Ro-gIL">
+                                                        <rect key="frame" x="-5" y="1" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="GO1-0f-QSB">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="disablegfxhda_yes:" target="PFO-7L-TjR" id="5pu-Kf-Zcy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-fI-EEn">
+                                                        <rect key="frame" x="-5" y="1" width="110" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="QbQ-ms-22Q">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="disablegfxhda_uninstall:" target="PFO-7L-TjR" id="I76-EU-Yxm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7T-VA-juW" userLabel="DisableGFXHDAapplied">
+                                                        <rect key="frame" x="357" y="4" width="20" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="RwA-iM-KXf"/>
+                                                    </imageView>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="oka-pP-LDy">
+                                                        <rect key="frame" x="1" y="26" width="404" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" title="Block loading AppleGFXHDA. It´s useful if you don´t want DP or HDMI Audio Device from your Graphicscard in Systemoutputs." id="ZKa-IM-Gve">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-Gj-iNn">
+                                            <rect key="frame" x="8" y="168" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cM-wi4" userLabel="Sleepfix">
+                                            <rect key="frame" x="11" y="92" width="400" height="78"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="CRe-0W-lGV">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
+                                                        <rect key="frame" x="-2" y="25" width="404" height="51"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" id="CWj-gf-uEx">
+                                                            <font key="font" metaFont="system"/>
+                                                            <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
+                                                        <rect key="frame" x="-5" y="-3" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
+                                                        <rect key="frame" x="-5" y="-3" width="110" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
+                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
+                                                    </imageView>
+                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
+                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-lx-OG0">
+                                            <rect key="frame" x="8" y="89" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="h2Q-vj-BUW" userLabel="Read/Write">
                                             <rect key="frame" x="11" y="12" width="420" height="77"/>
@@ -3925,7 +4023,7 @@ DQ
                                             </view>
                                         </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-F4-nne" userLabel="Select EFI Folder">
-                                            <rect key="frame" x="450" y="192" width="420" height="65"/>
+                                            <rect key="frame" x="450" y="255" width="420" height="65"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="y4q-R7-TY0">
                                                 <rect key="frame" x="0.0" y="0.0" width="420" height="65"/>
@@ -3974,60 +4072,12 @@ DQ
                                                 </subviews>
                                             </view>
                                         </box>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cM-wi4" userLabel="Sleepfix">
-                                            <rect key="frame" x="11" y="92" width="400" height="78"/>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="btY-9r-eM3">
+                                            <rect key="frame" x="443" y="246" width="370" height="4"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="CRe-0W-lGV">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="78"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
-                                                        <rect key="frame" x="-2" y="25" width="404" height="51"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" id="CWj-gf-uEx">
-                                                            <font key="font" metaFont="system"/>
-                                                            <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
-                                                        <rect key="frame" x="-5" y="-3" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
-                                                        <rect key="frame" x="-5" y="-3" width="110" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
-                                                        </connections>
-                                                    </button>
-                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
-                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
-                                                    </imageView>
-                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
-                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </view>
                                         </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="L7l-Sp-GK3" userLabel="Check OC config">
-                                            <rect key="frame" x="450" y="112" width="420" height="66"/>
+                                            <rect key="frame" x="450" y="175" width="420" height="66"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="A7X-lf-wra">
                                                 <rect key="frame" x="0.0" y="0.0" width="420" height="66"/>
@@ -4076,8 +4126,12 @@ DQ
                                                 </subviews>
                                             </view>
                                         </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6S1-Pb-0c1">
+                                            <rect key="frame" x="443" y="165" width="370" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-Vb-chn" userLabel="Mount EFI">
-                                            <rect key="frame" x="450" y="10" width="420" height="90"/>
+                                            <rect key="frame" x="450" y="73" width="420" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="auB-yr-Ymc">
                                                 <rect key="frame" x="0.0" y="0.0" width="420" height="90"/>
@@ -4158,7 +4212,7 @@ DQ
                                             </view>
                                         </box>
                                         <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R59-26-0y6">
-                                            <rect key="frame" x="6" y="261" width="816" height="47"/>
+                                            <rect key="frame" x="2" y="320" width="816" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Misc Tools" id="If5-ZO-ngg">
                                                 <font key="font" size="33" name="ArialRoundedMTBold"/>
@@ -4171,7 +4225,7 @@ DQ
                                 <color key="fillColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-Cn-gKP">
-                                <rect key="frame" x="794" y="8" width="32" height="32"/>
+                                <rect key="frame" x="780" y="15" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                         </subviews>
@@ -4183,6 +4237,8 @@ DQ
                         <outlet property="button_atheros_uninstall" destination="iMF-1d-pVl" id="b6x-pS-RyZ"/>
                         <outlet property="button_close" destination="L55-W1-zjv" id="9ZX-Zf-h1t"/>
                         <outlet property="button_custom_efi_folder" destination="njP-iK-fFt" id="Led-0n-eWd"/>
+                        <outlet property="button_disablegfxhda" destination="uJ2-Ro-gIL" id="f9r-yg-4Qn"/>
+                        <outlet property="button_disablegfxhda_uninstall" destination="RiI-fI-EEn" id="BfR-eV-JrJ"/>
                         <outlet property="button_fix_sleep" destination="koU-E0-Yex" id="KzO-Yq-yre"/>
                         <outlet property="button_fix_sleep_undo" destination="YXy-aO-DHP" id="eYQ-aN-sOW"/>
                         <outlet property="button_kextcache" destination="VRn-Tm-ms3" id="tXy-f1-stz"/>
@@ -4194,6 +4250,7 @@ DQ
                         <outlet property="button_unmount_all" destination="Xq7-rS-1W5" id="gUD-Ss-DzA"/>
                         <outlet property="custom_efi_folder" destination="dg6-UW-1xr" id="ztD-Oa-Iid"/>
                         <outlet property="custom_efi_folder_path" destination="dg6-UW-1xr" id="9gy-S5-p9L"/>
+                        <outlet property="disablegfxhdaapplied" destination="l7T-VA-juW" id="UL0-yX-j7W"/>
                         <outlet property="fixapplied" destination="nfC-iN-8nh" id="OaY-TQ-BKb"/>
                         <outlet property="fixnotapplied" destination="B8z-iR-1s6" id="iB9-6P-AB8"/>
                         <outlet property="oc_config_file" destination="CbN-gD-oYc" id="UvB-x4-C7a"/>
@@ -4201,6 +4258,7 @@ DQ
                         <outlet property="progress_gear" destination="3Qy-Cn-gKP" id="9XR-o5-YAt"/>
                         <outlet property="progress_gear_atheros" destination="S82-8q-mdv" id="Nzk-3g-oqC"/>
                         <outlet property="progress_gear_cache" destination="ZNe-rf-BW1" id="lSu-aT-W57"/>
+                        <outlet property="progress_gear_disablegfxhda" destination="80T-Fx-2dI" id="8as-rF-wMU"/>
                         <outlet property="progress_gear_mount" destination="mge-oP-iKS" id="8EC-te-3wF"/>
                         <outlet property="pulldown_menu" destination="MkB-hH-A2t" id="HFy-Cb-h59"/>
                         <outlet property="read_only" destination="DBw-rT-NYh" id="7Zb-qF-gkz"/>
@@ -4210,7 +4268,7 @@ DQ
                 <customObject id="GYc-WM-W1i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="gea-QB-ZRN"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="1357.5"/>
+            <point key="canvasLocation" x="2201" y="1396.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cHF-2k-mMG">
