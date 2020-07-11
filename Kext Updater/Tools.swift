@@ -39,10 +39,13 @@ class Tools: NSViewController {
     @IBOutlet weak var custom_efi_folder: NSTextField!
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
     @IBOutlet weak var button_custom_efi_folder: NSButton!
+    @IBOutlet weak var button_efi_folder_choose: NSButton!
     
     @IBOutlet weak var oc_config_file: NSTextField!
     @IBOutlet weak var oc_config_file_path: NSTextField!
     @IBOutlet weak var button_oc_config_file: NSButton!
+    @IBOutlet weak var button_oc_config_choose: NSButton!
+    
     
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
@@ -159,16 +162,7 @@ class Tools: NSViewController {
  
     @IBAction func cacherebuild(_ sender: Any) {
         catalina_read_write()
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
+        disable_all()
         self.progress_gear_cache?.startAnimation(self);
         self.progress_gear_cache.isHidden=false
         DispatchQueue.global(qos: .background).async {
@@ -177,16 +171,7 @@ class Tools: NSViewController {
                 self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
             }
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
+                self.enable_all()
                 self.progress_gear_cache?.stopAnimation(self);
                 self.progress_gear_cache.isHidden=true
             }
@@ -196,31 +181,13 @@ class Tools: NSViewController {
 
     @IBAction func atheros_yes(_ sender: Any) {
         catalina_read_write()
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
+        disable_all()
         self.progress_gear_atheros?.startAnimation(self);
         self.progress_gear_atheros.isHidden=false
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["ar92xx"])
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
+                self.enable_all()
                 self.progress_gear_atheros?.stopAnimation(self);
                 self.progress_gear_atheros.isHidden=true
                 self.view.window?.close()
@@ -229,34 +196,13 @@ class Tools: NSViewController {
     }
     
     @IBAction func atheros_uninstall(_ sender: Any) {
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_atheros_uninstall.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_disablegfxhda_uninstall.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
+        disable_all()
         self.progress_gear_atheros?.startAnimation(self);
         self.progress_gear_atheros.isHidden=false
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["ar92xx_remove"])
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_disablegfxhda_uninstall.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
+                self.enable_all()
                 self.progress_gear_atheros?.stopAnimation(self);
                 self.progress_gear_atheros.isHidden=true
                 self.view.window?.close()
@@ -267,31 +213,13 @@ class Tools: NSViewController {
     
     @IBAction func disablegfxhda_yes(_ sender: Any) {
         catalina_read_write()
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
+        disable_all()
         self.progress_gear_disablegfxhda?.startAnimation(self);
         self.progress_gear_disablegfxhda.isHidden=false
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["disablegfxhda"])
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
+                self.enable_all()
                 self.progress_gear_disablegfxhda?.stopAnimation(self);
                 self.progress_gear_disablegfxhda.isHidden=true
                 self.view.window?.close()
@@ -300,36 +228,15 @@ class Tools: NSViewController {
     }
     
     @IBAction func disablegfxhda_uninstall(_ sender: Any) {
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_atheros_uninstall.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_disablegfxhda_uninstall.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
-        self.progress_gear_atheros?.startAnimation(self);
-        self.progress_gear_atheros.isHidden=false
+        disable_all()
+        self.progress_gear_disablegfxhda?.startAnimation(self);
+        self.progress_gear_disablegfxhda.isHidden=false
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["disablegfxhda_remove"])
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_disablegfxhda_uninstall.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
-                self.progress_gear_atheros?.stopAnimation(self);
-                self.progress_gear_atheros.isHidden=true
+                self.enable_all()
+                self.progress_gear_disablegfxhda?.stopAnimation(self);
+                self.progress_gear_disablegfxhda.isHidden=true
                 self.view.window?.close()
             }
         }
@@ -339,29 +246,11 @@ class Tools: NSViewController {
     
     @IBAction func sleepfix_yes(_ sender: Any) {
         catalina_read_write()
-        self.button_kextcache.isEnabled=false
-        self.button_atheros.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
-        self.button_fix_sleep.isEnabled=false
-        self.button_mount.isEnabled=false
-        self.button_offline_efi.isEnabled=false
-        self.button_unmount.isEnabled=false
-        self.button_unmount_all.isEnabled=false
-        self.button_close.isEnabled=false
-        self.pulldown_menu.isEnabled=false
+        disable_all()
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage"])
             DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
+                self.enable_all()
                 self.view.window?.close()
             }
         }
@@ -369,6 +258,20 @@ class Tools: NSViewController {
  
     @IBAction func sleepfix_undo(_ sender: Any) {
         catalina_read_write()
+        disable_all()
+        DispatchQueue.global(qos: .background).async {
+            self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage_undo"])
+            DispatchQueue.main.async {
+                self.enable_all()
+                self.view.window?.close()
+            }
+        }
+    }
+    
+    
+    func disable_all() {
+        self.button_oc_config_choose.isEnabled=false
+        self.button_efi_folder_choose.isEnabled=false
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
         self.button_disablegfxhda.isEnabled=false
@@ -379,24 +282,36 @@ class Tools: NSViewController {
         self.button_unmount_all.isEnabled=false
         self.button_close.isEnabled=false
         self.pulldown_menu.isEnabled=false
-        DispatchQueue.global(qos: .background).async {
-            self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage_undo"])
-            DispatchQueue.main.async {
-                self.button_kextcache.isEnabled=true
-                self.button_atheros.isEnabled=true
-                self.button_disablegfxhda.isEnabled=true
-                self.button_fix_sleep.isEnabled=true
-                self.button_mount.isEnabled=true
-                self.button_offline_efi.isEnabled=true
-                self.button_unmount.isEnabled=true
-                self.button_unmount_all.isEnabled=true
-                self.button_close.isEnabled=true
-                self.pulldown_menu.isEnabled=true
-                self.view.window?.close()
-            }
-        }
+        self.button_atheros_uninstall.isEnabled=false
+        self.button_disablegfxhda_uninstall.isEnabled=false
+        self.button_fix_sleep_undo.isEnabled=false
+        self.button_read_write.isEnabled=false
+        self.custom_efi_folder_path.isEnabled=false
+        self.button_custom_efi_folder.isEnabled=false
+        self.button_oc_config_file.isEnabled=false
     }
-    
+
+    func enable_all() {
+        self.button_oc_config_choose.isEnabled=true
+        self.button_efi_folder_choose.isEnabled=true
+        self.button_kextcache.isEnabled=true
+        self.button_atheros.isEnabled=true
+        self.button_disablegfxhda.isEnabled=true
+        self.button_fix_sleep.isEnabled=true
+        self.button_mount.isEnabled=true
+        self.button_offline_efi.isEnabled=true
+        self.button_unmount.isEnabled=true
+        self.button_unmount_all.isEnabled=true
+        self.button_close.isEnabled=true
+        self.pulldown_menu.isEnabled=true
+        self.button_atheros_uninstall.isEnabled=true
+        self.button_disablegfxhda_uninstall.isEnabled=true
+        self.button_fix_sleep_undo.isEnabled=true
+        self.button_read_write.isEnabled=true
+        self.custom_efi_folder_path.isEnabled=true
+        self.button_custom_efi_folder.isEnabled=true
+        self.button_oc_config_file.isEnabled=true
+    }
     
     @IBAction func set_read_write(_ sender: Any) {
         catalina_read_write()

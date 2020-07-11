@@ -4239,10 +4239,12 @@ DQ
                         <outlet property="button_custom_efi_folder" destination="njP-iK-fFt" id="Led-0n-eWd"/>
                         <outlet property="button_disablegfxhda" destination="uJ2-Ro-gIL" id="f9r-yg-4Qn"/>
                         <outlet property="button_disablegfxhda_uninstall" destination="RiI-fI-EEn" id="BfR-eV-JrJ"/>
+                        <outlet property="button_efi_folder_choose" destination="td6-I9-cUG" id="zoZ-D9-EDE"/>
                         <outlet property="button_fix_sleep" destination="koU-E0-Yex" id="KzO-Yq-yre"/>
                         <outlet property="button_fix_sleep_undo" destination="YXy-aO-DHP" id="eYQ-aN-sOW"/>
                         <outlet property="button_kextcache" destination="VRn-Tm-ms3" id="tXy-f1-stz"/>
                         <outlet property="button_mount" destination="cyz-bZ-0js" id="NJm-nI-ChF"/>
+                        <outlet property="button_oc_config_choose" destination="AaS-2i-r87" id="t4B-qS-Tl4"/>
                         <outlet property="button_oc_config_file" destination="69i-C0-He1" id="09J-vo-eoQ"/>
                         <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>
                         <outlet property="button_read_write" destination="rIK-O5-mOn" id="hTr-XT-ahl"/>
