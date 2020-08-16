@@ -1,5 +1,5 @@
 //
-//  PFMoveApplication.m, version 1.24
+//  PFMoveApplication.m, version 1.25
 //  LetsMove
 //
 //  Created by Andy Kim at Potion Factory LLC on 9/17/09
@@ -392,11 +392,7 @@ static BOOL Trash(NSString *path) {
 	BOOL result = NO;
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_8
 	if (floor(NSAppKitVersionNumber) >= NSAppKitVersionNumber10_8) {
-        if (@available(macOS 10.8, *)) {
-            result = [[NSFileManager defaultManager] trashItemAtURL:[NSURL fileURLWithPath:path] resultingItemURL:NULL error:NULL];
-        } else {
-            // Fallback on earlier versions
-        }
+		result = [[NSFileManager defaultManager] trashItemAtURL:[NSURL fileURLWithPath:path] resultingItemURL:NULL error:NULL];
 	}
 #endif
 #if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_11
