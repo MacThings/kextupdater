@@ -19,42 +19,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		023E3D21CC8D2E87E2F479E2C6765B30 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B775183ACB0F51571E1D62153E19B072 /* it.lproj */; };
-		04C0D085186241DF14CEF3D3C9542715 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF07AA783F5EC530832A7A3D250C30 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		080FA5E1CA53FD0A5BA021C3AD77816F /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2BF965FE4CBD6B3B996340D62DD933D8 /* ko.lproj */; };
+		020E098C253F02CF5A2F89A505CA37EE /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 359C0B043A26D7436E0E202B0B3A0786 /* nl.lproj */; };
+		09F6953D0A355AEEDD4DE40E8FD483B6 /* PFMoveApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 79010014BD730A5D1EC7AC19BC36F749 /* PFMoveApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A1237C0C6C64DAE78E6F4CD771CA4B0 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E5881A07F99101B8C7DDD57BA32F5246 /* da.lproj */; };
+		10F338979909A45B2DEB7AA8892046F4 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E49E03D37E13992E45F80C94B6CB32AD /* tr.lproj */; };
 		1622FF622423CA421C0205175F6023A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		19452903148D2F3AE019248C4B0025A3 /* LetsMove.h in Headers */ = {isa = PBXBuildFile; fileRef = C23BD13D5AB62DE314E7D8C8B3AB6659 /* LetsMove.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1F1729AE98DEE085CBB5DBF7E544DE3D /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2FA51939C474F6496C3A1BD7DB3905F4 /* nb.lproj */; };
-		202DC4BA29D222679D2A7ECA0144577D /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 95DEF118BEF744EDC4A9660B42FAF350 /* sk.lproj */; };
-		2731AA1508A7DEDBD872D5C4CE8DDBA9 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C604DD384CEAFEE332F2044C377A649A /* de.lproj */; };
-		3B4202E1E142D773D2E54C9A2667A23E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		19C57F8B6328BE9F770A07F168426903 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5729B0D05BEB4F8C297A1538FB8BD72C /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2042A55FF7A1761CB25D0D86A254C442 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B3231032B4C9FDF666D0BE0352499DDB /* hu.lproj */; };
+		2E15CAB0A52B69D3FA0D70119BBE8E53 /* LetsMove-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61592920A4D0C853574A777FD1884963 /* LetsMove-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31194073C810A8C763DB8B070D931BE2 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF8C9AEC872783DE6E4ACAB9864828 /* es.lproj */; };
+		3CF2CD18FB573A30174F95AD6BA563C4 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5218493186C04DBB2B2BBAE5FBC2DB55 /* ja.lproj */; };
 		42485A3281D99B751FCCD3D5D1A7A117 /* Pods-Kext Updater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F15775EA5C4E689025FBF0DC3FB2D33 /* Pods-Kext Updater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4649D0449DD19A141C9534BC01934393 /* vi-VN.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BD4A28EF882595F140DA0FC33059DFB4 /* vi-VN.lproj */; };
-		468BCCD05D888722E87FC519D8F7D42A /* PFMoveApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 67EF44EF4776A6ACBC0BA85B3D5149CF /* PFMoveApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48F291AF33B727F25E4FD0AE16343F9B /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CD5F7AF8E7741AA757CDA0E12DCFD19A /* ja.lproj */; };
-		54B1C3494BD5E01863DF5036BBE00571 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 283ED27912B3365B0064E36B27B1B0AC /* tr.lproj */; };
-		681FEF943598C5C6655A7CA51773322F /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B7382026C15FE98C28F5E29A6A81B1A8 /* fr.lproj */; };
-		692A775824953AC6B6623AA88AC03B41 /* sr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B6B6730B6B345A1CCDD63C47C5FB665C /* sr.lproj */; };
-		70DA5544474AA59D671B8C135C4CE3B1 /* pt_BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 336ABACBC89AE21D20E5D2A071B2D639 /* pt_BR.lproj */; };
-		75324A030A4959F5B1440809DFE09A6E /* LetsMove-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D5EDBA2AAFD184A372F1B642230A08 /* LetsMove-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AF8953DFF2B20A4F5CCDCAB9EC8891D /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9E44EA9C29531A3F4BB7018FF304F391 /* ru.lproj */; };
-		7C96507EE4541D043E20022D198E85EE /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 18872E2401A3B4EFBBFC38E63FE47CBF /* Base.lproj */; };
-		810BE920769E5DB0D3A03507FCBD73F2 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 01B24D6EB58B0FA05EAE6BE7C7480FBF /* hu.lproj */; };
-		86197134C9088D33917A908A3E6C7D7C /* zh_TW.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1430ECC06CC8A500BDADFFEDDB9D7E28 /* zh_TW.lproj */; };
-		865184FB080C3D31F00EDB0211BB40E3 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 808A09AB0B5B19D8EFCD4149AC60E427 /* pt.lproj */; };
-		88434790D9B263071AE209138C441DE1 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 14D322B7D533944052A3C39A81EDEDDE /* pl.lproj */; };
-		8B587B3E7D37E341BC611DA4067E44B2 /* LetsMove-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 042896C1A4A38D9C2A7E8DE7005DE9C1 /* LetsMove-dummy.m */; };
-		9636A0B3831B609C25D86DAD8E5286B3 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DE06F44794FF1D356AA30B5F02D6C79A /* nl.lproj */; };
-		9B5D5E0819693F46D370B29D9ACAA76D /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5D28DD59B11042AFF88292600AE3DAA4 /* es.lproj */; };
-		A5E5E7F4F922A5B5F738764721E2E1A5 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E3A1F270AAE5D8447C33F54074B662B4 /* ca.lproj */; };
-		AEC686DD1A0E845708DD8BEC1CF50A59 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CE5898613087270B7663DF739F19AC70 /* en.lproj */; };
-		B1BC9D510A64162E038CFC628DCC0EEB /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0822F5E8FA1D566F148258ABA7B935EE /* cs.lproj */; };
-		D04A82440E590EFD82B9B890B1351DC7 /* zh_CN.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 64A9DCBFE695A58466D7CF0719B4DE8F /* zh_CN.lproj */; };
-		E46713430FBC68FDD3DD236FF5BD79AA /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E41EA7813D1070621505EEB34A9F9F1B /* sv.lproj */; };
+		4CB8337198FDE1993480CE70C221FABB /* sr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CBB0940EE6F99809B5DE76AA13A2E45D /* sr.lproj */; };
+		500A10E28FCAAFB0A968CCED417B3275 /* pt_BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5542FD16A0A1CF2CB45CB909D694A240 /* pt_BR.lproj */; };
+		568560CA36FE09111F664C6BBA404742 /* zh_TW.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 526B9262D220EADE48BEFA99AEF0FC8E /* zh_TW.lproj */; };
+		5B317668F69ADABCAD5AE47A1CE39D69 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EE3BC720097B320CDFFBC9953B9AE7A7 /* sk.lproj */; };
+		5E615985AE6C7D5B9238F364549E9677 /* LetsMove-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A7DDEFC365C0AA161A320F365BFC83 /* LetsMove-dummy.m */; };
+		69D5B8B43F71C91C15DE6A606B791F5D /* mk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C291D5EE8641FBFE0BFC49C594129F00 /* mk.lproj */; };
+		6C7847B5EE79878D537FF196B7F0ECFD /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1FE624C302BF3AC1C6395F740BA9DB68 /* pl.lproj */; };
+		729B7AE3AE6C35966D88D0C140BFE6B3 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2978E86CDD44F166E880AD06ED8F5B45 /* ca.lproj */; };
+		826C126D2445D0F2586B6B3B671B40A1 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9851AF5E4A7D58C0DE0619F97522D86E /* it.lproj */; };
+		84DA043E377D11D7E4BA94DF9CF0E60A /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F4A34A512BAC7BB907CC8D694CCBDD71 /* nb.lproj */; };
+		88044B1C761CA2BD4F17ADE1CFEAE3CD /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2E1796E73B02EA86746C27284BC599D8 /* en.lproj */; };
+		8999CEBAA3A313F1C8544DC1D581B339 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 135B1219BB07894A509BED870B138905 /* cs.lproj */; };
+		8C500482DF0DA821FBFD71A84CD466AD /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 30985D75FF179E365546607B76B7E426 /* ko.lproj */; };
+		9B1015EC076147887BA26E2AE160FEF9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		9D07D75F7C84943BDCE3ABC491CD59D1 /* LetsMove.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D748428EA882C6550191AFA5FC22E2 /* LetsMove.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AECE89CE5364011E4C71F28D0F0531E6 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A10FAD2A5FF5031782DDB21997022E56 /* de.lproj */; };
+		B6073B7D340523A56B48E26BD7E72D4A /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 983C48BFA9F2DFE282BEC108BD2D6ACA /* fr.lproj */; };
+		C1720CEFBCDF891D229E2933A25FB21F /* zh_CN.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A64EC7F9BF9F8CC5BAB00AAC2692D /* zh_CN.lproj */; };
+		D16D912F8C268F6BA1AAB01B40145A74 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C230C6C9F65E8F2EFE379AE812672 /* ru.lproj */; };
+		E641BD12CF3AD3888CF543C07EAC8333 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0B6B6DD736B7373B3F3880A08E10E2A8 /* pt.lproj */; };
 		F073A75E53BE6BB21D953A2D3F57AD6E /* Pods-Kext Updater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B664DFC75146459CA56B4288FB579314 /* Pods-Kext Updater-dummy.m */; };
-		F66CFD12E41C521C884BE91313311B46 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C72F6B1A8F35A024FCE7A6413D62F980 /* el.lproj */; };
-		F773679B34767DC58E9D234C8DC19849 /* mk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E5084EB30C297344C753D3C2B2AFF4D4 /* mk.lproj */; };
-		FF97F650F78A91AE303ABE1CF701B8EB /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0157219EE5BB600E543EDBAB91EB9DFB /* da.lproj */; };
+		FD50D88AF2AB7692F630B7E45B38603E /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2131341714CA5A0D5F2E6CF13CF5F976 /* sv.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,85 +72,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0053B826C5C2270228D5AF051BE3DD73 /* Sparkle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sparkle.debug.xcconfig; sourceTree = "<group>"; };
-		0157219EE5BB600E543EDBAB91EB9DFB /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
-		01B24D6EB58B0FA05EAE6BE7C7480FBF /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
-		03073DAA1A65FE9A55C932F8DDB0C85B /* SPUDownloaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderProtocol.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderProtocol.h; sourceTree = "<group>"; };
-		042896C1A4A38D9C2A7E8DE7005DE9C1 /* LetsMove-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LetsMove-dummy.m"; sourceTree = "<group>"; };
-		04EE685548A0E2C7BE6CF5B41C760698 /* LetsMove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LetsMove.release.xcconfig; sourceTree = "<group>"; };
-		0822F5E8FA1D566F148258ABA7B935EE /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
-		1430ECC06CC8A500BDADFFEDDB9D7E28 /* zh_TW.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_TW.lproj; sourceTree = "<group>"; };
-		1446C955930D775E986E75D53CA3C89D /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
-		14D322B7D533944052A3C39A81EDEDDE /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
-		18872E2401A3B4EFBBFC38E63FE47CBF /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = Base.lproj; sourceTree = "<group>"; };
-		283ED27912B3365B0064E36B27B1B0AC /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
-		2BF965FE4CBD6B3B996340D62DD933D8 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
-		2FA51939C474F6496C3A1BD7DB3905F4 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nb.lproj; sourceTree = "<group>"; };
-		336ABACBC89AE21D20E5D2A071B2D639 /* pt_BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt_BR.lproj; sourceTree = "<group>"; };
-		35EFF5A3204AE30285DB07EFF70016DA /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
-		45AF07AA783F5EC530832A7A3D250C30 /* PFMoveApplication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
-		5A412916972157A3B037FCEE30306F16 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
-		5A90A24F1F69372766AF297BCA6405FF /* Sparkle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sparkle.release.xcconfig; sourceTree = "<group>"; };
-		5CF8FA51AB2508B190B17BDB41A78CBF /* LetsMove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LetsMove.debug.xcconfig; sourceTree = "<group>"; };
-		5D28DD59B11042AFF88292600AE3DAA4 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
+		03D748428EA882C6550191AFA5FC22E2 /* LetsMove.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LetsMove.h; sourceTree = "<group>"; };
+		07A5E897F2619031EDC44B06EE8636D3 /* LetsMove-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LetsMove-Info.plist"; sourceTree = "<group>"; };
+		0B5C230C6C9F65E8F2EFE379AE812672 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
+		0B6B6DD736B7373B3F3880A08E10E2A8 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
+		135B1219BB07894A509BED870B138905 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
+		1B2A45BE95CEE8F23C554A9D476F7AB8 /* LetsMove.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LetsMove.xcconfig; sourceTree = "<group>"; };
+		1F190F08CEDE2C73B2ED5A1A6A9BDCAB /* SPUDownloaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDelegate.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDelegate.h; sourceTree = "<group>"; };
+		1FE624C302BF3AC1C6395F740BA9DB68 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
+		2131341714CA5A0D5F2E6CF13CF5F976 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
+		2978E86CDD44F166E880AD06ED8F5B45 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
+		2E1796E73B02EA86746C27284BC599D8 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
+		30985D75FF179E365546607B76B7E426 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
+		359C0B043A26D7436E0E202B0B3A0786 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
+		37447FE6A3150E2F2AECF6E333BA3DF4 /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
+		412F152B7E6818398415533477AA1365 /* SPUDownloaderSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderSession.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderSession.h; sourceTree = "<group>"; };
+		4EDF8C9AEC872783DE6E4ACAB9864828 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
+		5218493186C04DBB2B2BBAE5FBC2DB55 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
+		526B9262D220EADE48BEFA99AEF0FC8E /* zh_TW.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_TW.lproj; sourceTree = "<group>"; };
+		5542FD16A0A1CF2CB45CB909D694A240 /* pt_BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt_BR.lproj; sourceTree = "<group>"; };
+		55A7DDEFC365C0AA161A320F365BFC83 /* LetsMove-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LetsMove-dummy.m"; sourceTree = "<group>"; };
+		5729B0D05BEB4F8C297A1538FB8BD72C /* PFMoveApplication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
+		5E948F92A7258D68EDC8F8DB062482A5 /* SPUDownloaderDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDeprecated.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDeprecated.h; sourceTree = "<group>"; };
 		5F15775EA5C4E689025FBF0DC3FB2D33 /* Pods-Kext Updater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kext Updater-umbrella.h"; sourceTree = "<group>"; };
-		64A9DCBFE695A58466D7CF0719B4DE8F /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_CN.lproj; sourceTree = "<group>"; };
+		5F6F688994A578E0029713B10016D1E8 /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
+		61592920A4D0C853574A777FD1884963 /* LetsMove-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-umbrella.h"; sourceTree = "<group>"; };
 		64C6F301D43F015CCC7D70D36A7A80B6 /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
-		67DE32A3005D8FA3687647956CA68223 /* SUCodeSigningVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUCodeSigningVerifier.h; path = Sparkle.framework/Versions/A/Headers/SUCodeSigningVerifier.h; sourceTree = "<group>"; };
-		67EF44EF4776A6ACBC0BA85B3D5149CF /* PFMoveApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
-		6A77F7E490F003DAC9D62619D93C7A60 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		6D626458201040065357F32A4B45D192 /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
-		6E74E4E07FD042978EA39CCDCF3733FE /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
-		7761B9C88A1DCEAB2A51767E017BB3C5 /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
-		808A09AB0B5B19D8EFCD4149AC60E427 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
-		832DC8EF3D859D2B3E0F59DE10A81FEE /* SPUDownloaderDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDeprecated.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDeprecated.h; sourceTree = "<group>"; };
-		8BE5E3DC8625FB0A87FE89A1BF15D029 /* SPUDownloaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDelegate.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDelegate.h; sourceTree = "<group>"; };
-		8CCA83A9E9BC04C92961F0C9652E56FB /* LetsMove-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-prefix.pch"; sourceTree = "<group>"; };
+		750CDA2F8B99A53EC50597180FC30800 /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
+		79010014BD730A5D1EC7AC19BC36F749 /* PFMoveApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
+		7D593AC35D6DB6EA49FDC0E71EFE9CF0 /* SPUDownloadData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloadData.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloadData.h; sourceTree = "<group>"; };
+		8944D03A925B1A8432565ADAA6602743 /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
 		8D4C4482802D5C05B0B0EF58D4240450 /* Pods-Kext Updater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kext Updater-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F110C23F36CC4DF98E367C873EEC99D /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
-		95DEF118BEF744EDC4A9660B42FAF350 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
-		973F510E3D58258CD20F2BFBC47495EF /* SPUDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloader.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloader.h; sourceTree = "<group>"; };
+		8F0A64EC7F9BF9F8CC5BAB00AAC2692D /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = zh_CN.lproj; sourceTree = "<group>"; };
+		983C48BFA9F2DFE282BEC108BD2D6ACA /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
+		9851AF5E4A7D58C0DE0619F97522D86E /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
+		9ABA62D9ED73BB640FCD71CA4574A02A /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E44EA9C29531A3F4BB7018FF304F391 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
+		A10FAD2A5FF5031782DDB21997022E56 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
 		A46AE6834E7F2955CD1F8C2F25FACD87 /* Pods-Kext Updater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kext Updater.modulemap"; sourceTree = "<group>"; };
-		A656ADB5D65FEEED2C38C9C5CF782BCB /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
-		B10EB35CF3B919ADDC9A36544762702B /* LetsMove-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LetsMove-Info.plist"; sourceTree = "<group>"; };
+		A5B648F8F793CFD86FE1760B8B9915E9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		ABCB19894A941ACE6D761655588DB098 /* SPUDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloader.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloader.h; sourceTree = "<group>"; };
+		AE90BD25FC5A713379CA57578A2FC286 /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
+		B3231032B4C9FDF666D0BE0352499DDB /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
+		B35574298E13BB4D11A198CECF8D2D83 /* LetsMove.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LetsMove.modulemap; sourceTree = "<group>"; };
 		B664DFC75146459CA56B4288FB579314 /* Pods-Kext Updater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kext Updater-dummy.m"; sourceTree = "<group>"; };
-		B6B6730B6B345A1CCDD63C47C5FB665C /* sr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sr.lproj; sourceTree = "<group>"; };
-		B7382026C15FE98C28F5E29A6A81B1A8 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
-		B775183ACB0F51571E1D62153E19B072 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
-		BC3AA3E30A3FA0D57F704E85825BD078 /* SPUDownloadData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloadData.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloadData.h; sourceTree = "<group>"; };
-		BD4A28EF882595F140DA0FC33059DFB4 /* vi-VN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "vi-VN.lproj"; sourceTree = "<group>"; };
-		C23BD13D5AB62DE314E7D8C8B3AB6659 /* LetsMove.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LetsMove.h; sourceTree = "<group>"; };
-		C2D5EDBA2AAFD184A372F1B642230A08 /* LetsMove-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-umbrella.h"; sourceTree = "<group>"; };
-		C604DD384CEAFEE332F2044C377A649A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
-		C72F6B1A8F35A024FCE7A6413D62F980 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = el.lproj; sourceTree = "<group>"; };
-		CD5F7AF8E7741AA757CDA0E12DCFD19A /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
-		CE5898613087270B7663DF739F19AC70 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
+		B9FF8C0B12CB2B8CA9758EE58D735543 /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
+		BD051B47615357932958C37910C1D1C9 /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
+		C0ADBC0C4AF90F3590400D52BA95B8F5 /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
+		C291D5EE8641FBFE0BFC49C594129F00 /* mk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = mk.lproj; sourceTree = "<group>"; };
+		CBB0940EE6F99809B5DE76AA13A2E45D /* sr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sr.lproj; sourceTree = "<group>"; };
 		D1F77F68F0F0D9F4DBBEEE866A517F44 /* Pods-Kext Updater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kext Updater-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D2FBA41E3514A048A6DC1C62750D8BD5 /* Pods-Kext Updater-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kext Updater-Info.plist"; sourceTree = "<group>"; };
-		D6BF255AD84E0EDE8BE187E09AF89712 /* LetsMove.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LetsMove.modulemap; sourceTree = "<group>"; };
-		D84B4516DE92F2C2E4806AE81DC38778 /* SPUURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUURLRequest.h; path = Sparkle.framework/Versions/A/Headers/SPUURLRequest.h; sourceTree = "<group>"; };
 		D87AC91B19D0A6B161BD3ED08F81D6E9 /* LetsMove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LetsMove.framework; path = LetsMove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE06F44794FF1D356AA30B5F02D6C79A /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
-		E1C61BB398F1022C9E2E9F11FB1DD50E /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
-		E3A1F270AAE5D8447C33F54074B662B4 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
-		E41EA7813D1070621505EEB34A9F9F1B /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
+		D91224D90503F7CC2CBC8A8EC15C9950 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
+		E1F6128647CC80E529F31503D808C213 /* SPUDownloaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderProtocol.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderProtocol.h; sourceTree = "<group>"; };
 		E467D1AA1BD26A0193FD4E85FFBE6F40 /* Pods-Kext Updater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kext Updater-frameworks.sh"; sourceTree = "<group>"; };
-		E5084EB30C297344C753D3C2B2AFF4D4 /* mk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = mk.lproj; sourceTree = "<group>"; };
-		EB6D82CB4C436172E8BAE35C5E5FB00B /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
-		EECD7938D1726FC2300F2FC9168B8DA4 /* SPUDownloaderSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderSession.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderSession.h; sourceTree = "<group>"; };
-		EF54D2E59A2B2A05BEE678C9FFDD58E4 /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
+		E49E03D37E13992E45F80C94B6CB32AD /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
+		E5881A07F99101B8C7DDD57BA32F5246 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
+		E7FAF1F89CD372A1FC7135677198AA2D /* LetsMove-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LetsMove-prefix.pch"; sourceTree = "<group>"; };
+		EE3BC720097B320CDFFBC9953B9AE7A7 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
 		EF7122ABC71940E14A01ED57D2AAFF72 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kext_Updater.framework; path = "Pods-Kext Updater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4A34A512BAC7BB907CC8D694CCBDD71 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nb.lproj; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		FA95D74D3658D8E51A9AFC5A035B36D3 /* SPUURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUURLRequest.h; path = Sparkle.framework/Versions/A/Headers/SPUURLRequest.h; sourceTree = "<group>"; };
+		FAF413219D11A41FD66A79E5D59A8C98 /* SUCodeSigningVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUCodeSigningVerifier.h; path = Sparkle.framework/Versions/A/Headers/SUCodeSigningVerifier.h; sourceTree = "<group>"; };
+		FCD61A4A024A5E936DE6E4CF18C19891 /* Sparkle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sparkle.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A2687BA2342C630CAF879116BDC47B5 /* Frameworks */ = {
+		565852552A827103848C33DB1AC8358B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B4202E1E142D773D2E54C9A2667A23E /* Cocoa.framework in Frameworks */,
+				9B1015EC076147887BA26E2AE160FEF9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,75 +160,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08A1043C753F51C59EA15A652360830C /* Sparkle */ = {
+		0606A1E1B8196434FB1389D367EB15A8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A656ADB5D65FEEED2C38C9C5CF782BCB /* Sparkle.h */,
-				BC3AA3E30A3FA0D57F704E85825BD078 /* SPUDownloadData.h */,
-				973F510E3D58258CD20F2BFBC47495EF /* SPUDownloader.h */,
-				8BE5E3DC8625FB0A87FE89A1BF15D029 /* SPUDownloaderDelegate.h */,
-				832DC8EF3D859D2B3E0F59DE10A81FEE /* SPUDownloaderDeprecated.h */,
-				03073DAA1A65FE9A55C932F8DDB0C85B /* SPUDownloaderProtocol.h */,
-				EECD7938D1726FC2300F2FC9168B8DA4 /* SPUDownloaderSession.h */,
-				D84B4516DE92F2C2E4806AE81DC38778 /* SPUURLRequest.h */,
-				8F110C23F36CC4DF98E367C873EEC99D /* SUAppcast.h */,
-				EB6D82CB4C436172E8BAE35C5E5FB00B /* SUAppcastItem.h */,
-				67DE32A3005D8FA3687647956CA68223 /* SUCodeSigningVerifier.h */,
-				EF54D2E59A2B2A05BEE678C9FFDD58E4 /* SUErrors.h */,
-				35EFF5A3204AE30285DB07EFF70016DA /* SUExport.h */,
-				1446C955930D775E986E75D53CA3C89D /* SUStandardVersionComparator.h */,
-				6E74E4E07FD042978EA39CCDCF3733FE /* SUUpdater.h */,
-				7761B9C88A1DCEAB2A51767E017BB3C5 /* SUUpdaterDelegate.h */,
-				E1C61BB398F1022C9E2E9F11FB1DD50E /* SUVersionComparisonProtocol.h */,
-				5A412916972157A3B037FCEE30306F16 /* SUVersionDisplayProtocol.h */,
-				6FF27DB8375CBFE937A389C39545F11D /* Frameworks */,
-				418C69E3A442205A9CC076E8492AA63A /* Support Files */,
+				FCD61A4A024A5E936DE6E4CF18C19891 /* Sparkle.xcconfig */,
 			);
-			name = Sparkle;
-			path = Sparkle;
+			name = "Support Files";
+			path = "../Target Support Files/Sparkle";
+			sourceTree = "<group>";
+		};
+		0B59C1DBE36C003AB9F65E9443BCBB93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5B648F8F793CFD86FE1760B8B9915E9 /* Sparkle.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		13E9E7771E147DDC57A7B3A7FFB55B20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5440657FE99DA8CC54BA043E5FEC5A79 /* LetsMove */,
-				08A1043C753F51C59EA15A652360830C /* Sparkle */,
+				5F89B7874B12BE4AD681A248477EDFEA /* LetsMove */,
+				4CC02F220E1320495B4D118E9D353A85 /* Sparkle */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		28BCD84B3BB006038C3AC9127A17B238 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				18872E2401A3B4EFBBFC38E63FE47CBF /* Base.lproj */,
-				E3A1F270AAE5D8447C33F54074B662B4 /* ca.lproj */,
-				0822F5E8FA1D566F148258ABA7B935EE /* cs.lproj */,
-				0157219EE5BB600E543EDBAB91EB9DFB /* da.lproj */,
-				C604DD384CEAFEE332F2044C377A649A /* de.lproj */,
-				C72F6B1A8F35A024FCE7A6413D62F980 /* el.lproj */,
-				CE5898613087270B7663DF739F19AC70 /* en.lproj */,
-				5D28DD59B11042AFF88292600AE3DAA4 /* es.lproj */,
-				B7382026C15FE98C28F5E29A6A81B1A8 /* fr.lproj */,
-				01B24D6EB58B0FA05EAE6BE7C7480FBF /* hu.lproj */,
-				B775183ACB0F51571E1D62153E19B072 /* it.lproj */,
-				CD5F7AF8E7741AA757CDA0E12DCFD19A /* ja.lproj */,
-				2BF965FE4CBD6B3B996340D62DD933D8 /* ko.lproj */,
-				E5084EB30C297344C753D3C2B2AFF4D4 /* mk.lproj */,
-				2FA51939C474F6496C3A1BD7DB3905F4 /* nb.lproj */,
-				DE06F44794FF1D356AA30B5F02D6C79A /* nl.lproj */,
-				14D322B7D533944052A3C39A81EDEDDE /* pl.lproj */,
-				808A09AB0B5B19D8EFCD4149AC60E427 /* pt.lproj */,
-				336ABACBC89AE21D20E5D2A071B2D639 /* pt_BR.lproj */,
-				9E44EA9C29531A3F4BB7018FF304F391 /* ru.lproj */,
-				95DEF118BEF744EDC4A9660B42FAF350 /* sk.lproj */,
-				B6B6730B6B345A1CCDD63C47C5FB665C /* sr.lproj */,
-				E41EA7813D1070621505EEB34A9F9F1B /* sv.lproj */,
-				283ED27912B3365B0064E36B27B1B0AC /* tr.lproj */,
-				BD4A28EF882595F140DA0FC33059DFB4 /* vi-VN.lproj */,
-				64A9DCBFE695A58466D7CF0719B4DE8F /* zh_CN.lproj */,
-				1430ECC06CC8A500BDADFFEDDB9D7E28 /* zh_TW.lproj */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		2CC8CF4F6AABBAFE04FFFC8B63F65DD1 /* Targets Support Files */ = {
@@ -247,35 +194,45 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		418C69E3A442205A9CC076E8492AA63A /* Support Files */ = {
+		4CC02F220E1320495B4D118E9D353A85 /* Sparkle */ = {
 			isa = PBXGroup;
 			children = (
-				0053B826C5C2270228D5AF051BE3DD73 /* Sparkle.debug.xcconfig */,
-				5A90A24F1F69372766AF297BCA6405FF /* Sparkle.release.xcconfig */,
+				5F6F688994A578E0029713B10016D1E8 /* Sparkle.h */,
+				7D593AC35D6DB6EA49FDC0E71EFE9CF0 /* SPUDownloadData.h */,
+				ABCB19894A941ACE6D761655588DB098 /* SPUDownloader.h */,
+				1F190F08CEDE2C73B2ED5A1A6A9BDCAB /* SPUDownloaderDelegate.h */,
+				5E948F92A7258D68EDC8F8DB062482A5 /* SPUDownloaderDeprecated.h */,
+				E1F6128647CC80E529F31503D808C213 /* SPUDownloaderProtocol.h */,
+				412F152B7E6818398415533477AA1365 /* SPUDownloaderSession.h */,
+				FA95D74D3658D8E51A9AFC5A035B36D3 /* SPUURLRequest.h */,
+				BD051B47615357932958C37910C1D1C9 /* SUAppcast.h */,
+				C0ADBC0C4AF90F3590400D52BA95B8F5 /* SUAppcastItem.h */,
+				FAF413219D11A41FD66A79E5D59A8C98 /* SUCodeSigningVerifier.h */,
+				9ABA62D9ED73BB640FCD71CA4574A02A /* SUErrors.h */,
+				B9FF8C0B12CB2B8CA9758EE58D735543 /* SUExport.h */,
+				AE90BD25FC5A713379CA57578A2FC286 /* SUStandardVersionComparator.h */,
+				8944D03A925B1A8432565ADAA6602743 /* SUUpdater.h */,
+				750CDA2F8B99A53EC50597180FC30800 /* SUUpdaterDelegate.h */,
+				37447FE6A3150E2F2AECF6E333BA3DF4 /* SUVersionComparisonProtocol.h */,
+				D91224D90503F7CC2CBC8A8EC15C9950 /* SUVersionDisplayProtocol.h */,
+				0B59C1DBE36C003AB9F65E9443BCBB93 /* Frameworks */,
+				0606A1E1B8196434FB1389D367EB15A8 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Sparkle";
+			name = Sparkle;
+			path = Sparkle;
 			sourceTree = "<group>";
 		};
-		5440657FE99DA8CC54BA043E5FEC5A79 /* LetsMove */ = {
+		5F89B7874B12BE4AD681A248477EDFEA /* LetsMove */ = {
 			isa = PBXGroup;
 			children = (
-				C23BD13D5AB62DE314E7D8C8B3AB6659 /* LetsMove.h */,
-				67EF44EF4776A6ACBC0BA85B3D5149CF /* PFMoveApplication.h */,
-				45AF07AA783F5EC530832A7A3D250C30 /* PFMoveApplication.m */,
-				28BCD84B3BB006038C3AC9127A17B238 /* Resources */,
-				E9E241887F6D697FB27F934E561E11F8 /* Support Files */,
+				03D748428EA882C6550191AFA5FC22E2 /* LetsMove.h */,
+				79010014BD730A5D1EC7AC19BC36F749 /* PFMoveApplication.h */,
+				5729B0D05BEB4F8C297A1538FB8BD72C /* PFMoveApplication.m */,
+				F1542A004E5D3FF4D7FF62000DE971BC /* Resources */,
+				E9893E2C6ED9B64C339D69853096AC7E /* Support Files */,
 			);
 			name = LetsMove;
 			path = LetsMove;
-			sourceTree = "<group>";
-		};
-		6FF27DB8375CBFE937A389C39545F11D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6A77F7E490F003DAC9D62619D93C7A60 /* Sparkle.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
@@ -322,16 +279,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E9E241887F6D697FB27F934E561E11F8 /* Support Files */ = {
+		E9893E2C6ED9B64C339D69853096AC7E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D6BF255AD84E0EDE8BE187E09AF89712 /* LetsMove.modulemap */,
-				042896C1A4A38D9C2A7E8DE7005DE9C1 /* LetsMove-dummy.m */,
-				B10EB35CF3B919ADDC9A36544762702B /* LetsMove-Info.plist */,
-				8CCA83A9E9BC04C92961F0C9652E56FB /* LetsMove-prefix.pch */,
-				C2D5EDBA2AAFD184A372F1B642230A08 /* LetsMove-umbrella.h */,
-				5CF8FA51AB2508B190B17BDB41A78CBF /* LetsMove.debug.xcconfig */,
-				04EE685548A0E2C7BE6CF5B41C760698 /* LetsMove.release.xcconfig */,
+				B35574298E13BB4D11A198CECF8D2D83 /* LetsMove.modulemap */,
+				1B2A45BE95CEE8F23C554A9D476F7AB8 /* LetsMove.xcconfig */,
+				55A7DDEFC365C0AA161A320F365BFC83 /* LetsMove-dummy.m */,
+				07A5E897F2619031EDC44B06EE8636D3 /* LetsMove-Info.plist */,
+				E7FAF1F89CD372A1FC7135677198AA2D /* LetsMove-prefix.pch */,
+				61592920A4D0C853574A777FD1884963 /* LetsMove-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/LetsMove";
@@ -346,16 +302,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F1542A004E5D3FF4D7FF62000DE971BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2978E86CDD44F166E880AD06ED8F5B45 /* ca.lproj */,
+				135B1219BB07894A509BED870B138905 /* cs.lproj */,
+				E5881A07F99101B8C7DDD57BA32F5246 /* da.lproj */,
+				A10FAD2A5FF5031782DDB21997022E56 /* de.lproj */,
+				2E1796E73B02EA86746C27284BC599D8 /* en.lproj */,
+				4EDF8C9AEC872783DE6E4ACAB9864828 /* es.lproj */,
+				983C48BFA9F2DFE282BEC108BD2D6ACA /* fr.lproj */,
+				B3231032B4C9FDF666D0BE0352499DDB /* hu.lproj */,
+				9851AF5E4A7D58C0DE0619F97522D86E /* it.lproj */,
+				5218493186C04DBB2B2BBAE5FBC2DB55 /* ja.lproj */,
+				30985D75FF179E365546607B76B7E426 /* ko.lproj */,
+				C291D5EE8641FBFE0BFC49C594129F00 /* mk.lproj */,
+				F4A34A512BAC7BB907CC8D694CCBDD71 /* nb.lproj */,
+				359C0B043A26D7436E0E202B0B3A0786 /* nl.lproj */,
+				1FE624C302BF3AC1C6395F740BA9DB68 /* pl.lproj */,
+				0B6B6DD736B7373B3F3880A08E10E2A8 /* pt.lproj */,
+				5542FD16A0A1CF2CB45CB909D694A240 /* pt_BR.lproj */,
+				0B5C230C6C9F65E8F2EFE379AE812672 /* ru.lproj */,
+				EE3BC720097B320CDFFBC9953B9AE7A7 /* sk.lproj */,
+				CBB0940EE6F99809B5DE76AA13A2E45D /* sr.lproj */,
+				2131341714CA5A0D5F2E6CF13CF5F976 /* sv.lproj */,
+				E49E03D37E13992E45F80C94B6CB32AD /* tr.lproj */,
+				8F0A64EC7F9BF9F8CC5BAB00AAC2692D /* zh_CN.lproj */,
+				526B9262D220EADE48BEFA99AEF0FC8E /* zh_TW.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		980E5919A01E7A2D85BB2B55FB6B0558 /* Headers */ = {
+		8682336F8F6134B31C69E486A4DA6672 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75324A030A4959F5B1440809DFE09A6E /* LetsMove-umbrella.h in Headers */,
-				19452903148D2F3AE019248C4B0025A3 /* LetsMove.h in Headers */,
-				468BCCD05D888722E87FC519D8F7D42A /* PFMoveApplication.h in Headers */,
+				2E15CAB0A52B69D3FA0D70119BBE8E53 /* LetsMove-umbrella.h in Headers */,
+				9D07D75F7C84943BDCE3ABC491CD59D1 /* LetsMove.h in Headers */,
+				09F6953D0A355AEEDD4DE40E8FD483B6 /* PFMoveApplication.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,12 +379,12 @@
 		};
 		F83960005EA88D0C24A1D277DD0E8667 /* LetsMove */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20EE4026366387BA099377F69A4776C7 /* Build configuration list for PBXNativeTarget "LetsMove" */;
+			buildConfigurationList = 5EBD6E1F33E4C77AD65B08369A6FD5D0 /* Build configuration list for PBXNativeTarget "LetsMove" */;
 			buildPhases = (
-				980E5919A01E7A2D85BB2B55FB6B0558 /* Headers */,
-				B1988B8A81F245C4F3C155A948636CA3 /* Sources */,
-				1A2687BA2342C630CAF879116BDC47B5 /* Frameworks */,
-				96A3FE8F6D569D1FB906DE877F8A32EB /* Resources */,
+				8682336F8F6134B31C69E486A4DA6672 /* Headers */,
+				4B0A1E363566B1301D1C568EC2762DE8 /* Sources */,
+				565852552A827103848C33DB1AC8358B /* Frameworks */,
+				D12E0566EE75B1FDDA9AFDFF33629671 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -423,7 +410,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = ED24327D993307AA94A272AF389F204B /* Products */;
@@ -438,40 +424,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		96A3FE8F6D569D1FB906DE877F8A32EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C96507EE4541D043E20022D198E85EE /* Base.lproj in Resources */,
-				A5E5E7F4F922A5B5F738764721E2E1A5 /* ca.lproj in Resources */,
-				B1BC9D510A64162E038CFC628DCC0EEB /* cs.lproj in Resources */,
-				FF97F650F78A91AE303ABE1CF701B8EB /* da.lproj in Resources */,
-				2731AA1508A7DEDBD872D5C4CE8DDBA9 /* de.lproj in Resources */,
-				F66CFD12E41C521C884BE91313311B46 /* el.lproj in Resources */,
-				AEC686DD1A0E845708DD8BEC1CF50A59 /* en.lproj in Resources */,
-				9B5D5E0819693F46D370B29D9ACAA76D /* es.lproj in Resources */,
-				681FEF943598C5C6655A7CA51773322F /* fr.lproj in Resources */,
-				810BE920769E5DB0D3A03507FCBD73F2 /* hu.lproj in Resources */,
-				023E3D21CC8D2E87E2F479E2C6765B30 /* it.lproj in Resources */,
-				48F291AF33B727F25E4FD0AE16343F9B /* ja.lproj in Resources */,
-				080FA5E1CA53FD0A5BA021C3AD77816F /* ko.lproj in Resources */,
-				F773679B34767DC58E9D234C8DC19849 /* mk.lproj in Resources */,
-				1F1729AE98DEE085CBB5DBF7E544DE3D /* nb.lproj in Resources */,
-				9636A0B3831B609C25D86DAD8E5286B3 /* nl.lproj in Resources */,
-				88434790D9B263071AE209138C441DE1 /* pl.lproj in Resources */,
-				865184FB080C3D31F00EDB0211BB40E3 /* pt.lproj in Resources */,
-				70DA5544474AA59D671B8C135C4CE3B1 /* pt_BR.lproj in Resources */,
-				7AF8953DFF2B20A4F5CCDCAB9EC8891D /* ru.lproj in Resources */,
-				202DC4BA29D222679D2A7ECA0144577D /* sk.lproj in Resources */,
-				692A775824953AC6B6623AA88AC03B41 /* sr.lproj in Resources */,
-				E46713430FBC68FDD3DD236FF5BD79AA /* sv.lproj in Resources */,
-				54B1C3494BD5E01863DF5036BBE00571 /* tr.lproj in Resources */,
-				4649D0449DD19A141C9534BC01934393 /* vi-VN.lproj in Resources */,
-				D04A82440E590EFD82B9B890B1351DC7 /* zh_CN.lproj in Resources */,
-				86197134C9088D33917A908A3E6C7D7C /* zh_TW.lproj in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CBD0319218C019C83012D34962585C08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,23 +431,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D12E0566EE75B1FDDA9AFDFF33629671 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729B7AE3AE6C35966D88D0C140BFE6B3 /* ca.lproj in Resources */,
+				8999CEBAA3A313F1C8544DC1D581B339 /* cs.lproj in Resources */,
+				0A1237C0C6C64DAE78E6F4CD771CA4B0 /* da.lproj in Resources */,
+				AECE89CE5364011E4C71F28D0F0531E6 /* de.lproj in Resources */,
+				88044B1C761CA2BD4F17ADE1CFEAE3CD /* en.lproj in Resources */,
+				31194073C810A8C763DB8B070D931BE2 /* es.lproj in Resources */,
+				B6073B7D340523A56B48E26BD7E72D4A /* fr.lproj in Resources */,
+				2042A55FF7A1761CB25D0D86A254C442 /* hu.lproj in Resources */,
+				826C126D2445D0F2586B6B3B671B40A1 /* it.lproj in Resources */,
+				3CF2CD18FB573A30174F95AD6BA563C4 /* ja.lproj in Resources */,
+				8C500482DF0DA821FBFD71A84CD466AD /* ko.lproj in Resources */,
+				69D5B8B43F71C91C15DE6A606B791F5D /* mk.lproj in Resources */,
+				84DA043E377D11D7E4BA94DF9CF0E60A /* nb.lproj in Resources */,
+				020E098C253F02CF5A2F89A505CA37EE /* nl.lproj in Resources */,
+				6C7847B5EE79878D537FF196B7F0ECFD /* pl.lproj in Resources */,
+				E641BD12CF3AD3888CF543C07EAC8333 /* pt.lproj in Resources */,
+				500A10E28FCAAFB0A968CCED417B3275 /* pt_BR.lproj in Resources */,
+				D16D912F8C268F6BA1AAB01B40145A74 /* ru.lproj in Resources */,
+				5B317668F69ADABCAD5AE47A1CE39D69 /* sk.lproj in Resources */,
+				4CB8337198FDE1993480CE70C221FABB /* sr.lproj in Resources */,
+				FD50D88AF2AB7692F630B7E45B38603E /* sv.lproj in Resources */,
+				10F338979909A45B2DEB7AA8892046F4 /* tr.lproj in Resources */,
+				C1720CEFBCDF891D229E2933A25FB21F /* zh_CN.lproj in Resources */,
+				568560CA36FE09111F664C6BBA404742 /* zh_TW.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B0A1E363566B1301D1C568EC2762DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E615985AE6C7D5B9238F364549E9677 /* LetsMove-dummy.m in Sources */,
+				19C57F8B6328BE9F770A07F168426903 /* PFMoveApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8881D9C9FD774DFD1B310E98B2BE04AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F073A75E53BE6BB21D953A2D3F57AD6E /* Pods-Kext Updater-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1988B8A81F245C4F3C155A948636CA3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B587B3E7D37E341BC611DA4067E44B2 /* LetsMove-dummy.m in Sources */,
-				04C0D085186241DF14CEF3D3C9542715 /* PFMoveApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,44 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05B7B48389DBFE7B89D665B2974F424D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04EE685548A0E2C7BE6CF5B41C760698 /* LetsMove.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/LetsMove/LetsMove-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LetsMove/LetsMove-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULEMAP_FILE = "Target Support Files/LetsMove/LetsMove.modulemap";
-				PRODUCT_MODULE_NAME = LetsMove;
-				PRODUCT_NAME = LetsMove;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		0A4E8437AC7C5E8A6E80920A6EEE3954 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -615,6 +560,23 @@
 			};
 			name = Release;
 		};
+		21221507EB6C5017FA40BD87C8A5AE87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD61A4A024A5E936DE6E4CF18C19891 /* Sparkle.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		216800F449A1242243DDC6B6D9CDF2A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64C6F301D43F015CCC7D70D36A7A80B6 /* Pods-Kext Updater.debug.xcconfig */;
@@ -655,9 +617,9 @@
 			};
 			name = Debug;
 		};
-		53119FED25D50CAD8C89D980B8FCB179 /* Release */ = {
+		5AFD67EFA6B3F27B4F0B0F8027C335F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A90A24F1F69372766AF297BCA6405FF /* Sparkle.release.xcconfig */;
+			baseConfigurationReference = FCD61A4A024A5E936DE6E4CF18C19891 /* Sparkle.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -670,7 +632,45 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
-			name = Release;
+			name = Debug;
+		};
+		5EA179CF75E055BA31CD9D5C7054FB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2A45BE95CEE8F23C554A9D476F7AB8 /* LetsMove.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/LetsMove/LetsMove-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LetsMove/LetsMove-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/LetsMove/LetsMove.modulemap";
+				PRODUCT_MODULE_NAME = LetsMove;
+				PRODUCT_NAME = LetsMove;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		5F14B856CAD788D737965259A3024EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -736,9 +736,9 @@
 			};
 			name = Debug;
 		};
-		9B33A6BDA9E385051783222B0C54CD49 /* Debug */ = {
+		AF406933D427D9AE231B34EC374A1567 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF8FA51AB2508B190B17BDB41A78CBF /* LetsMove.debug.xcconfig */;
+			baseConfigurationReference = 1B2A45BE95CEE8F23C554A9D476F7AB8 /* LetsMove.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -772,7 +772,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		CABD40563121A0A0476BF1E80EA7C465 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -814,40 +814,14 @@
 			};
 			name = Release;
 		};
-		D24DE9D59732B3D89F58ACD78EB5F326 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0053B826C5C2270228D5AF051BE3DD73 /* Sparkle.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20EE4026366387BA099377F69A4776C7 /* Build configuration list for PBXNativeTarget "LetsMove" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B33A6BDA9E385051783222B0C54CD49 /* Debug */,
-				05B7B48389DBFE7B89D665B2974F424D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2C8D06A2289713323892B3638F08AC0B /* Build configuration list for PBXAggregateTarget "Sparkle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D24DE9D59732B3D89F58ACD78EB5F326 /* Debug */,
-				53119FED25D50CAD8C89D980B8FCB179 /* Release */,
+				5AFD67EFA6B3F27B4F0B0F8027C335F7 /* Debug */,
+				21221507EB6C5017FA40BD87C8A5AE87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -857,6 +831,15 @@
 			buildConfigurations = (
 				5F14B856CAD788D737965259A3024EA6 /* Debug */,
 				0A4E8437AC7C5E8A6E80920A6EEE3954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EBD6E1F33E4C77AD65B08369A6FD5D0 /* Build configuration list for PBXNativeTarget "LetsMove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA179CF75E055BA31CD9D5C7054FB61 /* Debug */,
+				AF406933D427D9AE231B34EC374A1567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
