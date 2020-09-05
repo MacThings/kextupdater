@@ -10,7 +10,6 @@
 		2A4AF16723144CE700EDB9E4 /* script.command in Copy Script */ = {isa = PBXBuildFile; fileRef = 2A4AF16423144CC500EDB9E4 /* script.command */; };
 		2A4AF169231450C600EDB9E4 /* KUMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4AF168231450C600EDB9E4 /* KUMenuBar.swift */; };
 		2A8E298D2445F89200BDC423 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E298C2445F89200BDC423 /* Localizable.strings */; };
-		2AA45B1F2370857900DDB265 /* MenuBarButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA45B1E2370857900DDB265 /* MenuBarButtonDark.png */; };
 		2ADAC8E32482B44A008DC293 /* EFIMount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADAC8E22482B449008DC293 /* EFIMount.swift */; };
 		2ADAC8E62482B785008DC293 /* efimount.command in Copy Script */ = {isa = PBXBuildFile; fileRef = 2ADAC8E42482B756008DC293 /* efimount.command */; };
 		2ADAC8F32482C1D6008DC293 /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 2ADAC8F22482C1D6008DC293 /* sound */; };
@@ -20,7 +19,6 @@
 		FCC6C4DC19A58C7A0063EC3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC6C4DB19A58C7A0063EC3C /* AppDelegate.swift */; };
 		FCC6C4DE19A58C7A0063EC3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC6C4DD19A58C7A0063EC3C /* Images.xcassets */; };
 		FCC6C4E119A58C7A0063EC3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC6C4DF19A58C7A0063EC3C /* Main.storyboard */; };
-		FCC6C4F719A58D370063EC3C /* MenuBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC6C4F619A58D370063EC3C /* MenuBarButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +41,6 @@
 		2A4AF168231450C600EDB9E4 /* KUMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUMenuBar.swift; sourceTree = "<group>"; };
 		2A6FAAC923169CFF002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2A8E298C2445F89200BDC423 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		2AA45B1E2370857900DDB265 /* MenuBarButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBarButtonDark.png; sourceTree = "<group>"; };
 		2ADAC8E22482B449008DC293 /* EFIMount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFIMount.swift; sourceTree = "<group>"; };
 		2ADAC8E42482B756008DC293 /* efimount.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = efimount.command; sourceTree = "<group>"; };
 		2ADAC8F22482C1D6008DC293 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
@@ -55,7 +52,6 @@
 		FCC6C4DB19A58C7A0063EC3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC6C4DD19A58C7A0063EC3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCC6C4E019A58C7A0063EC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FCC6C4F619A58D370063EC3C /* MenuBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBarButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +111,6 @@
 		FCC6C4D519A58C7A0063EC3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2AA45B1E2370857900DDB265 /* MenuBarButtonDark.png */,
-				FCC6C4F619A58D370063EC3C /* MenuBarButton.png */,
 				FCC6C4D619A58C7A0063EC3C /* Info.plist */,
 				FCC6C4D719A58C7A0063EC3C /* main.swift */,
 			);
@@ -187,12 +181,10 @@
 			files = (
 				2ADAC8F32482C1D6008DC293 /* sound in Resources */,
 				2A8E298D2445F89200BDC423 /* Localizable.strings in Resources */,
-				2AA45B1F2370857900DDB265 /* MenuBarButtonDark.png in Resources */,
 				2ADAC8F52482C6ED008DC293 /* bashstrings in Resources */,
 				2ADAC8F72482C6F4008DC293 /* bin in Resources */,
 				FCC6C4DE19A58C7A0063EC3C /* Images.xcassets in Resources */,
 				FCC6C4E119A58C7A0063EC3C /* Main.storyboard in Resources */,
-				FCC6C4F719A58D370063EC3C /* MenuBarButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +350,14 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 357;
+				CURRENT_PROJECT_VERSION = 358;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KUMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 3.5.7;
+				MARKETING_VERSION = 3.5.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdaterhelper.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -381,14 +373,14 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 357;
+				CURRENT_PROJECT_VERSION = 358;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KUMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 3.5.7;
+				MARKETING_VERSION = 3.5.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdaterhelper.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -125,23 +125,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
         
-        enum InterfaceStyle : String {
-           case Dark, Light
-
-           init() {
-              let type = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
-              self = InterfaceStyle(rawValue: type)!
-            }
-        }
-
-        let currentStyle = InterfaceStyle()
-        
-        if currentStyle.rawValue == "Light"{
-            button.image = NSImage(named: "MenuBarButton")
-        } else{
-            button.image = NSImage(named: "MenuBarButtonDark")
-        }
-        
+        button.image = NSImage(named: "MenuBarButton")
         button.target = self
         button.action = #selector(displayMenu)
     }

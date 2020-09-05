@@ -901,18 +901,6 @@ class KextUpdater: NSViewController {
         self.app_logo_animation.stopAnimation("")
     }
     
-    func check_theme() -> Void {
-    let path = self.userDesktopDirectory + "/Library/Preferences/.GlobalPreferences.plist"
-    let dictRoot = NSDictionary(contentsOfFile: path)
-    if let dict = dictRoot{
-        if (dict["AppleInterfaceStyle"] as? String) != nil {
-            UserDefaults.standard.set("Dark", forKey: "System Theme")
-        } else {
-            UserDefaults.standard.set("Light", forKey: "System Theme")
-        }
-    }
-    }		
-    
     @objc func updatecheck() {
         let refreshtime = UserDefaults.standard.string(forKey: "Refreshtime")
         if refreshtime == "Yes" {
