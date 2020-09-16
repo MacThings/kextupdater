@@ -150,6 +150,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-bt4lecontinuityfixup")
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
+        UserDefaults.standard.set(true, forKey: "dl-cputscsync")
         UserDefaults.standard.set(true, forKey: "dl-enablelidwake")
         UserDefaults.standard.set(true, forKey: "dl-fakepciid")
         UserDefaults.standard.set(true, forKey: "dl-fakesmc")
@@ -267,6 +268,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func cpufriend(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/CPUFriend", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func cputscsync(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/lvs1974/CpuTscSync", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func fakepciid(_ sender: Any) {
