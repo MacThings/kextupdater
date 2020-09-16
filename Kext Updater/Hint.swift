@@ -1,5 +1,5 @@
 //
-//  MalwareInfo.swift
+//  Hint.swift
 //  Kext Updater
 //
 //  Created by Sascha Lamprecht on 16.08.19.

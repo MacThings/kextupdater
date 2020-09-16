@@ -70,6 +70,8 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var tools_button: NSButton!
     
     @IBOutlet weak var show_hint: NSButton!
+    @IBOutlet weak var show_bigsurplus: NSButton!
+    
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
@@ -358,7 +360,17 @@ class KextUpdater: NSViewController {
                 }
             }
         
-        
+        if osversionread!.hasPrefix("11") {
+            let bigsurplus = UserDefaults.standard.string(forKey: "BigSurPlus Warning")
+            if bigsurplus == nil {
+                self.show_bigsurplus.performClick(nil)
+            } else {
+                let bigsurplus2 = UserDefaults.standard.bool(forKey: "BigSurPlus Warning")
+                if bigsurplus2 == false {
+                    self.show_bigsurplus.performClick(nil)
+                }
+            }
+        }
     }
     
     @IBAction func start_button(_ sender: Any) {
@@ -508,7 +520,7 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(true, forKey: "HintShown")
             self.show_hint.performClick(nil)
         }
-      
+
     }
     
     @IBAction func stop_button(_ sender: Any) {

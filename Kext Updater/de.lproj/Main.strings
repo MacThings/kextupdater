@@ -229,7 +229,7 @@
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "Fenster";
 
-/* Class = "NSTextFieldCell"; title = "© 2019 Sascha Lamprecht"; ObjectID = "ayB-Ht-Pb3"; */
+/* Class = "NSTextFieldCell"; title = "© 2020 Sascha Lamprecht"; ObjectID = "ayB-Ht-Pb3"; */
 "ayB-Ht-Pb3.title" = "© 2019 Sascha Lamprecht";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
@@ -604,6 +604,9 @@
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1611"; ObjectID = "jYY-lM-pud"; */
 "jYY-lM-pud.title" = "10.11.6 - 15G1611";
 
+/* Class = "NSTextFieldCell"; title = "You are using macOS 11.0 or higher!"; ObjectID = "JZv-wE-06M"; */
+"JZv-wE-06M.title" = "Du verwendest macOS 11.0 oder höher!";
+
 /* Class = "NSMenuItem"; title = "Clover Nightly"; ObjectID = "k4x-tK-fSm"; */
 "k4x-tK-fSm.title" = "Clover Nightly";
 
@@ -627,6 +630,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.3 - 14D131"; ObjectID = "KpK-9x-aN4"; */
 "KpK-9x-aN4.title" = "10.10.3 - 14D131";
+
+/* Class = "NSButtonCell"; title = "Don't bother me again."; ObjectID = "krA-eM-RLT"; */
+"krA-eM-RLT.title" = "Nicht erneut anzeigen";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Kri-LH-JvQ"; */
 "Kri-LH-JvQ.title" = "Bitte auswählen";
@@ -963,6 +969,9 @@
 
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
 "Tho-W6-S5A.title" = "3";
+
+/* Class = "NSTextFieldCell"; title = "Due to Apple's security tightening up regarding the writable of the root system, some functions are no longer operational. E.g. rebuild cache, set root system to r/w, etc. It is therefore not a malfunction of the Kext Updater, but is due to the regulation that system can no longer easily set to r/w."; ObjectID = "Tjx-UT-Kxg"; */
+"Tjx-UT-Kxg.title" = "Aufgrund von Apple´s Sicherheitsverschärfungen bezüglich der Beschreibbarkeit des Root Systems sind einige Funktionen nicht mehr lauffähig. Z.b. Cache neu aufbauen, Rootsystem auf R/W setzen etc. Es handelt sich somit nicht um eine Fehlfunktion des Kext Updaters sondern ist der Reglementierung geschuldet, dass System ohne Weiteres nicht mehr auf r/w setzen zu können.";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2009"; ObjectID = "tlc-Af-39T"; */
 "tlc-Af-39T.title" = "10.10.5 - 14F2009";

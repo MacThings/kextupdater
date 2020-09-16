@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* BigSurPlus.swift */; };
 		2A4C3E4D24B8F2AB0050ED35 /* DisableGFXHDA.kext in Kext Copy IO */ = {isa = PBXBuildFile; fileRef = 2A4C3E4B24B8F2980050ED35 /* DisableGFXHDA.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -154,6 +155,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A1D9577251225640077A7C0 /* BigSurPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigSurPlus.swift; sourceTree = "<group>"; };
 		2A4C3E4B24B8F2980050ED35 /* DisableGFXHDA.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = DisableGFXHDA.kext; sourceTree = "<group>"; };
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +246,7 @@
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
 				2AC44BE623150F61006D447C /* KextUpdater.swift */,
 				2A56BDFB2430A5BE0064CD4D /* Hint.swift */,
+				2A1D9577251225640077A7C0 /* BigSurPlus.swift */,
 				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
 				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
 				2AC44BE823150F61006D447C /* Preferences.swift */,
@@ -527,6 +530,7 @@
 				2AC44BF223150F61006D447C /* Bootloader.swift in Sources */,
 				2AC44BF023150F61006D447C /* DiskInformation.swift in Sources */,
 				2AC44BF323150F61006D447C /* Preferences.swift in Sources */,
+				2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */,
 				2AC44BF623150F61006D447C /* PasswordWindow.swift in Sources */,
 				2AC44BF423150F61006D447C /* Tools.swift in Sources */,
 			);
