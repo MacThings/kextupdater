@@ -12,6 +12,12 @@ class BigSurPlus: NSViewController {
     
     @IBOutlet weak var close_window: NSButton!
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = NSLocalizedString("Warning", comment: "")
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

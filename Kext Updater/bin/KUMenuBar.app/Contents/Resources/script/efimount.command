@@ -724,6 +724,30 @@ function initial()
             fi
     fi
 
+    ### Checks if Hackintosh Kexts are in /L/E and /S/L/E and warns the user
+    basename /Library/Extensions/*.kext | sed 's/\.kext//g' > "$ScriptTmpPath"/le_sle_list
+    basename /System/Library/Extensions/*.kext | sed 's/\.kext//g' >> "$ScriptTmpPath"/le_sle_list
+
+    echo "AppleALC" >> "$ScriptTmpPath"/le_sle_list
+    echo "SystemProfilerMemoryFixup" >> "$ScriptTmpPath"/le_sle_list
+    echo "Lilu" >> "$ScriptTmpPath"/le_sle_list
+    echo "VoodooPS2" >> "$ScriptTmpPath"/le_sle_list
+
+    array=($allkextsupper)
+    for i in "${array[@]}"; do
+        echo "$i" >> "$ScriptTmpPath"/le_sle_array
+    done
+    
+    grep -Ff "$ScriptTmpPath"/le_sle_array "$ScriptTmpPath"/le_sle_list > "$ScriptTmpPath"/le_sle_result
+
+    if [ -s "$ScriptTmpPath"/le_sle_result ]
+    then
+        perl -e 'truncate $ARGV[0], ((-s $ARGV[0]) - 1)' "$ScriptTmpPath"/le_sle_result  2> /dev/null
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "LESLE Warning" -bool YES
+    else
+        defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "LESLE Warning" -bool NO
+    fi
+
 }
 
 #################################################################

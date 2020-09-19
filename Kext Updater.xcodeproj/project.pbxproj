@@ -43,6 +43,7 @@
 		2AC44C1923151173006D447C /* error.aif in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB623150F39006D447C /* error.aif */; };
 		2AC44C1A23151173006D447C /* mq.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB723150F39006D447C /* mq.mp3 */; };
 		2AC44C1B23151173006D447C /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB823150F39006D447C /* ta.mp3 */; };
+		2AC51C632515EBCE0029A19A /* LESLEWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC51C622515EBCE0029A19A /* LESLEWarning.swift */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
 		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
@@ -198,6 +199,7 @@
 		2AC44BF723150F6B006D447C /* kextupdaterng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kextupdaterng.html; sourceTree = "<group>"; };
 		2AC44C2223151293006D447C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2AC44C23231512B5006D447C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		2AC51C622515EBCE0029A19A /* LESLEWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LESLEWarning.swift; sourceTree = "<group>"; };
 		2AD19D8A2367273D0014D005 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
 		2AFE137423AEAF4700A5186D /* dspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dspci; sourceTree = "<group>"; };
@@ -241,12 +243,13 @@
 		2AB3049C23150E1300D618FF /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2A1D9577251225640077A7C0 /* BigSurPlus.swift */,
 				2AC44BE723150F61006D447C /* Bootloader.swift */,
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
-				2AC44BE623150F61006D447C /* KextUpdater.swift */,
 				2A56BDFB2430A5BE0064CD4D /* Hint.swift */,
-				2A1D9577251225640077A7C0 /* BigSurPlus.swift */,
+				2AC44BE623150F61006D447C /* KextUpdater.swift */,
+				2AC51C622515EBCE0029A19A /* LESLEWarning.swift */,
 				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
 				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
 				2AC44BE823150F61006D447C /* Preferences.swift */,
@@ -526,6 +529,7 @@
 				2AB304A023150E1300D618FF /* ViewController.swift in Sources */,
 				2AC44BF523150F61006D447C /* Changelog.swift in Sources */,
 				2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */,
+				2AC51C632515EBCE0029A19A /* LESLEWarning.swift in Sources */,
 				2AC44BED23150F61006D447C /* Website.swift in Sources */,
 				2AC44BF223150F61006D447C /* Bootloader.swift in Sources */,
 				2AC44BF023150F61006D447C /* DiskInformation.swift in Sources */,

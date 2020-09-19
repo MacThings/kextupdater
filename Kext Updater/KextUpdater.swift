@@ -71,6 +71,8 @@ class KextUpdater: NSViewController {
     
     @IBOutlet weak var show_hint: NSButton!
     @IBOutlet weak var show_bigsurplus: NSButton!
+    @IBOutlet weak var show_lesle_warning: NSButton!
+    
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -159,6 +161,11 @@ class KextUpdater: NSViewController {
         if occheck == nil{
             UserDefaults.standard.removeObject(forKey: "OCChecked")
         }
+        
+        //let leslewarning = UserDefaults.standard.string(forKey: "LESLE Warning")
+        //if leslewarning != nil{
+        //    UserDefaults.standard.removeObject(forKey: "LESLE Warning")
+        //}
         
         syncShellExec(path: scriptPath, args: ["initial"])
         syncShellExec(path: scriptPath, args: ["_checkpass_initial"])
@@ -294,6 +301,11 @@ class KextUpdater: NSViewController {
         if bootloader_remember == nil{
             UserDefaults.standard.set(false, forKey: "Bootloader_remember_choice")
         }
+ 
+        let lesle_init = UserDefaults.standard.string(forKey: "LESLE Warning Hide")
+        if lesle_init == nil{
+            UserDefaults.standard.set(false, forKey: "LESLE Warning Hide")
+        }
         
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
@@ -370,6 +382,16 @@ class KextUpdater: NSViewController {
                     self.show_bigsurplus.performClick(nil)
                 }
             }
+        }
+        
+        let leslewarning = UserDefaults.standard.bool(forKey: "LESLE Warning")
+        
+        let leslewarninghide = UserDefaults.standard.bool(forKey: "LESLE Warning Hide")
+        if leslewarninghide == false{
+            if leslewarning == true {
+                self.show_lesle_warning.performClick(nil)
+        }
+
         }
     }
     

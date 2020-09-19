@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.3"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="16097.3"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -3080,6 +3080,17 @@ DQ
                                     <segue destination="oQ0-ZV-LZ6" kind="modal" id="dqF-Xc-cLN"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esC-WM-dTj" userLabel="Button dummy BigSurPlus Warning">
+                                <rect key="frame" x="56" y="0.0" width="18" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Y6A-lF-IFH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="fda-JR-odd" kind="modal" id="4iP-Iu-Fbt"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -3116,6 +3127,7 @@ DQ
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
                         <outlet property="show_bigsurplus" destination="lXA-mk-7IX" id="TUF-6G-A94"/>
                         <outlet property="show_hint" destination="BP0-GU-5Qz" id="IDl-Ll-cOm"/>
+                        <outlet property="show_lesle_warning" destination="esC-WM-dTj" id="1xo-nM-Ast"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
                         <outlet property="stop_button" destination="HvS-Wr-6iP" id="vBx-sf-gYy"/>
                         <outlet property="surprise_newyear" destination="Nx5-lS-W85" id="kA3-Ea-9Yc"/>
@@ -5356,6 +5368,104 @@ DQ
                 <userDefaultsController id="6Pw-A2-Npg"/>
             </objects>
             <point key="canvasLocation" x="1925" y="-336"/>
+        </scene>
+        <!--LESLEWarning-->
+        <scene sceneID="FDm-kb-zyM">
+            <objects>
+                <viewController title="LESLEWarning" id="fda-JR-odd" customClass="LESLEWarning" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="O6G-tc-6tf">
+                        <rect key="frame" x="0.0" y="0.0" width="572" height="204"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-Xg-8O6">
+                                <rect key="frame" x="43" y="15" width="205" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Don't bother me again." bezelStyle="regularSquare" imagePosition="left" state="on" focusRingType="none" inset="2" id="gqu-2d-I7O">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="DVI-WH-SDb" name="value" keyPath="values.LESLE Warning Hide" id="nhl-VM-Mj1"/>
+                                </connections>
+                            </button>
+                            <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgN-YY-DlJ">
+                                <rect key="frame" x="4" y="168" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="bxb-Jf-Aat"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-ih-idT">
+                                <rect key="frame" x="416" y="6" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FpS-v8-1L5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="close_window:" target="fda-JR-odd" id="eHE-em-CVm"/>
+                                </connections>
+                            </button>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOg-Hc-2ol">
+                                <rect key="frame" x="256" y="42" width="282" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" focusRingType="none" id="2JA-7t-pQg">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title" base64-UTF8="YES">
+Rm91bmQgdGhlc2UgS2V4dChzKSBpbiAnL0xpYnJhcnkvRXh0ZW5zaW9ucwMnIGFuZC9vciAnL1N5c3Rl
+bS8vTGlicmFyeS9FeHRlbnNpb25zJy4gSXQgaXMgbm90IGFkdmlzYWJsZSB0byBwdXQgSGFja2ludG9z
+aCBrZXh0cyB0aGVyZS4gV2l0aCB2ZXJ5IGZldyBleGNlcHRpb25zLCB0aGVzZSBrZXh0cyBzaG91bGQg
+YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
+</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-9Z-3Rg">
+                                <rect key="frame" x="43" y="173" width="531" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="left" title="Found Hackintosh Kext(s) in /S/L/E and/or /L/E !" id="qZ6-lm-Ry2">
+                                    <font key="font" metaFont="systemBlack" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView focusRingType="none" fixedFrame="YES" borderType="line" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voE-y8-z3I">
+                                <rect key="frame" x="45" y="42" width="205" height="114"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="dKF-OF-WPY">
+                                    <rect key="frame" x="1" y="1" width="203" height="112"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="3yv-ne-4lX">
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="112"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="203" height="112"/>
+                                            <size key="maxSize" width="240" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="4eu-al-Yet">
+                                    <rect key="frame" x="-100" y="-100" width="225" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Jex-84-9Vw">
+                                    <rect key="frame" x="225" y="0.0" width="15" height="135"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="close_window" destination="jXC-ih-idT" id="UfS-rS-pIG"/>
+                        <outlet property="output_window" destination="3yv-ne-4lX" id="0m1-GN-syE"/>
+                    </connections>
+                </viewController>
+                <customObject id="m5P-VL-BHf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="DVI-WH-SDb"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="-303"/>
         </scene>
     </scenes>
     <resources>

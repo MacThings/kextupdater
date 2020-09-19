@@ -478,6 +478,9 @@
 /* Class = "NSButtonCell"; title = "Webdriver"; ObjectID = "gqe-Mv-U15"; */
 "gqe-Mv-U15.title" = "Webdriver";
 
+/* Class = "NSButtonCell"; title = "Don't bother me again."; ObjectID = "gqu-2d-I7O"; */
+"gqu-2d-I7O.title" = "Nicht erneut anzeigen.";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1217"; ObjectID = "gVe-vH-pKe"; */
 "gVe-vH-pKe.title" = "10.11.6 - 15G1217";
 
@@ -632,7 +635,7 @@
 "KpK-9x-aN4.title" = "10.10.3 - 14D131";
 
 /* Class = "NSButtonCell"; title = "Don't bother me again."; ObjectID = "krA-eM-RLT"; */
-"krA-eM-RLT.title" = "Nicht erneut anzeigen";
+"krA-eM-RLT.title" = "Nicht erneut anzeigen.";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Kri-LH-JvQ"; */
 "Kri-LH-JvQ.title" = "Bitte auswählen";
@@ -867,6 +870,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F27"; ObjectID = "qQk-uy-On7"; */
 "qQk-uy-On7.title" = "10.10.5 - 14F27";
+
+/* Class = "NSTextFieldCell"; title = "Found Hackintosh Kext(s) in /S/L/E and/or /L/E !"; ObjectID = "qZ6-lm-Ry2"; */
+"qZ6-lm-Ry2.title" = "Hackintoshkexte in /S/L/E und/oder /L/E gefunden!";
 
 /* Class = "NSMenuItem"; title = "OpenCore"; ObjectID = "QZG-0q-NUd"; */
 "QZG-0q-NUd.title" = "OpenCore";
@@ -1174,3 +1180,4 @@
 /* Class = "NSButtonCell"; title = "AtherosE2200Ethernet"; ObjectID = "zZm-MP-N6M"; */
 "zZm-MP-N6M.title" = "AtherosE2200Ethernet";
 
+"2JA-7t-pQg.title" = "Diese Kext(e) wurden in '/Library/Extensions' und/oder '/System/Library/Extensions' gefunden. Es ist nicht ratsam, Hackintosh-Kexte dort zu platzieren. Mit sehr wenigen Ausnahmen sollten diese Kexte ausschließlich auf der EFI-Partition abgelegt werden.";
