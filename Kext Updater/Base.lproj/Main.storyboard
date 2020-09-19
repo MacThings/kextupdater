@@ -5393,19 +5393,8 @@ DQ
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="bxb-Jf-Aat"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-ih-idT">
-                                <rect key="frame" x="416" y="6" width="114" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FpS-v8-1L5">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="close_window:" target="fda-JR-odd" id="eHE-em-CVm"/>
-                                </connections>
-                            </button>
                             <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOg-Hc-2ol">
-                                <rect key="frame" x="256" y="42" width="282" height="118"/>
+                                <rect key="frame" x="256" y="41" width="282" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" focusRingType="none" id="2JA-7t-pQg">
                                     <font key="font" metaFont="system"/>
@@ -5455,6 +5444,17 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-ih-idT">
+                                <rect key="frame" x="428" y="10" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FpS-v8-1L5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="close_window:" target="fda-JR-odd" id="eHE-em-CVm"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -5465,7 +5465,7 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
                 <customObject id="m5P-VL-BHf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="DVI-WH-SDb"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="-303"/>
+            <point key="canvasLocation" x="1941" y="-596"/>
         </scene>
     </scenes>
     <resources>

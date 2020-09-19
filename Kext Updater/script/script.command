@@ -728,10 +728,10 @@ function initial()
     basename /Library/Extensions/*.kext | sed 's/\.kext//g' > "$ScriptTmpPath"/le_sle_list
     basename /System/Library/Extensions/*.kext | sed 's/\.kext//g' >> "$ScriptTmpPath"/le_sle_list
 
-    echo "AppleALC" >> "$ScriptTmpPath"/le_sle_list
-    echo "SystemProfilerMemoryFixup" >> "$ScriptTmpPath"/le_sle_list
-    echo "Lilu" >> "$ScriptTmpPath"/le_sle_list
-    echo "VoodooPS2" >> "$ScriptTmpPath"/le_sle_list
+    #echo "AppleALC" >> "$ScriptTmpPath"/le_sle_list
+    #echo "SystemProfilerMemoryFixup" >> "$ScriptTmpPath"/le_sle_list
+    #echo "Lilu" >> "$ScriptTmpPath"/le_sle_list
+    #echo "VoodooPS2" >> "$ScriptTmpPath"/le_sle_list
 
     array=($allkextsupper)
     for i in "${array[@]}"; do
