@@ -142,6 +142,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-airportbrcmfixup")
         UserDefaults.standard.set(true, forKey: "dl-applealc")
         UserDefaults.standard.set(true, forKey: "dl-applebacklightfixup")
+        UserDefaults.standard.set(true, forKey: "dl-applebacklightsmoother")
         UserDefaults.standard.set(true, forKey: "dl-asussmc")
         UserDefaults.standard.set(true, forKey: "dl-ath9kfixup")
         UserDefaults.standard.set(true, forKey: "dl-atherose2200ethernet")
@@ -236,6 +237,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func applealc(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/AppleALC", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func applebacklightsmoother(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/hieplpvip/AppleBacklightSmoother", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func asussmc(_ sender: Any) {

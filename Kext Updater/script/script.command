@@ -91,12 +91,9 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 function _excludedkexts()
 {
     kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" )
-    #bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
-    #kuversion=$( _helpDefaultRead "KUVersion" )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
-    #kextstatsori=$( echo -e "$kextstats" "\nKextupdater ($kuversion)" )
     bootloader=$( _helpDefaultRead "Bootloader" )
     if [[ $bootloader = "OpenCore" ]]; then
       ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
@@ -195,6 +192,7 @@ kextArray=(
 "airportbrcmfixup","AirportBrcmFixup","AirportBrcmFixup",""
 "applealc","AppleALC","AppleALC",""
 "applebacklightfixup","AppleBacklightFixup","AppleBacklightFixup","WhateverGreen","Alarm"
+"applebacklightsmoother","AppleBacklightSmoother","AppleBacklightSmoother",""
 "asussmc","AsusSMC","AsusSMC",""
 "ath9kfixup","ATH9KFixup","ATH9KFixup",""
 "atherose2200ethernet","AtherosE2200Ethernet","AtherosE2200Ethernet",""
@@ -397,12 +395,6 @@ function _resetrootuser()
 function scanallefis()
 {
 
-    #for a in {1..30}; do
-    #/usr/libexec/PlistBuddy -c "Delete EFI$a-Name" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-    #done
-
-    #/usr/libexec/PlistBuddy -c "Delete EFIx" "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" >/dev/null 2>&1
-
     if [ -f "$ScriptTmpPath"/drives ]; then
       rm "$ScriptTmpPath"/drives*
     fi
@@ -432,7 +424,6 @@ function scanallefis()
     awk 'BEGIN{print""}1' "$ScriptTmpPath"/drives_pulldown2 > "$ScriptTmpPath"/drives_pulldown
     rm "$ScriptTmpPath"/drives_pulldown2
     perl -e 'truncate $ARGV[0], ((-s $ARGV[0]) - 1)' "$ScriptTmpPath"/drives_pulldown  2> /dev/null
-    #sed -ib '/^\s*$/d' "$ScriptTmpPath"/drives_pulldown
     
     drives_size=$( stat -f%z "$ScriptTmpPath"/drives_pulldown )
     
@@ -481,8 +472,6 @@ function mountefiall()
       fi
       if [[ $bootloader = "OpenCore" ]]; then
         efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
-        #efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
-        #efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -592,7 +581,6 @@ function initial()
     efiroot=$( echo -e "$efiscan" )
     efiname=$( echo -e "$diskscan" | grep "Volume Name:" | sed "s/.*://g" | xargs )
     clovermode=$( ../bin/./BDMESG | grep -i "starting clover" | sed "s/.*EFI/UEFI/g" | tr -d '\r' )
-    #cloverconfig=$( ../bin/./BDMESG | grep .plist | grep -v "not" | grep loaded | sed -e "s/\ loaded.*//g" -e "s/.*\\\//g" |sed 's/.plist.*/.plist/g' |grep -v "nvram" | xargs )
     cloverconfig=$( ../bin/./BDMESG |grep -w "plist loaded: Success" |sed -e "s/.*\\\//g" -e 's/.plist.*/.plist/g' |xargs )
     ozmosischeck=$( ../bin/./BDMESG | grep "Ozmosis" )
     ozmosischeck2=$( nvram 1F8E0C02-58A9-4E34-AE22-2B63745FA101:UserInterface 2> /dev/null )
@@ -658,8 +646,6 @@ function initial()
       fi
       if [[ $bootloader = "OpenCore" ]]; then
         efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
-#efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
-#efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -821,8 +807,6 @@ function mountefi()
       fi
       if [[ $bootloader = "OpenCore" ]]; then
         efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
-#efipath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path |sed -e 's/.*)\/\\//g' -e 's/OpenCore.*//g' -e 's/opencore.*//g' -e 's/OPENCORE.*//g' -e 's/\\/\//g' )
-#efipath=$( echo "$mountpoint"/"$efipath" )
       fi
     fi
 
@@ -879,12 +863,8 @@ if [[ $checkweb != "" ]]; then
 fi
 
 #========================= Add Non-Kext Values =========================#
-#bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed -e "s/.*revision:\ /Clover\ (/g" -e "s/(mas.*/)/g" -e "s/\ )/)/g" )
 bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
 kextstats=$( echo -e "$kextstats" "\n$bdmesg" )
-#kextstats=$( echo -e "$kextstats" |sed "s/d0)/)/g" ) ### Removing shitty Character "d" from Version String @ IntelMausiEthernet
-#kextstats=$( echo -e "$kextstats" |sed "s/d/./g" ) ### Removing shitty Character "d" from Version String @ ThunderboltReset
-#kextstats=$( echo -e "$kextstats" "\nAPFS ($apfs)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -1103,9 +1083,6 @@ function _cleanup()
     find $ScriptDownloadPath/ -name *.dSYM -exec rm -r {} \; >/dev/null 2>&1
     find $ScriptDownloadPath/ -name __MACOSX -exec rm -r {} \; >/dev/null 2>&1
     fi
-    #if [ -f ${ScriptTmpPath}/kextloaded ]; then
-    #    rm ${ScriptTmpPath}/kextloaded
-    #fi
     
     rm -rf ${ScriptTmpPath}
     
@@ -1117,15 +1094,12 @@ function _cleanup()
 #============================== Kext Updater Last Run ==============================#
 function _lastcheck()
 {
-
-    #if [[ "$custom_efi" = "" ]] && [[ "$offline_efi" = "" ]]; then
         lastcheckfunc=$( _helpDefaultRead "Last Check" )
         if [[ $lastcheckfunc != "Never" ]]; then
             echo $lastcheck
             echo $lastcheckfunc
             echo " "
         fi
-    #fi
 }
 
 #============================== Main Function ==============================#
@@ -1147,12 +1121,7 @@ function _main()
             runcheck_ku=$( pgrep "Kext Updater" )
             if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
                 echo ""
-                #ANSWER="$(
                 ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
-                #)"
-                #case $ANSWER in
-                #"$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
-                #esac
             else
                 ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
             fi
@@ -1262,6 +1231,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"opencorenightly-ndk" ]; then
     mv ${ScriptDownloadPath}/opencorenightly-ndk ${ScriptDownloadPath}/"OpenCore Nightly (NDK Fork)"
+    fi
+    if [ -d ${ScriptDownloadPath}/"applebacklightsmoother" ]; then
+    mv ${ScriptDownloadPath}/opencorenightly-ndk ${ScriptDownloadPath}/"AppleBacklightSmoother"
     fi
 
     if [[ $checkchime = "1" ]]; then
@@ -1516,12 +1488,7 @@ function kudaemon()
 
     if [ -f "$ScriptTmpPath"/daemon_notify ]; then
         kuroot=$( _helpDefaultRead "KU Root" )
-        #ANSWER="$(
-        ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" #-appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
-        #)"
-        #case $ANSWER in
-        #"$openkextupdater") open "$kuroot"/Kext\ Updater.app ;;
-        #esac
+        ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar"
         rm "$ScriptTmpPath"/daemon_*
     fi
     exit 0
@@ -1987,7 +1954,6 @@ function htmlreport()
     volumename=$( _helpDefaultRead "EFI Name" )
     usedbootloader=$( _helpDefaultRead "Bootloader" )
 
-    #../bin/./BDMESG | grep "CLOVER" > /dev/null
     if [[ $usedbootloader = Clover* ]]; then
       efikind="CLOVER"
     fi
@@ -2111,59 +2077,13 @@ function htmlreport()
         fi
     done < "$ScriptTmpPath"/kextstat
 
-    ### Table "PCI Devices" ###
-    # lspci-replace ##lastcheck=$( _helpDefaultRead "PCIDB" )
-    # lspci-replace ##today=$( date +%s )
-    # lspci-replace ##calc1=$((today/86400))
-    # lspci-replace ##calc2=$((calc1-lastcheck))
-    # lspci-replace ##if [ $calc2 -gt 30 ]; then
-      # lspci-replace ##echo -e "\n$updatepcidb\n"
-      # lspci-replace ##curl -sS https://update.kextupdater.de/lspci/pciids.zip -o "$ScriptTmpPath"/pciids.zip
-      # lspci-replace ##unzip -jo "$ScriptTmpPath"/pciids.zip -d ../bin/lspci/ >/dev/null 2>&1
-      # lspci-replace ##_helpDefaultWrite "PCIDB" "$calc1"
-    # lspci-replace ##fi
-
-#    if [[ $osversionnumber = "10.14" ]] || [[ $osversionnumber = "10.15" ]] || [[ $osversionnumber = "10.16" ]]; then
-#        if [[ $keychain = "1" ]]; then
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' #>/dev/null 2>&1
-#        else
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.14DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' #>/dev/null 2>&1
-#        fi
-#    fi
-#
-#    if [[ $osversionnumber = "10.13" ]]; then
-#        if [[ $keychain = "1" ]]; then
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-#        else
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.13DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-#        fi
-#    fi
-#
-#    if [[ $osversionnumber = "10.11" ]] || [[ $osversionnumber = "10.12" ]]; then
-#        if [[ $keychain = "1" ]]; then
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-#        else
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.11+12DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-#        fi
-#    fi
-#
-#    if [[ $osversionnumber = "10.10" ]]; then
-#        if [[ $keychain = "1" ]]; then
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-#        else
-#            osascript -e 'do shell script "cp -r ../kexts/lspci/10.10DirektHW.kext /tmp/DirektHW.kext; sudo chown -R root:wheel /tmp/DirektHW.kext; sudo kextload /tmp/DirektHW.kext" with administrator privileges' >/dev/null 2>&1
-#        fi
-#    fi
-    
     ../bin/./dspci | sed -E 's/\[([A-Za-z ]+)\]/(\1)/g' | grep -v ignored |sed -e "s/\[GeForce/(GeForce/g" -e "s/\[AMD/(AMD/g" -e "s/\[Radeon/(Radeon/g" > "$ScriptTmpPath"/pci
-    #../bin/lspci/./lspci -mnn -i ../bin/lspci/pci.ids | sed -E 's/\[([A-Za-z ]+)\]/(\1)/g' | grep -v ignored |sed -e "s/\[GeForce/(GeForce/g" -e "s/\[AMD/(AMD/g" -e "s/\[Radeon/(Radeon/g" > "$ScriptTmpPath"/pci
     while IFS='' read -r line; do
     vendor=`echo -e "$line" | cut -d "[" -f3 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]' | sed 's/:.*//g'`
     device=`echo -e "$line" | cut -d "[" -f3 | cut -d "]" -f1 | tr '[:lower:]' '[:upper:]' | sed 's/.*://g'`
     subven=`echo -e "$line" | cut -d "(" -f3 | cut -d ")" -f1 | tr '[:lower:]' '[:upper:]' | sed -e 's/.*\ //g' -e 's/:.*//g'`
     subdev=`echo -e "$line" | cut -d "(" -f3 | cut -d ")" -f1 | tr '[:lower:]' '[:upper:]' | sed -e 's/.*\ //g' -e 's/.*://g'`
     deviceinfo=`echo -e "$line" | sed -e 's/.*]:\ //g' -e 's/\[.*//g'`
-    #devicename=`echo -e "$line" | cut -d "\"" -f6 | cut -d "\"" -f1 | sed "s/\[.*//g" | xargs`
         if [[ $subven = "" ]]; then
           subven="0000"
         fi
@@ -2183,12 +2103,7 @@ function htmlreport()
     echo "$createreport"
 
     ### Merging HTML Report ###
-
-#    if [[ $sipcheck = "disabled" ]]; then
     lspci=$( cat "$ScriptTmpPath/pci2" | tr '\n' ' ' | sed "s/]/)/g")
-#    else
-#      lspci=$( echo "Error! Kext-Signing is enabled. Please disable it in your SIP Configuration" )
-#    fi
 
     power=$( cat "$ScriptTmpPath/powerm" | tr '\n' ' ' )
     hackkexts=$( cat "$ScriptTmpPath"/kextreport | tr '\n' ' ' )
@@ -2209,11 +2124,6 @@ function htmlreport()
       rm "$ScriptTmpPath"/Report/Report.htmlb
     fi
     ### End
-
-#    if [[ $sipcheck = "isabled" ]]; then
-#      sed -ib '/Vendor\ Name/d' "$ScriptTmpPath"/Report/Report.html
-#      rm "$ScriptTmpPath"/Report/Report.htmlb
-#    fi
 
     path=$( echo "$PWD" )
 
