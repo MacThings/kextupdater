@@ -45,6 +45,7 @@
 		2AC44C1B23151173006D447C /* ta.mp3 in Sounds Copy */ = {isa = PBXBuildFile; fileRef = 2AC44BB823150F39006D447C /* ta.mp3 */; };
 		2AC51C632515EBCE0029A19A /* LESLEWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC51C622515EBCE0029A19A /* LESLEWarning.swift */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
+		2ADD786A25322A6200A0045C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD786925322A6200A0045C /* About.swift */; };
 		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
 		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
 		2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -201,6 +202,7 @@
 		2AC44C23231512B5006D447C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2AC51C622515EBCE0029A19A /* LESLEWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LESLEWarning.swift; sourceTree = "<group>"; };
 		2AD19D8A2367273D0014D005 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		2ADD786925322A6200A0045C /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
 		2AFE137423AEAF4700A5186D /* dspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dspci; sourceTree = "<group>"; };
 		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		2AB3049C23150E1300D618FF /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2ADD786925322A6200A0045C /* About.swift */,
 				2A1D9577251225640077A7C0 /* BigSurPlus.swift */,
 				2AC44BE723150F61006D447C /* Bootloader.swift */,
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
@@ -536,6 +539,7 @@
 				2AC44BF323150F61006D447C /* Preferences.swift in Sources */,
 				2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */,
 				2AC44BF623150F61006D447C /* PasswordWindow.swift in Sources */,
+				2ADD786A25322A6200A0045C /* About.swift in Sources */,
 				2AC44BF423150F61006D447C /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,7 +703,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 361;
+				CURRENT_PROJECT_VERSION = 362;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -709,7 +713,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6.1;
+				MARKETING_VERSION = 3.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -726,7 +730,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 361;
+				CURRENT_PROJECT_VERSION = 362;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,7 +740,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6.1;
+				MARKETING_VERSION = 3.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

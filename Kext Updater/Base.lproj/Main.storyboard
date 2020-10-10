@@ -2298,7 +2298,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-4x-DSE">
-                                <rect key="frame" x="132" y="105" width="44" height="18"/>
+                                <rect key="frame" x="262" y="105" width="44" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Lilu" bezelStyle="regularSquare" imagePosition="left" inset="2" id="AOz-aN-VqB">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2309,7 +2309,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oy-KQ-PHx">
-                                <rect key="frame" x="262" y="105" width="110" height="18"/>
+                                <rect key="frame" x="9" y="85" width="110" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="USBInjectAll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WHC-ZH-fTB">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2320,7 +2320,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lv2-uu-bms">
-                                <rect key="frame" x="9" y="84" width="91" height="18"/>
+                                <rect key="frame" x="132" y="85" width="91" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VirtualSMC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZCd-5w-cvc">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2331,7 +2331,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-Vi-dkU">
-                                <rect key="frame" x="132" y="85" width="109" height="18"/>
+                                <rect key="frame" x="262" y="84" width="109" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VoodooInput" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mtV-lF-xbc">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2342,7 +2342,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-qc-MPF">
-                                <rect key="frame" x="262" y="86" width="113" height="18"/>
+                                <rect key="frame" x="10" y="65" width="113" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="VoodooPS2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="r9X-YF-NZh">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2353,7 +2353,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7i-1Z-ijn">
-                                <rect key="frame" x="9" y="64" width="117" height="18"/>
+                                <rect key="frame" x="132" y="65" width="117" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vaT-ze-Oea">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2483,6 +2483,17 @@ DQ
                                     <segue destination="4BS-eg-2np" kind="sheet" id="jlC-ai-e4z"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-2u-XGt">
+                                <rect key="frame" x="132" y="105" width="84" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="IntelMausi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="0tG-5F-HhZ">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-intelmausinightly" id="4Lb-Ij-ajV"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -2498,7 +2509,7 @@ DQ
                 <customObject id="MxA-tg-onC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="G5F-qh-JC0"/>
             </objects>
-            <point key="canvasLocation" x="921" y="1326"/>
+            <point key="canvasLocation" x="584" y="1354"/>
         </scene>
         <!--Kext Updater-->
         <scene sceneID="nH3-7u-Zng">
@@ -2775,19 +2786,8 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="rq3-GA-RoS"/>
                                         </imageView>
-                                        <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
-                                            <rect key="frame" x="612" y="169" width="32" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="GNb-bk-Uiw">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="bug_report_click_sendmail:" target="bdJ-Gk-pDf" id="YYm-OD-RG6"/>
-                                            </connections>
-                                        </button>
                                         <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-vt-f2o">
-                                            <rect key="frame" x="596" y="111" width="64" height="18"/>
+                                            <rect key="frame" x="593" y="111" width="64" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="Donate" bezelStyle="shadowlessSquare" image="paypal-logo" imagePosition="left" alignment="left" state="on" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="4MZ-9L-eCg">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2807,8 +2807,19 @@ DQ
                                             <rect key="frame" x="612" y="219" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
+                                        <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ly-u8-E80">
+                                            <rect key="frame" x="611" y="274" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="bug-report" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="GNb-bk-Uiw">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="bug_report_click_sendmail:" target="bdJ-Gk-pDf" id="YYm-OD-RG6"/>
+                                            </connections>
+                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-DO-EEa">
-                                            <rect key="frame" x="589" y="151" width="73" height="16"/>
+                                            <rect key="frame" x="588" y="250" width="73" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Bug Report" id="LYE-bI-vQk">
                                                 <font key="font" metaFont="system"/>
@@ -3715,7 +3726,7 @@ DQ
                 <userDefaultsController id="6AW-Jc-UYO"/>
                 <userDefaultsController id="J45-Pa-Ngh"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="71.5"/>
+            <point key="canvasLocation" x="1295" y="75"/>
         </scene>
         <!--  -->
         <scene sceneID="ugt-IT-GtQ">
@@ -3823,7 +3834,7 @@ DQ
                 </viewController>
                 <customObject id="ChP-96-PQa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="746"/>
+            <point key="canvasLocation" x="1877" y="746"/>
         </scene>
         <!--Tools-->
         <scene sceneID="r4o-NH-ks4">
@@ -4374,7 +4385,7 @@ DQ
                 <customObject id="GYc-WM-W1i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="gea-QB-ZRN"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="1396.5"/>
+            <point key="canvasLocation" x="2164" y="1274"/>
         </scene>
         <!--nVidia Webdriver-->
         <scene sceneID="orS-Dz-pUl">
@@ -4942,27 +4953,13 @@ DQ
         <!--About-->
         <scene sceneID="HSR-6c-Wgf">
             <objects>
-                <viewController title="About" id="pcc-jI-JYu" sceneMemberID="viewController">
+                <viewController title="About" id="pcc-jI-JYu" customClass="About" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ZIK-ED-mTe">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="280"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-8v-4nx">
-                                <rect key="frame" x="100" y="17" width="265" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="© 2020 Sascha Lamprecht" id="ayB-Ht-Pb3">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-cn-DMG">
-                                <rect key="frame" x="30" y="28" width="391" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hflogo" id="XGB-g8-BvF"/>
-                            </imageView>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-63-HwC">
-                                <rect key="frame" x="-2" y="253" width="454" height="47"/>
+                                <rect key="frame" x="-2" y="232" width="353" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Kext Updater" id="Sfg-Nd-3CD">
                                     <font key="font" size="33" name="ArialRoundedMTBold"/>
@@ -4971,7 +4968,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-ig-Fe1">
-                                <rect key="frame" x="261" y="88" width="160" height="160"/>
+                                <rect key="frame" x="94" y="75" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4979,7 +4976,7 @@ DQ
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HF Logo" id="oUw-ca-lQd"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-MF-vlZ">
-                                <rect key="frame" x="28" y="187" width="248" height="51"/>
+                                <rect key="frame" x="61" y="16" width="270" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Developed By: Sascha Lamprecht Program Icon: Nio82" allowsEditingTextAttributes="YES" id="hEx-SJ-Y1C">
                                     <font key="font" metaFont="system"/>
@@ -4987,12 +4984,24 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3i-3i-bBP">
+                                <rect key="frame" x="-2" y="0.0" width="353" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="Oi6-Tu-twm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="copyright" destination="b3i-3i-bBP" id="1Hj-6g-mEd"/>
+                    </connections>
                 </viewController>
                 <customObject id="l9q-P2-iZp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="-222"/>
+            <point key="canvasLocation" x="780" y="-239"/>
         </scene>
         <!--Bootloader-->
         <scene sceneID="Sqk-bY-wk5">
@@ -5273,7 +5282,7 @@ DQ
                 </viewController>
                 <customObject id="63r-qw-MKb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="100"/>
+            <point key="canvasLocation" x="88" y="185"/>
         </scene>
         <!--Menu Item Hint-->
         <scene sceneID="VSV-U3-atE">
@@ -5335,7 +5344,7 @@ DQ
                 </viewController>
                 <customObject id="M0a-FJ-9UX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="9.5"/>
+            <point key="canvasLocation" x="1925" y="35"/>
         </scene>
         <!--BigSurPlus-->
         <scene sceneID="Ksc-JU-0cS">
@@ -5400,7 +5409,7 @@ DQ
                 <customObject id="Eln-vo-pRr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="6Pw-A2-Npg"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="-336"/>
+            <point key="canvasLocation" x="1925" y="-277"/>
         </scene>
         <!--LESLEWarning-->
         <scene sceneID="FDm-kb-zyM">
@@ -5498,7 +5507,7 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
                 <customObject id="m5P-VL-BHf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="DVI-WH-SDb"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="-596"/>
+            <point key="canvasLocation" x="1295" y="-277"/>
         </scene>
     </scenes>
     <resources>
@@ -5522,7 +5531,6 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
         <image name="harddisk" width="256" height="256"/>
         <image name="hf-newyear" width="400" height="400"/>
         <image name="hf-xmas" width="200" height="182"/>
-        <image name="hflogo" width="860" height="170"/>
         <image name="hint" width="215" height="193"/>
         <image name="kext" width="200" height="200"/>
         <image name="keychain" width="256" height="256"/>
