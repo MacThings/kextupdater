@@ -83,7 +83,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -198,6 +198,7 @@ kextArray=(
 "atherose2200ethernet","AtherosE2200Ethernet","AtherosE2200Ethernet",""
 "azulpatcher4600","AzulPatcher4600","AzulPatcher4600",""
 "brcmpatchram","BrcmFirmwareStore","BrcmPatchRam",""
+"brightnesskeys","BrightnessKeys","BrightnessKeys",""
 "bt4lecontinuityfixup","BT4LEContinuityFixup","BT4LEContinuityFixup",""
 "clover","Clover","Clover",""
 "codeccommander","CodecCommander","CodecCommander",""
@@ -1219,6 +1220,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"brcmpatchramnightly" ]; then
     mv ${ScriptDownloadPath}/brcmpatchramnightly ${ScriptDownloadPath}/"BrcmPatchRAM Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"airportbrcmfixupnightly" ]; then
+    mv ${ScriptDownloadPath}/airportbrcmfixupnightly ${ScriptDownloadPath}/"AirportBrcmFixup Nightly"
     fi
     if [ -d ${ScriptDownloadPath}/"applesupportnightly" ]; then
     mv ${ScriptDownloadPath}/applesupportnightly ${ScriptDownloadPath}/"AppleSupport Nightly"

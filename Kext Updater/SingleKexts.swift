@@ -148,6 +148,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-atherose2200ethernet")
         UserDefaults.standard.set(true, forKey: "dl-atheroswifiinjector")
         UserDefaults.standard.set(true, forKey: "dl-brcmpatchram")
+        UserDefaults.standard.set(true, forKey: "dl-brightnesskeys")
         UserDefaults.standard.set(true, forKey: "dl-bt4lecontinuityfixup")
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
@@ -261,6 +262,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func brcmpatchram(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/RehabMan/OS-X-BrcmPatchRAM", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func brightnesskeys(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/BrightnessKeys", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func bt4lecontinuityfixup(_ sender: Any) {
