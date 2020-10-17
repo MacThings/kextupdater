@@ -16,6 +16,7 @@ class About: NSViewController {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     
     override func viewDidAppear() {
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
         super.viewDidAppear()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy"

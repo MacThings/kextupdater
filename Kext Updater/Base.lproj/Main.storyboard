@@ -4984,50 +4984,6 @@ DQ
             </objects>
             <point key="canvasLocation" x="-804" y="62"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="Agb-Op-w6K">
-            <objects>
-                <windowController id="LvB-jk-mfp" customClass="WindowController" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Kext Updater" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="FK8-9h-kgX">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="680" height="450"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
-                        <value key="minSize" type="size" width="680" height="450"/>
-                        <value key="maxSize" type="size" width="680" height="450"/>
-                        <connections>
-                            <outlet property="delegate" destination="LvB-jk-mfp" id="cAW-5B-N6v"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="ino-bC-GhX" kind="relationship" relationship="window.shadowedContentViewController" id="Udp-kT-9TA"/>
-                    </connections>
-                </windowController>
-                <customObject id="faS-5V-PUH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-614" y="682"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VuM-Os-INa">
-            <objects>
-                <viewController id="ino-bC-GhX" sceneMemberID="viewController">
-                    <view key="view" id="x0d-ge-gt2">
-                        <rect key="frame" x="0.0" y="0.0" width="680" height="460"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzT-ph-RjO">
-                                <rect key="frame" x="0.0" y="0.0" width="680" height="460"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <connections>
-                                    <segue destination="bdJ-Gk-pDf" kind="embed" id="jt8-93-b4E"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="4Cx-MN-ulF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="237" y="648"/>
-        </scene>
         <!--About-->
         <scene sceneID="HSR-6c-Wgf">
             <objects>

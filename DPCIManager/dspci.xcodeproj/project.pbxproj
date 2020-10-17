@@ -229,7 +229,7 @@
 		B02571321601496300B0E1EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = B02571351601496300B0E1EB /* Build configuration list for PBXProject "dspci" */;
