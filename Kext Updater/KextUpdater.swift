@@ -39,6 +39,9 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var infobox_admin_status_content_no: NSTextField!
     // Infobox - End
     
+    // MB Section
+    @IBOutlet weak var mb_detected: NSTextField!
+    
     // Folder Section
     @IBOutlet weak var folder_efi_icon: NSButton!
     @IBOutlet weak var folder_efi_path: NSTextField!
@@ -393,6 +396,15 @@ class KextUpdater: NSViewController {
         }
 
         }
+        
+        let mbCheck = "/Library/PrivilegedHelperTools/com.tonymacx86.InstallHelper"
+        if (FileManager.default.fileExists(atPath: mbCheck)) {
+            self.mb_detected.isHidden=false
+        } else{
+            self.mb_detected.isHidden=true
+        }
+        
+        
     }
     
     @IBAction func start_button(_ sender: Any) {

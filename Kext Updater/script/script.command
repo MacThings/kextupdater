@@ -1239,6 +1239,16 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"applebacklightsmoother" ]; then
     mv ${ScriptDownloadPath}/opencorenightly-ndk ${ScriptDownloadPath}/"AppleBacklightSmoother"
     fi
+    if [ -d ${ScriptDownloadPath}/"brightnesskeysnightly" ]; then
+    mv ${ScriptDownloadPath}/brightnesskeysnightly ${ScriptDownloadPath}/"BrightnessKeys Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"nvmefixnightly" ]; then
+    mv ${ScriptDownloadPath}/nvmefixnightly ${ScriptDownloadPath}/"NVMeFix Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"cputscsyncnightly" ]; then
+    mv ${ScriptDownloadPath}/cputscsyncnightly ${ScriptDownloadPath}/"CpuTscSync Nightly"
+    fi
+
 
     if [[ $checkchime = "1" ]]; then
         _playchime

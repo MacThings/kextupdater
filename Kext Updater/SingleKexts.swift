@@ -141,7 +141,6 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-acpibatterymanager")
         UserDefaults.standard.set(true, forKey: "dl-airportbrcmfixup")
         UserDefaults.standard.set(true, forKey: "dl-applealc")
-        UserDefaults.standard.set(true, forKey: "dl-applebacklightfixup")
         UserDefaults.standard.set(true, forKey: "dl-applebacklightsmoother")
         UserDefaults.standard.set(true, forKey: "dl-asussmc")
         UserDefaults.standard.set(true, forKey: "dl-ath9kfixup")
@@ -149,11 +148,9 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-atheroswifiinjector")
         UserDefaults.standard.set(true, forKey: "dl-brcmpatchram")
         UserDefaults.standard.set(true, forKey: "dl-brightnesskeys")
-        UserDefaults.standard.set(true, forKey: "dl-bt4lecontinuityfixup")
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
         UserDefaults.standard.set(true, forKey: "dl-cputscsync")
-        UserDefaults.standard.set(true, forKey: "dl-enablelidwake")
         UserDefaults.standard.set(true, forKey: "dl-fakepciid")
         UserDefaults.standard.set(true, forKey: "dl-fakesmc")
         UserDefaults.standard.set(true, forKey: "dl-genericusbxhci")
@@ -166,9 +163,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-lilufriend")
         UserDefaults.standard.set(true, forKey: "dl-lucyrtl8125ethernet")
         UserDefaults.standard.set(true, forKey: "dl-macpromnd")
-        UserDefaults.standard.set(true, forKey: "dl-nightshiftunlocker")
         UserDefaults.standard.set(true, forKey: "dl-notouchid")
-        UserDefaults.standard.set(true, forKey: "dl-novpajpeg")
         UserDefaults.standard.set(true, forKey: "dl-nullcpupowermanagement")
         UserDefaults.standard.set(true, forKey: "dl-nullethernet")
         UserDefaults.standard.set(true, forKey: "dl-nvmefix")
@@ -268,10 +263,6 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/acidanthera/BrightnessKeys", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
-    @IBAction func bt4lecontinuityfixup(_ sender: Any) {
-        UserDefaults.standard.set("https://github.com/acidanthera/BT4LEContiunityFixup", forKey: "SourceURL")
-        webview_button.performClick(nil)
-    }
     @IBAction func codeccommander(_ sender: Any) {
         UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/overview", forKey: "SourceURL")
         webview_button.performClick(nil)
@@ -332,16 +323,8 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/IOIIIO/MacProMemoryNotificationDisabler", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
-    @IBAction func nightshiftunlocker(_ sender: Any) {
-        UserDefaults.standard.set("https://github.com/0xFireWolf/NightShiftUnlocker", forKey: "SourceURL")
-        webview_button.performClick(nil)
-    }
     @IBAction func notouchid(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/al3xtjames/NoTouchID", forKey: "SourceURL")
-        webview_button.performClick(nil)
-    }
-    @IBAction func novpajpeg(_ sender: Any) {
-        UserDefaults.standard.set("https://github.com/vulgo/NoVPAJpeg", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func nullcpupowermanagement(_ sender: Any) {
