@@ -172,7 +172,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ilh-Pu-e6v">
-                                <rect key="frame" x="32" y="525" width="213" height="18"/>
+                                <rect key="frame" x="31" y="503" width="213" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="= Exclude from Updates" bezelStyle="regularSquare" inset="2" id="ozW-44-bhX">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -188,14 +188,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-2o-zhE">
-                                <rect key="frame" x="32" y="503" width="94" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="= Download" bezelStyle="regularSquare" inset="2" id="Tee-oq-9Oh">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSQ-zm-64b" userLabel="Source Gfx">
                                 <rect key="frame" x="12" y="482" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2263,6 +2255,14 @@ DQ
                                 <connections>
                                     <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-nvmefixnightly" id="1oz-er-Yer"/>
                                 </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-2o-zhE">
+                                <rect key="frame" x="32" y="525" width="94" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="= Download" bezelStyle="regularSquare" inset="2" id="Tee-oq-9Oh">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
                             </button>
                         </subviews>
                     </view>
