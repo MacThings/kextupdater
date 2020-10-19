@@ -180,7 +180,7 @@
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crD-Th-EFP">
-                                <rect key="frame" x="11" y="523" width="19" height="21"/>
+                                <rect key="frame" x="11" y="522" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="D" id="udA-bw-8DN">
                                     <font key="font" metaFont="systemSemibold" size="17"/>
