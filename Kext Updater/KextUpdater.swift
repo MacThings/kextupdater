@@ -405,6 +405,26 @@ class KextUpdater: NSViewController {
             self.mb_detected.isHidden=true
         }
         
+        let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
+        let fontfamily = UserDefaults.standard.string(forKey: "Font Family")
+        output_window.font = NSFont(name: fontfamily!, size: fontsize)
+
+        let fontcolor = UserDefaults.standard.string(forKey: "Font Color")
+        if fontcolor == "2" {
+            output_window.textColor = NSColor.green
+        } else if fontcolor == "3" {
+            output_window.textColor = NSColor.red
+        } else if fontcolor == "4" {
+            output_window.textColor = NSColor.orange
+        } else if fontcolor == "5" {
+            output_window.textColor = NSColor.yellow
+        } else if fontcolor == "0" {
+            output_window.textColor = NSColor.textColor
+        }
+        
+        let fontpt = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
+        let fontfam = UserDefaults.standard.string(forKey: "Font Family")
+        output_window.font = NSFont(name: fontfam!, size: fontpt)
         
     }
     
@@ -451,40 +471,19 @@ class KextUpdater: NSViewController {
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
         report_button.isEnabled=false
-        self.efi_backup_button.isEnabled=false
+        efi_backup_button.isEnabled=false
         efi_button.isEnabled=false
         footer_efi_image_eject.isEnabled=false
         footer_efi_image_red.isEnabled=false
         footer_efi_image_green.isEnabled=false
         footer_efi_diskinfo_click.isEnabled=false
         tools_button.isEnabled=false
-        let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
-        let fontfamily = UserDefaults.standard.string(forKey: "Font Family")
-        output_window.font = NSFont(name: fontfamily!, size: fontsize)
-
-        let fontcolor = UserDefaults.standard.string(forKey: "Font Color")
-        if fontcolor == "2" {
-            output_window.textColor = NSColor.green
-        } else if fontcolor == "3" {
-            output_window.textColor = NSColor.red
-        } else if fontcolor == "4" {
-            output_window.textColor = NSColor.orange
-        } else if fontcolor == "5" {
-            output_window.textColor = NSColor.yellow
-        } else if fontcolor == "0" {
-            output_window.textColor = NSColor.textColor
-        }
-
-        output_window.textStorage?.mutableString.setString("")
+                output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden = true
         surprise_xmas.isHidden = true
         surprise_newyear.isHidden = true
 
         animstart()
-        
-        let fontpt = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
-        let fontfam = UserDefaults.standard.string(forKey: "Font Family")
-        output_window.font = NSFont(name: fontfam!, size: fontpt)
         
         let date = Date()
         let formatter = DateFormatter()
@@ -611,14 +610,54 @@ class KextUpdater: NSViewController {
     }
     
     @IBAction func efi_backup(_ sender: NSButton) {
+        
+        self.animstart()
+        
+        output_window.textStorage?.mutableString.setString("")
+        app_logo.isHidden = true
+        surprise_xmas.isHidden = true
+        surprise_newyear.isHidden = true
+        
+        start_button.isEnabled=false
+        start_button.isHidden=true
+        stop_button.isHidden=false
+        kexts_button.isEnabled=false
+        webdriver_button.isEnabled=false
+        bootloader_button.isEnabled=false
+        report_button.isEnabled=false
+        efi_backup_button.isEnabled=false
+        efi_button.isEnabled=false
+        footer_efi_image_eject.isEnabled=false
+        footer_efi_image_red.isEnabled=false
+        footer_efi_image_green.isEnabled=false
+        footer_efi_diskinfo_click.isEnabled=false
+        tools_button.isEnabled=false
+                output_window.textStorage?.mutableString.setString("")
+        app_logo.isHidden = true
+        surprise_xmas.isHidden = true
+        surprise_newyear.isHidden = true
+
         sender.isEnabled = false
             DispatchQueue.global(qos: .background).async {
         
                 self.syncShellExec(path: self.scriptPath, args: ["efi_backup"])
-        
                 DispatchQueue.main.async {
                     sender.isEnabled = true
                     self.checkefi()
+                    self.start_button.isEnabled=true
+                    self.start_button.isHidden=false
+                    self.stop_button.isHidden=true
+                    self.kexts_button.isEnabled=true
+                    self.webdriver_button.isEnabled=true
+                    self.bootloader_button.isEnabled=true
+                    self.report_button.isEnabled=true
+                    self.efi_backup_button.isEnabled=true
+                    self.efi_button.isEnabled=true
+                    self.tools_button.isEnabled=true
+                    self.footer_efi_image_eject.isEnabled=true
+                    self.footer_efi_image_red.isEnabled=true
+                    self.footer_efi_image_green.isEnabled=true
+                    self.animstop()
                 }
             }
     }
@@ -801,7 +840,7 @@ class KextUpdater: NSViewController {
      * Checks if EFI is mounted
      */
     func checkefi() {
-        let cloverpath = UserDefaults.standard.string(forKey: "EFI Path")
+        let bootloaderpath = UserDefaults.standard.string(forKey: "EFI Path")
         let mounted = UserDefaults.standard.string(forKey: "Mounted")
         if mounted == "Yes"{
             //footer_efi_efimount_bt.title = "efimounted".localized()
@@ -809,7 +848,7 @@ class KextUpdater: NSViewController {
             footer_efi_image_eject.isHidden = false
             footer_efi_diskinfo_click.isHidden = false
             folder_efi_icon.isEnabled = true
-            folder_efi_path.stringValue = (cloverpath ?? "")
+            folder_efi_path.stringValue = (bootloaderpath ?? "")
         } else {
             //footer_efi_efimount_bt.title = "efinotmounted".localized()
             footer_efi_image_red.isHidden = false

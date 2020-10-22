@@ -2182,39 +2182,57 @@ function htmlreport()
 
 function efi_backup()
 {
-    _languageselect
+ 
+    initial
+
+    speakervolume=$( _helpDefaultRead "Speakervolume" | sed "s/\,.*//g" )
+    speakervolume=$( echo 0."$speakervolume" )
 
     efi_backup_running="1"
 
-    echo "$efi_backup_start"
+    echo -e "$efi_backup_start\n"
 
     efi_root=$( _helpDefaultRead "EFI Root" )
     efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
+    AppPath=$( _helpDefaultRead "KU Root" )
+    MountPoint=$( _helpDefaultRead "Mount Point" )
+
+    
+    if [ ! -d "$ScriptDownloadPath" ]; then
+        mkdir "$ScriptDownloadPath"
+    fi
     
     if [[ "$efi_mounted" != "Yes" ]]; then
-        echo "bla"
         mountefi
-        sleep 5
         efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
     fi
     
     if [[ "$efi_mounted" = "Yes" ]]; then
-        echo "bla2"
         efi_mountpoint=$( diskutil info "$efi_root" | grep "Point:" | sed -e 's/.*://g' -e 's/.*\///g' | xargs )
         backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
         
-        cd /Volumes/EFI
+        cd "$MountPoint"
         zip -rq "$ScriptDownloadPath"/Backup_EFI_$backup_date.zip "$efi_mountpoint"
         
         if [[ "$?" = "0" ]]; then
-            echo "$efi_backup_stop"
+            cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
+            echo -e "$efi_backup_done\n"
+            echo -e "$efi_backup_result\n""$ScriptDownloadPath"/Backup_EFI_$backup_date.zip
+            if [[ $checkchime = "1" ]]; then
+                afplay -v "$speakervolume" "$AppPath"/Kext\ Updater.app/Contents/Resources/sounds/done.mp3 &
+            fi
         else
-            echo "$efi_backup_error"
+            cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
+            echo -e "$efi_backup_error\n"
+            if [[ $checkchime = "1" ]]; then
+                afplay -v "$speakervolume" "$AppPath"/Kext\ Updater.app/Contents/Resources/sounds/error.aif &
+            fi
         fi
-            
-        cd "$ScriptHome"
     fi
+    
+    #exit 0
+    
 }
 
 ###################################################################
@@ -2238,6 +2256,7 @@ function check_opencore_conf()
 
 function _efi_folder_creator()
 {
+    
     _languageselect
 
     efi_creator=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "EFI Creator" )
