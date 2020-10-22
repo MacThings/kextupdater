@@ -814,7 +814,10 @@ function mountefi()
         _helpDefaultWrite "EFI Path" "$efipath"
         defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
     fi
-    exit 0
+    
+    if [[ "$efi_backup_running" != "1" ]]; then
+        exit 0
+    fi
 }
 
 ###################################################################
@@ -997,6 +1000,8 @@ function _kextUpdate()
 #============================== KextLoad ==============================#
 function _kextLoader()
 {
+    backup_warning="1"
+
     if [ -f ${ScriptTmpPath}/eficreator ]; then
         rm ${ScriptTmpPath}/eficreator
     fi
@@ -1145,6 +1150,12 @@ function _main()
     _efi_folder_creator
     
     echo "$alldone"
+    echo " "
+
+    if [[ "$backup_warning" = "1" ]]; then
+        echo "$backup_reminder"
+    fi
+    
     _cleanup
 
     if [[ $name = "efidriver" ]]; then
@@ -1306,14 +1317,8 @@ if [ $kexte = "Bootloader" ]; then
         if [[ $kextchoice = "OpenCore" ]]; then
           kextchoice="opencore"
         fi
-        if [[ $kextchoice = "OpenCore-NDK" ]]; then
-          kextchoice="opencore-ndk"
-        fi
         if [[ $kextchoice = "OpenCoreNightly" ]]; then
           kextchoice="opencorenightly"
-        fi
-        if [[ $kextchoice = "OpenCoreNightly-NDK" ]]; then
-          kextchoice="opencorenightly-ndk"
         fi
         if [[ $kextchoice = "AppleSupport" ]]; then
           kextchoice="applesupport"
@@ -2168,6 +2173,47 @@ function htmlreport()
       osascript -e 'do shell script "diskutil unmount '$devnode'" with administrator privileges' >/dev/null 2>&1
       tempmnt=""
     fi
+    fi
+}
+
+###################################################################
+########################## EFI Backup #############################
+###################################################################
+
+function efi_backup()
+{
+    _languageselect
+
+    efi_backup_running="1"
+
+    echo "$efi_backup_start"
+
+    efi_root=$( _helpDefaultRead "EFI Root" )
+    efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
+    ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
+    
+    if [[ "$efi_mounted" != "Yes" ]]; then
+        echo "bla"
+        mountefi
+        sleep 5
+        efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
+    fi
+    
+    if [[ "$efi_mounted" = "Yes" ]]; then
+        echo "bla2"
+        efi_mountpoint=$( diskutil info "$efi_root" | grep "Point:" | sed -e 's/.*://g' -e 's/.*\///g' | xargs )
+        backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
+        
+        cd /Volumes/EFI
+        zip -rq "$ScriptDownloadPath"/Backup_EFI_$backup_date.zip "$efi_mountpoint"
+        
+        if [[ "$?" = "0" ]]; then
+            echo "$efi_backup_stop"
+        else
+            echo "$efi_backup_error"
+        fi
+            
+        cd "$ScriptHome"
     fi
 }
 

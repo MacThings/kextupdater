@@ -71,6 +71,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var report_button: NSButton!
     @IBOutlet weak var efi_button: NSButton!
     @IBOutlet weak var tools_button: NSButton!
+    @IBOutlet weak var efi_backup_button: NSButton!
     
     @IBOutlet weak var show_hint: NSButton!
     @IBOutlet weak var show_bigsurplus: NSButton!
@@ -450,6 +451,7 @@ class KextUpdater: NSViewController {
         webdriver_button.isEnabled=false
         bootloader_button.isEnabled=false
         report_button.isEnabled=false
+        self.efi_backup_button.isEnabled=false
         efi_button.isEnabled=false
         footer_efi_image_eject.isEnabled=false
         footer_efi_image_red.isEnabled=false
@@ -535,6 +537,7 @@ class KextUpdater: NSViewController {
                 self.webdriver_button.isEnabled=true
                 self.bootloader_button.isEnabled=true
                 self.report_button.isEnabled=true
+                self.efi_backup_button.isEnabled=true
                 self.efi_button.isEnabled=true
                 self.tools_button.isEnabled=true
                 self.footer_efi_image_eject.isEnabled=true
@@ -607,6 +610,20 @@ class KextUpdater: NSViewController {
         NSWorkspace.shared.openFile(efipath2 ?? "")
     }
     
+    @IBAction func efi_backup(_ sender: NSButton) {
+        sender.isEnabled = false
+            DispatchQueue.global(qos: .background).async {
+        
+                self.syncShellExec(path: self.scriptPath, args: ["efi_backup"])
+        
+                DispatchQueue.main.async {
+                    sender.isEnabled = true
+                    self.checkefi()
+                }
+            }
+    }
+    
+    
     @IBAction func report(_ sender: Any) {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Do you want to create a system report right now?", comment: "")
@@ -628,6 +645,7 @@ class KextUpdater: NSViewController {
             webdriver_button.isEnabled=false
             bootloader_button.isEnabled=false
             report_button.isEnabled=false
+            self.efi_backup_button.isEnabled=false
             efi_button.isEnabled=false
             tools_button.isEnabled=false
             animstart()
@@ -648,6 +666,7 @@ class KextUpdater: NSViewController {
                     self.webdriver_button.isEnabled=true
                     self.bootloader_button.isEnabled=true
                     self.report_button.isEnabled=true
+                    self.efi_backup_button.isEnabled=true
                     self.efi_button.isEnabled=true
                     self.tools_button.isEnabled=true
                     self.animstop()
