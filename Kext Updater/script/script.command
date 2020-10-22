@@ -1000,7 +1000,7 @@ function _kextUpdate()
 #============================== KextLoad ==============================#
 function _kextLoader()
 {
-    backup_warning="1"
+    #backup_warning="1"
 
     if [ -f ${ScriptTmpPath}/eficreator ]; then
         rm ${ScriptTmpPath}/eficreator
@@ -1027,6 +1027,7 @@ function _kextLoader()
 #========================= Helpfunction Update =========================
 function _toUpdate()
 {
+    backup_warning="1"
     touch "$ScriptTmpPath"/kumenuitem
     _PRINT_MSG "☝🏼 $upd1\n
     $upd2 $lecho
@@ -2205,7 +2206,9 @@ function efi_backup()
     
     if [[ "$efi_mounted" != "Yes" ]]; then
         mountefi
+        efi_root=$( _helpDefaultRead "EFI Root" )
         efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
+        MountPoint=$( _helpDefaultRead "Mount Point" )
     fi
     
     if [[ "$efi_mounted" = "Yes" ]]; then
@@ -2231,7 +2234,7 @@ function efi_backup()
         fi
     fi
     
-    #exit 0
+    exit 0
     
 }
 
