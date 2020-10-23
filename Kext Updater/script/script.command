@@ -2208,15 +2208,16 @@ function efi_backup()
         mountefi
         efi_root=$( _helpDefaultRead "EFI Root" )
         efi_mounted=$( diskutil info "$efi_root" | grep "Mounted:" | sed 's/.*://g' | xargs )
-        MountPoint=$( _helpDefaultRead "Mount Point" )
     fi
     
     if [[ "$efi_mounted" = "Yes" ]]; then
-        efi_mountpoint=$( diskutil info "$efi_root" | grep "Point:" | sed -e 's/.*://g' -e 's/.*\///g' | xargs )
-        backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
+        efi_path=$( _helpDefaultRead "EFI Path" )
+        backup_date=$( date +"%d.%m.%Y_%H-%M-%S" )
+        MountPoint=$( _helpDefaultRead "Mount Point" )
         
         cd "$MountPoint"
-        zip -rq "$ScriptDownloadPath"/Backup_EFI_$backup_date.zip "$efi_mountpoint"
+        
+        zip -rq "$ScriptDownloadPath"/Backup_EFI_$backup_date.zip "EFI"
         
         if [[ "$?" = "0" ]]; then
             cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
