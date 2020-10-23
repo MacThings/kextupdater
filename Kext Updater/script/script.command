@@ -576,6 +576,10 @@ function initial()
     efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     fi
 
+    if [[ "$efi_backup_go" = "1" ]]; then
+        echo -e "$efi_backup_start\n"
+    fi
+
     diskscan=$( diskutil info $efiscan )
     checkchime=$( _helpDefaultRead "Chime" )
 
@@ -2183,6 +2187,8 @@ function htmlreport()
 
 function efi_backup()
 {
+ 
+    #efi_backup_go="1"
  
     initial
 
