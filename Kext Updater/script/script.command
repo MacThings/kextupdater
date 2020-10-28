@@ -2189,6 +2189,8 @@ function efi_backup()
     speakervolume=$( _helpDefaultRead "Speakervolume" | sed "s/\,.*//g" )
     speakervolume=$( echo 0."$speakervolume" )
 
+    backup_path=$( _helpDefaultRead "Backuppath" )
+
     efi_backup_running="1"
 
     echo -e "$efi_backup_start\n"
@@ -2198,10 +2200,9 @@ function efi_backup()
     ScriptDownloadPath=$( _helpDefaultRead "Downloadpath" )
     AppPath=$( _helpDefaultRead "KU Root" )
     MountPoint=$( _helpDefaultRead "Mount Point" )
-
     
-    if [ ! -d "$ScriptDownloadPath" ]; then
-        mkdir "$ScriptDownloadPath"
+    if [ ! -d "$backup_path" ]; then
+        mkdir "$backup_path"
     fi
     
     if [[ "$efi_mounted" != "Yes" ]]; then
@@ -2217,12 +2218,12 @@ function efi_backup()
         
         cd "$MountPoint"
         
-        zip -rq "$ScriptDownloadPath"/Backup_EFI_$backup_date.zip "EFI"
+        zip -rq "$backup_path"/EFI_Backup_$backup_date.zip "EFI"
         
         if [[ "$?" = "0" ]]; then
             cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
             echo -e "$efi_backup_done\n"
-            echo -e "$efi_backup_result\n""$ScriptDownloadPath"/Backup_EFI_$backup_date.zip
+            echo -e "$efi_backup_result\n\n""$backup_path"/Backup_EFI_$backup_date.zip
             if [[ $checkchime = "1" ]]; then
                 afplay -v "$speakervolume" "$AppPath"/Kext\ Updater.app/Contents/Resources/sounds/done.mp3 &
             fi

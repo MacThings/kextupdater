@@ -11,10 +11,12 @@ import Cocoa
 class Preferences: NSViewController {
     
     @IBOutlet weak var selected_download_path: NSTextField!
+    @IBOutlet weak var selected_backup_path: NSTextField!
     @IBOutlet weak var speakericon: NSImageView!
     @IBOutlet weak var speakericon_off: NSImageView!
     @IBOutlet weak var speakerslider: NSSlider!
     @IBOutlet weak var download_path_textfield: NSTextFieldCell!
+    @IBOutlet weak var backup_path_textfield: NSTextField!
     @IBOutlet weak var close_button: NSButton!
     
 
@@ -39,6 +41,9 @@ class Preferences: NSViewController {
         
         let downloadpath = UserDefaults.standard.string(forKey: "Downloadpath")
         download_path_textfield.stringValue = (downloadpath ?? "")
+        
+        let backuppath = UserDefaults.standard.string(forKey: "Backuppath")
+        backup_path_textfield.stringValue = (backuppath ?? "")
 
     }
 
@@ -54,10 +59,16 @@ class Preferences: NSViewController {
         }
     }
     
-    @IBAction func defaultpath(_ sender: Any) {
+    @IBAction func defaultpath_download(_ sender: Any) {
         let defaultdir = self.userDesktopDirectory + "/Desktop/Kext-Updates"
         UserDefaults.standard.set(defaultdir, forKey: "Downloadpath")
         selected_download_path.stringValue = (defaultdir)
+    }
+    
+    @IBAction func defaultpath_backup(_ sender: Any) {
+        let defaultdir = self.userDesktopDirectory + "/Desktop/EFI-Backup"
+        UserDefaults.standard.set(defaultdir, forKey: "Backuppath")
+        selected_backup_path.stringValue = (defaultdir)
     }
     
     @IBAction func volslider(_ sender: Any) {
@@ -112,7 +123,7 @@ class Preferences: NSViewController {
     }
     let userDesktopDirectory:String = NSHomeDirectory()
     
-    @IBAction func browseFile(sender: AnyObject) {
+    @IBAction func browseFile_download(sender: AnyObject) {
         
         let dialog = NSOpenPanel();
         
@@ -132,6 +143,33 @@ class Preferences: NSViewController {
                 selected_download_path.stringValue = path
                 let dlpath = (path as String)
                 UserDefaults.standard.set(dlpath, forKey: "Downloadpath")
+            }
+        } else {
+            // User clicked on "Cancel"
+            return
+        }
+    }
+    
+    @IBAction func browseFile_backup(sender: AnyObject) {
+        
+        let dialog = NSOpenPanel();
+        
+        dialog.title                   = "Choose a Folder";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = true;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["txt"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            let result = dialog.url // Pathname of the file
+            
+            if (result != nil) {
+                let path = result!.path
+                selected_backup_path.stringValue = path
+                let dlpath = (path as String)
+                UserDefaults.standard.set(dlpath, forKey: "Backuppath")
             }
         } else {
             // User clicked on "Cancel"

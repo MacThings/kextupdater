@@ -130,6 +130,9 @@
 /* Class = "NSMenuItem"; title = "Clover"; ObjectID = "9vw-ao-Ppq"; */
 "9vw-ao-Ppq.title" = "Clover";
 
+/* Class = "NSBox"; title = "EFI Backup Path"; ObjectID = "9w6-1T-SDe"; */
+"9w6-1T-SDe.title" = "EFI Backup Pfad";
+
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G6030"; ObjectID = "9YW-q7-91P"; */
 "9YW-q7-91P.title" = "10.13.6 - 17G6030";
 
@@ -388,9 +391,6 @@
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G17023"; ObjectID = "fCl-yj-YCP"; */
 "fCl-yj-YCP.title" = "10.11.6 - 15G17023";
 
-/* Class = "NSWindow"; title = "Kext Updater"; ObjectID = "FK8-9h-kgX"; */
-"FK8-9h-kgX.title" = "Kext Updater";
-
 /* Class = "NSMenuItem"; title = "Kext Updater Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Kext Updater Hilfe";
 
@@ -456,6 +456,9 @@
 
 /* Class = "NSButtonCell"; title = "ThunderboltReset"; ObjectID = "hhd-3S-jgf"; */
 "hhd-3S-jgf.title" = "ThunderboltReset";
+
+/* Class = "NSButtonCell"; title = "Select"; ObjectID = "HHX-4l-Fw4"; */
+"HHX-4l-Fw4.title" = "Auswählen";
 
 /* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hjw-Fy-cag"; */
 "hjw-Fy-cag.title" = "Auswerfen";
@@ -932,7 +935,7 @@
 "TMB-Bg-QzM.title" = "VirtualSMC";
 
 /* Class = "NSButtonCell"; title = "Default"; ObjectID = "tS6-WA-m9v"; */
-"tS6-WA-m9v.title" = "Default";
+"tS6-WA-m9v.title" = "Standard";
 
 /* Class = "NSTextFieldCell"; title = "Admin Status"; ObjectID = "Tsp-uD-zpI"; */
 "Tsp-uD-zpI.title" = "Admin Status";
@@ -1107,6 +1110,9 @@
 
 /* Class = "NSMenuItem"; title = "16"; ObjectID = "yt9-n3-h4t"; */
 "yt9-n3-h4t.title" = "16";
+
+/* Class = "NSButtonCell"; title = "Default"; ObjectID = "yu2-g8-FfQ"; */
+"yu2-g8-FfQ.title" = "Standard";
 
 /* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "YUq-V5-jjD"; */
 "YUq-V5-jjD.title" = "Mounte EFI von andere(n) Festplatten.";

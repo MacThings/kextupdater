@@ -242,6 +242,12 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(defaultdir, forKey: "Downloadpath")
         }
         
+        let backuppathinit = UserDefaults.standard.string(forKey: "Backuppath")
+        if backuppathinit == nil{
+            let defaultdir = self.userDesktopDirectory + "/Desktop/EFI-Backup"
+            UserDefaults.standard.set(defaultdir, forKey: "Backuppath")
+        }
+        
         let reportpathinit = UserDefaults.standard.string(forKey: "Reportpath")
         if reportpathinit == nil{
             let defaultdir = self.userDesktopDirectory + "/Desktop"
