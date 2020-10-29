@@ -1,0 +1,30 @@
+/* No comment provided by engineer. */
+"Boot EFI Volume not found!" = "Boot EFI nicht gefunden!";
+
+/* No comment provided by engineer. */
+"Cancel" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"Do you want to restart now?" = "Möchtest Du jetzt neustarten?";
+
+/* No comment provided by engineer. */
+"Done!" = "Fertig!";
+
+/* No comment provided by engineer. */
+"No" = "Nein";
+
+/* No comment provided by engineer. */
+"Ok" = "OK";
+
+/* No comment provided by engineer. */
+"The Kextcache is rebuilding now" = "Kextcache wird neu aufgebaut.";
+
+/* No comment provided by engineer. */
+"The volume containing the Boot EFI is no longer available in the system. Please connect the device to the computer and try again." = "Das Volume welches die Boot EFI enthält ist nicht mehr im System verfügbar. Bitte verbinde das Gerät mit dem Rechner und versuche es noch einmal.";
+
+/* No comment provided by engineer. */
+"This could take some time. Please be patient. Don't forget to restart so that the changes take effect." = "Das kann eine Weile dauern. Du kannst den Vorgang aber jederzeit abbrechen.";
+
+/* No comment provided by engineer. */
+"Yes" = "Ja";
+
