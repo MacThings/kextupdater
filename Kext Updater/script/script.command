@@ -1664,13 +1664,22 @@ function disablegfxhda()
       fi
     fi
 
+    /usr/bin/rsync -r /System/Library/Extensions/AppleGFXHDA.kext/ "$ScriptTmpPath"/DisableGFXHDA.kext/
+    rm -rf "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/PlugIns
+    cp -f "$kuroot"/Kext\ Updater.app/Contents/Resources/bin/AppleGFXHDA "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/MacOS/.
+
+    /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/Info.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/Info.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/version.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/version.plist
+
     if [[ $keychain = "1" ]]; then
-    _getsecret
-    echo "$disablegfxhda_install"
-    osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        _getsecret
+        echo "$disablegfxhda_install"
+        osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
     else
-    echo "$disablegfxhda_install"
-    osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        echo "$disablegfxhda_install"
+        osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
     fi
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then

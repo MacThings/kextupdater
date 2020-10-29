@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* BigSurPlus.swift */; };
-		2A4C3E4D24B8F2AB0050ED35 /* DisableGFXHDA.kext in Kext Copy IO */ = {isa = PBXBuildFile; fileRef = 2A4C3E4B24B8F2980050ED35 /* DisableGFXHDA.kext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A55417E254B14D200C0E317 /* AppleGFXHDA */; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
@@ -83,6 +83,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
+				2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */,
 				2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */,
 				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
 				2AF6EFC7234DBE2400DD8F9B /* KUNotifier.app in Bin Copy */,
@@ -108,7 +109,6 @@
 			dstPath = kexts;
 			dstSubfolderSpec = 7;
 			files = (
-				2A4C3E4D24B8F2AB0050ED35 /* DisableGFXHDA.kext in Kext Copy IO */,
 				2AC44C0A23151110006D447C /* IO80211Family.kext in Kext Copy IO */,
 			);
 			name = "Kext Copy IO";
@@ -158,7 +158,7 @@
 
 /* Begin PBXFileReference section */
 		2A1D9577251225640077A7C0 /* BigSurPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigSurPlus.swift; sourceTree = "<group>"; };
-		2A4C3E4B24B8F2980050ED35 /* DisableGFXHDA.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = DisableGFXHDA.kext; sourceTree = "<group>"; };
+		2A55417E254B14D200C0E317 /* AppleGFXHDA */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleGFXHDA; sourceTree = "<group>"; };
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -309,7 +309,6 @@
 		2AC44BA723150F38006D447C /* kexts */ = {
 			isa = PBXGroup;
 			children = (
-				2A4C3E4B24B8F2980050ED35 /* DisableGFXHDA.kext */,
 				2AC44BAD23150F38006D447C /* IO80211Family.kext */,
 			);
 			path = kexts;
@@ -341,6 +340,7 @@
 		2AC44BB923150F39006D447C /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				2A55417E254B14D200C0E317 /* AppleGFXHDA */,
 				2A856DC123B4291F008760A9 /* KUMenuBar.app */,
 				2AFE137423AEAF4700A5186D /* dspci */,
 				2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */,
