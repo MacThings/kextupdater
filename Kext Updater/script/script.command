@@ -401,9 +401,15 @@ function scanallefis()
     fi
 
     bootnode=$( _helpDefaultRead "EFI Root" )
-    excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" | rev | sed 's/[0-9]s//g' | rev )
+    
+    diskutil info "$bootnode" > /dev/null
 
-    efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi$")
+    if [[ "$?" = "0" ]]; then
+        excludebootefi=$( diskutil info "$bootnode" |grep "Node" | sed "s/.*dev\///g" | rev | sed 's/[0-9]s//g' | rev )
+        efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev | grep -v "$excludebootefi$")
+    else
+        efis=$( diskutil list | grep "EFI" | sed "s/.*disk/disk/g" | rev | sed 's/[0-9]s//g' | rev )
+    fi
    
     while read -r line; do
     node=$( echo $line )

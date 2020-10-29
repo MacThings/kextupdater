@@ -1,4 +1,7 @@
 /* No comment provided by engineer. */
+"Boot EFI Volume not found!" = "Boot EFI nicht gefunden!";
+
+/* No comment provided by engineer. */
 "Bummer" = "Schade";
 
 /* No comment provided by engineer. */
@@ -18,6 +21,9 @@
 
 /* No comment provided by engineer. */
 "Please choose anything before and try again." = "Bitte wähle erst etwas aus und versuche es erneut.";
+
+/* No comment provided by engineer. */
+"The volume containing the Boot EFI is no longer available in the system. Please connect the device to the computer and try again." = "Das Volume welches die Boot EFI enthält ist nicht mehr im System verfügbar. Bitte verbinde das Gerät mit dem Rechner und versuche es noch einmal.";
 
 /* No comment provided by engineer. */
 "This could take some time. You can abort it every time." = "Das kann eine Weile dauern. Du kannst den Vorgang aber jederzeit abbrechen.";

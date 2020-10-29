@@ -581,10 +581,22 @@ class KextUpdater: NSViewController {
         DispatchQueue.global(qos: .background).async {
 	
             self.syncShellExec(path: self.scriptPath, args: ["mountefi"])
-    
+
             DispatchQueue.main.async {
                 sender.isEnabled = true
                 self.checkefi()
+                let efi_mounted = UserDefaults.standard.string(forKey: "EFI Path")
+                if efi_mounted == "" {
+                    let alert = NSAlert()
+                    alert.messageText = NSLocalizedString("Boot EFI Volume not found!", comment: "")
+                    alert.informativeText = NSLocalizedString("The volume containing the Boot EFI is no longer available in the system. Please connect the device to the computer and try again.", comment: "")
+                    alert.alertStyle = .informational
+                    alert.icon = NSImage(named: "NSError")
+                    let Button = NSLocalizedString("Ok", comment: "")
+                    alert.addButton(withTitle: Button)
+                    alert.runModal()
+                }
+                
             }
         }
     }
