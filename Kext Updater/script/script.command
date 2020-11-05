@@ -579,7 +579,10 @@ function initial()
 
     efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     if [[ $efiscan = "" ]]; then
-    efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
+        efiscan=$( ../bin/./BDMESG|grep -e "Loader entry created" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
+    fi
+    if [[ $efiscan = "" ]]; then
+        efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     fi
 
     diskscan=$( diskutil info $efiscan )
