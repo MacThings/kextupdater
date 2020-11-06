@@ -1771,6 +1771,7 @@ function checkdisablegfxhda()
 
 function fixsleepimage()
 {
+    #auth_mount_path="/private/tmp/mount_root"
     user=$( _helpDefaultRead "Rootuser" )
     keychain=$( _helpDefaultRead "Keychain" )
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
@@ -1797,6 +1798,30 @@ function fixsleepimage()
           osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     fi
+
+#    if [[ "$osversion" < "11" ]]; then
+#            osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#        else
+#            get_root=$( mount | head -n 1 | sed -e 's/on.*//g' -e 's!s[^s]*$!/!' -e 's/\/$//g' )
+#            osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$get_root"' '"$auth_mount_path"'" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#            #ln -s "$auth_mount_path" ~/Desktop/BigSur-Root
+#        fi
+#      else
+#        if [[ "$osversion" < "11" ]]; then
+#            osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+#        else
+#            get_root=$( mount | head -n 1 | sed -e 's/on.*//g' -e 's!s[^s]*$!/!' -e 's/\/$//g' )
+#            osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$get_root"' '"$auth_mount_path"'" with administrator privileges'
+#            #ln -s "$auth_mount_path" ~/Desktop/BigSur-Root
+#    fi
+
+#    if [[ $pwcheck != "" ]]; then
+#          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$auth_mount_path"'/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg '"$auth_mount_path"'/var/vm/sleepimage; sudo bless --folder '"$auth_mount_path"'/System/Library/CoreServices --bootefi --create-snapshot" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#    else
+#          osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$auth_mount_path"'/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg '"$auth_mount_path"'/var/vm/sleepimage; sudo bless --folder '"$auth_mount_path"'/System/Library/CoreServices --bootefi --create-snapshot" with administrator privileges' >/dev/null 2>&1
+#    fi
+
+
 
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
