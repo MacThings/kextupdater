@@ -744,6 +744,17 @@ function initial()
         defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "LESLE Warning" -bool NO
     fi
 
+    #osversion2=$( echo "$osversion" | cut -c 1-2 )
+    #if [[ "$osversion2" > "10" ]]; then
+        #mkdir /private/tmp/mount_root 2> /dev/null
+        #check_auth_root=$( csrutil authenticated-root status )
+        #if [[ "$check_auth_root" = *"disabled"* ]]; then
+            #_helpDefaultWrite "AuthRoot" "Yes"
+        #else
+            #_helpDefaultWrite "AuthRoot" "No"
+        #fi
+    #fi
+
 }
 
 #################################################################
