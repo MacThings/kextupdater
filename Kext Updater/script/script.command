@@ -577,10 +577,7 @@ function initial()
 
     _languageselect
 
-    efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
-    if [[ $efiscan = "" ]]; then
-        efiscan=$( ../bin/./BDMESG|grep -e "Loader entry created" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
-    fi
+    efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" -e "Loader entry created" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     if [[ $efiscan = "" ]]; then
         efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
     fi
@@ -794,7 +791,7 @@ function mountefi()
             _helpDefaultWrite "Mounted" "Yes"
         fi
         if [ $status != "0" ]; then
-          node=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | head -n 1 |sed -e 's/.*GPT,//' -e 's/,0x.*//' )
+          node=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" -e "Loader entry created" | head -n 1 |sed -e 's/.*GPT,//' -e 's/,0x.*//' )
             if [[ $node = "" ]]; then
               node=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
             fi
@@ -809,7 +806,7 @@ function mountefi()
               _helpDefaultWrite "Mounted" "Yes"
             fi
         fi
-        efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
+        efiscan=$( ../bin/./BDMESG |grep -e "SelfDevicePath" -e "Found Storage" -e "Loader entry created" | head -n 1 | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
         if [[ $efiscan = "" ]]; then
             efiscan=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
         fi
