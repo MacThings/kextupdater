@@ -173,6 +173,7 @@ function _excludedkexts()
 
 ScriptHome=$(echo $HOME)
 ScriptTmpPath="$HOME"/.ku_temp
+ScriptTmpPath2="$HOME"/.mu_temp
 MY_PATH="`dirname \"$0\"`"
 cd "$MY_PATH"
 
@@ -2467,6 +2468,61 @@ function stop_execution()
     pkill -f script.command
 
 }
+
+################# 11.x + Area ######################
+
+function _set_rw()
+{
+    if [ ! -d "$ScriptTmpPath2" ]; then
+        mkdir "$ScriptTmpPath2"
+        mkdir "$ScriptTmpPath2"/mount
+    fi
+
+    NodeId=$( _helpDefaultRead "NodeId" )
+    volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
+    
+    osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" with administrator privileges' #>/dev/null 2>&1
+    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-RW
+}
+
+function _get_node()
+{
+
+    NodeId2=$( mount | grep ".mu_temp/mount" )
+    if [[ "$NodeId2" != "" ]]; then
+        _helpDefaultWrite "RW" "Yes"
+        NodeId=$( mount | grep "on / (" )
+        NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
+        _helpDefaultWrite "NodeId" "$NodeId"
+        exit
+    fi
+
+    NodeId=$( mount | grep "on / (" )
+    NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
+
+    _helpDefaultWrite "RW" "No"
+    _helpDefaultWrite "NodeId" "$NodeId"
+}
+
+function _apply_reboot()
+{
+    NodeId=$( _helpDefaultRead "NodeId" )
+    volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
+    rm "$HOME"/Desktop/"$volume_name"-RW
+    osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges'
+}
+
+function _check_authroot()
+{
+    AuthRoot=$( csrutil authenticated-root status )
+    
+    if [[ "$AuthRoot" = *"enabled"* ]]; then
+        _helpDefaultWrite "AuthRoot" "Yes"
+    else
+        _helpDefaultWrite "AuthRoot" "No"
+    fi
+}
+
 
 
 $1

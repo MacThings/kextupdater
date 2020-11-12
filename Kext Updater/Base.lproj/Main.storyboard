@@ -4219,10 +4219,22 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o28-Ct-Nle">
                                                         <rect key="frame" x="-5" y="-6" width="110" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="lvl-Bi-rpV">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="set_read_write_bs:" target="PFO-7L-TjR" id="ok3-mZ-JeX"/>
+                                                            <segue destination="qsm-zd-NTY" kind="show" id="khT-21-Qk2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="message" size="11"/>
                                                         </buttonCell>
@@ -4468,6 +4480,17 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWQ-QH-Q4l">
+                                            <rect key="frame" x="710" y="326" width="81" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiE-TA-Vhc">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <segue destination="qsm-zd-NTY" kind="show" id="8VH-Ps-hzE"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -4496,6 +4519,7 @@ DQ
                         <outlet property="button_oc_config_file" destination="69i-C0-He1" id="09J-vo-eoQ"/>
                         <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>
                         <outlet property="button_read_write" destination="rIK-O5-mOn" id="hTr-XT-ahl"/>
+                        <outlet property="button_read_write_bs" destination="o28-Ct-Nle" id="PNF-d0-Rxe"/>
                         <outlet property="button_unmount" destination="vSC-14-Cuf" id="ypX-uR-1t6"/>
                         <outlet property="button_unmount_all" destination="Xq7-rS-1W5" id="gUD-Ss-DzA"/>
                         <outlet property="custom_efi_folder" destination="dg6-UW-1xr" id="ztD-Oa-Iid"/>
@@ -5592,8 +5616,96 @@ DQ
             </objects>
             <point key="canvasLocation" x="1397" y="1408"/>
         </scene>
+        <!--macOS Unlocker-->
+        <scene sceneID="CiS-3H-kru">
+            <objects>
+                <viewController title="macOS Unlocker" id="qsm-zd-NTY" customClass="macOSUnlocker" customModule="macOS_Unlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="2kr-vk-nDG">
+                        <rect key="frame" x="0.0" y="0.0" width="257" height="173"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jv2-dE-KxR">
+                                <rect key="frame" x="-2" y="132" width="261" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="macOS Unlocker" id="kVI-Ju-75k">
+                                    <font key="font" metaFont="systemBold" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-jb-PjQ">
+                                <rect key="frame" x="98" y="82" width="14" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="g4O-e2-OQs"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJe-xg-IIa">
+                                <rect key="frame" x="18" y="81" width="69" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="r/w Status:" id="gQ8-c9-F8D">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-mK-yQu">
+                                <rect key="frame" x="99" y="102" width="121" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="NODE_ID" id="B4u-Hq-ZmQ">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="263-oW-sNa" name="value" keyPath="values.NodeId" id="mQu-dw-5Qa"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4B-38-A2G">
+                                <rect key="frame" x="18" y="102" width="70" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Root node:" id="w3D-Y8-gAO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-Pl-n1U">
+                                <rect key="frame" x="38" y="33" width="180" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Set System r/w" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jMO-Ds-BJI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="set_rw:" target="qsm-zd-NTY" id="LRw-p2-Yh2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-JE-5y6">
+                                <rect key="frame" x="38" y="8" width="180" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Apply and reboot" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Tt-M6-qLu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="apply_reboot:" target="qsm-zd-NTY" id="Cub-tN-uhM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="apply_reboot" destination="N5f-JE-5y6" id="d8U-Za-Ig8"/>
+                        <outlet property="rw_status" destination="2bJ-jb-PjQ" id="yT2-PT-NXt"/>
+                        <outlet property="set_rw" destination="5nG-Pl-n1U" id="kgg-s0-yxL"/>
+                    </connections>
+                </viewController>
+                <customObject id="Jk9-Uo-NQO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="263-oW-sNa"/>
+            </objects>
+            <point key="canvasLocation" x="2359" y="876"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="khT-21-Qk2"/>
         <segue reference="VWH-Em-JU2"/>
     </inferredMetricsTieBreakers>
     <resources>

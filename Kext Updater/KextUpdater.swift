@@ -99,6 +99,9 @@ class KextUpdater: NSViewController {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        UserDefaults.standard.removeObject(forKey: "NodeId")
+        UserDefaults.standard.removeObject(forKey: "RW")
+        UserDefaults.standard.removeObject(forKey: "AuthRoot")
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
             DispatchQueue.main.async {

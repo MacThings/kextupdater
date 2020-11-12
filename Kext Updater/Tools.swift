@@ -35,6 +35,7 @@ class Tools: NSViewController {
     @IBOutlet weak var read_only: NSTextField!
     @IBOutlet weak var read_write: NSTextField!
     @IBOutlet weak var button_read_write: NSButton!
+    @IBOutlet weak var button_read_write_bs: NSButton!
     
     @IBOutlet weak var custom_efi_folder: NSTextField!
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
@@ -154,10 +155,17 @@ class Tools: NSViewController {
             self.read_only.isHidden = false
             self.read_write.isHidden = true
         }
-            
+            // Checks if 10.x or 11.x is used
+            if ProcessInfo().isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 10, minorVersion: 0, patchVersion: 0)) {
+                self.button_read_write.isHidden = false
+                self.button_read_write_bs.isHidden = true
+            } else {
+                self.button_read_write.isHidden = true
+                self.button_read_write_bs.isHidden = false
             }
+        }
       
-    }
+        }
     }
  
     @IBAction func cacherebuild(_ sender: Any) {
