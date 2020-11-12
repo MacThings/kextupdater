@@ -156,7 +156,8 @@ class Tools: NSViewController {
             self.read_write.isHidden = true
         }
             // Checks if 10.x or 11.x is used
-            if ProcessInfo().isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 10, minorVersion: 0, patchVersion: 0)) {
+            let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
+            if os_version == "10"{
                 self.button_read_write.isHidden = false
                 self.button_read_write_bs.isHidden = true
             } else {
