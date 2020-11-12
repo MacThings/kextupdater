@@ -43,7 +43,7 @@ class macOSUnlocker: NSViewController {
         
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.title = "macOS Unlocker"
+        self.view.window?.title = "Unlock 11.x or higher"
   
     }
     

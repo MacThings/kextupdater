@@ -2473,6 +2473,9 @@ function stop_execution()
 
 function _set_rw()
 {
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+
     if [ ! -d "$ScriptTmpPath2" ]; then
         mkdir "$ScriptTmpPath2"
         mkdir "$ScriptTmpPath2"/mount
@@ -2481,7 +2484,13 @@ function _set_rw()
     NodeId=$( _helpDefaultRead "NodeId" )
     volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
     
-    osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" with administrator privileges' #>/dev/null 2>&1
+    if [[ $keychain = "1" ]]; then
+      _getsecret
+      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" with administrator privileges' >/dev/null 2>&1
+    fi
+
     ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-RW
 }
 
@@ -2506,10 +2515,20 @@ function _get_node()
 
 function _apply_reboot()
 {
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+
     NodeId=$( _helpDefaultRead "NodeId" )
     volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
     rm "$HOME"/Desktop/"$volume_name"-RW
-    osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges'
+    #osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges'
+    if [[ $keychain = "1" ]]; then
+      _getsecret
+      osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+      osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges' >/dev/null 2>&1
+    fi
+
 }
 
 function _check_authroot()
