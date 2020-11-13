@@ -22,23 +22,6 @@ class macOSUnlocker: NSViewController {
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
 
         self.rw_status((Any).self)
-        
-        self.syncShellExec(path: self.scriptPath, args: ["_check_authroot"])
-        
-        let authroot_status = UserDefaults.standard.string(forKey: "AuthRoot")
-        
-        if authroot_status == "Yes"{
-            let alert = NSAlert()
-            alert.messageText = NSLocalizedString("Authenticated Root is active!", comment: "")
-            alert.informativeText = NSLocalizedString("With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w. Please make sure to disable it. There are 2 ways.", comment: "")
-            alert.alertStyle = .warning
-            alert.icon = NSImage(named: "NSError")
-            let Button = NSLocalizedString("I will check it", comment: "")
-            alert.addButton(withTitle: Button)
-            alert.runModal()
-            self.set_rw.isEnabled = false
-            self.apply_reboot.isEnabled = false
-        }
     }
         
     override func viewDidAppear() {
@@ -58,6 +41,15 @@ class macOSUnlocker: NSViewController {
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["_set_rw"])
             DispatchQueue.main.async {
+                self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
+                let rw_check = UserDefaults.standard.string(forKey: "RW")
+                if rw_check == "Yes" {
+                    self.set_rw.isHidden = true
+                    self.apply_reboot.isHidden = false
+                } else {
+                    self.set_rw.isHidden = false
+                    self.apply_reboot.isHidden = true
+                }
                 self.rw_status((Any).self)
               }
         }

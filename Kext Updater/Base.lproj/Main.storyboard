@@ -4480,17 +4480,6 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWQ-QH-Q4l">
-                                            <rect key="frame" x="710" y="326" width="81" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiE-TA-Vhc">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <segue destination="qsm-zd-NTY" kind="show" id="8VH-Ps-hzE"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -5616,30 +5605,21 @@ DQ
             </objects>
             <point key="canvasLocation" x="1397" y="1408"/>
         </scene>
-        <!--macOS Unlocker-->
+        <!--11.x + Unlock-->
         <scene sceneID="CiS-3H-kru">
             <objects>
-                <viewController title="macOS Unlocker" id="qsm-zd-NTY" customClass="macOSUnlocker" customModule="macOS_Unlocker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="2kr-vk-nDG">
-                        <rect key="frame" x="0.0" y="0.0" width="257" height="173"/>
+                <viewController title="11.x + Unlock" id="qsm-zd-NTY" customClass="macOSUnlocker" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" focusRingType="none" id="2kr-vk-nDG">
+                        <rect key="frame" x="0.0" y="0.0" width="257" height="135"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jv2-dE-KxR">
-                                <rect key="frame" x="-2" y="132" width="261" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="macOS Unlocker" id="kVI-Ju-75k">
-                                    <font key="font" metaFont="systemBold" size="25"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-jb-PjQ">
-                                <rect key="frame" x="98" y="82" width="14" height="14"/>
+                                <rect key="frame" x="98" y="79" width="14" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="g4O-e2-OQs"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJe-xg-IIa">
-                                <rect key="frame" x="18" y="81" width="69" height="16"/>
+                                <rect key="frame" x="18" y="78" width="69" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="r/w Status:" id="gQ8-c9-F8D">
                                     <font key="font" metaFont="system"/>
@@ -5648,7 +5628,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-mK-yQu">
-                                <rect key="frame" x="99" y="102" width="121" height="16"/>
+                                <rect key="frame" x="99" y="99" width="121" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="NODE_ID" id="B4u-Hq-ZmQ">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -5660,7 +5640,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4B-38-A2G">
-                                <rect key="frame" x="18" y="102" width="70" height="16"/>
+                                <rect key="frame" x="18" y="99" width="70" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Root node:" id="w3D-Y8-gAO">
                                     <font key="font" metaFont="system"/>
@@ -5668,10 +5648,10 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-Pl-n1U">
-                                <rect key="frame" x="38" y="33" width="180" height="32"/>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-Pl-n1U">
+                                <rect key="frame" x="38" y="30" width="180" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Set System r/w" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jMO-Ds-BJI">
+                                <buttonCell key="cell" type="push" title="Set System r/w" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="jMO-Ds-BJI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -5679,10 +5659,10 @@ DQ
                                     <action selector="set_rw:" target="qsm-zd-NTY" id="LRw-p2-Yh2"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-JE-5y6">
-                                <rect key="frame" x="38" y="8" width="180" height="32"/>
+                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-JE-5y6">
+                                <rect key="frame" x="38" y="5" width="180" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Apply and reboot" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Tt-M6-qLu">
+                                <buttonCell key="cell" type="push" title="Apply and reboot" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="9Tt-M6-qLu">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -5701,11 +5681,10 @@ DQ
                 <customObject id="Jk9-Uo-NQO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="263-oW-sNa"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="876"/>
+            <point key="canvasLocation" x="2375" y="825"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="khT-21-Qk2"/>
         <segue reference="VWH-Em-JU2"/>
     </inferredMetricsTieBreakers>
     <resources>
