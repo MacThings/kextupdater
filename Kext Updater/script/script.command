@@ -181,6 +181,8 @@ if [ ! -d "$ScriptTmpPath" ]; then
     mkdir "$ScriptTmpPath"
 fi
 
+
+
 checkchime=$( _helpDefaultRead "Chime" )
 
 #========================= Kext Array =========================#
@@ -1415,25 +1417,42 @@ function rebuildcache()
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     rwcheck=$( _helpDefaultRead "Read-Only" )
+    
+    NodeId3=$( mount | grep ".mu_temp/mount" )
+    if [[ "$NodeId3" != "" ]]; then
+        OS="11"
+    else
+        OS="10"
+    fi
 
     _languageselect
 
-    if [[ $rwcheck = "Yes" ]]; then
-      if [[ $keychain = "1" ]]; then
-        _getsecret
-        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-      else
-        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-      fi
+    if [[ "$OS" = "10" ]]; then
+        if [[ $rwcheck = "Yes" ]]; then
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+            fi
+        fi
     fi
 
-    if [[ $keychain = "1" ]]; then
-      _getsecret
-      echo -e "$rebuildcache\n"
-      osascript -e 'do shell script "chmod -R 755 /System/Library/Extensions/*; sudo chown -R root:wheel /System/Library/Extensions/*; sudo touch /System/Library/Extensions; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
     echo -e "$rebuildcache\n"
-      osascript -e 'do shell script "chmod -R 755 /System/Library/Extensions/*; sudo chown -R root:wheel /System/Library/Extensions/*; sudo touch /System/Library/Extensions; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+
+    if [[ $keychain = "1" ]]; then
+        _getsecret
+        if [[ "$OS" = "10" ]]; then
+            osascript -e 'do shell script "chmod -R 755 /System/Library/Extensions/*; sudo chown -R root:wheel /System/Library/Extensions/*; sudo touch /System/Library/Extensions; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "chmod -R 755 "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions/*; sudo chown -R root:wheel "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions/*; sudo touch "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions; sudo chmod -R 755 "'"$ScriptTmpPath2"'"/mount/Library/Extensions/*; sudo chown -R root:wheel "'"$ScriptTmpPath2"'"/mount/Library/Extensions/*; sudo touch "'"$ScriptTmpPath2"'"/mount/Library/Extensions; sudo kextcache -i /; sudo kextcache -u "'"$ScriptTmpPath2"'"/mount -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        fi
+    else
+        if [[ "$OS" = "10" ]]; then
+            osascript -e 'do shell script "chmod -R 755 /System/Library/Extensions/*; sudo chown -R root:wheel /System/Library/Extensions/*; sudo touch /System/Library/Extensions; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "chmod -R 755 "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions/*; sudo chown -R root:wheel "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions/*; sudo touch "'"$ScriptTmpPath2"'"/mount/System/Library/Extensions; sudo chmod -R 755 "'"$ScriptTmpPath2"'"/mount/Library/Extensions/*; sudo chown -R root:wheel "'"$ScriptTmpPath2"'"/mount/Library/Extensions/*; sudo touch "'"$ScriptTmpPath2"'"/mount/Library/Extensions; sudo kextcache -i /; sudo kextcache -u "'"$ScriptTmpPath2"'"/mount -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
     fi
 
     if [ $? = 0 ]; then
