@@ -2491,7 +2491,7 @@ function _set_rw()
       osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" with administrator privileges' >/dev/null 2>&1
     fi
 
-    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-RW
+    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-rw
 }
 
 function _get_node()
@@ -2520,8 +2520,8 @@ function _apply_reboot()
 
     NodeId=$( _helpDefaultRead "NodeId" )
     volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
-    rm "$HOME"/Desktop/"$volume_name"-RW
-    #osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges'
+    rm "$HOME"/Desktop/"$volume_name"-rw
+
     if [[ $keychain = "1" ]]; then
       _getsecret
       osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1

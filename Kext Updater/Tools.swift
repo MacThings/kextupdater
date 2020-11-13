@@ -155,14 +155,44 @@ class Tools: NSViewController {
             self.read_only.isHidden = false
             self.read_write.isHidden = true
         }
+            
             // Checks if 10.x or 11.x is used
             let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
             if os_version == "10"{
                 self.button_read_write.isHidden = false
                 self.button_read_write_bs.isHidden = true
             } else {
+                //11.x + detected
+                self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
+                let rw_check = UserDefaults.standard.string(forKey: "RW")
                 self.button_read_write.isHidden = true
                 self.button_read_write_bs.isHidden = false
+                
+                if rw_check == "No" {
+                    self.button_kextcache.isEnabled = false
+                    self.button_atheros.isEnabled = false
+                    self.button_atheros_uninstall.isEnabled = false
+                    self.button_disablegfxhda.isEnabled = false
+                    self.button_disablegfxhda_uninstall.isEnabled = false
+                    self.button_fix_sleep.isEnabled = false
+                    self.button_fix_sleep_undo.isEnabled = false
+                
+                    self.syncShellExec(path: self.scriptPath, args: ["_check_authroot"])
+                    let authroot_status = UserDefaults.standard.string(forKey: "AuthRoot")
+                    
+                    if authroot_status == "Yes"{
+                        let alert = NSAlert()
+                        alert.messageText = NSLocalizedString("Authenticated Root is active!", comment: "")
+                        alert.informativeText = NSLocalizedString("With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w. Please make sure to disable it. There are 2 ways......", comment: "")
+                        alert.alertStyle = .warning
+                        alert.icon = NSImage(named: "NSError")
+                        let Button = NSLocalizedString("I will check it", comment: "")
+                        alert.addButton(withTitle: Button)
+                        alert.runModal()
+                    }
+                    
+                }
+                
             }
         }
       
