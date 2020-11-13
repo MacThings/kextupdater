@@ -4247,26 +4247,6 @@ DQ
                                                         <view key="contentView" id="xfH-pD-gm7">
                                                             <rect key="frame" x="3" y="3" width="134" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-rG-0Gm">
-                                                                    <rect key="frame" x="-1" y="5" width="138" height="16"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read / Write" id="aid-bC-OiP">
-                                                                        <font key="font" metaFont="systemBold"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-rT-NYh">
-                                                                    <rect key="frame" x="-1" y="5" width="138" height="16"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Read only" id="7iC-s8-MNV">
-                                                                        <font key="font" metaFont="systemBold"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                            </subviews>
                                                         </view>
                                                     </box>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-0k-mG5">
@@ -4479,6 +4459,26 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-06-wFf">
+                                            <rect key="frame" x="731" y="327" width="76" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ckd-rK-aN2">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="bla:" target="PFO-7L-TjR" id="5UK-MO-Boh"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-9a-FmN">
+                                            <rect key="frame" x="278" y="12" width="129" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="bDm-bS-xzG">
+                                                <font key="font" metaFont="systemBold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -4515,6 +4515,7 @@ DQ
                         <outlet property="disablegfxhdaapplied" destination="l7T-VA-juW" id="UL0-yX-j7W"/>
                         <outlet property="fixapplied" destination="nfC-iN-8nh" id="OaY-TQ-BKb"/>
                         <outlet property="fixnotapplied" destination="B8z-iR-1s6" id="iB9-6P-AB8"/>
+                        <outlet property="label_read_write" destination="dwK-9a-FmN" id="tLE-ER-yvl"/>
                         <outlet property="oc_config_file" destination="CbN-gD-oYc" id="UvB-x4-C7a"/>
                         <outlet property="oc_config_file_path" destination="CbN-gD-oYc" id="iJ7-8b-2Id"/>
                         <outlet property="progress_gear" destination="3Qy-Cn-gKP" id="9XR-o5-YAt"/>
@@ -4523,14 +4524,12 @@ DQ
                         <outlet property="progress_gear_disablegfxhda" destination="80T-Fx-2dI" id="8as-rF-wMU"/>
                         <outlet property="progress_gear_mount" destination="mge-oP-iKS" id="8EC-te-3wF"/>
                         <outlet property="pulldown_menu" destination="MkB-hH-A2t" id="HFy-Cb-h59"/>
-                        <outlet property="read_only" destination="DBw-rT-NYh" id="7Zb-qF-gkz"/>
-                        <outlet property="read_write" destination="tKI-rG-0Gm" id="Tgu-ms-PDo"/>
                     </connections>
                 </viewController>
                 <customObject id="GYc-WM-W1i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="gea-QB-ZRN"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="1274"/>
+            <point key="canvasLocation" x="2164" y="1273.5"/>
         </scene>
         <!--nVidia Webdriver-->
         <scene sceneID="orS-Dz-pUl">
@@ -5693,8 +5692,8 @@ DQ
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
-        <image name="NSTouchBarAudioOutputMuteTemplate" width="26" height="30"/>
-        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="23" height="30"/>
+        <image name="NSTouchBarAudioOutputMuteTemplate" width="13" height="15"/>
+        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="22" height="15"/>
         <image name="Nightly build" width="512" height="512"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>

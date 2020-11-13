@@ -32,10 +32,9 @@ class Tools: NSViewController {
     @IBOutlet weak var button_fix_sleep: NSButton!
     @IBOutlet weak var button_fix_sleep_undo: NSButton!
     
-    @IBOutlet weak var read_only: NSTextField!
-    @IBOutlet weak var read_write: NSTextField!
     @IBOutlet weak var button_read_write: NSButton!
     @IBOutlet weak var button_read_write_bs: NSButton!
+    @IBOutlet weak var label_read_write: NSTextField!
     
     @IBOutlet weak var custom_efi_folder: NSTextField!
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
@@ -148,12 +147,10 @@ class Tools: NSViewController {
         let readonly = UserDefaults.standard.string(forKey: "Read-Only")
         if readonly == "No" {
             self.button_read_write.isEnabled = false
-            self.read_only.isHidden = true
-            self.read_write.isHidden = false
+            self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
         } else {
             self.button_read_write.isEnabled = true
-            self.read_only.isHidden = false
-            self.read_write.isHidden = true
+            self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
         }
             
             // Checks if 10.x or 11.x is used
@@ -169,6 +166,7 @@ class Tools: NSViewController {
                 self.button_read_write_bs.isHidden = false
                 
                 if rw_check == "No" {
+                    self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
                     self.button_kextcache.isEnabled = false
                     self.button_atheros.isEnabled = false
                     self.button_atheros_uninstall.isEnabled = false
@@ -191,6 +189,8 @@ class Tools: NSViewController {
                         alert.runModal()
                     }
                     
+                } else {
+                    self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
                 }
                 
             }
@@ -200,23 +200,36 @@ class Tools: NSViewController {
     }
  
     @IBAction func cacherebuild(_ sender: Any) {
-        catalina_read_write()
-        disable_all()
-        self.progress_gear_cache?.startAnimation(self);
-        self.progress_gear_cache.isHidden=false
-        DispatchQueue.global(qos: .background).async {
-            let rwcheck = UserDefaults.standard.string(forKey: "Read-Only")
-            if rwcheck == "No"{
+        let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
+        if os_version == "10" {
+            catalina_read_write()
+            disable_all()
+            self.progress_gear_cache?.startAnimation(self);
+            self.progress_gear_cache.isHidden=false
+            DispatchQueue.global(qos: .background).async {
+                let rwcheck = UserDefaults.standard.string(forKey: "Read-Only")
+                if rwcheck == "No"{
+                    self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
+                }
+                DispatchQueue.main.async {
+                    self.enable_all()
+                    self.progress_gear_cache?.stopAnimation(self);
+                    self.progress_gear_cache.isHidden=true
+                }
+            }
+        } else {
+            self.progress_gear_cache?.startAnimation(self);
+            self.progress_gear_cache.isHidden=false
+            DispatchQueue.global(qos: .background).async {
                 self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
-            }
-            DispatchQueue.main.async {
-                self.enable_all()
-                self.progress_gear_cache?.stopAnimation(self);
-                self.progress_gear_cache.isHidden=true
+                DispatchQueue.main.async {
+                    self.enable_all()
+                    self.progress_gear_cache?.stopAnimation(self);
+                    self.progress_gear_cache.isHidden=true
+                }
             }
         }
-
-        }
+    }
 
     @IBAction func atheros_yes(_ sender: Any) {
         catalina_read_write()
@@ -602,12 +615,10 @@ class Tools: NSViewController {
     let readonly = UserDefaults.standard.string(forKey: "Read-Only")
     if readonly == "No" {
         self.button_read_write.isEnabled = false
-        self.read_only.isHidden = true
-        self.read_write.isHidden = false
+        self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
     } else {
         self.button_read_write.isEnabled = true
-        self.read_only.isHidden = false
-        self.read_write.isHidden = true
+        self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
     }
 }
    
