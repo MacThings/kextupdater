@@ -76,6 +76,9 @@
 /* Class = "NSMenuItem"; title = "Quit Kext Updater"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Kext Updater beenden";
 
+/* Class = "NSTextFieldCell"; title = "Authenticated Root is active!"; ObjectID = "04w-Xj-Tcu"; */
+"04w-Xj-Tcu.title" = "Authenticated Root ist aktiv!";
+
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G6029"; ObjectID = "4Xs-mB-uXq"; */
 "4Xs-mB-uXq.title" = "10.13.6 - 17G6029";
 
@@ -99,9 +102,6 @@
 
 /* Class = "NSTextFieldCell"; title = "Device Node:"; ObjectID = "7dp-s4-yn9"; */
 "7dp-s4-yn9.title" = "Device Node:";
-
-/* Class = "NSTextFieldCell"; title = "Read only"; ObjectID = "7iC-s8-MNV"; */
-"7iC-s8-MNV.title" = "Nur lesen";
 
 /* Class = "NSTextFieldCell"; title = "nVidia Webdriver"; ObjectID = "7q9-hi-f5h"; */
 "7q9-hi-f5h.title" = "nVidia Webdriver";
@@ -183,9 +183,6 @@
 
 /* Class = "NSButtonCell"; title = "OK"; ObjectID = "ahX-4b-swP"; */
 "ahX-4b-swP.title" = "OK";
-
-/* Class = "NSTextFieldCell"; title = "Read / Write"; ObjectID = "aid-bC-OiP"; */
-"aid-bC-OiP.title" = "Lesen / Schreiben";
 
 /* Class = "NSMenuItem"; title = "Ethernet"; ObjectID = "aon-Kd-dbJ"; */
 "aon-Kd-dbJ.title" = "Ethernet";
@@ -406,6 +403,9 @@
 /* Class = "NSButtonCell"; title = "Undo"; ObjectID = "fr2-Fp-Zso"; */
 "fr2-Fp-Zso.title" = "Zurücksetzen";
 
+/* Class = "NSTextFieldCell"; title = "or"; ObjectID = "frt-wl-p5M"; */
+"frt-wl-p5M.title" = "oder";
+
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B48"; ObjectID = "g99-h6-PL9"; */
 "g99-h6-PL9.title" = "10.13.1 - 17B48";
 
@@ -556,11 +556,11 @@
 /* Class = "NSViewController"; title = "Changelog"; ObjectID = "JRA-D6-Wdb"; */
 "JRA-D6-Wdb.title" = "Changelog";
 
+/* Class = "NSTextFieldCell"; title = "Reboot into recovery mode and run:"; ObjectID = "jXL-St-TH0"; */
+"jXL-St-TH0.title" = "Boote in den Recovery Modus und führe folgenden Befehl aus:";
+
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1611"; ObjectID = "jYY-lM-pud"; */
 "jYY-lM-pud.title" = "10.11.6 - 15G1611";
-
-/* Class = "NSTextFieldCell"; title = "You are using macOS 11.0 or higher!"; ObjectID = "JZv-wE-06M"; */
-"JZv-wE-06M.title" = "Du verwendest macOS 11.0 oder höher!";
 
 /* Class = "NSMenuItem"; title = "Clover Nightly"; ObjectID = "k4x-tK-fSm"; */
 "k4x-tK-fSm.title" = "Clover Nightly";
@@ -585,9 +585,6 @@
 
 /* Class = "NSMenuItem"; title = "10.10.3 - 14D131"; ObjectID = "KpK-9x-aN4"; */
 "KpK-9x-aN4.title" = "10.10.3 - 14D131";
-
-/* Class = "NSButtonCell"; title = "Don't bother me again."; ObjectID = "krA-eM-RLT"; */
-"krA-eM-RLT.title" = "Nicht erneut anzeigen.";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "Kri-LH-JvQ"; */
 "Kri-LH-JvQ.title" = "Bitte auswählen";
@@ -699,6 +696,9 @@
 
 /* Class = "NSButtonCell"; title = "WhateverGreen"; ObjectID = "NUX-ff-wyn"; */
 "NUX-ff-wyn.title" = "WhateverGreen";
+
+/* Class = "NSTextFieldCell"; title = "Put the value 77080000 into the csr-active-config of your OpenCore config.plist"; ObjectID = "nVD-kk-IlB"; */
+"nVD-kk-IlB.title" = "Gib den Wert 77080000 in die csr-active-config Deiner OpenCore config.plist ein.";
 
 /* Class = "NSMenuItem"; title = "Menlo"; ObjectID = "O1M-uC-lKf"; */
 "O1M-uC-lKf.title" = "Menlo";
@@ -922,11 +922,11 @@
 /* Class = "NSButtonCell"; title = "= Download"; ObjectID = "Tee-oq-9Oh"; */
 "Tee-oq-9Oh.title" = "= Download";
 
+/* Class = "NSTextFieldCell"; title = "With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w an do some actions. Please make sure to disable it. You can do that in two ways."; ObjectID = "Tfd-xF-YCn"; */
+"Tfd-xF-YCn.title" = "Wenn 'authenticated-root' aktiviert ist, ist es nicht möglich, das Systemvolume auf r/w zu setzen und Aktionen auszuführen. Bitte stelle sicher, dass es deaktiviert ist. Man kann dies auf zwei Arten tun.";
+
 /* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
 "Tho-W6-S5A.title" = "3";
-
-/* Class = "NSTextFieldCell"; title = "Due to Apple's security tightening up regarding the writable of the root system, some functions are no longer operational. E.g. rebuild cache, set root system to r/w, etc. It is therefore not a malfunction of the Kext Updater, but is due to the regulation that system can no longer easily set to r/w."; ObjectID = "Tjx-UT-Kxg"; */
-"Tjx-UT-Kxg.title" = "Aufgrund von Apple´s Sicherheitsverschärfungen bezüglich der Beschreibbarkeit des Root Systems sind einige Funktionen nicht mehr lauffähig. Z.b. Cache neu aufbauen, Rootsystem auf R/W setzen etc. Es handelt sich somit nicht um eine Fehlfunktion des Kext Updaters sondern ist der Reglementierung geschuldet, dass System ohne Weiteres nicht mehr auf r/w setzen zu können.";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2009"; ObjectID = "tlc-Af-39T"; */
 "tlc-Af-39T.title" = "10.10.5 - 14F2009";

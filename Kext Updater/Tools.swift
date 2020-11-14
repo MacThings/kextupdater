@@ -168,7 +168,7 @@ class Tools: NSViewController {
                     self.syncShellExec(path: self.scriptPath, args: ["_check_authroot"])
                     let authroot_status = UserDefaults.standard.string(forKey: "AuthRoot")
                     
-                    if authroot_status == "No"{
+                    if authroot_status == "Yes"{
                         self.button_read_write.isEnabled = false
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "AuthRoot"), object: nil)
                     }

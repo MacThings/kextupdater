@@ -23,6 +23,12 @@
 "Please choose anything before and try again." = "Bitte wähle erst etwas aus und versuche es erneut.";
 
 /* No comment provided by engineer. */
+"Read / Write" = "Lesen / Schreiben";
+
+/* No comment provided by engineer. */
+"Read only" = "Nur lesen";
+
+/* No comment provided by engineer. */
 "The volume containing the Boot EFI is no longer available in the system. Please connect the device to the computer and try again." = "Das Volume welches die Boot EFI enthält ist nicht mehr im System verfügbar. Bitte verbinde das Gerät mit dem Rechner und versuche es noch einmal.";
 
 /* No comment provided by engineer. */
