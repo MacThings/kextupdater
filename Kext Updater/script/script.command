@@ -89,9 +89,9 @@ function _checkpass_initial() {
 function _getsecret() {
     secret=$(security find-generic-password -a "Kext Updater" -w)
     if [[ $secret = "44" ]]; then
-    _helpDefaultWrite "Passwordok" "No"
+        _helpDefaultWrite "Passwordok" "No"
     else
-    passw="$secret"
+        passw="$secret"
     fi
 }
 
@@ -613,7 +613,7 @@ function initial()
     protocol=$( echo -e "$diskscan" | grep "Protocol:" | sed "s/.*://g" | xargs )
     kuroot=$( pwd | sed "s/\/Kext.*//g" )
     osversion=$( sw_vers | grep ProductVersion | cut -d':' -f2 | xargs )
-    oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
+    #oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
 
     if [[ "$ozmosischeck" != "" ]] || [[ "$ozmosischeck2" != "" ]] || [[ "$ozmosischeck3" != "" ]] || [[ "$ozmosischeck4" != "" ]]; then
         bootloader="Ozmosis"
@@ -680,7 +680,7 @@ function initial()
     _helpDefaultWrite "Device Protocol" "$protocol" &
     _helpDefaultWrite "Bootloader" "$bootloader" &
     _helpDefaultWrite "OSVersion" "$osversion" &
-    _helpDefaultWrite "Read-Only" "$oswriteprotected" &
+    #_helpDefaultWrite "RW" "$oswriteprotected" &
 
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
 
@@ -1417,7 +1417,7 @@ function rebuildcache()
     keychain=$( _helpDefaultRead "Keychain" )
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
-    rwcheck=$( _helpDefaultRead "Read-Only" )
+    rwcheck=$( _helpDefaultRead "RW" )
     
     NodeId3=$( mount | grep ".mu_temp/mount" )
     if [[ "$NodeId3" != "" ]]; then
@@ -1431,7 +1431,7 @@ function rebuildcache()
     _languageselect
 
     if [[ "$OS" = "10" ]]; then
-        if [[ $rwcheck = "Yes" ]]; then
+        if [[ $rwcheck = "No" ]]; then
             if [[ $keychain = "1" ]]; then
                 _getsecret
                 osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
@@ -1864,16 +1864,19 @@ function fixsleepimage()
     keychain=$( _helpDefaultRead "Keychain" )
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
-    pwcheck=$( pmset -g |grep proximitywake )
+    #pwcheck=$( pmset -g |grep proximitywake )
     rwcheck=$( _helpDefaultRead "RW" )
-
+    img_full_path=$( pmset -g | grep hibernatefile | sed 's/.*file//g' | xargs )
+    img_path=$( echo "$img_full_path" | sed 's/\/sleepimage//g' )
     _languageselect
+
+    echo "$keychain"
 
     echo "$fixsleepimage"
 
     if [[ "$OS" = "10" ]]; then
         if [[ "$rwcheck" = "No" ]]; then
-            if [[ $keychain = "1" ]]; then
+            if [[ "$keychain" = "1" ]]; then
                 _getsecret
                 osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
             else
@@ -1884,28 +1887,20 @@ function fixsleepimage()
     
     
     if [[ "$OS" = "10" ]]; then
-        if [[ $keychain = "1" ]]; then
-          _getsecret
-            if [[ $pwcheck != "" ]]; then
-              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-            else
-              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd /private/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg /private/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
-            fi
+        if [[ "$keychain" = "1" ]]; then
+            _getsecret
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     else
         if [[ $keychain = "1" ]]; then
-          _getsecret
-            if [[ $pwcheck != "" ]]; then
-              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg '"$ScriptTmpPath2"'/mount/var/vm/sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-            else
-              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg '"$ScriptTmpPath2"'/mount/var/vm/sleepimage" with administrator privileges' >/dev/null 2>&1
-            fi
+            _getsecret
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount'"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount/var/vm; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     fi
-
-
-
-
 
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
@@ -1930,8 +1925,8 @@ function fixsleepimage_undo()
     keychain=$( _helpDefaultRead "Keychain" )
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
-    pwcheck=$( pmset -g |grep proximitywake )
-    rwcheck=$( _helpDefaultRead "Read-Only" )
+    #pwcheck=$( pmset -g |grep proximitywake )
+    rwcheck=$( _helpDefaultRead "RW" )
 
     _languageselect
     
@@ -1951,20 +1946,16 @@ function fixsleepimage_undo()
     if [[ "$OS" = "10" ]]; then
         if [[ $keychain = "1" ]]; then
             _getsecret
-            if [[ $pwcheck != "" ]]; then
-              osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-            else
-              osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" with administrator privileges' >/dev/null 2>&1
-            fi
+            osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd /private/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     else
-         if [[ $keychain = "1" ]]; then
+        if [[ $keychain = "1" ]]; then
             _getsecret
-            if [[ $pwcheck != "" ]]; then
-              osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-            else
-              osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" with administrator privileges' >/dev/null 2>&1
-            fi
+            osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "pmset -a hibernatemode 3; pmset -a proximitywake 1; cd '"$ScriptTmpPath2"'/mount/var/vm/; sudo chflags nouchg sleepimage; sudo rm -f sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     fi
     if [ $? = 0 ]; then
