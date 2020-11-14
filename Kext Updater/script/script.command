@@ -1977,9 +1977,10 @@ function fixsleepimage_undo()
 
 function checksleepfix()
 {
-    chmodcheck=$( stat -f %A /var/vm/sleepimage )
-    chowncheck=$( ls -l /var/vm/sleepimage |cut -c 15-25 )
-    size=$( stat -f%z /var/vm/sleepimage )
+    img_full_path=$( pmset -g | grep hibernatefile | sed 's/.*file//g' | xargs )
+    chmodcheck=$( stat -f %A "$img_full_path" )
+    chowncheck=$( ls -l "$img_full_path" |cut -c 15-25 )
+    size=$( stat -f%z "$img_full_path" )
     hmcheck=$( pmset -g |grep hibernatemode | sed "s/.*e//g" | xargs )
     pwcheck=$( pmset -g |grep proximitywake )
 
