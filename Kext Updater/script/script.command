@@ -1660,23 +1660,39 @@ function ar92xx_remove()
 
     _languageselect
 
-    if [[ $rwcheck = "Yes" ]]; then
-      if [[ $keychain = "1" ]]; then
-        _getsecret
-        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-      else
-        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-      fi
+    echo "$atherosuninstall"
+
+    if [[ "$OS" = "10" ]]; then
+        if [[ $rwcheck = "No" ]]; then
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+            fi
+        fi
     fi
 
-    if [[ $keychain = "1" ]]; then
-    _getsecret
-    echo "$atherosuninstall"
-    osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-    echo "$atherosuninstall"
-    osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+
+
+    if [[ "$OS" = "10" ]]; then
+        if [[ $keychain = "1" ]]; then
+            _getsecret
+            osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+            osascript -e 'do shell script "rm -rf /Library/Extensions/AirPortAtheros40.kext; rm -rf /Library/Extensions/IO80211Family.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+            fi
+            
+    else  ### 11.x
+        if [[ $keychain = "1" ]]; then
+             _getsecret
+            osascript -e 'do shell script "rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/AirPortAtheros40.kext; rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/IO80211Family.kext; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+            osascript -e 'do shell script "rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/AirPortAtheros40.kext; rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/IO80211Family.kext; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" with administrator privileges' >/dev/null 2>&1
+            fi
     fi
+
+    
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
                 _playchime
