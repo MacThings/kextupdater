@@ -39,9 +39,9 @@ class macOSUnlocker: NSViewController {
     
     @IBAction func set_rw(_ sender: Any) {
         DispatchQueue.global(qos: .background).async {
-            self.syncShellExec(path: self.scriptPath, args: ["_set_rw"])
+            self.syncShellExec(path: self.scriptPath, args: ["_set_read_write"])
             DispatchQueue.main.async {
-                self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
+                //self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
                 let rw_check = UserDefaults.standard.string(forKey: "RW")
                 if rw_check == "Yes" {
                     self.set_rw.isHidden = true

@@ -4219,18 +4219,7 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o28-Ct-Nle">
-                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="lvl-Bi-rpV">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <segue destination="qsm-zd-NTY" kind="show" id="khT-21-Qk2"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
                                                         <rect key="frame" x="-5" y="-6" width="110" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
@@ -4258,6 +4247,14 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
+                                                    <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-rO-U5j">
+                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Apply &amp; Reboot" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qo2-pu-oLj">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
                                                 </subviews>
                                             </view>
                                         </box>
@@ -4492,6 +4489,7 @@ DQ
                     <connections>
                         <outlet property="atheros40applied" destination="btT-Id-K9q" id="hhe-Zm-nKm"/>
                         <outlet property="atheros40notapplied" destination="6as-on-FXo" id="de5-2w-bRI"/>
+                        <outlet property="button_apply" destination="2V5-rO-U5j" id="ucN-OZ-qFp"/>
                         <outlet property="button_atheros" destination="Trt-2Z-QxN" id="GbG-YE-cQc"/>
                         <outlet property="button_atheros_uninstall" destination="iMF-1d-pVl" id="b6x-pS-RyZ"/>
                         <outlet property="button_close" destination="L55-W1-zjv" id="9ZX-Zf-h1t"/>
@@ -4507,7 +4505,6 @@ DQ
                         <outlet property="button_oc_config_file" destination="69i-C0-He1" id="09J-vo-eoQ"/>
                         <outlet property="button_offline_efi" destination="fHb-TZ-u7M" id="ZPX-0f-TGG"/>
                         <outlet property="button_read_write" destination="rIK-O5-mOn" id="hTr-XT-ahl"/>
-                        <outlet property="button_read_write_bs" destination="o28-Ct-Nle" id="PNF-d0-Rxe"/>
                         <outlet property="button_unmount" destination="vSC-14-Cuf" id="ypX-uR-1t6"/>
                         <outlet property="button_unmount_all" destination="Xq7-rS-1W5" id="gUD-Ss-DzA"/>
                         <outlet property="custom_efi_folder" destination="dg6-UW-1xr" id="ztD-Oa-Iid"/>

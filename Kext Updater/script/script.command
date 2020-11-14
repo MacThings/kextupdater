@@ -1,6 +1,28 @@
 
 #!/bin/bash
 #
+
+function _helpDefaultRead()
+{
+    VAL=$1
+
+    if [ ! -z "$VAL" ]; then
+    defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "$VAL"
+    fi
+}
+
+ScriptHome=$(echo $HOME)
+ScriptTmpPath="$HOME"/.ku_temp
+ScriptTmpPath2="$HOME"/.mu_temp
+MY_PATH="`dirname \"$0\"`"
+cd "$MY_PATH"
+if [ ! -d "$ScriptTmpPath" ]; then
+    mkdir "$ScriptTmpPath"
+fi
+OS=$( _helpDefaultRead "OSVersion" | cut -c 1-2 )
+
+
+
 ################################################################
 ####################### Helper Function ########################
 ################################################################
@@ -12,15 +34,6 @@ function _helpDefaultWrite()
 
     if [ ! -z "$VAL" ] || [ ! -z "$VAL1" ]; then
     defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "$VAL" "$VAL1"
-    fi
-}
-
-function _helpDefaultRead()
-{
-    VAL=$1
-
-    if [ ! -z "$VAL" ]; then
-    defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "$VAL"
     fi
 }
 
@@ -171,19 +184,7 @@ function _excludedkexts()
 ####################### Helper Function End ####################
 ################################################################
 
-ScriptHome=$(echo $HOME)
-ScriptTmpPath="$HOME"/.ku_temp
-ScriptTmpPath2="$HOME"/.mu_temp
-MY_PATH="`dirname \"$0\"`"
-cd "$MY_PATH"
 
-if [ ! -d "$ScriptTmpPath" ]; then
-    mkdir "$ScriptTmpPath"
-fi
-
-
-
-checkchime=$( _helpDefaultRead "Chime" )
 
 #========================= Kext Array =========================#
 ## Script Name,kextstat Name, echo Name, Ersatz Name
@@ -1970,26 +1971,88 @@ function checksleepfix()
 ############### Sets systempartition to read/write ################
 ###################################################################
 
+function _get_node()
+{
+
+    if [[ "$OS" = "10" ]]; then
+        check_rw=$( mount | grep "on / (" )
+        if [[ "$check_rw" = *"read-only"* ]]; then
+            _helpDefaultWrite "RW" "No"
+        else
+            _helpDefaultWrite "RW" "Yes"
+        fi
+        
+    else
+
+        NodeId2=$( mount | grep ".mu_temp/mount" )
+        if [[ "$NodeId2" != "" ]]; then
+            _helpDefaultWrite "RW" "Yes"
+            NodeId=$( mount | grep "on / (" )
+            NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
+            _helpDefaultWrite "NodeId" "$NodeId"
+            exit
+        fi
+
+        NodeId=$( mount | grep "on / (" )
+        NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
+
+        _helpDefaultWrite "RW" "No"
+        _helpDefaultWrite "NodeId" "$NodeId"
+    fi
+}
+
 function set_read_write()
 {
-     oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
-     if [[ "$oswriteprotected" = "Yes" ]]; then
-        keychain=$( _helpDefaultRead "Keychain" )
-        user=$( _helpDefaultRead "Rootuser" )
-
-        if [[ $keychain = "1" ]]; then
-          _getsecret
-          osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-        else
-          osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+    keychain=$( _helpDefaultRead "Keychain" )
+    user=$( _helpDefaultRead "Rootuser" )
+    
+    if [[ "$OS" = "10" ]]; then
+        check_rw=$( mount | grep "on / (" )
+        if [[ "$check_rw" = *"read-only"* ]]; then
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+            fi
         fi
-       
-        oswriteprotected2=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
-        if [[ "$oswriteprotected2" = "No" ]]; then
-            defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Read-Only" "No"
+        check_rw=$( mount | grep "on / (" )
+        if [[ "$check_rw" != *"read-only"* ]]; then
+            _helpDefaultWrite "RW" "Yes"
+        else
+            _helpDefaultWrite "RW" "No"
+        fi
+    
+    else
+    
+        _get_node
+        check_rw=$( mount | grep ".mu_temp/mount" )
+        NodeId=$( _helpDefaultRead "NodeId" )
+        volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
+        if [[ "$check_rw" = "" ]]; then
+            if [ ! -d "$ScriptTmpPath2" ]; then
+                mkdir "$ScriptTmpPath2"
+                mkdir "$ScriptTmpPath2"/mount
+            fi
+
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" with administrator privileges' >/dev/null 2>&1
+            fi
+            ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-rw
+            check_rw=$( mount | grep ".mu_temp/mount" )
+            if [[ "$check_rw" != "" ]]; then
+                _helpDefaultWrite "RW" "Yes"
+            else
+                _helpDefaultWrite "RW" "No"
+            fi
         fi
     fi
 }
+
+
 
 ###################################################################
 ############### Show all loaded 3rd Party Kexts ###################
@@ -2494,47 +2557,30 @@ function stop_execution()
 ################# 11.x + Area ######################
 ####################################################
 
-function _set_rw()
-{
-    user=$( _helpDefaultRead "Rootuser" )
-    keychain=$( _helpDefaultRead "Keychain" )
+#function _set_rw()
+#{
+#    user=$( _helpDefaultRead "Rootuser" )
+#    keychain=$( _helpDefaultRead "Keychain" )
+#
+#    if [ ! -d "$ScriptTmpPath2" ]; then
+#        mkdir "$ScriptTmpPath2"
+#        mkdir "$ScriptTmpPath2"/mount
+#    fi
+#
+#    NodeId=$( _helpDefaultRead "NodeId" )
+#    volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
+#
+#    if [[ $keychain = "1" ]]; then
+#      _getsecret
+#      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+#    else
+#      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" with administrator privileges' >/dev/null 2>&1
+#    fi
+#
+#    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-rw
+#}
 
-    if [ ! -d "$ScriptTmpPath2" ]; then
-        mkdir "$ScriptTmpPath2"
-        mkdir "$ScriptTmpPath2"/mount
-    fi
 
-    NodeId=$( _helpDefaultRead "NodeId" )
-    volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
-    
-    if [[ $keychain = "1" ]]; then
-      _getsecret
-      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"'$NodeId'"' '"'$ScriptTmpPath2'"'/mount" with administrator privileges' >/dev/null 2>&1
-    fi
-
-    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-rw
-}
-
-function _get_node()
-{
-
-    NodeId2=$( mount | grep ".mu_temp/mount" )
-    if [[ "$NodeId2" != "" ]]; then
-        _helpDefaultWrite "RW" "Yes"
-        NodeId=$( mount | grep "on / (" )
-        NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
-        _helpDefaultWrite "NodeId" "$NodeId"
-        exit
-    fi
-
-    NodeId=$( mount | grep "on / (" )
-    NodeId=$( echo "$NodeId" | sed 's/on \/.*//g' | rev | cut -c 4- | rev )
-
-    _helpDefaultWrite "RW" "No"
-    _helpDefaultWrite "NodeId" "$NodeId"
-}
 
 function _apply_reboot()
 {
@@ -2547,9 +2593,9 @@ function _apply_reboot()
 
     if [[ $keychain = "1" ]]; then
       _getsecret
-      osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+      osascript -e 'do shell script "sudo bless --folder '"$ScriptTmpPath2"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
     else
-      osascript -e 'do shell script "sudo bless --folder '"'$ScriptTmpPath2'"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges' >/dev/null 2>&1
+      osascript -e 'do shell script "sudo bless --folder '"$ScriptTmpPath2"'/mount/System/Library/CoreServices --bootefi --create-snapshot; shutdown -r now" with administrator privileges' >/dev/null 2>&1
     fi
 
 }
@@ -2564,8 +2610,6 @@ function _check_authroot()
         _helpDefaultWrite "AuthRoot" "No"
     fi
 }
-
-
 
 $1
 exit 0

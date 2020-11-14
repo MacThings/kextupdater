@@ -33,8 +33,9 @@ class Tools: NSViewController {
     @IBOutlet weak var button_fix_sleep_undo: NSButton!
     
     @IBOutlet weak var button_read_write: NSButton!
-    @IBOutlet weak var button_read_write_bs: NSButton!
     @IBOutlet weak var label_read_write: NSTextField!
+    @IBOutlet weak var button_apply: NSButton!
+    
     
     @IBOutlet weak var custom_efi_folder: NSTextField!
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
@@ -144,29 +145,20 @@ class Tools: NSViewController {
                 self.disablegfxhdaapplied.isHidden = true
             }
             
-        let readonly = UserDefaults.standard.string(forKey: "Read-Only")
-        if readonly == "No" {
-            self.button_read_write.isEnabled = false
-            self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
-        } else {
-            self.button_read_write.isEnabled = true
-            self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
-        }
-            
-            // Checks if 10.x or 11.x is used
             let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
-            if os_version == "10"{
-                self.button_read_write.isHidden = false
-                self.button_read_write_bs.isHidden = true
+            self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
+            let rw_check = UserDefaults.standard.string(forKey: "RW")
+            if rw_check == "Yes" {
+                self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
             } else {
-                //11.x + detected
-                self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
-                let rw_check = UserDefaults.standard.string(forKey: "RW")
-                self.button_read_write.isHidden = true
-                self.button_read_write_bs.isHidden = false
+                self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
+            }
                 
+            // Checks if 10.x or 11.x is used
+            
+            if os_version != "10" {
+                //11.x + detected
                 if rw_check == "No" {
-                    self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
                     self.button_kextcache.isEnabled = false
                     self.button_atheros.isEnabled = false
                     self.button_atheros_uninstall.isEnabled = false
@@ -188,27 +180,30 @@ class Tools: NSViewController {
                         alert.addButton(withTitle: Button)
                         alert.runModal()
                     }
-                    
                 } else {
-                    self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
+                    self.button_apply.isHidden = false
+                    self.button_read_write.isHidden = true
                 }
+            } else {
                 
-            }
+                if rw_check == "Yes" {
+                    self.button_read_write.isEnabled = false
+                }}
         }
       
         }
-    }
+     }
  
     @IBAction func cacherebuild(_ sender: Any) {
         let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         if os_version == "10" {
-            catalina_read_write()
             disable_all()
             self.progress_gear_cache?.startAnimation(self);
             self.progress_gear_cache.isHidden=false
             DispatchQueue.global(qos: .background).async {
-                let rwcheck = UserDefaults.standard.string(forKey: "Read-Only")
-                if rwcheck == "No"{
+                let rwcheck = UserDefaults.standard.string(forKey: "RW")
+                if rwcheck == "Yes"{
                     self.syncShellExec(path: self.scriptPath, args: ["rebuildcache"])
                 }
                 DispatchQueue.main.async {
@@ -232,7 +227,7 @@ class Tools: NSViewController {
     }
 
     @IBAction func atheros_yes(_ sender: Any) {
-        catalina_read_write()
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
         self.progress_gear_atheros?.startAnimation(self);
         self.progress_gear_atheros.isHidden=false
@@ -248,6 +243,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func atheros_uninstall(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
         self.progress_gear_atheros?.startAnimation(self);
         self.progress_gear_atheros.isHidden=false
@@ -264,7 +260,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func disablegfxhda_yes(_ sender: Any) {
-        catalina_read_write()
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
         self.progress_gear_disablegfxhda?.startAnimation(self);
         self.progress_gear_disablegfxhda.isHidden=false
@@ -297,7 +293,7 @@ class Tools: NSViewController {
     
     
     @IBAction func sleepfix_yes(_ sender: Any) {
-        catalina_read_write()
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage"])
@@ -309,7 +305,7 @@ class Tools: NSViewController {
     }
  
     @IBAction func sleepfix_undo(_ sender: Any) {
-        catalina_read_write()
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["fixsleepimage_undo"])
@@ -366,7 +362,24 @@ class Tools: NSViewController {
     }
     
     @IBAction func set_read_write(_ sender: Any) {
-        catalina_read_write()
+        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
+        let check_rw = UserDefaults.standard.string(forKey: "RW")
+        if check_rw == "Yes" {
+            self.button_read_write.isEnabled = false
+            self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
+            self.button_kextcache.isEnabled = true
+            self.button_atheros.isEnabled = true
+            self.button_atheros_uninstall.isEnabled = true
+            self.button_disablegfxhda.isEnabled = true
+            self.button_disablegfxhda_uninstall.isEnabled = true
+            self.button_fix_sleep.isEnabled = true
+            self.button_fix_sleep_undo.isEnabled = true
+            self.button_apply.isHidden = false
+            self.button_read_write.isHidden = true
+        } else {
+            self.button_read_write.isEnabled = true
+            self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
+        }
     }
     
     @IBAction func browseEFIfolder(sender: AnyObject) {
@@ -606,21 +619,8 @@ class Tools: NSViewController {
             let efichoice2 = efichoice[efichoice.startIndex..<range.lowerBound]
             UserDefaults.standard.set(efichoice2 + "s1", forKey: "EFIx")
         }
-        
-                
+       
     }
-    
-    func catalina_read_write() {
-    self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
-    let readonly = UserDefaults.standard.string(forKey: "Read-Only")
-    if readonly == "No" {
-        self.button_read_write.isEnabled = false
-        self.label_read_write.stringValue = NSLocalizedString("Read / Write", comment: "")
-    } else {
-        self.button_read_write.isEnabled = true
-        self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
-    }
-}
    
     @objc func cancel(_ sender: Any?) {
         self.view.window?.close()
