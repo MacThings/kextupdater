@@ -4219,17 +4219,6 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
-                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
-                                                        </connections>
-                                                    </button>
                                                     <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
                                                         <rect key="frame" x="263" y="-5" width="140" height="29"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -4256,6 +4245,17 @@ DQ
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="apply_reboot:" target="PFO-7L-TjR" id="tZq-IA-7kf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -5631,8 +5631,8 @@ DQ
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>
-        <image name="NSTouchBarAudioOutputMuteTemplate" width="13" height="15"/>
-        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="22" height="15"/>
+        <image name="NSTouchBarAudioOutputMuteTemplate" width="26" height="30"/>
+        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="23" height="30"/>
         <image name="Nightly build" width="512" height="512"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>

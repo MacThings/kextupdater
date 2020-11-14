@@ -820,6 +820,9 @@
 /* Class = "NSTextFieldCell"; title = "Select an EFI folder you want to check for kext updates."; ObjectID = "qMl-rE-aP9"; */
 "qMl-rE-aP9.title" = "Wähle Ordner den du auf Kext Updates prüfen möchtest.";
 
+/* Class = "NSButtonCell"; title = "Apply & Reboot"; ObjectID = "Qo2-pu-oLj"; */
+"Qo2-pu-oLj.title" = "Anwenden und Neustarten";
+
 /* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
 "qoN-tI-Qfd.title" = "Menu Bar Item";
 
