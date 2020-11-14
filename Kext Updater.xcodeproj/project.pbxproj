@@ -17,7 +17,6 @@
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
 		2AB304A523150E1500D618FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A323150E1500D618FF /* Main.storyboard */; };
-		2ABF5726255DA31900D95DCC /* macOSUnlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF5725255DA31900D95DCC /* macOSUnlocker.swift */; };
 		2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE123150F61006D447C /* SingleKexts.swift */; };
 		2AC44BED23150F61006D447C /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE223150F61006D447C /* Website.swift */; };
 		2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */; };
@@ -172,7 +171,6 @@
 		2AB304A423150E1500D618FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AB304A623150E1500D618FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB304A723150E1500D618FF /* Kext_Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kext_Updater.entitlements; sourceTree = "<group>"; };
-		2ABF5725255DA31900D95DCC /* macOSUnlocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSUnlocker.swift; sourceTree = "<group>"; };
 		2AC44BA023150F38006D447C /* report.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = report.html; sourceTree = "<group>"; };
 		2AC44BA223150F38006D447C /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
 		2AC44BA323150F38006D447C /* admin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = admin.png; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				2A56BDFB2430A5BE0064CD4D /* Hint.swift */,
 				2AC44BE623150F61006D447C /* KextUpdater.swift */,
 				2AC51C622515EBCE0029A19A /* LESLEWarning.swift */,
-				2ABF5725255DA31900D95DCC /* macOSUnlocker.swift */,
 				2AC44BE423150F61006D447C /* nVidiaWebdriver.swift */,
 				2AC44BEB23150F61006D447C /* PasswordWindow.swift */,
 				2AC44BE823150F61006D447C /* Preferences.swift */,
@@ -527,7 +524,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ABF5726255DA31900D95DCC /* macOSUnlocker.swift in Sources */,
 				2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */,
 				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
 				2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */,

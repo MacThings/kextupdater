@@ -1599,27 +1599,46 @@ function ar92xx()
     content=$( /usr/libexec/PlistBuddy -c Print "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" )
     lan2=$( echo -e "$content" | grep "Language" | sed "s/.*\=\ //g" | xargs )
     kuroot=$( _helpDefaultRead "KU Root" )
-    rwcheck=$( _helpDefaultRead "Read-Only" )
+    rwcheck=$( _helpDefaultRead "RW" )
 
     _languageselect
 
-    if [[ $rwcheck = "Yes" ]]; then
-      if [[ $keychain = "1" ]]; then
-        _getsecret
-        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-      else
-        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-      fi
-    fi
+    echo "$atherosinstall"
 
-    if [[ $keychain = "1" ]]; then
-    _getsecret
-    echo "$atherosinstall"
-    osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-    echo "$atherosinstall"
-    osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+    if [[ "$OS" = "10" ]]; then
+        if [[ $rwcheck = "No" ]]; then
+          if [[ $keychain = "1" ]]; then
+            _getsecret
+            osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+          else
+            osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+          fi
+        fi
     fi
+ 
+        
+    if [[ "$OS" = "10" ]]; then
+        if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+        osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
+        
+    else
+        
+        if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+        osascript -e 'do shell script "cp -r '"'$kuroot'"'/Kext\\ Updater.app/Contents/Resources/kexts/IO80211Family.kext /Library/Extensions/.; rm -rf /Library/Extensions/AirPortAtheros40.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
+    
+    fi
+    
+    
+    
+    
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
                 _playchime

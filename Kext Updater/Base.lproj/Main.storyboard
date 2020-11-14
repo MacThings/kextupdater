@@ -4456,17 +4456,6 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-06-wFf">
-                                            <rect key="frame" x="731" y="327" width="76" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ckd-rK-aN2">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="bla:" target="PFO-7L-TjR" id="5UK-MO-Boh"/>
-                                            </connections>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-9a-FmN">
                                             <rect key="frame" x="278" y="12" width="129" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -5599,84 +5588,6 @@ DQ
                 <userDefaultsController id="acu-f4-Afe"/>
             </objects>
             <point key="canvasLocation" x="1397" y="1408"/>
-        </scene>
-        <!--11.x + Unlock-->
-        <scene sceneID="CiS-3H-kru">
-            <objects>
-                <viewController title="11.x + Unlock" id="qsm-zd-NTY" customClass="macOSUnlocker" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" focusRingType="none" id="2kr-vk-nDG">
-                        <rect key="frame" x="0.0" y="0.0" width="257" height="135"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-jb-PjQ">
-                                <rect key="frame" x="98" y="79" width="14" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="g4O-e2-OQs"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJe-xg-IIa">
-                                <rect key="frame" x="18" y="78" width="69" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="r/w Status:" id="gQ8-c9-F8D">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-mK-yQu">
-                                <rect key="frame" x="99" y="99" width="121" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="NODE_ID" id="B4u-Hq-ZmQ">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <binding destination="263-oW-sNa" name="value" keyPath="values.NodeId" id="mQu-dw-5Qa"/>
-                                </connections>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4B-38-A2G">
-                                <rect key="frame" x="18" y="99" width="70" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Root node:" id="w3D-Y8-gAO">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-Pl-n1U">
-                                <rect key="frame" x="38" y="30" width="180" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Set System r/w" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="jMO-Ds-BJI">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="set_rw:" target="qsm-zd-NTY" id="LRw-p2-Yh2"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-JE-5y6">
-                                <rect key="frame" x="38" y="5" width="180" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Apply and reboot" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="9Tt-M6-qLu">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="apply_reboot:" target="qsm-zd-NTY" id="Cub-tN-uhM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="apply_reboot" destination="N5f-JE-5y6" id="d8U-Za-Ig8"/>
-                        <outlet property="rw_status" destination="2bJ-jb-PjQ" id="yT2-PT-NXt"/>
-                        <outlet property="set_rw" destination="5nG-Pl-n1U" id="kgg-s0-yxL"/>
-                    </connections>
-                </viewController>
-                <customObject id="Jk9-Uo-NQO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="263-oW-sNa"/>
-            </objects>
-            <point key="canvasLocation" x="2375" y="825"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

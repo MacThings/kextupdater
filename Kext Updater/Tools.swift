@@ -155,9 +155,7 @@ class Tools: NSViewController {
             }
                 
             // Checks if 10.x or 11.x is used
-            
             if os_version != "10" {
-                //11.x + detected
                 if rw_check == "No" {
                     self.button_kextcache.isEnabled = false
                     self.button_atheros.isEnabled = false
@@ -171,6 +169,7 @@ class Tools: NSViewController {
                     let authroot_status = UserDefaults.standard.string(forKey: "AuthRoot")
                     
                     if authroot_status == "Yes"{
+                        self.button_read_write.isEnabled = false
                         let alert = NSAlert()
                         alert.messageText = NSLocalizedString("Authenticated Root is active!", comment: "")
                         alert.informativeText = NSLocalizedString("With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w. Please make sure to disable it. There are 2 ways......", comment: "")
@@ -185,14 +184,13 @@ class Tools: NSViewController {
                     self.button_read_write.isHidden = true
                 }
             } else {
-                
                 if rw_check == "Yes" {
                     self.button_read_write.isEnabled = false
-                }}
+                }
+            }
         }
-      
-        }
-     }
+    }
+}
  
     @IBAction func cacherebuild(_ sender: Any) {
         let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
@@ -376,6 +374,12 @@ class Tools: NSViewController {
             self.button_fix_sleep_undo.isEnabled = true
             self.button_apply.isHidden = false
             self.button_read_write.isHidden = true
+            let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
+            if os_version == "10" {
+                self.button_apply.isHidden = true
+                self.button_read_write.isHidden = false
+                self.button_read_write.isEnabled = false
+            }
         } else {
             self.button_read_write.isEnabled = true
             self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
