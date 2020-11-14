@@ -1733,13 +1733,17 @@ function disablegfxhda()
 
     _languageselect
 
-    if [[ $rwcheck = "Yes" ]]; then
-      if [[ $keychain = "1" ]]; then
-        _getsecret
-        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-      else
-        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-      fi
+    echo "$disablegfxhda_install"
+
+    if [[ "$OS" = "10" ]]; then
+        if [[ "$rwcheck" = "No" ]]; then
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+            fi
+        fi
     fi
 
     /usr/bin/rsync -r /System/Library/Extensions/AppleGFXHDA.kext/ "$ScriptTmpPath"/DisableGFXHDA.kext/
@@ -1751,14 +1755,22 @@ function disablegfxhda()
     /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/version.plist
     /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 999.99" "$ScriptTmpPath"/DisableGFXHDA.kext/Contents/version.plist
 
-    if [[ $keychain = "1" ]]; then
-        _getsecret
-        echo "$disablegfxhda_install"
-        osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    if [[ "$OS" = "10" ]]; then
+        if [[ $keychain = "1" ]]; then
+            _getsecret
+            osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
     else
-        echo "$disablegfxhda_install"
-        osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext /Library/Extensions/.; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        if [[ $keychain = "1" ]]; then
+             _getsecret
+            osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext '"$ScriptTmpPath2"'/mount/Library/Extensions/.; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+            osascript -e 'do shell script "cp -r '"'$ScriptTmpPath'"'/DisableGFXHDA.kext '"$ScriptTmpPath2"'/mount/Library/Extensions/.; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
     fi
+      
     if [ $? = 0 ]; then
             if [[ $checkchime = "1" ]]; then
                 _playchime
@@ -1786,32 +1798,45 @@ function disablegfxhda_remove()
 
     _languageselect
 
-    if [[ $rwcheck = "Yes" ]]; then
-      if [[ $keychain = "1" ]]; then
-        _getsecret
-        osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-      else
-        osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
-      fi
+    echo "$disablegfxhda_uninstall"
+
+    if [[ "$OS" = "10" ]]; then
+        if [[ "$rwcheck" = "No" ]]; then
+            if [[ $keychain = "1" ]]; then
+                _getsecret
+                osascript -e 'do shell script "sudo mount -rw /" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            else
+                osascript -e 'do shell script "sudo mount -rw /" with administrator privileges' >/dev/null 2>&1
+            fi
+        fi
     fi
 
-    if [[ $keychain = "1" ]]; then
-    _getsecret
-    echo "$disablegfxhda_uninstall"
-    osascript -e 'do shell script "rm -rf /Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-    else
-    echo "$disablegfxhda_uninstall"
-    osascript -e 'do shell script "rm -rf /Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
-    fi
-    if [ $? = 0 ]; then
-            if [[ $checkchime = "1" ]]; then
-                _playchime
-            fi
-        echo -e "\n$alldone"
+
+    if [[ "$OS" = "10" ]]; then
+        if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "rm -rf /Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
-            if [[ $checkchime = "1" ]]; then
-                _playchimedeath
-            fi
+        osascript -e 'do shell script "rm -rf /Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 /Library/Extensions/*; sudo chown -R root:wheel /Library/Extensions/*; sudo touch /Library/Extensions; sudo kextcache -i /; sudo touch /Library/Extensions; sudo kextcache -u / -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
+    else
+        if [[ $keychain = "1" ]]; then
+        _getsecret
+        osascript -e 'do shell script "rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+        else
+        osascript -e 'do shell script "rm -rf '"$ScriptTmpPath2"'/mount/Library/Extensions/DisableGFXHDA.kext; sudo chmod -R 755 '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo chown -R root:wheel '"$ScriptTmpPath2"'/mount/Library/Extensions/*; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -i '"$ScriptTmpPath2"'/mount; sudo touch '"$ScriptTmpPath2"'/mount/Library/Extensions; sudo kextcache -u '"$ScriptTmpPath2"'/mount -v 6" with administrator privileges' >/dev/null 2>&1
+        fi
+    fi
+
+    if [ $? = 0 ]; then
+        if [[ $checkchime = "1" ]]; then
+            _playchime
+        fi
+        echo -e "\n$alldone"
+    else
+        if [[ $checkchime = "1" ]]; then
+            _playchimedeath
+        fi
         echo -e "\n$error"
     fi
 }
