@@ -2620,31 +2620,6 @@ function stop_execution()
 ################# 11.x + Area ######################
 ####################################################
 
-#function _set_rw()
-#{
-#    user=$( _helpDefaultRead "Rootuser" )
-#    keychain=$( _helpDefaultRead "Keychain" )
-#
-#    if [ ! -d "$ScriptTmpPath2" ]; then
-#        mkdir "$ScriptTmpPath2"
-#        mkdir "$ScriptTmpPath2"/mount
-#    fi
-#
-#    NodeId=$( _helpDefaultRead "NodeId" )
-#    volume_name=$( diskutil info "$NodeId" | grep "Volume Name" | sed 's/.*://g' | xargs )
-#
-#    if [[ $keychain = "1" ]]; then
-#      _getsecret
-#      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
-#    else
-#      osascript -e 'do shell script "sudo mount -o nobrowse -t apfs '"$NodeId"' '"$ScriptTmpPath2"'/mount" with administrator privileges' >/dev/null 2>&1
-#    fi
-#
-#    ln -s "$ScriptTmpPath2"/mount "$HOME"/Desktop/"$volume_name"-rw
-#}
-
-
-
 function _apply_reboot()
 {
     user=$( _helpDefaultRead "Rootuser" )

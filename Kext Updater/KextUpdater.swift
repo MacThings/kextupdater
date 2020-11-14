@@ -74,7 +74,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var efi_backup_button: NSButton!
     
     @IBOutlet weak var show_hint: NSButton!
-    @IBOutlet weak var show_bigsurplus: NSButton!
+    @IBOutlet weak var show_auth_root: NSButton!
     @IBOutlet weak var show_lesle_warning: NSButton!
     
     
@@ -158,6 +158,11 @@ class KextUpdater: NSViewController {
             self,
             selector: #selector(self.closePrefs),
             name: NSNotification.Name(rawValue: "ClosePrefs"),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.pressAuthRoot(notification:)),
+            name: NSNotification.Name(rawValue: "AuthRoot"),
             object: nil)
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
@@ -384,19 +389,7 @@ class KextUpdater: NSViewController {
                         UserDefaults.standard.set(true, forKey: "KeyChainAdvise")
                 }
             }
-        
-        if osversionread!.hasPrefix("11") {
-            let bigsurplus = UserDefaults.standard.string(forKey: "BigSurPlus Warning")
-            if bigsurplus == nil {
-                self.show_bigsurplus.performClick(nil)
-            } else {
-                let bigsurplus2 = UserDefaults.standard.bool(forKey: "BigSurPlus Warning")
-                if bigsurplus2 == false {
-                    self.show_bigsurplus.performClick(nil)
-                }
-            }
-        }
-        
+
         let leslewarning = UserDefaults.standard.bool(forKey: "LESLE Warning")
         
         let leslewarninghide = UserDefaults.standard.bool(forKey: "LESLE Warning Hide")
@@ -898,6 +891,10 @@ class KextUpdater: NSViewController {
     
     @objc private func pressStartbutton(notification: NSNotification){
         start_button.performClick(nil)
+    }
+    
+    @objc private func pressAuthRoot(notification: NSNotification){
+    self.show_auth_root.performClick(nil)
     }
     
     @objc private func AppShutdown(notification: NSWorkspace){

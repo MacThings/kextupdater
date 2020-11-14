@@ -168,16 +168,9 @@ class Tools: NSViewController {
                     self.syncShellExec(path: self.scriptPath, args: ["_check_authroot"])
                     let authroot_status = UserDefaults.standard.string(forKey: "AuthRoot")
                     
-                    if authroot_status == "Yes"{
+                    if authroot_status == "No"{
                         self.button_read_write.isEnabled = false
-                        let alert = NSAlert()
-                        alert.messageText = NSLocalizedString("Authenticated Root is active!", comment: "")
-                        alert.informativeText = NSLocalizedString("With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w. Please make sure to disable it. There are 2 ways......", comment: "")
-                        alert.alertStyle = .warning
-                        alert.icon = NSImage(named: "NSError")
-                        let Button = NSLocalizedString("I will check it", comment: "")
-                        alert.addButton(withTitle: Button)
-                        alert.runModal()
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "AuthRoot"), object: nil)
                     }
                 } else {
                     self.button_apply.isHidden = false
@@ -384,6 +377,11 @@ class Tools: NSViewController {
             self.button_read_write.isEnabled = true
             self.label_read_write.stringValue = NSLocalizedString("Read only", comment: "")
         }
+    }
+    
+    
+    @IBAction func apply_reboot(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["_apply_reboot"])
     }
     
     @IBAction func browseEFIfolder(sender: AnyObject) {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* BigSurPlus.swift */; };
+		2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* AuthRoot.swift */; };
 		2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A55417E254B14D200C0E317 /* AppleGFXHDA */; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -157,7 +157,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A1D9577251225640077A7C0 /* BigSurPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigSurPlus.swift; sourceTree = "<group>"; };
+		2A1D9577251225640077A7C0 /* AuthRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRoot.swift; sourceTree = "<group>"; };
 		2A55417E254B14D200C0E317 /* AppleGFXHDA */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleGFXHDA; sourceTree = "<group>"; };
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				2ADD786925322A6200A0045C /* About.swift */,
-				2A1D9577251225640077A7C0 /* BigSurPlus.swift */,
+				2A1D9577251225640077A7C0 /* AuthRoot.swift */,
 				2AC44BE723150F61006D447C /* Bootloader.swift */,
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
@@ -537,7 +537,7 @@
 				2AC44BF223150F61006D447C /* Bootloader.swift in Sources */,
 				2AC44BF023150F61006D447C /* DiskInformation.swift in Sources */,
 				2AC44BF323150F61006D447C /* Preferences.swift in Sources */,
-				2A1D9578251225640077A7C0 /* BigSurPlus.swift in Sources */,
+				2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */,
 				2AC44BF623150F61006D447C /* PasswordWindow.swift in Sources */,
 				2ADD786A25322A6200A0045C /* About.swift in Sources */,
 				2AC44BF423150F61006D447C /* Tools.swift in Sources */,

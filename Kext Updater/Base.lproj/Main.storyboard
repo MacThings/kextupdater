@@ -3201,7 +3201,7 @@ DQ
                                     <segue destination="0fw-r7-aUL" kind="show" id="LEr-KB-tK5"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXA-mk-7IX" userLabel="Button dummy BigSurPlus Warning">
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXA-mk-7IX" userLabel="Button dummy AuthRoot Warning">
                                 <rect key="frame" x="20" y="0.0" width="18" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QZz-tT-POj">
@@ -3212,7 +3212,7 @@ DQ
                                     <segue destination="oQ0-ZV-LZ6" kind="modal" id="dqF-Xc-cLN"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esC-WM-dTj" userLabel="Button dummy BigSurPlus Warning">
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esC-WM-dTj" userLabel="LESLE Warning">
                                 <rect key="frame" x="56" y="0.0" width="18" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Y6A-lF-IFH">
@@ -3259,7 +3259,7 @@ DQ
                         <outlet property="mb_detected" destination="jey-HD-Doq" id="kwR-75-2CH"/>
                         <outlet property="output_window" destination="3me-WA-Top" id="sEI-H8-fGM"/>
                         <outlet property="report_button" destination="EOn-iI-xm0" id="pFP-GL-NRR"/>
-                        <outlet property="show_bigsurplus" destination="lXA-mk-7IX" id="TUF-6G-A94"/>
+                        <outlet property="show_auth_root" destination="lXA-mk-7IX" id="Ecd-AR-hwm"/>
                         <outlet property="show_hint" destination="BP0-GU-5Qz" id="IDl-Ll-cOm"/>
                         <outlet property="show_lesle_warning" destination="esC-WM-dTj" id="1xo-nM-Ast"/>
                         <outlet property="start_button" destination="xkJ-nI-Tsy" id="7Sx-3w-ybL"/>
@@ -4254,6 +4254,9 @@ DQ
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="apply_reboot:" target="PFO-7L-TjR" id="tZq-IA-7kf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
@@ -5207,55 +5210,83 @@ DQ
             </objects>
             <point key="canvasLocation" x="1925" y="35"/>
         </scene>
-        <!--BigSurPlus-->
+        <!--Authenticated Root-->
         <scene sceneID="Ksc-JU-0cS">
             <objects>
-                <viewController title="BigSurPlus" id="oQ0-ZV-LZ6" customClass="BigSurPlus" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Authenticated Root" id="oQ0-ZV-LZ6" customClass="AuthRoot" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="bu9-ii-djB">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="204"/>
+                        <rect key="frame" x="0.0" y="0.0" width="534" height="341"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wjm-RE-uV2">
-                                <rect key="frame" x="-3" y="171" width="545" height="23"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="You are using macOS 11.0 or higher!" id="JZv-wE-06M">
-                                    <font key="font" metaFont="systemBlack" size="20"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yd-9j-vpu">
+                                <rect key="frame" x="12" y="180" width="456" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" id="Tfd-xF-YCn">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w an do some actions. Please make sure to disable it. You can do that in two ways.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAU-wv-p8B">
-                                <rect key="frame" x="26" y="49" width="485" height="111"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-Ws-6ay">
+                                <rect key="frame" x="12" y="195" width="408" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" id="Tjx-UT-Kxg">
+                                <textFieldCell key="cell" selectable="YES" title="Reboot into recovery mode and run:" id="jXL-St-TH0">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Due to Apple's security tightening up regarding the writable of the root system, some functions are no longer operational. E.g. rebuild cache, set root system to r/w, etc. It is therefore not a malfunction of the Kext Updater, but is due to the regulation that system can no longer easily set to r/w.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-19-RXy">
-                                <rect key="frame" x="26" y="18" width="205" height="18"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="twF-fq-iL0">
+                                <rect key="frame" x="12" y="171" width="408" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Don't bother me again." bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="krA-eM-RLT">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <textFieldCell key="cell" selectable="YES" title="csrutil authenticated-root disable" id="r6y-9m-ORS">
+                                    <font key="font" size="15" name="Courier"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4e4-BH-ahX">
+                                <rect key="frame" x="12" y="154" width="52" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" title="or" id="frt-wl-p5M">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-6x-RmO">
+                                <rect key="frame" x="12" y="125" width="515" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" title="Put the value 77080000 into the csr-active-config of your OpenCore config.plist" id="nVD-kk-IlB">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="6Pw-A2-Npg" name="value" keyPath="values.BigSurPlus Warning" id="NDK-S7-Bdt"/>
-                                </connections>
-                            </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qlj-g7-q2R">
-                                <rect key="frame" x="28" y="168" width="36" height="36"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmv-50-dUd">
+                                <rect key="frame" x="14" y="40" width="506" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="qiq-C2-N8b"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="authroot" id="VrN-19-ISC"/>
                             </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="793-g8-CmU">
+                                <rect key="frame" x="-2" y="300" width="538" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Authenticated Root is active!" id="04w-Xj-Tcu">
+                                    <font key="font" metaFont="systemBold" size="25"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-wg-6vI">
-                                <rect key="frame" x="401" y="13" width="114" height="32"/>
+                                <rect key="frame" x="413" y="5" width="114" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fWP-aV-c4r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="close_window:" target="oQ0-ZV-LZ6" id="etA-A6-Prm"/>
@@ -5270,7 +5301,7 @@ DQ
                 <customObject id="Eln-vo-pRr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="6Pw-A2-Npg"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="-277"/>
+            <point key="canvasLocation" x="1922" y="-371.5"/>
         </scene>
         <!--LESLEWarning-->
         <scene sceneID="FDm-kb-zyM">
@@ -5591,7 +5622,7 @@ DQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VWH-Em-JU2"/>
+        <segue reference="jDB-Qg-yx3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HF Logo" width="512" height="512"/>
@@ -5605,6 +5636,7 @@ DQ
         <image name="Nightly build" width="512" height="512"/>
         <image name="Pfeil" width="630" height="199"/>
         <image name="applied" width="512" height="512"/>
+        <image name="authroot" width="527" height="78"/>
         <image name="bug-report" width="512" height="512"/>
         <image name="clover_logo_shadow" width="600" height="713"/>
         <image name="crt" width="466" height="527"/>

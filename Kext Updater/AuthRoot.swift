@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class BigSurPlus: NSViewController {
+class AuthRoot: NSViewController {
     
     @IBOutlet weak var close_window: NSButton!
     
