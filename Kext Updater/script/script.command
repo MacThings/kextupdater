@@ -21,6 +21,7 @@ if [ ! -d "$ScriptTmpPath" ]; then
 fi
 OS=$( _helpDefaultRead "OSVersion" | cut -c 1-2 )
 
+checkchime=$( _helpDefaultRead "Chime" )
 
 
 ################################################################
@@ -1299,7 +1300,7 @@ function _main()
 
 
     if [[ $checkchime = "1" ]]; then
-        _playchime
+      _playchime
     fi
 }
 
