@@ -13,6 +13,7 @@
 		2A56BDFF2430A6D70064CD4D /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
+		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
 		2AB304A223150E1500D618FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB304A123150E1500D618FF /* Assets.xcassets */; };
@@ -164,6 +165,7 @@
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A856DC123B4291F008760A9 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
+		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB3049F23150E1300D618FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				2ADD786925322A6200A0045C /* About.swift */,
 				2A1D9577251225640077A7C0 /* AuthRoot.swift */,
+				2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */,
 				2AC44BE723150F61006D447C /* Bootloader.swift */,
 				2AC44BEA23150F61006D447C /* Changelog.swift */,
 				2AC44BE523150F61006D447C /* DiskInformation.swift */,
@@ -525,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */,
+				2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */,
 				2AC44BEF23150F61006D447C /* nVidiaWebdriver.swift in Sources */,
 				2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */,
 				2AC44BEC23150F61006D447C /* SingleKexts.swift in Sources */,
@@ -703,7 +707,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 372;
+				CURRENT_PROJECT_VERSION = 373;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -713,7 +717,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.7.2;
+				MARKETING_VERSION = 3.7.3;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -730,7 +734,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 372;
+				CURRENT_PROJECT_VERSION = 373;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -740,7 +744,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.7.2;
+				MARKETING_VERSION = 3.7.3;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

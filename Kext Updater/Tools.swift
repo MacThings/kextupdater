@@ -63,7 +63,15 @@ class Tools: NSViewController {
     @IBOutlet weak var progress_gear_mount: NSProgressIndicator!
     @IBOutlet weak var progress_gear: NSProgressIndicator!
     
+    @IBOutlet weak var show_apply_reboot_warning: NSButton!
+    
+    
     let userDesktopDirectory:String = NSHomeDirectory()
+  
+    override func viewDidAppear() {
+        super.viewDidLoad()
+        // Do view setup here.
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -353,6 +361,7 @@ class Tools: NSViewController {
     }
     
     @IBAction func set_read_write(_ sender: Any) {
+        let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
         self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         let check_rw = UserDefaults.standard.string(forKey: "RW")
         if check_rw == "Yes" {
@@ -367,11 +376,15 @@ class Tools: NSViewController {
             self.button_fix_sleep_undo.isEnabled = true
             self.button_apply.isHidden = false
             self.button_read_write.isHidden = true
-            let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
             if os_version == "10" {
                 self.button_apply.isHidden = true
                 self.button_read_write.isHidden = false
                 self.button_read_write.isEnabled = false
+            } else {
+                let warning_hide = UserDefaults.standard.string(forKey: "AuthRoot Warning Hide")
+                if warning_hide != "1" {
+                    self.show_apply_reboot_warning.performClick(nil)
+                }
             }
         } else {
             self.button_read_write.isEnabled = true

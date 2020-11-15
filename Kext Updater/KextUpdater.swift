@@ -325,6 +325,11 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(false, forKey: "LESLE Warning Hide")
         }
         
+        let authroot_init = UserDefaults.standard.string(forKey: "AuthRoot Warning Hide")
+        if authroot_init == nil{
+            UserDefaults.standard.set(false, forKey: "AuthRoot Warning Hide")
+        }
+
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
             infobox_admin_status_content_yes.isHidden = true

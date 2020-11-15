@@ -115,6 +115,9 @@
 /* Class = "NSTextFieldCell"; title = "Select an OpenCore config.plist which you want to check."; ObjectID = "8G1-E3-FCy"; */
 "8G1-E3-FCy.title" = "Wähle eine OpenCore Konfiguration zum Validieren.";
 
+/* Class = "NSTextFieldCell"; title = "Attention!"; ObjectID = "8OR-xw-MQb"; */
+"8OR-xw-MQb.title" = "Achtung!";
+
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G8037"; ObjectID = "9fk-I7-alU"; */
 "9fk-I7-alU.title" = "10.13.6 - 17G8037";
 
@@ -123,6 +126,9 @@
 
 /* Class = "NSTextFieldCell"; title = "Install Kext for Atheros AR92xx/93xx WLan Cards (only 10.14 +)."; ObjectID = "9hN-PQ-DIu"; */
 "9hN-PQ-DIu.title" = "Installiert Kext für Atheros AR92xx/93xx Wlan Karten. (10.14 +)";
+
+/* Class = "NSTextFieldCell"; title = "When you have finished making changes to the system partition, make sure to reboot the computer using the \"Restart\" button. Otherwise the changes you have made on the system partition will be discarded."; ObjectID = "9ja-DO-FCv"; */
+"9ja-DO-FCv.title" = "Wenn Du mit den Veränderungen an der Systempartition fertig bist, stelle sicher den Rechner über den Button \"Neustart\" neu zu booten. Andernfalls werden Deine vorgenommenen Änderungen verworfen.";
 
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "9p3-6R-FFK"; */
 "9p3-6R-FFK.title" = "Bitte auswählen";
@@ -156,6 +162,9 @@
 
 /* Class = "NSButtonCell"; title = "Shiki"; ObjectID = "71I-RO-UFE"; */
 "71I-RO-UFE.title" = "Shiki";
+
+/* Class = "NSButtonCell"; title = "Don't bother me again"; ObjectID = "75b-Oj-U3B"; */
+"75b-Oj-U3B.title" = "Nicht erneut anzeigen";
 
 /* Class = "NSMenuItem"; title = "10.13.3 - 17D102"; ObjectID = "83j-iN-voK"; */
 "83j-iN-voK.title" = "10.13.3 - 17D102";
@@ -433,8 +442,8 @@
 /* Class = "NSButtonCell"; title = "Webdriver"; ObjectID = "gqe-Mv-U15"; */
 "gqe-Mv-U15.title" = "Webdriver";
 
-/* Class = "NSButtonCell"; title = "Don't bother me again."; ObjectID = "gqu-2d-I7O"; */
-"gqu-2d-I7O.title" = "Nicht erneut anzeigen.";
+/* Class = "NSButtonCell"; title = "Don't bother me again"; ObjectID = "gqu-2d-I7O"; */
+"gqu-2d-I7O.title" = "Nicht erneut anzeigen";
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G1217"; ObjectID = "gVe-vH-pKe"; */
 "gVe-vH-pKe.title" = "10.11.6 - 15G1217";
@@ -444,6 +453,9 @@
 
 /* Class = "NSMenuItem"; title = "10.11.1 - 15B42"; ObjectID = "HAB-EW-EZS"; */
 "HAB-EW-EZS.title" = "10.11.1 - 15B42";
+
+/* Class = "NSViewController"; title = "Attention"; ObjectID = "hce-28-WAf"; */
+"hce-28-WAf.title" = "Achtung";
 
 /* Class = "NSMenuItem"; title = "10"; ObjectID = "Hdk-dJ-VGF"; */
 "Hdk-dJ-VGF.title" = "10";
@@ -820,7 +832,7 @@
 /* Class = "NSTextFieldCell"; title = "Select an EFI folder you want to check for kext updates."; ObjectID = "qMl-rE-aP9"; */
 "qMl-rE-aP9.title" = "Wähle Ordner den du auf Kext Updates prüfen möchtest.";
 
-/* Class = "NSButtonCell"; title = "Apply & Reboot"; ObjectID = "Qo2-pu-oLj"; */
+/* Class = "NSButtonCell"; title = "Reboot"; ObjectID = "Qo2-pu-oLj"; */
 "Qo2-pu-oLj.title" = "Anwenden und Neustarten";
 
 /* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
