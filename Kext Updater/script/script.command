@@ -593,7 +593,6 @@ function initial()
     fi
 
     diskscan=$( diskutil info $efiscan )
-    checkchime=$( _helpDefaultRead "Chime" )
 
     efiroot=$( echo -e "$efiscan" )
     efiname=$( echo -e "$diskscan" | grep "Volume Name:" | sed "s/.*://g" | xargs )
