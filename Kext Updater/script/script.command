@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -255,6 +255,7 @@ kextArray=(
 "voodoosmbus","VoodooSMBus","VoodooSMBus",""
 "voodootscsync","VoodooTSCSync","VoodooTSCSync",""
 "whatevergreen","WhateverGreen","WhateverGreen",""
+"yogasmc","YogaSMC","YogaSMC",""
 )
 
 
@@ -1295,6 +1296,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"cputscsyncnightly" ]; then
     mv ${ScriptDownloadPath}/cputscsyncnightly ${ScriptDownloadPath}/"CpuTscSync Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"yogasmc" ]; then
+    mv ${ScriptDownloadPath}/cputscsyncnightly ${ScriptDownloadPath}/"YogaSMC"
     fi
 
 
@@ -2456,6 +2460,7 @@ function check_opencore_conf()
     ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
     ocbootpath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
       if [[ $ocversion = "" ]] || [[ $ocbootpath = "" ]]; then
+        _helpDefaultWrite "OcError" "Yes"
         echo -e "$ocerror"
         exit 0
       fi

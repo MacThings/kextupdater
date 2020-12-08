@@ -182,6 +182,16 @@ class KextUpdater: NSViewController {
         syncShellExec(path: scriptPath, args: ["initial"])
         syncShellExec(path: scriptPath, args: ["_checkpass_initial"])
         
+        let ocerror = UserDefaults.standard.string(forKey: "OcError")
+        if ocerror == "Yes"{
+            UserDefaults.standard.removeObject(forKey: "OcError")
+            self.egg1.isEnabled=false
+            self.egg2.isEnabled=false
+            self.egg3.isEnabled=false
+            self.egg4.isEnabled=false
+            self.app_logo.isHidden=true
+        }
+        
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")
         if keychaincheck == true{
             keychainyes.isHidden = false

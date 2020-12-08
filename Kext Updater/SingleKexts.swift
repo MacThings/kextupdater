@@ -186,6 +186,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-voodoosdhc")
         UserDefaults.standard.set(true, forKey: "dl-voodootscsync")
         UserDefaults.standard.set(true, forKey: "dl-whatevergreen")
+        UserDefaults.standard.set(true, forKey: "dl-yogasmc")
     }
     
     @IBAction func deselect_all(_ sender: Any) {
@@ -417,6 +418,11 @@ class SingleKexts: NSViewController {
     }
     @IBAction func clover(_ sender: Any) {
         UserDefaults.standard.set("https://sourceforge.net/projects/cloverefiboot/files/", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+ 
+    @IBAction func yogasmc(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/zhen-zen/yogasmc", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     
