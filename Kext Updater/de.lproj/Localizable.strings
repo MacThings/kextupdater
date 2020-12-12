@@ -11,7 +11,13 @@
 "Choose an OpenCore config file" = "Wähle eine OpenCore Konfiguartionsdatei";
 
 /* No comment provided by engineer. */
+"Disabled" = "Deaktiviert";
+
+/* No comment provided by engineer. */
 "Do you want to create a system report right now?" = "Möchtest Du jetzt einen Systemreport erstellen?";
+
+/* No comment provided by engineer. */
+"Enabled" = "Aktiviert";
 
 /* No comment provided by engineer. */
 "No" = "Nein";

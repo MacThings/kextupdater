@@ -36,6 +36,9 @@ class Tools: NSViewController {
     @IBOutlet weak var label_read_write: NSTextField!
     @IBOutlet weak var button_apply: NSButton!
     
+    @IBOutlet weak var button_gatekeeper_enable: NSButton!
+    @IBOutlet weak var button_gatekeeper_disable: NSButton!
+    @IBOutlet weak var label_gatekeeper: NSTextField!
     
     @IBOutlet weak var custom_efi_folder: NSTextField!
     @IBOutlet weak var custom_efi_folder_path: NSTextField!
@@ -127,7 +130,7 @@ class Tools: NSViewController {
             self.fixnotapplied.isHidden = false
         }
         
-            self.syncShellExec(path: self.scriptPath, args: ["checkatheros40"])
+        self.syncShellExec(path: self.scriptPath, args: ["checkatheros40"])
             let atheros40check = UserDefaults.standard.string(forKey: "Atheros40")
             if atheros40check == "1" {
             self.button_atheros.isHidden = true
@@ -141,6 +144,8 @@ class Tools: NSViewController {
             self.atheros40notapplied.isHidden = true
         }
 
+            self.check_gatekeeper()
+       
             self.syncShellExec(path: self.scriptPath, args: ["checkdisablegfxhda"])
             let disablegfxhdacheck = UserDefaults.standard.string(forKey: "DisableGFXHDA")
             if disablegfxhdacheck == "1" {
@@ -397,6 +402,16 @@ class Tools: NSViewController {
         self.syncShellExec(path: self.scriptPath, args: ["_apply_reboot"])
     }
     
+    @IBAction func disable_gatekeeper(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["disable_gatekeeper"])
+        self.check_gatekeeper()
+    }
+    
+    @IBAction func enable_gatekeeper(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["enable_gatekeeper"])
+        self.check_gatekeeper()
+    }
+    
     @IBAction func browseEFIfolder(sender: AnyObject) {
         
         let dialog = NSOpenPanel();
@@ -606,6 +621,20 @@ class Tools: NSViewController {
         self.view.window?.close()
     }
     
+    func check_gatekeeper () {
+        self.syncShellExec(path: self.scriptPath, args: ["check_gatekeeper"])
+        let gatekeeper = UserDefaults.standard.string(forKey: "Gatekeeper")
+        if gatekeeper == "No" {
+        self.button_gatekeeper_enable.isHidden = false
+        self.button_gatekeeper_disable.isHidden = true
+        self.label_gatekeeper.stringValue = NSLocalizedString("Disabled", comment: "")
+    } else {
+        self.button_gatekeeper_enable.isHidden = true
+        self.button_gatekeeper_disable.isHidden = false
+        self.label_gatekeeper.stringValue = NSLocalizedString("Enabled", comment: "")
+    }
+        
+    }
     
     /**
      * Performs an "asynchronous" shell exec with non blocking UI thread

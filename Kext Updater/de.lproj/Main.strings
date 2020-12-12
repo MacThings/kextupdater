@@ -115,6 +115,9 @@
 /* Class = "NSTextFieldCell"; title = "Select an OpenCore config.plist which you want to check."; ObjectID = "8G1-E3-FCy"; */
 "8G1-E3-FCy.title" = "Wähle eine OpenCore Konfiguration zum Validieren.";
 
+/* Class = "NSButtonCell"; title = "Disable"; ObjectID = "8jz-Tr-lzr"; */
+"8jz-Tr-lzr.title" = "Deaktivieren";
+
 /* Class = "NSTextFieldCell"; title = "Attention!"; ObjectID = "8OR-xw-MQb"; */
 "8OR-xw-MQb.title" = "Achtung!";
 
@@ -838,6 +841,9 @@
 /* Class = "NSButtonCell"; title = "Menu Bar Item"; ObjectID = "qoN-tI-Qfd"; */
 "qoN-tI-Qfd.title" = "Menu Bar Item";
 
+/* Class = "NSButtonCell"; title = "Enable"; ObjectID = "QPD-hx-vPa"; */
+"QPD-hx-vPa.title" = "Aktivieren";
+
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F27"; ObjectID = "qQk-uy-On7"; */
 "qQk-uy-On7.title" = "10.10.5 - 14F27";
 
@@ -960,6 +966,9 @@
 
 /* Class = "NSButtonCell"; title = "Reset all"; ObjectID = "U2w-vj-aHe"; */
 "U2w-vj-aHe.title" = "Alles zurücksetzen";
+
+/* Class = "NSTextFieldCell"; title = "Enable or disable Apple's Gatekeeper"; ObjectID = "u5c-E5-KTq"; */
+"u5c-E5-KTq.title" = "Apple's Gatekeeper aktivieren / deaktivieren";
 
 /* Class = "NSTextFieldCell"; title = "D"; ObjectID = "udA-bw-8DN"; */
 "udA-bw-8DN.title" = "D";

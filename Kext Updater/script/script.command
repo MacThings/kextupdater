@@ -2451,6 +2451,47 @@ function efi_backup()
 }
 
 ###################################################################
+########################## Gatekeeper #############################
+###################################################################
+
+function check_gatekeeper()
+{
+    Gatekeeper=$( spctl --status )
+    
+    if [[ "$Gatekeeper" = *"enabled"* ]]; then
+        _helpDefaultWrite "Gatekeeper" "Yes"
+    else
+        _helpDefaultWrite "Gatekeeper" "No"
+    fi
+}
+
+function disable_gatekeeper()
+{
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+
+    if [[ $keychain = "1" ]]; then
+      _getsecret
+      osascript -e 'do shell script "sudo spctl --master-disable" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+      osascript -e 'do shell script "sudo spctl --master-disable" with administrator privileges' >/dev/null 2>&1
+    fi
+}
+
+function enable_gatekeeper()
+{
+    user=$( _helpDefaultRead "Rootuser" )
+    keychain=$( _helpDefaultRead "Keychain" )
+
+    if [[ $keychain = "1" ]]; then
+      _getsecret
+      osascript -e 'do shell script "sudo spctl --master-enable" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+    else
+      osascript -e 'do shell script "sudo spctl --master-enable" with administrator privileges' >/dev/null 2>&1
+    fi
+}
+
+###################################################################
 ##################### Check OpenCore Config #######################
 ###################################################################
 
