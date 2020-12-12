@@ -26,6 +26,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var egg3: NSButton!
     @IBOutlet weak var egg4: NSButton!
     @IBOutlet weak var surprise_xmas: NSImageView!
+    @IBOutlet weak var surprise_snow: NSImageView!
     @IBOutlet weak var surprise_newyear: NSImageView!
         
     @IBOutlet weak var keychain_pfeil: NSImageView!
@@ -125,18 +126,24 @@ class KextUpdater: NSViewController {
         formatter.dateFormat = "dd.MM"
         let result = formatter.string(from: date)
         
-        if result == "24.12" {
-            self.surprise_xmas.isHidden = false
-        } else if result == "25.12" {
-            self.surprise_xmas.isHidden = false
-        } else if result == "26.12" {
-            self.surprise_xmas.isHidden = false
-        } else if result == "31.12" {
+        if result == "31.12" {
             self.surprise_newyear.isHidden = false
         } else if result == "01.01" {
             self.surprise_newyear.isHidden = false
+        } else if result == "27.12" {
+            print("0")
+        } else if result == "28.12" {
+            print("0")
+        } else if result == "29.12" {
+            print("0")
+        } else if result == "30.12" {
+            print("0")
+        } else if result.contains(".12") {
+            self.surprise_xmas.isHidden = false
+            self.surprise_snow.isHidden = false
         }
         
+                
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
 
         NSWorkspace.shared.notificationCenter.addObserver(
@@ -498,8 +505,10 @@ class KextUpdater: NSViewController {
                 output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden = true
         surprise_xmas.isHidden = true
+        surprise_snow.isHidden = true
         surprise_newyear.isHidden = true
 
+        
         animstart()
         
         let date = Date()
