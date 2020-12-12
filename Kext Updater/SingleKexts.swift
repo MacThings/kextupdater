@@ -169,6 +169,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-nvmefix")
         UserDefaults.standard.set(true, forKey: "dl-radeonboost")
         UserDefaults.standard.set(true, forKey: "dl-realtekrtl8111")
+        UserDefaults.standard.set(true, forKey: "dl-restrictevents")
         UserDefaults.standard.set(true, forKey: "dl-rtcmemoryfixup")
         UserDefaults.standard.set(true, forKey: "dl-sinetekrtsx")
         UserDefaults.standard.set(true, forKey: "dl-smalltreeintel82576")
@@ -346,6 +347,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func realtekrtl8111(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/Mieze/RTL8111_driver_for_OS_X", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func restrictevents(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/RestrictEvents", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func rtcmemoryfixup(_ sender: Any) {

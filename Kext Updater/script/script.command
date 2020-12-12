@@ -238,6 +238,7 @@ kextArray=(
 "opencore","OpenCore","OpenCore",""
 "realtekrtl8111","RealtekRTL8111","RealtekRTL8111",""
 "rtcmemoryfixup","RTCMemoryFixup","RTCMemoryFixup",""
+"restrictevents","RestrictEvents","RestrictEvents",""
 "smcamdprocessor","SMCAMDProcessor","SMCAMDProcessor",""
 "shiki","Shiki","Shiki","WhateverGreen","Alarm"
 "sinetekrtsx","Sinetek-rtsx","Sinetekrtsx",""
@@ -1299,6 +1300,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"yogasmc" ]; then
     mv ${ScriptDownloadPath}/cputscsyncnightly ${ScriptDownloadPath}/"YogaSMC"
+    fi
+    if [ -d ${ScriptDownloadPath}/"restricteventsnightly" ]; then
+    mv ${ScriptDownloadPath}/restricteventsnightly ${ScriptDownloadPath}/"RestrictEvents Nightly"
     fi
 
 
