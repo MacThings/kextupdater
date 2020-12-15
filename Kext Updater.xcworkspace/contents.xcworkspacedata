@@ -11,6 +11,9 @@
       location = "group:KUMenuBar/KUMenuBar.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:terminal-notifier/Terminal Notifier.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/luigi/Documents/Xcode/kextupdater/DPCIManager/dspci.xcodeproj">
    </FileRef>
 </Workspace>
