@@ -191,7 +191,7 @@
 /* Begin PBXLegacyTarget section */
 		B0683A9D17AF4EE7003A10CB /* PCI IDs */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-LOz pci.ids https://update.kextupdater.de/lspci/pciids.zip";
+			buildArgumentsString = "-LOz pci.ids https://update.kextupdater.de/lspci/pci.ids";
 			buildConfigurationList = B0683AA017AF4EE7003A10CB /* Build configuration list for PBXLegacyTarget "PCI IDs" */;
 			buildPhases = (
 			);
@@ -268,7 +268,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUMenuBar.app\"\ncp -r \"${TARGET_BUILD_DIR}/dspci\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp \"${TARGET_BUILD_DIR}/dspci\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
