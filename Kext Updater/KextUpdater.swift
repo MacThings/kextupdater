@@ -197,6 +197,8 @@ class KextUpdater: NSViewController {
             self.egg3.isEnabled=false
             self.egg4.isEnabled=false
             self.app_logo.isHidden=true
+            self.surprise_xmas.isHidden=true
+            self.surprise_newyear.isHidden=true
         }
         
         let keychaincheck = UserDefaults.standard.bool(forKey: "Keychain")

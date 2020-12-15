@@ -104,7 +104,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" )
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -173,6 +173,9 @@ function _excludedkexts()
     array=($allkextsupper)
     for i in "${array[@]}"; do
         check=$( echo "$content" | grep -w ex-$i | sed "s/.*=\ //g" )
+        if [[ "$i" = "VoodooPS2" ]]; then
+            i="PS2Controller"
+        fi
         if [[ $check = "true" ]]; then
             kextstats=$( echo "$kextstats" | grep -vw $i )
             else
