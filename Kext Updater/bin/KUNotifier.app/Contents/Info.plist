@@ -9,7 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>terminal-notifier</string>
 	<key>CFBundleIconFile</key>
-	<string>Terminal</string>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
 	<string>fr.julienxx.oss.terminal-notifier</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -44,6 +46,8 @@
 	<string>1220</string>
 	<key>DTXcodeBuild</key>
 	<string>12B45b</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.10</string>
 	<key>LSUIElement</key>
