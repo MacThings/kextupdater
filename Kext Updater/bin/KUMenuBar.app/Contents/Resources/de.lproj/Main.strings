@@ -1,0 +1,99 @@
+/* Class = "NSMenuItem"; title = "KU MenuBar"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "KU MenuBar";
+
+/* Class = "NSMenuItem"; title = "Quit KU MenuBar"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "KU MenuBar beenden";
+
+/* Class = "NSMenuItem"; title = "Open Download Folder"; ObjectID = "4zv-QS-4Dz"; */
+"4zv-QS-4Dz.title" = "Öffne Download Ordner";
+
+/* Class = "NSMenuItem"; title = "Open Kext Updater"; ObjectID = "6dn-K7-ING"; */
+"6dn-K7-ING.title" = "Kext Updater öffnen";
+
+/* Class = "NSTextFieldCell"; title = "Check for Updates every"; ObjectID = "9Ll-4n-mqZ"; */
+"9Ll-4n-mqZ.title" = "Prüfe auf Updates alle";
+
+/* Class = "NSMenuItem"; title = "6"; ObjectID = "aAd-Az-Se2"; */
+"aAd-Az-Se2.title" = "6";
+
+/* Class = "NSButtonCell"; title = "Mount"; ObjectID = "AEd-8C-mR6"; */
+"AEd-8C-mR6.title" = "Mounten";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "1"; ObjectID = "B0G-wl-DPc"; */
+"B0G-wl-DPc.title" = "1";
+
+/* Class = "NSMenuItem"; title = "2"; ObjectID = "bBc-lm-RgD"; */
+"bBc-lm-RgD.title" = "2";
+
+/* Class = "NSTextFieldCell"; title = "Automatically mounts the boot EFI after every boot. The menu Bar Item has to be started permanently."; ObjectID = "bF3-cv-DWp"; */
+"bF3-cv-DWp.title" = "Mounte die Boot EFI nach jedem Systemstart automatisch neu. Das Menu Bar Item muss dafür aber dauerhaft gestartet sein.";
+
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Einstellungen...";
+
+/* Class = "NSMenuItem"; title = "Rebuild Kext Cache"; ObjectID = "c4Z-91-peq"; */
+"c4Z-91-peq.title" = "Kextcache neu aufbauen";
+
+/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "Div-YM-d8p"; */
+"Div-YM-d8p.title" = "Ok";
+
+/* Class = "NSMenuItem"; title = "PID"; ObjectID = "HBZ-fQ-iEw"; */
+"HBZ-fQ-iEw.title" = "PID";
+
+/* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hnL-JR-gU9"; */
+"hnL-JR-gU9.title" = "Auswerfen";
+
+/* Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH"; */
+"IZa-m5-XsH.title" = "Boot-EFI mounten";
+
+/* Class = "NSTextFieldCell"; title = "Mount other EFI"; ObjectID = "J9a-zM-9yu"; */
+"J9a-zM-9yu.title" = "Andere EFI mounten";
+
+/* Class = "NSTextFieldCell"; title = "Check for kext updates only once after each system reboot."; ObjectID = "lVx-SX-Mkn"; */
+"lVx-SX-Mkn.title" = "Prüfe nur einmal nach jedem Systemstart auf Kext Updates.";
+
+/* Class = "NSButtonCell"; title = "Unmount all"; ObjectID = "MiQ-WT-X83"; */
+"MiQ-WT-X83.title" = "Alle auswerfen";
+
+/* Class = "NSViewController"; title = "EFI"; ObjectID = "mjF-K0-W90"; */
+"mjF-K0-W90.title" = "EFI";
+
+/* Class = "NSTextFieldCell"; title = "Preferences"; ObjectID = "no6-as-NNY"; */
+"no6-as-NNY.title" = "Einstellungen";
+
+/* Class = "NSMenuItem"; title = "Mount foreign EFI"; ObjectID = "Nus-1m-TTV"; */
+"Nus-1m-TTV.title" = "Andere EFI mounten";
+
+/* Class = "NSMenuItem"; title = "3"; ObjectID = "qq0-Fk-B6B"; */
+"qq0-Fk-B6B.title" = "3";
+
+/* Class = "NSMenuItem"; title = "Unmount Boot-EFI"; ObjectID = "RDM-FW-6PS"; */
+"RDM-FW-6PS.title" = "Boot-EFI auswerfen";
+
+/* Class = "NSMenuItem"; title = "Check kexts now ..."; ObjectID = "RyK-ui-asr"; */
+"RyK-ui-asr.title" = "Jetzt Kexte prüfen ...";
+
+/* Class = "NSMenu"; title = "KU MenuBar"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "KU MenuBar";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "v6C-Kf-HWC"; */
+"v6C-Kf-HWC.title" = "Schließen";
+
+/* Class = "NSTextFieldCell"; title = "Mount EFI from another Harddisk."; ObjectID = "VLC-sX-XAW"; */
+"VLC-sX-XAW.title" = "Mounte EFI von andere(n) Festplatten.";
+
+/* Class = "NSMenuItem"; title = "Open EFI Folder"; ObjectID = "wNO-id-TVJ"; */
+"wNO-id-TVJ.title" = "Öffne EFI Ordner";
+
+/* Class = "NSTextFieldCell"; title = "Hour(s)"; ObjectID = "yYu-Pv-uSR"; */
+"yYu-Pv-uSR.title" = "Stunde(n)";
+
+/* Class = "NSMenuItem"; title = "5"; ObjectID = "zBR-fz-Qdr"; */
+"zBR-fz-Qdr.title" = "5";
+
+/* Class = "NSMenuItem"; title = "4"; ObjectID = "Zys-O6-UlM"; */
+"Zys-O6-UlM.title" = "4";
+
