@@ -106,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5199791315B1F92B003AFC57 /* terminal-notifier */ = {
+		5199791315B1F92B003AFC57 /* KUNotifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5199793215B1F92B003AFC57 /* Build configuration list for PBXNativeTarget "terminal-notifier" */;
+			buildConfigurationList = 5199793215B1F92B003AFC57 /* Build configuration list for PBXNativeTarget "KUNotifier" */;
 			buildPhases = (
 				5199791015B1F92B003AFC57 /* Sources */,
 				5199791115B1F92B003AFC57 /* Frameworks */,
@@ -119,7 +119,7 @@
 			);
 			dependencies = (
 			);
-			name = "terminal-notifier";
+			name = KUNotifier;
 			productName = "Terminal Notifier";
 			productReference = 5199791415B1F92B003AFC57 /* KUNotifier.app */;
 			productType = "com.apple.product-type.application";
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5199791315B1F92B003AFC57 /* terminal-notifier */,
+				5199791315B1F92B003AFC57 /* KUNotifier */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5199793215B1F92B003AFC57 /* Build configuration list for PBXNativeTarget "terminal-notifier" */ = {
+		5199793215B1F92B003AFC57 /* Build configuration list for PBXNativeTarget "KUNotifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5199793315B1F92B003AFC57 /* Debug */,

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5199791315B1F92B003AFC57"
                BuildableName = "KUNotifier.app"
-               BlueprintName = "terminal-notifier"
+               BlueprintName = "KUNotifier"
                ReferencedContainer = "container:KUNotifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5199791315B1F92B003AFC57"
             BuildableName = "KUNotifier.app"
-            BlueprintName = "terminal-notifier"
+            BlueprintName = "KUNotifier"
             ReferencedContainer = "container:KUNotifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5199791315B1F92B003AFC57"
             BuildableName = "KUNotifier.app"
-            BlueprintName = "terminal-notifier"
+            BlueprintName = "KUNotifier"
             ReferencedContainer = "container:KUNotifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
