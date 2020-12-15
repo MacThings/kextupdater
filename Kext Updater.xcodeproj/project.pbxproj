@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* AuthRoot.swift */; };
-		2A312192258920000072F51B /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A856DC123B4291F008760A9 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A312193258920000072F51B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A55417E254B14D200C0E317 /* AppleGFXHDA */; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
+		2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A67DB52258928F100A85104 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
 		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
@@ -83,7 +83,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
-				2A312192258920000072F51B /* KUMenuBar.app in Bin Copy */,
+				2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */,
 				2A312193258920000072F51B /* KUNotifier.app in Bin Copy */,
 				2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */,
 				2AFE137623AEAF5200A5186D /* dspci in Bin Copy */,
@@ -162,8 +162,8 @@
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2A67DB52258928F100A85104 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2A856DC123B4291F008760A9 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -342,8 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				2A55417E254B14D200C0E317 /* AppleGFXHDA */,
-				2A856DC123B4291F008760A9 /* KUMenuBar.app */,
 				2AFE137423AEAF4700A5186D /* dspci */,
+				2A67DB52258928F100A85104 /* KUMenuBar.app */,
 				2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */,
 				2AC44BBF23150F39006D447C /* BDMESG */,
 			);

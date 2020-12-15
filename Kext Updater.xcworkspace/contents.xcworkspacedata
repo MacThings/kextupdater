@@ -5,15 +5,15 @@
       location = "group:Kext Updater.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:KUMenuBar/KUMenuBar.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:terminal-notifier/Terminal Notifier.xcodeproj">
+      location = "group:KUNotifier/KUNotifier.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/luigi/Documents/Xcode/kextupdater/DPCIManager/dspci.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
