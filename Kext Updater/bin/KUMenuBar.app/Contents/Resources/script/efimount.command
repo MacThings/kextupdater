@@ -1169,20 +1169,20 @@ function _main()
             runcheck_ku=$( pgrep "Kext Updater" )
             if [[ "$runcheck_ku" = "" ]] && [[ -f "$ScriptTmpPath"/kumenuitem ]]; then
                 echo ""
-                ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
+                ../bin/KUNotifier.app/Contents/MacOS/KUNotifier -message "$daemonnotify" -title "KU MenuBar" -appIcon https://update.kextupdater.de/kextupdater/appicon.png -activate 'kextupdater.slsoft.de'
             else
-                ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+                ../bin/KUNotifier.app/Contents/MacOS/KUNotifier -message "$notify1 $amount" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
             fi
         fi
     elif [[ $1 == kextLoader ]]; then
         _kextLoader
         if [[ $notifications = "true" ]]; then
-            ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$notify2" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            ../bin/KUNotifier.app/Contents/MacOS/KUNotifier -message "$notify2" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
         fi
     elif [[ $1 == htmlreport ]]; then
         htmlreport
         if [[ $notifications = "true" ]]; then
-            ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$notify3" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
+            ../bin/KUNotifier.app/Contents/MacOS/KUNotifier -message "$notify3" -title "Kext Updater" -timeout $notificationsseconds & > /dev/null
         fi
     fi
     _ozmosis
@@ -1574,7 +1574,7 @@ function kudaemon()
 
     if [ -f "$ScriptTmpPath"/daemon_notify ]; then
         kuroot=$( _helpDefaultRead "KU Root" )
-        ../bin/KUNotifier.app/Contents/MacOS/terminal-notifier -message "$daemonnotify" -title "KU MenuBar"
+        ../bin/KUNotifier.app/Contents/MacOS/KUNotifier -message "$daemonnotify" -title "KU MenuBar"
         rm "$ScriptTmpPath"/daemon_*
     fi
     exit 0
