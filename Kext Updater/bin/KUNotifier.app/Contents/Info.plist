@@ -6,6 +6,8 @@
 	<string>19H15</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>InfoPlist.strings</string>
 	<key>CFBundleExecutable</key>
 	<string>KUNotifier</string>
 	<key>CFBundleIconFile</key>

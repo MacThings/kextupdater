@@ -39,5 +39,7 @@
 	<string>NSApplication</string>
 	<key>NSUserNotificationAlertStyle</key>
 	<string>banner</string>
+	<key>CFBundleDisplayName</key>
+	<string>InfoPlist.strings</string>
 </dict>
 </plist>

@@ -12,7 +12,6 @@
 		2A67DB492589273300A85104 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5199792B15B1F92B003AFC57 /* AppDelegate.m */; };
 		2A67DB4A2589273300A85104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5199792415B1F92B003AFC57 /* main.m */; };
 		5199791915B1F92B003AFC57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5199791815B1F92B003AFC57 /* Cocoa.framework */; };
-		5199792315B1F92B003AFC57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5199792115B1F92B003AFC57 /* InfoPlist.strings */; };
 		5199792F15B1F92B003AFC57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5199792D15B1F92B003AFC57 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		5199791C15B1F92B003AFC57 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5199791D15B1F92B003AFC57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5199792015B1F92B003AFC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5199792215B1F92B003AFC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5199792415B1F92B003AFC57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5199792615B1F92B003AFC57 /* KUNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KUNotifier-Prefix.pch"; sourceTree = "<group>"; };
 		5199792A15B1F92B003AFC57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				5199792015B1F92B003AFC57 /* Info.plist */,
-				5199792115B1F92B003AFC57 /* InfoPlist.strings */,
 				5199792415B1F92B003AFC57 /* main.m */,
 				5199792615B1F92B003AFC57 /* KUNotifier-Prefix.pch */,
 			);
@@ -159,7 +156,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5199792315B1F92B003AFC57 /* InfoPlist.strings in Resources */,
 				5199792F15B1F92B003AFC57 /* MainMenu.xib in Resources */,
 				2A312198258921A80072F51B /* Assets.xcassets in Resources */,
 			);
@@ -200,14 +196,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5199792115B1F92B003AFC57 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5199792215B1F92B003AFC57 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		5199792D15B1F92B003AFC57 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
