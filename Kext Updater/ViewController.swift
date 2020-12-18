@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
     
     
@@ -22,6 +22,22 @@ class ViewController: NSViewController {
         didSet {
             // Update the view, if already loaded.
         }
+    }
+    
+    let kexts = [["name":"AppleALC"],
+                ["name":"Lilu"],
+                ["name":"VirtualSMC"]]
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return kexts.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let userCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "userCell"), owner: self) as? CustomTableCell else { return nil }
+
+        userCell.KextNameLabel.stringValue = kexts[row]["name"] ?? "unknown user"
+        
+        return userCell
     }
     
     

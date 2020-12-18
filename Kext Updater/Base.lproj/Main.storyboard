@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bdJ-Gk-pDf">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="17506"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,7 +150,7 @@
             <objects>
                 <viewController title="Single Kexts" id="YIT-P4-KYQ" customClass="SingleKexts" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="7FK-pU-2up">
-                        <rect key="frame" x="0.0" y="0.0" width="883" height="567"/>
+                        <rect key="frame" x="0.0" y="0.0" width="886" height="567"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-zL-FeI" userLabel="Headline">
@@ -1933,57 +1933,6 @@
                                     <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-whatevergreennightly" id="N0l-hK-fYq"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3T-sH-Ola" userLabel="Harddisk Gfx">
-                                <rect key="frame" x="453" y="161" width="42" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="efimaker" id="bDE-HN-OhQ"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsW-I1-FWs">
-                                <rect key="frame" x="541" y="159" width="213" height="29"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="EFI Folder Creator" id="Asi-UQ-1TT">
-                                    <font key="font" metaFont="systemBold" size="25"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="IEq-08-Y4S">
-                                <rect key="frame" x="413" y="158" width="461" height="5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-kk-2t0">
-                                <rect key="frame" x="418" y="60" width="458" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" selectable="YES" id="sEC-1F-TvQ">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">Select your desired Kext´s for Download and let the KU create a basic EFI-Folder (OpenCore or Clover) for you. Since the EFI folder is only equipped with a skeleton you have to edit things like ACPI patches and drivers manually if necessary. And for sure the config.plist.</string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-DC-eUE">
-                                <rect key="frame" x="416" y="42" width="235" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="No, thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="KBd-XJ-hqV">
-                                        <items>
-                                            <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
-                                            <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
-                                            <menuItem title="OpenCore (NDK Fork)" tag="6" hidden="YES" id="AQy-ED-smk"/>
-                                            <menuItem title="OpenCore Nightly" tag="2" id="2xY-of-vfI"/>
-                                            <menuItem title="OpenCore Nightly (NDK Fork)" tag="5" hidden="YES" id="cJN-jU-ADV"/>
-                                            <menuItem isSeparatorItem="YES" id="wcX-R5-uz0"/>
-                                            <menuItem title="Clover" tag="3" id="9vw-ao-Ppq"/>
-                                            <menuItem title="Clover Nightly" tag="4" id="k4x-tK-fSm"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="efi_creator_pulldown:" target="YIT-P4-KYQ" id="XJx-Bk-16t"/>
-                                </connections>
-                            </popUpButton>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8g-gz-thV">
                                 <rect key="frame" x="95" y="3" width="130" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2380,6 +2329,57 @@ DQ
                                     <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-lucyrtl8125ethernet" id="65S-qr-y7o"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3T-sH-Ola" userLabel="Harddisk Gfx">
+                                <rect key="frame" x="458" y="159" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="efimaker" id="bDE-HN-OhQ"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsW-I1-FWs">
+                                <rect key="frame" x="546" y="158" width="213" height="29"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="EFI Folder Creator" id="Asi-UQ-1TT">
+                                    <font key="font" metaFont="systemBold" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="IEq-08-Y4S">
+                                <rect key="frame" x="418" y="156" width="461" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-kk-2t0">
+                                <rect key="frame" x="423" y="54" width="458" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" id="sEC-1F-TvQ">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Select your desired Kext´s for Download and let the KU create a basic EFI-Folder (OpenCore or Clover) for you. Since the EFI folder is only equipped with a skeleton you have to edit things like ACPI patches and drivers manually if necessary. And for sure the config.plist.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-DC-eUE">
+                                <rect key="frame" x="421" y="36" width="235" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="No, thank you" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fle-ZA-Ec8" id="LZk-w7-VAa">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="KBd-XJ-hqV">
+                                        <items>
+                                            <menuItem title="No, thank you" state="on" id="fle-ZA-Ec8"/>
+                                            <menuItem title="OpenCore" tag="1" id="z7q-3q-FPw"/>
+                                            <menuItem title="OpenCore (NDK Fork)" tag="6" hidden="YES" id="AQy-ED-smk"/>
+                                            <menuItem title="OpenCore Nightly" tag="2" id="2xY-of-vfI"/>
+                                            <menuItem title="OpenCore Nightly (NDK Fork)" tag="5" hidden="YES" id="cJN-jU-ADV"/>
+                                            <menuItem isSeparatorItem="YES" id="wcX-R5-uz0"/>
+                                            <menuItem title="Clover" tag="3" id="9vw-ao-Ppq"/>
+                                            <menuItem title="Clover Nightly" tag="4" id="k4x-tK-fSm"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="efi_creator_pulldown:" target="YIT-P4-KYQ" id="XJx-Bk-16t"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
                     <connections>
@@ -2395,7 +2395,7 @@ DQ
                 <customObject id="MxA-tg-onC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="G5F-qh-JC0"/>
             </objects>
-            <point key="canvasLocation" x="561.5" y="1342.5"/>
+            <point key="canvasLocation" x="560" y="1342.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iRA-aI-1uo">
@@ -5906,6 +5906,129 @@ DQ
                 <userDefaultsController id="EfE-Pq-Ljc"/>
             </objects>
             <point key="canvasLocation" x="2009" y="1657"/>
+        </scene>
+        <!--Kext download-->
+        <scene sceneID="eLM-aT-YLe">
+            <objects>
+                <viewController title="Kext download" id="dYq-pl-bOa" customClass="ViewController" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="hy5-rg-M0D">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="507"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4du-st-mYs">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="507"/>
+                                <clipView key="contentView" id="a5g-fQ-iDn">
+                                    <rect key="frame" x="1" y="1" width="478" height="505"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" enabled="NO" rowHeight="21" viewBased="YES" floatsGroupRows="NO" id="ZHF-gg-NZW">
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="520"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn editable="NO" width="475" minWidth="40" maxWidth="1000" id="T8v-mh-AOb">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" enabled="NO" borderStyle="border">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" enabled="NO" refusesFirstResponder="YES" title="Text Cell" id="PHF-wc-XoV">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView identifier="userCell" focusRingType="none" id="A3F-TC-87z" customClass="CustomTableCell" customModule="Kext_Updater" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="475" height="506"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-EY-k7z">
+                                                                    <rect key="frame" x="375" y="484" width="95" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="push" title="Show source" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HiM-b9-8X8">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="miniSystem"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="emailButton:" target="A3F-TC-87z" id="dM7-u7-jpH"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8j-Am-24j">
+                                                                    <rect key="frame" x="185" y="488" width="82" height="16"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="check" title="Download" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="iLa-Qw-XwM">
+                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="download:" target="A3F-TC-87z" id="l64-41-Udf"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LO0-lj-Myr">
+                                                                    <rect key="frame" x="14" y="488" width="153" height="16"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="User Name" id="hoh-YP-UBU">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-bI-SWu">
+                                                                    <rect key="frame" x="280" y="487" width="90" height="18"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="check" title="Exclude" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Xpv-8w-7C6">
+                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="exclude:" target="A3F-TC-87z" id="HpB-gv-Gyj"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <connections>
+                                                                <outlet property="KextNameLabel" destination="LO0-lj-Myr" id="sAi-XU-v9m"/>
+                                                                <outlet property="download_box" destination="iLa-Qw-XwM" id="Xkp-fO-w4z"/>
+                                                                <outlet property="exclude_box" destination="Nhe-bI-SWu" id="3jm-Bo-Z87"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="dYq-pl-bOa" id="I3x-93-qJc"/>
+                                                <outlet property="delegate" destination="dYq-pl-bOa" id="TdC-V2-QVE"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="H0L-RA-k9c"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="uc7-6P-sNw">
+                                    <rect key="frame" x="1" y="199" width="821" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="jib-pZ-kY5">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4du-st-mYs" secondAttribute="bottom" id="Un9-ss-oVS"/>
+                            <constraint firstItem="4du-st-mYs" firstAttribute="leading" secondItem="hy5-rg-M0D" secondAttribute="leading" id="elf-7j-MRO"/>
+                            <constraint firstItem="4du-st-mYs" firstAttribute="top" secondItem="hy5-rg-M0D" secondAttribute="top" id="obe-BK-qqz"/>
+                            <constraint firstAttribute="trailing" secondItem="4du-st-mYs" secondAttribute="trailing" id="uzl-g6-ow0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="ted-bB-cYW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="Ob3-UY-BSC"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-1191.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
