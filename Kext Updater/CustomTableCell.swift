@@ -33,9 +33,9 @@ class CustomTableCell: NSTableCellView {
         let kext = KextNameLabel.stringValue
 
         if download_box.state == NSControl.StateValue.on {
-                print(kext + " download")
+            UserDefaults.standard.set(true, forKey: "dl-" + kext.lowercased())
         } else {
-                print(kext + " nodownload")
+            UserDefaults.standard.removeObject(forKey: "dl-" + kext.lowercased())
             
         }
     }
@@ -44,9 +44,9 @@ class CustomTableCell: NSTableCellView {
         let kext = KextNameLabel.stringValue
 
         if exclude_box.state == NSControl.StateValue.on {
-                print(kext + " exclude")
+            UserDefaults.standard.set(true, forKey: "ex-" + kext)
         } else {
-                print(kext + " no exclude")
+            UserDefaults.standard.removeObject(forKey: "ex-" + kext)
             
         }
     }
