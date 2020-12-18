@@ -712,8 +712,8 @@
 /* Class = "NSButtonCell"; title = "WhateverGreen"; ObjectID = "NUX-ff-wyn"; */
 "NUX-ff-wyn.title" = "WhateverGreen";
 
-/* Class = "NSTextFieldCell"; title = "Put the value 77080000 into the csr-active-config of your OpenCore config.plist"; ObjectID = "nVD-kk-IlB"; */
-"nVD-kk-IlB.title" = "Gib den Wert 77080000 in die csr-active-config Deiner OpenCore config.plist ein.";
+/* Class = "NSTextFieldCell"; title = "Put the value FF0F0000 into the csr-active-config of your OpenCore config.plist"; ObjectID = "nVD-kk-IlB"; */
+"nVD-kk-IlB.title" = "Gib den Wert FF0F0000 in die csr-active-config Deiner OpenCore config.plist ein.";
 
 /* Class = "NSMenuItem"; title = "Menlo"; ObjectID = "O1M-uC-lKf"; */
 "O1M-uC-lKf.title" = "Menlo";
@@ -951,6 +951,9 @@
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2009"; ObjectID = "tlc-Af-39T"; */
 "tlc-Af-39T.title" = "10.10.5 - 14F2009";
+
+/* Class = "NSTextFieldCell"; title = "Don't forget to reset the NVRam if you changed csr parameter or put csr-active-config into the Delete Section of OpenCore (see documentation)."; ObjectID = "tM0-PT-J9D"; */
+"tM0-PT-J9D.title" = "Wenn Du diesen Wert änderst muss danach das NVRam zurückgesetzt werden. Alternativ dazu kann man den Punkt csr-active-config auch in die Delete Sektion von OpenCore setzen (siehe Dokumentation).";
 
 /* Class = "NSButtonCell"; title = "VirtualSMC"; ObjectID = "TMB-Bg-QzM"; */
 "TMB-Bg-QzM.title" = "VirtualSMC";

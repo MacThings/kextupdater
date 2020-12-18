@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausi-WOL IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -224,6 +224,7 @@ kextArray=(
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
 "intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
+"intelmausi-wol","IntelMausi-WOL","IntelMausi-WOL",""
 "itlwm","itlwm","itlwm",""
 "itlwmx","itlwmx","itlwmx",""
 "lilu","Lilu","Lilu",""
@@ -1306,6 +1307,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"restricteventsnightly" ]; then
     mv ${ScriptDownloadPath}/restricteventsnightly ${ScriptDownloadPath}/"RestrictEvents Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"intelmausi-wol" ]; then
+    mv ${ScriptDownloadPath}/intelmausi-wol ${ScriptDownloadPath}/"IntelMausi-WOL"
     fi
 
 
