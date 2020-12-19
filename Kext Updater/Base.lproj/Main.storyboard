@@ -5953,7 +5953,7 @@ DQ
                                                                         <font key="font" metaFont="miniSystem"/>
                                                                     </buttonCell>
                                                                     <connections>
-                                                                        <action selector="emailButton:" target="A3F-TC-87z" id="dM7-u7-jpH"/>
+                                                                        <action selector="webview:" target="A3F-TC-87z" id="Ja9-OC-Uuq"/>
                                                                     </connections>
                                                                 </button>
                                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8j-Am-24j">
@@ -5987,12 +5987,23 @@ DQ
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4A-et-YjY" userLabel="Webview button dummy">
+                                                                    <rect key="frame" x="161" y="487" width="18" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="XfL-ms-RII">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <segue destination="4BS-eg-2np" kind="sheet" id="vpA-uI-3Vx"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <connections>
                                                                 <outlet property="KextNameLabel" destination="LO0-lj-Myr" id="sAi-XU-v9m"/>
                                                                 <outlet property="download_box" destination="iLa-Qw-XwM" id="Xkp-fO-w4z"/>
                                                                 <outlet property="exclude_box" destination="Nhe-bI-SWu" id="3jm-Bo-Z87"/>
-                                                                <outlet property="webview_button" destination="aoS-EY-k7z" id="co5-jO-Igq"/>
+                                                                <outlet property="webview_button" destination="m4A-et-YjY" id="INb-D6-VzK"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -6029,10 +6040,11 @@ DQ
                 <customObject id="ted-bB-cYW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="Ob3-UY-BSC"/>
             </objects>
-            <point key="canvasLocation" x="313" y="-1191.5"/>
+            <point key="canvasLocation" x="-1013" y="-554.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="jlC-ai-e4z"/>
         <segue reference="jDB-Qg-yx3"/>
     </inferredMetricsTieBreakers>
     <resources>
