@@ -65,6 +65,8 @@ class CustomTableCell: NSTableCellView {
 
     @IBAction func webview(_ sender: Any) {
         let kext = KextNameLabel.stringValue.lowercased()
+        
+        UserDefaults.standard.removeObject(forKey: "SourceURL")
   
         if kext == "acpibatterymanager" {
             UserDefaults.standard.set("https://github.com/RehabMan/OS-X-ACPI-Battery-Driver", forKey: "SourceURL")
@@ -104,7 +106,7 @@ class CustomTableCell: NSTableCellView {
             UserDefaults.standard.set("https://github.com/zxystd/IntelBluetoothFirmware", forKey: "SourceURL")
         } else if kext == "intelmausi" {
             UserDefaults.standard.set("https://github.com/acidanthera/IntelMausi", forKey: "SourceURL")
-        } else if kext == "intelmausiwol" {
+        } else if kext == "intelmausi-wol" {
             UserDefaults.standard.set("https://github.com/fischerscode/IntelMausi-WOL", forKey: "SourceURL")
         } else if kext == "intelmausiethernet" {
             UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-intel-network/overview", forKey: "SourceURL")
@@ -174,7 +176,6 @@ class CustomTableCell: NSTableCellView {
 
         webview_button.performClick(nil)
 
-        
     }
     
 
