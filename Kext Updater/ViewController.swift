@@ -94,7 +94,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let userCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "userCell"), owner: self) as? CustomTableCell else { return nil }
 
-        userCell.KextNameLabel.stringValue = kexts[row]["name"] ?? "unknown user"
+        userCell.KextNameLabel.stringValue = kexts[row]["name"] ?? "unknown kext"
         
         return userCell
     }

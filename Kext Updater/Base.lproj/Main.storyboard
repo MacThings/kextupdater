@@ -1992,7 +1992,7 @@ DQ
                                 </connections>
                             </button>
                             <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5T-QQ-JDg" userLabel="Webview button dummy">
-                                <rect key="frame" x="8" y="-62" width="18" height="17"/>
+                                <rect key="frame" x="8" y="8" width="18" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CCd-WW-yan">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -5992,6 +5992,7 @@ DQ
                                                                 <outlet property="KextNameLabel" destination="LO0-lj-Myr" id="sAi-XU-v9m"/>
                                                                 <outlet property="download_box" destination="iLa-Qw-XwM" id="Xkp-fO-w4z"/>
                                                                 <outlet property="exclude_box" destination="Nhe-bI-SWu" id="3jm-Bo-Z87"/>
+                                                                <outlet property="webview_button" destination="aoS-EY-k7z" id="co5-jO-Igq"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
