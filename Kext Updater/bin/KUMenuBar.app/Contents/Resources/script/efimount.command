@@ -226,7 +226,7 @@ kextArray=(
 "intelmausi","IntelMausi","IntelMausi",""
 "intelmausi-wol","IntelMausi-WOL","IntelMausi-WOL",""
 "itlwm","itlwm","itlwm",""
-"itlwmx","itlwmx","itlwmx",""
+"itlwmx","itlwmx","itlwmx","itlwm"
 "lilu","Lilu","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
 "lucyrtl8125ethernet","LucyRTL8125Ethernet","LucyRTL8125Ethernet",""
