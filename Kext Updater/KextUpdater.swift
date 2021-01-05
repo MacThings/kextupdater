@@ -542,7 +542,7 @@ class KextUpdater: NSViewController {
             } else if oc_config_check == true{
                 self.syncShellExec(path: self.scriptPath, args: ["_check_oc_config"])
                 for key in UserDefaults.standard.dictionaryRepresentation().keys {
-                    if key.hasPrefix("OCConfigC"){
+                    if key.hasPrefix("OCC"){
                         UserDefaults.standard.removeObject(forKey: key)
                 }
                 }

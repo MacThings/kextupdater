@@ -103,6 +103,9 @@
 /* Class = "NSTextFieldCell"; title = "Device Node:"; ObjectID = "7dp-s4-yn9"; */
 "7dp-s4-yn9.title" = "Device Node:";
 
+/* Class = "NSButton"; ibShadowedToolTip = "Make sure that your OpenCore Nightly version is not older than 24 hours. Otherwise it can lead to false reports."; ObjectID = "7Eb-xe-pyE"; */
+"7Eb-xe-pyE.ibShadowedToolTip" = "Stelle sicher, dass Deine OpenCore Nightly Version nicht älter als 24 Stunden ist. Andernfalls kann es sonst zu Falschmeldungen kommen.";
+
 /* Class = "NSTextFieldCell"; title = "nVidia Webdriver"; ObjectID = "7q9-hi-f5h"; */
 "7q9-hi-f5h.title" = "nVidia Webdriver";
 
@@ -570,6 +573,9 @@
 
 /* Class = "NSViewController"; title = "Changelog"; ObjectID = "JRA-D6-Wdb"; */
 "JRA-D6-Wdb.title" = "Changelog";
+
+/* Class = "NSTextFieldCell"; title = "This function is very experimental and can lead to problems! Use it with care."; ObjectID = "jXJ-Uo-fQf"; */
+"jXJ-Uo-fQf.title" = "Diese Funktion ist höchst experimentell! Benutze sie vorsichtig, da es zu Problemen führen kann.";
 
 /* Class = "NSTextFieldCell"; title = "Reboot into recovery mode and run:"; ObjectID = "jXL-St-TH0"; */
 "jXL-St-TH0.title" = "Boote in den Recovery Modus und führe folgenden Befehl aus:";
