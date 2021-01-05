@@ -2646,7 +2646,14 @@ function _check_oc_config()
 {
 
     oc_file=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCConfigFile" )
-    curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+    oc_nightly=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCConfigNightly" )
+    
+    if [[ "$oc_nightly" != "1" ]]; then
+        curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+    else
+        curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
+        echo "yo"
+    fi
     unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
     ${ScriptTmpPath}/./ConfigValidity "$oc_file"
     if [[ $checkchime = "1" ]]; then
