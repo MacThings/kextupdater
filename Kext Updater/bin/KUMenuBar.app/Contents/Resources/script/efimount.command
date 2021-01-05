@@ -1308,6 +1308,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"restricteventsnightly" ]; then
     mv ${ScriptDownloadPath}/restricteventsnightly ${ScriptDownloadPath}/"RestrictEvents Nightly"
     fi
+    if [ -d ${ScriptDownloadPath}/"restrictevents" ]; then
+    mv ${ScriptDownloadPath}/restrictevents ${ScriptDownloadPath}/"RestrictEvents"
+    fi
     if [ -d ${ScriptDownloadPath}/"intelmausi-wol" ]; then
     mv ${ScriptDownloadPath}/intelmausi-wol ${ScriptDownloadPath}/"IntelMausi-WOL"
     fi
