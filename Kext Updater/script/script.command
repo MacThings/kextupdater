@@ -2652,7 +2652,6 @@ function _check_oc_config()
         curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
     else
         curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
-        echo "yo"
     fi
     
     unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
