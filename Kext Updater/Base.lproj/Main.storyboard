@@ -584,7 +584,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.ex-BrcmFirmwareStore" id="cXw-X0-kXl"/>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.ex-BrightnessKeys" id="Xxc-Te-aG9"/>
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiW-pf-k2L" userLabel="CodecCommander">
