@@ -104,7 +104,8 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" )
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" )
+    echo "$kextstatsori" > /tmp/doll
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -172,6 +173,9 @@ function _excludedkexts()
 
     array=($allkextsupper)
     for i in "${array[@]}"; do
+        if [[ "$i" = "BrcmPatchRam" ]]; then
+            i="BrcmFirmwareStore"
+        fi
         check=$( echo "$content" | grep -w ex-$i | sed "s/.*=\ //g" )
         if [[ "$i" = "VoodooPS2" ]]; then
             i="PS2Controller"
@@ -181,6 +185,7 @@ function _excludedkexts()
             else
             kextstats=$( echo "$kextstats" )
         fi
+        echo "$kextstats" > /tmp/doll
     done
 }
 
@@ -1313,6 +1318,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"intelmausi-wol" ]; then
     mv ${ScriptDownloadPath}/intelmausi-wol ${ScriptDownloadPath}/"IntelMausi-WOL"
+    fi
+    if [ -d ${ScriptDownloadPath}/"brcmpatchram" ]; then
+    mv ${ScriptDownloadPath}/brcmpatchram ${ScriptDownloadPath}/"BrcmPatchRAM"
     fi
 
 

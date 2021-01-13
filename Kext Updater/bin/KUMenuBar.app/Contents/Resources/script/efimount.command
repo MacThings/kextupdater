@@ -104,7 +104,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" )
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -2652,7 +2652,6 @@ function _check_oc_config()
         curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
     else
         curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
-        echo "yo"
     fi
     
     unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
