@@ -104,7 +104,7 @@ allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" )
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" | sed 's/IntelMausi-WOL/IntelMausiWOL/g' )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -117,7 +117,7 @@ function _excludedkexts()
     fi
 
     ### DEBUG Point. Testing Kexts without really loaded ###
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  116    1 0xffffff7f8423a000 0x28000    0x28000    com.alexandred.VoodooI2C (2.4.2) 31FC3ED7-7A4D-3AB7-B32B-29AD171FD393 <115 57 41 13 12 6 5 3 1>" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  116    1 0xffffff7f8423a000 0x28000    0x28000    com.alexandred.IntelMausi (1.0.5) 31FC3ED7-7A4D-3AB7-B32B-29AD171FD393 <115 57 41 13 12 6 5 3 1>" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -172,6 +172,9 @@ function _excludedkexts()
 
     array=($allkextsupper)
     for i in "${array[@]}"; do
+        if [[ "$i" = "BrcmPatchRam" ]]; then
+            i="BrcmFirmwareStore"
+        fi
         check=$( echo "$content" | grep -w ex-$i | sed "s/.*=\ //g" )
         if [[ "$i" = "VoodooPS2" ]]; then
             i="PS2Controller"
@@ -224,7 +227,7 @@ kextArray=(
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
 "intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
-"intelmausi-wol","IntelMausi-WOL","IntelMausi-WOL",""
+"intelmausi-wol","IntelMausiWOL","IntelMausi-WOL",""
 "itlwm","itlwm","itlwm",""
 "itlwmx","itlwmx","itlwmx","itlwm"
 "lilu","Lilu","Lilu",""
@@ -1313,6 +1316,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"intelmausi-wol" ]; then
     mv ${ScriptDownloadPath}/intelmausi-wol ${ScriptDownloadPath}/"IntelMausi-WOL"
+    fi
+    if [ -d ${ScriptDownloadPath}/"brcmpatchram" ]; then
+    mv ${ScriptDownloadPath}/brcmpatchram ${ScriptDownloadPath}/"BrcmPatchRAM"
     fi
 
 
