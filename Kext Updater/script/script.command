@@ -1316,7 +1316,9 @@ function _main()
     mv ${ScriptDownloadPath}/restrictevents ${ScriptDownloadPath}/"RestrictEvents"
     fi
     if [ -d ${ScriptDownloadPath}/"intelmausiwol" ]; then
-    mv ${ScriptDownloadPath}/intelmausiwol ${ScriptDownloadPath}/"IntelMausi-WOL"
+    mkdir ${ScriptDownloadPath}/"IntelMausi-WOL"
+    mv ${ScriptDownloadPath}/intelmausiwol/* ${ScriptDownloadPath}/"IntelMausi-WOL"
+    rm -rf ${ScriptDownloadPath}/"intelmausiwol"
     fi
     if [ -d ${ScriptDownloadPath}/"brcmpatchram" ]; then
     mv ${ScriptDownloadPath}/brcmpatchram ${ScriptDownloadPath}/"BrcmPatchRAM"
