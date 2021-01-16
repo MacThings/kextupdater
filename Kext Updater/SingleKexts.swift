@@ -157,7 +157,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-hibernationfixup")
         UserDefaults.standard.set(true, forKey: "dl-intelbluetoothfirmware")
         UserDefaults.standard.set(true, forKey: "dl-intelmausi")
-        UserDefaults.standard.set(true, forKey: "dl-intelmausi-wol")
+        UserDefaults.standard.set(true, forKey: "dl-intelmausiwol")
         UserDefaults.standard.set(true, forKey: "dl-intelmausiethernet")
         UserDefaults.standard.set(true, forKey: "dl-itlwm")
         UserDefaults.standard.set(true, forKey: "dl-lilu")

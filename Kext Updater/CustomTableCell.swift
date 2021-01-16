@@ -106,7 +106,7 @@ class CustomTableCell: NSTableCellView {
             UserDefaults.standard.set("https://github.com/zxystd/IntelBluetoothFirmware", forKey: "SourceURL")
         } else if kext == "intelmausi" {
             UserDefaults.standard.set("https://github.com/acidanthera/IntelMausi", forKey: "SourceURL")
-        } else if kext == "intelmausi-wol" {
+        } else if kext == "intelmausiwol" {
             UserDefaults.standard.set("https://github.com/fischerscode/IntelMausi-WOL", forKey: "SourceURL")
         } else if kext == "intelmausiethernet" {
             UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-intel-network/overview", forKey: "SourceURL")

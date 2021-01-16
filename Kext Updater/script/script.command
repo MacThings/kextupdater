@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausi-WOL IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm itlwmx Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -117,7 +117,8 @@ function _excludedkexts()
     fi
 
     ### DEBUG Point. Testing Kexts without really loaded ###
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  116    1 0xffffff7f8423a000 0x28000    0x28000    com.alexandred.IntelMausi (1.0.5) 31FC3ED7-7A4D-3AB7-B32B-29AD171FD393 <115 57 41 13 12 6 5 3 1>" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  IntelMausiWOL (1.0.3)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  IntelMausiEthernet (1.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -227,7 +228,7 @@ kextArray=(
 "intelmausi","AppleIntelE1000","AppleIntelE1000","IntelMausi"
 "intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
-"intelmausi-wol","IntelMausiWOL","IntelMausi-WOL",""
+"intelmausiwol","IntelMausiWOL","IntelMausi-WOL",""
 "itlwm","itlwm","itlwm",""
 "itlwmx","itlwmx","itlwmx","itlwm"
 "lilu","Lilu","Lilu",""
@@ -1314,8 +1315,8 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"restrictevents" ]; then
     mv ${ScriptDownloadPath}/restrictevents ${ScriptDownloadPath}/"RestrictEvents"
     fi
-    if [ -d ${ScriptDownloadPath}/"intelmausi-wol" ]; then
-    mv ${ScriptDownloadPath}/intelmausi-wol ${ScriptDownloadPath}/"IntelMausi-WOL"
+    if [ -d ${ScriptDownloadPath}/"intelmausiwol" ]; then
+    mv ${ScriptDownloadPath}/intelmausiwol ${ScriptDownloadPath}/"IntelMausi-WOL"
     fi
     if [ -d ${ScriptDownloadPath}/"brcmpatchram" ]; then
     mv ${ScriptDownloadPath}/brcmpatchram ${ScriptDownloadPath}/"BrcmPatchRAM"
