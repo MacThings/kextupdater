@@ -2997,7 +2997,7 @@ DQ
                                             <rect key="frame" x="606" y="272" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
-                                        <textField toolTip="/Library/PrivilegedHelperTools/com.tonymacx86.InstallHelper" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jey-HD-Doq">
+                                        <textField hidden="YES" toolTip="/Library/PrivilegedHelperTools/com.tonymacx86.InstallHelper" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jey-HD-Doq">
                                             <rect key="frame" x="586" y="217" width="75" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" selectable="YES" alignment="center" title="Multibeast detected" id="BgT-Fp-Dlw">
@@ -3725,7 +3725,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-dn-Gi8">
-                                            <rect key="frame" x="11" y="63" width="155" height="18"/>
+                                            <rect key="frame" x="7" y="68" width="155" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Notifications" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZQg-K0-jyG">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -3737,7 +3737,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1D2-V9-AS2">
-                                            <rect key="frame" x="11" y="85" width="113" height="18"/>
+                                            <rect key="frame" x="7" y="88" width="113" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Oldschool CRT" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Y9R-c0-5Tt">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -3823,7 +3823,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                             </connections>
                                         </button>
                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAb-F7-mch" userLabel="Volslider">
-                                            <rect key="frame" x="34" y="19" width="115" height="17"/>
+                                            <rect key="frame" x="32" y="6" width="115" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <sliderCell key="cell" alignment="left" maxValue="99" doubleValue="2.7218614718614713" tickMarkPosition="below" sliderType="linear" id="arC-TE-EmP"/>
                                             <connections>
@@ -3832,17 +3832,17 @@ These options can be set in the settings of the KU MenuBar.</string>
                                             </connections>
                                         </slider>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-UI-Aj8" userLabel="Speakericon on">
-                                            <rect key="frame" x="13" y="16" width="24" height="24"/>
+                                            <rect key="frame" x="11" y="3" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarAudioOutputVolumeHighTemplate" id="PMP-KC-2bh"/>
                                         </imageView>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3E-RU-oPi">
-                                            <rect key="frame" x="13" y="16" width="24" height="24"/>
+                                            <rect key="frame" x="11" y="3" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarAudioOutputMuteTemplate" id="uVI-Wq-Lj7"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irq-at-PWj">
-                                            <rect key="frame" x="11" y="39" width="147" height="16"/>
+                                            <rect key="frame" x="8" y="25" width="147" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Chime Volume" id="5hR-NV-HhX">
                                                 <font key="font" metaFont="system"/>
@@ -3850,6 +3850,18 @@ These options can be set in the settings of the KU MenuBar.</string>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="War-DM-lVc">
+                                            <rect key="frame" x="7" y="47" width="167" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Mute Multibeast alert" bezelStyle="regularSquare" imagePosition="left" inset="2" id="hRQ-T1-kHg">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent">s</string>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="6AW-Jc-UYO" name="value" keyPath="values.MuteMultibeastAlert" id="hnt-wp-Prs"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </box>
@@ -6065,7 +6077,7 @@ DQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jlC-ai-e4z"/>
+        <segue reference="vpA-uI-3Vx"/>
         <segue reference="jDB-Qg-yx3"/>
     </inferredMetricsTieBreakers>
     <resources>

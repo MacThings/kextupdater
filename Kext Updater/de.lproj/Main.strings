@@ -490,6 +490,9 @@
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */
 "HQV-TC-zTT.title" = "Lilu";
 
+/* Class = "NSButtonCell"; title = "Mute Multibeast alert"; ObjectID = "hRQ-T1-kHg"; */
+"hRQ-T1-kHg.title" = "Kein Multibeast Hinweis";
+
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "hvg-Oj-Vjg"; */
 "hvg-Oj-Vjg.title" = "Start";
 

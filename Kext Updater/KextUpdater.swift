@@ -348,7 +348,12 @@ class KextUpdater: NSViewController {
         if authroot_init == nil{
             UserDefaults.standard.set(false, forKey: "AuthRoot Warning Hide")
         }
-
+ 
+        let multibeast_alert = UserDefaults.standard.string(forKey: "MuteMultibeastAlert")
+        if multibeast_alert == nil{
+            UserDefaults.standard.set(false, forKey: "MuteMultibeastAlert")
+        }
+        
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
             infobox_admin_status_content_yes.isHidden = true
@@ -426,9 +431,11 @@ class KextUpdater: NSViewController {
         
         let mbCheck = "/Library/PrivilegedHelperTools/com.tonymacx86.InstallHelper"
         if (FileManager.default.fileExists(atPath: mbCheck)) {
-            self.mb_detected.isHidden=false
-        } else{
-            self.mb_detected.isHidden=true
+            let mute_multibeast_alert = UserDefaults.standard.bool(forKey: "MuteMultibeastAlert")
+            if mute_multibeast_alert == false{
+                self.mb_detected.isHidden=false
+                output_window.string = NSLocalizedString("Found a reference to multibeast!\n/Library/PrivilegedHelperTools/com.tonymacx86.InstallHelper", comment: "")
+            }
         }
         
         let fontsize = CGFloat(UserDefaults.standard.float(forKey: "Font Size"))
