@@ -21,6 +21,7 @@ class Preferences: NSViewController {
     
 
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     
     override func viewDidAppear() {
         self.view.window?.styleMask.remove(NSWindow.StyleMask.resizable)

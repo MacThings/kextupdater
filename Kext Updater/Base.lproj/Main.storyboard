@@ -2863,6 +2863,22 @@ DQ
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="nN4-vJ-ewY"/>
                                                     </imageView>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-LX-hdF" userLabel="Prefs Button">
+                                                        <rect key="frame" x="143" y="168" width="23" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="90l-x8-LOW">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <segue destination="9HD-lp-UVI" kind="sheet" id="mFw-0w-Zlu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cud-Dz-xnO">
+                                                        <rect key="frame" x="143" y="168" width="23" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="XMy-Gc-Fgi"/>
+                                                    </imageView>
                                                 </subviews>
                                             </view>
                                         </box>
@@ -3871,9 +3887,6 @@ These options can be set in the settings of the KU MenuBar.</string>
                                 <buttonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U2w-vj-aHe">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="resetprefs:" target="9HD-lp-UVI" id="VUr-cn-Bde"/>
@@ -5284,7 +5297,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-63-HwC">
-                                <rect key="frame" x="-2" y="232" width="353" height="47"/>
+                                <rect key="frame" x="-2" y="234" width="353" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Kext Updater" id="Sfg-Nd-3CD">
                                     <font key="font" size="33" name="ArialRoundedMTBold"/>
@@ -5293,7 +5306,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-ig-Fe1">
-                                <rect key="frame" x="94" y="75" width="160" height="160"/>
+                                <rect key="frame" x="94" y="79" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5301,9 +5314,9 @@ DQ
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HF Logo" id="oUw-ca-lQd"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-MF-vlZ">
-                                <rect key="frame" x="61" y="16" width="270" height="51"/>
+                                <rect key="frame" x="-2" y="25" width="353" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Developed By: Sascha Lamprecht Program Icon: Nio82" allowsEditingTextAttributes="YES" id="hEx-SJ-Y1C">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Developed by Sascha Lamprecht Program Icon by Nio82" allowsEditingTextAttributes="YES" id="hEx-SJ-Y1C">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -5318,15 +5331,25 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geT-Iy-qD1">
+                                <rect key="frame" x="-2" y="60" width="353" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="ngq-Ba-RSe">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="copyright" destination="b3i-3i-bBP" id="1Hj-6g-mEd"/>
+                        <outlet property="version" destination="geT-Iy-qD1" id="hOL-Kb-lbV"/>
                     </connections>
                 </viewController>
                 <customObject id="l9q-P2-iZp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-239"/>
+            <point key="canvasLocation" x="779.5" y="-239"/>
         </scene>
         <!--Changelog-->
         <scene sceneID="Klp-qA-dOj">
@@ -6079,9 +6102,11 @@ DQ
     <inferredMetricsTieBreakers>
         <segue reference="vpA-uI-3Vx"/>
         <segue reference="jDB-Qg-yx3"/>
+        <segue reference="mFw-0w-Zlu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HF Logo" width="512" height="512"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSCaution" width="32" height="32"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>

@@ -10,10 +10,12 @@ import Cocoa
 
 class About: NSViewController {
     
-    @IBOutlet weak var close_window: NSButton!
     @IBOutlet weak var copyright: NSTextField!
+    @IBOutlet weak var version: NSTextField!
     
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    
+    
     
     override func viewDidAppear() {
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
@@ -26,6 +28,7 @@ class About: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.version.stringValue = "Version " + appVersion!
         // Do view setup here.
     }
 

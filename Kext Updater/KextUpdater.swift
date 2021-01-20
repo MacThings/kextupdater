@@ -81,7 +81,6 @@ class KextUpdater: NSViewController {
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
-    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         
     @IBAction func quit_app(_ sender: Any) {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
@@ -113,7 +112,7 @@ class KextUpdater: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.title = "Kext Updater v. " + appVersion!
+        self.view.window?.title = "Kext Updater"
 
     }
     

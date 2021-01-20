@@ -469,8 +469,8 @@
 /* Class = "NSButtonCell"; title = "NoTouchID"; ObjectID = "hEG-Hv-KOH"; */
 "hEG-Hv-KOH.title" = "NoTouchID";
 
-/* Class = "NSTextFieldCell"; title = "Developed By: Sascha Lamprecht Program Icon: Nio82"; ObjectID = "hEx-SJ-Y1C"; */
-"hEx-SJ-Y1C.title" = "Entwickelt von: Sascha Lamprecht Programm Symbol: Nio82";
+/* Class = "NSTextFieldCell"; title = "Developed by Sascha Lamprecht Program Icon by Nio82"; ObjectID = "hEx-SJ-Y1C"; */
+"hEx-SJ-Y1C.title" = "Entwickelt von Sascha Lamprecht Programm Symbol von Nio82";
 
 /* Class = "NSButtonCell"; title = "ThunderboltReset"; ObjectID = "hhd-3S-jgf"; */
 "hhd-3S-jgf.title" = "ThunderboltReset";
