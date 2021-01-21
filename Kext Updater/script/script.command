@@ -2446,7 +2446,7 @@ function efi_backup()
     
     if [[ "$efi_mounted" = "Yes" ]]; then
         efi_path=$( _helpDefaultRead "EFI Path" )
-        backup_date=$( date +"%d.%m.%Y_%H-%M-%S" )
+        backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
         MountPoint=$( _helpDefaultRead "Mount Point" )
         
         cd "$MountPoint"
