@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -222,6 +222,7 @@ kextArray=(
 "fakesmc","FakeSMC","FakeSMC",""
 "genericusbxhci","GenericUSBXHCI","GenericUSBXHCI",""
 "hibernationfixup","HibernationFixup","HibernationFixup",""
+"horndis","HoRNDIS","HoRNDIS",""
 "intelbluetoothfirmware","IntelBluetoothFirmware","IntelBluetoothFirmware",""
 "intelgraphicsdvmtfixup","IntelGraphicsDVMTFixup","IntelGraphicsDVMTFixup","WhateverGreen","Alarm"
 "intelgraphicsfixup","IntelGraphicsFixup","IntelGraphicsFixup","WhateverGreen","Alarm"
@@ -1324,6 +1325,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"itlwmnightly" ]; then
     mv ${ScriptDownloadPath}/itlwmnightly ${ScriptDownloadPath}/"itlwm Nightly"
+    fi
+    if [ -d ${ScriptDownloadPath}/"horndis" ]; then
+    mv ${ScriptDownloadPath}/horndis ${ScriptDownloadPath}/"HoRNDIS"
     fi
 
     if [[ $checkchime = "1" ]]; then

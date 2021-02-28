@@ -49,8 +49,8 @@
 		2AC51C632515EBCE0029A19A /* LESLEWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC51C622515EBCE0029A19A /* LESLEWarning.swift */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2ADD786A25322A6200A0045C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD786925322A6200A0045C /* About.swift */; };
-		2AE75AB7244B3D9C00A209A7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */; };
-		2AE75ABA244B3DEB00A209A7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */; };
+		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
+		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
 		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; };
 		7D1EE82D67F3F88C8DABD09E /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
 /* End PBXBuildFile section */
@@ -219,8 +219,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE75AB7244B3D9C00A209A7 /* BuildFile in Frameworks */,
-				2AE75ABA244B3DEB00A209A7 /* BuildFile in Frameworks */,
+				2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */,
+				2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */,
 				7D1EE82D67F3F88C8DABD09E /* Pods_Kext_Updater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,8 +401,8 @@
 			);
 			name = "Kext Updater";
 			packageProductDependencies = (
-				2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */,
-				2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */,
+				2AE75AB6244B3D9C00A209A7 /* KeychainSwift */,
+				2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */,
 			);
 			productName = "Kext Updater";
 			productReference = 2AB3049A23150E1300D618FF /* Kext Updater.app */;
@@ -439,8 +439,8 @@
 			);
 			mainGroup = 2AB3049123150E1300D618FF;
 			packageReferences = (
-				2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */,
-				2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */,
+				2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */,
 			);
 			productRefGroup = 2AB3049B23150E1300D618FF /* Products */;
 			projectDirPath = "";
@@ -713,7 +713,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 383;
+				CURRENT_PROJECT_VERSION = 384;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,7 +723,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.3;
+				MARKETING_VERSION = 3.8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -739,7 +739,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 383;
+				CURRENT_PROJECT_VERSION = 384;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,7 +749,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.3;
+				MARKETING_VERSION = 3.8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -781,7 +781,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */ = {
+		2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -789,7 +789,7 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */ = {
+		2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Clipy/LoginServiceKit";
 			requirement = {
@@ -800,14 +800,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */ = {
+		2AE75AB6244B3D9C00A209A7 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */;
+			package = 2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */ = {
+		2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */;
+			package = 2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */;
 			productName = LoginServiceKit;
 		};
 /* End XCSwiftPackageProductDependency section */

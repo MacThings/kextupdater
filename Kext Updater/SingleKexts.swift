@@ -294,6 +294,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/acidanthera/HibernationFixup", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
+    @IBAction func horndis(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/jwise/HoRNDIS", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
     @IBAction func intelbluetoothfirmware(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/zxystd/IntelBluetoothFirmware", forKey: "SourceURL")
         webview_button.performClick(nil)
