@@ -648,9 +648,9 @@ function initial()
     fi
 
     if [[ "$choosed" != "1" ]]; then
-        bootloader="OpenCore"
-        ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-.*//g" )
-        _helpDefaultWrite "Bootloaderversion" "$bootloader v$ocversion"
+        bootloader="OC"
+        ocversion=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version |sed -e "s/.*REL/REL/g" -e "s/REL-//g" -e "s/.*DBG/DBG/g" -e "s/DBG-//g" -e "s/-202/\ 202/g" -e 's/./&./1' -e 's/./&./3' -e "s/.*0/(&/" -e "s/./&)/6" )
+        _helpDefaultWrite "Bootloaderversion" "'$bootloader $ocversion'"
     fi
 
     nohack=$( _helpDefaultRead "Bootloaderversion" )
