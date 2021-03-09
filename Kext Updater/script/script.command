@@ -1329,6 +1329,9 @@ function _main()
     if [ -d ${ScriptDownloadPath}/"horndis" ]; then
     mv ${ScriptDownloadPath}/horndis ${ScriptDownloadPath}/"HoRNDIS"
     fi
+    if [ -d ${ScriptDownloadPath}/"sinetekrtsx" ]; then
+    mv ${ScriptDownloadPath}/sinetekrtsx ${ScriptDownloadPath}/"Sinetek-rtsx"
+    fi
 
     if [[ $checkchime = "1" ]]; then
       _playchime
