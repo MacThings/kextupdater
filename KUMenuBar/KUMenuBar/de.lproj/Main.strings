@@ -46,7 +46,7 @@
 /* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hnL-JR-gU9"; */
 "hnL-JR-gU9.title" = "Auswerfen";
 
-/* Class = "NSMenuItem"; title = "Mount Booot-EFI"; ObjectID = "IZa-m5-XsH"; */
+/* Class = "NSMenuItem"; title = "Mount Boot-EFI"; ObjectID = "IZa-m5-XsH"; */
 "IZa-m5-XsH.title" = "Boot-EFI mounten";
 
 /* Class = "NSTextFieldCell"; title = "Mount other EFI"; ObjectID = "J9a-zM-9yu"; */
