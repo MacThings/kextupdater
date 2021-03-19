@@ -15,7 +15,6 @@
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A67DB52258928F100A85104 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
-		2AAA8ED9260535DC00878EEC /* OCConfigCompare in Script copy */ = {isa = PBXBuildFile; fileRef = 2AAA8ED6260535CC00878EEC /* OCConfigCompare */; };
 		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
@@ -84,7 +83,6 @@
 			dstPath = script;
 			dstSubfolderSpec = 7;
 			files = (
-				2AAA8ED9260535DC00878EEC /* OCConfigCompare in Script copy */,
 				2AC44BFD23151081006D447C /* script.command in Script copy */,
 			);
 			name = "Script copy";
@@ -184,7 +182,6 @@
 		2AAA8E5626051E8600878EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
 		2AAA8E5826051E8600878EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAA8E5926051E8600878EEC /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test.entitlements; sourceTree = "<group>"; };
-		2AAA8ED6260535CC00878EEC /* OCConfigCompare */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCConfigCompare; sourceTree = "<group>"; };
 		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -354,7 +351,6 @@
 		2AC44BAE23150F38006D447C /* script */ = {
 			isa = PBXGroup;
 			children = (
-				2AAA8ED6260535CC00878EEC /* OCConfigCompare */,
 				2AC44BAF23150F38006D447C /* script.command */,
 			);
 			path = script;
