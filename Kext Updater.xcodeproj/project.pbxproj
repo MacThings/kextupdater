@@ -49,6 +49,7 @@
 		2AC51C632515EBCE0029A19A /* LESLEWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC51C622515EBCE0029A19A /* LESLEWarning.swift */; };
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2ADD786A25322A6200A0045C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD786925322A6200A0045C /* About.swift */; };
+		2AE381C82605370200100819 /* OCConfigCompare in Script copy */ = {isa = PBXBuildFile; fileRef = 2AE381C4260536FC00100819 /* OCConfigCompare */; };
 		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
 		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
 		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; };
@@ -83,6 +84,7 @@
 			dstPath = script;
 			dstSubfolderSpec = 7;
 			files = (
+				2AE381C82605370200100819 /* OCConfigCompare in Script copy */,
 				2AC44BFD23151081006D447C /* script.command in Script copy */,
 			);
 			name = "Script copy";
@@ -222,6 +224,7 @@
 		2AC51C622515EBCE0029A19A /* LESLEWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LESLEWarning.swift; sourceTree = "<group>"; };
 		2AD19D8A2367273D0014D005 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		2ADD786925322A6200A0045C /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		2AE381C4260536FC00100819 /* OCConfigCompare */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCConfigCompare; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
 		2AFE137423AEAF4700A5186D /* dspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dspci; sourceTree = "<group>"; };
 		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
@@ -351,6 +354,7 @@
 		2AC44BAE23150F38006D447C /* script */ = {
 			isa = PBXGroup;
 			children = (
+				2AE381C4260536FC00100819 /* OCConfigCompare */,
 				2AC44BAF23150F38006D447C /* script.command */,
 			);
 			path = script;
