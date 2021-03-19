@@ -353,6 +353,13 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(false, forKey: "MuteMultibeastAlert")
         }
         
+        let pythonPath = "/usr/bin/python"
+        if (FileManager.default.fileExists(atPath: pythonPath)) {
+            UserDefaults.standard.set(true, forKey: "PythonInstalled")
+        } else {
+            UserDefaults.standard.set(false, forKey: "PythonInstalled")
+        }
+        
         let rootcheck = UserDefaults.standard.string(forKey: "Admin")
         if rootcheck == "No"{
             infobox_admin_status_content_yes.isHidden = true

@@ -50,6 +50,7 @@ class Tools: NSViewController {
     @IBOutlet weak var button_oc_config_file: NSButton!
     @IBOutlet weak var button_oc_config_choose: NSButton!
     
+    @IBOutlet weak var button_oc_config_compare: NSButton!
     
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
@@ -146,6 +147,13 @@ class Tools: NSViewController {
 
             self.check_gatekeeper()
        
+            let pythoncheck = UserDefaults.standard.bool(forKey: "PythonInstalled")
+            if pythoncheck == true {
+                self.button_oc_config_compare.isEnabled = true
+            } else {
+                self.button_oc_config_compare.isEnabled = false
+            }
+            
             self.syncShellExec(path: self.scriptPath, args: ["checkdisablegfxhda"])
             let disablegfxhdacheck = UserDefaults.standard.string(forKey: "DisableGFXHDA")
             if disablegfxhdacheck == "1" {
@@ -481,6 +489,11 @@ class Tools: NSViewController {
             UserDefaults.standard.set(true, forKey: "OCConfigCheck")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Startbutton"), object: nil, userInfo: ["name" : self.button_oc_config_file.stringValue as Any])
         self.view.window?.close()
+    }
+    
+    
+    @IBAction func oc_config_compare(_ sender: Any) {
+        self.syncShellExec(path: self.scriptPath, args: ["_oc_config_compare"])
     }
     
     @IBAction func offline_efi_check(_ sender: Any) {

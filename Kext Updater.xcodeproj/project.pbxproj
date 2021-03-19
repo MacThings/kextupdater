@@ -15,6 +15,7 @@
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A67DB52258928F100A85104 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
+		2AAA8ED9260535DC00878EEC /* OCConfigCompare in Script copy */ = {isa = PBXBuildFile; fileRef = 2AAA8ED6260535CC00878EEC /* OCConfigCompare */; };
 		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
@@ -55,6 +56,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2AAA8E6026051E8600878EEC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AC44BF92315103F006D447C /* Copy Bash Strings */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +84,7 @@
 			dstPath = script;
 			dstSubfolderSpec = 7;
 			files = (
+				2AAA8ED9260535DC00878EEC /* OCConfigCompare in Script copy */,
 				2AC44BFD23151081006D447C /* script.command in Script copy */,
 			);
 			name = "Script copy";
@@ -166,6 +178,13 @@
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A67DB52258928F100A85104 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AAA8E4F26051E8600878EEC /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		2AAA8E5126051E8600878EEC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		2AAA8E5326051E8600878EEC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		2AAA8E5626051E8600878EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
+		2AAA8E5826051E8600878EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAA8E5926051E8600878EEC /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test.entitlements; sourceTree = "<group>"; };
+		2AAA8ED6260535CC00878EEC /* OCConfigCompare */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCConfigCompare; sourceTree = "<group>"; };
 		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -226,10 +245,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AAA8E4E26051E8600878EEC /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				2AAA8E4F26051E8600878EEC /* Media.xcassets */,
+				2AAA8E5126051E8600878EEC /* icon.icns */,
+				2AAA8E5326051E8600878EEC /* ActionViewController.swift */,
+				2AAA8E5526051E8600878EEC /* ActionViewController.xib */,
+				2AAA8E5826051E8600878EEC /* Info.plist */,
+				2AAA8E5926051E8600878EEC /* Test.entitlements */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		2AB3049123150E1300D618FF = {
 			isa = PBXGroup;
 			children = (
 				2AB3049C23150E1300D618FF /* Kext Updater */,
+				2AAA8E4E26051E8600878EEC /* Test */,
 				2AB3049B23150E1300D618FF /* Products */,
 				4D9645F01E633C8E1A77F904 /* Pods */,
 				EFCEF92E17A76F1031C73313 /* Frameworks */,
@@ -321,6 +354,7 @@
 		2AC44BAE23150F38006D447C /* script */ = {
 			isa = PBXGroup;
 			children = (
+				2AAA8ED6260535CC00878EEC /* OCConfigCompare */,
 				2AC44BAF23150F38006D447C /* script.command */,
 			);
 			path = script;
@@ -392,6 +426,7 @@
 				2AC44C132315115F006D447C /* Sounds Copy */,
 				2AC44C1C23151180006D447C /* Anim Copy */,
 				2AC44C202315119F006D447C /* Zip App and send to Homeshare */,
+				2AAA8E6026051E8600878EEC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -412,7 +447,7 @@
 		2AB3049223150E1300D618FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
@@ -569,6 +604,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		2AAA8E5526051E8600878EEC /* ActionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAA8E5626051E8600878EEC /* Base */,
+			);
+			name = ActionViewController.xib;
+			sourceTree = "<group>";
+		};
 		2AB304A323150E1500D618FF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -707,11 +750,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 387;
+				CURRENT_PROJECT_VERSION = 388;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -721,7 +765,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.7;
+				MARKETING_VERSION = 3.8.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -733,11 +777,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 387;
+				CURRENT_PROJECT_VERSION = 388;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -747,7 +792,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.7;
+				MARKETING_VERSION = 3.8.8;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

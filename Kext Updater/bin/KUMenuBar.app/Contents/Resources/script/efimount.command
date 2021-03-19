@@ -2725,6 +2725,15 @@ function _check_authroot()
     fi
 }
 
+function _oc_config_compare()
+{
+    echo "osascript -e 'tell app \"Terminal\"" > $ScriptTmpPath/occonfigcompare.sh
+    echo "do script \"cd \\\"'$MY_PATH'/OCConfigCompare\\\"; python OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
+    echo "end tell'" >> $ScriptTmpPath/occonfigcompare.sh
+    echo "osascript -e  'activate application \"Terminal\"'" >> $ScriptTmpPath/occonfigcompare.sh
+    bash $ScriptTmpPath/occonfigcompare.sh
+}
+
 $1
 exit 0
 
