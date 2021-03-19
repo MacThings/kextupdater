@@ -6,3 +6,4 @@ target 'Kext Updater' do
   pod 'LetsMove'
   pod 'Sparkle'
 end
+

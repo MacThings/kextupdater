@@ -4760,7 +4760,7 @@ DQ
                                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilS-ad-AZv">
                                                         <rect key="frame" x="4" y="10" width="155" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Python is missing." id="hps-QT-yPc">
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Python is missing" id="hps-QT-yPc">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -6169,11 +6169,11 @@ DQ
             <objects>
                 <viewController title="Information" id="mAu-aj-y1B" customClass="OCConfigCompare" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="yUt-nw-xnn">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="192"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="191"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqZ-vT-3ua">
-                                <rect key="frame" x="10" y="140" width="283" height="38"/>
+                                <rect key="frame" x="10" y="139" width="296" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" title="Python script to compare two plists and list missing keys in either." id="GBg-pe-NwQ">
                                     <font key="font" metaFont="system"/>
@@ -6182,7 +6182,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-g4-99v">
-                                <rect key="frame" x="10" y="123" width="296" height="16"/>
+                                <rect key="frame" x="10" y="122" width="296" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="https://github.com/corpnewt/OCConfigCompare" id="DTS-9J-bZg">
                                     <font key="font" metaFont="system"/>
@@ -6191,7 +6191,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-mH-rVi">
-                                <rect key="frame" x="10" y="123" width="294" height="17"/>
+                                <rect key="frame" x="10" y="122" width="294" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tEq-A8-M4I">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -6202,7 +6202,7 @@ DQ
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3x-Ce-xFh">
-                                <rect key="frame" x="10" y="34" width="283" height="80"/>
+                                <rect key="frame" x="10" y="27" width="296" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" id="6eX-gY-I87">
                                     <font key="font" metaFont="system"/>
@@ -6212,7 +6212,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ac1-Yc-j95">
-                                <rect key="frame" x="10" y="13" width="230" height="16"/>
+                                <rect key="frame" x="10" y="9" width="230" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="brew install python" id="6mF-1j-YQl">
                                     <font key="font" size="14" name="Courier"/>
@@ -6226,7 +6226,7 @@ DQ
                 <customObject id="axo-Qk-jma" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="fpM-fH-wht"/>
             </objects>
-            <point key="canvasLocation" x="2389" y="1787"/>
+            <point key="canvasLocation" x="2389" y="1786.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

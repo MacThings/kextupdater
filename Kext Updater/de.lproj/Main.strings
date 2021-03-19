@@ -91,6 +91,9 @@
 /* Class = "NSTextFieldCell"; title = "Please choose an OS Version"; ObjectID = "5pT-us-cwY"; */
 "5pT-us-cwY.title" = "Bitte wähle eine OS Version";
 
+/* Class = "NSTextFieldCell"; title = "If the error message appears that Python is not installed and the button remains grayed out, you can do this with \"brew\". To do this, however, the Xcode Commandline Tools must also be installed."; ObjectID = "6eX-gY-I87"; */
+"6eX-gY-I87.title" = "Falls die Fehlermeldung auftaucht, dass Python nicht installiert sei und der Buton somit ausgegraut bleibt, so kann man dies mit \"brew\" tun. Dafür müssen allerdings auch die Xcode Commandline Tools installiert sein.";
+
 /* Class = "NSButtonCell"; title = "Mount"; ObjectID = "6nV-VG-RBM"; */
 "6nV-VG-RBM.title" = "Mounten";
 
@@ -424,6 +427,9 @@
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B48"; ObjectID = "g99-h6-PL9"; */
 "g99-h6-PL9.title" = "10.13.1 - 17B48";
 
+/* Class = "NSTextFieldCell"; title = "Python script to compare two plists and list missing keys in either."; ObjectID = "GBg-pe-NwQ"; */
+"GBg-pe-NwQ.title" = "Python-Skript zum Vergleichen von zwei Plisten und Auflisten fehlender Schlüssel in beiden.";
+
 /* Class = "NSBox"; title = "Box"; ObjectID = "gcN-Xh-jrg"; */
 "gcN-Xh-jrg.title" = "Box";
 
@@ -478,6 +484,9 @@
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "HHX-4l-Fw4"; */
 "HHX-4l-Fw4.title" = "Auswählen";
 
+/* Class = "NSButtonCell"; title = "Show source"; ObjectID = "HiM-b9-8X8"; */
+"HiM-b9-8X8.title" = "Zeige Sourcen";
+
 /* Class = "NSButtonCell"; title = "Unmount"; ObjectID = "hjw-Fy-cag"; */
 "hjw-Fy-cag.title" = "Auswerfen";
 
@@ -486,6 +495,9 @@
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "hp4-nh-EFQ"; */
 "hp4-nh-EFQ.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Python is missing."; ObjectID = "hps-QT-yPc"; */
+"hps-QT-yPc.title" = "Python nicht installiert";
 
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */
 "HQV-TC-zTT.title" = "Lilu";
