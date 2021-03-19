@@ -51,6 +51,7 @@ class Tools: NSViewController {
     @IBOutlet weak var button_oc_config_choose: NSButton!
     
     @IBOutlet weak var button_oc_config_compare: NSButton!
+    @IBOutlet weak var python_warning: NSTextField!
     
     @IBOutlet weak var pulldown_menu: NSPopUpButton!
     @IBOutlet weak var button_mount: NSButton!
@@ -150,8 +151,12 @@ class Tools: NSViewController {
             let pythoncheck = UserDefaults.standard.bool(forKey: "PythonInstalled")
             if pythoncheck == true {
                 self.button_oc_config_compare.isEnabled = true
+                self.python_warning.isHidden = true
             } else {
                 self.button_oc_config_compare.isEnabled = false
+                self.button_oc_config_compare.title=""
+                self.python_warning.isHidden = false
+                self.python_warning.isEnabled = false
             }
             
             self.syncShellExec(path: self.scriptPath, args: ["checkdisablegfxhda"])
