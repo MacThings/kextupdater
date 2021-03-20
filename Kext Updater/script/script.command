@@ -2727,8 +2727,14 @@ function _check_authroot()
 
 function _oc_config_compare()
 {
+    
+    curl https://codeload.github.com/corpnewt/OCConfigCompare/zip/refs/heads/master -o "$ScriptTmpPath"/master.zip
+    cd "$ScriptTmpPath"
+    unzip -q master.zip
+    mv *master OCConfigCompare
+    
     echo "osascript -e 'tell app \"Terminal\"" > $ScriptTmpPath/occonfigcompare.sh
-    echo "do script \"cd \\\"'$MY_PATH'/OCConfigCompare\\\"; python OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
+    echo "do script \"cd \\\"'$ScriptTmpPath'/OCConfigCompare\\\"; python OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
     echo "end tell'" >> $ScriptTmpPath/occonfigcompare.sh
     echo "osascript -e  'activate application \"Terminal\"'" >> $ScriptTmpPath/occonfigcompare.sh
     bash $ScriptTmpPath/occonfigcompare.sh
