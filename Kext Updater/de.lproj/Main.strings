@@ -92,7 +92,7 @@
 "5pT-us-cwY.title" = "Bitte wähle eine OS Version";
 
 /* Class = "NSTextFieldCell"; title = "If the error message appears that Python is not installed and the button remains grayed out, you can do this with \"brew\". To do this, however, the Xcode Commandline Tools must also be installed."; ObjectID = "6eX-gY-I87"; */
-"6eX-gY-I87.title" = "Falls die Fehlermeldung auftaucht, dass Python nicht installiert sei und der Buton somit ausgegraut bleibt, so kann man dies mit \"brew\" tun. Dafür müssen allerdings auch die Xcode Commandline Tools installiert sein.";
+"6eX-gY-I87.title" = "Falls die Fehlermeldung auftaucht, dass Python nicht installiert sei und der Button somit ausgegraut bleibt, so kann man dies mit \"brew\" tun. Dafür müssen allerdings auch die Xcode Commandline Tools installiert sein.";
 
 /* Class = "NSButtonCell"; title = "Mount"; ObjectID = "6nV-VG-RBM"; */
 "6nV-VG-RBM.title" = "Mounten";
