@@ -115,6 +115,9 @@
 /* Class = "NSButtonCell"; title = "Deselect \"X\""; ObjectID = "7rq-Op-hJk"; */
 "7rq-Op-hJk.title" = "\"X\" Abwählen";
 
+/* Class = "NSMenuItem"; title = "Visit Clover Repo"; ObjectID = "7Va-Sy-Mxq"; */
+"7Va-Sy-Mxq.title" = "Besuche Clover Repo";
+
 /* Class = "NSButtonCell"; title = "NoVPAJpeg"; ObjectID = "8cn-Cg-vV0"; */
 "8cn-Cg-vV0.title" = "NoVPAJpeg";
 
@@ -451,6 +454,9 @@
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "GO1-0f-QSB"; */
 "GO1-0f-QSB.title" = "Start";
 
+/* Class = "NSMenuItem"; title = "Visit OpenCore Repo"; ObjectID = "GOH-u1-DoH"; */
+"GOH-u1-DoH.title" = "Besuche OpenCore Repo";
+
 /* Class = "NSButtonCell"; title = "Webdriver"; ObjectID = "gqe-Mv-U15"; */
 "gqe-Mv-U15.title" = "Webdriver";
 
@@ -496,7 +502,7 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "hp4-nh-EFQ"; */
 "hp4-nh-EFQ.title" = "Box";
 
-/* Class = "NSTextFieldCell"; title = "Python is missing."; ObjectID = "hps-QT-yPc"; */
+/* Class = "NSTextFieldCell"; title = "Python is missing"; ObjectID = "hps-QT-yPc"; */
 "hps-QT-yPc.title" = "Python nicht installiert";
 
 /* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "HQV-TC-zTT"; */

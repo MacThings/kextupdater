@@ -5806,6 +5806,10 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
                                             <menuItem title="EFI Driver Nightly" id="1Hv-zp-grG">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="Coe-vg-INe"/>
+                                            <menuItem title="Visit Clover Repo" image="NSFollowLinkFreestandingTemplate" id="7Va-Sy-Mxq">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
@@ -5843,6 +5847,10 @@ YmUgc3RvcmVkIG9uIHRoZSBFRkkgcGFydGl0aW9uLg
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="OcBinaryData" id="W4G-AE-hQR">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="dJA-Fv-iF0"/>
+                                            <menuItem title="Visit OpenCore Repo" image="NSFollowLinkFreestandingTemplate" id="GOH-u1-DoH" userLabel="Visit OpenCore Repo">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>
@@ -6239,6 +6247,7 @@ DQ
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSCaution" width="32" height="32"/>
         <image name="NSFolder" width="32" height="32"/>
+        <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusUnavailable" width="16" height="16"/>

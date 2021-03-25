@@ -142,8 +142,10 @@ class Bootloader: NSViewController {
             UserDefaults.standard.set("AppleSupportNightly", forKey: "Bootloaderkind")
         } else if gettitle == "OpenCore Nightly" {
             UserDefaults.standard.set("OpenCoreNightly", forKey: "Bootloaderkind")
-        } else if gettitle == "OpenCore Nightly (N-D-K Fork)" {
-            UserDefaults.standard.set("OpenCoreNightly-NDK", forKey: "Bootloaderkind")
+        } else if gettitle.contains("OpenCore Repo") {
+            if let url = URL(string: "https://github.com/acidanthera/OpenCorePkg/releases"),
+                NSWorkspace.shared.open(url) {
+            }
         }
     }
     
@@ -162,7 +164,11 @@ class Bootloader: NSViewController {
             UserDefaults.standard.set("EFIDriverNightly", forKey: "Bootloaderkind")
         } else if gettitle == "OcQuirks Nightly" {
             UserDefaults.standard.set("OcQuirksNightly", forKey: "Bootloaderkind")
-        } 
+        } else if gettitle.contains("Clover Repo") {
+            if let url = URL(string: "https://github.com/CloverHackyColor/CloverBootloader/releases"),
+                NSWorkspace.shared.open(url) {
+            }
+        }
     }
 
     @IBAction func send_start(_ sender: Any) {
