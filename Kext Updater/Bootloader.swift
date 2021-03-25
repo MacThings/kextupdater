@@ -143,6 +143,7 @@ class Bootloader: NSViewController {
         } else if gettitle == "OpenCore Nightly" {
             UserDefaults.standard.set("OpenCoreNightly", forKey: "Bootloaderkind")
         } else if gettitle.contains("OpenCore Repo") {
+            self.start_button.isEnabled=false
             if let url = URL(string: "https://github.com/acidanthera/OpenCorePkg/releases"),
                 NSWorkspace.shared.open(url) {
             }
@@ -165,6 +166,7 @@ class Bootloader: NSViewController {
         } else if gettitle == "OcQuirks Nightly" {
             UserDefaults.standard.set("OcQuirksNightly", forKey: "Bootloaderkind")
         } else if gettitle.contains("Clover Repo") {
+            self.start_button.isEnabled=false
             if let url = URL(string: "https://github.com/CloverHackyColor/CloverBootloader/releases"),
                 NSWorkspace.shared.open(url) {
             }
