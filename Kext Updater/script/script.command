@@ -671,7 +671,7 @@ function initial()
         efipath=$( find "$mountpoint" -maxdepth 3 -name "$cloverconfig" |sed -e "s/\.//g" -e "s/CLOVER\/.*/CLOVER\//g" | grep -v "Trashes" | grep -w "CLOVER" | head -n 1 )
       fi
       if [[ $bootloader = "OpenCore" ]]; then
-        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |head -n 1 )
+        efipath=$( find "$mountpoint" -name "OpenCore.efi" |sed -e "s/\.//g" -e "s/OpenC.*//g" |grep -v "Trashes" |grep -w "/Volumes/.*./EFI/OC/" |head -n 1 )
       fi
     fi
 
