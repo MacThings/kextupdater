@@ -1074,7 +1074,8 @@ function _kextLoader()
             curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
             ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
             #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
-            rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
+            rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
+            #rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
     done
 }
 
@@ -2675,9 +2676,11 @@ function _check_oc_config()
     oc_nightly=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCNightlyConfig" )
     
     if [[ "$oc_nightly" != "1" ]]; then
-        curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+        curl -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencore/ConfigValidity.7z
+        #curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
     else
-        curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
+        curl -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencorenightly/ConfigValidity.7z
+        #curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
     fi
     
     ../bin/./7za x ${ScriptTmpPath}/ConfigValidity.7z -o${ScriptTmpPath} > /dev/null

@@ -270,7 +270,7 @@ class KextUpdater: NSViewController {
         
         let backuppathinit = UserDefaults.standard.string(forKey: "Backuppath")
         if backuppathinit == nil{
-            let defaultdir = self.userDesktopDirectory + "/Desktop/EFI-Backup"
+            let defaultdir = self.userDesktopDirectory + "/Documents/EFI-Backup"
             UserDefaults.standard.set(defaultdir, forKey: "Backuppath")
         }
         

@@ -67,7 +67,7 @@ class Preferences: NSViewController {
     }
     
     @IBAction func defaultpath_backup(_ sender: Any) {
-        let defaultdir = self.userDesktopDirectory + "/Desktop/EFI-Backup"
+        let defaultdir = self.userDesktopDirectory + "/Documents/EFI-Backup"
         UserDefaults.standard.set(defaultdir, forKey: "Backuppath")
         selected_backup_path.stringValue = (defaultdir)
     }
