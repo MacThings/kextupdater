@@ -1031,10 +1031,11 @@ function _kextUpdate()
                     if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
-                        curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
+                        curl -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
                         curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
-                        unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
-                        rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
+                        ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
+                        #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+                        rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
                         find ${ScriptDownloadPath}/. -name "Debug" -exec rm -r "{}" \; >/dev/null 2>&1
                         find ${ScriptDownloadPath}/. -name "LICENSE" -exec rm -r "{}" \; >/dev/null 2>&1
                         find ${ScriptDownloadPath}/. -name "READM*" -exec rm -r "{}" \; >/dev/null 2>&1
@@ -1068,9 +1069,11 @@ function _kextLoader()
             mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
             echo "$newname" >> ${ScriptTmpPath}/eficreator
             _toUpdateLoad
-            curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
+            curl -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
+            #curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
             curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
-            unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+            ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
+            #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
             rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
     done
 }
@@ -2587,8 +2590,9 @@ function _efi_folder_creator()
             mkdir "${ScriptDownloadPath}"
         fi
         
-        curl -sS -o ${ScriptTmpPath}/EFI.zip https://$url/${folder}/EFI.zip
-        unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
+        curl -sS -o ${ScriptTmpPath}/EFI.7z https://$url/${folder}/EFI.7z
+        #unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
+        ../bin/./7za x ${ScriptTmpPath}/EFI.7z -o${ScriptDownloadPath}/EFI -aoa > /dev/null
 
         while read -r line; do
             if [[ "$line" = "ACPIBatteryManager" ]]; then
@@ -2676,7 +2680,10 @@ function _check_oc_config()
         curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
     fi
     
-    unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
+    ../bin/./7za x ${ScriptTmpPath}/ConfigValidity.7z -o${ScriptTmpPath} > /dev/null
+    #unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
+    
+    
     ${ScriptTmpPath}/./ConfigValidity "$oc_file"
     if [[ $checkchime = "1" ]]; then
         _playchime
