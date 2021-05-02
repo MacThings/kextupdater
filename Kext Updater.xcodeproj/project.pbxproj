@@ -16,6 +16,8 @@
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A67DB52258928F100A85104 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
+		2AAE88B4263E963700FE4000 /* 7za in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE88B3263E963700FE4000 /* 7za */; };
+		2AAE88B6263E964700FE4000 /* 7za in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AAE88B3263E963700FE4000 /* 7za */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
 		2AB304A023150E1300D618FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049F23150E1300D618FF /* ViewController.swift */; };
@@ -51,8 +53,8 @@
 		2AD19D8B2367273D0014D005 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD19D8A2367273D0014D005 /* WindowController.swift */; };
 		2ADD786A25322A6200A0045C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD786925322A6200A0045C /* About.swift */; };
 		2AE381CB26053C6A00100819 /* OCConfigCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE381CA26053C6A00100819 /* OCConfigCompare.swift */; };
-		2AE75AB7244B3D9C00A209A7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */; };
-		2AE75ABA244B3DEB00A209A7 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */; };
+		2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB6244B3D9C00A209A7 /* KeychainSwift */; };
+		2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */; };
 		2AFE137623AEAF5200A5186D /* dspci in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AFE137423AEAF4700A5186D /* dspci */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,7 @@
 			dstPath = bin;
 			dstSubfolderSpec = 7;
 			files = (
+				2AAE88B6263E964700FE4000 /* 7za in Bin Copy */,
 				2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */,
 				2A312193258920000072F51B /* KUNotifier.app in Bin Copy */,
 				2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */,
@@ -184,6 +187,7 @@
 		2AAA8E5626051E8600878EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
 		2AAA8E5826051E8600878EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AAA8E5926051E8600878EEC /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test.entitlements; sourceTree = "<group>"; };
+		2AAE88B3263E963700FE4000 /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
 		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB3049D23150E1300D618FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,8 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE75AB7244B3D9C00A209A7 /* BuildFile in Frameworks */,
-				2AE75ABA244B3DEB00A209A7 /* BuildFile in Frameworks */,
+				2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */,
+				2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */,
 				1A742247C9B9219A807F73F0 /* Pods_Kext_Updater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +383,7 @@
 		2AC44BB923150F39006D447C /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE88B3263E963700FE4000 /* 7za */,
 				2A55417E254B14D200C0E317 /* AppleGFXHDA */,
 				2AFE137423AEAF4700A5186D /* dspci */,
 				2A67DB52258928F100A85104 /* KUMenuBar.app */,
@@ -435,8 +440,8 @@
 			);
 			name = "Kext Updater";
 			packageProductDependencies = (
-				2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */,
-				2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */,
+				2AE75AB6244B3D9C00A209A7 /* KeychainSwift */,
+				2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */,
 			);
 			productName = "Kext Updater";
 			productReference = 2AB3049A23150E1300D618FF /* Kext Updater.app */;
@@ -473,8 +478,8 @@
 			);
 			mainGroup = 2AB3049123150E1300D618FF;
 			packageReferences = (
-				2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */,
-				2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */,
+				2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */,
 			);
 			productRefGroup = 2AB3049B23150E1300D618FF /* Products */;
 			projectDirPath = "";
@@ -490,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAE88B4263E963700FE4000 /* 7za in Resources */,
 				2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */,
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
 				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
@@ -756,7 +762,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 389;
+				CURRENT_PROJECT_VERSION = 390;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,7 +772,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.9;
+				MARKETING_VERSION = 3.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -782,7 +788,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 389;
+				CURRENT_PROJECT_VERSION = 390;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -792,7 +798,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8.9;
+				MARKETING_VERSION = 3.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -824,7 +830,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */ = {
+		2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -832,7 +838,7 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */ = {
+		2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Clipy/LoginServiceKit";
 			requirement = {
@@ -843,14 +849,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2AE75AB6244B3D9C00A209A7 /* SwiftPackageProductDependency */ = {
+		2AE75AB6244B3D9C00A209A7 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB5244B3D9C00A209A7 /* RemoteSwiftPackageReference */;
+			package = 2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		2AE75AB9244B3DEB00A209A7 /* SwiftPackageProductDependency */ = {
+		2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2AE75AB8244B3DEB00A209A7 /* RemoteSwiftPackageReference */;
+			package = 2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */;
 			productName = LoginServiceKit;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -180,6 +180,10 @@ function _excludedkexts()
         if [[ "$i" = "VoodooPS2" ]]; then
             i="PS2Controller"
         fi
+        #check=$( echo "$content" | grep -w ex-$i | sed "s/.*=\ //g" )
+        #if [[ "$i" = "AirportItlwm" ]]; then
+        #    i="itlwm"
+        #fi
         if [[ $check = "true" ]]; then
             kextstats=$( echo "$kextstats" | grep -vw $i )
             else
@@ -230,6 +234,7 @@ kextArray=(
 "intelmausiethernet","IntelMausiEthernet","IntelMausiEthernet",""
 "intelmausi","IntelMausi","IntelMausi",""
 "intelmausiwol","IntelMausiWOL","IntelMausi-WOL",""
+"airportitlwm","AirportItlwm","AirportItlwm",""
 "itlwm","itlwm","itlwm",""
 "lilu","Lilu","Lilu",""
 "lilufriend","LiluFriend","LiluFriend",""
