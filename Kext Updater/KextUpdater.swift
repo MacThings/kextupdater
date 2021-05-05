@@ -528,7 +528,7 @@ class KextUpdater: NSViewController {
         
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE, dd.M.yyyy, HH:mm:ss"
+        formatter.dateFormat = "EEEE, dd.MM.yyyy, HH:mm:ss"
         let result = formatter.string(from: date)
 
         //output_window.textStorage?.mutableString.setString("")
