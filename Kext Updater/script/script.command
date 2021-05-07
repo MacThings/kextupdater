@@ -611,7 +611,7 @@ function initial()
 
     efiroot=$( echo -e "$efiscan" )
     efiname=$( echo -e "$diskscan" | grep "Volume Name:" | sed "s/.*://g" | xargs )
-    clovermode=$( ../bin/./BDMESG | grep -i "starting clover" | sed "s/.*EFI/UEFI/g" | tr -d '\r' )
+    clovermode=$( ../bin/./BDMESG |grep -i "starting clover" |sed "s/.*EFI/UEFI/g" |tr -d '\r' |grep UEFI |xargs )
     cloverconfig=$( ../bin/./BDMESG |grep -w "loaded: Success" |sed -e "s/.*\\\//g" -e 's/.plist.*/.plist/g' |xargs )
     ozmosischeck=$( ../bin/./BDMESG | grep "Ozmosis" )
     ozmosischeck2=$( nvram 1F8E0C02-58A9-4E34-AE22-2B63745FA101:UserInterface 2> /dev/null )
@@ -2465,15 +2465,18 @@ function efi_backup()
         efi_path=$( _helpDefaultRead "EFI Path" )
         backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
         MountPoint=$( _helpDefaultRead "Mount Point" )
+        bl_details=$( _helpDefaultRead "Bootloaderversion" )
+        bl_details=$( echo "$bl_details" | sed 's/\ /_/g' )
+        smbios=$( system_profiler SPHardwareDataType SPDisplaysDataType | grep "Model Identifier:" | sed "s/.*://g" | xargs )
         
         cd "$MountPoint"
-        
-        zip -rq "$backup_path"/EFI_Backup_$backup_date.zip "EFI"
+                
+        zip -rq "$backup_path"/EFI_Backup_"$backup_date"--"$bl_details"_"$smbios".zip "EFI"
         
         if [[ "$?" = "0" ]]; then
             cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
             echo -e "$efi_backup_done\n"
-            echo -e "$efi_backup_result\n\n""$backup_path"/Backup_EFI_$backup_date.zip
+            echo -e "$efi_backup_result\n\n""$backup_path"/EFI_Backup_"$backup_date"--"$bl_details"_"$smbios".zip
             if [[ $checkchime = "1" ]]; then
                 afplay -v "$speakervolume" "$AppPath"/Kext\ Updater.app/Contents/Resources/sounds/done.mp3 &
             fi
