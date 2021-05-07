@@ -313,6 +313,9 @@
 /* Class = "NSTextFieldCell"; title = "If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file."; ObjectID = "CWj-gf-uEx"; */
 "CWj-gf-uEx.title" = "Wenn der Computer ein Problem mit dem Sleep hat, könnte dies helfen. Hibernate-Modus wird auf 0 gesetzt und das Sleepimage wird durch eine schreibgeschützte 0-Byte-Datei ersetzt.";
 
+/* Class = "NSTextFieldCell"; title = "Variables: %Date%   %Time%   %Bootloader%   %SMBios%   %Computername%"; ObjectID = "cyi-oY-sP8"; */
+"cyi-oY-sP8.title" = "Variablen: %Date%   %Time%   %Bootloader%   %SMBios%   %Computername%";
+
 /* Class = "NSTextFieldCell"; title = "Protocol:"; ObjectID = "d4S-CD-6YA"; */
 "d4S-CD-6YA.title" = "Protocol:";
 
@@ -402,9 +405,6 @@
 
 /* Class = "NSMenuItem"; title = "10.13.1 - 17B1002"; ObjectID = "f7j-di-FfB"; */
 "f7j-di-FfB.title" = "10.13.1 - 17B1002";
-
-/* Class = "NSTextFieldCell"; title = "Seconds"; ObjectID = "F9q-4T-UJH"; */
-"F9q-4T-UJH.title" = "Sekunden";
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G17023"; ObjectID = "fCl-yj-YCP"; */
 "fCl-yj-YCP.title" = "10.11.6 - 15G17023";
@@ -520,6 +520,9 @@
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1408"; ObjectID = "i4T-Lh-gXu"; */
 "i4T-Lh-gXu.title" = "10.12.6 - 16G1408";
 
+/* Class = "NSButtonCell"; title = "Custom Filename"; ObjectID = "I5C-H3-Tp2"; */
+"I5C-H3-Tp2.title" = "Eigener Dateiname";
+
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G29"; ObjectID = "iab-qL-Rgo"; */
 "iab-qL-Rgo.title" = "10.12.6 - 16G29";
 
@@ -574,11 +577,11 @@
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1808"; ObjectID = "jFP-Ch-gwX"; */
 "jFP-Ch-gwX.title" = "10.10.5 - 14F1808";
 
+/* Class = "NSTextFieldCell"; title = "EFI_Backup_DATE_TIME.zip"; ObjectID = "jhg-nu-khO"; */
+"jhg-nu-khO.title" = "EFI_Backup_DATUM_UHRZEIT.zip";
+
 /* Class = "NSButtonCell"; title = "AppleBacklightFixup"; ObjectID = "JjW-CG-tmb"; */
 "JjW-CG-tmb.title" = "AppleBacklightFixup";
-
-/* Class = "NSMenuItem"; title = "4"; ObjectID = "JlQ-So-Ctb"; */
-"JlQ-So-Ctb.title" = "4";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1713"; ObjectID = "jmQ-4H-q0o"; */
 "jmQ-4H-q0o.title" = "10.10.5 - 14F1713";
@@ -589,8 +592,8 @@
 /* Class = "NSButtonCell"; title = "SMCAMDProcessor"; ObjectID = "Jnu-Md-nV5"; */
 "Jnu-Md-nV5.title" = "SMCAMDProcessor";
 
-/* Class = "NSMenuItem"; title = "5"; ObjectID = "JQq-IY-uys"; */
-"JQq-IY-uys.title" = "5";
+/* Class = "NSButtonCell"; title = "Default Filename"; ObjectID = "jpZ-tL-REG"; */
+"jpZ-tL-REG.title" = "Standard Dateiname";
 
 /* Class = "NSViewController"; title = "Changelog"; ObjectID = "JRA-D6-Wdb"; */
 "JRA-D6-Wdb.title" = "Changelog";
@@ -669,6 +672,9 @@
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G8030"; ObjectID = "lwO-Mj-Fe6"; */
 "lwO-Mj-Fe6.title" = "10.13.6 - 17G8030";
+
+/* Class = "NSBox"; title = "EFI Backup Options"; ObjectID = "lYd-AF-Zwm"; */
+"lYd-AF-Zwm.title" = "EFI Backup Optionen";
 
 /* Class = "NSButtonCell"; title = "CodecCommander"; ObjectID = "MaA-rD-UBc"; */
 "MaA-rD-UBc.title" = "CodecCommander";
@@ -796,17 +802,11 @@
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "p19-xp-Ydi"; */
 "p19-xp-Ydi.title" = "Bitte auswählen";
 
-/* Class = "NSTextFieldCell"; title = "Show"; ObjectID = "p27-eL-LCi"; */
-"p27-eL-LCi.title" = "Zeige in Sekunden";
-
 /* Class = "NSViewController"; title = "About"; ObjectID = "pcc-jI-JYu"; */
 "pcc-jI-JYu.title" = "Über";
 
 /* Class = "NSViewController"; title = "Tools"; ObjectID = "PFO-7L-TjR"; */
 "PFO-7L-TjR.title" = "Werkzeuge";
-
-/* Class = "NSMenuItem"; title = "2"; ObjectID = "pgJ-MA-ALg"; */
-"pgJ-MA-ALg.title" = "2";
 
 /* Class = "NSMenuItem"; title = "10.10.1 - 14B25"; ObjectID = "pGU-ze-42i"; */
 "pGU-ze-42i.title" = "10.10.1 - 14B25";
@@ -973,11 +973,11 @@
 /* Class = "NSTextFieldCell"; title = "With 'authenticated-root' enabled it's not possible to set the Systemvolume to r/w an do some actions. Please make sure to disable it. You can do that in two ways."; ObjectID = "Tfd-xF-YCn"; */
 "Tfd-xF-YCn.title" = "Wenn 'authenticated-root' aktiviert ist, ist es nicht möglich, das Systemvolume auf r/w zu setzen und Aktionen auszuführen. Bitte stelle sicher, dass es deaktiviert ist. Man kann dies auf zwei Arten tun.";
 
-/* Class = "NSMenuItem"; title = "3"; ObjectID = "Tho-W6-S5A"; */
-"Tho-W6-S5A.title" = "3";
-
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2009"; ObjectID = "tlc-Af-39T"; */
 "tlc-Af-39T.title" = "10.10.5 - 14F2009";
+
+/* Class = "NSTextFieldCell"; title = "e.g. \"YOURTEXT_%Date%_%SMBios%\" or \"%Time% %SMBios% YOURTEXT\""; ObjectID = "tLn-jz-oER"; */
+"tLn-jz-oER.title" = "z.B. \"DEINTEXT_%Date%_%SMBios%\" oder \"%Time% %SMBios% DEINTEXT\"";
 
 /* Class = "NSTextFieldCell"; title = "Don't forget to reset the NVRam if you changed csr parameter or put csr-active-config into the Delete Section of OpenCore (see documentation)."; ObjectID = "tM0-PT-J9D"; */
 "tM0-PT-J9D.title" = "Wenn Du diesen Wert änderst muss danach das NVRam zurückgesetzt werden. Alternativ dazu kann man den Punkt csr-active-config auch in die Delete Sektion von OpenCore setzen (siehe Dokumentation).";
@@ -1098,9 +1098,6 @@
 
 /* Class = "NSTextFieldCell"; title = "X"; ObjectID = "X5C-Pk-Lj9"; */
 "X5C-Pk-Lj9.title" = "X";
-
-/* Class = "NSMenuItem"; title = "1"; ObjectID = "x5m-oz-NRO"; */
-"x5m-oz-NRO.title" = "1";
 
 /* Class = "NSMenuItem"; title = "10.12.3 - 16D32"; ObjectID = "xBm-ic-07B"; */
 "xBm-ic-07B.title" = "10.12.3 - 16D32";

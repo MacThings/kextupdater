@@ -2469,10 +2469,10 @@ function efi_backup()
         bl_details=$( _helpDefaultRead "Bootloaderversion" |sed -e "s/).*/)/g" -e "s/\ //g" )
         bl_details=$( echo "$bl_details" | sed 's/\ /_/g' )
         smbios=$( system_profiler SPHardwareDataType SPDisplaysDataType | grep "Model Identifier:" | sed "s/.*://g" | xargs )
-        hostname=$( hostname )
+        computername=$( scutil --get ComputerName )
         check_custom=$( _helpDefaultRead "EFIBackupCustom" )
         custom_name=$( _helpDefaultRead "EFIBackupNameCustom" )
-        custom_name=$( echo "$custom_name" | sed -e "s/%Date%/$backup_date/g" -e "s/%Time%/$backup_time/g" -e "s/%Bootloader%/$bl_details/g" -e "s/%SMBios%/$smbios/g" -e "s/%Hostname%/$hostname/g" )
+        custom_name=$( echo "$custom_name" | sed -e "s/%Date%/$backup_date/g" -e "s/%Time%/$backup_time/g" -e "s/%Bootloader%/$bl_details/g" -e "s/%SMBios%/$smbios/g" -e "s/%Computername%/$computername/g" )
         
         cd "$MountPoint"
         

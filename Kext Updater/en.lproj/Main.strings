@@ -4,9 +4,6 @@
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "eDZ-tt-sAH"; */
 "eDZ-tt-sAH.title" = "Download";
 
-/* Class = "NSTextFieldCell"; title = "Show"; ObjectID = "p27-eL-LCi"; */
-"p27-eL-LCi.title" = "Show in seconds";
-
 /* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts for you."; ObjectID = "xkJ-nI-Tsy"; */
 "xkJ-nI-Tsy.ibShadowedToolTip" = "Checks if there are newer kexts and download them.";
 

@@ -3726,19 +3726,10 @@ DQ
                                     <rect key="frame" x="3" y="3" width="520" height="120"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzE-tb-49C">
-                                            <rect key="frame" x="153" y="97" width="326" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="EFI_Backup_2021.05.07_13-21-49.zip" id="jhg-nu-khO">
-                                                <font key="font" size="14" name="Courier"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P39-xC-tgH">
                                             <rect key="frame" x="10" y="74" width="149" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Custom Filename:" bezelStyle="regularSquare" imagePosition="left" inset="2" id="I5C-H3-Tp2">
+                                            <buttonCell key="cell" type="check" title="Custom Filename" bezelStyle="regularSquare" imagePosition="left" inset="2" id="I5C-H3-Tp2">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -3748,9 +3739,9 @@ DQ
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqs-Jj-cue">
-                                            <rect key="frame" x="10" y="95" width="131" height="18"/>
+                                            <rect key="frame" x="10" y="95" width="161" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Default Filename: " bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="jpZ-tL-REG">
+                                            <buttonCell key="cell" type="check" title="Default Filename" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="jpZ-tL-REG">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -3781,19 +3772,28 @@ DQ
                                             </textFieldCell>
                                         </textField>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-mU-VIg">
-                                            <rect key="frame" x="12" y="55" width="471" height="16"/>
+                                            <rect key="frame" x="12" y="55" width="497" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" title="Variables: %Date%   %Time%   %Bootloader%   %SMBios%   %Hostname%" id="cyi-oY-sP8">
+                                            <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" title="Variables: %Date%   %Time%   %Bootloader%   %SMBios%   %Computername%" id="cyi-oY-sP8">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szP-xW-JRG">
-                                            <rect key="frame" x="13" y="36" width="480" height="16"/>
+                                            <rect key="frame" x="13" y="36" width="496" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="e.g. &quot;YOURTEXT_%Date%_%SMBios%&quot; or &quot;%Time% %SMBios% YOURTEXT&quot;" id="tLn-jz-oER">
                                                 <font key="font" size="13" name="Courier"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzE-tb-49C">
+                                            <rect key="frame" x="183" y="96" width="326" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="EFI_Backup_DATE_TIME.zip" id="jhg-nu-khO">
+                                                <font key="font" size="14" name="Courier"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
