@@ -3783,7 +3783,7 @@ DQ
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-mU-VIg">
                                             <rect key="frame" x="12" y="55" width="471" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" title="Variables: %Date%   %Time%   %Bootloader%   %SMBios%" id="cyi-oY-sP8">
+                                            <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" title="Variables: %Date%   %Time%   %Bootloader%   %SMBios%   %Hostname%" id="cyi-oY-sP8">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
