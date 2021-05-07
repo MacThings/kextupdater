@@ -2463,20 +2463,30 @@ function efi_backup()
     
     if [[ "$efi_mounted" = "Yes" ]]; then
         efi_path=$( _helpDefaultRead "EFI Path" )
-        backup_date=$( date +"%Y.%m.%d_%H-%M-%S" )
+        backup_date=$( date +"%Y.%m.%d" )
+        backup_time=$( date +"%H-%M-%S" )
         MountPoint=$( _helpDefaultRead "Mount Point" )
         bl_details=$( _helpDefaultRead "Bootloaderversion" )
         bl_details=$( echo "$bl_details" | sed 's/\ /_/g' )
         smbios=$( system_profiler SPHardwareDataType SPDisplaysDataType | grep "Model Identifier:" | sed "s/.*://g" | xargs )
+        check_custom=$( _helpDefaultRead "EFIBackupCustom" )
+        custom_name=$( _helpDefaultRead "EFIBackupNameCustom" )
+        custom_name=$( echo "$custom_name" | sed -e "s/%Date%/$backup_date/g" -e "s/%Time%/$backup_time/g" -e "s/%Bootloader%/$bl_details/g" -e "s/%SMBios%/$smbios/g" )
         
         cd "$MountPoint"
-                
-        zip -rq "$backup_path"/EFI_Backup_"$backup_date"--"$bl_details"_"$smbios".zip "EFI"
+        
+        if [[ $check_custom = "0" ]]; then
+            zip -rq "$backup_path"/EFI_Backup_"$backup_date"_"$backup_time".zip "EFI"
+            done=$(echo "$backup_path"/EFI_Backup_"$backup_date"_"$backup_time".zip )
+        else
+            zip -rq "$backup_path"/"$custom_name".zip "EFI"
+            done=$(echo "$backup_path"/"$custom_name".zip )
+        fi
         
         if [[ "$?" = "0" ]]; then
             cd "$AppPath"/Kext\ Updater.app/Contents/Resources/script
             echo -e "$efi_backup_done\n"
-            echo -e "$efi_backup_result\n\n""$backup_path"/EFI_Backup_"$backup_date"--"$bl_details"_"$smbios".zip
+            echo -e "$efi_backup_result\n\n""$done"
             if [[ $checkchime = "1" ]]; then
                 afplay -v "$speakervolume" "$AppPath"/Kext\ Updater.app/Contents/Resources/sounds/done.mp3 &
             fi

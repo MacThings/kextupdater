@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A742247C9B9219A807F73F0 /* Pods_Kext_Updater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */; };
 		2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* AuthRoot.swift */; };
 		2A312193258920000072F51B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A3AEE82258D0FC70097CF07 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AEE81258D0FC70097CF07 /* CustomTableCell.swift */; };
@@ -243,7 +242,6 @@
 			files = (
 				2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */,
 				2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */,
-				1A742247C9B9219A807F73F0 /* Pods_Kext_Updater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

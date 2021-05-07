@@ -3444,7 +3444,7 @@ DQ
                 <customObject id="NzJ-n6-hdE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="M5w-5M-l63"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="610"/>
+            <point key="canvasLocation" x="1245" y="263"/>
         </scene>
         <!--Disk Information-->
         <scene sceneID="vnp-oE-Rb1">
@@ -3634,11 +3634,11 @@ DQ
             <objects>
                 <viewController title="Preferences" id="9HD-lp-UVI" customClass="Preferences" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4sK-Pr-4YD">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="425"/>
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box fixedFrame="YES" title="Download Path" translatesAutoresizingMaskIntoConstraints="NO" id="vzD-NN-MML">
-                                <rect key="frame" x="17" y="332" width="526" height="86"/>
+                                <rect key="frame" x="17" y="483" width="526" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="fq3-0l-YK4">
                                     <rect key="frame" x="3" y="3" width="520" height="68"/>
@@ -3678,8 +3678,131 @@ DQ
                                     </subviews>
                                 </view>
                             </box>
+                            <box fixedFrame="YES" title="EFI Backup Path" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-1T-SDe">
+                                <rect key="frame" x="17" y="392" width="526" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="wZc-Jp-Yap">
+                                    <rect key="frame" x="3" y="3" width="520" height="68"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzc-uM-sLi">
+                                            <rect key="frame" x="3" y="30" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HHX-4l-Fw4">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="browseFile_backupWithSender:" target="9HD-lp-UVI" id="U1L-UJ-kGq"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-am-vV9">
+                                            <rect key="frame" x="9" y="10" width="500" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="ooP-6E-uXh">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-Pi-ayY">
+                                            <rect key="frame" x="405" y="30" width="110" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yu2-g8-FfQ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="defaultpath_backup:" target="9HD-lp-UVI" id="3Fl-ti-fnU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" title="EFI Backup Options" translatesAutoresizingMaskIntoConstraints="NO" id="lYd-AF-Zwm">
+                                <rect key="frame" x="17" y="250" width="526" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="aj2-BY-8Hk">
+                                    <rect key="frame" x="3" y="3" width="520" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzE-tb-49C">
+                                            <rect key="frame" x="153" y="97" width="326" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="EFI_Backup_2021.05.07_13-21-49.zip" id="jhg-nu-khO">
+                                                <font key="font" size="14" name="Courier"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P39-xC-tgH">
+                                            <rect key="frame" x="10" y="74" width="149" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Custom Filename:" bezelStyle="regularSquare" imagePosition="left" inset="2" id="I5C-H3-Tp2">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="custom_name_select:" target="9HD-lp-UVI" id="jNs-PT-M79"/>
+                                                <binding destination="CC4-jr-eTB" name="value" keyPath="values.EFIBackupCustom" id="aF1-OD-e54"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqs-Jj-cue">
+                                            <rect key="frame" x="10" y="95" width="131" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Default Filename: " bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="jpZ-tL-REG">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="default_name_select:" target="9HD-lp-UVI" id="tpd-WB-D5L"/>
+                                                <binding destination="CC4-jr-eTB" name="value" keyPath="values.EFIBackupDefault" id="N92-xJ-SNo"/>
+                                            </connections>
+                                        </button>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtk-Ku-bkP">
+                                            <rect key="frame" x="12" y="7" width="380" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="rVe-Nq-LzD">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="CC4-jr-eTB" name="value" keyPath="values.EFIBackupNameCustom" id="iKJ-O3-Juo"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-0d-zR5">
+                                            <rect key="frame" x="391" y="7" width="26" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title=".zip" id="V7t-P5-0fa">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-mU-VIg">
+                                            <rect key="frame" x="12" y="55" width="471" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" title="Variables: %Date%   %Time%   %Bootloader%   %SMBios%" id="cyi-oY-sP8">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szP-xW-JRG">
+                                            <rect key="frame" x="13" y="36" width="480" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="e.g. &quot;YOURTEXT_%Date%_%SMBios%&quot; or &quot;%Time% %SMBios% YOURTEXT&quot;" id="tLn-jz-oER">
+                                                <font key="font" size="13" name="Courier"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </box>
                             <box fixedFrame="YES" title="Misc Settings" translatesAutoresizingMaskIntoConstraints="NO" id="otf-cn-qwO">
-                                <rect key="frame" x="23" y="46" width="526" height="192"/>
+                                <rect key="frame" x="17" y="54" width="526" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="C4r-MD-yik">
                                     <rect key="frame" x="3" y="3" width="520" height="174"/>
@@ -3915,7 +4038,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                 </view>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AgZ-2p-34J">
-                                <rect key="frame" x="20" y="5" width="147" height="32"/>
+                                <rect key="frame" x="14" y="13" width="147" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U2w-vj-aHe">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3926,7 +4049,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bm-VF-Oa9">
-                                <rect key="frame" x="432" y="5" width="120" height="32"/>
+                                <rect key="frame" x="426" y="13" width="120" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4CV-tO-sI8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3939,92 +4062,13 @@ DQ
                                     <action selector="preferencesclose:" target="9HD-lp-UVI" id="gXG-8D-g8h"/>
                                 </connections>
                             </button>
-                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNF-hC-IJl">
-                                <rect key="frame" x="269" y="9" width="51" height="13"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Seconds" id="F9q-4T-UJH">
-                                    <font key="font" metaFont="systemThin" size="10"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <popUpButton hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zyk-8X-0dC">
-                                <rect key="frame" x="235" y="8" width="35" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="smallSquare" title="3" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Tho-W6-S5A" id="ey2-Yo-Op6">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="label" size="12"/>
-                                    <menu key="menu" id="Yit-Ja-m6c">
-                                        <items>
-                                            <menuItem title="1" id="x5m-oz-NRO"/>
-                                            <menuItem title="2" id="pgJ-MA-ALg"/>
-                                            <menuItem title="3" state="on" id="Tho-W6-S5A">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                            <menuItem title="4" id="JlQ-So-Ctb"/>
-                                            <menuItem title="5" id="JQq-IY-uys">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <binding destination="6AW-Jc-UYO" name="selectedValue" keyPath="values.NotificationSeconds" id="xxg-sx-1ih"/>
-                                </connections>
-                            </popUpButton>
-                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-GI-yFQ">
-                                <rect key="frame" x="178" y="10" width="45" height="13"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Show" id="p27-eL-LCi">
-                                    <font key="font" metaFont="systemThin" size="10"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <box fixedFrame="YES" title="EFI Backup Path" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-1T-SDe">
-                                <rect key="frame" x="17" y="241" width="526" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="wZc-Jp-Yap">
-                                    <rect key="frame" x="3" y="3" width="520" height="68"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzc-uM-sLi">
-                                            <rect key="frame" x="3" y="30" width="110" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HHX-4l-Fw4">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="browseFile_backupWithSender:" target="9HD-lp-UVI" id="U1L-UJ-kGq"/>
-                                            </connections>
-                                        </button>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-am-vV9">
-                                            <rect key="frame" x="9" y="10" width="500" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="ooP-6E-uXh">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-Pi-ayY">
-                                            <rect key="frame" x="405" y="30" width="110" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yu2-g8-FfQ">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="defaultpath_backup:" target="9HD-lp-UVI" id="3Fl-ti-fnU"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </view>
-                            </box>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="EFIBackupNameDefault" destination="Bqs-Jj-cue" id="Ltw-0a-xye"/>
+                        <outlet property="EFI_Backup_Name" destination="wtk-Ku-bkP" id="qXD-e9-cYu"/>
+                        <outlet property="EFI_Backup_Name_Custom" destination="P39-xC-tgH" id="uM9-4y-20V"/>
+                        <outlet property="EFI_Backup_Name_Default" destination="Bqs-Jj-cue" id="1Xo-NS-OZ1"/>
                         <outlet property="backup_path_textfield" destination="gzc-am-vV9" id="na5-sL-PmE"/>
                         <outlet property="close_button" destination="1Bm-VF-Oa9" id="3Hj-Xh-H6e"/>
                         <outlet property="download_path_textfield" destination="rzF-Dj-5ts" id="rtI-l8-zZE"/>
@@ -4038,8 +4082,9 @@ DQ
                 <customObject id="F0Q-3V-bQh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="6AW-Jc-UYO"/>
                 <userDefaultsController id="J45-Pa-Ngh"/>
+                <userDefaultsController id="CC4-jr-eTB"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="104.5"/>
+            <point key="canvasLocation" x="575" y="685"/>
         </scene>
         <!--  -->
         <scene sceneID="ugt-IT-GtQ">

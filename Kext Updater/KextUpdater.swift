@@ -253,6 +253,13 @@ class KextUpdater: NSViewController {
         if speakervolume == nil{
             UserDefaults.standard.set("00,0000000000000000", forKey: "Speakervolume")
         }
+ 
+        let efi_backup_name = UserDefaults.standard.string(forKey: "EFIBackupDefault")
+        if efi_backup_name == nil{
+            UserDefaults.standard.set("EFI_Backup_%Date%_%Time%", forKey: "EFIBackupNameCustom")
+            UserDefaults.standard.set(true, forKey: "EFIBackupDefault")
+            UserDefaults.standard.set(false, forKey: "EFIBackupCustom")
+        }
         
         let osBuild = ProcessInfo.processInfo.operatingSystemVersionString
         if let range = osBuild.range(of: "Build ") {
