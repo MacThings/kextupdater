@@ -3634,11 +3634,11 @@ DQ
             <objects>
                 <viewController title="Preferences" id="9HD-lp-UVI" customClass="Preferences" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4sK-Pr-4YD">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="598"/>
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="586"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box fixedFrame="YES" title="Download Path" translatesAutoresizingMaskIntoConstraints="NO" id="vzD-NN-MML">
-                                <rect key="frame" x="17" y="505" width="526" height="86"/>
+                                <rect key="frame" x="17" y="493" width="526" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="fq3-0l-YK4">
                                     <rect key="frame" x="3" y="3" width="520" height="68"/>
@@ -3679,7 +3679,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" title="EFI Backup Path" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-1T-SDe">
-                                <rect key="frame" x="17" y="414" width="526" height="86"/>
+                                <rect key="frame" x="17" y="402" width="526" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="wZc-Jp-Yap">
                                     <rect key="frame" x="3" y="3" width="520" height="68"/>
@@ -3720,7 +3720,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" title="EFI Backup Options" translatesAutoresizingMaskIntoConstraints="NO" id="lYd-AF-Zwm">
-                                <rect key="frame" x="17" y="262" width="526" height="148"/>
+                                <rect key="frame" x="17" y="250" width="526" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="aj2-BY-8Hk">
                                     <rect key="frame" x="3" y="3" width="520" height="130"/>
@@ -3817,7 +3817,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" title="Misc Settings" translatesAutoresizingMaskIntoConstraints="NO" id="otf-cn-qwO">
-                                <rect key="frame" x="17" y="66" width="526" height="192"/>
+                                <rect key="frame" x="17" y="54" width="526" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="C4r-MD-yik">
                                     <rect key="frame" x="3" y="3" width="520" height="174"/>
@@ -4053,7 +4053,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                 </view>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AgZ-2p-34J">
-                                <rect key="frame" x="14" y="25" width="147" height="32"/>
+                                <rect key="frame" x="14" y="13" width="147" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Reset all" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U2w-vj-aHe">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4064,7 +4064,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bm-VF-Oa9">
-                                <rect key="frame" x="426" y="25" width="120" height="32"/>
+                                <rect key="frame" x="426" y="13" width="120" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4CV-tO-sI8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4104,7 +4104,7 @@ DQ
                 <userDefaultsController id="CC4-jr-eTB"/>
                 <userDefaultsController id="KNV-G0-pZR"/>
             </objects>
-            <point key="canvasLocation" x="575" y="696"/>
+            <point key="canvasLocation" x="575" y="690"/>
         </scene>
         <!--  -->
         <scene sceneID="ugt-IT-GtQ">
