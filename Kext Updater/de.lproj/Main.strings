@@ -706,6 +706,9 @@
 /* Class = "NSButtonCell"; title = "AsusSMC"; ObjectID = "mUq-p9-VzG"; */
 "mUq-p9-VzG.title" = "AsusSMC";
 
+/* Class = "NSButtonCell"; title = "Filename in lower case"; ObjectID = "Mv8-1x-VmV"; */
+"Mv8-1x-VmV.title" = "Dateiname in Kleinbuchstaben";
+
 /* Class = "NSMenuItem"; title = "Please select"; ObjectID = "MyU-5a-jmZ"; */
 "MyU-5a-jmZ.title" = "Bitte auswählen";
 

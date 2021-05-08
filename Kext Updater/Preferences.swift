@@ -12,9 +12,14 @@ class Preferences: NSViewController {
     
     @IBOutlet weak var selected_download_path: NSTextField!
     @IBOutlet weak var selected_backup_path: NSTextField!
+    
     @IBOutlet weak var EFI_Backup_Name_Default: NSButton!
+    @IBOutlet weak var EFI_Backup_Name_Lable: NSTextField!
     @IBOutlet weak var EFI_Backup_Name_Custom: NSButton!
+    @IBOutlet weak var EFI_Backup_Name_Lower_Case: NSButton!
     @IBOutlet weak var EFI_Backup_Name: NSTextField!
+    
+    
     @IBOutlet weak var speakericon: NSImageView!
     @IBOutlet weak var speakericon_off: NSImageView!
     @IBOutlet weak var speakerslider: NSSlider!
@@ -52,18 +57,23 @@ class Preferences: NSViewController {
         let efibackupcustom = UserDefaults.standard.bool(forKey: "EFIBackupCustom")
         if efibackupcustom == true {
             self.EFI_Backup_Name.isEnabled = true
+            self.EFI_Backup_Name_Lower_Case.isEnabled = true
+        } else {
+            self.EFI_Backup_Name.isEnabled = false
+            self.EFI_Backup_Name_Lower_Case.isEnabled = false
         }
-
     }
 
     @IBAction func default_name_select(_ sender: Any) {
         self.EFI_Backup_Name_Custom.state = NSControl.StateValue.off
         UserDefaults.standard.set(false, forKey: "EFIBackupCustom")
         self.EFI_Backup_Name.isEnabled = false
+        self.EFI_Backup_Name_Lower_Case.isEnabled = false
     }
     
     @IBAction func custom_name_select(_ sender: Any) {
         self.EFI_Backup_Name.isEnabled = true
+        self.EFI_Backup_Name_Lower_Case.isEnabled = true
         self.EFI_Backup_Name_Default.state = NSControl.StateValue.off
         UserDefaults.standard.set(false, forKey: "EFIBackupDefault")
     }
