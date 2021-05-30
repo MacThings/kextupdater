@@ -1,6 +1,0 @@
-framework module Pods_Kext_Updater {
-  umbrella header "Pods-Kext Updater-umbrella.h"
-
-  export *
-  module * { export * }
-}

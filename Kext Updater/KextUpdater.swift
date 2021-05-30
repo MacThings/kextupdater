@@ -9,7 +9,7 @@
 import Cocoa
 import AVFoundation
 import KeychainSwift
-import LetsMove
+//import LetsMove
 
 class KextUpdater: NSViewController {
     
@@ -173,7 +173,7 @@ class KextUpdater: NSViewController {
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updatecheck), userInfo: nil, repeats: true)
         
-        PFMoveToApplicationsFolderIfNecessary()
+        //PFMoveToApplicationsFolderIfNecessary()
 
         let occheck = UserDefaults.standard.string(forKey: "OCChecked")
         if occheck == nil{

@@ -10,12 +10,12 @@
 		2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* AuthRoot.swift */; };
 		2A312193258920000072F51B /* KUNotifier.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A3AEE82258D0FC70097CF07 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AEE81258D0FC70097CF07 /* CustomTableCell.swift */; };
+		2A497C4E26644B1C00856A64 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 2A497C4D26644B1C00856A64 /* Sparkle */; };
 		2A55417F254B14DF00C0E317 /* AppleGFXHDA in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A55417E254B14D200C0E317 /* AppleGFXHDA */; };
 		2A56BDFC2430A5BE0064CD4D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56BDFB2430A5BE0064CD4D /* Hint.swift */; };
 		2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A598E4C2441B2EA00D4563C /* Localizable.strings */; };
 		2A627AE72589298400822A38 /* KUMenuBar.app in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A67DB52258928F100A85104 /* KUMenuBar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */; };
-		2AAE88B4263E963700FE4000 /* 7za in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE88B3263E963700FE4000 /* 7za */; };
 		2AAE88B6263E964700FE4000 /* 7za in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2AAE88B3263E963700FE4000 /* 7za */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AB1AAD725613FBA00C84CB8 /* AuthRootApplyReboot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */; };
 		2AB3049E23150E1300D618FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3049D23150E1300D618FF /* AppDelegate.swift */; };
@@ -58,16 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2AAA8E6026051E8600878EEC /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2AC44BF92315103F006D447C /* Copy Bash Strings */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,16 +149,6 @@
 			name = "Sounds Copy";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AC44C1C23151180006D447C /* Anim Copy */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = anim;
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			name = "Anim Copy";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -180,12 +160,6 @@
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A67DB52258928F100A85104 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2AAA8E4F26051E8600878EEC /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		2AAA8E5126051E8600878EEC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		2AAA8E5326051E8600878EEC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		2AAA8E5626051E8600878EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
-		2AAA8E5826051E8600878EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AAA8E5926051E8600878EEC /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Test.entitlements; sourceTree = "<group>"; };
 		2AAE88B3263E963700FE4000 /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
 		2AB1AAD625613FBA00C84CB8 /* AuthRootApplyReboot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRootApplyReboot.swift; sourceTree = "<group>"; };
 		2AB3049A23150E1300D618FF /* Kext Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kext Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,9 +204,6 @@
 		2AE381CA26053C6A00100819 /* OCConfigCompare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCConfigCompare.swift; sourceTree = "<group>"; };
 		2AF6EFC5234DBE0D00DD8F9B /* KUNotifier.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUNotifier.app; sourceTree = "<group>"; };
 		2AFE137423AEAF4700A5186D /* dspci */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dspci; sourceTree = "<group>"; };
-		2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.release.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.release.xcconfig"; sourceTree = "<group>"; };
-		2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kext Updater.debug.xcconfig"; path = "Target Support Files/Pods-Kext Updater/Pods-Kext Updater.debug.xcconfig"; sourceTree = "<group>"; };
-		5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kext_Updater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE75AB7244B3D9C00A209A7 /* KeychainSwift in Frameworks */,
+				2A497C4E26644B1C00856A64 /* Sparkle in Frameworks */,
 				2AE75ABA244B3DEB00A209A7 /* LoginServiceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,26 +220,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AAA8E4E26051E8600878EEC /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				2AAA8E4F26051E8600878EEC /* Media.xcassets */,
-				2AAA8E5126051E8600878EEC /* icon.icns */,
-				2AAA8E5326051E8600878EEC /* ActionViewController.swift */,
-				2AAA8E5526051E8600878EEC /* ActionViewController.xib */,
-				2AAA8E5826051E8600878EEC /* Info.plist */,
-				2AAA8E5926051E8600878EEC /* Test.entitlements */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		2AB3049123150E1300D618FF = {
 			isa = PBXGroup;
 			children = (
 				2AB3049C23150E1300D618FF /* Kext Updater */,
-				2AAA8E4E26051E8600878EEC /* Test */,
 				2AB3049B23150E1300D618FF /* Products */,
-				4D9645F01E633C8E1A77F904 /* Pods */,
 				EFCEF92E17A76F1031C73313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -391,20 +348,10 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
-		4D9645F01E633C8E1A77F904 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */,
-				2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		EFCEF92E17A76F1031C73313 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */,
-				5BC3426A8D1D2E8A96533D42 /* Pods_Kext_Updater.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -416,7 +363,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB304AA23150E1500D618FF /* Build configuration list for PBXNativeTarget "Kext Updater" */;
 			buildPhases = (
-				30ACD4D9158E7E9A667B8EC7 /* [CP] Check Pods Manifest.lock */,
 				2AB3049623150E1300D618FF /* Sources */,
 				2AB3049723150E1300D618FF /* Frameworks */,
 				2AB3049823150E1300D618FF /* Resources */,
@@ -427,10 +373,7 @@
 				2AC44C0923151100006D447C /* Kext Copy IO */,
 				2AC44C1023151144006D447C /* Pics Copy */,
 				2AC44C132315115F006D447C /* Sounds Copy */,
-				2AC44C1C23151180006D447C /* Anim Copy */,
 				2AC44C202315119F006D447C /* Zip App and send to Homeshare */,
-				2AAA8E6026051E8600878EEC /* Embed App Extensions */,
-				54F3CB85D27427F6ABAF40CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,6 +383,7 @@
 			packageProductDependencies = (
 				2AE75AB6244B3D9C00A209A7 /* KeychainSwift */,
 				2AE75AB9244B3DEB00A209A7 /* LoginServiceKit */,
+				2A497C4D26644B1C00856A64 /* Sparkle */,
 			);
 			productName = "Kext Updater";
 			productReference = 2AB3049A23150E1300D618FF /* Kext Updater.app */;
@@ -478,6 +422,7 @@
 			packageReferences = (
 				2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */,
+				2A497C4C26644B1C00856A64 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 2AB3049B23150E1300D618FF /* Products */;
 			projectDirPath = "";
@@ -493,7 +438,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AAE88B4263E963700FE4000 /* 7za in Resources */,
 				2A598E4F2441B4BA00D4563C /* Localizable.strings in Resources */,
 				2AB304A223150E1500D618FF /* Assets.xcassets in Resources */,
 				2A6FAACC2316A1DD002E6BA2 /* InfoPlist.strings in Resources */,
@@ -521,45 +465,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
-		};
-		30ACD4D9158E7E9A667B8EC7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kext Updater-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		54F3CB85D27427F6ABAF40CA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kext Updater/Pods-Kext Updater-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -608,14 +513,6 @@
 				2A6FAACB2316A1DD002E6BA2 /* de */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2AAA8E5526051E8600878EEC /* ActionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2AAA8E5626051E8600878EEC /* Base */,
-			);
-			name = ActionViewController.xib;
 			sourceTree = "<group>";
 		};
 		2AB304A323150E1500D618FF /* Main.storyboard */ = {
@@ -754,7 +651,6 @@
 		};
 		2AB304AB23150E1500D618FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BE63A59C2D44854EF135C7F /* Pods-Kext Updater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -780,7 +676,6 @@
 		};
 		2AB304AC23150E1500D618FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BD34EB9261C9FC6D98E986D /* Pods-Kext Updater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -828,6 +723,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2A497C4C26644B1C00856A64 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.26.0;
+			};
+		};
 		2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
@@ -847,6 +750,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2A497C4D26644B1C00856A64 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A497C4C26644B1C00856A64 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		2AE75AB6244B3D9C00A209A7 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */;
