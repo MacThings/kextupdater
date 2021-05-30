@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KeychainSwift",
+        "repositoryURL": "https://github.com/evgenyneu/keychain-swift",
+        "state": {
+          "branch": null,
+          "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
+          "version": "19.0.0"
+        }
+      },
+      {
+        "package": "LoginServiceKit",
+        "repositoryURL": "https://github.com/Clipy/LoginServiceKit",
+        "state": {
+          "branch": null,
+          "revision": "14e88a763ddd230708060c52e5be2662d9142e91",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "Sparkle",
+        "repositoryURL": "https://github.com/sparkle-project/Sparkle",
+        "state": {
+          "branch": null,
+          "revision": "c0933a516b420806e9216e71bd13ba76c54f0de6",
+          "version": "1.26.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
