@@ -464,7 +464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bin/Sparkle.framework\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Resources/bin/Sparkle.framework\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
