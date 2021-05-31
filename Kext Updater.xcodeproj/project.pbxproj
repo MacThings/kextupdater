@@ -156,7 +156,6 @@
 		2A3AEE81258D0FC70097CF07 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		2A55417E254B14D200C0E317 /* AppleGFXHDA */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleGFXHDA; sourceTree = "<group>"; };
 		2A56BDFB2430A5BE0064CD4D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
-		2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KUMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A598E4D2441B2EA00D4563C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A67DB52258928F100A85104 /* KUMenuBar.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = KUMenuBar.app; sourceTree = "<group>"; };
 		2A6FAACB2316A1DD002E6BA2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -225,7 +224,6 @@
 			children = (
 				2AB3049C23150E1300D618FF /* Kext Updater */,
 				2AB3049B23150E1300D618FF /* Products */,
-				EFCEF92E17A76F1031C73313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,14 +346,6 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
-		EFCEF92E17A76F1031C73313 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2A56BDFD2430A69E0064CD4D /* KUMenuBar.app */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -464,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bin/Sparkle.framework\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Resources/bin/Sparkle.framework\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bashstrings/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bin/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/html/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/kexts/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/pics/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/script/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/sounds/Sparkle.framework\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
