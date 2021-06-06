@@ -27,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        LetsMoveIt().ToApps()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
