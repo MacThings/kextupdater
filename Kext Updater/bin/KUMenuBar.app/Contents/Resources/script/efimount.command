@@ -97,7 +97,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleALCU AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -117,7 +117,8 @@ function _excludedkexts()
     fi
 
     ### DEBUG Point. Testing Kexts without really loaded ###
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  IntelMausiWOL (1.0.3)" )
+    #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  AppleALCU (1.0.3)" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n  IntelMausiEthernet (1.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
@@ -180,16 +181,13 @@ function _excludedkexts()
         if [[ "$i" = "VoodooPS2" ]]; then
             i="PS2Controller"
         fi
-        #check=$( echo "$content" | grep -w ex-$i | sed "s/.*=\ //g" )
-        #if [[ "$i" = "AirportItlwm" ]]; then
-        #    i="itlwm"
-        #fi
         if [[ $check = "true" ]]; then
             kextstats=$( echo "$kextstats" | grep -vw $i )
             else
             kextstats=$( echo "$kextstats" )
         fi
     done
+    
 }
 
 ################################################################
@@ -207,6 +205,7 @@ kextArray=(
 "airportbrcmfixup","BrcmWLFixup","BrcmWLFixup","AirportBrcmFixup"
 "airportbrcmfixup","AirportBrcmFixup","AirportBrcmFixup",""
 "applealc","AppleALC","AppleALC",""
+"applealcu","AppleALCU","AppleALCU",""
 "applebacklightfixup","AppleBacklightFixup","AppleBacklightFixup","WhateverGreen","Alarm"
 "applebacklightsmoother","AppleBacklightSmoother","AppleBacklightSmoother",""
 "asussmc","AsusSMC","AsusSMC",""
@@ -271,8 +270,6 @@ kextArray=(
 "whatevergreen","WhateverGreen","WhateverGreen",""
 "yogasmc","YogaSMC","YogaSMC",""
 )
-
-
 
 #========================= Language Detection =========================#
 function _languageselect()

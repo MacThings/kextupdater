@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 
@@ -97,14 +96,14 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleALCU AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
 
 function _excludedkexts()
 {
-    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" | sed 's/IntelMausi-WOL/IntelMausiWOL/g' )
+    kextstatsori=$( kextstat | grep -v com.apple | grep -v "VoodooI2C[A-Z]" | grep -v "PS2Keyboard" | grep -v "PS2Trackpad" | grep -v "PS2Mouse" | grep -v "BrcmPatchRAM" | sed -e 's/IntelMausi-WOL/IntelMausiWOL/g' -e  's/AppleALCU/AppleALC/g' )
     bdmesg=$( ../bin/./BDMESG |grep "Clover revision" |sed 's/.*revision:\ //g' |cut -c 1-4 |sed -e 's/^/Clover\ (/' -e 's/$/)/g' )
     kextstatsori=$( echo -e "$kextstatsori" "\n$bdmesg" )
     kextstatsori=$( echo -e "$kextstatsori" |sed "s/d*)/)/g" )
@@ -205,7 +204,6 @@ kextArray=(
 "airportbrcmfixup","BrcmWLFixup","BrcmWLFixup","AirportBrcmFixup"
 "airportbrcmfixup","AirportBrcmFixup","AirportBrcmFixup",""
 "applealc","AppleALC","AppleALC",""
-"applealcu","AppleALCU","AppleALCU",""
 "applebacklightfixup","AppleBacklightFixup","AppleBacklightFixup","WhateverGreen","Alarm"
 "applebacklightsmoother","AppleBacklightSmoother","AppleBacklightSmoother",""
 "asussmc","AsusSMC","AsusSMC",""

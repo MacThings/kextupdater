@@ -240,6 +240,15 @@
 		2AB3049C23150E1300D618FF /* Kext Updater */ = {
 			isa = PBXGroup;
 			children = (
+				2AC44BA423150F38006D447C /* bashstrings */,
+				2AC44BB923150F39006D447C /* bin */,
+				2AC44B9F23150F38006D447C /* html */,
+				2AC44BA723150F38006D447C /* kexts */,
+				2AC44BA123150F38006D447C /* pics */,
+				2AC44BAE23150F38006D447C /* script */,
+				2AC44BB023150F38006D447C /* sounds */,
+				2AB304A123150E1500D618FF /* Assets.xcassets */,
+				2AB304A323150E1500D618FF /* Main.storyboard */,
 				2ADD786925322A6200A0045C /* About.swift */,
 				2AB3049D23150E1300D618FF /* AppDelegate.swift */,
 				2A1D9577251225640077A7C0 /* AuthRoot.swift */,
@@ -259,18 +268,9 @@
 				2AC44BE123150F61006D447C /* SingleKexts.swift */,
 				2AC44BE923150F61006D447C /* Tools.swift */,
 				2AC44BE223150F61006D447C /* Website.swift */,
-				2AC44BF723150F6B006D447C /* kextupdaterng.html */,
-				2AC44BA423150F38006D447C /* bashstrings */,
-				2AC44BB923150F39006D447C /* bin */,
-				2AC44B9F23150F38006D447C /* html */,
-				2AC44BA723150F38006D447C /* kexts */,
-				2AC44BA123150F38006D447C /* pics */,
-				2AC44BAE23150F38006D447C /* script */,
-				2AC44BB023150F38006D447C /* sounds */,
 				2AB3049F23150E1300D618FF /* ViewController.swift */,
 				2AD19D8A2367273D0014D005 /* WindowController.swift */,
-				2AB304A123150E1500D618FF /* Assets.xcassets */,
-				2AB304A323150E1500D618FF /* Main.storyboard */,
+				2AC44BF723150F6B006D447C /* kextupdaterng.html */,
 				2A598E4C2441B2EA00D4563C /* Localizable.strings */,
 				2AB304A623150E1500D618FF /* Info.plist */,
 				2A6FAACA2316A1DD002E6BA2 /* InfoPlist.strings */,
@@ -457,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/Kext\\ Updater.app\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bashstrings/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/bin/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/html/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/kexts/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/pics/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/script/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app/Contents/Resources/sounds/Sparkle.framework\ncp -r \"${TARGET_BUILD_DIR}\"/Kext\\ Updater.app /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r /Applications/\"${PRODUCT_NAME}.app\"\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/bashstrings/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/bin/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/html/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/kexts/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/pics/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/script/Sparkle.framework\nrm -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources/sounds/Sparkle.framework\ncp -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\" /Applications/\nif [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\ncp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\nrm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\ncd /Applications\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\nditto -c -k --sequesterRsrc --keepParent Kext\\ Updater.app ~/Desktop/\"${PRODUCT_NAME} ${MARKETING_VERSION}.zip\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
