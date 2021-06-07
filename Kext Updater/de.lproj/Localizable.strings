@@ -14,10 +14,22 @@
 "Disabled" = "Deaktiviert";
 
 /* No comment provided by engineer. */
+"Do Not Move" = "Nicht verschieben";
+
+/* No comment provided by engineer. */
 "Do you want to create a system report right now?" = "Möchtest Du jetzt einen Systemreport erstellen?";
 
 /* No comment provided by engineer. */
 "Enabled" = "Aktiviert";
+
+/* No comment provided by engineer. */
+"I can move myself to the Applications folder if you'd like. This will keep your Downloads folder uncluttered." = "Ich kann mich selbst in den Programme-Ordner verschieben wenn Du möchtest. Somit bleibt Dein Download-Ordner aufgeräumt.";
+
+/* No comment provided by engineer. */
+"Move to Applications Folder" = "In den Programme-Ordner verschieben";
+
+/* No comment provided by engineer. */
+"Move to Applications folder?" = "In den Programme-Ordner verschieben?";
 
 /* No comment provided by engineer. */
 "No" = "Nein";
@@ -52,17 +64,3 @@
 /* No comment provided by engineer. */
 "You are not connected to the Internet or the Server is not reachable at the moment. Please try again later." = "Du bist entweder nicht mit dem Internet verbunden oder der Server antwortet im Moment nicht. Versuche es später noch einmal.";
 
-/* No comment provided by engineer. */
-"Do Not Move" = "Nicht verschieben";
-
-/* No comment provided by engineer. */
-"I can move myself to the Applications folder if you'd like. This will keep your Downloads folder uncluttered." = "Ich kann mich selbst in den Programme-Ordner verschieben wenn Du möchtest. Somit bleibt Dein Download-Ordner aufgeräumt.";
-
-/* No comment provided by engineer. */
-"Move to Applications Folder" = "In den Programme-Ordner verschieben";
-
-/* No comment provided by engineer. */
-"Move to Applications folder?" = "In den Programme-Ordner verschieben?";
-
-/* No comment provided by engineer. */
-"This will keep your Downloads folder uncluttered." = "Damit Ihr Downloads-Ordner aufgeräumt wird.";

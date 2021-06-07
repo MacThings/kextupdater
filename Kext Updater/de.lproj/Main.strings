@@ -679,8 +679,11 @@
 /* Class = "NSButtonCell"; title = "CodecCommander"; ObjectID = "MaA-rD-UBc"; */
 "MaA-rD-UBc.title" = "CodecCommander";
 
-/* Class = "NSButtonCell"; title = "AppleALC"; ObjectID = "mF0-lM-S3o"; */
-"mF0-lM-S3o.title" = "AppleALC";
+/* Class = "NSButtonCell"; title = "Don't bother me again"; ObjectID = "meF-fp-5Ab"; */
+"meF-fp-5Ab.title" = "Nicht erneut anzeigen";
+
+/* Class = "NSButtonCell"; title = "AppleALC(U)"; ObjectID = "mF0-lM-S3o"; */
+"mF0-lM-S3o.title" = "AppleALC(U)";
 
 /* Class = "NSMenuItem"; title = "10.10.4 - 14E46"; ObjectID = "MFe-3R-VJ2"; */
 "MFe-3R-VJ2.title" = "10.10.4 - 14E46";
@@ -721,8 +724,8 @@
 /* Class = "NSButtonCell"; title = "Close"; ObjectID = "n7b-Em-CRc"; */
 "n7b-Em-CRc.title" = "Schließen";
 
-/* Class = "NSButtonCell"; title = "AppleALC"; ObjectID = "N7Y-ZB-7CY"; */
-"N7Y-ZB-7CY.title" = "AppleALC";
+/* Class = "NSButtonCell"; title = "AppleALC(U)"; ObjectID = "N7Y-ZB-7CY"; */
+"N7Y-ZB-7CY.title" = "AppleALC(U)";
 
 /* Class = "NSMenuItem"; title = "10.12.1 - 16B2555"; ObjectID = "Nbh-Ca-Rpf"; */
 "Nbh-Ca-Rpf.title" = "10.12.1 - 16B2555";

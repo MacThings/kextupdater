@@ -357,9 +357,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiG-Ll-DM7" userLabel="AppleALC D">
-                                <rect key="frame" x="51" y="394" width="82" height="18"/>
+                                <rect key="frame" x="51" y="394" width="101" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="AppleALC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="N7Y-ZB-7CY">
+                                <buttonCell key="cell" type="check" title="AppleALC(U)" bezelStyle="regularSquare" imagePosition="left" inset="2" id="N7Y-ZB-7CY">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1857,9 +1857,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIv-2M-BPP">
-                                <rect key="frame" x="148" y="137" width="82" height="18"/>
+                                <rect key="frame" x="148" y="137" width="101" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="AppleALC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mF0-lM-S3o">
+                                <buttonCell key="cell" type="check" title="AppleALC(U)" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mF0-lM-S3o">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -3763,7 +3763,7 @@ DQ
                                             <rect key="frame" x="12" y="13" width="463" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="rVe-Nq-LzD">
-                                                <font key="font" metaFont="system" size="11"/>
+                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -5605,11 +5605,11 @@ DQ
             <objects>
                 <viewController title="Authenticated Root" id="oQ0-ZV-LZ6" customClass="AuthRoot" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="bu9-ii-djB">
-                        <rect key="frame" x="0.0" y="0.0" width="534" height="379"/>
+                        <rect key="frame" x="0.0" y="0.0" width="534" height="399"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yd-9j-vpu">
-                                <rect key="frame" x="12" y="218" width="456" height="92"/>
+                                <rect key="frame" x="12" y="238" width="456" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" id="Tfd-xF-YCn">
                                     <font key="font" metaFont="system"/>
@@ -5619,7 +5619,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-Ws-6ay">
-                                <rect key="frame" x="12" y="233" width="408" height="16"/>
+                                <rect key="frame" x="12" y="253" width="408" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" title="Reboot into recovery mode and run:" id="jXL-St-TH0">
                                     <font key="font" metaFont="system"/>
@@ -5628,7 +5628,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="twF-fq-iL0">
-                                <rect key="frame" x="12" y="209" width="408" height="22"/>
+                                <rect key="frame" x="12" y="229" width="408" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" title="csrutil authenticated-root disable" id="r6y-9m-ORS">
                                     <font key="font" size="15" name="Courier"/>
@@ -5637,7 +5637,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4e4-BH-ahX">
-                                <rect key="frame" x="12" y="192" width="52" height="16"/>
+                                <rect key="frame" x="12" y="212" width="52" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" title="or" id="frt-wl-p5M">
                                     <font key="font" metaFont="systemBold"/>
@@ -5646,7 +5646,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-6x-RmO">
-                                <rect key="frame" x="12" y="163" width="515" height="17"/>
+                                <rect key="frame" x="12" y="183" width="515" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" title="Put the value FF0F0000 into the csr-active-config of your OpenCore config.plist" id="nVD-kk-IlB">
                                     <font key="font" metaFont="system"/>
@@ -5655,12 +5655,12 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmv-50-dUd">
-                                <rect key="frame" x="14" y="78" width="506" height="85"/>
+                                <rect key="frame" x="14" y="95" width="506" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="authroot" id="VrN-19-ISC"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="793-g8-CmU">
-                                <rect key="frame" x="-2" y="338" width="538" height="24"/>
+                                <rect key="frame" x="-2" y="358" width="538" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Authenticated Root is active!" id="04w-Xj-Tcu">
                                     <font key="font" metaFont="systemBold" size="25"/>
@@ -5669,7 +5669,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9P8-WG-anR">
-                                <rect key="frame" x="12" y="0.0" width="399" height="77"/>
+                                <rect key="frame" x="12" y="23" width="399" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" id="tM0-PT-J9D">
                                     <font key="font" metaFont="system"/>
@@ -5678,8 +5678,19 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gus-Cb-tAx">
+                                <rect key="frame" x="12" y="10" width="205" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Don't bother me again" bezelStyle="regularSquare" imagePosition="left" state="on" focusRingType="none" inset="2" id="meF-fp-5Ab">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="T4s-x4-LfN" name="value" keyPath="values.AuthRoot Warning Hide" id="wRY-st-cNW"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-wg-6vI">
-                                <rect key="frame" x="406" y="13" width="114" height="32"/>
+                                <rect key="frame" x="406" y="5" width="114" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fWP-aV-c4r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -5699,9 +5710,9 @@ DQ
                     </connections>
                 </viewController>
                 <customObject id="Eln-vo-pRr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="6Pw-A2-Npg"/>
+                <userDefaultsController id="T4s-x4-LfN"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-352.5"/>
+            <point key="canvasLocation" x="1958" y="-434.5"/>
         </scene>
         <!--LESLEWarning-->
         <scene sceneID="FDm-kb-zyM">

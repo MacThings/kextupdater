@@ -196,7 +196,10 @@ class Tools: NSViewController {
                     
                     if authroot_status == "Yes"{
                         self.button_read_write.isEnabled = false
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "AuthRoot"), object: nil)
+                        let authroot_warning_hide = UserDefaults.standard.bool(forKey: "AuthRoot Warning Hide")
+                        if authroot_warning_hide == false {
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "AuthRoot"), object: nil)
+                        }
                     }
                 } else {
                     self.button_apply.isHidden = false
@@ -399,8 +402,8 @@ class Tools: NSViewController {
                 self.button_read_write.isHidden = false
                 self.button_read_write.isEnabled = false
             } else {
-                let warning_hide = UserDefaults.standard.string(forKey: "AuthRoot Warning Hide")
-                if warning_hide != "1" {
+                let warning_hide = UserDefaults.standard.bool(forKey: "AuthRoot Warning Hide")
+                if warning_hide != true {
                     self.show_apply_reboot_warning.performClick(nil)
                 }
             }

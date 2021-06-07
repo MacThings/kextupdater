@@ -356,7 +356,6 @@ class KextUpdater: NSViewController {
         if multibeast_alert == nil{
             UserDefaults.standard.set(false, forKey: "MuteMultibeastAlert")
         }
-        
         let pythonPath = "/usr/bin/python"
         if (FileManager.default.fileExists(atPath: pythonPath)) {
             UserDefaults.standard.set(true, forKey: "PythonInstalled")
@@ -521,7 +520,7 @@ class KextUpdater: NSViewController {
         footer_efi_image_green.isEnabled=false
         footer_efi_diskinfo_click.isEnabled=false
         tools_button.isEnabled=false
-                output_window.textStorage?.mutableString.setString("")
+        output_window.textStorage?.mutableString.setString("")
         app_logo.isHidden = true
         surprise_xmas.isHidden = true
         surprise_snow.isHidden = true
