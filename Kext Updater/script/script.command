@@ -187,6 +187,7 @@ function _excludedkexts()
             kextstats=$( echo "$kextstats" )
         fi
     done
+    
 }
 
 ################################################################
