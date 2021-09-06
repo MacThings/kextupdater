@@ -5817,7 +5817,7 @@ DQ
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-bU-ira">
-                                <rect key="frame" x="115" y="18" width="78" height="21"/>
+                                <rect key="frame" x="108" y="18" width="78" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="OFo-cA-208">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="iYt-9H-9yR"/>
@@ -5827,7 +5827,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APu-3k-6po">
-                                <rect key="frame" x="14" y="11" width="97" height="32"/>
+                                <rect key="frame" x="6" y="11" width="97" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Calculate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B2P-v0-lcd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -5838,7 +5838,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1x-Dt-4UO">
-                                <rect key="frame" x="200" y="28" width="80" height="16"/>
+                                <rect key="frame" x="194" y="28" width="94" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="-&gt; Clipboard" bezelStyle="rounded" alignment="center" controlSize="mini" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tnc-fe-a8K">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -5849,7 +5849,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-hE-P8Z">
-                                <rect key="frame" x="200" y="9" width="80" height="16"/>
+                                <rect key="frame" x="194" y="9" width="94" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Clear all" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jeq-HM-pxd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -5887,7 +5887,7 @@ DQ
                 <customObject id="P5N-0Z-eH4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="qRN-ML-6qP"/>
             </objects>
-            <point key="canvasLocation" x="2843" y="1304"/>
+            <point key="canvasLocation" x="2842.5" y="1304"/>
         </scene>
         <!--Authenticated Root-->
         <scene sceneID="Ksc-JU-0cS">

@@ -220,9 +220,6 @@
 /* Class = "NSTextFieldCell"; title = "EFI Folder Creator"; ObjectID = "Asi-UQ-1TT"; */
 "Asi-UQ-1TT.title" = "EFI Folder Creator";
 
-/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
-"aTl-1u-JFS.title" = "Drucken…";
-
 /* Class = "NSButtonCell"; title = "Check for validity"; ObjectID = "aua-gt-vVe"; */
 "aua-gt-vVe.title" = "Überprüfen";
 
@@ -237,6 +234,9 @@
 
 /* Class = "NSMenuItem"; title = "Andale Mono"; ObjectID = "B0l-JN-tpa"; */
 "B0l-JN-tpa.title" = "Andale Mono";
+
+/* Class = "NSButtonCell"; title = "Calculate"; ObjectID = "B2P-v0-lcd"; */
+"B2P-v0-lcd.title" = "Berechnen";
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G10021"; ObjectID = "B9c-RJ-BXi"; */
 "B9c-RJ-BXi.title" = "10.13.6 - 17G10021";
@@ -255,9 +255,6 @@
 
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C88"; ObjectID = "BI2-7K-d91"; */
 "BI2-7K-d91.title" = "10.13.2 - 17C88";
-
-/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
-"bib-Uj-vzu.title" = "File";
 
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G2136"; ObjectID = "bij-CN-gVc"; */
 "bij-CN-gVc.title" = "10.12.6 - 16G2136";
@@ -285,6 +282,9 @@
 
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1510"; ObjectID = "C4V-OC-aeR"; */
 "C4V-OC-aeR.title" = "10.12.6 - 16G1510";
+
+/* Class = "NSTextFieldCell"; title = "OpenCore Scan Policy Calculator"; ObjectID = "c9R-lj-WPI"; */
+"c9R-lj-WPI.title" = "OpenCore Scan Policy Rechner";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2315"; ObjectID = "cA1-vl-qQU"; */
 "cA1-vl-qQU.title" = "10.10.5 - 14F2315";
@@ -327,9 +327,6 @@
 
 /* Class = "NSButtonCell"; title = "VoodooSMBus"; ObjectID = "dka-pk-iEa"; */
 "dka-pk-iEa.title" = "VoodooSMBus";
-
-/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
-"dMs-cI-mzQ.title" = "Datei";
 
 /* Class = "NSMenuItem"; title = "10.13.6 - 17G7024"; ObjectID = "dQc-Nx-z2c"; */
 "dQc-Nx-z2c.title" = "10.13.6 - 17G7024";
@@ -573,6 +570,9 @@
 
 /* Class = "NSMenuItem"; title = "10.11.6 - 15G18013"; ObjectID = "jAq-QM-XuM"; */
 "jAq-QM-XuM.title" = "10.11.6 - 15G18013";
+
+/* Class = "NSButtonCell"; title = "Clear all"; ObjectID = "Jeq-HM-pxd"; */
+"Jeq-HM-pxd.title" = "Auswahl aufh.";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F1808"; ObjectID = "jFP-Ch-gwX"; */
 "jFP-Ch-gwX.title" = "10.10.5 - 14F1808";
@@ -853,9 +853,6 @@
 /* Class = "NSMenuItem"; title = "10.13.2 - 17C205"; ObjectID = "qiq-Qq-0Iu"; */
 "qiq-Qq-0Iu.title" = "10.13.2 - 17C205";
 
-/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
-"qIS-W8-SiK.title" = "Seite einrichten…";
-
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1710"; ObjectID = "QKm-v2-el9"; */
 "QKm-v2-el9.title" = "10.12.6 - 16G1710";
 
@@ -991,6 +988,9 @@
 /* Class = "NSButtonCell"; title = "VirtualSMC"; ObjectID = "TMB-Bg-QzM"; */
 "TMB-Bg-QzM.title" = "VirtualSMC";
 
+/* Class = "NSButtonCell"; title = "-> Clipboard"; ObjectID = "Tnc-fe-a8K"; */
+"Tnc-fe-a8K.title" = "-> Zwischenabl.";
+
 /* Class = "NSButtonCell"; title = "Default"; ObjectID = "tS6-WA-m9v"; */
 "tS6-WA-m9v.title" = "Standard";
 
@@ -1122,6 +1122,9 @@
 
 /* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts for you."; ObjectID = "xkJ-nI-Tsy"; */
 "xkJ-nI-Tsy.ibShadowedToolTip" = "Prüft ob aktuellere Kexte vorhanden sind und lädt sie ggf. herunter.";
+
+/* Class = "NSButtonCell"; title = "Scan Policy Calculator"; ObjectID = "xkn-oE-BYf"; */
+"xkn-oE-BYf.title" = "Scan Policy Rechner";
 
 /* Class = "NSMenuItem"; title = "14"; ObjectID = "xn4-4H-2MR"; */
 "xn4-4H-2MR.title" = "14";
