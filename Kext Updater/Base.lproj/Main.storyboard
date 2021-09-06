@@ -77,24 +77,6 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="File" id="dMs-cI-mzQ">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="File" id="bib-Uj-vzu">
-                                    <items>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                            <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
@@ -4831,6 +4813,17 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
+                                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXt-Pc-EsZ">
+                                                        <rect key="frame" x="182" y="2" width="143" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Scan Policy Calculator" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xkn-oE-BYf">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <segue destination="j1j-Ic-tGy" kind="show" id="exq-Yq-Dnw"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </view>
                                         </box>
@@ -5600,6 +5593,302 @@ DQ
             </objects>
             <point key="canvasLocation" x="1925" y="35"/>
         </scene>
+        <!--OpenCore SPC-->
+        <scene sceneID="OBA-T9-qIN">
+            <objects>
+                <viewController title="OpenCore SPC" showSeguePresentationStyle="single" id="j1j-Ic-tGy" customClass="ScanPolicyCalculator" customModule="Kext_Updater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="VXH-XG-kSy">
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="490"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vik-DH-dCs">
+                                <rect key="frame" x="20" y="427" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_FILE_SYSTEM_LOCK" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2me-M1-Vya">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_FILE_SYSTEM_LOCK" id="58Q-iV-ihG"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjq-wX-Pt3">
+                                <rect key="frame" x="20" y="401" width="340" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_DEVICE_LOCK" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zSk-Jt-liH">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_DEVICE_LOCK" id="O6G-d0-SeG"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYF-TM-llX">
+                                <rect key="frame" x="-2" y="455" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="OpenCore Scan Policy Calculator" id="c9R-lj-WPI">
+                                    <font key="font" metaFont="system" size="17"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="FJL-Rc-qxb">
+                                <rect key="frame" x="20" y="453" width="259" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="890-6k-idm">
+                                <rect key="frame" x="20" y="50" width="259" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UM4-q1-ywg">
+                                <rect key="frame" x="20" y="375" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_APFS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kFn-Up-YQh">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_APFS" id="ves-yR-xWt"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pE6-8D-ip8">
+                                <rect key="frame" x="20" y="355" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_HFS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jub-vI-hae">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_HFS" id="EaY-d5-obm"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-Uh-Gnz">
+                                <rect key="frame" x="20" y="335" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_ESP" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tlZ-k4-EGc">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_ESP" id="SOX-Ng-DuH"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKe-X8-ec9">
+                                <rect key="frame" x="20" y="315" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_NTFS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="BB5-a7-hyd">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_NTFS" id="AkN-GK-5Wj"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpF-q7-wPK">
+                                <rect key="frame" x="20" y="295" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_LINUX_ROOT" bezelStyle="regularSquare" imagePosition="left" inset="2" id="EJw-x4-a9I">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_LINUX_ROOT" id="nzu-j4-cjY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-80-DWG">
+                                <rect key="frame" x="20" y="275" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_LINUX_DATA" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dMI-La-q6o">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_LINUX_DATA" id="vRd-oD-NmR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e24-Ve-ADI">
+                                <rect key="frame" x="20" y="255" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_FS_XBOOTLDR" bezelStyle="regularSquare" imagePosition="left" inset="2" id="q3V-33-vA1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_FS_XBOOTLDR" id="SmW-ZO-gsJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-Bt-zep">
+                                <rect key="frame" x="20" y="224" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_SATA" bezelStyle="regularSquare" imagePosition="left" inset="2" id="eVu-hB-glw">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_SATA" id="O6W-5y-2Gd"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpW-ah-sec">
+                                <rect key="frame" x="20" y="204" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_SASEX" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4eP-Nk-3Lb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_SASEX" id="8AI-m7-WyN"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-lO-rVr">
+                                <rect key="frame" x="20" y="184" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_SCSI" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qgY-Sm-D9f">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_SCSI" id="sjq-49-k1B"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8E-6Z-fhz">
+                                <rect key="frame" x="20" y="164" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_NVME" bezelStyle="regularSquare" imagePosition="left" inset="2" id="OVH-IP-nMx">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_NVME" id="8Ft-pQ-kik"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feD-fp-lGl">
+                                <rect key="frame" x="20" y="144" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_ATAPI" bezelStyle="regularSquare" imagePosition="left" inset="2" id="C2W-1k-rT1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_ATAPI" id="YdG-B5-xUN"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-VL-KVe">
+                                <rect key="frame" x="20" y="124" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_USB" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ssY-7A-xoN">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_USB" id="eyF-Bs-8oc"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iur-C9-61k">
+                                <rect key="frame" x="20" y="104" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_FIREWIRE" bezelStyle="regularSquare" imagePosition="left" inset="2" id="7Kd-bw-OHR">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_FIREWIRE" id="zcB-vd-JnL"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl5-Vt-MO3">
+                                <rect key="frame" x="20" y="84" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_SDCARD" bezelStyle="regularSquare" imagePosition="left" inset="2" id="g61-d8-ywa">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_SDCARD" id="Zlw-k3-7h2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-RD-3Lb">
+                                <rect key="frame" x="20" y="64" width="340" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="OC_SCAN_ALLOW_DEVICE_PCI" bezelStyle="regularSquare" imagePosition="left" inset="2" id="b3P-Qi-nmq">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="qRN-ML-6qP" name="value" keyPath="values.OC_SCAN_ALLOW_DEVICE_PCI" id="mG3-ou-w3b"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-bU-ira">
+                                <rect key="frame" x="115" y="18" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="OFo-cA-208">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="iYt-9H-9yR"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APu-3k-6po">
+                                <rect key="frame" x="14" y="11" width="97" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Calculate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B2P-v0-lcd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="calculate:" target="j1j-Ic-tGy" id="Tci-L8-pnm"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1x-Dt-4UO">
+                                <rect key="frame" x="200" y="28" width="80" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="-&gt; Clipboard" bezelStyle="rounded" alignment="center" controlSize="mini" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tnc-fe-a8K">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="to_clipboard:" target="j1j-Ic-tGy" id="fql-cl-qkL"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-hE-P8Z">
+                                <rect key="frame" x="200" y="9" width="80" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Clear all" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jeq-HM-pxd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clear_all:" target="j1j-Ic-tGy" id="ov1-H7-fpz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_ATAPI" destination="feD-fp-lGl" id="lqf-MM-Q2A"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_FIREWIRE" destination="iur-C9-61k" id="KqI-AW-SEs"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_NVME" destination="M8E-6Z-fhz" id="zd3-mT-JgJ"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_PCI" destination="Oem-RD-3Lb" id="lO9-3U-YmV"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_SASEX" destination="GpW-ah-sec" id="FE2-1L-ndK"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_SATA" destination="6jK-Bt-zep" id="rH6-Sy-Q7I"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_SCSI" destination="9iX-lO-rVr" id="I4W-Wa-Wlc"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_SDCARD" destination="sl5-Vt-MO3" id="l9B-4j-tfi"/>
+                        <outlet property="OC_SCAN_ALLOW_DEVICE_USB" destination="IJP-VL-KVe" id="DP6-sT-V8O"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_APFS" destination="UM4-q1-ywg" id="Bl2-HR-kc9"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_ESP" destination="lE7-Uh-Gnz" id="4Hb-mA-fNP"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_HFS" destination="pE6-8D-ip8" id="g0L-cf-irx"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_LINUX_DATA" destination="6OA-80-DWG" id="VuR-0x-T0Y"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_LINUX_ROOT" destination="FpF-q7-wPK" id="ao9-U5-w6k"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_NTFS" destination="bKe-X8-ec9" id="i0m-QC-0HC"/>
+                        <outlet property="OC_SCAN_ALLOW_FS_XBOOTLDR" destination="e24-Ve-ADI" id="Nc2-Hz-BQH"/>
+                        <outlet property="OC_SCAN_DEVICE_LOCK" destination="wjq-wX-Pt3" id="P1g-c9-OYd"/>
+                        <outlet property="OC_SCAN_FILE_SYSTEM_LOCK" destination="vik-DH-dCs" id="tfC-rk-Iqi"/>
+                        <outlet property="result" destination="cUn-bU-ira" id="zuX-f9-Kbo"/>
+                        <outlet property="to_clipboard_button" destination="R1x-Dt-4UO" id="3Zo-my-fXC"/>
+                    </connections>
+                </viewController>
+                <customObject id="P5N-0Z-eH4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="qRN-ML-6qP"/>
+            </objects>
+            <point key="canvasLocation" x="2843" y="1304"/>
+        </scene>
         <!--Authenticated Root-->
         <scene sceneID="Ksc-JU-0cS">
             <objects>
@@ -6316,7 +6605,7 @@ DQ
     <inferredMetricsTieBreakers>
         <segue reference="jlC-ai-e4z"/>
         <segue reference="jDB-Qg-yx3"/>
-        <segue reference="mFw-0w-Zlu"/>
+        <segue reference="tSc-wz-pun"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HF Logo" width="512" height="512"/>
