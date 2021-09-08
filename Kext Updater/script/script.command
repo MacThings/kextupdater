@@ -96,7 +96,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -115,10 +115,10 @@ function _excludedkexts()
         fi
     fi
 
-    ### DEBUG Point. Testing Kexts without really loaded ###
+    ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n  AppleALCU (1.0.3)" )
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  IntelMausiEthernet (1.0.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  ECEnabler (1.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -218,6 +218,7 @@ kextArray=(
 "coredisplayfixup","CoreDisplayFixup","CoreDisplayFixup","WhateverGreen","Alarm"
 "cpufriend","CPUFriend","CPUFriend",""
 "cputscsync","CpuTscSync","CpuTscSync",""
+"ecenabler","ECEnabler","ECEnabler",""
 "enablelidwake","EnableLidWake","EnableLidWake",""
 "fakepciid","FakePCIID","FakePCIID",""
 "fakesmc","FakeSMC","FakeSMC",""
@@ -1335,6 +1336,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"sinetekrtsx" ]; then
     mv ${ScriptDownloadPath}/sinetekrtsx ${ScriptDownloadPath}/"Sinetek-rtsx"
+    fi
+    if [ -d ${ScriptDownloadPath}/"ecenabler" ]; then
+    mv ${ScriptDownloadPath}/ecenabler ${ScriptDownloadPath}/"ECEnabler"
     fi
 
     if [[ $checkchime = "1" ]]; then

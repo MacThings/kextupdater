@@ -151,6 +151,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
         UserDefaults.standard.set(true, forKey: "dl-cputscsync")
+        UserDefaults.standard.set(true, forKey: "dl-ecenabler")
         UserDefaults.standard.set(true, forKey: "dl-fakepciid")
         UserDefaults.standard.set(true, forKey: "dl-fakesmc")
         UserDefaults.standard.set(true, forKey: "dl-genericusbxhci")
@@ -278,6 +279,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/lvs1974/CpuTscSync", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
+    @IBAction func ecenabler(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/1Revenger1/ECEnabler", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
     @IBAction func fakepciid(_ sender: Any) {
         UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-fake-pci-id/overview", forKey: "SourceURL")
         webview_button.performClick(nil)
@@ -348,10 +353,6 @@ class SingleKexts: NSViewController {
     }
     @IBAction func nvmefix(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/NVMeFix", forKey: "SourceURL")
-        webview_button.performClick(nil)
-    }
-    @IBAction func radeonboost(_ sender: Any) {
-        UserDefaults.standard.set("https://www.hackintosh-forum.de/forum/thread/47791-radeonboost-kext-benchmark-scores-wie-am-echten-mac-unter-windows/", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func realtekrtl8111(_ sender: Any) {
