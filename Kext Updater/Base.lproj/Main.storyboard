@@ -4836,9 +4836,9 @@ DQ
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXt-Pc-EsZ">
-                                                        <rect key="frame" x="182" y="2" width="143" height="27"/>
+                                                        <rect key="frame" x="222" y="2" width="140" height="27"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Scan Policy Calculator" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xkn-oE-BYf">
+                                                        <buttonCell key="cell" type="push" title="ScanPolicy Calculator" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xkn-oE-BYf">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
@@ -5648,7 +5648,7 @@ DQ
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYF-TM-llX">
                                 <rect key="frame" x="-2" y="455" width="303" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="OpenCore Scan Policy Calculator" id="c9R-lj-WPI">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="OpenCore ScanPolicy Calculator" id="c9R-lj-WPI">
                                     <font key="font" metaFont="system" size="17"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -6627,7 +6627,7 @@ DQ
     <inferredMetricsTieBreakers>
         <segue reference="jlC-ai-e4z"/>
         <segue reference="jDB-Qg-yx3"/>
-        <segue reference="tSc-wz-pun"/>
+        <segue reference="mFw-0w-Zlu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HF Logo" width="512" height="512"/>

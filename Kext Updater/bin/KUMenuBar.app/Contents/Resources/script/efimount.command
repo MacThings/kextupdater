@@ -115,10 +115,10 @@ function _excludedkexts()
         fi
     fi
 
-    ### DEBUG Point. Testing Kexts without really loaded ###
+    ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n  AppleALCU (1.0.3)" )
-    kextstatsori=$( echo -e "$kextstatsori" "\n  ECEnabler (1.0.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  ECEnabler (1.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts

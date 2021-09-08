@@ -283,8 +283,8 @@
 /* Class = "NSMenuItem"; title = "10.12.6 - 16G1510"; ObjectID = "C4V-OC-aeR"; */
 "C4V-OC-aeR.title" = "10.12.6 - 16G1510";
 
-/* Class = "NSTextFieldCell"; title = "OpenCore Scan Policy Calculator"; ObjectID = "c9R-lj-WPI"; */
-"c9R-lj-WPI.title" = "OpenCore Scan Policy Rechner";
+/* Class = "NSTextFieldCell"; title = "OpenCore ScanPolicy Calculator"; ObjectID = "c9R-lj-WPI"; */
+"c9R-lj-WPI.title" = "OpenCore ScanPolicy Rechner";
 
 /* Class = "NSMenuItem"; title = "10.10.5 - 14F2315"; ObjectID = "cA1-vl-qQU"; */
 "cA1-vl-qQU.title" = "10.10.5 - 14F2315";
@@ -1123,8 +1123,8 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Checks if there are newer kexts for you."; ObjectID = "xkJ-nI-Tsy"; */
 "xkJ-nI-Tsy.ibShadowedToolTip" = "Prüft ob aktuellere Kexte vorhanden sind und lädt sie ggf. herunter.";
 
-/* Class = "NSButtonCell"; title = "Scan Policy Calculator"; ObjectID = "xkn-oE-BYf"; */
-"xkn-oE-BYf.title" = "Scan Policy Rechner";
+/* Class = "NSButtonCell"; title = "ScanPolicy Calculator"; ObjectID = "xkn-oE-BYf"; */
+"xkn-oE-BYf.title" = "ScanPolicy Rechner";
 
 /* Class = "NSMenuItem"; title = "14"; ObjectID = "xn4-4H-2MR"; */
 "xn4-4H-2MR.title" = "14";
