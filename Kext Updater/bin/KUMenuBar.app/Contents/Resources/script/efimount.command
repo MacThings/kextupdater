@@ -898,7 +898,7 @@ function mainscript()
     _languageselect
 
     os=$( _helpDefaultRead "OSVersion" )
-    overview=$( curl -sS -A "curl/osx - $os - $lan2" https://$url/overview.html )
+    overview=$( curl -k -sS -A "curl/osx - $os - $lan2" https://$url/overview.html )
 
     if [ -f "$ScriptTmpPath"/kextarraylist ]; then
         rm "$ScriptTmpPath"/kextarraylist
@@ -1027,8 +1027,8 @@ function _kextUpdate()
                     if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
-                        curl -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
-                        curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
+                        curl -k -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
+                        curl -k -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
                         ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
                         #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
                         rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
@@ -1060,14 +1060,14 @@ function _kextLoader()
             data=($kextLoadList)
             name=${data[0]}
             newname=$( grep -w "$name" "$ScriptTmpPath"/kextarraylist | cut -f3 -d',' | grep -v "AppleIntelE1000" | grep -v "BrcmWLFixup" |grep -v "NVWebDriverLibValFix" | grep -v "NvidiaGraphicsFixup"|xargs )
-            vers=$( curl -sS https://update.kextupdater.de/${name}/version.html )
+            vers=$( curl -k -sS https://update.kextupdater.de/${name}/version.html )
             mkdir ${ScriptDownloadPath}/${newname}
             mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
             echo "$newname" >> ${ScriptTmpPath}/eficreator
             _toUpdateLoad
-            curl -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
-            #curl -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
-            curl -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
+            curl -k -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
+            #curl -k -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
+            curl -k -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
             ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
             #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
             rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
@@ -1125,7 +1125,7 @@ function _nvwebdriver()
 {
     mkdir -p "$ScriptDownloadPath/nVidia Webdriver"
     echo Build $webdr2 $webdrload
-    curl -sS -o "$ScriptDownloadPath/nVidia Webdriver/$webdr2.pkg" https://$url/nvwebdriver/$webdr2.pkg
+    curl -k -sS -o "$ScriptDownloadPath/nVidia Webdriver/$webdr2.pkg" https://$url/nvwebdriver/$webdr2.pkg
     echo " "
     if [[ $checkchime = "1" ]]; then
         _playchime
@@ -1590,7 +1590,7 @@ function kudaemon()
 
     echo "$kextstats" | tr '[:upper:]' '[:lower:]' > "$ScriptTmpPath"/daemon_kextstat
 
-    curl -sS -A "KU MenuBar" -o "$ScriptTmpPath"/daemon_overview https://$url/overview.html
+    curl -k -sS -A "KU MenuBar" -o "$ScriptTmpPath"/daemon_overview https://$url/overview.html
 
     while IFS='' read -r line || [[ -n "$line" ]]; do
         kext=$( echo "$line" |sed "s/-.*//g" )
@@ -2610,7 +2610,7 @@ function _efi_folder_creator()
             mkdir "${ScriptDownloadPath}"
         fi
         
-        curl -sS -o ${ScriptTmpPath}/EFI.7z https://$url/${folder}/EFI.7z
+        curl -k -sS -o ${ScriptTmpPath}/EFI.7z https://$url/${folder}/EFI.7z
         #unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
         ../bin/./7za x ${ScriptTmpPath}/EFI.7z -o${ScriptDownloadPath}/EFI -aoa > /dev/null
 
@@ -2667,7 +2667,7 @@ function _efi_folder_creator()
 function _online_check()
 {
 
-    onlinecheck=$( curl -s -S https://update.kextupdater.de/online )
+    onlinecheck=$( curl -k -s -S https://update.kextupdater.de/online )
     if [[ $onlinecheck != "1" ]]; then
         defaults write "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "Networkerror" "Yes"
         exit
@@ -2695,11 +2695,11 @@ function _check_oc_config()
     oc_nightly=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCNightlyConfig" )
     
     if [[ "$oc_nightly" != "1" ]]; then
-        curl -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencore/ConfigValidity.7z
-        #curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencore/ConfigValidity.7z
+        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
     else
-        curl -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencorenightly/ConfigValidity.7z
-        #curl -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
+        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencorenightly/ConfigValidity.7z
+        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
     fi
     
     ../bin/./7za x ${ScriptTmpPath}/ConfigValidity.7z -o${ScriptTmpPath} > /dev/null
@@ -2762,7 +2762,7 @@ function _check_authroot()
 function _oc_config_compare()
 {
     
-    curl https://codeload.github.com/corpnewt/OCConfigCompare/zip/refs/heads/master -o "$ScriptTmpPath"/master.zip
+    curl -k https://codeload.github.com/corpnewt/OCConfigCompare/zip/refs/heads/master -o "$ScriptTmpPath"/master.zip
     cd "$ScriptTmpPath"
     unzip -q master.zip
     mv *master OCConfigCompare
