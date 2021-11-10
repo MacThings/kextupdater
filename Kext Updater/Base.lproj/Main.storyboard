@@ -1166,40 +1166,18 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7O-Tb-a8P" userLabel="MacProMemoryNotificationD">
-                                <rect key="frame" x="442" y="412" width="18" height="18"/>
+                                <rect key="frame" x="442" y="340" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="xk1-kV-lKs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="macpromnd:" target="YIT-P4-KYQ" id="oIh-DZ-TaQ"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40B-jW-ioL" userLabel="MacProMemoryNotificationD X">
-                                <rect key="frame" x="462" y="412" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="eBt-T4-XgS">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.ex-MacProMND" id="w99-He-DmI"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-bu-ZAz" userLabel="MacProMemoryNotificationD D">
-                                <rect key="frame" x="482" y="412" width="198" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="MacProMemoryNotificationD" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6Y2-fO-Lga">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-macpromnd" id="z5N-G4-Taq"/>
+                                    <action selector="radeonsensor:" target="YIT-P4-KYQ" id="boX-72-N7Q"/>
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8C-2k-Wso" userLabel="NoTouchID">
-                                <rect key="frame" x="442" y="394" width="18" height="18"/>
+                                <rect key="frame" x="442" y="412" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="iME-J8-XF1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1210,7 +1188,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVc-n3-5uF" userLabel="NoTouchID X">
-                                <rect key="frame" x="462" y="394" width="22" height="18"/>
+                                <rect key="frame" x="462" y="412" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Yav-Fc-GBt">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1221,7 +1199,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toP-6g-CVI" userLabel="NoTouchID D">
-                                <rect key="frame" x="482" y="394" width="115" height="18"/>
+                                <rect key="frame" x="482" y="412" width="115" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="NoTouchID" bezelStyle="regularSquare" imagePosition="left" inset="2" id="hEG-Hv-KOH">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1232,7 +1210,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7k-fq-WaP" userLabel="NullCpuPowerManagement">
-                                <rect key="frame" x="442" y="376" width="18" height="18"/>
+                                <rect key="frame" x="442" y="394" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="wx1-Sv-7dm">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1243,7 +1221,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="smY-VJ-qoc" userLabel="NullCpuPowerManagement X">
-                                <rect key="frame" x="462" y="376" width="22" height="18"/>
+                                <rect key="frame" x="462" y="394" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ofd-I8-xge">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1254,7 +1232,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nky-Jw-fTf" userLabel="NullCpuPowerManagement D">
-                                <rect key="frame" x="482" y="376" width="187" height="18"/>
+                                <rect key="frame" x="482" y="394" width="187" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="NullCpuPowerManagement" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ErS-Be-2t3">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1265,7 +1243,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tR2-sj-vu1" userLabel="NullEthernet">
-                                <rect key="frame" x="443" y="358" width="18" height="18"/>
+                                <rect key="frame" x="443" y="376" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="XrE-Tm-QQc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1276,7 +1254,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hi-CU-4Ib" userLabel="NullEthernet X">
-                                <rect key="frame" x="462" y="358" width="22" height="18"/>
+                                <rect key="frame" x="462" y="376" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zcR-rG-1LX">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1287,7 +1265,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAw-lO-fLJ" userLabel="NullEthernet D">
-                                <rect key="frame" x="482" y="358" width="129" height="18"/>
+                                <rect key="frame" x="482" y="376" width="129" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="NullEthernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="f3V-WW-aMD">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1298,7 +1276,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAw-MN-NzI" userLabel="NVMeFix">
-                                <rect key="frame" x="443" y="340" width="18" height="18"/>
+                                <rect key="frame" x="443" y="358" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="KlG-wn-VQn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1309,7 +1287,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyP-lm-fZJ" userLabel="NVMeFix X">
-                                <rect key="frame" x="462" y="340" width="22" height="18"/>
+                                <rect key="frame" x="462" y="358" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lAL-LI-SU0">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1320,7 +1298,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snG-SM-ZCn" userLabel="NVMeFix D">
-                                <rect key="frame" x="482" y="340" width="129" height="18"/>
+                                <rect key="frame" x="482" y="358" width="129" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="NVMeFix" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Qdf-aY-vj1">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -2398,6 +2376,28 @@ DQ
                                     <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-ecenabler" id="JGZ-xU-8N4"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-aP-1lP" userLabel="NVMeFix X">
+                                <rect key="frame" x="462" y="340" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qRS-rw-Zwz">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.ex-RadeonSensor" id="CYi-HH-siY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9k-SA-iM5" userLabel="NVMeFix D">
+                                <rect key="frame" x="482" y="340" width="129" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="RadeonSensor" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nbe-Xf-c3L">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-radeonsensor" id="lqt-zq-iRN"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -2420,18 +2420,18 @@ DQ
             <objects>
                 <viewController id="5Wa-Ee-kAY" sceneMemberID="viewController">
                     <view key="view" id="ANi-si-fZV">
-                        <rect key="frame" x="0.0" y="0.0" width="203" height="280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="297"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box focusRingType="none" fixedFrame="YES" boxType="custom" cornerRadius="9" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-IC-GU8">
-                                <rect key="frame" x="9" y="45" width="185" height="226"/>
+                                <rect key="frame" x="9" y="49" width="185" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="0P0-X9-PBu">
-                                    <rect key="frame" x="1" y="1" width="183" height="224"/>
+                                    <rect key="frame" x="1" y="1" width="183" height="237"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-UG-L3U" userLabel="Box Exclude 4">
-                                            <rect key="frame" x="6" y="200" width="16" height="21"/>
+                                            <rect key="frame" x="6" y="212" width="16" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="X" id="61v-bS-x6i">
                                                 <font key="font" metaFont="systemSemibold" size="17"/>
@@ -2440,7 +2440,7 @@ DQ
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vql-HQ-JiN" userLabel="Box Download 4">
-                                            <rect key="frame" x="25" y="200" width="17" height="21"/>
+                                            <rect key="frame" x="25" y="211" width="17" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="D" id="GZm-hz-Phi">
                                                 <font key="font" metaFont="systemSemibold" size="17"/>
@@ -2448,12 +2448,273 @@ DQ
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40B-jW-ioL" userLabel="MacProMemoryNotificationD X">
+                                            <rect key="frame" x="4" y="7" width="22" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="eBt-T4-XgS">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="G5F-qh-JC0" name="value" keyPath="values.ex-MacProMND" id="w99-He-DmI"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-bu-ZAz" userLabel="MacProMemoryNotificationD D">
+                                            <rect key="frame" x="24" y="7" width="198" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="MacProMemoryNotificationD" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6Y2-fO-Lga">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-macpromnd" id="z5N-G4-Taq"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                             </box>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyK-gB-wph" userLabel="AzulPatcher4600 X">
+                                <rect key="frame" x="14" y="227" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="kRs-fc-rpz">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-AzulPatcher4600" id="J0x-AR-9BA"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkv-7I-rRY" userLabel="AzulPatcher4600 D">
+                                <rect key="frame" x="34" y="227" width="129" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="AzulPatcher4600" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="2sy-9F-ZoW">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-azulpatcher4600" id="pK9-er-3pu"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-IB-z5e" userLabel="CoreDisplayFixup X">
+                                <rect key="frame" x="14" y="193" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="avP-qe-UXA">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-CoreDisplayFixup" id="6HX-ST-Sdw"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIM-me-FWN" userLabel="CoreDisplayFixup D">
+                                <rect key="frame" x="34" y="193" width="129" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="CoreDisplayFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="3SQ-qK-q2V">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-coredisplayfixup" id="gaa-vf-e7D"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL6-kb-tFh" userLabel="IntelGraphicsFixup X">
+                                <rect key="frame" x="14" y="159" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Tvb-Pk-9Fe">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-IntelGraphicsFixup" id="Fge-xM-uVB"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-EC-wAC" userLabel="IntelGraphicsFixup D">
+                                <rect key="frame" x="34" y="159" width="135" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="IntelGraphicsFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="7DJ-5F-tf3">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-intelgraphicsfixup" id="nJ5-na-80q"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lht-Ph-TBC" userLabel="NvidiaGraphicsFixup X">
+                                <rect key="frame" x="14" y="108" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Vke-56-fqW">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-IntelGraphicsDVMTFixup" id="Z5b-lp-YqY"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77P-q6-ueW" userLabel="NvidiaGraphicsFixup D">
+                                <rect key="frame" x="34" y="108" width="147" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="NvidiaGraphicsFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="qa9-SZ-ngG">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-nvidiagraphicsfixup" id="ChR-X3-b2d"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-rO-39D" userLabel="NoVPAJpeg X">
+                                <rect key="frame" x="14" y="125" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="RhV-dj-59z">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-NvidiaGraphicsFixup" id="flh-Ox-968"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-MO-UD5" userLabel="NoVPAJpeg D">
+                                <rect key="frame" x="34" y="125" width="115" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="NoVPAJpeg" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="8cn-Cg-vV0">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-novpajpeg" id="ErH-tE-GjA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-gF-no3" userLabel="RadeonBoost X">
+                                <rect key="frame" x="14" y="91" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="kmr-Qx-bBi">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-uK-d6p" userLabel="RadeonBoost D">
+                                <rect key="frame" x="34" y="91" width="129" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="RadeonBoost" bezelStyle="regularSquare" imagePosition="left" inset="2" id="od7-xn-adu">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-radeonboost" id="fTF-MB-xbD"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-s5-m96" userLabel="Shiki X">
+                                <rect key="frame" x="14" y="74" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="j2b-RI-iaA">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-Shiki" id="drl-Jb-Nd4"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKi-wB-z3o" userLabel="Shiki D">
+                                <rect key="frame" x="34" y="74" width="52" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Shiki" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="71I-RO-UFE">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-shiki" id="4eu-0e-c6i"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-CX-rhL" userLabel="EnableLidWake X">
+                                <rect key="frame" x="14" y="176" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="cXB-uC-Izm">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-EnableLidWake" id="Bk7-Oo-KzN"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-KE-a16" userLabel="EnableLidWake D">
+                                <rect key="frame" x="34" y="176" width="115" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="EnableLidWake" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="RFJ-ik-xgv">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-enablelidwake" id="Lo5-pu-rPa"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uew-Og-dWC" userLabel="NightShiftUnlocker X">
+                                <rect key="frame" x="14" y="142" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="ZI3-DQ-hYn">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-NightShiftUnlocker" id="TL5-aQ-eC8"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EF3-HP-1t2" userLabel="NightShiftUnlocker D">
+                                <rect key="frame" x="34" y="142" width="137" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="NightShiftUnlocker" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="N03-h1-zxY">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-nightshiftunlocker" id="jIz-Tn-ANs"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MGa-YV-aVS" userLabel="BT4LEContinuityFixup X">
+                                <rect key="frame" x="14" y="210" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="1qc-4z-Rox">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-BT4LEContinuityFixup" id="jxn-aq-quD"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DR-xd-sBL" userLabel="BT4LEContinuityFixup D">
+                                <rect key="frame" x="34" y="210" width="156" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="BT4LEContinuityFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="64H-cz-ls9">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-bt4lecontinuityfixup" id="lE6-hb-Enk"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AB5-qH-U8v" userLabel="AppleBacklightFixup X">
+                                <rect key="frame" x="14" y="245" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Ehb-tk-RGq">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-AppleBacklightFixup" id="Q2N-uO-OQf"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-Mw-CXr" userLabel="AppleBacklightFixup D">
+                                <rect key="frame" x="34" y="245" width="146" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="AppleBacklightFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="JjW-CG-tmb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-applebacklightfixup" id="Kz6-ma-K5k"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foj-DA-3rp">
-                                <rect key="frame" x="52" y="5" width="100" height="32"/>
+                                <rect key="frame" x="53" y="7" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s8g-Ob-CWn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2466,268 +2727,13 @@ DQ
                                     <action selector="dismissController:" target="5Wa-Ee-kAY" id="mv7-5a-HUi"/>
                                 </connections>
                             </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyK-gB-wph" userLabel="AzulPatcher4600 X">
-                                <rect key="frame" x="14" y="210" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="kRs-fc-rpz">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-AzulPatcher4600" id="J0x-AR-9BA"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkv-7I-rRY" userLabel="AzulPatcher4600 D">
-                                <rect key="frame" x="34" y="210" width="129" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="AzulPatcher4600" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="2sy-9F-ZoW">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-azulpatcher4600" id="pK9-er-3pu"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-IB-z5e" userLabel="CoreDisplayFixup X">
-                                <rect key="frame" x="14" y="176" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="avP-qe-UXA">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-CoreDisplayFixup" id="6HX-ST-Sdw"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIM-me-FWN" userLabel="CoreDisplayFixup D">
-                                <rect key="frame" x="34" y="176" width="129" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="CoreDisplayFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="3SQ-qK-q2V">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-coredisplayfixup" id="gaa-vf-e7D"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL6-kb-tFh" userLabel="IntelGraphicsFixup X">
-                                <rect key="frame" x="14" y="142" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Tvb-Pk-9Fe">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-IntelGraphicsFixup" id="Fge-xM-uVB"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-EC-wAC" userLabel="IntelGraphicsFixup D">
-                                <rect key="frame" x="34" y="142" width="135" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="IntelGraphicsFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="7DJ-5F-tf3">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-intelgraphicsfixup" id="nJ5-na-80q"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lht-Ph-TBC" userLabel="NvidiaGraphicsFixup X">
-                                <rect key="frame" x="14" y="91" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Vke-56-fqW">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-IntelGraphicsDVMTFixup" id="Z5b-lp-YqY"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77P-q6-ueW" userLabel="NvidiaGraphicsFixup D">
-                                <rect key="frame" x="34" y="91" width="147" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="NvidiaGraphicsFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="qa9-SZ-ngG">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-nvidiagraphicsfixup" id="ChR-X3-b2d"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-rO-39D" userLabel="NoVPAJpeg X">
-                                <rect key="frame" x="14" y="108" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="RhV-dj-59z">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-NvidiaGraphicsFixup" id="flh-Ox-968"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-MO-UD5" userLabel="NoVPAJpeg D">
-                                <rect key="frame" x="34" y="108" width="115" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="NoVPAJpeg" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="8cn-Cg-vV0">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-novpajpeg" id="ErH-tE-GjA"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-gF-no3" userLabel="RadeonBoost X">
-                                <rect key="frame" x="14" y="74" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="kmr-Qx-bBi">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-uK-d6p" userLabel="RadeonBoost D">
-                                <rect key="frame" x="34" y="74" width="129" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="RadeonBoost" bezelStyle="regularSquare" imagePosition="left" inset="2" id="od7-xn-adu">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="G5F-qh-JC0" name="value" keyPath="values.dl-radeonboost" id="fTF-MB-xbD"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-s5-m96" userLabel="Shiki X">
-                                <rect key="frame" x="14" y="57" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="j2b-RI-iaA">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-Shiki" id="drl-Jb-Nd4"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKi-wB-z3o" userLabel="Shiki D">
-                                <rect key="frame" x="34" y="57" width="52" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Shiki" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="71I-RO-UFE">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-shiki" id="4eu-0e-c6i"/>
-                                </connections>
-                            </button>
-                            <box focusRingType="none" fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="sRg-P5-LKj" userLabel="Box Download 2">
-                                <rect key="frame" x="34" y="53" width="18" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="Hau-6B-vZY">
-                                    <rect key="frame" x="1" y="1" width="16" height="192"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                            </box>
-                            <box focusRingType="none" fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Pbi-RM-w46" userLabel="Box Download 2">
-                                <rect key="frame" x="14" y="53" width="18" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="lyQ-ak-ufq">
-                                    <rect key="frame" x="1" y="1" width="16" height="192"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                            </box>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-CX-rhL" userLabel="EnableLidWake X">
-                                <rect key="frame" x="14" y="159" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="cXB-uC-Izm">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-EnableLidWake" id="Bk7-Oo-KzN"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-KE-a16" userLabel="EnableLidWake D">
-                                <rect key="frame" x="34" y="159" width="115" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="EnableLidWake" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="RFJ-ik-xgv">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-enablelidwake" id="Lo5-pu-rPa"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uew-Og-dWC" userLabel="NightShiftUnlocker X">
-                                <rect key="frame" x="14" y="125" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="ZI3-DQ-hYn">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-NightShiftUnlocker" id="TL5-aQ-eC8"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EF3-HP-1t2" userLabel="NightShiftUnlocker D">
-                                <rect key="frame" x="34" y="125" width="137" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="NightShiftUnlocker" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="N03-h1-zxY">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-nightshiftunlocker" id="jIz-Tn-ANs"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MGa-YV-aVS" userLabel="BT4LEContinuityFixup X">
-                                <rect key="frame" x="14" y="193" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="1qc-4z-Rox">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-BT4LEContinuityFixup" id="jxn-aq-quD"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DR-xd-sBL" userLabel="BT4LEContinuityFixup D">
-                                <rect key="frame" x="34" y="193" width="156" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="BT4LEContinuityFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="64H-cz-ls9">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-bt4lecontinuityfixup" id="lE6-hb-Enk"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AB5-qH-U8v" userLabel="AppleBacklightFixup X">
-                                <rect key="frame" x="14" y="228" width="22" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="Ehb-tk-RGq">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.ex-AppleBacklightFixup" id="Q2N-uO-OQf"/>
-                                </connections>
-                            </button>
-                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-Mw-CXr" userLabel="AppleBacklightFixup D">
-                                <rect key="frame" x="34" y="228" width="146" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="AppleBacklightFixup" bezelStyle="regularSquare" imagePosition="left" focusRingType="none" inset="2" id="JjW-CG-tmb">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="hB8-Ra-KHZ" name="value" keyPath="values.dl-applebacklightfixup" id="Kz6-ma-K5k"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="003-XS-NfF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="hB8-Ra-KHZ"/>
             </objects>
-            <point key="canvasLocation" x="763.5" y="1921"/>
+            <point key="canvasLocation" x="1159.5" y="1733.5"/>
         </scene>
         <!--Kext Updater-->
         <scene sceneID="nH3-7u-Zng">
@@ -4341,190 +4347,6 @@ DQ
                                                 </subviews>
                                             </view>
                                         </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="VK4-iV-pCA">
-                                            <rect key="frame" x="8" y="246" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="n7m-RE-CVP" userLabel="DisableGFXHDA">
-                                            <rect key="frame" x="11" y="182" width="400" height="61"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="5Xh-zP-asM">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="80T-Fx-2dI">
-                                                        <rect key="frame" x="154" y="11" width="16" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    </progressIndicator>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Ro-gIL">
-                                                        <rect key="frame" x="-5" y="1" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="GO1-0f-QSB">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="disablegfxhda_yes:" target="PFO-7L-TjR" id="5pu-Kf-Zcy"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-fI-EEn">
-                                                        <rect key="frame" x="-5" y="1" width="110" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Uninstall" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="QbQ-ms-22Q">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="disablegfxhda_uninstall:" target="PFO-7L-TjR" id="I76-EU-Yxm"/>
-                                                        </connections>
-                                                    </button>
-                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7T-VA-juW" userLabel="DisableGFXHDAapplied">
-                                                        <rect key="frame" x="357" y="4" width="20" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="RwA-iM-KXf"/>
-                                                    </imageView>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="oka-pP-LDy">
-                                                        <rect key="frame" x="1" y="26" width="404" height="38"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" title="Block loading AppleGFXHDA. It´s useful if you don´t want DP or HDMI Audio Device from your Graphicscard in Systemoutputs." id="ZKa-IM-Gve">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                </subviews>
-                                            </view>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-Gj-iNn">
-                                            <rect key="frame" x="8" y="183" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cM-wi4" userLabel="Sleepfix">
-                                            <rect key="frame" x="11" y="107" width="400" height="78"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="CRe-0W-lGV">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="78"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
-                                                        <rect key="frame" x="-2" y="25" width="404" height="51"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" id="CWj-gf-uEx">
-                                                            <font key="font" metaFont="system"/>
-                                                            <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
-                                                        <rect key="frame" x="-5" y="-3" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
-                                                        <rect key="frame" x="-5" y="-3" width="110" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
-                                                        </connections>
-                                                    </button>
-                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
-                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
-                                                    </imageView>
-                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
-                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </view>
-                                        </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-lx-OG0">
-                                            <rect key="frame" x="8" y="104" width="402" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </box>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="h2Q-vj-BUW" userLabel="Read/Write">
-                                            <rect key="frame" x="11" y="27" width="420" height="77"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="sKv-Ec-R44">
-                                                <rect key="frame" x="0.0" y="0.0" width="420" height="77"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-MF-Kp9">
-                                                        <rect key="frame" x="-2" y="26" width="404" height="51"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" id="sjO-TN-9bF">
-                                                            <font key="font" metaFont="system"/>
-                                                            <string key="title">Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent.</string>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
-                                                        <rect key="frame" x="263" y="-5" width="140" height="29"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <view key="contentView" id="xfH-pD-gm7">
-                                                            <rect key="frame" x="3" y="3" width="134" height="23"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-9a-FmN">
-                                                                    <rect key="frame" x="3" y="2" width="129" height="20"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="bDm-bS-xzG">
-                                                                        <font key="font" metaFont="systemBold"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                            </subviews>
-                                                        </view>
-                                                    </box>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-0k-mG5">
-                                                        <rect key="frame" x="110" y="4" width="150" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="System Partition Status:" id="1gY-5O-x6G">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-rO-U5j">
-                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Reboot" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qo2-pu-oLj">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="apply_reboot:" target="PFO-7L-TjR" id="tZq-IA-7kf"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
-                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="message" size="11"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                        </box>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="6HD-ou-KIc" userLabel="Gatekeeper">
                                             <rect key="frame" x="451" y="302" width="357" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -4849,6 +4671,136 @@ DQ
                                                 </subviews>
                                             </view>
                                         </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-Gj-iNn">
+                                            <rect key="frame" x="11" y="237" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cM-wi4" userLabel="Sleepfix">
+                                            <rect key="frame" x="14" y="161" width="400" height="78"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="CRe-0W-lGV">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-vu-IYP">
+                                                        <rect key="frame" x="-2" y="25" width="404" height="51"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" id="CWj-gf-uEx">
+                                                            <font key="font" metaFont="system"/>
+                                                            <string key="title">If your computer has a problem with sleep this could help. Hibernatemode will be set to 0 and the Sleepimage will be replaced with a write protected 0-byte file.</string>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-E0-Yex">
+                                                        <rect key="frame" x="-5" y="-3" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="eDZ-tt-sAH">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="sleepfix_yes:" target="PFO-7L-TjR" id="VHh-HF-il8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-aO-DHP">
+                                                        <rect key="frame" x="-5" y="-3" width="110" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Undo" bezelStyle="rounded" alignment="center" controlSize="small" state="mixed" borderStyle="border" focusRingType="none" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="fr2-Fp-Zso">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="sleepfix_undo:" target="PFO-7L-TjR" id="nTu-yw-jK4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-iR-1s6" userLabel="Fixnotapplied">
+                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notapplied" id="kkA-DY-QDx"/>
+                                                    </imageView>
+                                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-iN-8nh" userLabel="Fixapplied">
+                                                        <rect key="frame" x="357" y="4" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="applied" id="vPN-ho-HKu"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-lx-OG0">
+                                            <rect key="frame" x="11" y="158" width="402" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="h2Q-vj-BUW" userLabel="Read/Write">
+                                            <rect key="frame" x="14" y="81" width="420" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="sKv-Ec-R44">
+                                                <rect key="frame" x="0.0" y="0.0" width="420" height="77"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="536" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-MF-Kp9">
+                                                        <rect key="frame" x="-2" y="26" width="404" height="51"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" id="sjO-TN-9bF">
+                                                            <font key="font" metaFont="system"/>
+                                                            <string key="title">Since Catalina, the system partition is mounted as read-only after booting. Here you can change the partition to read/write. But this only lasts until a reboot is performed. It is not permanent.</string>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <box fixedFrame="YES" title="Status" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jna-hs-BsX">
+                                                        <rect key="frame" x="263" y="-5" width="140" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <view key="contentView" id="xfH-pD-gm7">
+                                                            <rect key="frame" x="3" y="3" width="134" height="23"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-9a-FmN">
+                                                                    <rect key="frame" x="3" y="2" width="129" height="20"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="bDm-bS-xzG">
+                                                                        <font key="font" metaFont="systemBold"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                        </view>
+                                                    </box>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMH-0k-mG5">
+                                                        <rect key="frame" x="110" y="4" width="150" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="System Partition Status:" id="1gY-5O-x6G">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-rO-U5j">
+                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Reboot" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qo2-pu-oLj">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="apply_reboot:" target="PFO-7L-TjR" id="tZq-IA-7kf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-O5-mOn">
+                                                        <rect key="frame" x="-5" y="-6" width="110" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sgB-pg-PMm">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="message" size="11"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="set_read_write:" target="PFO-7L-TjR" id="mMR-PQ-7Sp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -4874,8 +4826,6 @@ DQ
                         <outlet property="button_atheros_uninstall" destination="iMF-1d-pVl" id="b6x-pS-RyZ"/>
                         <outlet property="button_close" destination="L55-W1-zjv" id="9ZX-Zf-h1t"/>
                         <outlet property="button_custom_efi_folder" destination="njP-iK-fFt" id="Led-0n-eWd"/>
-                        <outlet property="button_disablegfxhda" destination="uJ2-Ro-gIL" id="f9r-yg-4Qn"/>
-                        <outlet property="button_disablegfxhda_uninstall" destination="RiI-fI-EEn" id="BfR-eV-JrJ"/>
                         <outlet property="button_efi_folder_choose" destination="td6-I9-cUG" id="zoZ-D9-EDE"/>
                         <outlet property="button_fix_sleep" destination="koU-E0-Yex" id="KzO-Yq-yre"/>
                         <outlet property="button_fix_sleep_undo" destination="YXy-aO-DHP" id="eYQ-aN-sOW"/>
@@ -4892,7 +4842,6 @@ DQ
                         <outlet property="button_unmount_all" destination="Xq7-rS-1W5" id="gUD-Ss-DzA"/>
                         <outlet property="custom_efi_folder" destination="dg6-UW-1xr" id="ztD-Oa-Iid"/>
                         <outlet property="custom_efi_folder_path" destination="dg6-UW-1xr" id="9gy-S5-p9L"/>
-                        <outlet property="disablegfxhdaapplied" destination="l7T-VA-juW" id="UL0-yX-j7W"/>
                         <outlet property="fixapplied" destination="nfC-iN-8nh" id="OaY-TQ-BKb"/>
                         <outlet property="fixnotapplied" destination="B8z-iR-1s6" id="iB9-6P-AB8"/>
                         <outlet property="label_gatekeeper" destination="DJ0-rk-3kC" id="X3c-fO-o5a"/>
@@ -4902,7 +4851,6 @@ DQ
                         <outlet property="progress_gear" destination="3Qy-Cn-gKP" id="9XR-o5-YAt"/>
                         <outlet property="progress_gear_atheros" destination="S82-8q-mdv" id="Nzk-3g-oqC"/>
                         <outlet property="progress_gear_cache" destination="ZNe-rf-BW1" id="lSu-aT-W57"/>
-                        <outlet property="progress_gear_disablegfxhda" destination="80T-Fx-2dI" id="8as-rF-wMU"/>
                         <outlet property="progress_gear_mount" destination="mge-oP-iKS" id="8EC-te-3wF"/>
                         <outlet property="pulldown_menu" destination="MkB-hH-A2t" id="HFy-Cb-h59"/>
                         <outlet property="python_warning" destination="ilS-ad-AZv" id="lrU-wp-Zmb"/>

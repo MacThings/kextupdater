@@ -23,10 +23,7 @@ class Tools: NSViewController {
     @IBOutlet weak var button_atheros: NSButton!
     @IBOutlet weak var button_atheros_uninstall: NSButton!
     
-    @IBOutlet weak var disablegfxhdaapplied: NSImageView!
-    @IBOutlet weak var button_disablegfxhda: NSButton!
-    @IBOutlet weak var button_disablegfxhda_uninstall: NSButton!
-    
+  
     @IBOutlet weak var fixnotapplied: NSImageView!
     @IBOutlet weak var fixapplied: NSImageView!
     @IBOutlet weak var button_fix_sleep: NSButton!
@@ -64,7 +61,6 @@ class Tools: NSViewController {
         
     @IBOutlet weak var progress_gear_cache: NSProgressIndicator!
     @IBOutlet weak var progress_gear_atheros: NSProgressIndicator!
-    @IBOutlet weak var progress_gear_disablegfxhda: NSProgressIndicator!
     @IBOutlet weak var progress_gear_mount: NSProgressIndicator!
     @IBOutlet weak var progress_gear: NSProgressIndicator!
     
@@ -158,19 +154,7 @@ class Tools: NSViewController {
                 self.python_warning.isHidden = false
                 self.python_warning.isEnabled = false
             }
-            
-            self.syncShellExec(path: self.scriptPath, args: ["checkdisablegfxhda"])
-            let disablegfxhdacheck = UserDefaults.standard.string(forKey: "DisableGFXHDA")
-            if disablegfxhdacheck == "1" {
-                self.button_disablegfxhda.isHidden = true
-                self.button_disablegfxhda_uninstall.isHidden = false
-                self.disablegfxhdaapplied.isHidden = false
-            } else {
-                self.button_disablegfxhda.isHidden = false
-                self.button_disablegfxhda_uninstall.isHidden = true
-                self.disablegfxhdaapplied.isHidden = true
-            }
-            
+
             let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
             self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
             let rw_check = UserDefaults.standard.string(forKey: "RW")
@@ -186,8 +170,6 @@ class Tools: NSViewController {
                     self.button_kextcache.isEnabled = false
                     self.button_atheros.isEnabled = false
                     self.button_atheros_uninstall.isEnabled = false
-                    self.button_disablegfxhda.isEnabled = false
-                    self.button_disablegfxhda_uninstall.isEnabled = false
                     self.button_fix_sleep.isEnabled = false
                     self.button_fix_sleep_undo.isEnabled = false
                 
@@ -278,40 +260,7 @@ class Tools: NSViewController {
         }
 
     }
-    
-    @IBAction func disablegfxhda_yes(_ sender: Any) {
-        self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
-        disable_all()
-        self.progress_gear_disablegfxhda?.startAnimation(self);
-        self.progress_gear_disablegfxhda.isHidden=false
-        DispatchQueue.global(qos: .background).async {
-            self.syncShellExec(path: self.scriptPath, args: ["disablegfxhda"])
-            DispatchQueue.main.async {
-                self.enable_all()
-                self.progress_gear_disablegfxhda?.stopAnimation(self);
-                self.progress_gear_disablegfxhda.isHidden=true
-                self.view.window?.close()
-            }
-        }
-    }
-    
-    @IBAction func disablegfxhda_uninstall(_ sender: Any) {
-        disable_all()
-        self.progress_gear_disablegfxhda?.startAnimation(self);
-        self.progress_gear_disablegfxhda.isHidden=false
-        DispatchQueue.global(qos: .background).async {
-            self.syncShellExec(path: self.scriptPath, args: ["disablegfxhda_remove"])
-            DispatchQueue.main.async {
-                self.enable_all()
-                self.progress_gear_disablegfxhda?.stopAnimation(self);
-                self.progress_gear_disablegfxhda.isHidden=true
-                self.view.window?.close()
-            }
-        }
 
-    }
-    
-    
     @IBAction func sleepfix_yes(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["set_read_write"])
         disable_all()
@@ -342,7 +291,6 @@ class Tools: NSViewController {
         self.button_efi_folder_choose.isEnabled=false
         self.button_kextcache.isEnabled=false
         self.button_atheros.isEnabled=false
-        self.button_disablegfxhda.isEnabled=false
         self.button_fix_sleep.isEnabled=false
         self.button_mount.isEnabled=false
         self.button_offline_efi.isEnabled=false
@@ -351,7 +299,6 @@ class Tools: NSViewController {
         self.button_close.isEnabled=false
         self.pulldown_menu.isEnabled=false
         self.button_atheros_uninstall.isEnabled=false
-        self.button_disablegfxhda_uninstall.isEnabled=false
         self.button_fix_sleep_undo.isEnabled=false
         self.button_read_write.isEnabled=false
         self.custom_efi_folder_path.isEnabled=false
@@ -364,7 +311,6 @@ class Tools: NSViewController {
         self.button_efi_folder_choose.isEnabled=true
         self.button_kextcache.isEnabled=true
         self.button_atheros.isEnabled=true
-        self.button_disablegfxhda.isEnabled=true
         self.button_fix_sleep.isEnabled=true
         self.button_mount.isEnabled=true
         self.button_offline_efi.isEnabled=true
@@ -373,7 +319,6 @@ class Tools: NSViewController {
         self.button_close.isEnabled=true
         self.pulldown_menu.isEnabled=true
         self.button_atheros_uninstall.isEnabled=true
-        self.button_disablegfxhda_uninstall.isEnabled=true
         self.button_fix_sleep_undo.isEnabled=true
         self.button_read_write.isEnabled=true
         self.custom_efi_folder_path.isEnabled=true
@@ -391,8 +336,6 @@ class Tools: NSViewController {
             self.button_kextcache.isEnabled = true
             self.button_atheros.isEnabled = true
             self.button_atheros_uninstall.isEnabled = true
-            self.button_disablegfxhda.isEnabled = true
-            self.button_disablegfxhda_uninstall.isEnabled = true
             self.button_fix_sleep.isEnabled = true
             self.button_fix_sleep_undo.isEnabled = true
             self.button_apply.isHidden = false

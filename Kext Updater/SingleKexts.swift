@@ -170,6 +170,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-nullethernet")
         UserDefaults.standard.set(true, forKey: "dl-nvmefix")
         UserDefaults.standard.set(true, forKey: "dl-radeonboost")
+        UserDefaults.standard.set(true, forKey: "dl-radeonsensor")
         UserDefaults.standard.set(true, forKey: "dl-realtekrtl8111")
         UserDefaults.standard.set(true, forKey: "dl-restrictevents")
         UserDefaults.standard.set(true, forKey: "dl-rtcmemoryfixup")
@@ -335,8 +336,8 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/PMheart/LiluFriend", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
-    @IBAction func macpromnd(_ sender: Any) {
-        UserDefaults.standard.set("https://github.com/IOIIIO/MacProMemoryNotificationDisabler", forKey: "SourceURL")
+    @IBAction func radeonsensor(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/aluveitie/RadeonSensor", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func notouchid(_ sender: Any) {
