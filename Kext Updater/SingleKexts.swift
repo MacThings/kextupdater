@@ -150,6 +150,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-brightnesskeys")
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
+        UserDefaults.standard.set(true, forKey: "dl-cputopologysync")
         UserDefaults.standard.set(true, forKey: "dl-cputscsync")
         UserDefaults.standard.set(true, forKey: "dl-ecenabler")
         UserDefaults.standard.set(true, forKey: "dl-fakepciid")
@@ -274,6 +275,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func cpufriend(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/CPUFriend", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func cputopologysync(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/CpuTopologySync", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func cputscsync(_ sender: Any) {
