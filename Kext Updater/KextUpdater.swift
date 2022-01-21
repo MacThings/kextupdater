@@ -468,6 +468,33 @@ class KextUpdater: NSViewController {
         let fontfam = UserDefaults.standard.string(forKey: "Font Family")
         output_window.font = NSFont(name: fontfam!, size: fontpt)
         
+        let sipinfo = UserDefaults.standard.string(forKey: "SupressSIP")
+        if sipinfo == nil{
+            UserDefaults.standard.set("NO", forKey: "SupressSIP")
+        }
+        
+        let sipinfo2 = UserDefaults.standard.string(forKey: "SupressSIP")
+        if sipinfo2 == "NO" {
+            let alert = NSAlert()
+            alert.messageText = NSLocalizedString("General information!", comment: "")
+            alert.informativeText = NSLocalizedString("If there are any malfunctions, 99% of the time it is always the activated SIP to blame. Either you deactivate the SIP temporarily or not all functions can be used by the Kext Updater. Please also refrain from bug reports, as I cannot change anything about this. Thank you!", comment: "")
+            alert.alertStyle = .informational
+            alert.showsSuppressionButton = true
+            let Button = NSLocalizedString("Understand", comment: "")
+            alert.addButton(withTitle: Button)
+        
+            if alert.runModal() == .alertFirstButtonReturn {
+                if let supress = alert.suppressionButton {
+                    let state = supress.state
+                    switch state {
+                    case NSControl.StateValue.on:
+                        UserDefaults.standard.set(true, forKey: "SupressSIP")
+                    default: break
+                    }
+                }
+                return
+            }
+        }
     }
     
     @IBAction func start_button(_ sender: Any) {
@@ -491,20 +518,24 @@ class KextUpdater: NSViewController {
             return
         }
         
-//        if let url = URL(string: "https://update.kextupdater.de/online") {
-//            do {
-//                print(url)
-//                if try String(contentsOf: url) != "1\n"{
-//                    return
-//                }
-//            } catch {
-//                self.show_networkerror.performClick(nil)
-//                return
-//                //DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//                    //self.show_networkerror.performClick(nil)
-//                //}
-//            }
-//        }
+        if let url = URL(string: "https://update.kextupdater.de/maintenance") {
+            do {
+                print(url)
+                if try String(contentsOf: url) != "0\n"{
+                    let alert = NSAlert()
+                    alert.messageText = NSLocalizedString("Sever maintenance", comment: "")
+                    alert.informativeText = NSLocalizedString("Server is doing some maintenance stuff these minutes. Please try again in  a few minutes.", comment: "")
+                    alert.alertStyle = .informational
+                    alert.icon = NSImage(named: "NSError")
+                    let Button = NSLocalizedString("Ok", comment: "")
+                    alert.addButton(withTitle: Button)
+                    alert.runModal()
+                    return
+                }
+            } catch {
+                print("error")
+            }
+        }
         
         start_button.isEnabled=false
         start_button.isHidden=true

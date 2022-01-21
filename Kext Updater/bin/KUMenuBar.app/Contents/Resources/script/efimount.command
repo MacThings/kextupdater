@@ -96,7 +96,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTopologySync CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -118,7 +118,7 @@ function _excludedkexts()
     ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n RadeonSensor (0.3.0)" )
-    kextstatsori=$( echo -e "$kextstatsori" "\n  CpuTopologySync (0.0.9)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  ECEnabler (1.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -217,7 +217,6 @@ kextArray=(
 "codeccommander","CodecCommander","CodecCommander",""
 "coredisplayfixup","CoreDisplayFixup","CoreDisplayFixup","WhateverGreen","Alarm"
 "cpufriend","CPUFriend","CPUFriend",""
-"cputopologysync","CpuTopologySync","CpuTopologySync",""
 "cputscsync","CpuTscSync","CpuTscSync",""
 "ecenabler","ECEnabler","ECEnabler",""
 "enablelidwake","EnableLidWake","EnableLidWake",""
@@ -1029,11 +1028,11 @@ function _kextUpdate()
                     if [[ $returnVALUE == "smaller" ]]; then
                         mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${newname}
                         _toUpdate
-                        curl -k -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
+                        curl -k -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
                         curl -k -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
-                        ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
-                        #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
-                        rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
+                        #../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
+                        unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+                        rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
                         find ${ScriptDownloadPath}/. -name "Debug" -exec rm -r "{}" \; >/dev/null 2>&1
                         find ${ScriptDownloadPath}/. -name "LICENSE" -exec rm -r "{}" \; >/dev/null 2>&1
                         find ${ScriptDownloadPath}/. -name "READM*" -exec rm -r "{}" \; >/dev/null 2>&1
@@ -1067,13 +1066,13 @@ function _kextLoader()
             mkdir -p ${ScriptDownloadPath} ${ScriptDownloadPath}/${name}
             echo "$newname" >> ${ScriptTmpPath}/eficreator
             _toUpdateLoad
-            curl -k -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
-            #curl -k -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
+            #curl -k -sS -o ${ScriptTmpPath}/${name}.7z https://$url/${name}/${name}.7z
+            curl -k -sS -o ${ScriptTmpPath}/${name}.zip https://$url/${name}/${name}.zip
             curl -k -sS -o ${ScriptDownloadPath}/$newname/.version.htm https://$url/${name}/version.htm
-            ../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
-            #unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
-            rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
-            #rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
+            #../bin/./7za x ${ScriptTmpPath}/${name}.7z -o${ScriptDownloadPath}/${name} -aoa > /dev/null
+            unzip -o -q ${ScriptTmpPath}/${name}.zip -d ${ScriptDownloadPath}/${name}
+            #rm ${ScriptTmpPath}/${name}.7z 2> /dev/null
+            rm ${ScriptTmpPath}/${name}.zip 2> /dev/null
     done
 }
 
@@ -2612,9 +2611,9 @@ function _efi_folder_creator()
             mkdir "${ScriptDownloadPath}"
         fi
         
-        curl -k -sS -o ${ScriptTmpPath}/EFI.7z https://$url/${folder}/EFI.7z
-        #unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
-        ../bin/./7za x ${ScriptTmpPath}/EFI.7z -o${ScriptDownloadPath}/EFI -aoa > /dev/null
+        curl -k -sS -o ${ScriptTmpPath}/EFI.zip https://$url/${folder}/EFI.zip
+        unzip -o -q ${ScriptTmpPath}/EFI.zip -d "${ScriptDownloadPath}"/EFI
+        #../bin/./7za x ${ScriptTmpPath}/EFI.7z -o${ScriptDownloadPath}/EFI -aoa > /dev/null
 
         while read -r line; do
             if [[ "$line" = "ACPIBatteryManager" ]]; then
@@ -2697,15 +2696,15 @@ function _check_oc_config()
     oc_nightly=$( defaults read "${ScriptHome}/Library/Preferences/kextupdater.slsoft.de.plist" "OCNightlyConfig" )
     
     if [[ "$oc_nightly" != "1" ]]; then
-        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencore/ConfigValidity.7z
-        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
+        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencore/ConfigValidity.7z
+        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencore/ConfigValidity.zip
     else
-        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencorenightly/ConfigValidity.7z
-        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
+        #curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.7z https://update.kextupdater.de/opencorenightly/ConfigValidity.7z
+        curl -k -sS -o ${ScriptTmpPath}/ConfigValidity.zip https://update.kextupdater.de/opencorenightly/ConfigValidity.zip
     fi
     
-    ../bin/./7za x ${ScriptTmpPath}/ConfigValidity.7z -o${ScriptTmpPath} > /dev/null
-    #unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
+    #../bin/./7za x ${ScriptTmpPath}/ConfigValidity.7z -o${ScriptTmpPath} > /dev/null
+    unzip -qo ${ScriptTmpPath}/ConfigValidity.zip -d ${ScriptTmpPath}
     
     
     ${ScriptTmpPath}/./ConfigValidity "$oc_file"

@@ -64,3 +64,17 @@
 /* No comment provided by engineer. */
 "You are not connected to the Internet or the Server is not reachable at the moment. Please try again later." = "Du bist entweder nicht mit dem Internet verbunden oder der Server antwortet im Moment nicht. Versuche es später noch einmal.";
 
+/* No comment provided by engineer. */
+"Sever maintenance" = "Server Aktualisierunsarbeiten";
+
+/* No comment provided by engineer. */
+"Server is doing some maintenance stuff these minutes. Please try again in  a few minutes." = "Der Server führt gerade Aktualisierunsarbeiten durch. Bitte versuche es in in ein paar Minuten noch einmal.";
+
+/* No comment provided by engineer. */
+"General information!" = "Generelle Information";
+
+/* No comment provided by engineer. */
+"If there are any malfunctions, 99% of the time it is always the activated SIP to blame. Either you deactivate the SIP temporarily or not all functions can be used by the Kext Updater. Please also refrain from bug reports, as I cannot change anything about this. Thank you!" = "Wenn es zu irgendwelchen Fehlfunktionnen kommen sollte ist zu 99% immer die eingeschaltete SIP daran schuld. Entweder Du deaktivierst die SIP temporär oder aber nicht alle Funktionen können vom Kext Updater genutzt werden. Bitte siehe auch von Bug Reports ab, da ich an diesem Umstand nichts ändern kann. Danke.";
+
+/* No comment provided by engineer. */
+"Understand" = "Verstanden";
