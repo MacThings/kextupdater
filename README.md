@@ -1,4 +1,4 @@
-# kextupdater
+# Kext Updater
 
 Download latest Version here:
 
