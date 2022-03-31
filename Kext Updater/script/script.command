@@ -1930,19 +1930,19 @@ function fixsleepimage()
     fi
     
     
-    if [[ "$OS" = "10" ]]; then
+        if [[ "$OS" = "10" ]]; then
         if [[ "$keychain" = "1" ]]; then
             _getsecret
-            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; pmset -a ttyskeepawake 0; pmset -a tcpkeepalive 0; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
-              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
+              osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     else
         if [[ $keychain = "1" ]]; then
             _getsecret
-            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount'"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0;pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$ScriptTmpPath2"'/mount'"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
-            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; cd '"$ScriptTmpPath2"'/mount/var/vm; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$ScriptTmpPath2"'/mount/var/vm; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
     fi
 
@@ -2767,13 +2767,20 @@ function _oc_config_compare()
     cd "$ScriptTmpPath"
     unzip -q master.zip
     mv *master OCConfigCompare
-    
-    echo "osascript -e 'tell app \"Terminal\"" > $ScriptTmpPath/occonfigcompare.sh
-    echo "do script \"cd \\\"'$ScriptTmpPath'/OCConfigCompare\\\"; python OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
+   
+   
+    echo "#!/bin/bash" > $ScriptTmpPath/occonfigcompare.sh
+    echo "osascript -e 'tell app \"Terminal\"" >> $ScriptTmpPath/occonfigcompare.sh
+    if [ -f /usr/bin/python ]; then
+        echo "do script \"cd \\\"'$ScriptTmpPath'/OCConfigCompare\\\"; python OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
+    else
+        echo "do script \"cd \\\"'$ScriptTmpPath'/OCConfigCompare\\\"; python3 OCConfigCompare.py\"" |sed -e 's/\/\//\//g' -e "s/'//g" >> $ScriptTmpPath/occonfigcompare.sh
+    fi
     echo "end tell'" >> $ScriptTmpPath/occonfigcompare.sh
     echo "osascript -e  'activate application \"Terminal\"'" >> $ScriptTmpPath/occonfigcompare.sh
     bash $ScriptTmpPath/occonfigcompare.sh
 }
+
 
 $1
 exit 0
