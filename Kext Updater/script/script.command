@@ -1940,7 +1940,7 @@ function fixsleepimage()
     else
         if [[ $keychain = "1" ]]; then
             _getsecret
-            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0;pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$ScriptTmpPath2"'/mount'"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
+            osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$ScriptTmpPath2"'/mount'"$img_path"'; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" user name "'"$user"'" password "'"$passw"'" with administrator privileges' >/dev/null 2>&1
         else
             osascript -e 'do shell script "pmset -a hibernatemode 0; pmset -a proximitywake 0; pmset -a ttyskeepawake 0; pmset -a tcpkeepalive; cd '"$ScriptTmpPath2"'/mount/var/vm; sudo rm sleepimage; sudo touch sleepimage; sudo chflags uchg sleepimage" with administrator privileges' >/dev/null 2>&1
         fi
