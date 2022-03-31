@@ -144,16 +144,16 @@ class Tools: NSViewController {
 
             self.check_gatekeeper()
        
-            let pythoncheck = UserDefaults.standard.bool(forKey: "PythonInstalled")
-            if pythoncheck == true {
+            //let pythoncheck = UserDefaults.standard.bool(forKey: "PythonInstalled")
+            //if pythoncheck == true {
                 self.button_oc_config_compare.isEnabled = true
                 self.python_warning.isHidden = true
-            } else {
-                self.button_oc_config_compare.isEnabled = false
-                self.button_oc_config_compare.title=""
-                self.python_warning.isHidden = false
-                self.python_warning.isEnabled = false
-            }
+            //} else {
+                //self.button_oc_config_compare.isEnabled = false
+                //self.button_oc_config_compare.title=""
+                //self.python_warning.isHidden = false
+                //self.python_warning.isEnabled = false
+            //}
 
             let os_version = String(UserDefaults.standard.string(forKey: "OSVersion")!.prefix(2))
             self.syncShellExec(path: self.scriptPath, args: ["_get_node"])
