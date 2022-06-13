@@ -1619,16 +1619,23 @@ function kudaemon()
 function kumenubar_on()
 {
 
-    kuroot=$( _helpDefaultRead "KU Root" | sed -e "s/$/\/Kext\ Updater.app\/Contents\/Resources\/bin\/KUMenuBar.app/" )
-    osascript -e 'tell application "System Events" to delete login item "KUMenuBar"' > /dev/null
-    osascript -e 'tell application "System Events" to make login item at end with properties {path:"'"$kuroot"'", hidden:false}' > /dev/null
-    open "$kuroot"
+    if [ ! -d "$HOME"/Library/LaunchAgents ]; then
+        mkdir "$HOME"/Library/LaunchAgents
+        cp ../bin/slsoft.de.KUMenuBar.plist "$HOME"/Library/LaunchAgents/.
+    fi
+    
+    if [ ! -f "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist ]; then
+        cp ../bin/slsoft.de.KUMenuBar.plist "$HOME"/Library/LaunchAgents/.
+    fi
+    
+    launchctl load -w "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
 
 }
 
 function kumenubar_off()
 {
-    osascript -e 'tell application "System Events" to delete login item "KUMenuBar"' > /dev/null
+    launchctl unload -w "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
+    rm "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
     pkill KUMenuBar
     pkill -f kumenubar
 }
