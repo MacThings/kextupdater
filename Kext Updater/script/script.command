@@ -1619,22 +1619,25 @@ function kudaemon()
 function kumenubar_on()
 {
 
+    ku_root=$( _helpDefaultRead "KU Root" )
+    ku_root=$( echo "$ku_root" |sed 's/\//\\\//g')
+    
     if [ ! -d "$HOME"/Library/LaunchAgents ]; then
         mkdir "$HOME"/Library/LaunchAgents
-        cp ../bin/slsoft.de.KUMenuBar.plist "$HOME"/Library/LaunchAgents/.
     fi
     
-    if [ ! -f "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist ]; then
-        cp ../bin/slsoft.de.KUMenuBar.plist "$HOME"/Library/LaunchAgents/.
-    fi
+    cp ../bin/slsoft.de.KUMenuBar.plist "$HOME"/Library/LaunchAgents/.
+    
+    sed -ib "s/CHANGE_ME/$ku_root/g" "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
+    
+    rm "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plistb
     
     launchctl load -w "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
 
 }
 
 function kumenubar_off()
-{
-    launchctl unload -w "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
+{ launchctl unload -w "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
     rm "$HOME"/Library/LaunchAgents/slsoft.de.KUMenuBar.plist
     pkill KUMenuBar
     pkill -f kumenubar

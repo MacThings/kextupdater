@@ -118,12 +118,6 @@ class Preferences: NSViewController {
         UserDefaults.standard.set(eficustomname, forKey: "EFIBackupNameCustom")
         self.view.window?.close()
         DispatchQueue.global(qos: .background).async {
-            let loginitem = UserDefaults.standard.bool(forKey: "LoginItem")
-            if loginitem == true {
-                self.syncShellExec(path: self.scriptPath, args: ["loginitem_on"])
-            } else if loginitem == false {
-                self.syncShellExec(path: self.scriptPath, args: ["loginitem_off"])
-            }
             let menubaritem = UserDefaults.standard.bool(forKey: "MenuBarItem")
             if menubaritem == true {
                 self.syncShellExec(path: self.scriptPath, args: ["kumenubar_on"])
@@ -135,6 +129,17 @@ class Preferences: NSViewController {
                 }
         }
     }
+    
+    @IBAction func menubaritem_toggle(_ sender: Any) {
+        let menubaritem = UserDefaults.standard.bool(forKey: "MenuBarItem")
+        if menubaritem == true {
+            self.syncShellExec(path: self.scriptPath, args: ["kumenubar_on"])
+        } else if menubaritem == false {
+            self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
+        }
+    }
+    
+     
 
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()

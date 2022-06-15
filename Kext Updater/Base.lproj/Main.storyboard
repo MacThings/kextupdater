@@ -4016,6 +4016,7 @@ These options can be set in the settings of the KU MenuBar.</string>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
+                                                <action selector="menubaritem_toggle:" target="9HD-lp-UVI" id="jtm-Dq-L8B"/>
                                                 <binding destination="6AW-Jc-UYO" name="value" keyPath="values.MenuBarItem" id="EPH-Jf-eql"/>
                                             </connections>
                                         </button>
