@@ -138,8 +138,6 @@ class Preferences: NSViewController {
             self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
         }
     }
-    
-     
 
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()
