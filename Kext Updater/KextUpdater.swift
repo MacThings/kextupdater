@@ -498,7 +498,7 @@ class KextUpdater: NSViewController {
 
         let menubaritem = UserDefaults.standard.bool(forKey: "MenuBarItem")
             if menubaritem == true {
-                self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
+                //self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
                 self.syncShellExec(path: self.scriptPath, args: ["kumenubar_on"])
             } else if menubaritem == false {
                 self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
