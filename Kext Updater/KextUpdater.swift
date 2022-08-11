@@ -652,8 +652,7 @@ class KextUpdater: NSViewController {
             }
         }
     }
-    
-    
+
     @IBAction func footer_efi_efimount_bt(_ sender: NSButton) {
         sender.isEnabled = false
         DispatchQueue.global(qos: .background).async {
