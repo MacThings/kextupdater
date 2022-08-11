@@ -360,7 +360,7 @@ class Tools: NSViewController {
     @IBAction func apply_reboot(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["_apply_reboot"])
     }
-    
+
     @IBAction func disable_gatekeeper(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["disable_gatekeeper"])
         self.check_gatekeeper()

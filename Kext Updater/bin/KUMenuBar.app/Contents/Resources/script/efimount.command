@@ -118,7 +118,7 @@ function _excludedkexts()
     ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n RadeonSensor (0.3.0)" )
-    kextstatsori=$( echo -e "$kextstatsori" "\n  USBToolBox (1.1.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  USBToolBox (1.1.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -2198,6 +2198,22 @@ function thirdparty()
 
     echo -e "\n$alldone"
 }
+
+###################################################################
+############### Show all loaded 3rd Party Kexts II ################
+###################################################################
+
+function all_thirdparty()
+{
+    kextstat |grep -v apple |sed -e 's/.*\ \ //g' -e s'/).*/)/g' |grep -v "Name (Version)"
+
+    if [[ $checkchime = "1" ]]; then
+      _playchime
+    fi
+
+    echo -e "\n$alldone"
+}
+
 
 ###################################################################
 #################### Create HTML Systemreport #####################
