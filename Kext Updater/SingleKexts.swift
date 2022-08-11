@@ -181,6 +181,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-thunderboltreset")
         UserDefaults.standard.set(true, forKey: "dl-tscadjustreset")
         UserDefaults.standard.set(true, forKey: "dl-usbinjectall")
+        UserDefaults.standard.set(true, forKey: "dl-usbtoolbox")
         UserDefaults.standard.set(true, forKey: "dl-virtualsmc")
         UserDefaults.standard.set(true, forKey: "dl-voodoohda")
         UserDefaults.standard.set(true, forKey: "dl-voodooi2c")
@@ -390,6 +391,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func usbinjectall(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/Sniki/OS-X-USB-Inject-All", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func usbtoolbox(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/USBToolBox", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func virtualsmc(_ sender: Any) {

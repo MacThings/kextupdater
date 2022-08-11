@@ -96,7 +96,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -118,7 +118,7 @@ function _excludedkexts()
     ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n RadeonSensor (0.3.0)" )
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  ECEnabler (1.0.1)" )
+    kextstatsori=$( echo -e "$kextstatsori" "\n  USBToolBox (1.1.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -259,6 +259,7 @@ kextArray=(
 "thunderboltreset","ThunderboltReset ","ThunderboltReset",""
 "tscadjustreset","TSCAdjustReset","TSCAdjustReset",""
 "usbinjectall","USBInjectAll","USBInjectAll",""
+"usbtoolbox","USBToolBox","USBToolBox",""
 "virtualsmc","VirtualSMC","VirtualSMC",""
 "voodoohda","VoodooHDA","VoodooHDA",""
 "voodooi2c","VoodooI2C","VoodooI2C",""
@@ -1340,6 +1341,9 @@ function _main()
     fi
     if [ -d ${ScriptDownloadPath}/"ecenabler" ]; then
     mv ${ScriptDownloadPath}/ecenabler ${ScriptDownloadPath}/"ECEnabler"
+    fi
+    if [ -d ${ScriptDownloadPath}/"usbtoolbox" ]; then
+    mv ${ScriptDownloadPath}/usbtoolbox ${ScriptDownloadPath}/"USBToolBox"
     fi
 
     if [[ $checkchime = "1" ]]; then
