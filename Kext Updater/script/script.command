@@ -99,7 +99,7 @@ function _getsecret() {
 allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync CryptexFixup ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC FeatureUnlock GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet MacHyperVSupport NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
-#========================= Excluded Kexts =========================#
+#======================== Excluded Kexts =========================#
 
 function _excludedkexts()
 {
