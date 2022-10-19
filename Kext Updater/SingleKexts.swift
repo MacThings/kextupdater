@@ -152,8 +152,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-cpufriend")
         UserDefaults.standard.set(true, forKey: "dl-cputscsync")
         UserDefaults.standard.set(true, forKey: "dl-ecenabler")
+        UserDefaults.standard.set(true, forKey: "dl-cryptexfixup")
         UserDefaults.standard.set(true, forKey: "dl-fakepciid")
         UserDefaults.standard.set(true, forKey: "dl-fakesmc")
+        UserDefaults.standard.set(true, forKey: "dl-featureunlock")
         UserDefaults.standard.set(true, forKey: "dl-genericusbxhci")
         UserDefaults.standard.set(true, forKey: "dl-hibernationfixup")
         UserDefaults.standard.set(true, forKey: "dl-intelbluetoothfirmware")
@@ -164,6 +166,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-lilu")
         UserDefaults.standard.set(true, forKey: "dl-lilufriend")
         UserDefaults.standard.set(true, forKey: "dl-lucyrtl8125ethernet")
+        UserDefaults.standard.set(true, forKey: "dl-machypervsupport")
         UserDefaults.standard.set(true, forKey: "dl-macpromnd")
         UserDefaults.standard.set(true, forKey: "dl-notouchid")
         UserDefaults.standard.set(true, forKey: "dl-nullcpupowermanagement")
@@ -281,6 +284,10 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set("https://github.com/lvs1974/CpuTscSync", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
+    @IBAction func cryptexfixup(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/CryptexFixup", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
     @IBAction func ecenabler(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/1Revenger1/ECEnabler", forKey: "SourceURL")
         webview_button.performClick(nil)
@@ -291,6 +298,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func fakesmc(_ sender: Any) {
         UserDefaults.standard.set("https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/overview", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func featureunlock(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/FeatureUnlock", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func genericusbxhci(_ sender: Any) {
@@ -335,6 +346,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func lilufriend(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/PMheart/LiluFriend", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func machypervsupport(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/acidanthera/MacHyperVSupport", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func radeonsensor(_ sender: Any) {

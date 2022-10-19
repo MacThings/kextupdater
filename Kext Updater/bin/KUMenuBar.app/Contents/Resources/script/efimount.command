@@ -96,7 +96,7 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync CryptexFixup ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC FeatureUnlock GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet MacHyperVSupport NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
 #========================= Excluded Kexts =========================#
@@ -117,8 +117,9 @@ function _excludedkexts()
 
     ### DEBUG area. Testing Kexts without really loaded ###
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
-    #kextstatsori=$( echo -e "$kextstatsori" "\n RadeonSensor (0.3.0)" )
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  USBToolBox (1.1.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n CryptexFixup (0.0.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  FeatureUnlock (0.0.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  MacHyperVSupport (0.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -218,10 +219,12 @@ kextArray=(
 "coredisplayfixup","CoreDisplayFixup","CoreDisplayFixup","WhateverGreen","Alarm"
 "cpufriend","CPUFriend","CPUFriend",""
 "cputscsync","CpuTscSync","CpuTscSync",""
+"cryptexfixup","CryptexFixup","CryptexFixup",""
 "ecenabler","ECEnabler","ECEnabler",""
 "enablelidwake","EnableLidWake","EnableLidWake",""
 "fakepciid","FakePCIID","FakePCIID",""
 "fakesmc","FakeSMC","FakeSMC",""
+"featureunlock","FeatureUnlock","FeatureUnlock",""
 "genericusbxhci","GenericUSBXHCI","GenericUSBXHCI",""
 "hibernationfixup","HibernationFixup","HibernationFixup",""
 "horndis","HoRNDIS","HoRNDIS",""
@@ -239,6 +242,7 @@ kextArray=(
 "lucyrtl8125ethernet","LucyRTL8125Ethernet","LucyRTL8125Ethernet",""
 "macpromnd","MacProMemoryNotificationDisabler","MacProMemoryNotificationDisabler",""
 "nightshiftunlocker","NightShiftUnlocker","NightShiftUnlocker",""
+"machypervsupport","MacHyperVSupport","MacHyperVSupport",""
 "notouchid","NoTouchID","NoTouchID",""
 "novpajpeg","NoVPAJpeg","NoVPAJpeg",""
 "nullcpupowermanagement","NullCpuPower","NullCpuPowerManagement",""
