@@ -146,6 +146,7 @@ class SingleKexts: NSViewController {
         UserDefaults.standard.set(true, forKey: "dl-ath9kfixup")
         UserDefaults.standard.set(true, forKey: "dl-atherose2200ethernet")
         UserDefaults.standard.set(true, forKey: "dl-atheroswifiinjector")
+        UserDefaults.standard.set(true, forKey: "dl-bigsurface")
         UserDefaults.standard.set(true, forKey: "dl-brcmpatchram")
         UserDefaults.standard.set(true, forKey: "dl-brightnesskeys")
         UserDefaults.standard.set(true, forKey: "dl-codeccommander")
@@ -262,6 +263,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func atheroswifiinjector(_ sender: Any) {
         UserDefaults.standard.set("https://www.hackintosh-forum.de/forum/thread/22322-atheros-wifi-injector-kext", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func bigsurface(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/Xiashangning/BigSurface", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func brcmpatchram(_ sender: Any) {

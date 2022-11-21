@@ -96,10 +96,10 @@ function _getsecret() {
 }
 
 ### kextadd ###
-allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync CryptexFixup ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC FeatureUnlock GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet MacHyperVSupport NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
+allkextsupper="ACPIBatteryManager AirportBrcmFixup AirportItlwm AppleALC AppleBacklightFixup AsusSMC ATH9KFixup AtherosE2200Ethernet AtherosWiFiInjector AzulPatcher4600 BigSurface BrcmPatchRam BrightnessKeys BT4LEContinuityFixup Clover CodecCommander CoreDisplayFixup CPUFriend CpuTscSync CryptexFixup ECEnabler EFI-Driver EnableLidWake FakePCIID FakeSMC FeatureUnlock GenericUSBXHCI HibernationFixup HoRNDIS IntelBluetootFirmware IntelGraphicsFixup IntelGraphicsDVMTFixup IntelMausi IntelMausiWOL IntelMausiEthernet itlwm Lilu LiluFriend LucyRTL8125Ethernet MacHyperVSupport NightShiftUnlocker NoTouchID NoVPAJpeg NullCpuPowerManagement NullEthernet NvidiaGraphicsFixup NVMeFix OpenCore RadeonSensor RealtekRTL8111 RestrictEvents RTCMemoryFixup SMCAMDProcessor Shiki SinetekRTSX SystemProfilerMemoryFixup ThunderboltReset TSCAdjustReset USBInjectAll USBToolBox VirtualSMC VoodooHDA VoodooI2C VoodooInput VoodooPS2 VoodooSDHC VoodooSMBus VoodooTSCSync WhateverGreen YogaSMC"
 allkextslower=$( echo "$allkextsupper" | tr '[:upper:]' '[:lower:]' )
 
-#========================= Excluded Kexts =========================#
+#======================== Excluded Kexts =========================#
 
 function _excludedkexts()
 {
@@ -119,7 +119,7 @@ function _excludedkexts()
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n CryptexFixup (0.0.1)" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n  FeatureUnlock (0.0.1)" )
-    #kextstatsori=$( echo -e "$kextstatsori" "\n  MacHyperVSupport (0.0.1)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  BigSurface (0.0.1)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts
@@ -211,6 +211,7 @@ kextArray=(
 "ath9kfixup","ATH9KFixup","ATH9KFixup",""
 "atherose2200ethernet","AtherosE2200Ethernet","AtherosE2200Ethernet",""
 "azulpatcher4600","AzulPatcher4600","AzulPatcher4600",""
+"bigsurface","BigSurface","BigSurface",""
 "brcmpatchram","BrcmFirmwareStore","BrcmPatchRam",""
 "brightnesskeys","BrightnessKeys","BrightnessKeys",""
 "bt4lecontinuityfixup","BT4LEContinuityFixup","BT4LEContinuityFixup",""
