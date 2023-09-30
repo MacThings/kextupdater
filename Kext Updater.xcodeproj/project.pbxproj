@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -668,6 +668,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 4.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -693,6 +694,7 @@
 					"@rpath",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 4.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,7 +732,7 @@
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.26.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
@@ -738,7 +740,7 @@
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 19.0.0;
+				minimumVersion = 20.0.0;
 			};
 		};
 		2AE75AB8244B3DEB00A209A7 /* XCRemoteSwiftPackageReference "LoginServiceKit" */ = {
@@ -746,7 +748,7 @@
 			repositoryURL = "https://github.com/Clipy/LoginServiceKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 2.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

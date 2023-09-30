@@ -439,7 +439,7 @@
 				GCC_PREFIX_HEADER = "DPCIManager/DPCIManager-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DPCIManager/DPCIManager-Info.plist";
 				LD_NO_PIE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -460,7 +460,7 @@
 				GCC_PREFIX_HEADER = "DPCIManager/DPCIManager-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DPCIManager/DPCIManager-Info.plist";
 				LD_NO_PIE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
