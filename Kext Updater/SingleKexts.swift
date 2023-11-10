@@ -139,6 +139,7 @@ class SingleKexts: NSViewController {
     
     @IBAction func select_all(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: "dl-acpibatterymanager")
+        UserDefaults.standard.set(true, forKey: "dl-amfipass")
         UserDefaults.standard.set(true, forKey: "dl-airportbrcmfixup")
         UserDefaults.standard.set(true, forKey: "dl-applealc")
         UserDefaults.standard.set(true, forKey: "dl-applebacklightsmoother")
@@ -239,6 +240,10 @@ class SingleKexts: NSViewController {
     }
     @IBAction func airportbrcmfixup(_ sender: Any) {
         UserDefaults.standard.set("https://github.com/acidanthera/AirportBrcmFixup", forKey: "SourceURL")
+        webview_button.performClick(nil)
+    }
+    @IBAction func amfipass(_ sender: Any) {
+        UserDefaults.standard.set("https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Acidanthera", forKey: "SourceURL")
         webview_button.performClick(nil)
     }
     @IBAction func applealc(_ sender: Any) {
