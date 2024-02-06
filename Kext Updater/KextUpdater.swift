@@ -76,9 +76,7 @@ class KextUpdater: NSViewController {
     @IBOutlet weak var show_hint: NSButton!
     @IBOutlet weak var show_auth_root: NSButton!
     @IBOutlet weak var show_lesle_warning: NSButton!
-    
-    
-    
+
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
         
     @IBAction func quit_app(_ sender: Any) {
@@ -95,7 +93,7 @@ class KextUpdater: NSViewController {
         NSApplication.shared.terminate(self)
         //UserDefaults.standard.set(false, forKey: "DoDownload")
     }
-    
+ 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
         UserDefaults.standard.removeObject(forKey: "NodeId")
@@ -118,6 +116,8 @@ class KextUpdater: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        checkHardware()
         
         let date = Date()
         let formatter = DateFormatter()
@@ -1121,6 +1121,21 @@ class KextUpdater: NSViewController {
         if refreshtime == "Yes" {
             self.checkefi()
             UserDefaults.standard.set("No", forKey: "Refreshtime")
+        }
+    }
+    
+    func isAppleSilicon() -> Bool {
+        var size = size_t(MemoryLayout.size(ofValue: 0))
+        var type: Int32 = 0
+        sysctlbyname("hw.cpu64bit_capable", &type, &size, nil, 0)
+        return type != 0
+    }
+
+    func checkHardware() {
+        if isAppleSilicon() {
+            UserDefaults.standard.set(true, forKey: "AppleSilicon")
+        } else {
+            UserDefaults.standard.set(false, forKey: "AppleSilicon")
         }
     }
 }

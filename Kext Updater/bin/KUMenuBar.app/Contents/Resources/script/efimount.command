@@ -119,7 +119,7 @@ function _excludedkexts()
     #kextstatsori=$( echo -e "$kextstatsori" |grep -vw  "AppleALC" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n CryptexFixup (0.0.1)" )
     #kextstatsori=$( echo -e "$kextstatsori" "\n  FeatureUnlock (0.0.1)" )
-    kextstatsori=$( echo -e "$kextstatsori" "\n  AMFIPass (1.3.3)" )
+    #kextstatsori=$( echo -e "$kextstatsori" "\n  AMFIPass (1.3.3)" )
 
     if [[ "$offline_efi" = "yes" ]]; then
         rm "$ScriptTmpPath"/offline_efi_kexts

@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/evgenyneu/keychain-swift",
       "state" : {
-        "revision" : "d108a1fa6189e661f91560548ef48651ed8d93b9",
-        "version" : "20.0.0"
+        "revision" : "265806607b45687a3d646e4c9837c31c90f202e8",
+        "version" : "21.0.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Clipy/LoginServiceKit",
       "state" : {
-        "revision" : "5af9098805ff603830aec65754071c6514bbcacd",
-        "version" : "2.4.0"
+        "revision" : "56dce9dbf4367c1445ef2343a2a912bbe5019a6c",
+        "version" : "2.5.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sparkle-project/Sparkle",
       "state" : {
-        "revision" : "f0ceaf5cc9f3f23daa0ccb6dcebd79fc96ccc7d9",
-        "version" : "2.5.0"
+        "revision" : "47d3d90aee3c52b6f61d04ceae426e607df62347",
+        "version" : "2.5.2"
       }
     }
   ],
