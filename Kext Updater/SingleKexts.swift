@@ -123,7 +123,6 @@ class SingleKexts: NSViewController {
                 alert.runModal()
                 return
             }
-
         UserDefaults.standard.removeObject(forKey: "Choosed anything")
     }
     

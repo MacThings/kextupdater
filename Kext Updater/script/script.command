@@ -634,6 +634,11 @@ function initial()
     osversion=$( sw_vers | grep ProductVersion | cut -d':' -f2 | xargs )
     #oswriteprotected=$( diskutil info / |grep "Only Volume" | sed 's/.*://g' | xargs )
 
+    check_silicon=$( _helpDefaultRead "AppleSilicon" )
+    if [ "$check_silicon" = "1" ]; then
+        _helpDefaultWrite "Bootloaderversion" "AppleSilicon"
+    fi
+
     if [[ "$ozmosischeck" != "" ]] || [[ "$ozmosischeck2" != "" ]] || [[ "$ozmosischeck3" != "" ]] || [[ "$ozmosischeck4" != "" ]]; then
         bootloader="Ozmosis"
         _helpDefaultWrite "Bootloaderversion" "$bootloader" &
@@ -700,6 +705,11 @@ function initial()
     _helpDefaultWrite "Bootloader" "$bootloader" &
     _helpDefaultWrite "OSVersion" "$osversion" &
     #_helpDefaultWrite "RW" "$oswriteprotected" &
+    
+    check_silicon=$( _helpDefaultRead "AppleSilicon" )
+    if [ "$check_silicon" = "1" ]; then
+        _helpDefaultWrite "Bootloaderversion" "Apple Silicon"
+    fi
 
     defaults write "${ScriptHome}/Library/Preferences/kextupdaterhelper.slsoft.de.plist" "EFI Path" "$efipath"
 
@@ -779,7 +789,6 @@ function initial()
             #_helpDefaultWrite "AuthRoot" "No"
         #fi
     #fi
-
 }
 
 #################################################################
@@ -2601,7 +2610,10 @@ function check_opencore_conf()
     ocbootpath=$( nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:boot-path | sed -e s/".*GPT,//g" -e "s/.*MBR,//g" -e "s/,.*//g" | xargs )
       if [[ $ocversion = "" ]] || [[ $ocbootpath = "" ]]; then
         _helpDefaultWrite "OcError" "Yes"
-        echo -e "$ocerror"
+        check_silicon=$( _helpDefaultRead "AppleSilicon" )
+        if [ "$check_silicon" = "0" ]; then
+            echo -e "$ocerror"
+        fi
         exit 0
       fi
 }

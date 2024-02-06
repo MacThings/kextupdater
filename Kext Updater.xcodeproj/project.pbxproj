@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -406,7 +406,7 @@
 				};
 			};
 			buildConfigurationList = 2AB3049523150E1300D618FF /* Build configuration list for PBXProject "Kext Updater" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -460,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -d /Users/luigi/Desktop/KU ]; then\n  rm -rf /Users/luigi/Desktop/KU\nfi\n\n#find \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Contents/Resources -type d -name \"Sparkle.framework\" -exec rm -r \"{}\" \\;\n#rm -r /Applications/\"${PRODUCT_NAME}.app\"\n#cp -r \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\" /Applications/\n#if [ -d /Volumes/Homeshare/Xcode/kextupdater ]; then\n#cp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.html\"\n#rm /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip 2> /dev/null\n#cd /Applications\n#ditto -c -k --sequesterRsrc --keepParent \"${PRODUCT_NAME}.app\" /Volumes/Homeshare/Xcode/kextupdater/upload/kextupdaterng.zip\n#ditto -c -k --sequesterRsrc --keepParent \"${PRODUCT_NAME}.app\" ~/Desktop/\"${PRODUCT_NAME} ${MARKETING_VERSION}.zip\"\n#fi\n";
+			shellScript = "cp \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/kextupdaterng.html\" \"/Volumes/Homeshare/Xcode/kextupdater/upload/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

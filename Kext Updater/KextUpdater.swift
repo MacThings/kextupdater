@@ -110,13 +110,12 @@ class KextUpdater: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window?.title = "Kext Updater"
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+
         checkHardware()
         
         let date = Date()
@@ -504,6 +503,9 @@ class KextUpdater: NSViewController {
                 self.syncShellExec(path: self.scriptPath, args: ["kumenubar_off"])
             }
         
+        checkHardware()
+        checkHardware2()
+        
     }
     
     @IBAction func start_button(_ sender: Any) {
@@ -512,20 +514,20 @@ class KextUpdater: NSViewController {
         self.egg3.isEnabled=false
         self.egg4.isEnabled=false
 
-        self.syncShellExec(path: self.scriptPath, args: ["_online_check"])
-        let networkerror = UserDefaults.standard.string(forKey: "Networkerror")
-        
-        if networkerror == "Yes" {
-            let alert = NSAlert()
-            alert.messageText = NSLocalizedString("Uh Oh! An error has occured.", comment: "")
-            alert.informativeText = NSLocalizedString("You are not connected to the Internet or the Server is not reachable at the moment. Please try again later.", comment: "")
-            alert.alertStyle = .warning
-            alert.icon = NSImage(named: "notapplied")
-            let Button = NSLocalizedString("Bummer", comment: "")
-            alert.addButton(withTitle: Button)
-            alert.runModal()
-            return
-        }
+//        self.syncShellExec(path: self.scriptPath, args: ["_online_check"])
+//        let networkerror = UserDefaults.standard.string(forKey: "Networkerror")
+//        
+//        if networkerror == "Yes" {
+//            let alert = NSAlert()
+//            alert.messageText = NSLocalizedString("Uh Oh! An error has occured.", comment: "")
+//            alert.informativeText = NSLocalizedString("You are not connected to the Internet or the Server is not reachable at the moment. Please try again later.", comment: "")
+//            alert.alertStyle = .warning
+//            alert.icon = NSImage(named: "notapplied")
+//            let Button = NSLocalizedString("Bummer", comment: "")
+//            alert.addButton(withTitle: Button)
+//            alert.runModal()
+//            //return
+//        }
         
         if let url = URL(string: "https://update.kextupdater.de/maintenance") {
             do {
@@ -630,6 +632,8 @@ class KextUpdater: NSViewController {
                 self.animstop()
                 
                 UserDefaults.standard.set("Update", forKey: "Choice")
+                
+                self.checkHardware2()
                 
                 //self.syncShellExec(path: self.scriptPath, args: ["_cleanup"])
             }
@@ -817,6 +821,7 @@ class KextUpdater: NSViewController {
                     self.tools_button.isEnabled=true
                     self.animstop()
                     UserDefaults.standard.set("Update", forKey: "Choice")
+                    self.checkHardware2()
                     
                 }
             }
@@ -971,6 +976,7 @@ class KextUpdater: NSViewController {
     }
     
     @objc private func pressStartbutton(notification: NSNotification){
+        self.start_button.isEnabled = true
         start_button.performClick(nil)
     }
     
@@ -1136,6 +1142,20 @@ class KextUpdater: NSViewController {
             UserDefaults.standard.set(true, forKey: "AppleSilicon")
         } else {
             UserDefaults.standard.set(false, forKey: "AppleSilicon")
+        }
+    }
+    
+    func checkHardware2() {
+        if isAppleSilicon() {
+            self.start_button.isEnabled = false
+            self.report_button.isEnabled = false
+            self.efi_backup_button.isEnabled = false
+            self.efi_button.isEnabled = false
+        } else {
+            self.start_button.isEnabled = true
+            self.report_button.isEnabled = true
+            self.efi_backup_button.isEnabled = true
+            self.efi_button.isEnabled = true
         }
     }
 }

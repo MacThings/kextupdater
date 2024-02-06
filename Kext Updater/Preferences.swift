@@ -27,7 +27,15 @@ class Preferences: NSViewController {
     @IBOutlet weak var backup_path_textfield: NSTextField!
     @IBOutlet weak var close_button: NSButton!
     
-
+    @IBOutlet weak var menu_bar_item: NSButton!
+    
+    @IBOutlet weak var menu_bar_item_text: NSTextField!
+    
+    @IBOutlet weak var efi_default_path: NSButton!
+    
+    @IBOutlet weak var efi_select: NSButton!
+    
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     
@@ -38,6 +46,8 @@ class Preferences: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        checkHardware()
         
         let speakervolume = UserDefaults.standard.string(forKey: "Speakervolume")
         if speakervolume == "0" {
@@ -217,5 +227,24 @@ class Preferences: NSViewController {
         self.view.window?.close()
     }
     
- 
+    func isAppleSilicon() -> Bool {
+        var size = size_t(MemoryLayout.size(ofValue: 0))
+        var type: Int32 = 0
+        sysctlbyname("hw.cpu64bit_capable", &type, &size, nil, 0)
+        return type != 0
+    }
+
+    func checkHardware() {
+        if isAppleSilicon() {
+            self.menu_bar_item.isEnabled = false
+            self.menu_bar_item_text.isHidden = true
+            self.EFI_Backup_Name_Lower_Case.isEnabled = false
+            self.EFI_Backup_Name_Custom.isEnabled = false
+            self.EFI_Backup_Name_Default.isEnabled = false
+            self.EFI_Backup_Name_Lable.isEnabled = false
+            self.efi_select.isEnabled = false
+            self.EFI_Backup_Name_Lable.isEnabled = false
+        } 
+    }
+    
 }

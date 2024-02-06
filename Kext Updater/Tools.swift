@@ -77,7 +77,7 @@ class Tools: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
         
         UserDefaults.standard.set(false, forKey: "OfflineEFI")
@@ -192,6 +192,8 @@ class Tools: NSViewController {
                     self.button_read_write.isEnabled = false
                 }
             }
+            
+            self.SiliconSet()
         }
     }
 }
@@ -512,6 +514,7 @@ class Tools: NSViewController {
                 self.pulldown_menu.isEnabled=true
                 self.progress_gear_mount.isHidden=true
                 self.progress_gear_mount?.stopAnimation(self);
+                self.SiliconSet()
             }
         }
     }
@@ -544,6 +547,7 @@ class Tools: NSViewController {
                 self.pulldown_menu.isEnabled=true
                 self.progress_gear_mount.isHidden=true
                 self.progress_gear_mount?.stopAnimation(self);
+                self.SiliconSet()
             }
         }
     }
@@ -576,10 +580,10 @@ class Tools: NSViewController {
                 self.pulldown_menu.isEnabled=true
                 self.progress_gear_mount.isHidden=true
                 self.progress_gear_mount?.stopAnimation(self);
+                self.SiliconSet()
             }
         }
     }
-    
     
     @IBAction func close_button(_ sender: Any) {
         self.view.window?.close()
@@ -634,4 +638,28 @@ class Tools: NSViewController {
         self.view.window?.close()
     }
     
+    func isAppleSilicon() -> Bool {
+        var size = size_t(MemoryLayout.size(ofValue: 0))
+        var type: Int32 = 0
+        sysctlbyname("hw.cpu64bit_capable", &type, &size, nil, 0)
+        return type != 0
+    }
+    
+    
+    func SiliconSet() {
+        if self.isAppleSilicon() {
+            self.button_mount.isEnabled = false
+            self.button_unmount.isEnabled = false
+            self.button_read_write.isEnabled = false
+            self.button_atheros.isEnabled = false
+            self.button_kextcache.isEnabled = false
+            self.button_fix_sleep.isEnabled = false
+            //self.pulldown_menu.isEnabled = false
+            //self.button_unmount_all.isEnabled = false
+            self.fixnotapplied.isHidden = true
+            self.fixapplied.isHidden = true
+            self.atheros40applied.isHidden = true
+            self.atheros40notapplied.isHidden = true
+        }
+    }
 }
