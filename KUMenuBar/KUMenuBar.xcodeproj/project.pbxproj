@@ -154,7 +154,6 @@
 					FCC6C4D119A58C7A0063EC3C = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 1030;
-						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -211,7 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUMenuBar.app\"\ncp -r \"${TARGET_BUILD_DIR}/KUMenuBar.app\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUMenuBar.app\"\n\ncodesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \"${TARGET_BUILD_DIR}/KUMenuBar.app\"\n\ncp -r \"${TARGET_BUILD_DIR}/KUMenuBar.app\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -360,12 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 500;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = KUMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,12 +383,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 500;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = KUMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

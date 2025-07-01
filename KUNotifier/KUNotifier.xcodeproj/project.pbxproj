@@ -132,6 +132,12 @@
 			attributes = {
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Eloy Durán";
+				TargetAttributes = {
+					5199791315B1F92B003AFC57 = {
+						DevelopmentTeam = 4ATFWV7M4B;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 5199790E15B1F92B003AFC57 /* Build configuration list for PBXProject "KUNotifier" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -179,7 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUNotifier.app\"\ncp -r \"${TARGET_BUILD_DIR}/KUNotifier.app\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUNotifier.app\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -r \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUNotifier.app\"\n\ncodesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \"${TARGET_BUILD_DIR}/KUNotifier.app\"\n\ncp -r \"${TARGET_BUILD_DIR}/KUNotifier.app\" \"/Users/luigi/Documents/Xcode/kextupdater/Kext Updater/bin/KUNotifier.app\"\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -305,7 +311,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KUNotifier/KUNotifier-Prefix.pch";
 				INFOPLIST_FILE = KUNotifier/Info.plist;
@@ -313,6 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kunotifier.slsoft.de;
 				PRODUCT_NAME = KUNotifier;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -322,7 +333,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KUNotifier/KUNotifier-Prefix.pch";
 				INFOPLIST_FILE = KUNotifier/Info.plist;
@@ -330,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kunotifier.slsoft.de;
 				PRODUCT_NAME = KUNotifier;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};

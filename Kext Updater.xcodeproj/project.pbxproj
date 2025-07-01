@@ -6,6 +6,22 @@
 	objectVersion = 60;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2A1814012E1403DE00E9B70B /* Publish */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A1814022E1403DE00E9B70B /* Build configuration list for PBXAggregateTarget "Publish" */;
+			buildPhases = (
+				2A1814052E1403E600E9B70B /* Publish */,
+			);
+			dependencies = (
+			);
+			name = Publish;
+			packageProductDependencies = (
+			);
+			productName = Publish;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2A1D6F392857DE0600E2582D /* slsoft.de.KUMenuBar.plist in Bin Copy */ = {isa = PBXBuildFile; fileRef = 2A1D6F352857DDF400E2582D /* slsoft.de.KUMenuBar.plist */; };
 		2A1D9578251225640077A7C0 /* AuthRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D9577251225640077A7C0 /* AuthRoot.swift */; };
@@ -370,6 +386,7 @@
 				2AC44C1023151144006D447C /* Pics Copy */,
 				2AC44C132315115F006D447C /* Sounds Copy */,
 				2AC44C202315119F006D447C /* Zip App and send to Homeshare */,
+				2A1814002E14009900E9B70B /* Prepare Build */,
 			);
 			buildRules = (
 			);
@@ -395,6 +412,9 @@
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
+					2A1814012E1403DE00E9B70B = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					2AB3049923150E1300D618FF = {
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
@@ -425,6 +445,7 @@
 			projectRoot = "";
 			targets = (
 				2AB3049923150E1300D618FF /* Kext Updater */,
+				2A1814012E1403DE00E9B70B /* Publish */,
 			);
 		};
 /* End PBXProject section */
@@ -444,6 +465,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A1814002E14009900E9B70B /* Prepare Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n\n# Ermittelt den aktuellen Benutzer\nSYS_USER=$(id -un)\n\n# Prüfen, ob das Upload-Verzeichnis existiert, und Dateien vorbereiten\nUPLOAD_DIR=\"/Volumes/Homeshare/Xcode/kextupdater/upload\"\nif [ -d \"$UPLOAD_DIR\" ]; then\n    # HTML-Datei kopieren\n    cp \"/Users/$SYS_USER/Documents/Xcode/kextupdater/DOSBox Buddy/kextupdaterng.html\" \"$UPLOAD_DIR/\"\n    \n    # Codesignieren der App\n    codesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \\\n        \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\"\n    \n    # App als ZIP-Archiv erstellen\n    ditto -c -k --sequesterRsrc --keepParent \\\n        \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"$UPLOAD_DIR/kextupdaterng.zip\"\nfi\n\n# Sicherstellen, dass keine alte Version der App auf dem Desktop existiert\nDESKTOP_APP=\"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\"\nif [ -d \"$DESKTOP_APP\" ]; then\n    rm -rf \"$DESKTOP_APP\"\nfi\n\n# App auf den Desktop kopieren\ncp -a \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Users/$SYS_USER/Desktop/\"\n\n# App auf dem Desktop erneut codesignieren\ncodesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \"$DESKTOP_APP\"\n\n\n";
+		};
+		2A1814052E1403E600E9B70B /* Publish */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Publish;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n/bin/bash /Volumes/Homeshare/Xcode/kextupdater/push.command\n";
+		};
 		2AC44C202315119F006D447C /* Zip App and send to Homeshare */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -526,6 +583,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A1814032E1403DE00E9B70B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A1814042E1403DE00E9B70B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2AB304A823150E1500D618FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -651,11 +726,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 501;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 504;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -666,7 +741,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = 5.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -678,11 +753,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 501;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 504;
+				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				INFOPLIST_FILE = "Kext Updater/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -693,7 +768,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = 5.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kextupdater.slsoft.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -704,6 +779,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A1814022E1403DE00E9B70B /* Build configuration list for PBXAggregateTarget "Publish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1814032E1403DE00E9B70B /* Debug */,
+				2A1814042E1403DE00E9B70B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AB3049523150E1300D618FF /* Build configuration list for PBXProject "Kext Updater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -730,7 +814,7 @@
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.2;
+				minimumVersion = 2.7.1;
 			};
 		};
 		2AE75AB5244B3D9C00A209A7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {

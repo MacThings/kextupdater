@@ -829,7 +829,7 @@ class KextUpdater: NSViewController {
      }
     
     @IBAction func paypal_button(_ sender: Any) {
-        if let url = URL(string: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal@sl-soft.de&item_name=Kext-Updater&currency_code=EUR"),
+        if let url = URL(string: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal@slsoft.de&item_name=Kext-Updater&currency_code=EUR"),
             NSWorkspace.shared.open(url) {
         }
     }
