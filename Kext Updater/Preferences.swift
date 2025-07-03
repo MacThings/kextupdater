@@ -228,13 +228,10 @@ class Preferences: NSViewController {
     }
     
     func isAppleSilicon() -> Bool {
-        var type: Int32 = 0
-        var size = MemoryLayout.size(ofValue: type)
-        let result = sysctlbyname("hw.optional.arm64", &type, &size, nil, 0)
-        if result == 0 {
-            return type == 1
-        }
-        return false
+        var arm64: Int32 = 0
+        var size = MemoryLayout.size(ofValue: arm64)
+        let result = sysctlbyname("hw.optional.arm64", &arm64, &size, nil, 0)
+        return result == 0 && arm64 == 1
     }
 
     func checkHardware() {

@@ -1131,10 +1131,10 @@ class KextUpdater: NSViewController {
     }
     
     func isAppleSilicon() -> Bool {
-        var size = size_t(MemoryLayout.size(ofValue: 0))
-        var type: Int32 = 0
-        sysctlbyname("hw.cpu64bit_capable", &type, &size, nil, 0)
-        return type != 0
+        var arm64: Int32 = 0
+        var size = MemoryLayout.size(ofValue: arm64)
+        let result = sysctlbyname("hw.optional.arm64", &arm64, &size, nil, 0)
+        return result == 0 && arm64 == 1
     }
 
     func checkHardware() {
